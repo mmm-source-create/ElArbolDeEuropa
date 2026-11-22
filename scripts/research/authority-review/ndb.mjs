@@ -13,7 +13,7 @@ const text = html => html.replace(/<a [^>]*href="(sfz\d+)\.html"[^>]*>/g, '[$1]'
 const parse = html => {
   const at = html.indexOf('id="ndbcontent_genealogie"');
   const sfz = (html.match(/downloadRDF\?url=(sfz\d+)\.rdf/) || [])[1] || null;
-  const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1]?.replace(/\s*-\s*Deutsche Biographie\s*$/, '').trim() || null;
+  const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1]?.replace(/\s*-\s*Deutsche Biographie\s*$/, '').replace(/^Deutsche Biographie\s*-\s*/, '').trim() || null;
   if (at < 0) return {sfz, title, lines: []};
   const block = html.slice(at, html.indexOf('</p>', at));
   const lines = block.split(/<br\s*\/?>/).map(line => {

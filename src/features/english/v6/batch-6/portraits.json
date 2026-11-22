@@ -62,21 +62,21 @@
     "alt": "Representación póstuma de William III of Saxony"
   },
   "PAPA_PAULO4": {
-    "tipo": "Retrato contemporáneo",
+    "tipo": "Contemporary portrait",
     "obra": "Paul IV Carafa",
     "autor": "A la manera de Jacopino del Conte",
     "fecha": "c. 1556–1560",
     "alt": "Retrato del papa Paul IV"
   },
   "PAPA_PAULO2": {
-    "tipo": "Retrato posterior",
+    "tipo": "Later portrait",
     "obra": "Paul II",
     "autor": "Pintor anónimo",
     "fecha": "c. 1521–1552",
     "alt": "Retrato del papa Paul II"
   },
   "PAPA_INOCENCIO5": {
-    "tipo": "Retrato posterior",
+    "tipo": "Later portrait",
     "obra": "Innocent V, de la serie de los cuarenta dominicos ilustres",
     "autor": "Tommaso da Modena",
     "fecha": "1352",
@@ -84,14 +84,14 @@
     "alt": "Retrato del papa Innocent V"
   },
   "PAPA_INOCENCIO8": {
-    "tipo": "Retrato contemporáneo",
+    "tipo": "Contemporary portrait",
     "obra": "Medalla de Innocent VIII",
     "autor": "Niccolò di Forzore Spinelli",
     "fecha": "c. 1484–1492",
     "alt": "Retrato del papa Innocent VIII"
   },
   "PAPA_CLEMENTE11": {
-    "tipo": "Retrato histórico",
+    "tipo": "Historical portrait",
     "obra": "Clement XI",
     "autor": "Según Pier Leone Ghezzi",
     "fecha": "s. XVIII",
@@ -99,7 +99,7 @@
     "alt": "Retrato del papa Clement XI"
   },
   "PAPA_BENEDICTO14": {
-    "tipo": "Retrato contemporáneo",
+    "tipo": "Contemporary portrait",
     "obra": "Benedict XIV",
     "autor": "Pierre Subleyras",
     "fecha": "1746",
@@ -114,11 +114,11 @@
     "alt": "Retrato del papa Martin IV"
   },
   "PAPA_INOCENCIO9": {
-    "tipo": "Retrato posterior",
+    "tipo": "Later portrait",
     "obra": "Innocent IX",
     "autor": "Anónimo, según Hieronymus Wierix",
     "fecha": "principios del s. XVII",
-    "institucion": "Museo de la catedral de Fidenza",
+    "institucion": "Fidenza Cathedral Museum",
     "alt": "Retrato del papa Innocent IX"
   },
   "PAPA_BONIFACIO9": {

@@ -40,6 +40,10 @@ const givenAlt = Object.keys(GIVEN_NUMBERED).sort((a, b) => b.length - a.length)
 const NUMBERED = new RegExp(`\\b(${givenAlt}) ([IVX]+)\\b(?!['’]s? de)( (?:of|de) [A-Z][\\p{L}-]+)?`, 'gu');
 const placeAlt = ENGLISH_PLACES.map(esc).sort((a, b) => b.length - a.length).join('|');
 const PHRASES = [
+  // 6.0.17: names left half-translated, found in the second sample review.
+  [/\bTheobaldo\b/g, 'Theobald'], [/\bJohn Jacobo\b/g, 'John James'], [/\bMazarino\b/g, 'Mazarin'], [/\bIsabel the Catholic\b/g, 'Isabella the Catholic'],
+  [/\bInfante Juan\b/g, 'Infante John'], [/\bFernando de Antequera\b/g, 'Ferdinand of Antequera'], [/\bGastón Fébus\b/g, 'Gaston Fébus'], [/\bJuan de Ghent\b/g, 'John of Gaunt'],
+  [/\bMonferrato\b/g, 'Montferrat'], [/\bArnaldo Roger\b/g, 'Arnau Roger'], [/\b([Tt]he|[Aa]n?) infant (?=[A-Z])/g, '$1 infante '], [/\bInfant (?=[A-Z])/g, 'Infante '],
   // Patterns found in the 40-profile sample review of 6.0.16.
   [/\bDogo of\b/g, 'Doge of'], [/Dignity was elective: [^.]*Venetian territories\./g, 'The office was elective: the dogeship marks institutional continuity, not family ownership of the Venetian territories.'],
   [/\bHouse Paleologist\b/g, 'House Palaiologos'], [/\bGustavo Vasa\b/g, 'Gustav Vasa'], [/\bCristian ([IVX]+)\b/g, 'Christian $1'], [/^The executions have aggravated opposition to his authority\.$/g, 'Christian II took Stockholm. The executions deepened opposition to his authority.'],

@@ -8430,7 +8430,7 @@
         "url": "https://enciclopediaromaniei.ro/wiki/Doamna_Chiajna"
       },
       {
-        "titulo": "Enciclopedia României · Petru el Joven",
+        "titulo": "Enciclopedia României · Petru the Younger",
         "url": "https://enciclopediaromaniei.ro/wiki/Petru_cel_T%C3%A2n%C4%83r"
       }
     ],
@@ -9405,7 +9405,7 @@
               "url": "https://enciclopediaromaniei.ro/wiki/Doamna_Chiajna"
             },
             {
-              "titulo": "Enciclopedia României · Petru el Joven",
+              "titulo": "Enciclopedia României · Petru the Younger",
               "url": "https://enciclopediaromaniei.ro/wiki/Petru_cel_T%C3%A2n%C4%83r"
             }
           ],
@@ -9438,7 +9438,7 @@
           "url": "https://enciclopediaromaniei.ro/wiki/Doamna_Chiajna"
         },
         {
-          "titulo": "Enciclopedia României · Petru el Joven",
+          "titulo": "Enciclopedia României · Petru the Younger",
           "url": "https://enciclopediaromaniei.ro/wiki/Petru_cel_T%C3%A2n%C4%83r"
         }
       ],
@@ -12232,7 +12232,7 @@
     "en": "montfort-bretana",
     "name": "Montfort-Bretaña",
     "summary": "The Breton branch of the Montfort went from disputing the duchy to maintaining it for several generations, until Anne of Brittany.",
-    "origin": "John de Montfort was the son of Arthur II of Brittany and Yolanda de Dreux. His line was part of the Dukes of the House of Dreux, of Capetian descent, and was named after the county of Montfort inherited from Yolanda.",
+    "origin": "John de Montfort was the son of Arthur II of Brittany and Yolande of Dreux. His line was part of the Dukes of the House of Dreux, of Capetian descent, and was named after the county of Montfort inherited from Yolanda.",
     "history": "John claimed the duchy in 1341. His wife Joan of Flanders defended his cause and that of his son. After John IV's victory, the continuity passed to his sons and grandsons. Marriages with Joan of Navarre, Margaret of Orleans and Margaret of Foix extended the ties of the Breton court.",
     "legacy": "Francis II left Anne as heiress. His marriages with Charles VIII and Louis XII linked the duchy to the French monarchy. Claudia, Ana's daughter, extended the transmission. After the deaths of both, the union of 1532 incorporated Brittany into the kingdom of France with guarantees for its institutions.",
     "editorial": true,
@@ -12284,7 +12284,7 @@
             {
               "campo": "Numeración",
               "estado": "variantes",
-              "texto": "Figura como John V o John VI según se incluya a Juan de Montfort, pretendiente de 1341–1345, en la numeración ducal. Ambas formas designan a la misma persona."
+              "texto": "Figura como John V o John VI según se incluya a John of Montfort, pretendiente de 1341–1345, en la numeración ducal. Ambas formas designan a la misma persona."
             }
           ]
         },
@@ -12362,7 +12362,7 @@
       ],
       "editorial": true,
       "resumen": "The Breton branch of the Montfort went from disputing the duchy to maintaining it for several generations, until Anne of Brittany.",
-      "origen": "John de Montfort was the son of Arthur II of Brittany and Yolanda de Dreux. His line was part of the Dukes of the House of Dreux, of Capetian descent, and was named after the county of Montfort inherited from Yolanda.",
+      "origen": "John de Montfort was the son of Arthur II of Brittany and Yolande of Dreux. His line was part of the Dukes of the House of Dreux, of Capetian descent, and was named after the county of Montfort inherited from Yolanda.",
       "trayectoria": "John claimed the duchy in 1341. His wife Joan of Flanders defended his cause and that of his son. After John IV's victory, the continuity passed to his sons and grandsons. Marriages with Joan of Navarre, Margaret of Orleans and Margaret of Foix extended the ties of the Breton court.",
       "legado": "Francis II left Anne as heiress. His marriages with Charles VIII and Louis XII linked the duchy to the French monarchy. Claudia, Ana's daughter, extended the transmission. After the deaths of both, the union of 1532 incorporated Brittany into the kingdom of France with guarantees for its institutions.",
       "territorios": [
@@ -12824,7 +12824,7 @@
               "slug": "ana-de-bretana"
             }
           ],
-          "texto": "John de Montfort was the son of Arthur II and his second wife, Yolanda de Dreux. His descendants formed the ducal branch of Montfort.",
+          "texto": "John de Montfort was the son of Arthur II and his second wife, Yolande of Dreux. His descendants formed the ducal branch of Montfort.",
           "fuentes": [
             {
               "titulo": "Foundation for Medieval Genealogy · MedLands",
@@ -13590,7 +13590,7 @@
     "name": "Pallars",
     "summary": "The succession of the Pallars counts linked several Pyrenean families before their final confrontation with the Aragonese monarchy.",
     "origin": "The former county of Pallars was divided into Pallars Jussà and Pallars Sobirà at the beginning of the 11th century. In the Sovereign, inheritance and marriage transmitted government between different lines. The purchase of the rights of Guillerma in 1229 led to Roger II's arrival in the county.",
-    "history": "Arnaldo Roger I and Ramon Roger I were his successors. Sibila, daughter of Arnaldo Roger, inherited at the end of the 13th century and married Hugo de Mataplana. His descendants gathered the barony of Mataplana with the condal heritage and participated in campaigns of the Crown of Aragon.",
+    "history": "Arnau Roger I and Ramon Roger I were his successors. Sibila, daughter of Arnau Roger, inherited at the end of the 13th century and married Hugo de Mataplana. His descendants gathered the barony of Mataplana with the condal heritage and participated in campaigns of the Crown of Aragon.",
     "legacy": "In the 15th century, Hugo Roger III led forces opposed to John II during the Catalan civil war. The resistance continued after the capitulation of Pedralbes. His wife Catalina Albert supported the defense of Valencia d'Àneu until 1491. The confiscation and transfer of the domains to the Cardona put an end to the rule of the comital line and gave way to the marquessate of Pallars.",
     "editorial": true,
     "sources": [
@@ -13744,7 +13744,7 @@
       "editorial": true,
       "resumen": "The succession of the Pallars counts linked several Pyrenean families before their final confrontation with the Aragonese monarchy.",
       "origen": "The former county of Pallars was divided into Pallars Jussà and Pallars Sobirà at the beginning of the 11th century. In the Sovereign, inheritance and marriage transmitted government between different lines. The purchase of the rights of Guillerma in 1229 led to Roger II's arrival in the county.",
-      "trayectoria": "Arnaldo Roger I and Ramon Roger I were his successors. Sibila, daughter of Arnaldo Roger, inherited at the end of the 13th century and married Hugo de Mataplana. His descendants gathered the barony of Mataplana with the condal heritage and participated in campaigns of the Crown of Aragon.",
+      "trayectoria": "Arnau Roger I and Ramon Roger I were his successors. Sibila, daughter of Arnau Roger, inherited at the end of the 13th century and married Hugo de Mataplana. His descendants gathered the barony of Mataplana with the condal heritage and participated in campaigns of the Crown of Aragon.",
       "legado": "In the 15th century, Hugo Roger III led forces opposed to John II during the Catalan civil war. The resistance continued after the capitulation of Pedralbes. His wife Catalina Albert supported the defense of Valencia d'Àneu until 1491. The confiscation and transfer of the domains to the Cardona put an end to the rule of the comital line and gave way to the marquessate of Pallars.",
       "territorios": [
         "Pallars Sobirà"
@@ -15981,7 +15981,7 @@
         "url": "https://www.enciklopedija.hr/clanak/kosace"
       },
       {
-        "titulo": "Hrvatska enciklopedija · Esteban Vukčić Kosača",
+        "titulo": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
         "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic"
       }
     ],
@@ -16232,11 +16232,11 @@
           "texto": "Catherine Kosača, daughter of Esteban Vukčić, married Esteban Tomás in 1446. The link brought the Ducal House of Herzegovina closer to the Bosnian monarchy.",
           "fuentes": [
             {
-              "titulo": "Hrvatska enciklopedija · Esteban Vukčić Kosača",
+              "titulo": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
               "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic"
             },
             {
-              "titulo": "Hrvatska enciklopedija · Esteban Tomašević",
+              "titulo": "Hrvatska enciklopedija · Stephen Tomašević",
               "url": "https://www.enciklopedija.hr/clanak/stjepan-tomasevic"
             }
           ],
@@ -16260,7 +16260,7 @@
           "url": "https://www.enciklopedija.hr/clanak/kosace"
         },
         {
-          "titulo": "Hrvatska enciklopedija · Esteban Vukčić Kosača",
+          "titulo": "Hrvatska enciklopedija · Stjepan Vukčić Kosača",
           "url": "https://www.enciklopedija.hr/clanak/kosaca-stjepan-vukcic"
         }
       ],

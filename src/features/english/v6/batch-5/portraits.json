@@ -20,12 +20,12 @@
     "obra": "Portrait of the Infanta Catalina Micaela",
     "autor": "Alonso Sánchez Coello",
     "fecha": "1582–1585",
-    "institucion": "Museo del Hermitage, San Petersburgo"
+    "institucion": "Hermitage Museum, Saint Petersburg"
   },
   "ISABELHAB": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Elisabeth of Habsburg",
-    "obra": "Isabel de Habsburgo · series of dynastic portraits",
+    "obra": "Elisabeth of Habsburg · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
     "fecha": "16th century",
     "institucion": "Kunsthistorisches Museum, Vienna"
@@ -33,7 +33,7 @@
   "CUNIGAUSTRIABAV": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Kunigunde of Austria",
-    "obra": "Cunegunda de Austria · series of dynastic portraits",
+    "obra": "Kunigunde of Austria · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
     "fecha": "16th century",
     "institucion": "Kunsthistorisches Museum, Vienna"
@@ -41,7 +41,7 @@
   "JUDH": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Judith of Habsburg",
-    "obra": "Judit de Habsburgo · series of dynastic portraits",
+    "obra": "Judith of Habsburg · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
     "fecha": "16th century",
     "institucion": "Kunsthistorisches Museum, Vienna"
@@ -86,7 +86,7 @@
   "BEATRIXNUREMBERG": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Beatrice of Nuremberg",
-    "obra": "Beatriz de Núremberg · series of dynastic portraits",
+    "obra": "Beatrice of Nuremberg · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
     "fecha": "16th century",
     "institucion": "Kunsthistorisches Museum, Vienna"
@@ -94,7 +94,7 @@
   "JOHANNAPFIRT": {
     "tipo": "Historical portrait",
     "alt": "Portrait of Joanna of Pfirt",
-    "obra": "Juana de Pfirt · series of dynastic portraits",
+    "obra": "Joanna of Pfirt · series of dynastic portraits",
     "autor": "Antoni Boys (Anton Waiss)",
     "fecha": "16th century",
     "institucion": "Kunsthistorisches Museum, Vienna"

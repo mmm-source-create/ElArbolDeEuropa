@@ -467,14 +467,14 @@
           },
           {
             "id": "Monferrato-JUAN2MONFERRATO-1338",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "TEODORO1MON",
                 "nombre": "Monferrato Theodore I",
                 "slug": "teodoro-i-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "Son of Andronikos II and Irene of Monferrato, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "Son of Andronikos II and Irene of Montferrat, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
               },
               "desde": 1306
             },
@@ -483,8 +483,8 @@
                 "id": "JUAN2MONFERRATO",
                 "nombre": "John II of Montferrat",
                 "slug": "juan-ii-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "Son of Theodore I, continued in Monferrato the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "Son of Theodore I, continued in Montferrat the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
               },
               "desde": 1338
             },
@@ -505,29 +505,29 @@
                   "id": "TEODORO1MON",
                   "nombre": "Monferrato Theodore I",
                   "slug": "teodoro-i-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "Son of Andronikos II and Irene of Monferrato, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "Son of Andronikos II and Irene of Montferrat, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
                 },
                 {
                   "id": "JUAN2MONFERRATO",
                   "nombre": "John II of Montferrat",
                   "slug": "juan-ii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "Son of Theodore I, continued in Monferrato the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "Son of Theodore I, continued in Montferrat the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
                 }
               ]
             }
           },
           {
             "id": "Monferrato-BONIF3MON-1483",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "GUGL8MON",
                 "nombre": "William VIII of Monferrato",
                 "slug": "guillermo-viii-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Monferrato with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
               },
               "desde": 1464
             },
@@ -536,8 +536,8 @@
                 "id": "BONIF3MON",
                 "nombre": "Monferrato Bonifacio III",
                 "slug": "bonifacio-iii-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
               },
               "desde": 1483
             },
@@ -558,36 +558,36 @@
                   "id": "GUGL8MON",
                   "nombre": "William VIII of Monferrato",
                   "slug": "guillermo-viii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Monferrato with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
                 },
                 {
                   "id": "GIANGIACOMOMON",
                   "nombre": "Juan Jacobo de Monferrato",
                   "slug": "juan-jacobo-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "Son of Theodore II, Monferrato inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "Son of Theodore II, Montferrat inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
                 },
                 {
                   "id": "BONIF3MON",
                   "nombre": "Monferrato Bonifacio III",
                   "slug": "bonifacio-iii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
                 }
               ]
             }
           },
           {
             "id": "Monferrato-GUGL9MON-1494",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "BONIF3MON",
                 "nombre": "Monferrato Bonifacio III",
                 "slug": "bonifacio-iii-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
               },
               "desde": 1483
             },
@@ -596,8 +596,8 @@
                 "id": "GUGL9MON",
                 "nombre": "William IX of Montferrat",
                 "slug": "guillermo-ix-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
               },
               "desde": 1494
             },
@@ -618,29 +618,29 @@
                   "id": "BONIF3MON",
                   "nombre": "Monferrato Bonifacio III",
                   "slug": "bonifacio-iii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
                 },
                 {
                   "id": "GUGL9MON",
                   "nombre": "William IX of Montferrat",
                   "slug": "guillermo-ix-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
                 }
               ]
             }
           },
           {
             "id": "Monferrato-BONIF4MON-1518",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "GUGL9MON",
                 "nombre": "William IX of Montferrat",
                 "slug": "guillermo-ix-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
               },
               "desde": 1494
             },
@@ -649,8 +649,8 @@
                 "id": "BONIF4MON",
                 "nombre": "Boniface IV of Montferrat",
                 "slug": "bonifacio-iv-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
               },
               "desde": 1518
             },
@@ -671,29 +671,29 @@
                   "id": "GUGL9MON",
                   "nombre": "William IX of Montferrat",
                   "slug": "guillermo-ix-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
                 },
                 {
                   "id": "BONIF4MON",
                   "nombre": "Boniface IV of Montferrat",
                   "slug": "bonifacio-iv-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
                 }
               ]
             }
           },
           {
             "id": "Monferrato-GIANGIORGIOMON-1530",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "BONIF4MON",
                 "nombre": "Boniface IV of Montferrat",
                 "slug": "bonifacio-iv-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
-                "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+                "dinastia": "Paleólogo-Montferrat",
+                "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
               },
               "desde": 1518
             },
@@ -702,7 +702,7 @@
                 "id": "GIANGIORGIOMON",
                 "nombre": "Gian Giorgio of Montferrat",
                 "slug": "juan-jorge-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
+                "dinastia": "Paleólogo-Montferrat",
                 "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
               },
               "desde": 1530
@@ -718,34 +718,34 @@
               }
             ],
             "parentesco": {
-              "texto": "Common ascendant: Monferrato Boniface III",
+              "texto": "Common ascendant: Montferrat Boniface III",
               "via": [
                 {
                   "id": "BONIF4MON",
                   "nombre": "Boniface IV of Montferrat",
                   "slug": "bonifacio-iv-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
                 },
                 {
                   "id": "GUGL9MON",
                   "nombre": "William IX of Montferrat",
                   "slug": "guillermo-ix-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
                 },
                 {
                   "id": "BONIF3MON",
                   "nombre": "Monferrato Bonifacio III",
                   "slug": "bonifacio-iii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
                 },
                 {
                   "id": "GIANGIORGIOMON",
                   "nombre": "Gian Giorgio of Montferrat",
                   "slug": "juan-jorge-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
+                  "dinastia": "Paleólogo-Montferrat",
                   "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
                 }
               ]
@@ -753,13 +753,13 @@
           },
           {
             "id": "Monferrato-FED2GONZAGA-1536",
-            "territorio": "Monferrato",
+            "territorio": "Montferrat",
             "predecesor": {
               "persona": {
                 "id": "GIANGIORGIOMON",
                 "nombre": "Gian Giorgio of Montferrat",
                 "slug": "juan-jorge-de-monferrato",
-                "dinastia": "Paleólogo-Monferrato",
+                "dinastia": "Paleólogo-Montferrat",
                 "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
               },
               "desde": 1530
@@ -770,7 +770,7 @@
                 "nombre": "Federico II Gonzaga",
                 "slug": "federico-ii-gonzaga",
                 "dinastia": "Gonzaga",
-                "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+                "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
               },
               "desde": 1536
             },
@@ -793,29 +793,29 @@
                   "id": "GIANGIORGIOMON",
                   "nombre": "Gian Giorgio of Montferrat",
                   "slug": "juan-jorge-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
+                  "dinastia": "Paleólogo-Montferrat",
                   "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
                 },
                 {
                   "id": "BONIF3MON",
                   "nombre": "Monferrato Bonifacio III",
                   "slug": "bonifacio-iii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
                 },
                 {
                   "id": "GIANGIACOMOMON",
                   "nombre": "Juan Jacobo de Monferrato",
                   "slug": "juan-jacobo-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "Son of Theodore II, Monferrato inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "Son of Theodore II, Montferrat inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
                 },
                 {
                   "id": "TEODORO2MON",
                   "nombre": "Theodore II of Montferrat",
                   "slug": "teodoro-ii-de-monferrato",
-                  "dinastia": "Paleólogo-Monferrato",
-                  "resumen": "Son of John II and Isabella of Mallorca, Monferrato inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
+                  "dinastia": "Paleólogo-Montferrat",
+                  "resumen": "Son of John II and Isabella of Mallorca, Montferrat inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
                 },
                 {
                   "id": "ISABMAL",
@@ -892,7 +892,7 @@
                   "nombre": "Federico II Gonzaga",
                   "slug": "federico-ii-gonzaga",
                   "dinastia": "Gonzaga",
-                  "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+                  "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
                 }
               ]
             }
@@ -1107,7 +1107,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1253,
           "hasta": 1292,
           "titulo": "Marquis",
@@ -1561,7 +1561,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1306,
           "hasta": 1338,
           "titulo": "Marquis",
@@ -1571,8 +1571,8 @@
             "id": "TEODORO1MON",
             "nombre": "Monferrato Theodore I",
             "slug": "teodoro-i-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "Son of Andronikos II and Irene of Monferrato, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "Son of Andronikos II and Irene of Montferrat, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
           }
         },
         {
@@ -1648,7 +1648,7 @@
             "nombre": "Aimon de Savoy",
             "slug": "aimon-de-saboya",
             "dinastia": "Saboya",
-            "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolanda de Monferrato united the Savoy with the new Italian branch of the Paleologists."
+            "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolande of Montferrat united the Savoy with the new Italian branch of the Paleologists."
           }
         },
         {
@@ -1682,7 +1682,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1338,
           "hasta": 1372,
           "titulo": "Marquis",
@@ -1692,8 +1692,8 @@
             "id": "JUAN2MONFERRATO",
             "nombre": "John II of Montferrat",
             "slug": "juan-ii-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "Son of Theodore I, continued in Monferrato the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "Son of Theodore I, continued in Montferrat the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
           }
         },
         {
@@ -1814,7 +1814,7 @@
             "nombre": "Amadeus VI of Savoy",
             "slug": "amadeo-vi-de-saboya",
             "dinastia": "Saboya",
-            "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolanda of Monferrato, so his ancestry brings together Savoy and Paleologists."
+            "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolande of Montferrat, so his ancestry brings together Savoy and Paleologists."
           }
         },
         {
@@ -2001,7 +2001,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1381,
           "hasta": 1418,
           "titulo": "Marquis",
@@ -2011,8 +2011,8 @@
             "id": "TEODORO2MON",
             "nombre": "Theodore II of Montferrat",
             "slug": "teodoro-ii-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "Son of John II and Isabella of Mallorca, Monferrato inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "Son of John II and Isabella of Mallorca, Montferrat inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
           }
         },
         {
@@ -2270,7 +2270,7 @@
             "nombre": "Martin I of Aragon",
             "slug": "martin-i",
             "dinastia": "Barcelona",
-            "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+            "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
           }
         },
         {
@@ -2380,7 +2380,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1418,
           "hasta": 1445,
           "titulo": "Marquis",
@@ -2390,8 +2390,8 @@
             "id": "GIANGIACOMOMON",
             "nombre": "Juan Jacobo de Monferrato",
             "slug": "juan-jacobo-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "Son of Theodore II, Monferrato inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "Son of Theodore II, Montferrat inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
           }
         },
         {
@@ -2654,7 +2654,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1464,
           "hasta": 1483,
           "titulo": "Marquis",
@@ -2664,8 +2664,8 @@
             "id": "GUGL8MON",
             "nombre": "William VIII of Monferrato",
             "slug": "guillermo-viii-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Monferrato with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
           }
         },
         {
@@ -2915,7 +2915,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1483,
           "hasta": 1494,
           "titulo": "Marquis",
@@ -2925,8 +2925,8 @@
             "id": "BONIF3MON",
             "nombre": "Monferrato Bonifacio III",
             "slug": "bonifacio-iii-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
           }
         },
         {
@@ -3002,8 +3002,8 @@
             "id": "BIANCAMONSAB",
             "nombre": "Blanche of Montferrat",
             "slug": "blanca-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "The daughter of William VIII of Monferrato, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "The daughter of William VIII of Montferrat, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
           }
         },
         {
@@ -3082,7 +3082,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1494,
           "hasta": 1518,
           "titulo": "Marquis",
@@ -3092,8 +3092,8 @@
             "id": "GUGL9MON",
             "nombre": "William IX of Montferrat",
             "slug": "guillermo-ix-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
           }
         },
         {
@@ -3492,7 +3492,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1518,
           "hasta": 1530,
           "titulo": "Regent",
@@ -3507,7 +3507,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1518,
           "hasta": 1530,
           "titulo": "Marquis",
@@ -3517,8 +3517,8 @@
             "id": "BONIF4MON",
             "nombre": "Boniface IV of Montferrat",
             "slug": "bonifacio-iv-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
-            "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+            "dinastia": "Paleólogo-Montferrat",
+            "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
           }
         },
         {
@@ -3533,7 +3533,7 @@
             "nombre": "Federico II Gonzaga",
             "slug": "federico-ii-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
           }
         },
         {
@@ -3629,7 +3629,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1530,
           "hasta": 1533,
           "titulo": "Marquis",
@@ -3639,7 +3639,7 @@
             "id": "GIANGIORGIOMON",
             "nombre": "Gian Giorgio of Montferrat",
             "slug": "juan-jorge-de-monferrato",
-            "dinastia": "Paleólogo-Monferrato",
+            "dinastia": "Paleólogo-Montferrat",
             "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
           }
         },
@@ -3655,7 +3655,7 @@
             "nombre": "Federico II Gonzaga",
             "slug": "federico-ii-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
           }
         },
         {
@@ -3735,7 +3735,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1536,
           "hasta": 1540,
           "titulo": "Marquis",
@@ -3746,7 +3746,7 @@
             "nombre": "Federico II Gonzaga",
             "slug": "federico-ii-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
           }
         },
         {
@@ -3858,7 +3858,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1550,
           "hasta": 1573,
           "titulo": "Marquis",
@@ -3869,7 +3869,7 @@
             "nombre": "Guglielmo Gonzaga",
             "slug": "guillermo-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
           }
         },
         {
@@ -3884,7 +3884,7 @@
             "nombre": "Guglielmo Gonzaga",
             "slug": "guillermo-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
           }
         },
         {
@@ -4166,7 +4166,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1574,
           "hasta": 1587,
           "titulo": "Duke",
@@ -4177,7 +4177,7 @@
             "nombre": "Guglielmo Gonzaga",
             "slug": "guillermo-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
           }
         },
         {
@@ -4319,7 +4319,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1587,
           "hasta": 1612,
           "titulo": "Duke",
@@ -4545,7 +4545,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1612,
           "hasta": 1612,
           "titulo": "Duke",
@@ -4575,7 +4575,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1612,
           "hasta": 1626,
           "titulo": "Duke",
@@ -4710,7 +4710,7 @@
           }
         },
         {
-          "territorio": "Monferrato",
+          "territorio": "Montferrat",
           "desde": 1626,
           "hasta": 1627,
           "titulo": "Duke",
@@ -5585,7 +5585,7 @@
         "Barcelona-Sicilia",
         "Boccasini",
         "de Got",
-        "Paleólogo-Monferrato",
+        "Paleólogo-Montferrat",
         "Duèse",
         "Fournier",
         "Roger de Beaufort",
@@ -6291,21 +6291,21 @@
           "nombre": "Martin I of Aragon",
           "slug": "martin-i",
           "dinastia": "Barcelona",
-          "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+          "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
         },
         {
           "id": "MARGMONFERRATO",
           "nombre": "Margaret of Montferrat",
           "slug": "margarita-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Consort of the Paleolog-Monferrato dynasty. Associated with Monferrato, Urgell."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Consort of the Paleolog-Montferrat dynasty. Associated with Montferrat, Urgell."
         },
         {
           "id": "JUAN2MONFERRATO",
           "nombre": "John II of Montferrat",
           "slug": "juan-ii-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Son of Theodore I, continued in Monferrato the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Son of Theodore I, continued in Montferrat the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
         },
         {
           "id": "FELIPETARENTO",
@@ -6354,7 +6354,7 @@
           "nombre": "Guglielmo Gonzaga",
           "slug": "guillermo-gonzaga",
           "dinastia": "Gonzaga",
-          "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+          "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
         },
         {
           "id": "ALFONSO2ESTE",
@@ -6969,15 +6969,15 @@
           "id": "MARGPALEO",
           "nombre": "Margaret Palaiologina",
           "slug": "margarita-paleologo",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
         },
         {
           "id": "FED2GONZAGA",
           "nombre": "Federico II Gonzaga",
           "slug": "federico-ii-gonzaga",
           "dinastia": "Gonzaga",
-          "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+          "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
         },
         {
           "id": "FERRANTEGONZAGA",
@@ -8111,21 +8111,21 @@
           "nombre": "Aimon de Savoy",
           "slug": "aimon-de-saboya",
           "dinastia": "Saboya",
-          "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolanda de Monferrato united the Savoy with the new Italian branch of the Paleologists."
+          "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolande of Montferrat united the Savoy with the new Italian branch of the Paleologists."
         },
         {
           "id": "YOLANDAMONFERRATOSAB",
           "nombre": "Yolanda de Monferrato",
           "slug": "yolanda-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The daughter of Theodore I of Monferrato, she married Aimon of Savoy. Her ancestry was linked to Emperor Andronic II and to the Alleramic heiress Yolanda, named Irene in Byzantium."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The daughter of Theodore I of Montferrat, she married Aimon of Savoy. Her ancestry was linked to Emperor Andronic II and to the Alleramic heiress Yolanda, named Irene in Byzantium."
         },
         {
           "id": "AMEDEO6SAB",
           "nombre": "Amadeus VI of Savoy",
           "slug": "amadeo-vi-de-saboya",
           "dinastia": "Saboya",
-          "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolanda of Monferrato, so his ancestry brings together Savoy and Paleologists."
+          "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolande of Montferrat, so his ancestry brings together Savoy and Paleologists."
         },
         {
           "id": "BONABORBONSAB",
@@ -8293,14 +8293,14 @@
           "nombre": "Eugene Maurice of Savoy-Carignano",
           "slug": "eugenio-mauricio-de-saboya-carignano",
           "dinastia": "Saboya-Carignano",
-          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
         },
         {
           "id": "OLIMPIAMANCINI",
           "nombre": "Olimpia Mancini",
           "slug": "olimpia-mancini",
           "dinastia": "Mancini",
-          "resumen": "The nephew of Cardinal Mazarino, a prominent figure of the court of Louis XIV and wife of Eugenio Maurice de Savoy, Count of Soissons. Involved in the \"case of poisons\", she fled France in 1680 and lived in the Spanish Netherlands; she was the mother of Prince Eugene."
+          "resumen": "The nephew of Cardinal Mazarin, a prominent figure of the court of Louis XIV and wife of Eugenio Maurice de Savoy, Count of Soissons. Involved in the \"case of poisons\", she fled France in 1680 and lived in the Spanish Netherlands; she was the mother of Prince Eugene."
         },
         {
           "id": "EUGENIOSABOYA",
@@ -8776,7 +8776,7 @@
           "nombre": "William of Montferrat",
           "slug": "guillermo-de-montferrato",
           "dinastia": "Aleramici",
-          "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Monferrato, Jerusalem."
+          "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Montferrat, Jerusalem."
         },
         {
           "id": "CONRADMONTJER",
@@ -8937,21 +8937,21 @@
           "nombre": "Gaston of Foix, Duke of Nemours",
           "slug": "gaston-de-foix-duque-de-nemours",
           "dinastia": "Foix",
-          "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germana of Foix. He led French forces during the wars of Italy and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
+          "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germaine of Foix. He led French forces during the wars of Italy and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
         },
         {
           "id": "ISABELMONSAL",
           "nombre": "Isabella of Montferrat",
           "slug": "isabel-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The daughter of John James of Monferrato and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The daughter of John James of Montferrat and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
         },
         {
           "id": "BIANCAMONSAB",
           "nombre": "Blanche of Montferrat",
           "slug": "blanca-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The daughter of William VIII of Monferrato, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The daughter of William VIII of Montferrat, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
         },
         {
           "id": "CARLOSGIOAMEDSAB",
@@ -8964,29 +8964,29 @@
           "id": "GUGL8MON",
           "nombre": "William VIII of Monferrato",
           "slug": "guillermo-viii-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Monferrato with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
         },
         {
           "id": "GIANGIACOMOMON",
           "nombre": "Juan Jacobo de Monferrato",
           "slug": "juan-jacobo-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Son of Theodore II, Monferrato inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Son of Theodore II, Montferrat inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
         },
         {
           "id": "GIOVANNASABMON",
           "nombre": "Joanna of Savoy, Marchioness of Montferrat",
           "slug": "juana-de-saboya-marquesa-de-monferrato",
           "dinastia": "Saboya",
-          "resumen": "The daughter of Amadeus VII and Bona of Berry, she married John James of Monferrato. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
+          "resumen": "The daughter of Amadeus VII and Bona of Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
         },
         {
           "id": "TEODORO2MON",
           "nombre": "Theodore II of Montferrat",
           "slug": "teodoro-ii-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Son of John II and Isabella of Mallorca, Monferrato inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Son of John II and Isabella of Mallorca, Montferrat inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
         },
         {
           "id": "GUIL7MON",
@@ -9000,28 +9000,28 @@
           "nombre": "Yolande of Montferrat",
           "slug": "yolanda-de-monferrato-emperatriz-irene",
           "dinastia": "Aleramici",
-          "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Monferrato was linked to the Byzantine imperial court."
+          "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Montferrat was linked to the Byzantine imperial court."
         },
         {
           "id": "TEODORO1MON",
           "nombre": "Monferrato Theodore I",
           "slug": "teodoro-i-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Son of Andronikos II and Irene of Monferrato, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Son of Andronikos II and Irene of Montferrat, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
         },
         {
           "id": "BONIF3MON",
           "nombre": "Monferrato Bonifacio III",
           "slug": "bonifacio-iii-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
         },
         {
           "id": "GUGL9MON",
           "nombre": "William IX of Montferrat",
           "slug": "guillermo-ix-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
         },
         {
           "id": "ANNAALENCONMON",
@@ -9034,14 +9034,14 @@
           "id": "BONIF4MON",
           "nombre": "Boniface IV of Montferrat",
           "slug": "bonifacio-iv-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
         },
         {
           "id": "GIANGIORGIOMON",
           "nombre": "Gian Giorgio of Montferrat",
           "slug": "juan-jorge-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
+          "dinastia": "Paleólogo-Montferrat",
           "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
         },
         {
@@ -9441,7 +9441,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not expel the Ottoman Empire from the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don John of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not expel the Ottoman Empire from the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
         },
         {
           "id": "ARMADA_1588",
@@ -10251,7 +10251,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "MESINA_1571",
@@ -11049,21 +11049,21 @@
         "nombre": "Martin I of Aragon",
         "slug": "martin-i",
         "dinastia": "Barcelona",
-        "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+        "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
       },
       {
         "id": "MARGMONFERRATO",
         "nombre": "Margaret of Montferrat",
         "slug": "margarita-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Consort of the Paleolog-Monferrato dynasty. Associated with Monferrato, Urgell."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Consort of the Paleolog-Montferrat dynasty. Associated with Montferrat, Urgell."
       },
       {
         "id": "JUAN2MONFERRATO",
         "nombre": "John II of Montferrat",
         "slug": "juan-ii-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Son of Theodore I, continued in Monferrato the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Son of Theodore I, continued in Montferrat the branch of the Paleologists arrived from Byzantium. His marriage to Isabella of Majorca added a connection to the Majorcan royal house."
       },
       {
         "id": "FELIPETARENTO",
@@ -11112,7 +11112,7 @@
         "nombre": "Guglielmo Gonzaga",
         "slug": "guillermo-gonzaga",
         "dinastia": "Gonzaga",
-        "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+        "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
       },
       {
         "id": "ALFONSO2ESTE",
@@ -11727,15 +11727,15 @@
         "id": "MARGPALEO",
         "nombre": "Margaret Palaiologina",
         "slug": "margarita-paleologo",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
       },
       {
         "id": "FED2GONZAGA",
         "nombre": "Federico II Gonzaga",
         "slug": "federico-ii-gonzaga",
         "dinastia": "Gonzaga",
-        "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+        "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
       },
       {
         "id": "FERRANTEGONZAGA",
@@ -12869,21 +12869,21 @@
         "nombre": "Aimon de Savoy",
         "slug": "aimon-de-saboya",
         "dinastia": "Saboya",
-        "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolanda de Monferrato united the Savoy with the new Italian branch of the Paleologists."
+        "resumen": "Amadeus V's youngest son, inherited after his brother Edward, whose daughter also defended inheritance rights. His marriage to Yolande of Montferrat united the Savoy with the new Italian branch of the Paleologists."
       },
       {
         "id": "YOLANDAMONFERRATOSAB",
         "nombre": "Yolanda de Monferrato",
         "slug": "yolanda-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The daughter of Theodore I of Monferrato, she married Aimon of Savoy. Her ancestry was linked to Emperor Andronic II and to the Alleramic heiress Yolanda, named Irene in Byzantium."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The daughter of Theodore I of Montferrat, she married Aimon of Savoy. Her ancestry was linked to Emperor Andronic II and to the Alleramic heiress Yolanda, named Irene in Byzantium."
       },
       {
         "id": "AMEDEO6SAB",
         "nombre": "Amadeus VI of Savoy",
         "slug": "amadeo-vi-de-saboya",
         "dinastia": "Saboya",
-        "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolanda of Monferrato, so his ancestry brings together Savoy and Paleologists."
+        "resumen": "Known as the Green Count, he belongs to the generation that reinforced Savoy’s political and military projection. He was the son of Aimon and Yolande of Montferrat, so his ancestry brings together Savoy and Paleologists."
       },
       {
         "id": "BONABORBONSAB",
@@ -13051,14 +13051,14 @@
         "nombre": "Eugene Maurice of Savoy-Carignano",
         "slug": "eugenio-mauricio-de-saboya-carignano",
         "dinastia": "Saboya-Carignano",
-        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
       },
       {
         "id": "OLIMPIAMANCINI",
         "nombre": "Olimpia Mancini",
         "slug": "olimpia-mancini",
         "dinastia": "Mancini",
-        "resumen": "The nephew of Cardinal Mazarino, a prominent figure of the court of Louis XIV and wife of Eugenio Maurice de Savoy, Count of Soissons. Involved in the \"case of poisons\", she fled France in 1680 and lived in the Spanish Netherlands; she was the mother of Prince Eugene."
+        "resumen": "The nephew of Cardinal Mazarin, a prominent figure of the court of Louis XIV and wife of Eugenio Maurice de Savoy, Count of Soissons. Involved in the \"case of poisons\", she fled France in 1680 and lived in the Spanish Netherlands; she was the mother of Prince Eugene."
       },
       {
         "id": "EUGENIOSABOYA",
@@ -13534,7 +13534,7 @@
         "nombre": "William of Montferrat",
         "slug": "guillermo-de-montferrato",
         "dinastia": "Aleramici",
-        "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Monferrato, Jerusalem."
+        "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Montferrat, Jerusalem."
       },
       {
         "id": "CONRADMONTJER",
@@ -13695,21 +13695,21 @@
         "nombre": "Gaston of Foix, Duke of Nemours",
         "slug": "gaston-de-foix-duque-de-nemours",
         "dinastia": "Foix",
-        "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germana of Foix. He led French forces during the wars of Italy and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
+        "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germaine of Foix. He led French forces during the wars of Italy and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
       },
       {
         "id": "ISABELMONSAL",
         "nombre": "Isabella of Montferrat",
         "slug": "isabel-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The daughter of John James of Monferrato and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The daughter of John James of Montferrat and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
       },
       {
         "id": "BIANCAMONSAB",
         "nombre": "Blanche of Montferrat",
         "slug": "blanca-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The daughter of William VIII of Monferrato, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The daughter of William VIII of Montferrat, he married Charles I of Savoy. After the death of the Duke he assumed the regency for his son Carlos Juan Amadeo and defended his authority before the relatives of the house."
       },
       {
         "id": "CARLOSGIOAMEDSAB",
@@ -13722,29 +13722,29 @@
         "id": "GUGL8MON",
         "nombre": "William VIII of Monferrato",
         "slug": "guillermo-viii-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Monferrato with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The son of Juan Jacobo and Juana de Savoy combined the government of Montferrat with the military service of the Italian powers. His daughters married Ludovico II of Saluzzo and Charles I of Savoy."
       },
       {
         "id": "GIANGIACOMOMON",
         "nombre": "Juan Jacobo de Monferrato",
         "slug": "juan-jacobo-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Son of Theodore II, Monferrato inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Son of Theodore II, Montferrat inherited and married Joan of Savoy, sister of Amadeus VIII. The kinship did not prevent the pressure of the saboyan duke on his domains."
       },
       {
         "id": "GIOVANNASABMON",
         "nombre": "Joanna of Savoy, Marchioness of Montferrat",
         "slug": "juana-de-saboya-marquesa-de-monferrato",
         "dinastia": "Saboya",
-        "resumen": "The daughter of Amadeus VII and Bona of Berry, she married John James of Monferrato. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
+        "resumen": "The daughter of Amadeus VII and Bona of Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
       },
       {
         "id": "TEODORO2MON",
         "nombre": "Theodore II of Montferrat",
         "slug": "teodoro-ii-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Son of John II and Isabella of Mallorca, Monferrato inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Son of John II and Isabella of Mallorca, Montferrat inherited after his brother John III. His government was crossed by relations with Milan and by disputes with Savoy-Acaya."
       },
       {
         "id": "GUIL7MON",
@@ -13758,28 +13758,28 @@
         "nombre": "Yolande of Montferrat",
         "slug": "yolanda-de-monferrato-emperatriz-irene",
         "dinastia": "Aleramici",
-        "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Monferrato was linked to the Byzantine imperial court."
+        "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Montferrat was linked to the Byzantine imperial court."
       },
       {
         "id": "TEODORO1MON",
         "nombre": "Monferrato Theodore I",
         "slug": "teodoro-i-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Son of Andronikos II and Irene of Monferrato, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Son of Andronikos II and Irene of Montferrat, he passed from the Byzantine imperial family to the government of an Italian marquisate. His rights came from his mother, but he had to defend them against competitors."
       },
       {
         "id": "BONIF3MON",
         "nombre": "Monferrato Bonifacio III",
         "slug": "bonifacio-iii-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Monferrato’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The son of Juan Jacobo, succeeded his brother William VIII when expectations of Montferrat’s inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists."
       },
       {
         "id": "GUGL9MON",
         "nombre": "William IX of Montferrat",
         "slug": "guillermo-ix-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "He inherited Monferrato de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "He inherited Montferrat de Boniface III and married Anne of Alençon. Her children Margarita and Bonifacio would occupy different positions in the succession: he inherited the marquisate; she transmitted the rights that would end up holding his incorporation into the heritage of Gonzaga."
       },
       {
         "id": "ANNAALENCONMON",
@@ -13792,14 +13792,14 @@
         "id": "BONIF4MON",
         "nombre": "Boniface IV of Montferrat",
         "slug": "bonifacio-iv-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The son of William IX and Anne of Alençon, Monferrato inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The son of William IX and Anne of Alençon, Montferrat inherited at the age of six, under guardianship. He died young and without offspring, so his uncle Juan Jorge succeeded him."
       },
       {
         "id": "GIANGIORGIOMON",
         "nombre": "Gian Giorgio of Montferrat",
         "slug": "juan-jorge-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
+        "dinastia": "Paleólogo-Montferrat",
         "resumen": "Son of Boniface III and brother of William IX, he succeeded his nephew Boniface IV. He was the last Marquis of the legitimate male line of the Paleologists."
       },
       {
@@ -14212,7 +14212,7 @@
             "nombre": "Sibylla of Jerusalem",
             "slug": "sibila-de-jerusalen",
             "dinastia": "Anjou-Gâtinais",
-            "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guido of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
+            "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guy of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
           }
         },
         {
@@ -15719,14 +15719,14 @@
           "nombre": "Sibylla of Jerusalem",
           "slug": "sibila-de-jerusalen",
           "dinastia": "Anjou-Gâtinais",
-          "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guido of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
+          "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guy of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
         },
         {
           "id": "WILLIAMMONTJER",
           "nombre": "William of Montferrat",
           "slug": "guillermo-de-montferrato",
           "dinastia": "Aleramici",
-          "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Monferrato, Jerusalem."
+          "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Montferrat, Jerusalem."
         },
         {
           "id": "BALDWIN5JER",
@@ -16097,7 +16097,7 @@
           "nombre": "Yolande of Montferrat",
           "slug": "yolanda-de-monferrato-emperatriz-irene",
           "dinastia": "Aleramici",
-          "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Monferrato was linked to the Byzantine imperial court."
+          "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Montferrat was linked to the Byzantine imperial court."
         },
         {
           "id": "THEODORAALEX4",
@@ -16240,7 +16240,7 @@
             "SALADIN",
             "MARIAKOMNENEJER"
           ],
-          "descripcion": "Balian de Ibelin negotiates the surrender of Jerusalem to Saladin after organizing the defense of the city."
+          "descripcion": "Balian of Ibelin negotiates the surrender of Jerusalem to Saladin after organizing the defense of the city."
         },
         {
           "id": "SEXTA_CRUZADA_1229",
@@ -16550,14 +16550,14 @@
         "nombre": "Sibylla of Jerusalem",
         "slug": "sibila-de-jerusalen",
         "dinastia": "Anjou-Gâtinais",
-        "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guido of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
+        "resumen": "Queen of Jerusalem since 1186, sister of Baldwin IV. She crowned her husband Guy of Lusignan, under whose reign Jerusalem was lost to Saladin in 1187."
       },
       {
         "id": "WILLIAMMONTJER",
         "nombre": "William of Montferrat",
         "slug": "guillermo-de-montferrato",
         "dinastia": "Aleramici",
-        "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Monferrato, Jerusalem."
+        "resumen": "Count of Jaffa and Ashkelon of the Aleramici dynasty. Associated with Montferrat, Jerusalem."
       },
       {
         "id": "BALDWIN5JER",
@@ -16928,7 +16928,7 @@
         "nombre": "Yolande of Montferrat",
         "slug": "yolanda-de-monferrato-emperatriz-irene",
         "dinastia": "Aleramici",
-        "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Monferrato was linked to the Byzantine imperial court."
+        "resumen": "Born as Yolanda, daughter of William VII, she adopted Irene's name when she married Andronic II Paleologist. Montferrat was linked to the Byzantine imperial court."
       },
       {
         "id": "THEODORAALEX4",
@@ -18395,7 +18395,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not expel the Ottoman Empire from the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don John of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not expel the Ottoman Empire from the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
         },
         {
           "id": "ARMADA_1588",
@@ -18642,7 +18642,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "MESINA_1571",
@@ -25150,7 +25150,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -26447,7 +26447,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -28813,7 +28813,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -29092,7 +29092,7 @@
             "nombre": "Martin I of Aragon",
             "slug": "martin-i",
             "dinastia": "Barcelona",
-            "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+            "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
           }
         },
         {
@@ -29487,7 +29487,7 @@
           "nombre": "Martin I of Aragon",
           "slug": "martin-i",
           "dinastia": "Barcelona",
-          "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+          "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
         },
         {
           "id": "FEL3ESP",
@@ -29841,7 +29841,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "ANAGNI_1295",
@@ -29977,7 +29977,7 @@
         "nombre": "Martin I of Aragon",
         "slug": "martin-i",
         "dinastia": "Barcelona",
-        "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+        "resumen": "His death without a legitimate surviving heir opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
       },
       {
         "id": "FEL3ESP",
@@ -30683,7 +30683,7 @@
           "nombre": "Nestan-Darejan of Kakheti",
           "slug": "nestan-darejan-de-kajetia",
           "dinastia": "Bagrationi",
-          "resumen": "Daughter of Levan of Kajetia and wife of Simon I of Kartli. His family linked the two eastern monarchies through their children and grandchildren; these marriages coexisted with political rivalries and with the intervention of Persia and the Ottomans."
+          "resumen": "Daughter of Levan of Kakheti and wife of Simon I of Kartli. His family linked the two eastern monarchies through their children and grandchildren; these marriages coexisted with political rivalries and with the intervention of Persia and the Ottomans."
         },
         {
           "id": "GIORGI10KARTLI",
@@ -30795,7 +30795,7 @@
           "nombre": "Khorashan of Kartli",
           "slug": "jorashan-de-kartli",
           "dinastia": "Bagrationi",
-          "resumen": "The daughter of George X of Kartli and wife of Teimuraz I of Kajetia. The marriage strengthened the cooperation between the two branches during their wars against Persia. Their children linked this generation with the later kings of Kajetia and Imereti."
+          "resumen": "The daughter of George X of Kartli and wife of Teimuraz I of Kakheti. The marriage strengthened the cooperation between the two branches during their wars against Persia. Their children linked this generation with the later kings of Kajetia and Imereti."
         },
         {
           "id": "EREKLE1GEO",
@@ -30905,7 +30905,7 @@
         "nombre": "Nestan-Darejan of Kakheti",
         "slug": "nestan-darejan-de-kajetia",
         "dinastia": "Bagrationi",
-        "resumen": "Daughter of Levan of Kajetia and wife of Simon I of Kartli. His family linked the two eastern monarchies through their children and grandchildren; these marriages coexisted with political rivalries and with the intervention of Persia and the Ottomans."
+        "resumen": "Daughter of Levan of Kakheti and wife of Simon I of Kartli. His family linked the two eastern monarchies through their children and grandchildren; these marriages coexisted with political rivalries and with the intervention of Persia and the Ottomans."
       },
       {
         "id": "GIORGI10KARTLI",
@@ -31017,7 +31017,7 @@
         "nombre": "Khorashan of Kartli",
         "slug": "jorashan-de-kartli",
         "dinastia": "Bagrationi",
-        "resumen": "The daughter of George X of Kartli and wife of Teimuraz I of Kajetia. The marriage strengthened the cooperation between the two branches during their wars against Persia. Their children linked this generation with the later kings of Kajetia and Imereti."
+        "resumen": "The daughter of George X of Kartli and wife of Teimuraz I of Kakheti. The marriage strengthened the cooperation between the two branches during their wars against Persia. Their children linked this generation with the later kings of Kajetia and Imereti."
       },
       {
         "id": "EREKLE1GEO",
@@ -31230,7 +31230,7 @@
             "nombre": "Gaston II of Foix",
             "slug": "gaston-ii-de-foix",
             "dinastia": "Foix",
-            "resumen": "He inherited Foix and Bearne as a child and was the father of Gastón Fébus. His marriage to Leonor de Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
+            "resumen": "He inherited Foix and Bearne as a child and was the father of Gaston Fébus. His marriage to Eleanor of Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
           }
         },
         {
@@ -31245,7 +31245,7 @@
             "nombre": "Gaston III of Foix",
             "slug": "gaston-iii-de-foix",
             "dinastia": "Foix",
-            "resumen": "Count of Foix and Viscount of Béarn, known as Gastón Fébus, ruled a heritage of great Pyrenean importance. His marriage to Inés de Navarra connected him with the Évreux."
+            "resumen": "Count of Foix and Viscount of Béarn, known as Gaston Fébus, ruled a heritage of great Pyrenean importance. His marriage to Agnes of Navarre connected him with the Évreux."
           }
         },
         {
@@ -31260,7 +31260,7 @@
             "nombre": "Matthew of Foix",
             "slug": "mateo-de-foix",
             "dinastia": "Foix",
-            "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud de Grailly, opening a new dynastic phase."
+            "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud of Grailly, opening a new dynastic phase."
           }
         },
         {
@@ -31322,7 +31322,7 @@
             "nombre": "John I of Foix",
             "slug": "juan-i-de-foix",
             "dinastia": "Foix",
-            "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Juana de Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
+            "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Joan of Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
           }
         },
         {
@@ -31367,7 +31367,7 @@
             "nombre": "Catherine of Navarre",
             "slug": "catalina-i-de-navarra",
             "dinastia": "Foix",
-            "resumen": "He ruled Navarre alongside Juan de Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
+            "resumen": "He ruled Navarre alongside John of Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
           }
         },
         {
@@ -31462,7 +31462,7 @@
           "nombre": "Catherine of Navarre",
           "slug": "catalina-i-de-navarra",
           "dinastia": "Foix",
-          "resumen": "He ruled Navarre alongside Juan de Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
+          "resumen": "He ruled Navarre alongside John of Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
         },
         {
           "id": "ENRIQ2NAV",
@@ -31497,14 +31497,14 @@
           "nombre": "Gaston III of Foix",
           "slug": "gaston-iii-de-foix",
           "dinastia": "Foix",
-          "resumen": "Count of Foix and Viscount of Béarn, known as Gastón Fébus, ruled a heritage of great Pyrenean importance. His marriage to Inés de Navarra connected him with the Évreux."
+          "resumen": "Count of Foix and Viscount of Béarn, known as Gaston Fébus, ruled a heritage of great Pyrenean importance. His marriage to Agnes of Navarre connected him with the Évreux."
         },
         {
           "id": "JOHN1FOIX",
           "nombre": "John I of Foix",
           "slug": "juan-i-de-foix",
           "dinastia": "Foix",
-          "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Juana de Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
+          "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Joan of Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
         },
         {
           "id": "ROGERBERNARD3FOIX",
@@ -31539,35 +31539,35 @@
           "nombre": "Gaston II of Foix",
           "slug": "gaston-ii-de-foix",
           "dinastia": "Foix",
-          "resumen": "He inherited Foix and Bearne as a child and was the father of Gastón Fébus. His marriage to Leonor de Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
+          "resumen": "He inherited Foix and Bearne as a child and was the father of Gaston Fébus. His marriage to Eleanor of Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
         },
         {
           "id": "ALIENORCOMMINGES",
           "nombre": "Leonor de Comminges",
           "slug": "leonor-de-comminges",
           "dinastia": "Comminges",
-          "resumen": "Wife of Gaston II and mother of Gastón Fébus, he intervened in the government of family heritage during the minority of his son. His trajectory allows us to observe the role of mothers of minor heirs in political continuity."
+          "resumen": "Wife of Gaston II and mother of Gaston Fébus, he intervened in the government of family heritage during the minority of his son. His trajectory allows us to observe the role of mothers of minor heirs in political continuity."
         },
         {
           "id": "AGNESNAVFOIX",
           "nombre": "Agnes of Navarre, Countess of Foix",
           "slug": "ines-de-navarra-condesa-de-foix",
           "dinastia": "Évreux",
-          "resumen": "Daughter of Philip of Évreux and Joan II of Navarre, she married Gastón Fébus. She was the mother of the count's legitimate son, also called Gastón."
+          "resumen": "Daughter of Philip of Évreux and Joan II of Navarre, she married Gaston Fébus. She was the mother of the count's legitimate son, also called Gastón."
         },
         {
           "id": "GASTONFOIXHEIR",
           "nombre": "Gaston of Foix, son of Fébus",
           "slug": "gaston-de-foix-hijo-de-febus",
           "dinastia": "Foix",
-          "resumen": "The son of Gastón Fébus and Inés of Navarra, he was called to continue the line of the county. He died in 1380, before his father, in the context of a violent family conflict. His absence in succession explains that, after the death of Fébus, he inherited a collateral branch of the Foix."
+          "resumen": "The son of Gaston Fébus and Agnes of Navarre, he was called to continue the line of the county. He died in 1380, before his father, in the context of a violent family conflict. His absence in succession explains that, after the death of Fébus, he inherited a collateral branch of the Foix."
         },
         {
           "id": "MATTHIEUFOIX",
           "nombre": "Matthew of Foix",
           "slug": "mateo-de-foix",
           "dinastia": "Foix",
-          "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud de Grailly, opening a new dynastic phase."
+          "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud of Grailly, opening a new dynastic phase."
         },
         {
           "id": "ISABELLEFOIX",
@@ -31712,7 +31712,7 @@
         "nombre": "Catherine of Navarre",
         "slug": "catalina-i-de-navarra",
         "dinastia": "Foix",
-        "resumen": "He ruled Navarre alongside Juan de Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
+        "resumen": "He ruled Navarre alongside John of Albret during the conquest of the peninsular side by Fernando el Católico. The dynasty retained its rights and domains north of the Pyrenees."
       },
       {
         "id": "ENRIQ2NAV",
@@ -31747,14 +31747,14 @@
         "nombre": "Gaston III of Foix",
         "slug": "gaston-iii-de-foix",
         "dinastia": "Foix",
-        "resumen": "Count of Foix and Viscount of Béarn, known as Gastón Fébus, ruled a heritage of great Pyrenean importance. His marriage to Inés de Navarra connected him with the Évreux."
+        "resumen": "Count of Foix and Viscount of Béarn, known as Gaston Fébus, ruled a heritage of great Pyrenean importance. His marriage to Agnes of Navarre connected him with the Évreux."
       },
       {
         "id": "JOHN1FOIX",
         "nombre": "John I of Foix",
         "slug": "juan-i-de-foix",
         "dinastia": "Foix",
-        "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Juana de Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
+        "resumen": "The son of Isabella de Foix-Castellbó and Archambaud of Grailly, he continued the heritage of Foix under a new male descent. His marriage to Joan of Albret connected both houses before the navarra royal union of the end of the 15th century. His son Gastón IV married Leonor of Navarre."
       },
       {
         "id": "ROGERBERNARD3FOIX",
@@ -31789,35 +31789,35 @@
         "nombre": "Gaston II of Foix",
         "slug": "gaston-ii-de-foix",
         "dinastia": "Foix",
-        "resumen": "He inherited Foix and Bearne as a child and was the father of Gastón Fébus. His marriage to Leonor de Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
+        "resumen": "He inherited Foix and Bearne as a child and was the father of Gaston Fébus. His marriage to Eleanor of Comminges connected the Foix to another house in the Pyrenean realm. His death in 1343 opened the minority of his son, during which Leonor had a role of government."
       },
       {
         "id": "ALIENORCOMMINGES",
         "nombre": "Leonor de Comminges",
         "slug": "leonor-de-comminges",
         "dinastia": "Comminges",
-        "resumen": "Wife of Gaston II and mother of Gastón Fébus, he intervened in the government of family heritage during the minority of his son. His trajectory allows us to observe the role of mothers of minor heirs in political continuity."
+        "resumen": "Wife of Gaston II and mother of Gaston Fébus, he intervened in the government of family heritage during the minority of his son. His trajectory allows us to observe the role of mothers of minor heirs in political continuity."
       },
       {
         "id": "AGNESNAVFOIX",
         "nombre": "Agnes of Navarre, Countess of Foix",
         "slug": "ines-de-navarra-condesa-de-foix",
         "dinastia": "Évreux",
-        "resumen": "Daughter of Philip of Évreux and Joan II of Navarre, she married Gastón Fébus. She was the mother of the count's legitimate son, also called Gastón."
+        "resumen": "Daughter of Philip of Évreux and Joan II of Navarre, she married Gaston Fébus. She was the mother of the count's legitimate son, also called Gastón."
       },
       {
         "id": "GASTONFOIXHEIR",
         "nombre": "Gaston of Foix, son of Fébus",
         "slug": "gaston-de-foix-hijo-de-febus",
         "dinastia": "Foix",
-        "resumen": "The son of Gastón Fébus and Inés of Navarra, he was called to continue the line of the county. He died in 1380, before his father, in the context of a violent family conflict. His absence in succession explains that, after the death of Fébus, he inherited a collateral branch of the Foix."
+        "resumen": "The son of Gaston Fébus and Agnes of Navarre, he was called to continue the line of the county. He died in 1380, before his father, in the context of a violent family conflict. His absence in succession explains that, after the death of Fébus, he inherited a collateral branch of the Foix."
       },
       {
         "id": "MATTHIEUFOIX",
         "nombre": "Matthew of Foix",
         "slug": "mateo-de-foix",
         "dinastia": "Foix",
-        "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud de Grailly, opening a new dynastic phase."
+        "resumen": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud of Grailly, opening a new dynastic phase."
       },
       {
         "id": "ISABELLEFOIX",
@@ -32509,7 +32509,7 @@
                 "nombre": "Manfredo III de Saluzzo",
                 "slug": "manfredo-iii-de-saluzzo",
                 "dinastia": "Saluzzo",
-                "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Monferrato. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
+                "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
               },
               "desde": 1215
             },
@@ -32541,7 +32541,7 @@
                   "nombre": "Manfredo III de Saluzzo",
                   "slug": "manfredo-iii-de-saluzzo",
                   "dinastia": "Saluzzo",
-                  "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Monferrato. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
+                  "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
                 },
                 {
                   "id": "TOMAS1SAL",
@@ -32572,7 +32572,7 @@
                 "nombre": "Ludovico II de Saluzzo",
                 "slug": "ludovico-ii-de-saluzzo",
                 "dinastia": "Saluzzo",
-                "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+                "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
               },
               "desde": 1475
             },
@@ -32601,7 +32601,7 @@
                   "nombre": "Ludovico II de Saluzzo",
                   "slug": "ludovico-ii-de-saluzzo",
                   "dinastia": "Saluzzo",
-                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
                 }
               ]
             }
@@ -32615,7 +32615,7 @@
                 "nombre": "Ludovico II de Saluzzo",
                 "slug": "ludovico-ii-de-saluzzo",
                 "dinastia": "Saluzzo",
-                "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+                "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
               },
               "desde": 1475
             },
@@ -32647,7 +32647,7 @@
                   "nombre": "Ludovico II de Saluzzo",
                   "slug": "ludovico-ii-de-saluzzo",
                   "dinastia": "Saluzzo",
-                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
                 },
                 {
                   "id": "MICHELEANTONIOSAL",
@@ -32668,7 +32668,7 @@
                 "nombre": "Juan Ludovico de Saluzzo",
                 "slug": "juan-ludovico-de-saluzzo",
                 "dinastia": "Saluzzo",
-                "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+                "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
               },
               "desde": 1528
             },
@@ -32701,14 +32701,14 @@
                   "nombre": "Juan Ludovico de Saluzzo",
                   "slug": "juan-ludovico-de-saluzzo",
                   "dinastia": "Saluzzo",
-                  "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+                  "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
                 },
                 {
                   "id": "LUDOVICO2SAL",
                   "nombre": "Ludovico II de Saluzzo",
                   "slug": "ludovico-ii-de-saluzzo",
                   "dinastia": "Saluzzo",
-                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+                  "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
                 },
                 {
                   "id": "FRANCESCOSAL",
@@ -32737,7 +32737,7 @@
         },
         {
           "anio": 1244,
-          "texto": "Thomas I inherits after the death of Manfred III, in a minority supported by the family network of Savoy and Monferrato."
+          "texto": "Thomas I inherits after the death of Manfred III, in a minority supported by the family network of Savoy and Montferrat."
         },
         {
           "anio": 1416,
@@ -32749,7 +32749,7 @@
         },
         {
           "anio": 1504,
-          "texto": "Miguel Antonio inherits as a child; Margarita de Foix-Candale directs the regency."
+          "texto": "Miguel Antonio inherits as a child; Margaret of Foix-Candale directs the regency."
         },
         {
           "anio": 1528,
@@ -32788,7 +32788,7 @@
             "nombre": "Manfredo III de Saluzzo",
             "slug": "manfredo-iii-de-saluzzo",
             "dinastia": "Saluzzo",
-            "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Monferrato. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
+            "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
           }
         },
         {
@@ -32833,7 +32833,7 @@
             "nombre": "Ludovico II de Saluzzo",
             "slug": "ludovico-ii-de-saluzzo",
             "dinastia": "Saluzzo",
-            "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+            "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
           }
         },
         {
@@ -32893,7 +32893,7 @@
             "nombre": "Juan Ludovico de Saluzzo",
             "slug": "juan-ludovico-de-saluzzo",
             "dinastia": "Saluzzo",
-            "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+            "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
           }
         },
         {
@@ -32938,7 +32938,7 @@
             "nombre": "Juan Ludovico de Saluzzo",
             "slug": "juan-ludovico-de-saluzzo",
             "dinastia": "Saluzzo",
-            "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+            "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
           }
         }
       ],
@@ -32960,7 +32960,7 @@
           "nombre": "Manfredo III de Saluzzo",
           "slug": "manfredo-iii-de-saluzzo",
           "dinastia": "Saluzzo",
-          "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Monferrato. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
+          "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
         },
         {
           "id": "TOMAS1SAL",
@@ -32980,15 +32980,15 @@
           "id": "ISABELMONSAL",
           "nombre": "Isabella of Montferrat",
           "slug": "isabel-de-monferrato",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "The daughter of John James of Monferrato and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "The daughter of John James of Montferrat and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
         },
         {
           "id": "LUDOVICO2SAL",
           "nombre": "Ludovico II de Saluzzo",
           "slug": "ludovico-ii-de-saluzzo",
           "dinastia": "Saluzzo",
-          "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+          "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
         },
         {
           "id": "MARGFOIXSAL",
@@ -33009,7 +33009,7 @@
           "nombre": "Juan Ludovico de Saluzzo",
           "slug": "juan-ludovico-de-saluzzo",
           "dinastia": "Saluzzo",
-          "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+          "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
         },
         {
           "id": "FRANCESCOSAL",
@@ -33042,7 +33042,7 @@
         "nombre": "Manfredo III de Saluzzo",
         "slug": "manfredo-iii-de-saluzzo",
         "dinastia": "Saluzzo",
-        "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Monferrato. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
+        "resumen": "He ruled Saluzzo in the first half of the 13th century, between Savoy's pressures and the alliances with Montferrat. His marriage to Beatriz de Savoy was a union between houses that also rivaled politically."
       },
       {
         "id": "TOMAS1SAL",
@@ -33062,15 +33062,15 @@
         "id": "ISABELMONSAL",
         "nombre": "Isabella of Montferrat",
         "slug": "isabel-de-monferrato",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "The daughter of John James of Monferrato and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "The daughter of John James of Montferrat and Joan of Savoy, he married Ludovico I of Saluzzo. His son Ludovico II thus gathered ancestry from the Saluzzo, the Italian Paleologists and the Savoy."
       },
       {
         "id": "LUDOVICO2SAL",
         "nombre": "Ludovico II de Saluzzo",
         "slug": "ludovico-ii-de-saluzzo",
         "dinastia": "Saluzzo",
-        "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the wars of Italy."
+        "resumen": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the wars of Italy."
       },
       {
         "id": "MARGFOIXSAL",
@@ -33091,7 +33091,7 @@
         "nombre": "Juan Ludovico de Saluzzo",
         "slug": "juan-ludovico-de-saluzzo",
         "dinastia": "Saluzzo",
-        "resumen": "The son of Ludovico II and Margarita de Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
+        "resumen": "The son of Ludovico II and Margaret of Foix-Candale, defended a favorable orientation for Charles V. His mother and his brothers removed him from power on several occasions."
       },
       {
         "id": "FRANCESCOSAL",
@@ -34395,7 +34395,7 @@
             "nombre": "Manfred of Athens",
             "slug": "manfredo-de-atenas",
             "dinastia": "Barcelona-Sicilia",
-            "resumen": "The son of Frederick II of Sicily and Leonor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
+            "resumen": "The son of Frederick II of Sicily and Eleanor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
           }
         },
         {
@@ -34595,7 +34595,7 @@
           "nombre": "Manfred of Athens",
           "slug": "manfredo-de-atenas",
           "dinastia": "Barcelona-Sicilia",
-          "resumen": "The son of Frederick II of Sicily and Leonor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
+          "resumen": "The son of Frederick II of Sicily and Eleanor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
         },
         {
           "id": "GUILLERMOATENAS",
@@ -34681,7 +34681,7 @@
         "nombre": "Manfred of Athens",
         "slug": "manfredo-de-atenas",
         "dinastia": "Barcelona-Sicilia",
-        "resumen": "The son of Frederick II of Sicily and Leonor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
+        "resumen": "The son of Frederick II of Sicily and Eleanor of Anjou. In 1312 the Catalan Company, owner of Athens since the Battle of Cephisus, asked the king for a son as Duke, and Frederick named Manfredo, still a child. He never left Sicily: the duchy was ruled by vicars general. He died in Trapani in 1317 when he fell from the horse."
       },
       {
         "id": "GUILLERMOATENAS",
@@ -35729,7 +35729,7 @@
       "editorial": true,
       "fuentes": [
         {
-          "titulo": "Dictionary of Irish Biography: Grace O’Malley",
+          "titulo": "Dictionary of Irish Biography: Grace O'Malley",
           "url": "https://www.dib.ie/biography/omalley-grainne-grace-granuaile-a6886"
         },
         {
@@ -35904,14 +35904,14 @@
           "nombre": "Richard Bourke, the Iron",
           "slug": "richard-bourke-el-de-hierro",
           "dinastia": "Bourke",
-          "resumen": "Head of the Mac William Iochtar and second husband of Grace O’Malley. His alliance combined land and maritime power in western Ireland. He was the father of Tibbot, who adapted the family position to the Crown title system."
+          "resumen": "Head of the Mac William Iochtar and second husband of Grace O'Malley. His alliance combined land and maritime power in western Ireland. He was the father of Tibbot, who adapted the family position to the Crown title system."
         },
         {
           "id": "TIBBOTBOURKE",
           "nombre": "Tibbot na Long Bourke",
           "slug": "tibbot-na-long-bourke",
           "dinastia": "Bourke",
-          "resumen": "The son of Grace O’Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into titled nobility."
+          "resumen": "The son of Grace O'Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into titled nobility."
         }
       ],
       "eventos": [],
@@ -35979,14 +35979,14 @@
         "nombre": "Richard Bourke, the Iron",
         "slug": "richard-bourke-el-de-hierro",
         "dinastia": "Bourke",
-        "resumen": "Head of the Mac William Iochtar and second husband of Grace O’Malley. His alliance combined land and maritime power in western Ireland. He was the father of Tibbot, who adapted the family position to the Crown title system."
+        "resumen": "Head of the Mac William Iochtar and second husband of Grace O'Malley. His alliance combined land and maritime power in western Ireland. He was the father of Tibbot, who adapted the family position to the Crown title system."
       },
       {
         "id": "TIBBOTBOURKE",
         "nombre": "Tibbot na Long Bourke",
         "slug": "tibbot-na-long-bourke",
         "dinastia": "Bourke",
-        "resumen": "The son of Grace O’Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into titled nobility."
+        "resumen": "The son of Grace O'Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into titled nobility."
       }
     ]
   },
@@ -35995,7 +35995,7 @@
     "es": "mantua",
     "en": "mantua",
     "name": "Mantua",
-    "summary": "The Gonzaga transformed their lordship into marquis and then duchy. Monferrato’s inheritance added another territory whose rank and chronology must be kept separate.",
+    "summary": "The Gonzaga transformed their lordship into marquis and then duchy. Montferrat’s inheritance added another territory whose rank and chronology must be kept separate.",
     "notes": "",
     "editorial": true,
     "translatedSource": {
@@ -36024,7 +36024,7 @@
           "clase": "Duchy"
         }
       ],
-      "resumen": "The Gonzaga transformed their lordship into marquis and then duchy. Monferrato’s inheritance added another territory whose rank and chronology must be kept separate.",
+      "resumen": "The Gonzaga transformed their lordship into marquis and then duchy. Montferrat’s inheritance added another territory whose rank and chronology must be kept separate.",
       "evolucion": [
         {
           "anio": 1328,
@@ -36078,7 +36078,7 @@
             "nombre": "Federico II Gonzaga",
             "slug": "federico-ii-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
           }
         },
         {
@@ -36093,7 +36093,7 @@
             "nombre": "Federico II Gonzaga",
             "slug": "federico-ii-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+            "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
           }
         },
         {
@@ -36108,7 +36108,7 @@
             "nombre": "Guglielmo Gonzaga",
             "slug": "guillermo-gonzaga",
             "dinastia": "Gonzaga",
-            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+            "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
           }
         },
         {
@@ -36195,7 +36195,7 @@
           "nombre": "Guglielmo Gonzaga",
           "slug": "guillermo-gonzaga",
           "dinastia": "Gonzaga",
-          "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+          "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
         },
         {
           "id": "VICENTE1GONZAGA",
@@ -36229,15 +36229,15 @@
           "id": "MARGPALEO",
           "nombre": "Margaret Palaiologina",
           "slug": "margarita-paleologo",
-          "dinastia": "Paleólogo-Monferrato",
-          "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
+          "dinastia": "Paleólogo-Montferrat",
+          "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
         },
         {
           "id": "FED2GONZAGA",
           "nombre": "Federico II Gonzaga",
           "slug": "federico-ii-gonzaga",
           "dinastia": "Gonzaga",
-          "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+          "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
         },
         {
           "id": "FERRANTEGONZAGA",
@@ -36321,7 +36321,7 @@
         "nombre": "Guglielmo Gonzaga",
         "slug": "guillermo-gonzaga",
         "dinastia": "Gonzaga",
-        "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Monferrato. His musical sponsorship reinforced the cultural importance of the court of Mantua."
+        "resumen": "He consolidated the power of the Gonzaga and obtained the ducal dignity for Montferrat. His musical sponsorship reinforced the cultural importance of the court of Mantua."
       },
       {
         "id": "VICENTE1GONZAGA",
@@ -36355,15 +36355,15 @@
         "id": "MARGPALEO",
         "nombre": "Margaret Palaiologina",
         "slug": "margarita-paleologo",
-        "dinastia": "Paleólogo-Monferrato",
-        "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
+        "dinastia": "Paleólogo-Montferrat",
+        "resumen": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of weddings."
       },
       {
         "id": "FED2GONZAGA",
         "nombre": "Federico II Gonzaga",
         "slug": "federico-ii-gonzaga",
         "dinastia": "Gonzaga",
-        "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Monferrato to the Gonzaga in 1536."
+        "resumen": "Marquess de Mantua since 1519 and first Duke since 1530 by concession of Charles V. He commissioned Giulio Romano the Palace of Te; his marriage to Margarita Paleologian brought Montferrat to the Gonzaga in 1536."
       },
       {
         "id": "FERRANTEGONZAGA",
@@ -37462,7 +37462,7 @@
           "url": "https://www.dib.ie/index.php/biography/oneill-hugh-a6962"
         },
         {
-          "titulo": "Owen Roe O’Neill",
+          "titulo": "Owen Roe O'Neill",
           "url": "https://www.dib.ie/biography/oneill-owen-roe-o-neill-eoghan-rua-a6936"
         }
       ],
@@ -37530,7 +37530,7 @@
           "nombre": "Matthew O’Neill of Dungannon",
           "slug": "matthew-o-neill-de-dungannon",
           "dinastia": "O’Neill",
-          "resumen": "Recognized by Conn Bacach as the county’s son and heir, he was rejected by Shane O’Neill and murdered by his supporters. His fatherhood was discussed: the recognized bond is preserved, pointing to that uncertainty."
+          "resumen": "Recognized by Conn Bacach as the county’s son and heir, he was rejected by Shane O'Neill and murdered by his supporters. His fatherhood was discussed: the recognized bond is preserved, pointing to that uncertainty."
         },
         {
           "id": "SHANEONEILL",
@@ -37584,7 +37584,7 @@
         "nombre": "Matthew O’Neill of Dungannon",
         "slug": "matthew-o-neill-de-dungannon",
         "dinastia": "O’Neill",
-        "resumen": "Recognized by Conn Bacach as the county’s son and heir, he was rejected by Shane O’Neill and murdered by his supporters. His fatherhood was discussed: the recognized bond is preserved, pointing to that uncertainty."
+        "resumen": "Recognized by Conn Bacach as the county’s son and heir, he was rejected by Shane O'Neill and murdered by his supporters. His fatherhood was discussed: the recognized bond is preserved, pointing to that uncertainty."
       },
       {
         "id": "SHANEONEILL",
@@ -38559,7 +38559,7 @@
         },
         {
           "anio": 1213,
-          "texto": "Peter of Dreux marries the Breton heiress Alix de Thouars."
+          "texto": "Peter of Dreux marries the Breton heiress Alix of Thouars."
         }
       ],
       "editorial": true,
@@ -38852,7 +38852,7 @@
             "nombre": "Eugene Maurice of Savoy-Carignano",
             "slug": "eugenio-mauricio-de-saboya-carignano",
             "dinastia": "Saboya-Carignano",
-            "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+            "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
           }
         }
       ],
@@ -38874,7 +38874,7 @@
           "nombre": "Eugene Maurice of Savoy-Carignano",
           "slug": "eugenio-mauricio-de-saboya-carignano",
           "dinastia": "Saboya-Carignano",
-          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
         }
       ],
       "eventos": [],
@@ -38893,7 +38893,7 @@
         "nombre": "Eugene Maurice of Savoy-Carignano",
         "slug": "eugenio-mauricio-de-saboya-carignano",
         "dinastia": "Saboya-Carignano",
-        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
       }
     ]
   },
@@ -41838,7 +41838,7 @@
             "SALADIN",
             "MARIAKOMNENEJER"
           ],
-          "descripcion": "Balian de Ibelin negotiates the surrender of Jerusalem to Saladin after organizing the defense of the city."
+          "descripcion": "Balian of Ibelin negotiates the surrender of Jerusalem to Saladin after organizing the defense of the city."
         }
       ],
       "historias": []

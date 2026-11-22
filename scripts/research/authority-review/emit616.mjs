@@ -10,7 +10,7 @@ const clause = s => (s.locator.match(/«(.*)»$/) || [])[1] || '';
 for (const [claimId, review] of Object.entries(reviews)) {
   const [, id, kind, ...rest] = claimId.split(':');
   const entry = data[id] ||= {};
-  for (const s of review.sources) { const k = letter(s.url); entry[k] ||= [idOf(s.url), s.title.split(' · ').slice(k === 'n' ? 1 : 2).join(' · ')]; }
+  for (const s of review.sources) { const k = letter(s.url); entry[k] ||= [idOf(s.url), s.title.split(' · ').slice(k === 'n' ? 1 : 2).join(' · ').replace(/^Deutsche Biographie\s*-\s*/, '')]; }
   const letters = review.sources.map(s => letter(s.url)).join('');
   if (kind === 'birth' || kind === 'death') (entry.d ||= {})[kind] = [letters, review.exactDate || +review.note.match(/en (-?\d+)\.$/)[1]];
   else if (kind === 'father' || kind === 'mother' || kind === 'spouse') (entry.r ||= {})[[kind, ...rest].join(':')] = [letters, clause(review.sources.find(s => letter(s.url) === 'b') || {locator: ''}), clause(review.sources.find(s => letter(s.url) === 'n') || {locator: ''})];

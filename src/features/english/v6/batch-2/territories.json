@@ -45,7 +45,7 @@
               }
             ],
             "parentesco": {
-              "texto": "Common ascendant: Margarita de Ginebra",
+              "texto": "Common ascendant: Margaret of Geneva",
               "via": [
                 {
                   "id": "BONIFACIOSAB",
@@ -113,7 +113,7 @@
               }
             ],
             "parentesco": {
-              "texto": "Common ascendant: Margarita de Ginebra",
+              "texto": "Common ascendant: Margaret of Geneva",
               "via": [
                 {
                   "id": "FELIPE1SAB",
@@ -1116,7 +1116,7 @@
             "nombre": "Albert I of Habsburg",
             "slug": "alberto-i-de-habsburgo",
             "dinastia": "Habsburg",
-            "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolfo de Nassau. He was killed by his nephew John."
+            "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolf of Nassau. He was killed by his nephew John."
           }
         },
         {
@@ -1272,7 +1272,7 @@
             "nombre": "Albert I of Habsburg",
             "slug": "alberto-i-de-habsburgo",
             "dinastia": "Habsburg",
-            "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolfo de Nassau. He was killed by his nephew John."
+            "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolf of Nassau. He was killed by his nephew John."
           }
         },
         {
@@ -2046,7 +2046,7 @@
             "nombre": "Amadeus VII of Savoy",
             "slug": "amadeo-vii-de-saboya",
             "dinastia": "Savoy",
-            "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona de Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and grandmother of the new Count."
+            "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and grandmother of the new Count."
           }
         },
         {
@@ -2683,7 +2683,7 @@
           "titulo": "Archduke",
           "clase": "archiducated",
           "condicion": "branch",
-          "nota": "Succession of Ladislaus and partition with Albert VI, who died in 1463. Austrian government other than imperial office; occupation of Vienna by Matías Corvino limits effective control.",
+          "nota": "Succession of Ladislaus and partition with Albert VI, who died in 1463. Austrian government other than imperial office; occupation of Vienna by Matthias Corvinus limits effective control.",
           "ambito": "Austria under Enns until 1463; Austrian heritage later gathered, with partial Hungarian occupation in 1485–1490",
           "controlDisputado": [
             {
@@ -6030,7 +6030,7 @@
           "nombre": "Albert I of Habsburg",
           "slug": "alberto-i-de-habsburgo",
           "dinastia": "Habsburg",
-          "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolfo de Nassau. He was killed by his nephew John."
+          "resumen": "He consolidated the Habsburg position in Austria and obtained Roman royalty after defeating Adolf of Nassau. He was killed by his nephew John."
         },
         {
           "id": "ISABTIR",
@@ -6205,7 +6205,7 @@
           "nombre": "Catalina Sforza",
           "slug": "catalina-sforza",
           "dinastia": "Sforza",
-          "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by César Borja."
+          "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by Cesare Borgia."
         },
         {
           "id": "ANASFOR",
@@ -8256,7 +8256,7 @@
           "nombre": "Amadeus VII of Savoy",
           "slug": "amadeo-vii-de-saboya",
           "dinastia": "Savoy",
-          "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona de Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and grandmother of the new Count."
+          "resumen": "The Red Count succeeded his father Amadeus VI and maintained the relationship with the French monarchy. He married Bona of Berry and was the father of Amadeus VIII. His early death left a child heir and opened a struggle for regency between the mother and grandmother of the new Count."
         },
         {
           "id": "BONABERRYSAB",
@@ -8410,7 +8410,7 @@
           "nombre": "Eugenio Mauricio de Savoy-Carignano",
           "slug": "eugenio-mauricio-de-saboya-carignano",
           "dinastia": "Savoy-Carignano",
-          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited the county of Soissons for his mother and served as general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+          "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited the county of Soissons for his mother and served as general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
         },
         {
           "id": "EUGENIOSABOYA",
@@ -9089,7 +9089,7 @@
           "nombre": "Foix Gaston, Duke of Nemours",
           "slug": "gaston-de-foix-duque-de-nemours",
           "dinastia": "Foix",
-          "resumen": "The son of Juan de Foix and Maria de Orleans, he was nephew of Louis XII and brother of Germana de Foix. He led French forces during the Italian wars and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
+          "resumen": "The son of John of Foix and Maria de Orleans, he was nephew of Louis XII and brother of Germaine of Foix. He led French forces during the Italian wars and died in the Battle of Ravenna in 1512. His career brings together the Pyrenean connections of the Foix and military service to the French monarchy."
         },
         {
           "id": "CATHPOMNEUMARK",
@@ -9103,7 +9103,7 @@
           "nombre": "Juan del Palatinate-Neumarkt",
           "slug": "juan-del-palatinado-neumarkt",
           "dinastia": "Wittelsbach",
-          "resumen": "Son of the king of Romans Rupert and member of the house of Wittelsbach. His marriage to Catherine of Pomerania linked his palatine branch with Erik of Pomerania. He was the father of Christopher of Bavaria, whose choice in the Scandinavian kingdoms extended that connection beyond the German territories."
+          "resumen": "Son of the king of Romans Rupert and member of the house of Wittelsbach. His marriage to Catherine of Pomerania linked his palatine branch with Eric of Pomerania. He was the father of Christopher of Bavaria, whose choice in the Scandinavian kingdoms extended that connection beyond the German territories."
         },
         {
           "id": "BIANCAMONSAB",
@@ -9124,7 +9124,7 @@
           "nombre": "Joan of Savoy, Marquise of Montferrat",
           "slug": "juana-de-saboya-marquesa-de-monferrato",
           "dinastia": "Savoy",
-          "resumen": "Daughter of Amadeus VII and Bona de Berry, she married Juan James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
+          "resumen": "Daughter of Amadeus VII and Bona of Berry, she married Juan James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
         },
         {
           "id": "LUIS3PAL",
@@ -9499,13 +9499,13 @@
           "id": "LEONARDO_BORJA_1502",
           "timeline": "history",
           "anio": 1502,
-          "titulo": "Leonardo in the service of César Borja",
+          "titulo": "Leonardo in the service of Cesare Borgia",
           "categoria": "political",
           "personas": [
             "LEONARDODAVINCI",
             "CESARBORJA"
           ],
-          "descripcion": "Leonardo works as a military engineer for César Borja during his campaigns in central Italy."
+          "descripcion": "Leonardo works as a military engineer for Cesare Borgia during his campaigns in central Italy."
         },
         {
           "id": "GIOCONDA_1503",
@@ -9899,7 +9899,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "MUERTE_FED2_SICILIA_1250",
@@ -9986,7 +9986,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "THOKOLY_1682",
@@ -12353,7 +12353,7 @@
         "nombre": "Constance of Austria",
         "slug": "constanza-de-austria-constanzaausmeissen",
         "dinastia": "Babenberg",
-        "resumen": "Daughter of Leopold VI of Babenberg and Theodora, Constanza of Austria married Henry III, Margrave of Misnia in 1234. Her marriage linked the Babenberg to the Wettin. She was the mother of Alberto and Dietrich; he died in 1243, before the Austrian successor crisis of 1246."
+        "resumen": "Daughter of Leopold VI of Babenberg and Theodora, Constance of Austria married Henry III, Margrave of Misnia in 1234. Her marriage linked the Babenberg to the Wettin. She was the mother of Alberto and Dietrich; he died in 1243, before the Austrian successor crisis of 1246."
       },
       {
         "id": "MATILDEBAVMEISSEN",
@@ -12899,7 +12899,7 @@
         "nombre": "Eugene Maurice of Savoy-Carignano",
         "slug": "eugenio-mauricio-de-saboya-carignano",
         "dinastia": "Savoy-Carignano",
-        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarino, and was the father of Prince Eugene."
+        "resumen": "Son of Thomas Francis of Savoy-Carignano, he inherited from his mother the county of Soissons and served as a general in the armies of Louis XIV. He married Olympia Mancini, niece of Mazarin, and was the father of Prince Eugene."
       },
       {
         "id": "EUGENIOSABOYA",
@@ -13578,7 +13578,7 @@
         "nombre": "Gaston of Foix, Duke of Nemours",
         "slug": "gaston-de-foix-duque-de-nemours",
         "dinastia": "Foix",
-        "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germana of Foix. He led French forces during the wars in Italy and died in the battle of Ravenna in 1512. His career brings together the Pirenaic connections of the Foix and military service to the French monarchy."
+        "resumen": "The son of John of Foix and Mary of Orleans, he was nephew of Louis XII and brother of Germaine of Foix. He led French forces during the wars in Italy and died in the battle of Ravenna in 1512. His career brings together the Pirenaic connections of the Foix and military service to the French monarchy."
       },
       {
         "id": "CATHPOMNEUMARK",
@@ -13613,7 +13613,7 @@
         "nombre": "Juana de Savoy, Marquesa de Montferrat",
         "slug": "juana-de-saboya-marquesa-de-monferrato",
         "dinastia": "Savoy",
-        "resumen": "The daughter of Amadeus VII and Bona de Berry married John Jacobo of Montferrat. He was the mother of William VIII, Boniface III and Elizabeth, and his wife Ludovicus I of Saluzzo."
+        "resumen": "The daughter of Amadeus VII and Bona of Berry married John James of Montferrat. He was the mother of William VIII, Boniface III and Elizabeth, and his wife Ludovicus I of Saluzzo."
       },
       {
         "id": "LUIS3PAL",
@@ -15150,13 +15150,13 @@
           "titulo": "Duke",
           "clase": "Duchy",
           "condicion": "co-regent",
-          "nota": "Sovereignty shared by Alberto and Isabel Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
+          "nota": "Sovereignty shared by Alberto and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
             "id": "ALB7AUST",
             "nombre": "Albert VII of Austria",
             "slug": "alberto-vii-de-austria",
             "dinastia": "Habsburg",
-            "resumen": "He ruled the Netherlands alongside Isabel Clara Eugenia. His regime sought to stabilize Catholic territories and coincided with the Twelve Years Truce."
+            "resumen": "He ruled the Netherlands alongside Isabella Clara Eugenia. His regime sought to stabilize Catholic territories and coincided with the Twelve Years Truce."
           }
         },
         {
@@ -15166,7 +15166,7 @@
           "titulo": "Duchess",
           "clase": "Duchy",
           "condicion": "co-regent",
-          "nota": "Sovereignty shared by Alberto and Isabel Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
+          "nota": "Sovereignty shared by Alberto and Isabella Clara Eugenia after the cession of Philip II; subject to the outcome of the war in each territory.",
           "persona": {
             "id": "ISABCLARAEUG",
             "nombre": "Isabel Clara Eugenia",
@@ -15440,7 +15440,7 @@
           "nombre": "Albert VII of Austria",
           "slug": "alberto-vii-de-austria",
           "dinastia": "Habsburg",
-          "resumen": "He ruled the Netherlands alongside Isabel Clara Eugenia. His regime sought to stabilize Catholic territories and coincided with the Twelve Years Truce."
+          "resumen": "He ruled the Netherlands alongside Isabella Clara Eugenia. His regime sought to stabilize Catholic territories and coincided with the Twelve Years Truce."
         },
         {
           "id": "ISABCLARAEUG",
@@ -15906,7 +15906,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "LIGA_SANTA_1571",
@@ -15920,7 +15920,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -16733,7 +16733,7 @@
             "nombre": "Juana de Castilla",
             "slug": "juana-la-beltraneja",
             "dinastia": "Trastámara",
-            "resumen": "The daughter recognized by Henry IV of Castile and Joan of Portugal, she contested the Castilian succession to Isabel I. She was proclaimed queen by her supporters and married Alfonso V of Portugal in 1475. After the agreements of 1479 she lived in Portugal, where she died in 1530. The nickname \"the Beltraneja\" comes from an accusation about her paternity, not from a proven filiation."
+            "resumen": "The daughter recognized by Henry IV of Castile and Joan of Portugal, she contested the Castilian succession to Isabel I. She was proclaimed queen by her supporters and married Afonso V of Portugal in 1475. After the agreements of 1479 she lived in Portugal, where she died in 1530. The nickname \"the Beltraneja\" comes from an accusation about her paternity, not from a proven filiation."
           }
         },
         {
@@ -16968,7 +16968,7 @@
           "nombre": "Juana de Castilla",
           "slug": "juana-la-beltraneja",
           "dinastia": "Trastámara",
-          "resumen": "The daughter recognized by Henry IV of Castile and Joan of Portugal, she contested the Castilian succession to Isabel I. She was proclaimed queen by her supporters and married Alfonso V of Portugal in 1475. After the agreements of 1479 she lived in Portugal, where she died in 1530. The nickname \"the Beltraneja\" comes from an accusation about her paternity, not from a proven filiation."
+          "resumen": "The daughter recognized by Henry IV of Castile and Joan of Portugal, she contested the Castilian succession to Isabel I. She was proclaimed queen by her supporters and married Afonso V of Portugal in 1475. After the agreements of 1479 she lived in Portugal, where she died in 1530. The nickname \"the Beltraneja\" comes from an accusation about her paternity, not from a proven filiation."
         },
         {
           "id": "MAYMEN",
@@ -17612,7 +17612,7 @@
           "nombre": "Anne of Austria",
           "slug": "ana-de-austria-anaaustriafra",
           "dinastia": "Habsburg",
-          "resumen": "Daughter of Philip III of Spain, wife of Louis XIII and mother of Louis XIV. Regent of France since 1643 with Cardinal Mazarino, crossed the Fronda without losing power."
+          "resumen": "Daughter of Philip III of Spain, wife of Louis XIII and mother of Louis XIV. Regent of France since 1643 with Cardinal Mazarin, crossed the Fronda without losing power."
         },
         {
           "id": "FEL4ESP",
@@ -17822,7 +17822,7 @@
           "nombre": "Blanca II de Navarra",
           "slug": "blanca-ii-de-navarra",
           "dinastia": "Trastámara",
-          "resumen": "The daughter of Blanche I of Navarre and Juan of Aragon, she was the sister of Carlos de Viana and Leonor. After the death of Carlos she was placed in the center of the dispute for Navarren rights in front of her father."
+          "resumen": "The daughter of Blanche I of Navarre and Juan of Aragon, she was the sister of Charles, Prince of Viana and Leonor. After the death of Carlos she was placed in the center of the dispute for Navarren rights in front of her father."
         }
       ],
       "eventos": [
@@ -18012,7 +18012,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "TRATADO_GRANADA_1500",
@@ -18075,7 +18075,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -20309,14 +20309,14 @@
           "nombre": "Juan Cristóbal Tarnowski",
           "slug": "juan-cristobal-tarnowski",
           "dinastia": "Tarnowski",
-          "resumen": "Son of the hetman Juan Amor Tarnowski, was royal and Spanish secretary of Wojnicz. His death left the family inheritance to his sister Sofia."
+          "resumen": "Son of the hetman Jan Amor Tarnowski, was royal and Spanish secretary of Wojnicz. His death left the family inheritance to his sister Sofia."
         },
         {
           "id": "ZOFIATARNOWSKA",
           "nombre": "Sofia Tarnowska",
           "slug": "sofia-tarnowska",
           "dinastia": "Tarnowski",
-          "resumen": "The daughter of Juan Amor Tarnowski and wife of Konstanty Wasyl Ostrogski. After the death of his brother Juan Cristóbal, his inheritance linked Tarnów to the domains of the Ostrogski."
+          "resumen": "The daughter of Jan Amor Tarnowski and wife of Konstanty Wasyl Ostrogski. After the death of his brother Juan Cristóbal, his inheritance linked Tarnów to the domains of the Ostrogski."
         },
         {
           "id": "FIODORSANGUSZKO",
@@ -20524,7 +20524,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "BARRICADAS_1588",
@@ -21409,7 +21409,7 @@
         },
         {
           "anio": 1600,
-          "texto": "Miguel el Valiente briefly brings together governments in Wallachia, Transylvania and Moldova, without creating lasting common institutions."
+          "texto": "Michael the Brave briefly brings together governments in Wallachia, Transylvania and Moldova, without creating lasting common institutions."
         }
       ],
       "editorial": true,
@@ -23257,14 +23257,14 @@
                   "nombre": "Olaf II of Denmark and IV of Norway",
                   "slug": "olaf-ii-de-dinamarca-y-iv-de-noruega",
                   "dinastia": "Bjälbo",
-                  "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Erik of Pomerania."
+                  "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Eric of Pomerania."
                 },
                 {
                   "id": "HAAKON6NOR",
                   "nombre": "Haakon VI of Norway",
                   "slug": "haakon-vi-de-noruega",
                   "dinastia": "Bjälbo",
-                  "resumen": "The son of Magnus Eriksson and Blanca de Namur. He ruled Norway and briefly shared Swedish royalty with his father. He married Margaret, daughter of Valdemar IV of Denmark. His son Olaf inherited Norway when he was already Danish king: the marriage prepared a union whose access occurred on different dates."
+                  "resumen": "The son of Magnus Eriksson and Blanche of Namur. He ruled Norway and briefly shared Swedish royalty with his father. He married Margaret, daughter of Valdemar IV of Denmark. His son Olaf inherited Norway when he was already Danish king: the marriage prepared a union whose access occurred on different dates."
                 },
                 {
                   "id": "MARGARITA1NORD",
@@ -23717,7 +23717,7 @@
             "nombre": "Valdemar IV of Denmark",
             "slug": "valdemar-iv-de-dinamarca",
             "dinastia": "Estridsen",
-            "resumen": "After a period of fragmentation and efforts, his daughters Ingeborg and Margaret created two routes of dynastic continuity. Margaret’s son Olaf was elected king; Ingeborg’s offspring later contributed to Erik of Pomerania."
+            "resumen": "After a period of fragmentation and efforts, his daughters Ingeborg and Margaret created two routes of dynastic continuity. Margaret’s son Olaf was elected king; Ingeborg’s offspring later contributed to Eric of Pomerania."
           }
         },
         {
@@ -23748,7 +23748,7 @@
             "nombre": "Olaf II of Denmark and IV of Norway",
             "slug": "olaf-ii-de-dinamarca-y-iv-de-noruega",
             "dinastia": "Bjälbo",
-            "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Erik of Pomerania."
+            "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Eric of Pomerania."
           }
         },
         {
@@ -24077,7 +24077,7 @@
           "nombre": "Valdemar IV of Denmark",
           "slug": "valdemar-iv-de-dinamarca",
           "dinastia": "Estridsen",
-          "resumen": "After a period of fragmentation and efforts, his daughters Ingeborg and Margaret created two routes of dynastic continuity. Margaret’s son Olaf was elected king; Ingeborg’s offspring later contributed to Erik of Pomerania."
+          "resumen": "After a period of fragmentation and efforts, his daughters Ingeborg and Margaret created two routes of dynastic continuity. Margaret’s son Olaf was elected king; Ingeborg’s offspring later contributed to Eric of Pomerania."
         },
         {
           "id": "HEDVIGSCHLESWIG",
@@ -24357,21 +24357,21 @@
           "nombre": "Olaf II of Denmark and IV of Norway",
           "slug": "olaf-ii-de-dinamarca-y-iv-de-noruega",
           "dinastia": "Bjälbo",
-          "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Erik of Pomerania."
+          "resumen": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Eric of Pomerania."
         },
         {
           "id": "INGEBORGVALDEMAR",
           "nombre": "Ingeborg Valdemarsdatter",
           "slug": "ingeborg-valdemarsdatter",
           "dinastia": "Estridsen",
-          "resumen": "The daughter of Valdemar IV and sister of Margarita. Her marriage to Henry of Mecklenburg linked the Danish house with a family who also claimed rights in Sweden. Through her daughter Mary was the grandmother of Erik of Pomerania: this is the family connection that made her promotion possible by Margarita."
+          "resumen": "The daughter of Valdemar IV and sister of Margarita. Her marriage to Henry of Mecklenburg linked the Danish house with a family who also claimed rights in Sweden. Through her daughter Mary was the grandmother of Eric of Pomerania: this is the family connection that made her promotion possible by Margarita."
         },
         {
           "id": "PHILIPPAENGLAND",
           "nombre": "Felipa of England",
           "slug": "felipa-de-inglaterra",
           "dinastia": "Plantagenet-Lancaster",
-          "resumen": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Erik of Pomerania connected the Lancaster monarchy with Kalmar."
+          "resumen": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Eric of Pomerania connected the Lancaster monarchy with Kalmar."
         },
         {
           "id": "KNUD6DEN",
@@ -24469,7 +24469,7 @@
           "id": "REBELION_SUECA_1434",
           "timeline": "main",
           "anio": 1434,
-          "titulo": "Rebellion against Erik of Pomerania",
+          "titulo": "Rebellion against Eric of Pomerania",
           "categoria": "political",
           "descripcion": "The Swedish revolt led by Engelbrekt Engelbrektsson opens a phase of regency, restoration and depositions. The union government ceases to be continuous.",
           "personas": [
@@ -24502,7 +24502,7 @@
           "anio": 1520,
           "titulo": "Conquest and bloodbath of Stockholm",
           "categoria": "political",
-          "descripcion": "After the death of Sten Sture the Younger, Cristina Gyllenstierna sustains the resistance of Stockholm. The capitulation, the coronation of Christian II and the executions precipitate a new rebellion.",
+          "descripcion": "After the death of Sten Sture the Younger, Christina Gyllenstierna sustains the resistance of Stockholm. The capitulation, the coronation of Christian II and the executions precipitate a new rebellion.",
           "personas": [
             "ESTENSTUREJOVEN",
             "CHRISTINAGYLLEN",
@@ -24609,7 +24609,7 @@
         "nombre": "Valdemar IV from Denmark",
         "slug": "valdemar-iv-de-dinamarca",
         "dinastia": "Estridsen",
-        "resumen": "It restored much of the territorial power of the Danish monarchy after a phase of fragmentation and effort. His daughters Ingeborg and Margarita created two ways of dynastic continuity. The son of Margarita, Olaf, was elected king; the offspring of Ingeborg later contributed to Erik of Pomerania."
+        "resumen": "It restored much of the territorial power of the Danish monarchy after a phase of fragmentation and effort. His daughters Ingeborg and Margarita created two ways of dynastic continuity. The son of Margarita, Olaf, was elected king; the offspring of Ingeborg later contributed to Eric of Pomerania."
       },
       {
         "id": "HEDVIGSCHLESWIG",
@@ -27143,7 +27143,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "LIGA_SANTA_1571",
@@ -27157,7 +27157,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -28163,7 +28163,7 @@
             "SELIM2OSM",
             "CERVANTES"
           ],
-          "descripcion": "The fleet of the Holy League, led by Don Juan of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not drive the Ottoman Empire out of the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
+          "descripcion": "The fleet of the Holy League, led by Don John of Austria and composed mainly of forces of the Hispanic Monarchy, Venice and the Pontifical States, defeats the Ottoman navy of Ali Pasha after hours of galley combat against galley. The Ottoman center collapses, Uluç Ali manages to save part of his wing and thousands of fighters are killed, wounded or captives. Victory does not drive the Ottoman Empire out of the Mediterranean, but destroys much of its combat fleet and becomes a huge political and symbolic triumph of the coalition."
         },
         {
           "id": "FRANCISCO2_1792",
@@ -28200,7 +28200,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "MESINA_1571",
@@ -28609,7 +28609,7 @@
           "url": "https://www.treccani.it/enciclopedia/carlotta-di-lusignano-regina-di-cipro_(Dizionario-Biografico)"
         },
         {
-          "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Helvis de Brunswick-Grubenhagen",
+          "titulo": "Foundation for Medieval Genealogy · Medieval Lands · Helvis of Brunswick-Grubenhagen",
           "url": "https://fmg.ac/Projects/MedLands/CYPRUS.htm"
         },
         {
@@ -29256,7 +29256,7 @@
           "nombre": "Eschiva de Ibelin, madame of Beirut",
           "slug": "eschiva-de-ibelin-senora-de-beirut",
           "dinastia": "Ibelin",
-          "resumen": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guido de Lusignan, he was the mother of Hugh IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island."
+          "resumen": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guy of Lusignan, he was the mother of Hugh IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island."
         },
         {
           "id": "HUGH4CYPRUS",
@@ -29333,7 +29333,7 @@
           "nombre": "Charlotte de Bourbon, Queen of Cyprus",
           "slug": "carlota-de-borbon-reina-de-chipre",
           "dinastia": "Bourbon",
-          "resumen": "The daughter of Juan de Borbón-La Marche and Catalina de Vendôme, she married Jano. She was the mother of John II and Anne of Cyprus. This union directly connects the Lusignan with the Bourbon and, by Anne, with the Savoy dynasty."
+          "resumen": "The daughter of Juan de Borbón-La Marche and Catherine of Vendôme, she married Jano. She was the mother of John II and Anne of Cyprus. This union directly connects the Lusignan with the Bourbon and, by Anne, with the Savoy dynasty."
         },
         {
           "id": "JOHN2CYPRUS",
@@ -29462,7 +29462,7 @@
         "nombre": "Hugh I of Cyprus",
         "slug": "hugo-i-de-chipre",
         "dinastia": "Lusignan",
-        "resumen": "King of Cyprus since 1205, son of Amalarico de Lusignan. He participated in the fifth crusade and died in Tripoli in 1218."
+        "resumen": "King of Cyprus since 1205, son of Amalric of Lusignan. He participated in the fifth crusade and died in Tripoli in 1218."
       },
       {
         "id": "ISABELLACYPRUS",
@@ -29539,7 +29539,7 @@
         "nombre": "Ibelin's eschiva, lady of Beirut",
         "slug": "eschiva-de-ibelin-senora-de-beirut",
         "dinastia": "Ibelin",
-        "resumen": "The bereaved of Beirut's high-level manor lost his territorial base with the Mameluca conquest. Married to Guido de Lusignan, his mother was Hugh IV's mother from Cyprus. His path links the loss of the mainland states with his family’s continuity on the island."
+        "resumen": "The bereaved of Beirut's high-level manor lost his territorial base with the Mameluca conquest. Married to Guy of Lusignan, his mother was Hugh IV's mother from Cyprus. His path links the loss of the mainland states with his family’s continuity on the island."
       },
       {
         "id": "HUGH4CYPRUS",
@@ -29852,7 +29852,7 @@
             "nombre": "Martin I of Aragon",
             "slug": "martin-i",
             "dinastia": "Barcelona",
-            "resumen": "His death without a legitimate heir to the family opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+            "resumen": "His death without a legitimate heir to the family opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
           }
         },
         {
@@ -30192,7 +30192,7 @@
           "nombre": "Martin I of Aragon",
           "slug": "martin-i",
           "dinastia": "Barcelona",
-          "resumen": "His death without a legitimate heir to the family opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Fernando de Antequera."
+          "resumen": "His death without a legitimate heir to the family opened the Aragonese interregno. The crisis was resolved with the Caspe Commitment and the election of Ferdinand of Antequera."
         },
         {
           "id": "ISABELSABRAN",
@@ -30441,7 +30441,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "ALFONSO_NAPOLES_1442",
@@ -30528,7 +30528,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         },
         {
           "id": "MARIA_MARTIN_1392",
@@ -31120,7 +31120,7 @@
             "nombre": "Constantine II of Cilician Armenia",
             "slug": "constantino-ii-de-armenia-cilicia",
             "dinastia": "Lusignan",
-            "resumen": "Born Guido de Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia."
+            "resumen": "Born Guy of Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia."
           }
         },
         {
@@ -31431,7 +31431,7 @@
           "nombre": "Constantine II of Cilician Armenia",
           "slug": "constantino-ii-de-armenia-cilicia",
           "dinastia": "Lusignan",
-          "resumen": "Born Guido de Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia."
+          "resumen": "Born Guy of Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia."
         },
         {
           "id": "JOHNLUSARM",
@@ -31534,7 +31534,7 @@
         "nombre": "Sibylla of Lusignan, Queen of Armenia",
         "slug": "sibila-de-lusignan-reina-de-armenia",
         "dinastia": "Lusignan",
-        "resumen": "The daughter of Amalarico of Lusignan and Elizabeth of Jerusalem, married Leo I of Armenia. She was the mother of Elizabeth, a heiress of the Cilicia crown. This link establishes a direct connection between the first royal houses in Cyprus, Jerusalem and Armenia."
+        "resumen": "The daughter of Amalric of Lusignan and Elizabeth of Jerusalem, married Leo I of Armenia. She was the mother of Elizabeth, a heiress of the Cilicia crown. This link establishes a direct connection between the first royal houses in Cyprus, Jerusalem and Armenia."
       },
       {
         "id": "ISABELLAARMQUEEN",
@@ -31639,7 +31639,7 @@
         "nombre": "Constantine II of Armenia",
         "slug": "constantino-ii-de-armenia-cilicia",
         "dinastia": "Lusignan",
-        "resumen": "Born Guido de Lusignan, she accepted the crown after her cousin Leo IV's death. Her project of bringing her closer to the Latin Church found resistance among the nobles. He was killed and put an end to his first Lusignan reign at Cilicia."
+        "resumen": "Born Guy of Lusignan, she accepted the crown after her cousin Leo IV's death. Her project of bringing her closer to the Latin Church found resistance among the nobles. He was killed and put an end to his first Lusignan reign at Cilicia."
       },
       {
         "id": "JOHNLUSARM",
@@ -32229,7 +32229,7 @@
             "VITELLOZZO",
             "NICCOLOMACHIAVELLI"
           ],
-          "descripcion": "César Borja eliminates in Senigallia several captains who had rebelled against him. The episode, observed by Machiavelli, sums up the conflict between the territorial prince and the autonomous condotiers."
+          "descripcion": "Cesare Borgia eliminates in Senigallia several captains who had rebelled against him. The episode, observed by Machiavelli, sums up the conflict between the territorial prince and the autonomous condotiers."
         },
         {
           "id": "BANDENERE_1526",
@@ -32270,13 +32270,13 @@
           "id": "LEONARDO_BORJA_1502",
           "timeline": "history",
           "anio": 1502,
-          "titulo": "Leonardo in the service of César Borja",
+          "titulo": "Leonardo in the service of Cesare Borgia",
           "categoria": "political",
           "personas": [
             "LEONARDODAVINCI",
             "CESARBORJA"
           ],
-          "descripcion": "Leonardo works as a military engineer for César Borja during his campaigns in central Italy."
+          "descripcion": "Leonardo works as a military engineer for Cesare Borgia during his campaigns in central Italy."
         },
         {
           "id": "GIOCONDA_1503",
@@ -33276,7 +33276,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "LIGA_SANTA_1571",
@@ -33290,7 +33290,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -34582,7 +34582,7 @@
             "nombre": "Arnaldo Roger I de Pallars",
             "slug": "arnaldo-roger-i-de-pallars",
             "dinastia": "Pallars",
-            "resumen": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgel and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285."
+            "resumen": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgell and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285."
           }
         },
         {
@@ -34597,7 +34597,7 @@
             "nombre": "Ramón Roger I de Pallars",
             "slug": "ramon-roger-i-de-pallars",
             "dinastia": "Pallars",
-            "resumen": "Brother of Arnaldo Roger I, succeeded him in 1288. He died without children in 1294, and the inheritance was disputed between the Coserans and his niece Sibylla."
+            "resumen": "Brother of Arnau Roger I, succeeded him in 1288. He died without children in 1294, and the inheritance was disputed between the Coserans and his niece Sibylla."
           }
         },
         {
@@ -34612,7 +34612,7 @@
             "nombre": "Sibylla I de Pallars",
             "slug": "sibila-i-de-pallars",
             "dinastia": "Pallars",
-            "resumen": "Daughter of Arnaldo Roger I, she was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 she married Hugo de Mataplana, who ruled with her."
+            "resumen": "Daughter of Arnau Roger I, she was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 she married Hugo de Mataplana, who ruled with her."
           }
         },
         {
@@ -34659,7 +34659,7 @@
             "nombre": "Ramón Roger II de Pallars",
             "slug": "ramon-roger-ii-de-pallars",
             "dinastia": "Pallars",
-            "resumen": "Brother of Arnaldo Roger II, he received the county of Peter IV in 1343 and served the king in the campaigns of Rosellon (1343) and Mallorca (1349)."
+            "resumen": "Brother of Arnau Roger II, he received the county of Peter IV in 1343 and served the king in the campaigns of Rosellon (1343) and Mallorca (1349)."
           }
         },
         {
@@ -34704,7 +34704,7 @@
             "nombre": "Hugo Roger II de Pallars",
             "slug": "hugo-roger-ii-de-pallars",
             "dinastia": "Pallars",
-            "resumen": "Brother of Arnaldo Roger III, he was Count from 1369 to 1416 and married Blanca de Foix-Castellbó. He served the Infante Juan and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Fernando de Antequera and participated in the pacification of the revolt of Jaime de Urgel (1412–1413)."
+            "resumen": "Brother of Arnau Roger III, he was Count from 1369 to 1416 and married Blanca de Foix-Castellbó. He served the Infante John and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Ferdinand of Antequera and participated in the pacification of the revolt of Jaime de Urgel (1412–1413)."
           }
         },
         {
@@ -34787,21 +34787,21 @@
           "nombre": "Arnaldo Roger I de Pallars",
           "slug": "arnaldo-roger-i-de-pallars",
           "dinastia": "Pallars",
-          "resumen": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgel and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285."
+          "resumen": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgell and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285."
         },
         {
           "id": "RAMONROGER1PALLARS",
           "nombre": "Ramón Roger I de Pallars",
           "slug": "ramon-roger-i-de-pallars",
           "dinastia": "Pallars",
-          "resumen": "Brother of Arnaldo Roger I, succeeded him in 1288. He died without children in 1294, and the inheritance was disputed between the Coserans and his niece Sibylla."
+          "resumen": "Brother of Arnau Roger I, succeeded him in 1288. He died without children in 1294, and the inheritance was disputed between the Coserans and his niece Sibylla."
         },
         {
           "id": "SIBILA1PALLARS",
           "nombre": "Sibylla I de Pallars",
           "slug": "sibila-i-de-pallars",
           "dinastia": "Pallars",
-          "resumen": "Daughter of Arnaldo Roger I, she was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 she married Hugo de Mataplana, who ruled with her."
+          "resumen": "Daughter of Arnau Roger I, she was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 she married Hugo de Mataplana, who ruled with her."
         },
         {
           "id": "HUGO1PALLARS",
@@ -34822,7 +34822,7 @@
           "nombre": "Ramón Roger II de Pallars",
           "slug": "ramon-roger-ii-de-pallars",
           "dinastia": "Pallars",
-          "resumen": "Brother of Arnaldo Roger II, he received the county of Peter IV in 1343 and served the king in the campaigns of Rosellon (1343) and Mallorca (1349)."
+          "resumen": "Brother of Arnau Roger II, he received the county of Peter IV in 1343 and served the king in the campaigns of Rosellon (1343) and Mallorca (1349)."
         },
         {
           "id": "HUGOROGER1PALLARS",
@@ -34843,7 +34843,7 @@
           "nombre": "Hugo Roger II de Pallars",
           "slug": "hugo-roger-ii-de-pallars",
           "dinastia": "Pallars",
-          "resumen": "Brother of Arnaldo Roger III, he was Count from 1369 to 1416 and married Blanca de Foix-Castellbó. He served the Infante Juan and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Fernando de Antequera and participated in the pacification of the revolt of Jaime de Urgel (1412–1413)."
+          "resumen": "Brother of Arnau Roger III, he was Count from 1369 to 1416 and married Blanca de Foix-Castellbó. He served the Infante John and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Ferdinand of Antequera and participated in the pacification of the revolt of Jaime de Urgel (1412–1413)."
         },
         {
           "id": "ROGERBERNARDO1PALLARS",
@@ -34897,21 +34897,21 @@
         "nombre": "Arnaldo Roger I de pallars",
         "slug": "arnaldo-roger-i-de-pallars",
         "dinastia": "Pallars",
-        "resumen": "He was a tutor of Count Ermengol X of Urgel and rebelled against the Crown in 1275 and 1280 and later served Peter III at his expedition to Tunis from 1282 and his defence from Ampurdan in 1285."
+        "resumen": "He was a tutor of Count Ermengol X of Urgell and rebelled against the Crown in 1275 and 1280 and later served Peter III at his expedition to Tunis from 1282 and his defence from Ampurdan in 1285."
       },
       {
         "id": "RAMONROGER1PALLARS",
         "nombre": "Ramón Roger I de pallars",
         "slug": "ramon-roger-i-de-pallars",
         "dinastia": "Pallars",
-        "resumen": "The brother of Arnaldo Roger I, his father and his sister, was killed with no children in 1294 and his inheritance was disputed between the Coseran and his niece Sibylla."
+        "resumen": "The brother of Arnau Roger I, his father and his sister, was killed with no children in 1294 and his inheritance was disputed between the Coseran and his niece Sibylla."
       },
       {
         "id": "SIBILA1PALLARS",
         "nombre": "Sibylla I of Pallars",
         "slug": "sibila-i-de-pallars",
         "dinastia": "Pallars",
-        "resumen": "Daughter of Arnaldo Roger I, was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 he married Hugo de Mataplana, who ruled with her."
+        "resumen": "Daughter of Arnau Roger I, was Countess of Pallars from 1295 to 1330 against the claims of the Coserans, with the support of James II. In 1297 he married Hugo de Mataplana, who ruled with her."
       },
       {
         "id": "HUGO1PALLARS",
@@ -34932,7 +34932,7 @@
         "nombre": "Ramon Roger II of Pallars",
         "slug": "ramon-roger-ii-de-pallars",
         "dinastia": "Pallars",
-        "resumen": "Brother of Arnaldo Roger II, received the county of Peter IV in 1343 and served the king in the campaigns of the Rosellon (1343) and Majorca (1349)."
+        "resumen": "Brother of Arnau Roger II, received the county of Peter IV in 1343 and served the king in the campaigns of the Rosellon (1343) and Majorca (1349)."
       },
       {
         "id": "HUGOROGER1PALLARS",
@@ -34953,7 +34953,7 @@
         "nombre": "Hugo Roger II of pallars",
         "slug": "hugo-roger-ii-de-pallars",
         "dinastia": "Pallars",
-        "resumen": "He was a brother of Arnaldo Roger III and was a count from 1369 to 1416 and married Blanca de Feix- Castellbó. He served his child and his campaign at Panissars from 1389-1390 and after his commitment his support to Fernando de Antequera and his participation in the peace of his revolt with Jaime de Urgel (1412-1413)."
+        "resumen": "He was a brother of Arnau Roger III and was a count from 1369 to 1416 and married Blanca de Feix- Castellbó. He served his child and his campaign at Panissars from 1389-1390 and after his commitment his support to Ferdinand of Antequera and his participation in the peace of his revolt with Jaime de Urgel (1412-1413)."
       },
       {
         "id": "ROGERBERNARDO1PALLARS",
@@ -36120,7 +36120,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "LIGA_SANTA_1571",
@@ -36134,7 +36134,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -36409,7 +36409,7 @@
             "FEL2ESP",
             "CHARLESMAYENNE"
           ],
-          "descripcion": "The death of Francisco de Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
+          "descripcion": "The death of Francis of Anjou makes Enrique de Navarra an alleged heir. Enrique de Guise reorganizes the Catholic League, backed from Spain, to prevent a Protestant from inheriting the French crown."
         },
         {
           "id": "LIGA_SANTA_1571",
@@ -36423,7 +36423,7 @@
             "MARCANTONIO2COL",
             "SEBASTIANOVENIER"
           ],
-          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don Juan of Austria receives the supreme command of the allied fleet."
+          "descripcion": "Pius V achieves an agreement between the Hispanic Monarchy, Venice and the Pontifical States. Philip II provides an essential part of the resources and his half-brother Don John of Austria receives the supreme command of the allied fleet."
         }
       ],
       "historias": [
@@ -38399,7 +38399,7 @@
         },
         {
           "anio": 1337,
-          "texto": "Juana's marriage to Carlos de Blois, from the house of Châtillon."
+          "texto": "Juana's marriage to Charles of Blois, from the house of Châtillon."
         },
         {
           "anio": 1341,
@@ -38445,7 +38445,7 @@
             "nombre": "Joan of Penthièvre",
             "slug": "juana-de-penthievre",
             "dinastia": "Dreux",
-            "resumen": "The daughter of Guy de Brittany and niece of John III, he claimed the duchy in front of Juan de Montfort. Her husband, Carlos de Blois, defended his cause militarily."
+            "resumen": "The daughter of Guy de Brittany and niece of John III, he claimed the duchy in front of John of Montfort. Her husband, Charles of Blois, defended his cause militarily."
           }
         }
       ],
@@ -38473,7 +38473,7 @@
           "nombre": "Joan of Penthièvre",
           "slug": "juana-de-penthievre",
           "dinastia": "Dreux",
-          "resumen": "The daughter of Guy de Brittany and niece of John III, he claimed the duchy in front of Juan de Montfort. Her husband, Carlos de Blois, defended his cause militarily."
+          "resumen": "The daughter of Guy de Brittany and niece of John III, he claimed the duchy in front of John of Montfort. Her husband, Charles of Blois, defended his cause militarily."
         },
         {
           "id": "CHARLESBLOIS",
@@ -38492,7 +38492,7 @@
         "nombre": "Guy of Brittany",
         "slug": "guy-de-bretana",
         "dinastia": "Dreux",
-        "resumen": "The son of Arthur II and Mary of Limoges, he was the brother of John III of Brittany and the father of Juana of Penthièvre. He died before the Duke."
+        "resumen": "The son of Arthur II and Mary of Limoges, he was the brother of John III of Brittany and the father of Joan of Penthièvre. He died before the Duke."
       },
       {
         "id": "JEANNEAVAUGOUR",
@@ -38722,7 +38722,7 @@
             "nombre": "Catalina Sforza",
             "slug": "catalina-sforza",
             "dinastia": "Sforza",
-            "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by César Borja."
+            "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by Cesare Borgia."
           }
         }
       ],
@@ -38737,7 +38737,7 @@
           "nombre": "Catalina Sforza",
           "slug": "catalina-sforza",
           "dinastia": "Sforza",
-          "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by César Borja."
+          "resumen": "Noble Italiana, Madame de Imola y Forlì and one of the most famous figures of Romagna politics. She strongly defended her dominions until she was defeated by Cesare Borgia."
         },
         {
           "id": "GIROLAMORIARIO",
@@ -39375,7 +39375,7 @@
             "SALADIN",
             "MARIAKOMNENEJER"
           ],
-          "descripcion": "Balian de Ibelin negotiates Jerusalem's surrender to Saladin after organizing the city's defense."
+          "descripcion": "Balian of Ibelin negotiates Jerusalem's surrender to Saladin after organizing the city's defense."
         }
       ],
       "historias": [
@@ -42069,7 +42069,7 @@
             "SALADIN",
             "MARIAKOMNENEJER"
           ],
-          "descripcion": "Balian de Ibelin negotiates Jerusalem's surrender to Saladin after organizing the city's defense."
+          "descripcion": "Balian of Ibelin negotiates Jerusalem's surrender to Saladin after organizing the city's defense."
         }
       ],
       "historias": []

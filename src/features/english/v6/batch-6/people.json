@@ -80,9 +80,9 @@
     "aliases": [
       "Luis II de Saluzzo"
     ],
-    "summary": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the Italian Wars.",
+    "summary": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the Italian Wars.",
     "sections": [],
-    "biography": "He succeeded his father in Saluzzo and sought support in Milan, Monferrato and France. His military career led him to serve the French kings during the Italian Wars. The marriage to Margaret of Foix-Candale reinforced that orientation. At her death there was a child heir and a regency that prolonged the political influence of the Marquise.",
+    "biography": "He succeeded his father in Saluzzo and sought support in Milan, Montferrat and France. His military career led him to serve the French kings during the Italian Wars. The marriage to Margaret of Foix-Candale reinforced that orientation. At her death there was a child heir and a regency that prolonged the political influence of the Marquise.",
     "governmentNotes": {
       "Ludovico II heredó de su padre. Su madre Isabel de Monferrato lo conectaba con los marqueses vecinos y con la casa de Saboya.": "Louis II inherited from his father. His mother Elizabeth of Montferrat connected him with the neighbouring marquis and with the House of Savoy."
     }
@@ -115,9 +115,9 @@
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
-    "summary": "Son of John Jacobo, he succeeded his brother William VIII when expectations about the Monferrato inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists.",
+    "summary": "Son of John James, he succeeded his brother William VIII when expectations about the Montferrat inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists.",
     "sections": [],
-    "biography": "Son of John Jacobo, he succeeded his brother William VIII when expectations about the Monferrato inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists. His government maintained a difficult relationship with Milan and also sought French protection.",
+    "biography": "Son of John James, he succeeded his brother William VIII when expectations about the Montferrat inheritance already affected Savoy and Saluzzo. His sons William IX and John George extended the male line of the Paleologists. His government maintained a difficult relationship with Milan and also sought French protection.",
     "governmentNotes": {
       "El marquesado pasó al hermano de Guillermo VIII. Las hijas de Guillermo y sus matrimonios mantuvieron expectativas patrimoniales, pero no sustituyeron ese acceso de Bonifacio.": "The marquess passed to William VIII's brother. William's daughters and his marriages maintained hereditary expectations, but they did not replace Bonifacio's access."
     },
@@ -242,7 +242,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of the infant John of Portugal, she was the second wife of John II of Castile (1447) and mother of Isabel the Catholic and the infant Alfonso. Widowed since 1454, she lived in retirement in Arévalo until her death in 1496.",
+    "summary": "Daughter of the infante John of Portugal, she was the second wife of John II of Castile (1447) and mother of Isabella the Catholic and the infante Alfonso. Widowed since 1454, she lived in retirement in Arévalo until her death in 1496.",
     "sections": []
   },
   "ALEXIOS2TREB": {
@@ -255,7 +255,7 @@
     "slugName": "Alejo II of Trebizond"
   },
   "MICHELEANTONIOSAL": {
-    "name": "Miguel Antonio of Saluzzo",
+    "name": "Michele Antonio of Saluzzo",
     "role": "Marquess",
     "nickname": "",
     "aliases": [
@@ -266,7 +266,8 @@
     "biography": "The son of Ludovico II and Margaret of Foix-Candale, he inherited Saluzzo as a child. He developed his career in the service of the French monarchy, while his mother retained a decisive role in the marquessate. His death without issue opened a dispute between his brothers, whose political positions were divided between France and the emperor.",
     "governmentNotes": {
       "El heredero era todavía niño. Su madre Margarita de Foix-Candale ejerció la tutela y mantuvo después funciones de gobierno durante las ausencias de su hijo.": "The heir was still a child. His mother, Margaret of Foix-Candale, was the guardian and later held governmental functions during his son's absence."
-    }
+    },
+    "slugName": "Miguel Antonio of Saluzzo"
   },
   "GIORGI10KARTLI": {
     "name": "George X of Kartli",
@@ -374,9 +375,9 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of the wedding.",
+    "summary": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of the wedding.",
     "sections": [],
-    "biography": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Monferrato to that house. The inheritance required an imperial resolution and was not an automatic effect of the wedding. After being widowed she exercised the regency of her sons and maintained an intense diplomatic activity between Mantua, Casale and the great European courts."
+    "biography": "Daughter of William IX and Anne of Alençon, her marriage to Frederick II Gonzaga was decisive for the transmission of Montferrat to that house. The inheritance required an imperial resolution and was not an automatic effect of the wedding. After being widowed she exercised the regency of her sons and maintained an intense diplomatic activity between Mantua, Casale and the great European courts."
   },
   "ALEXANDRULAPU": {
     "name": "Alexander Lăpușneanu",
@@ -478,7 +479,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Bagrat III of Imericia, her marriage to Luarsab I united the two western and eastern branches of the Bagrationi. She was the mother of Simon I and David XI, rivals who followed different policies against the Safavid power.",
+    "summary": "Daughter of Bagrat III of Imereti, her marriage to Luarsab I united the two western and eastern branches of the Bagrationi. She was the mother of Simon I and David XI, rivals who followed different policies against the Safavid power.",
     "sections": []
   },
   "FERNKARLTIROL": {
@@ -883,7 +884,7 @@
     "sections": []
   },
   "WOLFGANGZWEIBNEUB": {
-    "name": "Wolfgang del Palatinado-Zweibrücken",
+    "name": "Wolfgang of Palatinate-Zweibrücken",
     "role": "Count palatine",
     "nickname": "",
     "aliases": [],
@@ -891,7 +892,8 @@
     "sections": [],
     "governmentNotes": {
       "Otón Enrique le cedió el principado tras acceder a la dignidad electoral; era su primo y acreedor.": "Otón Enrique ceded the principality to him after accessing the electoral dignity; he was his cousin and creditor."
-    }
+    },
+    "slugName": "Wolfgang del Palatinado-Zweibrücken"
   },
   "MAX1BAV": {
     "name": "Maximilian I of Bavaria",
@@ -1333,12 +1335,13 @@
     "sections": []
   },
   "IVAN1KALITA": {
-    "name": "Iván I de Moscú",
+    "name": "Ivan I of Moscow",
     "role": "Grand prince",
     "nickname": "Kalitá",
     "aliases": [],
     "summary": "Great Prince of Russia, 1328–1340. Great prince of the Rurikid dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Iván I de Moscú"
   },
   "BLANART": {
     "name": "Blanche of Artois",
@@ -1389,12 +1392,13 @@
     "sections": []
   },
   "DMITRIDON": {
-    "name": "Dmitri Donskói",
+    "name": "Dmitry Donskoy",
     "role": "Grand prince",
     "nickname": "",
     "aliases": [],
     "summary": "Grand Prince of Russia, 1363–1389. Great prince of the Rurikid dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Dmitri Donskói"
   },
   "WILHELM9HESSEKASS": {
     "name": "William IX of Hesse-Kassel",
@@ -1914,12 +1918,13 @@
     "sections": []
   },
   "INESDAMP": {
-    "name": "Inés de Borbón-Dampierre",
+    "name": "Agnes of Bourbon-Dampierre",
     "role": "Lady",
     "nickname": "",
     "aliases": [],
     "summary": "Lady of Bourbon, 1262–1287. Lady of the Dampierre dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Inés de Borbón-Dampierre"
   },
   "ANASTASIAROM": {
     "name": "Anastasia Romanovna Zakharyina",
@@ -1995,12 +2000,13 @@
     "sections": []
   },
   "IVANSTRATSIMIRBUL": {
-    "name": "Iván Sratsimir",
+    "name": "Ivan Sratsimir",
     "role": "Tsar",
     "nickname": "",
     "aliases": [],
     "summary": "The Council of Ministers of the Republic of Bulgaria, 1360–1396 (branch). Tsar of the Shishman dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Iván Sratsimir"
   },
   "GIOVANNAMONTEFELTRO": {
     "name": "Giovanna da Montefeltro",
@@ -2035,12 +2041,13 @@
     "sections": []
   },
   "VLAD2MOR": {
-    "name": "Vladislav II de Moravia",
+    "name": "Vladislaus II of Moravia",
     "role": "Margrave",
     "nickname": "",
     "aliases": [],
     "summary": "Margrave of Moravia, 1224–1227. Margrave of the Přemysl dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Vladislav II de Moravia"
   },
   "DONALMACCARTHYMOR": {
     "name": "Donal MacCarthy Mór",
@@ -2140,14 +2147,15 @@
     "sections": []
   },
   "HUGOROGER1PALLARS": {
-    "name": "Hugo Roger I de Pallars",
+    "name": "Hug Roger I of Pallars",
     "role": "Count of Pallars will rule",
     "nickname": "",
     "aliases": [
       "Hug Roger I de Pallars"
     ],
     "summary": "Son of Ramón Roger II, he ruled from 1350 to 1366 and fought in the War of the Two Stones against Peter I of Castile.",
-    "sections": []
+    "sections": [],
+    "slugName": "Hugo Roger I de Pallars"
   },
   "ISABURG": {
     "name": "Isabella of Urgell",
@@ -2222,7 +2230,7 @@
     "sections": []
   },
   "IVANASEN3BUL": {
-    "name": "Iván Asen III of Bulgaria",
+    "name": "Ivan Asen III of Bulgaria",
     "role": "Tsar",
     "nickname": "",
     "aliases": [
@@ -2232,27 +2240,30 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno rival en la capital con apoyo bizantino; no implica control uniforme de todo el zarato.": "rival government in the capital with Byzantine support; it does not imply uniform control of the whole lot."
-    }
+    },
+    "slugName": "Iván Asen III of Bulgaria"
   },
   "HUGOROGER2PALLARS": {
-    "name": "Hugo Roger II de Pallars",
+    "name": "Hug Roger II of Pallars",
     "role": "Count of Pallars will rule",
     "nickname": "",
     "aliases": [
       "Hug Roger II de Pallars"
     ],
-    "summary": "Brother of Arnaldo Roger III, he was count from 1369 to 1416 and married Blanche of Foix-Castellbó. He served Infante Juan and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Fernando de Antequera and participated in the pacification of Jaime de Urgel's revolt (1412–1413).",
-    "sections": []
+    "summary": "Brother of Arnau Roger III, he was count from 1369 to 1416 and married Blanche of Foix-Castellbó. He served Infante John and in the Panissars campaign of 1389–1390; after Caspe's engagement he supported Ferdinand of Antequera and participated in the pacification of Jaime de Urgel's revolt (1412–1413).",
+    "sections": [],
+    "slugName": "Hugo Roger II de Pallars"
   },
   "ARNAUROGER4PALLARS": {
-    "name": "Arnaldo Roger IV de Pallars",
+    "name": "Arnau Roger IV of Pallars",
     "role": "Count of Pallars will rule",
     "nickname": "",
     "aliases": [
       "Arnau Roger IV de Pallars"
     ],
     "summary": "Son of Roger Bernard I, he ruled from 1424 to 1451. He was a constable of Aragon and in 1438 rejected a French invasion of the Aran valley; he dragged debts and disputes with Queen Maria, with John of Foix and with the Bellera.",
-    "sections": []
+    "sections": [],
+    "slugName": "Arnaldo Roger IV de Pallars"
   },
   "MLADEN1SUBIC": {
     "name": "Mladen I Šubić Bribirski",
@@ -2309,7 +2320,7 @@
     "aliases": [],
     "summary": "First wife of Arthur II of Brittany, she was the mother of John III and Guy de Penthièvre. Her descendants formed the family line from which the deceased duke in 1341 and her niece Juana came.",
     "sections": [],
-    "biography": "First wife of Arthur II of Brittany, she was the mother of John III and Guy de Penthièvre. Her descendants formed the family line from which the deceased duke in 1341 and her niece Juana came. Distinguishing her from Yolanda de Dreux, Arthur's second wife, helps to understand the two lines of succession.",
+    "biography": "First wife of Arthur II of Brittany, she was the mother of John III and Guy de Penthièvre. Her descendants formed the family line from which the deceased duke in 1341 and her niece Juana came. Distinguishing her from Yolande of Dreux, Arthur's second wife, helps to understand the two lines of succession.",
     "governmentNotes": {
       "Año aproximado; la cifra no representa una datación exacta.": "Approximate year; figure does not represent an exact date."
     }
@@ -2326,7 +2337,7 @@
     }
   },
   "MIHAIBRAVE": {
-    "name": "Miguel el Valiente",
+    "name": "Michael the Brave",
     "role": "Voivoda / Governor",
     "nickname": "",
     "aliases": [
@@ -2336,7 +2347,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno reconocido en nombre del emperador Rodolfo II.": "Government recognized in the name of Emperor Rudolf II."
-    }
+    },
+    "slugName": "Miguel el Valiente"
   },
   "CHRISTINAGYLLEN": {
     "name": "Christina Gyllenstierna",
@@ -2349,12 +2361,13 @@
     "sections": []
   },
   "HELVIGHOLSTEIN": {
-    "name": "Helvig de Holstein",
+    "name": "Helvig of Holstein",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Schaumburg dynasty. Associated with Holstein, Sweden.",
-    "sections": []
+    "sections": [],
+    "slugName": "Helvig de Holstein"
   },
   "PAPA_PAULO4": {
     "name": "Paul IV",
@@ -2385,7 +2398,7 @@
     }
   },
   "GUILLERMA1PALLARS": {
-    "name": "Guillerma I de Pallars Sobirà",
+    "name": "Guillema I of Pallars Sobirà",
     "role": "Countess of Pallars Sobirà",
     "nickname": "",
     "aliases": [
@@ -2395,7 +2408,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobernó al principio su madre. Vendió el condado a su segundo marido entre 1229 y 1231.": "Her mother ruled at first. She sold the county to her second husband between 1229 and 1231."
-    }
+    },
+    "slugName": "Guillerma I de Pallars Sobirà"
   },
   "RICHARDTALBOT": {
     "name": "Richard Talbot, conde de Tyrconnell",
@@ -2441,12 +2455,13 @@
     "sections": []
   },
   "BURC5HOH": {
-    "name": "Burcardo V de Hohenberg",
+    "name": "Burchard V of Hohenberg",
     "role": "Count",
     "nickname": "",
     "aliases": [],
     "summary": "Count of the Hohenberg dynasty. Associated with Hohenberg.",
-    "sections": []
+    "sections": [],
+    "slugName": "Burcardo V de Hohenberg"
   },
   "CARLOSBRANDON": {
     "name": "Charles Brandon",
@@ -2551,12 +2566,13 @@
     }
   },
   "SIBILLABAGE": {
-    "name": "Sibila de Bâgé",
+    "name": "Sibylle of Bâgé",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Bâgé dynasty. Associated with Savoy.",
-    "sections": []
+    "sections": [],
+    "slugName": "Sibila de Bâgé"
   },
   "MARGARETHAMARK": {
     "name": "Margaret de la Marck",
@@ -2646,7 +2662,7 @@
     "slugName": "Inocencio V"
   },
   "MUSTAFA1OSM": {
-    "name": "Mustafá I",
+    "name": "Mustafa I",
     "role": "Sultan",
     "nickname": "",
     "aliases": [],
@@ -2654,7 +2670,8 @@
     "sections": [],
     "governmentNotes": {
       "La ficha enlaza las provincias bajo administración otomana directa según las conquistas fechadas; no absorbe los principados tributarios. Los relevos del mismo año no implican gobierno simultáneo de todo el Imperio.": "The index links the provinces under direct Ottoman administration according to the dates of conquests; it does not absorb the taxed principalities. The reliefs of the same year do not involve simultaneous government of the entire Empire."
-    }
+    },
+    "slugName": "Mustafá I"
   },
   "PAPA_INOCENCIO8": {
     "name": "Innocent VIII",
@@ -2916,12 +2933,13 @@
     }
   },
   "JACOBEABADEN": {
-    "name": "Jacobea de Baden",
+    "name": "Jakobea of Baden",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Zähringen dynasty. Associated with Bavaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Jacobea de Baden"
   },
   "MARIACANCELLIERI": {
     "name": "Maria Cancellieri del Bufalo",
@@ -3035,7 +3053,7 @@
     }
   },
   "MOSESSZEKELY": {
-    "name": "Moisés Székely",
+    "name": "Moses Székely",
     "role": "Prince",
     "nickname": "",
     "aliases": [
@@ -3046,7 +3064,8 @@
     "sections": [],
     "governmentNotes": {
       "Príncipe durante la rebelión apoyada por fuerzas otomanas y tártaras, entre la primavera de 1603 y su derrota de julio cerca de Brașov. El mapa se limita a ciudades y sedes partidarias documentadas; no incorpora las sedes orientales que siguieron al emperador ni toda la tierra sajona. La elección y la asunción del título se fechan de modo distinto en las fuentes.": "Prince during the rebellion supported by Ottoman and Tatar forces, between the spring of 1603 and his defeat in July near Brașov. The map is limited to documented partisan cities and headquarters; it does not include the eastern headquarters that followed the emperor or all Saxon land. The choice and assumption of the title are dated differently in the sources."
-    }
+    },
+    "slugName": "Moisés Székely"
   },
   "PASQUALE_CICOGNA_DOGE": {
     "name": "Pasquale Cicogna",

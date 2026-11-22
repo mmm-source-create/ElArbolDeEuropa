@@ -15,8 +15,10 @@ test('la maternidad probable de los Piccinino conserva identidad y reserva en su
     assert.match(maternity.sources[0].locator, /Primer párrafo/);
     assert(maternity.note && maternity.reviewedAt);
     // Sourcing maternity does not silently certify another relationship.
-    assert.equal(claim(id, 'father').certainty, 'pending');
-    assert.deepEqual(claim(id, 'father').sources, []);
+    // Since 6.0.17 the father may be documented, but only by his own citation of the DBI opening.
+    const father = claim(id, 'father');
+    if (father.certainty !== 'pending') assert.match(father.sources[0].locator, /^Comienzo del artículo: «/);
+    else assert.deepEqual(father.sources, []);
     assert(!Object.hasOwn(byId.get(id), 'madreAprox'));
   }
   assert.equal(claim('FRANCPICC', 'birth').certainty, 'approximate');

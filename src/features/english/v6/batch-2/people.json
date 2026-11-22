@@ -35,7 +35,7 @@
     "aliases": [
       "Ruxandra Lăpușneanu"
     ],
-    "summary": "The daughter of Petru Rareș and Elena Branković, she married Alejandro Lăpușneanu. She intervened in the continuity of her family and, after the removal and death of her husband, exercised the regency of Bogdan IV. Her ancestry links the Moldovan sovereigns with the family of the Serbian despots.",
+    "summary": "The daughter of Petru Rareș and Elena Branković, she married Alexander Lăpușneanu. She intervened in the continuity of her family and, after the removal and death of her husband, exercised the regency of Bogdan IV. Her ancestry links the Moldovan sovereigns with the family of the Serbian despots.",
     "sections": []
   },
   "CRISTINASUE": {
@@ -113,7 +113,7 @@
     "role": "Queen consort and Regent of France",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Philip III of Spain, wife of Louis XIII and mother of Louis XIV. Regent of France since 1643 with Cardinal Mazarino, crossed the Fronda without losing power.",
+    "summary": "Daughter of Philip III of Spain, wife of Louis XIII and mother of Louis XIV. Regent of France since 1643 with Cardinal Mazarin, crossed the Fronda without losing power.",
     "sections": []
   },
   "INESANTIOQUIA": {
@@ -200,7 +200,7 @@
     "sections": []
   },
   "VAKHTANG5KARTLI": {
-    "name": "Vajtang V de Kartli",
+    "name": "Vakhtang V of Kartli",
     "role": "King",
     "nickname": "",
     "aliases": [
@@ -208,7 +208,8 @@
       "Shah Navaz Khan"
     ],
     "summary": "From Mukhrani, he was adopted as heir by Rostom and recognized by the Sah. He extended the influence of his family towards Kakheti and Imereti through his children. His trajectory combines Bagrationi legitimacy with the safavid investiture.",
-    "sections": []
+    "sections": [],
+    "slugName": "Vajtang V de Kartli"
   },
   "GIOVANNASABMON": {
     "name": "Joan of Savoy, Marchioness of Montferrat",
@@ -217,9 +218,9 @@
     "aliases": [
       "Giovanna di Savoia"
     ],
-    "summary": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo.",
+    "summary": "Daughter of Amadeus VII and Bona of Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo.",
     "sections": [],
-    "biography": "Daughter of Amadeus VII and Bona de Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
+    "biography": "Daughter of Amadeus VII and Bona of Berry, she married John James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo. Her position links several neighboring houses by filiation, but the alliances and conflicts of her descendants show that sharing ancestors did not guarantee political cooperation."
   },
   "SIMON1KARTLI": {
     "name": "Simon I of Kartli",
@@ -258,7 +259,7 @@
     "slugName": "Maria Ana of Austria"
   },
   "ISABPI": {
-    "name": "Isabel Piast",
+    "name": "Elizabeth of Poland",
     "role": "Consort",
     "nickname": "",
     "aliases": [
@@ -267,7 +268,8 @@
       "Isabel Piast (Elzbieta)"
     ],
     "summary": "Consort of the Piast dynasty. Associated with Hungary.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel Piast"
   },
   "CARLOS1ORLEANS": {
     "name": "Charles I of Orleans",
@@ -278,17 +280,18 @@
     "sections": []
   },
   "JOHNLUSARM": {
-    "name": "Juan de Lusignan, regent of Armenia",
+    "name": "John of Lusignan, regent of Armenia",
     "role": "Regent",
     "nickname": "",
     "aliases": [
       "John of Lusignan, regent of Armenia"
     ],
     "summary": "Son of Amalric and Elizabeth, he administered Armenia during the transition to the Lusignan monarchy and favored the candidacy of his brother Guido. His son Leon would be the last king to effectively rule the Cilician kingdom.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan de Lusignan, regent of Armenia"
   },
   "ERNSTCASIMIRNASSAU": {
-    "name": "Ernesto Casimiro de Nassau-Dietz",
+    "name": "Ernest Casimir of Nassau-Dietz",
     "role": "Count / Stadtholder",
     "nickname": "",
     "aliases": [],
@@ -296,7 +299,8 @@
     "sections": [],
     "governmentNotes": {
       "Cargo provincial delegado por los Estados, con ámbitos y fechas personales documentados; no soberanía hereditaria sobre toda la República ni las provincias españolas.": "Provincial office delegated by the States, with individually documented dates and jurisdictions. Its scope excludes hereditary sovereignty over the whole Republic and the Spanish provinces."
-    }
+    },
+    "slugName": "Ernesto Casimiro de Nassau-Dietz"
   },
   "FRED2SAX": {
     "name": "Frederick II of Saxony",
@@ -370,7 +374,7 @@
     "role": "Noble",
     "nickname": "",
     "aliases": [],
-    "summary": "Sister of Magnus Eriksson and daughter of Ingeborg of Norway. She married Albert II of Mecklenburg. Her son Albert was king of Sweden, while the offspring of his son Henry led to Erik of Pomerania. It is a key connection between Bjälbo, Mecklenburg and the Kalmar union.",
+    "summary": "Sister of Magnus Eriksson and daughter of Ingeborg of Norway. She married Albert II of Mecklenburg. Her son Albert was king of Sweden, while the offspring of his son Henry led to Eric of Pomerania. It is a key connection between Bjälbo, Mecklenburg and the Kalmar union.",
     "sections": []
   },
   "YOLANDAARAG": {
@@ -443,13 +447,14 @@
     "sections": []
   },
   "BLANCANAV": {
-    "name": "Blanca de Navarra",
+    "name": "Blanche of Navarre",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Daughter of Philip of Évreux and Joan II of Navarre, she married Philip VI of France. The marriage brought the Navarrese house into close connection with the first generation of Valois rulers.",
     "sections": [],
-    "biography": "The daughter of Philip of Évreux and Joan II of Navarre, she married Philip VI of France. This marriage brought the Navarrese house closer to the first generation of the Valois. Her trajectory allows us to distinguish this Blanca from other homonyms of Navarre belonging to different generations and successor situations."
+    "biography": "The daughter of Philip of Évreux and Joan II of Navarre, she married Philip VI of France. This marriage brought the Navarrese house closer to the first generation of the Valois. Her trajectory allows us to distinguish this Blanca from other homonyms of Navarre belonging to different generations and successor situations.",
+    "slugName": "Blanca de Navarra"
   },
   "ALONSARAG": {
     "name": "Alonso of Aragon",
@@ -477,7 +482,7 @@
       "Guy de Lusignan, King of Armenia",
       "Constantino IV de Armenia"
     ],
-    "summary": "Born Guido de Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia.",
+    "summary": "Born Guy of Lusignan, he accepted the crown after the death of his cousin Leo IV. His project of approach to the Latin Church found resistance among the nobles. He was murdered, putting an end to the first Lusignan reign in Cilicia.",
     "sections": []
   },
   "GUGL8MON": {
@@ -516,7 +521,7 @@
       "Oluf II",
       "Olav IV"
     ],
-    "summary": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Erik of Pomerania.",
+    "summary": "Son of Margaret and Haakon VI. He was elected king of Denmark as a child and inherited Norway when his father died. His mother led the government. Olaf's death without descent in 1387 forced another successor solution and opened the way to recognition of Margaret and Eric of Pomerania.",
     "sections": []
   },
   "MARIAANABAVFERN2": {
@@ -538,13 +543,14 @@
     "slugName": "Adolfo Federico of Sweden"
   },
   "MARIANAVARRA": {
-    "name": "María de Navarra",
+    "name": "Maria of Navarre",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "The daughter of Philip of Évreux and Joan II of Navarre, she was the wife of Peter IV of Aragon. Her marriage linked the new ruling Navarren house to the Aragonese monarchy.",
     "sections": [],
-    "biography": "The daughter of Philip of Évreux and Joan II of Navarre, she was the wife of Peter IV of Aragon. Her marriage linked the new ruling Navarren house to the Aragonese monarchy. She died young and her trajectory recalls that the consorts could transmit decisive dynastic connections even if their political life was brief."
+    "biography": "The daughter of Philip of Évreux and Joan II of Navarre, she was the wife of Peter IV of Aragon. Her marriage linked the new ruling Navarren house to the Aragonese monarchy. She died young and her trajectory recalls that the consorts could transmit decisive dynastic connections even if their political life was brief.",
+    "slugName": "María de Navarra"
   },
   "PLAISANCEANT": {
     "name": "Plaisance of Antioch",
@@ -595,7 +601,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Theobaldo I of Navarre and Inés de Beaujeu, she married John I of Brittany. She was the mother of John II. Her position directly connects the Navarre dynasty of Champagne with the Breton dukes and helps to follow the relations between the two regions developed in this update.",
+    "summary": "Daughter of Theobald I of Navarre and Agnes of Beaujeu, she married John I of Brittany. She was the mother of John II. Her position directly connects the Navarre dynasty of Champagne with the Breton dukes and helps to follow the relations between the two regions developed in this update.",
     "sections": []
   },
   "ISABELJAGHUN": {
@@ -805,12 +811,13 @@
     "sections": []
   },
   "MARGBORB": {
-    "name": "Margarita de Borbón",
+    "name": "Margaret of Bourbon",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Dampierre dynasty. Associated with Navarre, Champagne.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Borbón"
   },
   "MARIEBLOIS": {
     "name": "Mary of Blois-Châtillon",
@@ -889,9 +896,9 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Erik of Pomerania connected the Lancaster monarchy with Kalmar.",
+    "summary": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Eric of Pomerania connected the Lancaster monarchy with Kalmar.",
     "sections": [],
-    "biography": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Erik of Pomerania connected the monarchy of Lancaster with Kalmar. She participated in the administration and defense of the kingdom during the absences of the king. She died without surviving offspring, so the liaison did not establish a new line of succession."
+    "biography": "Daughter of Henry IV of England and Mary of Bohun. Her marriage to Eric of Pomerania connected the monarchy of Lancaster with Kalmar. She participated in the administration and defense of the kingdom during the absences of the king. She died without surviving offspring, so the liaison did not establish a new line of succession."
   },
   "ANTONIETABORBON": {
     "name": "Antoinette of Bourbon",
@@ -933,12 +940,13 @@
     "slugName": "Hugo IV de Burgundy"
   },
   "LUISDURAZZO": {
-    "name": "Luis de Durazzo",
+    "name": "Louis of Durazzo",
     "role": "Count",
     "nickname": "",
     "aliases": [],
     "summary": "Count of Gravina, 1336–1362. Count of the Anjou-Durazzo dynasty.",
-    "sections": []
+    "sections": [],
+    "slugName": "Luis de Durazzo"
   },
   "FERENC2RAK": {
     "name": "Francis II Rákóczi",
@@ -1031,13 +1039,14 @@
     "sections": []
   },
   "YOLANDEDREUXSCOT": {
-    "name": "Yolanda de Dreux",
+    "name": "Yolande of Dreux",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "A widow of Alexander III of Scotland, she married Arthur II of Brittany. She was the mother of John of Montfort.",
     "sections": [],
-    "biography": "A widow of Alexander III of Scotland, she later married Arthur II of Brittany. She was the mother of John of Montfort. Her second marriage originated the branch that would dispute the duchy to the offspring of Arthur's first marriage, while her previous career connected her to the Scottish monarchy."
+    "biography": "A widow of Alexander III of Scotland, she later married Arthur II of Brittany. She was the mother of John of Montfort. Her second marriage originated the branch that would dispute the duchy to the offspring of Arthur's first marriage, while her previous career connected her to the Scottish monarchy.",
+    "slugName": "Yolanda de Dreux"
   },
   "LUDWIG6HESSEDARM": {
     "name": "Louis VI of Hesse-Darmstadt",
@@ -1231,20 +1240,22 @@
     "sections": []
   },
   "MATIART": {
-    "name": "Matilde de Artois",
+    "name": "Mahaut of Artois",
     "role": "Countess",
     "nickname": "",
     "aliases": [],
     "summary": "She defended her rights over Artois against the claims of her nephew Robert. Her political position was reinforced by her daughters’ marriages into the French royal family.",
-    "sections": []
+    "sections": [],
+    "slugName": "Matilde de Artois"
   },
   "BERENGUELANAV": {
-    "name": "Berenguela de Navarra",
+    "name": "Berengaria of Navarre",
     "role": "Queen consort of England",
     "nickname": "",
     "aliases": [],
     "summary": "Daughter of Sancho VI of Navarre, she married Richard I in Limassol (Cyprus) in 1191, during the crusade. She never lived in England; after widowing she lived in Le Mans, which was part of her dowry, and there she founded the Abbey of L’Épau, where she is buried.",
-    "sections": []
+    "sections": [],
+    "slugName": "Berenguela de Navarra"
   },
   "GIOVPOPOLANO": {
     "name": "Giovanni de’ Medici il Popolano",
@@ -1416,20 +1427,22 @@
     "slugName": "Isabel de Pomerania"
   },
   "ALFPORTINF": {
-    "name": "Alfonso de Portugal",
+    "name": "Afonso of Portugal",
     "role": "Prince",
     "nickname": "",
     "aliases": [],
     "summary": "Prince of the Avis dynasty. Associated with Portugal.",
-    "sections": []
+    "sections": [],
+    "slugName": "Alfonso de Portugal"
   },
   "JUAN1BRAG": {
-    "name": "Juan I de Braganza",
+    "name": "John I of Braganza",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of the Braganza dynasty. Associated with Portugal.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan I de Braganza"
   },
   "ISABFRA": {
     "name": "Isabella of France",
@@ -1440,12 +1453,13 @@
     "sections": []
   },
   "ALF1BRAG": {
-    "name": "Alfonso I de Braganza",
+    "name": "Afonso I of Braganza",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
     "summary": "Duke of the Braganza dynasty. Associated with Portugal.",
-    "sections": []
+    "sections": [],
+    "slugName": "Alfonso I de Braganza"
   },
   "BARBARASAXWITTENBERG": {
     "name": "Barbara de Saxony-Wittenberg",
@@ -1481,12 +1495,13 @@
     "sections": []
   },
   "ISABLANCASTER": {
-    "name": "Isabel de Lancaster",
+    "name": "Isabella of Lancaster",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
     "summary": "Noble of the Lancaster dynasty. Associated with England.",
-    "sections": []
+    "sections": [],
+    "slugName": "Isabel de Lancaster"
   },
   "GEORGE2HESSEDARM": {
     "name": "George II of Hesse-Darmstadt",
@@ -1581,12 +1596,13 @@
     "slugName": "Bogdan II of Moldova"
   },
   "LUISEAMALIEBRUN": {
-    "name": "Luisa Amalia of Brunswick-Wolfenbüttel",
+    "name": "Louise Amalia of Brunswick-Wolfenbüttel",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Welf Dynasty. Associated with Brunswick, Prussia.",
-    "sections": []
+    "sections": [],
+    "slugName": "Luisa Amalia of Brunswick-Wolfenbüttel"
   },
   "BIRGERJARL": {
     "name": "Birger Jarl",
@@ -1627,7 +1643,7 @@
     "role": "Count",
     "nickname": "",
     "aliases": [],
-    "summary": "First Earl of Westmorland. His marriage to Juana Beaufort linked the Nevilles to the descendants of Juan de Ghent. Among his sons were Ricardo de Salisbury and Cecilia, mother of Edward IV and Richard III.",
+    "summary": "First Earl of Westmorland. His marriage to Joan Beaufort linked the Nevilles to the descendants of John of Gaunt. Among his sons were Ricardo de Salisbury and Cecilia, mother of Edward IV and Richard III.",
     "sections": []
   },
   "ANAESTV": {
@@ -1719,12 +1735,13 @@
     "slugName": "Matilde of England"
   },
   "ALFMOL": {
-    "name": "Alfonso de Molina",
+    "name": "Alfonso of Molina",
     "role": "Infante",
     "nickname": "",
     "aliases": [],
     "summary": "Infant of the Ivrea-Burgundy dynasty. Associated with Castile.",
-    "sections": []
+    "sections": [],
+    "slugName": "Alfonso de Molina"
   },
   "MAGDSIBBAYSAX": {
     "name": "Magdalena Sibylla of Brandenburg-Bayreuth",
@@ -1735,14 +1752,15 @@
     "sections": []
   },
   "ESCHIVABEIRUT": {
-    "name": "Eschiva de Ibelin, madame of Beirut",
+    "name": "Eschiva of Ibelin, madame of Beirut",
     "role": "Lady",
     "nickname": "",
     "aliases": [
       "Eschive of Ibelin, Lady of Beirut"
     ],
-    "summary": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guido de Lusignan, he was the mother of Hugh IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island.",
-    "sections": []
+    "summary": "Heir of the lordship of Beirut, he lost his territorial base with the Mamluk conquest. Married to Guy of Lusignan, he was the mother of Hugh IV of Cyprus. His trajectory connects the loss of continental states with the continuity of their families on the island.",
+    "sections": [],
+    "slugName": "Eschiva de Ibelin, madame of Beirut"
   },
   "MARGARETAMUSATA": {
     "name": "Margareta Mușata",
@@ -1753,12 +1771,13 @@
     "sections": []
   },
   "CONRADMONTJER": {
-    "name": "Conrado de Montferrato",
+    "name": "Conrad of Montferrat",
     "role": "Marquis / King-elect",
     "nickname": "",
     "aliases": [],
     "summary": "Marquis of Montferrato who defended Tyre in front of Saladin in 1187. Married to Elizabeth I of Jerusalem and elected king in 1192, he was killed days later.",
-    "sections": []
+    "sections": [],
+    "slugName": "Conrado de Montferrato"
   },
   "INGEBORGDIN": {
     "name": "Ingeborg of Denmark",
@@ -1785,12 +1804,13 @@
     "sections": []
   },
   "LUISABORGIA": {
-    "name": "Luisa Borja",
+    "name": "Luisa Borgia",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
     "summary": "Noble of the Borgia dynasty. Associated with France, Romagna.",
-    "sections": []
+    "sections": [],
+    "slugName": "Luisa Borja"
   },
   "FELIPE2ORLEANS": {
     "name": "Philip II of Orleans",
@@ -1833,12 +1853,13 @@
     "sections": []
   },
   "JOHNBEAUFORTSOMERSET": {
-    "name": "Juan Beaufort",
+    "name": "John Beaufort",
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "Duke of Somerset and English commander during the Hundred Years War. His daughter Margarita Beaufort transmitted to Henry Tudor the ancestry of John of Ghent.",
-    "sections": []
+    "summary": "Duke of Somerset and English commander during the Hundred Years War. His daughter Margaret Beaufort transmitted to Henry Tudor the ancestry of John of Ghent.",
+    "sections": [],
+    "slugName": "Juan Beaufort"
   },
   "TIBBOTBOURKE": {
     "name": "Tibbot na Long Bourke",
@@ -1849,7 +1870,7 @@
       "Tibbot of the Ships",
       "Tiobóid na Long"
     ],
-    "summary": "The son of Grace O’Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into a nobility titled.",
+    "summary": "The son of Grace O'Malley and Richard Bourke, he maintained family influence through agreements with the Crown. He received the Viscount of May in the 17th century. His career shows the transformation of Gaelic chiefdoms into a nobility titled.",
     "sections": []
   },
   "AMICOUR": {
@@ -2029,12 +2050,13 @@
     "sections": []
   },
   "MATILDENASSAU": {
-    "name": "Matilde of Nassau",
+    "name": "Matilda of Nassau",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Nassau dynasty. Associated with Bavaria, Nassau.",
-    "sections": []
+    "sections": [],
+    "slugName": "Matilde of Nassau"
   },
   "MARIAL": {
     "name": "Maria Láscaris",
@@ -2064,12 +2086,13 @@
     "sections": []
   },
   "MARGARITALUISAORL": {
-    "name": "Margarita Luisa de Orleans",
+    "name": "Marguerite Louise of Orléans",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Bourbon-Orleans-Gaston dynasty. Associated with France, Tuscany.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita Luisa de Orleans"
   },
   "CATACERDA": {
     "name": "Catherine de la Cerda",
@@ -2203,14 +2226,15 @@
     }
   },
   "ARNAUROGER1PALLARS": {
-    "name": "Arnaldo Roger I de Pallars",
+    "name": "Arnau Roger I of Pallars",
     "role": "Count of Mills Sobirà",
     "nickname": "",
     "aliases": [
       "Arnau Roger I de Pallars"
     ],
-    "summary": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgel and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285.",
-    "sections": []
+    "summary": "The son of Roger II, he ruled Pallars from 1256 to 1288. He was tutor to Count Ermengol X of Urgell and rebelled against the Crown in 1275 and 1280; then he served Peter III in the expedition to Tunis in 1282 and in the defense of Ampurdan in 1285.",
+    "sections": [],
+    "slugName": "Arnaldo Roger I de Pallars"
   },
   "FRANCISALORENA": {
     "name": "Francisca of Lorraine-Mercoeur",
@@ -2292,12 +2316,13 @@
     "slugName": "Isabel de Burgh"
   },
   "JOHN1BALLIOL": {
-    "name": "Juan Balliol",
+    "name": "John Balliol",
     "role": "King",
     "nickname": "Toom Tabard",
     "aliases": [],
     "summary": "Elected king in 1292 after Edward I's arbitration in the Great Cause. Deposed in 1296 at the beginning of the open phase of the wars of independence.",
-    "sections": []
+    "sections": [],
+    "slugName": "Juan Balliol"
   },
   "VIOLMAN": {
     "name": "Violante Manuel",
@@ -2308,12 +2333,13 @@
     "sections": []
   },
   "MARGOPAVA": {
-    "name": "Margarita de Opava",
+    "name": "Margaret of Opava",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Přemysl-Opava dynasty. Associated with Moravia.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Opava"
   },
   "RAYMOND3TRIPOLI": {
     "name": "Raymond III of Tripoli",
@@ -2333,12 +2359,13 @@
     "sections": []
   },
   "HELENANJOUSER": {
-    "name": "Helena de Anjou",
+    "name": "Helen of Anjou",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort. Associated with France, Serbia.",
-    "sections": []
+    "sections": [],
+    "slugName": "Helena de Anjou"
   },
   "MADELEINEAUV": {
     "name": "Madeleine de la Tour d’Auvergne",
@@ -2429,20 +2456,22 @@
     "sections": []
   },
   "HENRIETTEMONTB": {
-    "name": "Enriqueta de Montbéliard",
+    "name": "Henriette of Montbéliard",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Montfaucon dynasty. Associated with Montbéliard, Württemberg.",
-    "sections": []
+    "sections": [],
+    "slugName": "Enriqueta de Montbéliard"
   },
   "CHARLOTTELAVAL": {
-    "name": "Carlota de Laval",
+    "name": "Charlotte de Laval",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
     "summary": "Noble of the Laval dynasty. Associated with France.",
-    "sections": []
+    "sections": [],
+    "slugName": "Carlota de Laval"
   },
   "LUCLAND": {
     "name": "Lucrezia Landriani",
@@ -2566,12 +2595,13 @@
     "sections": []
   },
   "MARGROHAN": {
-    "name": "Margarita de Rohan",
+    "name": "Marguerite de Rohan",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Rohan dynasty. Associated with France.",
-    "sections": []
+    "sections": [],
+    "slugName": "Margarita de Rohan"
   },
   "JOANAROZ": {
     "name": "Joan of Rožmital",
@@ -2614,12 +2644,13 @@
     "sections": []
   },
   "HUMPHREY4TORON": {
-    "name": "Hunfredo IV de Torón",
+    "name": "Humphrey IV of Toron",
     "role": "Mr. Toron",
     "nickname": "",
     "aliases": [],
     "summary": "Lord of Toron of the Toron dynasty. Associated with Jerusalem, Toron.",
-    "sections": []
+    "sections": [],
+    "slugName": "Hunfredo IV de Torón"
   },
   "PAPA_INOCENCIO6": {
     "name": "Innocent VI",
@@ -2634,7 +2665,7 @@
     "role": "Pope",
     "nickname": "",
     "aliases": [],
-    "summary": "Alessandro Ludovisi, from Bologna, was pope between 1621 and 1623. He created the Congregation of Propaganda Fide (1622), regulated the conclave with secret vote and canonized Ignacio de Loyola and Francisco Javier.",
+    "summary": "Alessandro Ludovisi, from Bologna, was pope between 1621 and 1623. He created the Congregation of Propaganda Fide (1622), regulated the conclave with secret vote and canonized Ignatius of Loyola and Francisco Javier.",
     "sections": []
   },
   "PAPA_CLEMENTE10": {
@@ -2956,12 +2987,13 @@
     "sections": []
   },
   "MECHTLEUCH": {
-    "name": "Mechthild de Leuchtenberg",
+    "name": "Mechthild of Leuchtenberg",
     "role": "Consort",
     "nickname": "",
     "aliases": [],
     "summary": "Consort of the Leuchtenberg dynasty. Associated with Bavaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Mechthild de Leuchtenberg"
   },
   "ANTONIABARIGNANO": {
     "name": "Antonia da Barignano",
@@ -3138,19 +3170,21 @@
     "sections": []
   },
   "MARIANO4ARBOREA": {
-    "name": "Mariano IV de Arborea",
+    "name": "Marianus IV of Arborea",
     "role": "Judge",
     "nickname": "",
     "aliases": [],
     "summary": "Judge of Arborea, 1347–1376.",
-    "sections": []
+    "sections": [],
+    "slugName": "Mariano IV de Arborea"
   },
   "UGONE3ARBOREA": {
-    "name": "Ugone III de Arborea",
+    "name": "Hugh III of Arborea",
     "role": "Judge",
     "nickname": "",
     "aliases": [],
     "summary": "Judge of Arborea, 1376–1383.",
-    "sections": []
+    "sections": [],
+    "slugName": "Ugone III de Arborea"
   }
 }
