@@ -2,13 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.20**
-- [Notas de 6.0.20](docs/releases/6.0.20.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.21**
+- [Notas de 6.0.21](docs/releases/6.0.21.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.0.20 documenta 147 afirmaciones históricas de 97 personas, con
-fuentes y pasajes localizados en español e inglés. El inventario alcanza
-6 994 afirmaciones documentadas (53,3 %). Compacta los datos de las páginas
-y aligera el catálogo de personas conservando las biografías completas.
+La versión 6.0.21 documenta 929 afirmaciones históricas más, con pasajes
+citados de Medieval Lands y del Dizionario Biografico degli Italiani. El
+inventario alcanza 7 923 afirmaciones documentadas (60,3 %). Las fichas
+inglesas de territorios muestran la sucesión, sus crisis y sus acontecimientos,
+traducidos a mano.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables

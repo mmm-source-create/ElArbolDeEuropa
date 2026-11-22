@@ -18,6 +18,7 @@ import {LABELS_610} from './labelReview610.js';
 // generation (generate-english-v6-runtime.mjs) to keep this module small.
 const REVIEWED_ENTITY_LABELS=runtime.entityLabels||{};
 import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'json'};
+import {CLAIM_TEXTS_621} from './claimTexts621.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
 'Pisa':'Pisa','Calderón':'Calderón','Duque / Valido':'Duke / Royal favourite',
@@ -130,6 +131,8 @@ export const PROFILE_NOTES = {
 export function translatedProfileText(text, names = ENGLISH_NAMES, claim) {
   if (!text) return text;
   if (PROFILE_NOTES[text]) return PROFILE_NOTES[text];
+  // 6.0.21: hand translations of frequent evidence notes and locators.
+  if (CLAIM_TEXTS_621[text]) return CLAIM_TEXTS_621[text];
   if(/^\d{3,4}(?:[–-]\d{2,4})? \([A-Z][A-Z0-9 .-]*\)$/.test(text))return text;
   if(/^Vol\. \d+ \(\d{4}\)\. «.+»$/.test(text))return text;
   if(/^NDB \d+ \(\d{4}\): «.+»$/.test(text))return text;

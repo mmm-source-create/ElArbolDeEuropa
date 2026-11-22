@@ -14,11 +14,28 @@ import {V6_STORIES} from '../../src/features/english/v6/index.js';
 import {ENGLISH_TERRITORY_NOTES} from '../../src/features/english/territoryNotes616.js';
 import {ENGLISH_TERRITORY_EVOLUTION} from '../../src/features/english/territoryEvolution617.js';
 import {ENGLISH_UNION_TEXTS} from '../../src/features/english/territoryUnions618.js';
+import {ENGLISH_SUCCESSION_TEXTS as SUCC,ENGLISH_SUCCESSION_MOTIVES,ENGLISH_SUCCESSION_DATE_TYPES} from '../../src/features/english/territorySuccession621.js';
+// 6.0.21: explained successions, succession crises and linked events, translated by hand. A territory
+// shows them only when every text has its English version.
+const personLink=p=>({id:p.id,nombre:names[p.id]||p.nombre,path:translatedEquivalent(`/es/persona/${p.slug}`,'en')||`/es/persona/${p.slug}`});
+const succession=(s,sources)=>{
+ if(!s)return null;
+ const texts=[...(s.relevos||[]).flatMap(r=>[r.explicacion,r.parentesco?.texto,...(r.fechas||[]).map(f=>f.nota)]),...(s.crisis||[]).flatMap(c=>[c.periodo,c.titulo,c.resumen,c.desenlace,...c.candidatos.flatMap(k=>[k.fundamento,k.resultado])])].filter(Boolean);
+ if(!texts.every(t=>SUCC[t]))return null;
+ return {
+  relevos:(s.relevos||[]).map(r=>({id:r.id,territorio:r.territorio,crisis:r.crisis||null,motivos:r.motivos.map(m=>ENGLISH_SUCCESSION_MOTIVES[m]||m),explicacion:SUCC[r.explicacion],
+   predecesor:{...r.predecesor,persona:personLink(r.predecesor.persona)},sucesor:{...r.sucesor,persona:personLink(r.sucesor.persona)},
+   parentesco:{texto:SUCC[r.parentesco.texto],via:(r.parentesco.via||[]).map(personLink)},
+   fechas:(r.fechas||[]).map(f=>({tipo:ENGLISH_SUCCESSION_DATE_TYPES[f.tipo]||f.tipo,anio:f.anio,nota:SUCC[f.nota]})),fuentes:sources(r.fuentes)})),
+  crisis:(s.crisis||[]).map(c=>({id:c.id,periodo:SUCC[c.periodo],titulo:SUCC[c.titulo],resumen:SUCC[c.resumen],desenlace:SUCC[c.desenlace],fuentes:sources(c.fuentes),
+   candidatos:c.candidatos.map(k=>({persona:personLink(k.persona),fundamento:SUCC[k.fundamento],resultado:SUCC[k.resultado],ascendencia:(k.ascendencia||[]).map(personLink)}))})),
+ };
+};
 const entityName=t=>['Perche','Las dos Borgoñas','Borgoña y Países Bajos'].includes(t.key)?PROFILE_LABELS[t.key]:t.name;
 const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
 const term=t=>{if(!PROFILE_LABELS[t])throw Error(`Missing entity term: ${t}`);return PROFILE_LABELS[t];};
 const card=(p,people)=>{if(!names[p.id])throw Error(`Missing entity person: ${p.id}`);const translated=people.find(t=>t.id===p.id);return {...p,nombre:names[p.id],role:translated?.role||(p.titulo?term(p.titulo):'Historical profile'),path:translated?.path||`/es/persona/${p.slug}`,sobrenombre:translated?.sobrenombre||'',aliases:translated?.aliases||[]};};
-const government=(g,people,notes={})=>({...g,persona:card(g.persona,people),englishTitle:term(g.titulo),englishTerritory:term(g.territorio),englishCondition:term(g.condicion),englishNote:g.nota?(notes[g.nota]||people.find(p=>p.id===g.persona.id)?.englishNotes?.[g.nota]||translatedProfileText(g.nota,names)):null});
+const government=(g,people,notes={})=>({...g,persona:card(g.persona,people),englishDynasty:PROFILE_LABELS[g.persona.dinastia]||null,englishTitle:term(g.titulo),englishTerritory:term(g.territorio),englishCondition:term(g.condicion),englishNote:g.nota?(notes[g.nota]||people.find(p=>p.id===g.persona.id)?.englishNotes?.[g.nota]||translatedProfileText(g.nota,names)):null});
 export function englishEntityStory(h) {
  const story=HISTORIAS.find(s=>slugPublico(s.titulo)===h.slug);
  const title=story&&(ENGLISH_STORY_LABELS[story.id]?.[0]||V6_STORIES[story.id]?.content?.titulo);
@@ -62,6 +79,8 @@ export async function englishEntityPages(people){
    evolucion:(source.evolucion||[]).every(e=>ENGLISH_TERRITORY_EVOLUTION[e.texto])?(source.evolucion||[]).map(e=>({anio:e.anio,texto:ENGLISH_TERRITORY_EVOLUTION[e.texto]})):[],
    pertenencias:(source.pertenencias||[]).filter(v=>PROFILE_LABELS[v.territorio]).map(v=>({key:v.territorio,name:PROFILE_LABELS[v.territorio],desde:v.desde})),
    componentes:(source.componentes||[]).filter(key=>PROFILE_LABELS[key]).map(key=>({key,name:PROFILE_LABELS[key]})),
+   sucesiones:succession(source.sucesiones,sources),
+   eventos:(source.eventos||[]).every(e=>SUCC[e.titulo||e.nombre])?(source.eventos||[]).map(e=>({id:e.id,anio:e.anio||e.desde||e.fecha,titulo:SUCC[e.titulo||e.nombre]})):[],
   });
  }
  return pages;
