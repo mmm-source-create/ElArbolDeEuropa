@@ -33,6 +33,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 - [6.0.20: 147 afirmaciones documentadas y casos pendientes](reports/6.0.20-documentacion.md).
 - [6.0.21: años que no coinciden con Medieval Lands](versiones/6.0.21-discrepancias.md).
+- [6.0.22: fechas comprobadas con varias fuentes](versiones/6.0.22-fechas.md).
 - [Hito del 70 % de afirmaciones documentadas](hito-70-por-ciento.md).
 - [Edición inglesa, retratos húngaros y dominios angevinos](versiones/V5.34-durazzo-ingles.md).
 - [Diez fichas inglesas completas y textos que se veían en español](versiones/V5.35.md).

@@ -12,11 +12,13 @@ import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles
 import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {V6_STORIES} from '../../src/features/english/v6/index.js';
 import {ENGLISH_TERRITORY_NOTES} from '../../src/features/english/territoryNotes616.js';
+import {ENGLISH_TERRITORY_NOTES_622} from '../../src/features/english/territoryNotes622.js';
 import {ENGLISH_TERRITORY_EVOLUTION} from '../../src/features/english/territoryEvolution617.js';
 import {ENGLISH_UNION_TEXTS} from '../../src/features/english/territoryUnions618.js';
 import {ENGLISH_SUCCESSION_TEXTS as SUCC,ENGLISH_SUCCESSION_MOTIVES,ENGLISH_SUCCESSION_DATE_TYPES} from '../../src/features/english/territorySuccession621.js';
 // 6.0.21: explained successions, succession crises and linked events, translated by hand. A territory
 // shows them only when every text has its English version.
+const RANKS={reino:'kingdom',ducado:'duchy',principado:'principality',condado:'county','señorío':'lordship',archiducado:'archduchy',banato:'banate',imperio:'empire',gobierno:'government',electorado:'electorate',reinado:'kingdom',marquesado:'marquisate',gran_principado:'grand principality',zarato:'tsardom',voivodato:'voivodeship'};
 const personLink=p=>({id:p.id,nombre:names[p.id]||p.nombre,path:translatedEquivalent(`/es/persona/${p.slug}`,'en')||`/es/persona/${p.slug}`});
 const succession=(s,sources)=>{
  if(!s)return null;
@@ -69,7 +71,7 @@ export async function englishEntityPages(people){
    historias:(source.historias||[]).map(englishEntityStory),
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),
    // 6.0.16: reviewed notes, parent entities and components, as on the Spanish page.
-   nota:ENGLISH_TERRITORY_NOTES[source.nota]||null,naturaleza:source.naturaleza,
+   nota:ENGLISH_TERRITORY_NOTES[source.nota]||ENGLISH_TERRITORY_NOTES_622[source.nota]||null,naturaleza:source.naturaleza,
    // 6.0.17: hand-translated political evolution (all lines must be translated, or none is shown).
    // 6.0.18: hand-translated historical unions, shown only when every text has its English version.
    uniones:(source.uniones||[]).filter(u=>[u.titulo,u.resumen,u.instituciones,...u.etapas.flatMap(e=>[e.titulo,e.texto])].filter(Boolean).every(text=>ENGLISH_UNION_TEXTS[text])).map(u=>({id:u.id,desde:u.desde,hasta:u.hasta,
@@ -80,6 +82,8 @@ export async function englishEntityPages(people){
    pertenencias:(source.pertenencias||[]).filter(v=>PROFILE_LABELS[v.territorio]).map(v=>({key:v.territorio,name:PROFILE_LABELS[v.territorio],desde:v.desde})),
    componentes:(source.componentes||[]).filter(key=>PROFILE_LABELS[key]).map(key=>({key,name:PROFILE_LABELS[key]})),
    sucesiones:succession(source.sucesiones,sources),
+   // 6.0.22: the rank of the territory over time, as on the Spanish page.
+   etapas:(source.etapas||[]).map(e=>({desde:e.desde,clase:RANKS[e.clase]||(()=>{throw Error(`Missing rank: ${e.clase}`);})()})),
    eventos:(source.eventos||[]).every(e=>SUCC[e.titulo||e.nombre])?(source.eventos||[]).map(e=>({id:e.id,anio:e.anio||e.desde||e.fecha,titulo:SUCC[e.titulo||e.nombre]})):[],
   });
  }

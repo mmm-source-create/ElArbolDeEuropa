@@ -1,6 +1,6 @@
 # Hacia el 70 %: datos documentados y paridad entre español e inglés
 
-Estado tras la 6.0.21 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
+Estado tras la 6.0.22 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
 
 ## 1. Datos documentados
 
@@ -8,11 +8,11 @@ Estado tras la 6.0.21 (22 de noviembre de 2026) y plan para el siguiente hito: *
 
 El registro de afirmaciones (`src/evidence/claims.js`) cuenta fechas, padres, cónyuges, gobiernos y sucesiones de cada persona.
 
-| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 | 6.0.19 | 6.0.20 | 6.0.21 |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 |
-| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) | 6 847 (52,1 %) | 6 994 (53,3 %) | 7 923 (60,3 %) |
-| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 | 5 595 | 5 448 | 4 519 |
+| | 6.0.15 | 6.0.16 | 6.0.17 | 6.0.18 | 6.0.19 | 6.0.20 | 6.0.21 | 6.0.22 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Afirmaciones | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 | 13 134 |
+| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) | 6 842 (52,1 %) | 6 847 (52,1 %) | 6 994 (53,3 %) | 7 923 (60,3 %) | 8 231 (62,7 %) |
+| Pendientes de revisión | 7 195 | 6 466 | 5 640 | 5 601 | 5 595 | 5 448 | 4 519 | 4 213 |
 
 La 6.0.19 añade 23 límites precisos de 14 mandatos y cuatro relaciones familiares con fuentes propias. El balance de esa entrega fue de **6 847 documentadas, 458 aproximadas, 59 discutidas, 175 inferidas y 5 595 pendientes** (13 134 en total). Las precisiones de mandatos ya documentados no se cuentan como nuevas afirmaciones.
 
@@ -30,6 +30,15 @@ La 6.0.21 añade **929 afirmaciones documentadas de 573 personas**:
 - 18 del Dizionario Biografico degli Italiani.
 
 El balance es de **7 923 documentadas (60,3 %), 458 aproximadas, 59 discutidas, 175 inferidas y 4 519 pendientes**. Faltan **unas 1 270** para el 70 %. Detalle en [las notas de 6.0.21](releases/6.0.21.md) y [sus discrepancias](versiones/6.0.21-discrepancias.md).
+
+La 6.0.22 añade **308 afirmaciones documentadas**:
+
+- 250 del Diccionario Biográfico Español de la RAH;
+- 47 de las biografías nacionales de Suecia, Noruega y Dinamarca;
+- 6 de Medieval Lands;
+- 5 fechas corregidas tras comprobar la identidad de la persona.
+
+Faltan **unas 965** para el 70 %. Las fechas comparadas, las corregidas y las que se dejan para revisión están en [6.0.22-fechas.md](versiones/6.0.22-fechas.md).
 
 ### Lo que da cada fuente
 
@@ -62,7 +71,15 @@ Ordenado por rendimiento esperado, con fuentes fiables y comprobación automáti
 
    El DBE de la RAH carga sus biografías desde una interfaz no documentada. Antes de consultarla de forma automática hay que pedir autorización o buscar otra vía.
 
-6. **Siglos XVI–XVIII**, que Medieval Lands no cubre: genealogías de la NDB ampliadas, el ODNB y las obras de referencia nacionales (Dansk Biografisk Leksikon, Svenskt biografiskt lexikon, Polski Słownik Biograficzny), artículo por artículo.
+6. **Hecho en la 6.0.22:**
+   - la RAH (con permiso);
+   - el SBL, el NBL y el DBL.
+
+   Quedan por usar:
+   - el Dictionary of Irish Biography, que bloquea las consultas automáticas;
+   - las obras de Europa oriental y del Cáucaso: los Bagrationi suman unas 320 afirmaciones pendientes y Medieval Lands apenas los cubre.
+
+7. **Siglos XVI–XVIII**, que Medieval Lands no cubre: genealogías de la NDB ampliadas, el ODNB y las obras de referencia nacionales (Dansk Biografisk Leksikon, Svenskt biografiskt lexikon, Polski Słownik Biograficzny), artículo por artículo.
 
 La siguiente selección debe ampliar las series territoriales y las genealogías nominales que todavía aportan datos, y resolver los casos discrepantes con una segunda fuente. El progreso se mide con afirmaciones pendientes realmente documentadas; el número de fuentes añadidas a una biografía no sustituye ese recuento. Desde la 6.0.16 no se cita Wikipedia como fuente de ningún dato.
 
@@ -118,6 +135,12 @@ Casi todos son de los textos largos traducidos automáticamente en la V6. Los re
   - 55 fichas de personas pierden algún año (antes, 144). Casi siempre es por notas y localizadores de la evidencia sin versión inglesa: de unos 3 900 textos de ese tipo, la 6.0.21 traduce a mano los 111 más repetidos.
   - 25 historias.
   - 82 territorios con páginas más cortas, sobre todo porque les faltan notas de gobierno.
+
+### Resultados de la 6.0.22
+
+- Páginas sin diferencias detectadas: **95,9 %** (4 238 de 4 420).
+- Territorios: 976 de 1 041. Todas las notas de territorio están traducidas y se muestra el rango del territorio.
+- Historias: 37 de 44. Las páginas inglesas listan ya todas las fuentes de sus personajes.
 
 ### Qué falta para estar seguros al 90 %
 
