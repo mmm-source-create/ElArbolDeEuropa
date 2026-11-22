@@ -12,6 +12,7 @@ import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles
 import {escudoDe} from '../../src/content/dinastias/escudos.js';
 import {V6_STORIES} from '../../src/features/english/v6/index.js';
 import {ENGLISH_TERRITORY_NOTES} from '../../src/features/english/territoryNotes616.js';
+import {ENGLISH_TERRITORY_EVOLUTION} from '../../src/features/english/territoryEvolution617.js';
 const entityName=t=>['Perche','Las dos Borgoñas','Borgoña y Países Bajos'].includes(t.key)?PROFILE_LABELS[t.key]:t.name;
 const names={...ENGLISH_NAMES,...Object.fromEntries(Object.entries(COMPLETE_ENGLISH_PROFILES).map(([id,p])=>[id,p.name]))};
 const term=t=>{if(!PROFILE_LABELS[t])throw Error(`Missing entity term: ${t}`);return PROFILE_LABELS[t];};
@@ -51,6 +52,8 @@ export async function englishEntityPages(people){
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),
    // 6.0.16: reviewed notes, parent entities and components, as on the Spanish page.
    nota:ENGLISH_TERRITORY_NOTES[source.nota]||null,naturaleza:source.naturaleza,
+   // 6.0.17: hand-translated political evolution (all lines must be translated, or none is shown).
+   evolucion:(source.evolucion||[]).every(e=>ENGLISH_TERRITORY_EVOLUTION[e.texto])?(source.evolucion||[]).map(e=>({anio:e.anio,texto:ENGLISH_TERRITORY_EVOLUTION[e.texto]})):[],
    pertenencias:(source.pertenencias||[]).filter(v=>PROFILE_LABELS[v.territorio]).map(v=>({key:v.territorio,name:PROFILE_LABELS[v.territorio],desde:v.desde})),
    componentes:(source.componentes||[]).filter(key=>PROFILE_LABELS[key]).map(key=>({key,name:PROFILE_LABELS[key]})),
   });

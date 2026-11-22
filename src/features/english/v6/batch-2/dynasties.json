@@ -5180,9 +5180,9 @@
     "en": "dreux",
     "name": "Dreux",
     "summary": "A Capetian branch that became a Breton ducal house and from which emerged two rival paths towards the succession of Brittany.",
-    "origin": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix de Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
-    "history": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
-    "legacy": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Juana de Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
+    "origin": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix of Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
+    "history": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of John of Montfort were confronted when John III died.",
+    "legacy": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Joan of Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
     "editorial": true,
     "translatedSource": {
       "sourceFile": "dreux.json",
@@ -5191,9 +5191,9 @@
       "aliases": [],
       "editorial": true,
       "resumen": "A Capetian branch that became a Breton ducal house and from which emerged two rival paths towards the succession of Brittany.",
-      "origen": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix de Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
-      "trayectoria": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of Juan de Montfort were confronted when John III died.",
-      "legado": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Juana de Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
+      "origen": "Robert I, son of Louis VI of France, received Dreux. His grandson Peter married Alix of Thouars, heiress of Brittany. Breton access came from that marriage, while Peter's male ancestry linked with the French royal house.",
+      "trayectoria": "John I and John II consolidated the ducal continuity. Their marriages with Blanca of Champagne and Beatrice of England connected Brittany with Navarre and with the Plantagenets. Arthur II had children of two marriages. The offspring of his son Guy de Penthièvre and that of John of Montfort were confronted when John III died.",
+      "legado": "The dispute of 1341 opened a long war. The Montfort, branch of the Dreux, retained the duchy after Auray's victory in 1364. Joan of Penthièvre transmitted her heritage to the offspring of her marriage to Charles de Blois.",
       "territorios": [
         "Dreux",
         "United Kingdom",
@@ -5776,7 +5776,7 @@
               "slug": "arturo-ii-de-bretana"
             }
           ],
-          "texto": "Pedro de Dreux married Alix de Thouars. The right to the duchy came from Alix; the new ducal line retained the male ancestry of Dreux.",
+          "texto": "Peter of Dreux married Alix of Thouars. The right to the duchy came from Alix; the new ducal line retained the male ancestry of Dreux.",
           "fuentes": [
             {
               "titulo": "Foundation for Medieval Genealogy · MedLands",
@@ -5887,7 +5887,7 @@
               "slug": "ana-de-bretana"
             }
           ],
-          "texto": "John of Montfort was the son of Arthur II and his second wife, Yolanda of Dreux. His descendants formed the ducal branch of Montfort.",
+          "texto": "John of Montfort was the son of Arthur II and his second wife, Yolande of Dreux. His descendants formed the ducal branch of Montfort.",
           "fuentes": [
             {
               "titulo": "Foundation for Medieval Genealogy · MedLands",
@@ -6462,7 +6462,7 @@
           "titulo": "Prince",
           "clase": "principality",
           "condicion": "Cash",
-          "nota": "In 1332 Achaia gave his nephew Roberto de Tarento in exchange for the rights to Durazzo and Albania.",
+          "nota": "In 1332 Achaia gave his nephew Robert of Taranto in exchange for the rights to Durazzo and Albania.",
           "persona": {
             "id": "JUANDURAZZO",
             "nombre": "Juan de Durazzo",
@@ -8222,10 +8222,10 @@
               "slug": "esteban-tomasevic"
             }
           ],
-          "texto": "Jelena, daughter of the despot Lazar Branković, married Esteban Tomašević. The couple linked the last courts in Serbia and Bosnia. After the Ottoman conquest of Bosnia and the death of her husband in 1463, Jelena took refuge outside the kingdom.",
+          "texto": "Jelena, daughter of the despot Lazar Branković, married Stephen Tomašević. The couple linked the last courts in Serbia and Bosnia. After the Ottoman conquest of Bosnia and the death of her husband in 1463, Jelena took refuge outside the kingdom.",
           "fuentes": [
             {
-              "titulo": "Hrvatska enciklopedija · Esteban Tomašević",
+              "titulo": "Hrvatska enciklopedija · Stephen Tomašević",
               "url": "https://www.enciklopedija.hr/clanak/stjepan-tomasevic"
             }
           ],
@@ -9095,7 +9095,7 @@
     "name": "Rurikida",
     "summary": "The descendants of Rurik ruled the Rus principalities for seven centuries; their Moscow branch gathered the Russian lands and became extinct with Feodor I in 1598.",
     "origin": "The tradition places Rúrik in Novgorod in the ninth century. His descendants ruled Kiev and, after the fragmentation of the Rus and the Mongol invasion, a network of principalities subjected to the Golden Horde. Alexander Nevsky, prince of Novgorod and Vladimir, defeated Swedes and Teutonics and negotiated with the Mongols.",
-    "history": "Daniel, son of Nevski, received Moscow. Ivan I obtained from the Horde the right to collect taxes and Dmitri Donskói defeated the Tatars in Kulikovo (1380). Ivan III incorporated Novgorod, stopped paying tribute to the Horde (1480) and married Sophia Palaiologina.",
+    "history": "Daniel, son of Nevski, received Moscow. Ivan I obtained from the Horde the right to collect taxes and Dmitry Donskoy defeated the Tatars in Kulikovo (1380). Ivan III incorporated Novgorod, stopped paying tribute to the Horde (1480) and married Sophia Palaiologina.",
     "legacy": "Ivan IV crowned Tsar in 1547, conquered Kazan and Astrakhan and ruled with extreme violence. With the death of his son Fiodor I in 1598 he ended the dynasty in Moscow; they followed the Time of Troubles and, in 1613, the Romanovs.",
     "editorial": true,
     "translatedSource": {
@@ -9106,7 +9106,7 @@
       "editorial": true,
       "resumen": "The descendants of Rurik ruled the Rus principalities for seven centuries; their Moscow branch gathered the Russian lands and became extinct with Feodor I in 1598.",
       "origen": "The tradition places Rúrik in Novgorod in the ninth century. His descendants ruled Kiev and, after the fragmentation of the Rus and the Mongol invasion, a network of principalities subjected to the Golden Horde. Alexander Nevsky, prince of Novgorod and Vladimir, defeated Swedes and Teutonics and negotiated with the Mongols.",
-      "trayectoria": "Daniel, son of Nevski, received Moscow. Ivan I obtained from the Horde the right to collect taxes and Dmitri Donskói defeated the Tatars in Kulikovo (1380). Ivan III incorporated Novgorod, stopped paying tribute to the Horde (1480) and married Sophia Palaiologina.",
+      "trayectoria": "Daniel, son of Nevski, received Moscow. Ivan I obtained from the Horde the right to collect taxes and Dmitry Donskoy defeated the Tatars in Kulikovo (1380). Ivan III incorporated Novgorod, stopped paying tribute to the Horde (1480) and married Sophia Palaiologina.",
       "legado": "Ivan IV crowned Tsar in 1547, conquered Kazan and Astrakhan and ruled with extreme violence. With the death of his son Fiodor I in 1598 he ended the dynasty in Moscow; they followed the Time of Troubles and, in 1613, the Romanovs.",
       "territorios": [
         "Russia",
@@ -11341,7 +11341,7 @@
           "texto": "Sofia Bathory and George II Rákóczi were parents of Francis I. During the crisis following the Zrinski conspiracy, Sofia interceded to obtain forgiveness from her son.",
           "fuentes": [
             {
-              "titulo": "Hrvatska enciklopedija · Francisco I Rákóczi",
+              "titulo": "Hrvatska enciklopedija · Francis I Rákóczi",
               "url": "https://www.enciklopedija.hr/clanak/rakoczy-ferenc-i"
             },
             {
@@ -11963,7 +11963,7 @@
       "editorial": true,
       "resumen": "A house with several branches whose Breton connection is explained by the marriage of Charles of Blois to Joan of Penthièvre.",
       "origen": "The Châtillon were a French noble house with several branches, one of which inherited Blois County and was linked to the ducal succession of Brittany through Charles of Blois.",
-      "trayectoria": "Charles de Blois defended the rights of his wife Joanna to the Duchy of Brittany. Her daughter Maria married Louis I of Anjou, creating a path between the Breton dispute and the Angevin expansion. Later, Françoise de Châtillon married Alain de Albret and was the mother of John III of Navarre and Carlota of Albret.",
+      "trayectoria": "Charles de Blois defended the rights of his wife Joanna to the Duchy of Brittany. Her daughter Maria married Louis I of Anjou, creating a path between the Breton dispute and the Angevin expansion. Later, Françoise de Châtillon married Alain de Albret and was the mother of John III of Navarre and Charlotte of Albret.",
       "legado": "The Châtillon-Penthièvre links transmitted inheritances and succession rights to the Valois-Anjou and the Albret. Françoise's offspring became king in Navarre and retained interests on both sides of the Pyrenees.",
       "territorios": [
         "United Kingdom",
@@ -12762,7 +12762,7 @@
     "name": "Artois",
     "summary": "A Capetian branch born of Robert I’s appanage that connected Navarra, Burgundy and several French nobility lines.",
     "origin": "Louis IX granted Artois County in 1237 to his brother Robert I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
-    "history": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanca de Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
+    "history": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanche of Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
     "legacy": "The county passed through Mahaut’s heiresses to other houses and ended up integrated into the Burgundian lands. The descendants of the male branch followed their own trajectories as the county heritage was transmitted by female line.",
     "editorial": true,
     "translatedSource": {
@@ -12773,7 +12773,7 @@
       "editorial": true,
       "resumen": "A Capetian branch born of Robert I’s appanage that connected Navarra, Burgundy and several French nobility lines.",
       "origen": "Louis IX granted Artois County in 1237 to his brother Robert I, son of Louis VIII. The county house was linked by this ancestry to the Capetians.",
-      "trayectoria": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanca de Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
+      "trayectoria": "Robert II died in Courtrai in 1302. His daughter Matilde, wife of Otto IV of Burgundy, inherited the county against the pretensions of his nephew Robert III. Blanche of Artois, sister of Robert II, was queen and regent of Navarre and, for his second marriage, Countess of Lancaster.",
       "legado": "The county passed through Mahaut’s heiresses to other houses and ended up integrated into the Burgundian lands. The descendants of the male branch followed their own trajectories as the county heritage was transmitted by female line.",
       "territorios": [
         "Artois",
@@ -15723,7 +15723,7 @@
     "name": "Courtenay-Edessa",
     "summary": "The first house of Courtenay participated in the Crusader States and gave Counts to Edessa. It is earlier and different from the Capetian house of the same name.",
     "origin": "The ancient lords of Courtenay extended their connections to the East. Counts Joscelin of Edessa belonged to this first house, prior to the establishment of the Capetian branch in the French state.",
-    "history": "Inés de Courtenay, daughter of Joscelin II of Edessa, married Amalric of Jerusalem. She was the mother of Baldwin IV and Sibylla, whose reigns coincided with Saladin's advance.",
+    "history": "Agnes of Courtenay, daughter of Joscelin II of Edessa, married Amalric of Jerusalem. She was the mother of Baldwin IV and Sibylla, whose reigns coincided with Saladin's advance.",
     "legacy": "The conquest of Edessa and the defeats of the Crusader States scattered the family heritages. Their offspring maintained ties with the ruling houses of Jerusalem.",
     "editorial": true,
     "translatedSource": {
@@ -15734,7 +15734,7 @@
       "editorial": true,
       "resumen": "The first house of Courtenay participated in the Crusader States and gave Counts to Edessa. It is earlier and different from the Capetian house of the same name.",
       "origen": "The ancient lords of Courtenay extended their connections to the East. Counts Joscelin of Edessa belonged to this first house, prior to the establishment of the Capetian branch in the French state.",
-      "trayectoria": "Inés de Courtenay, daughter of Joscelin II of Edessa, married Amalric of Jerusalem. She was the mother of Baldwin IV and Sibylla, whose reigns coincided with Saladin's advance.",
+      "trayectoria": "Agnes of Courtenay, daughter of Joscelin II of Edessa, married Amalric of Jerusalem. She was the mother of Baldwin IV and Sibylla, whose reigns coincided with Saladin's advance.",
       "legado": "The conquest of Edessa and the defeats of the Crusader States scattered the family heritages. Their offspring maintained ties with the ruling houses of Jerusalem.",
       "territorios": [
         "Jerusalem"

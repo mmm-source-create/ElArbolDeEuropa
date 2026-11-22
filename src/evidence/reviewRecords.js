@@ -11,6 +11,7 @@ import {EASTERN_EUROPE_REVIEWS} from './easternEuropeReviews.js';
 import {PERSONAL_ATLAS_REVIEWS} from './personalAtlasReviews.js';
 import {AUTHORITY_REVIEWS} from './authorityReviews.js';
 import {AUTHORITY_REVIEWS_616} from './authorityReviews616.js';
+import {REVIEWS_617} from './reviews617.js';
 import {GND_DISCREPANCY_REVIEWS} from './gndDiscrepancyReviews.js';
 import {FRANCE_LOW_COUNTRIES_REVIEWS} from './franceLowCountriesReviews.js';
 import {BALKANS_FULL_REVIEWS} from './balkansFullReviews.js';
@@ -245,6 +246,7 @@ export const CLAIM_REVIEWS = Object.freeze({
   // Authority-record checks first: any specific review below takes precedence.
   ...AUTHORITY_REVIEWS,
   ...AUTHORITY_REVIEWS_616,
+  ...REVIEWS_617,
   ...GND_DISCREPANCY_REVIEWS,
   ...EASTERN_EUROPE_REVIEWS,
   ...NETHERLANDS_GOVERNOR_REVIEWS,

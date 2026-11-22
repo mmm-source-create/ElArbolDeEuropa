@@ -1,6 +1,6 @@
 # Hacia el 70 %: datos documentados y paridad entre español e inglés
 
-Estado tras la 6.0.16 (21 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
+Estado tras la 6.0.17 (22 de noviembre de 2026) y plan para el siguiente hito: **el 70 % de las afirmaciones documentadas con una fuente fiable y concreta, y la versión inglesa con la misma calidad y el mismo contenido que la española.**
 
 ## 1. Datos documentados
 
@@ -8,13 +8,13 @@ Estado tras la 6.0.16 (21 de noviembre de 2026) y plan para el siguiente hito: *
 
 El registro de afirmaciones (`src/evidence/claims.js`) cuenta fechas, padres, cónyuges, gobiernos y sucesiones de cada persona.
 
-| | 6.0.15 | 6.0.16 |
-|---|---:|---:|
-| Afirmaciones | 13 134 | 13 134 |
-| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) |
-| Pendientes de revisión | 7 195 | 6 466 |
+| | 6.0.15 | 6.0.16 | 6.0.17 |
+|---|---:|---:|---:|
+| Afirmaciones | 13 134 | 13 134 | 13 134 |
+| Documentadas con fuente | 5 248 (40,0 %) | 5 977 (45,5 %) | 6 803 (51,8 %) |
+| Pendientes de revisión | 7 195 | 6 466 | 5 640 |
 
-Para llegar al 70 % hay que documentar unas **3 220 afirmaciones más**.
+Para llegar al 70 % hay que documentar unas **2 400 afirmaciones más**.
 
 ### Lo que da cada fuente
 
@@ -31,12 +31,17 @@ Las afirmaciones que siguen pendientes son sobre todo **parentescos (unas 3 500)
 
 Ordenado por rendimiento esperado, con fuentes fiables y comprobación automática estricta (mismo nombre y mismos años, nunca una coincidencia aproximada):
 
-1. **Diccionarios biográficos nacionales identificados** (DBE de la Real Academia de la Historia, DBI de Treccani, ODNB). Sus artículos empiezan por la filiación («Hijo de… y de…», «Nacque… da… e da…»). Unas 900 afirmaciones pendientes son de personas con artículo en el DBE o el DBI. Rendimiento esperado: 300–500.
-2. **Foundation for Medieval Genealogy (Medieval Lands)**. Cada entrada de persona trae padres, matrimonios y fechas con su fuente primaria, y cubre casi toda la nobleza medieval del Atlas. Wikidata no la enlaza, así que hay que localizar las entradas por nombre y fechas en las páginas de cada casa. Rendimiento esperado: 1 500–2 500, sobre todo parentescos.
+1. **Hecho en la 6.0.17:**
+   - **Medieval Lands** dio 741 afirmaciones, menos de lo previsto. Solo se identifican las personas con los dos años de vida seguros, y Medieval Lands apenas llega más allá de 1500.
+   - **El DBI** dio 89 filiaciones.
+   - **El DBE de la Real Academia de la Historia** no se puede consultar de forma automática desde su nueva web.
+2. **Ampliar Medieval Lands a personas con un solo año seguro**, identificándolas por la entrada del padre o del cónyuge ya identificado (su lista de hijos o su matrimonio). Rendimiento esperado: 400–700.
 3. **Gobiernos**: listas de soberanos de obras de referencia por territorio (Britannica, Treccani, Historisches Lexikon Bayerns…), comparando año de inicio y de fin. Unas 1 400 afirmaciones de gobierno pendientes; rendimiento esperado: 600–900.
 4. **Revisión editorial** de las discrepancias (`docs/versiones/V5.25-discrepancias.md` y `docs/versiones/6.0.16-discrepancias.md`). Cada caso exige decidir entre dos fuentes.
 
-Con 1 a 3 se llegaría a cerca del 70 % en dos o tres versiones. **Wikipedia no sirve para esto**: desde la 6.0.16 no se cita como fuente de ningún dato.
+5. **Siglos XVI–XVIII**, que Medieval Lands no cubre: genealogías de la NDB ampliadas, el ODNB y las obras de referencia nacionales (Dansk Biografisk Leksikon, Svenskt biografiskt lexikon, Polski Słownik Biograficzny), artículo por artículo.
+
+Con 2 a 5 se llegaría al 70 % en dos o tres versiones más. **Wikipedia no sirve para esto**: desde la 6.0.16 no se cita como fuente de ningún dato.
 
 ## 2. Traducción al inglés
 

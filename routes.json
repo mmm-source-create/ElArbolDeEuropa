@@ -236,6 +236,9 @@
     }
   ],
   "redirects": [
+    {"source":"/en/person/moro-christopor","destination":"/en/person/cristoforo-moro","permanent":true,"workerFirst":false},
+    {"source":"/en/person/arnaldo-roger-i-de-pallars","destination":"/en/person/arnau-roger-i-of-pallars","permanent":true,"workerFirst":false},
+    {"source":"/en/person/eduviges-jagelon","destination":"/en/person/hedwig-jagiellon","permanent":true,"workerFirst":false},
     {"source":"/en/person/adolfo-federico-of-sweden","destination":"/en/person/adolf-frederick-of-sweden","permanent":true,"workerFirst":false},
     {"source":"/en/person/gloget-ines","destination":"/en/person/agnes-of-glogow","permanent":true,"workerFirst":false},
     {"source":"/en/person/alejo-ii-of-trebizond","destination":"/en/person/alexios-ii-of-trebizond","permanent":true,"workerFirst":false},

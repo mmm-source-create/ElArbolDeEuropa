@@ -34,6 +34,7 @@ export default function EnglishEntity({data:d}){
   </header>
   {!dynasty&&d.nota&&<p>{d.nota}</p>}
   {!dynasty&&!!d.pertenencias?.length&&<p>{d.pertenencias.map((v,i)=><span key={i}>Part of <EntityLink kind="territorio" name={v.key} label={v.name}/> from {v.desde}. </span>)}</p>}
+  {!dynasty&&!!d.evolucion?.length&&<section><h2>Political evolution</h2><ol className="territory-evolution">{d.evolucion.map((e,i)=><li key={i}><strong>{e.anio}</strong><span>{e.texto}</span></li>)}</ol></section>}
   {!dynasty&&d.naturaleza&&d.naturaleza!=='entidad'&&!!d.componentes?.length&&<section><h2>Territories in this group</h2><p>Each component keeps its own titles and chronology. This grouping does not establish continuous sovereignty over all of them.</p><div className="territory-links">{d.componentes.map(c=><EntityLink key={c.key} kind="territorio" name={c.key} label={c.name}/>)}</div></section>}
   {dynasty&&<>
    <nav className="dynasty-nav" aria-label="Dynasty sections"><a href="#houses">Parent houses and branches</a><a href="#history">History of the house</a><a href="#members">People</a><a href="#sources">Bibliography</a></nav>

@@ -246,7 +246,7 @@
     "role": "King",
     "nickname": "Atterdag",
     "aliases": [],
-    "summary": "It restored much of the territorial power of the Danish monarchy after a phase of fragmentation and effort. His daughters Ingeborg and Margarita created two ways of dynastic continuity. The son of Margarita, Olaf, was elected king; the offspring of Ingeborg later contributed to Erik of Pomerania.",
+    "summary": "It restored much of the territorial power of the Danish monarchy after a phase of fragmentation and effort. His daughters Ingeborg and Margarita created two ways of dynastic continuity. The son of Margarita, Olaf, was elected king; the offspring of Ingeborg later contributed to Eric of Pomerania.",
     "sections": []
   },
   "JOHNMONTPRET": {
@@ -254,7 +254,7 @@
     "role": "Duque sudor",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Arthur II and Yolanda of Dreux, he fought the duchy to Juana of Penthièvre after the death of John III. His cause was supported by English and continued after his death, sustained by his wife and his son's supporters.",
+    "summary": "The son of Arthur II and Yolande of Dreux, he fought the duchy to Joan of Penthièvre after the death of John III. His cause was supported by English and continued after his death, sustained by his wife and his son's supporters.",
     "sections": [],
     "biography": "A son of Arthur II and Yolande of Dreux, he contested the duchy with Joan of Penthièvre after John III’s death. His cause received English support and continued after his death through his wife and his son’s supporters. His inclusion or exclusion from ducal lists explains some variations in the numbering of the dukes named John."
   },
@@ -329,7 +329,7 @@
     "role": "Count / Viscount",
     "nickname": "",
     "aliases": [],
-    "summary": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud de Grailly, opening a new dynastic phase.",
+    "summary": "A member of the Castellbó branch, he succeeded Gaston Fébus in Foix and Béarn in 1391. His rule was brief and ended without descendants to continue his line. The inheritance passed to his sister Isabella, wife of Archambaud of Grailly, opening a new dynastic phase.",
     "sections": []
   },
   "ALEXIOS3TREB": {
@@ -398,13 +398,14 @@
     "slugName": "Basil of Trebisonda"
   },
   "GABRIELESAL": {
-    "name": "Gabriel de Saluzzo",
+    "name": "Gabriel of Saluzzo",
     "role": "Marquess",
     "nickname": "",
     "aliases": [],
     "summary": "The last of the brothers who obtained the marquisate with French recognition, succeeded Francis in 1537. His government developed under a strong dependence on France.",
     "sections": [],
-    "biography": "The last of the brothers to hold the marquisate with French recognition, he succeeded Francis in 1537. His government operated under strong dependence on France. His death in 1548 opened the way for John Louis, shortly before the marquisate’s incorporation into the French monarchy."
+    "biography": "The last of the brothers to hold the marquisate with French recognition, he succeeded Francis in 1537. His government operated under strong dependence on France. His death in 1548 opened the way for John Louis, shortly before the marquisate’s incorporation into the French monarchy.",
+    "slugName": "Gabriel de Saluzzo"
   },
   "JOANBEAUFORT": {
     "name": "Joan Beaufort",
@@ -422,7 +423,7 @@
     "role": "Count",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Arthur II and Mary of Limoges, he was the brother of John III of Brittany and the father of Juana of Penthièvre. He died before the Duke.",
+    "summary": "The son of Arthur II and Mary of Limoges, he was the brother of John III of Brittany and the father of Joan of Penthièvre. He died before the Duke.",
     "sections": [],
     "biography": "A son of Arthur II and Marie of Limoges, he was brother to John III of Brittany and father to Joan of Penthièvre. He died before the duke. His daughter’s claim rested on his position within this branch, turning an apparently secondary relationship into one of the keys to the succession dispute of 1341."
   },
@@ -501,7 +502,7 @@
     "role": "Duke",
     "nickname": "",
     "aliases": [],
-    "summary": "The son of Albert II of Mecklenburg and Euphemy of Sweden, and the brother of King Albert of Sweden. He married Ingeborg, daughter of Valdemar IV. The offspring of that marriage gathered ties with the three Nordic crowns; his grandson Erik of Pomerania was the crowned monarch in Kalmar.",
+    "summary": "The son of Albert II of Mecklenburg and Euphemy of Sweden, and the brother of King Albert of Sweden. He married Ingeborg, daughter of Valdemar IV. The offspring of that marriage gathered ties with the three Nordic crowns; his grandson Eric of Pomerania was the crowned monarch in Kalmar.",
     "sections": [],
     "governmentNotes": {
       "Gobernó con su hermano Magnus I tras la muerte de su padre Alberto II.": "He ruled with his brother Magnus I after his father's death."
@@ -655,7 +656,7 @@
     "aliases": [
       "Bianca di Monferrato"
     ],
-    "summary": "Daughter of William VIII of Monferrato, married Charles I of Savoy. After the death of the Duke, he took over the regency of her son Carlos Juan Amadeo and defended her authority before the relatives of the house.",
+    "summary": "Daughter of William VIII of Montferrat, married Charles I of Savoy. After the death of the Duke, he took over the regency of her son Carlos Juan Amadeo and defended her authority before the relatives of the house.",
     "sections": [],
     "biography": "A daughter of William VIII of Montferrat, she married Charles I of Savoy. After his death she served as regent for their son Charles John Amadeus and defended her authority against relatives of the house. When the child died in 1496, the duchy passed to Philip II. Blanche belonged to the Palaiologan house of Montferrat, not to the marquesses of Saluzzo."
   },
@@ -1120,12 +1121,13 @@
     "sections": []
   },
   "PHILIPWILLIAMORANGE": {
-    "name": "Philip Guillermo of Orange",
+    "name": "Philip William of Orange",
     "role": "Prince of Orange",
     "nickname": "",
     "aliases": [],
     "summary": "Prince of Orange of the House of Nassau. Associated with Low Countries.",
-    "sections": []
+    "sections": [],
+    "slugName": "Philip Guillermo of Orange"
   },
   "ENRIQUE13": {
     "name": "Henry XIII of Bavaria",
@@ -2157,7 +2159,7 @@
     "role": "Consort",
     "nickname": "",
     "aliases": [],
-    "summary": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. His grandchildren Isabel of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty.",
+    "summary": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, is part of the Serbian descent invoked by the Kotromanić. His grandchildren Elizabeth of Bosnia and Tvrtko I allow to follow different connections: the Hungarian monarchy and the construction of Bosnian royalty.",
     "sections": [],
     "biography": "Wife of Stephen I Kotroman and mother of Stephen II and Vladislav, she formed part of the Serbian descent claimed by the Kotromanić. Her grandchildren Elizabeth of Bosnia and Tvrtko I reveal two distinct connections: the Hungarian monarchy and the construction of Bosnian kingship. No life dates are assigned because the cited reference does not require them."
   },
@@ -2261,7 +2263,7 @@
     "aliases": [],
     "summary": "Poet and noble Croatian, he was half-brother of Anne Katarina Frankopan. His Italian ties and marriage extended his political horizon.",
     "sections": [],
-    "biography": "A Croatian poet and nobleman, he was the half-brother of Ana Katarina Frankopan. His Italian ties and marriage broadened his political horizons. He joined Petar Zrinski in the conspiracy against the Habsburgs, and both were executed in 1671. His literary career remains closely associated with the memory of that conflict."
+    "biography": "A Croatian poet and nobleman, he was the half-brother of Anne Katarina Frankopan. His Italian ties and marriage broadened his political horizons. He joined Petar Zrinski in the conspiracy against the Habsburgs, and both were executed in 1671. His literary career remains closely associated with the memory of that conflict."
   },
   "BORILBUL": {
     "name": "Boril from Bulgaria",
@@ -2280,12 +2282,13 @@
     "sections": []
   },
   "SRATSIMIRKRAN": {
-    "name": "Sratsimir de Kran",
+    "name": "Sratsimir of Kran",
     "role": "Despot",
     "nickname": "",
     "aliases": [],
     "summary": "Despot of the House of Shishman. Associated with Bulgaria.",
-    "sections": []
+    "sections": [],
+    "slugName": "Sratsimir de Kran"
   },
   "JUANAFCAST": {
     "name": "Joanna Fernández de Castro",
@@ -2432,12 +2435,13 @@
     "sections": []
   },
   "DERVORGUILLA": {
-    "name": "Dervorguilla de Galloway",
+    "name": "Dervorguilla of Galloway",
     "role": "Noble",
     "nickname": "",
     "aliases": [],
     "summary": "Noble of the House of Galloway. Associated with Scotland.",
-    "sections": []
+    "sections": [],
+    "slugName": "Dervorguilla de Galloway"
   },
   "ERIK10SUE": {
     "name": "Erik X of Sweden",
@@ -2462,7 +2466,7 @@
     "aliases": [
       "Ramon Roger I of Pallars"
     ],
-    "summary": "The brother of Arnaldo Roger I, his father and his sister, was killed with no children in 1294 and his inheritance was disputed between the Coseran and his niece Sibila.",
+    "summary": "The brother of Arnau Roger I, his father and his sister, was killed with no children in 1294 and his inheritance was disputed between the Coseran and his niece Sibila.",
     "sections": []
   },
   "ENRIQGREY": {
@@ -2636,7 +2640,7 @@
     "slugName": "Miguel I Apafi"
   },
   "ERMENGOL10URGEL": {
-    "name": "Ermengol X de Urgel",
+    "name": "Ermengol X of Urgell",
     "role": "Count of Urgell",
     "nickname": "",
     "aliases": [
@@ -2646,7 +2650,8 @@
     "sections": [],
     "governmentNotes": {
       "Dejó el condado a su sobrina Teresa de Entenza.": "He left the county to his niece Teresa de Enguza."
-    }
+    },
+    "slugName": "Ermengol X de Urgel"
   },
   "SVERKER2SUE": {
     "name": "Sverker II from Sweden",
@@ -2842,7 +2847,7 @@
     }
   },
   "VASILI4RUS": {
-    "name": "Vasili IV Shuiski",
+    "name": "Vasily IV of Russia",
     "role": "Tsar",
     "nickname": "",
     "aliases": [],
@@ -2850,7 +2855,8 @@
     "sections": [],
     "governmentNotes": {
       "Zar en Moscú, con control disputado durante el Tiempo de las Turbulencias; no se presume dominio uniforme sobre toda Rusia.": "Tsar in Moscow with dubious monitoring during Turbulations and with no assumption of a uniform rule over all Russia."
-    }
+    },
+    "slugName": "Vasili IV Shuiski"
   },
   "NICTOLENT": {
     "name": "Niccolò da Tolentino",
@@ -3177,7 +3183,7 @@
     }
   },
   "IANCUSASUL": {
-    "name": "Iancu el Sajón",
+    "name": "Iancu the Saxon",
     "role": "Voivode",
     "nickname": "",
     "aliases": [],
@@ -3185,7 +3191,8 @@
     "sections": [],
     "governmentNotes": {
       "Gobierno propio del principado; el tributo y la intervención exterior no equivalen a administración provincial otomana. Los relevos del mismo año se conservan en la escala anual.": "The Government of the principality itself and its tribute and its intervention are not an amount to an Ottoman provincial administration. The same year's relays are preserved at an annual level."
-    }
+    },
+    "slugName": "Iancu el Sajón"
   },
   "KULINBOS": {
     "name": "Kulin of Bosnia",
@@ -3207,11 +3214,12 @@
     "sections": []
   },
   "FEDERICOARBOREA": {
-    "name": "Federico de Arborea",
+    "name": "Frederick of Arborea",
     "role": "Judge",
     "nickname": "",
     "aliases": [],
     "summary": "Judge of Arborea from 1383 to 1387.",
-    "sections": []
+    "sections": [],
+    "slugName": "Federico de Arborea"
   }
 }
