@@ -40,7 +40,7 @@ function PageTitle({ data, Icon, eyebrow }) {
 function EnglishCatalog({ data }) {
   const tipo = {people:'personas',dynasties:'dinastias',territories:'territorios',stories:'historias'}[data.type];
   const items = data[data.type] || [];
-  return <CatalogPage tipo={tipo} locale="en" initialData={data.partial ? {items, partial: data.partial} : {items}} catalogTitle={data.nombre} embedded/>;
+  return <CatalogPage tipo={tipo} locale="en" initialData={{items,...(data.partial?{partial:data.partial}:{}),...(data.directory?{directory:data.directory}:{}),...(data.territoryFacets?{territoryFacets:data.territoryFacets}:{})}} catalogTitle={data.nombre} embedded/>;
 }
 function EnglishInfo({ data }) {
   const methodology=data.type==='methodology';

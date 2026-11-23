@@ -1,3 +1,5 @@
+import {territoryCatalogMetadata} from './territory-catalog.mjs';
+import {HISTORIA_TERRITORIOS} from '../../src/content/territorios/index.js';
 import {conyugesDe, gobiernosDe, territoriosDe} from '../../src/domain/genealogy/personAccessors.js';
 import {ACCESOS_CORONAS} from '../../src/content/coronas/index.js';
 import {RELEVOS} from '../../src/content/sucesiones/index.js';
@@ -538,7 +540,11 @@ async function generarCatalogosPublicos() {
   const dinastias = catalogoAgrupado(PERSONAS.map((p) => p.dinastia).filter(isNamedDynasty), (p, nombre) => p.dinastia === nombre).map(d=>({...d,aliases:dynastyAliasesFor(d.nombre),editorial:Boolean(HISTORIA_DINASTIAS[d.nombre]),resumen:HISTORIA_DINASTIAS[d.nombre]?.resumen||""}))
     .sort((a,b)=>(dynastyOrder.get(b.nombre)||0)-(dynastyOrder.get(a.nombre)||0)||a.nombre.localeCompare(b.nombre,'es'));
   const territoriosValores = Object.keys(TERRITORIOS);
-  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => territoriosDe(p).some(t => [nombre, ...componentesDe(nombre)].includes(t)));
+  const territorios = catalogoAgrupado(territoriosValores, (p, nombre) => territoriosDe(p).some(t => [nombre, ...componentesDe(nombre)].includes(t))).map(item=>{
+    const names=[item.nombre,...componentesDe(item.nombre)];
+    const people=PERSONAS.filter(p=>territoriosDe(p).some(t=>names.includes(t)));
+    return {...item,...territoryCatalogMetadata(item.nombre,TERRITORIOS[item.nombre],HISTORIA_TERRITORIOS[item.nombre]||{},people,names)};
+  });
   const historias = HISTORIAS.map((historia) => ({
     id: historia.id,
     titulo: historia.titulo,

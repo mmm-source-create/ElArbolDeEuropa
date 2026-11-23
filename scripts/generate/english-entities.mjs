@@ -67,7 +67,7 @@ export async function englishEntityPages(people){
   const translatedSource=t.translatedSource||{};
   for(const field of ['evolucion','uniones','eventos'])if(source[field]?.length&&!translatedSource[field]?.length)throw Error(`Translate new territory section: ${t.key}/${field}`);
   if((source.sucesiones?.relevos?.length||source.sucesiones?.crisis?.length)&&!translatedSource.sucesiones)throw Error(`Translate new succession: ${t.key}`);
-  pages.push({...source,...translatedSource,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:entityDisplayName('territory',t.en,entityName(t)),description:entitySummary('territory',t.en,t.summary),resumen:entitySummary('territory',t.en,t.summary),
+  pages.push({...source,...translatedSource,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:source.nombre,fuentes:sources(source.fuentes),nombre:entityDisplayName('territory',t.en,entityName(t)),description:entitySummary('territory',t.en,t.summary),resumen:entitySummary('territory',t.en,t.summary),
    gobiernos:source.gobiernos.map(g=>government(g,people,t.notes)),personas:source.personas.map(p=>{const translated=people.find(t=>t.id===p.id),summary=translated?.summary||t.people[p.id];if(p.resumen&&!summary)throw Error(`Missing territory biography: ${p.id}`);return {...card(p,people),resumen:summary};}),
    historias:(source.historias||[]).map(englishEntityStory),
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),

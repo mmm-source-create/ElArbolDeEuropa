@@ -1,3 +1,4 @@
+import TerritoryCatalog from './TerritoryCatalog.jsx';
 import {CLAIM_TEXTS_621} from '../english/claimTexts621.js';
 import {governmentDateRange, governmentCalendarLabel} from '../../domain/time/governmentDates.js';
 import {collectionLabels} from '../stories/storyThemes.js';
@@ -146,7 +147,11 @@ function textoCatalogoItem(item, tipo, locale='es') {
   return [item.nombre, ...(item.aliases||[]), ...(item.miembros || []).map((p) => p.nombre)].filter(Boolean).join(" ");
 }
 
-export function CatalogPage({ tipo, locale='es', initialData=null, embedded=false, catalogTitle=null }) {
+export function CatalogPage(props) {
+  return props.tipo==='territorios'?<TerritoryCatalog {...props}/>:<GeneralCatalogPage {...props}/>;
+}
+
+function GeneralCatalogPage({ tipo, locale='es', initialData=null, embedded=false, catalogTitle=null }) {
   const en=locale==='en', tr=(es,english)=>en?english:es;
   const catalogNames={personas:'People',dinastias:'Dynasties',territorios:'Territories',historias:'Stories'};
   const Wrapper=embedded?React.Fragment:PublicLayout;

@@ -53,7 +53,7 @@ export const HOME_META={title:'El Árbol de Europa | Atlas genealógico e histó
 export const CATALOG_META={
  personas:{title:`Personas — ${SITE_NAME}`,description:'Busca por nombre, título, dinastía o territorio.',path:'/es/personas'},
  dinastias:{title:`Dinastías — ${SITE_NAME}`,description:'Explora el origen de las casas, sus ramas, herencias y conexiones con las personas del Atlas.',path:'/es/dinastias'},
- territorios:{title:`Territorios — ${SITE_NAME}`,description:'Explora los territorios presentes en la base y las figuras que los conectan.',path:'/es/territorios'},
+ territorios:{title:`Territorios — ${SITE_NAME}`,description:'Explora entidades históricas, uniones y agrupaciones por región, tipo y gobiernos registrados.',path:'/es/territorios'},
  historias:{title:`Historias — ${SITE_NAME}`,description:'Historias construidas con las personas, mapas, biografías y cronología de la propia aplicación.',path:'/es/historias'},
 };
 export function catalogMeta(slug,data) {

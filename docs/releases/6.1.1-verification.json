@@ -1,0 +1,87 @@
+{
+  "version": "6.1.1",
+  "date": "2026-11-23",
+  "baseCommit": "8f46fb375885f10817f1ec74b3b99ed11857d80d",
+  "territories": 1041,
+  "geographicRegions": 10,
+  "languages": [
+    "es",
+    "en"
+  ],
+  "newTests": 8,
+  "completeTests": {
+    "passed": 861,
+    "failed": 0
+  },
+  "prebuild": "passed",
+  "staticPages": 9645,
+  "ssgErrors": 0,
+  "catalogues": {
+    "initialCards": 120,
+    "htmlLinksPerLanguage": 1041,
+    "metadataRoundTrips": 2,
+    "htmlBytes": {
+      "es": 385541,
+      "en": 364679
+    }
+  },
+  "regression": {
+    "annualMaps": 601,
+    "dataDifferences": 0,
+    "publicDifferencesAfterReviewedBaseline": 0,
+    "changedPublicDataRecords": 36,
+    "changedSpanishPublicRecords": [
+      "/es",
+      "/es/territorios"
+    ],
+    "dataSnapshotPreserved": true,
+    "pathsPreserved": true,
+    "treeLayoutPreserved": true
+  },
+  "security": {
+    "repositoryIssues": 0,
+    "unacceptedHighCritical": 0,
+    "existingAcceptedAdvisory": "GHSA-fc5q-39xc-vjpf"
+  },
+  "browser": {
+    "widths": [
+      320,
+      375,
+      768,
+      1280
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "horizontalOverflow": 0,
+    "consoleErrors": 0,
+    "checkedFlows": [
+      "regional navigation",
+      "combined type, nature and year filters",
+      "Franche-Comté alias search",
+      "Spanish search alias in English",
+      "language switch",
+      "complete native A–Z directory"
+    ],
+    "screenshots": "outputs/6.1.1/"
+  },
+  "cloudflare": {
+    "files": 18894,
+    "freeFileLimit": 20000,
+    "remainingFiles": 1106,
+    "englishMetadataReused": 4824,
+    "prepared": true,
+    "deployed": false
+  },
+  "todayInHistory": "planned in docs/NEXT_UPDATES.md; not implemented",
+  "commands": [
+    "npm run prebuild",
+    "node --import ./tests/jsx-loader.mjs --test tests/*.test.mjs",
+    "npm run build:artifacts",
+    "npm run audit:regression",
+    "npm run audit:regression:public",
+    "npm run audit:security",
+    "node scripts/prepare-cloudflare.mjs"
+  ]
+}
