@@ -8,7 +8,7 @@ const ids=['RICHELIEU','MAZARINO','JANHUS','JANZIZKA','JANZAMOYSKI','GUTENBERG',
 test('all seven explicitly confirmed people have sourced editorial profiles and separate professional roles',()=>{
  for(const id of ids){
   const p=PERSONAS.find(p=>p.id===id);assert(p,id);assert(p.aliases.length);assert(sourcesForPerson(id).length>=2,id);
-  const bio=biografiaExtensaPersona(id);assert.equal(bio.length,2,id);assert(bio.every(s=>s.texto.length>100&&s.fuentes.length>=2),id);
+  const bio=biografiaExtensaPersona(id);assert.equal(bio.length,['JANHUS','GUTENBERG'].includes(id)?3:2,id); // 6.1.3: full biographies for Hus and Gutenbergassert(bio.every(s=>s.texto.length>100&&s.fuentes.length>=2),id);
   assert(resumenCortoPersona(p).length>100,id);assert.equal(p.gobiernos,undefined,id+' is not given sovereign government through professional service');
  }
  for(const id of ['JANHUS','JANZIZKA','GUTENBERG','CHRISTINEPIZAN'])assert(PERSONAS.find(p=>p.id===id).nacAprox,id);

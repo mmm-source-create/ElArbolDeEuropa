@@ -11,7 +11,7 @@ import {storyEditorialIssues} from '../src/content/storyEditorialPolicy.js';
 const ledger=JSON.parse(fs.readFileSync(new URL('../docs/editorial/historias-6.0.6.json',import.meta.url),'utf8'));
 
 test('all nine planned stories are complete in both editions, with live chapter switches and known cast',()=>{
- assert.equal(STORY_DRAFTS_606.length,9);assert.equal(HISTORIAS.length,54);
+ assert.equal(STORY_DRAFTS_606.length,9);assert.equal(HISTORIAS.length,60);
  assert(!HISTORIAS.some(h=>!h.disponible||!h.pasos?.length));
  const ids=new Set(PERSONAS.map(p=>p.id));let count=0;
  for(const draft of STORY_DRAFTS_606){

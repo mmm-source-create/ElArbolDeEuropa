@@ -1,0 +1,2211 @@
+{
+ "COPERNICO": {
+  "qid": "Q619",
+  "label": "Nicolaus Copernicus",
+  "birth": {
+   "y": 1473,
+   "date": "1473-02-19",
+   "precision": 11
+  },
+  "death": {
+   "y": 1543,
+   "date": "1543-05-24",
+   "precision": 11
+  },
+  "gnd": "118565273",
+  "bnf": "118976048",
+  "loc": "n79039943",
+  "image": "Nikolaus Kopernikus MOT.jpg",
+  "eswiki": "Nicolás Copérnico",
+  "enwiki": "Nicolaus Copernicus",
+  "gndRecord": {
+   "name": "Kopernikus, Nikolaus",
+   "birth": "1473-02-19",
+   "death": "1543-05-24",
+   "birthPlace": "Thorn",
+   "deathPlace": "Frombork",
+   "bio": "Dt.-poln. Astronom, Mathematiker, Jurist, Arzt; Domherr in Frauenburg"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Nikolaus_Kopernikus_MOT.jpg/960px-Nikolaus_Kopernikus_MOT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nikolaus_Kopernikus_MOT.jpg",
+   "width": 1832,
+   "height": 2289,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "circa 1580 date QS:P,+1580-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Nikolaus Kopernikus MOT",
+   "description": "Nicolaus Copernicus portrait from Town Hall in Toruń - 1580)"
+  }
+ },
+ "GALILEO": {
+  "qid": "Q307",
+  "label": "Galileo Galilei",
+  "birth": {
+   "y": 1564,
+   "date": "1564-02-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1642,
+   "date": "1642-01-08",
+   "precision": 11
+  },
+  "gnd": "118537229",
+  "bnf": "11903931b",
+  "loc": "n79003254",
+  "image": "Galileo.arp.300pix.jpg",
+  "eswiki": "Galileo Galilei",
+  "enwiki": "Galileo Galilei",
+  "gndRecord": {
+   "name": "Galilei, Galileo",
+   "birth": "1564-02-15",
+   "death": "1642-01-08",
+   "birthPlace": "Pisa",
+   "deathPlace": "Florenz-Arcetri",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Galileo.arp.300pix.jpg/960px-Galileo.arp.300pix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Galileo.arp.300pix.jpg",
+   "width": 1180,
+   "height": 1448,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Justus Sustermans",
+   "date": "circa 1640 date QS:P571,+1640-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Portrait of Galileo Galilei label QS:Ltr,\" Galileo Galilei Portresi\" label QS:Lfr,\"Portrait de Galilée \" label QS:Lml,\"ഗലീലിയൊ\" label QS:Lpt,\"Retrato de Galileu",
+   "description": ""
+  }
+ },
+ "KEPLER": {
+  "qid": "Q8963",
+  "label": "Johannes Kepler",
+  "birth": {
+   "y": 1571,
+   "date": "1571-12-27",
+   "precision": 11
+  },
+  "death": {
+   "y": 1630,
+   "date": "1630-11-15",
+   "precision": 11
+  },
+  "gnd": "118561448",
+  "bnf": "11909597m",
+  "loc": "n50044770",
+  "image": "JKepler.jpg",
+  "eswiki": "Johannes Kepler",
+  "enwiki": "Johannes Kepler",
+  "gndRecord": {
+   "name": "Kepler, Johannes",
+   "birth": "1571-12-27",
+   "death": "1630-11-15",
+   "birthPlace": "Weil der Stadt",
+   "deathPlace": "Regensburg",
+   "bio": "Deutscher Astronom und Mathematiker"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/JKepler.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:JKepler.jpg",
+   "width": 836,
+   "height": 1200,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "August Köhler [1]",
+   "date": "1910, cf. Steven N. Shore, Václav Pavlík, arXiv:2108.02213",
+   "title": "JKepler",
+   "description": "Portrait of Johannes Kepler."
+  }
+ },
+ "NEWTON": {
+  "qid": "Q935",
+  "label": "Isaac Newton",
+  "birth": {
+   "y": 1642,
+   "date": "1642-12-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1727,
+   "date": "1727-03-31",
+   "precision": 11
+  },
+  "gnd": "118587544",
+  "bnf": "119176085",
+  "loc": "n79007443",
+  "image": "GodfreyKneller-IsaacNewton-1689.jpg",
+  "eswiki": "Isaac Newton",
+  "enwiki": "Isaac Newton",
+  "gndRecord": {
+   "name": "Newton, Isaac",
+   "birth": "1643-01-04",
+   "death": "1727-03-31",
+   "deathPlace": "London",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/960px-GodfreyKneller-IsaacNewton-1689.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:GodfreyKneller-IsaacNewton-1689.jpg",
+   "width": 1364,
+   "height": 1916,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Godfrey Kneller",
+   "date": "1689",
+   "title": "Portrait of Isaac Newton (1642-1727) label QS:Lde,\"Porträt des Isaac Newton (1642-1727)\" label QS:Len,\"Portrait of Isaac Newton (1642-1727)\" label QS:Lfr,\"Portr",
+   "description": "Portrait of Isaac Newton (1642-1727). This is a copy of a painting by Sir Godfrey Kneller (1689)."
+  }
+ },
+ "FIBONACCI": {
+  "qid": "Q8763",
+  "label": "Fibonacci",
+  "birth": {
+   "y": 1170,
+   "date": "1170-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1240,
+   "date": "1240-00-00",
+   "precision": 7
+  },
+  "gnd": "11868700X",
+  "bnf": "13092437c",
+  "loc": "n84804089",
+  "image": "Fibonacci5.jpg",
+  "eswiki": "Leonardo de Pisa",
+  "enwiki": "Fibonacci",
+  "gndRecord": {
+   "name": "Leonardus, Pisanus",
+   "birth": "1170",
+   "death": "1240",
+   "bio": "Liber abaci"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Fibonacci5.jpg/960px-Fibonacci5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fibonacci5.jpg",
+   "width": 2067,
+   "height": 2061,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown",
+   "date": "Before 1905",
+   "title": "Fibonacci5",
+   "description": "Leonardo Fibonacci"
+  }
+ },
+ "DESCARTES": {
+  "qid": "Q9191",
+  "label": "René Descartes",
+  "birth": {
+   "y": 1596,
+   "date": "1596-03-31",
+   "precision": 11
+  },
+  "death": {
+   "y": 1650,
+   "date": "1650-02-11",
+   "precision": 11
+  },
+  "gnd": "118524844",
+  "bnf": "11899775j",
+  "loc": "n79061201",
+  "image": "Frans Hals - Portret van René Descartes.jpg",
+  "eswiki": "René Descartes",
+  "enwiki": "René Descartes",
+  "gndRecord": {
+   "name": "Descartes, René",
+   "birth": "1596-03-31",
+   "death": "1650-02-11",
+   "birthPlace": "La Haye en Touraine",
+   "deathPlace": "Stockholm",
+   "bio": "Französischer Philosoph, Mathematiker und Naturwissenschaftler"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg",
+   "width": 817,
+   "height": 1000,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "After Frans Hals",
+   "date": "1649",
+   "title": "Portrait of the French philosopher and mathematician René Descartes (1596-1650) title QS:P1476,en:\"Portrait of the French philosopher and mathematician René Des",
+   "description": ""
+  }
+ },
+ "PASCAL": {
+  "qid": "Q1290",
+  "label": "Blaise Pascal",
+  "birth": {
+   "y": 1623,
+   "date": "1623-06-19",
+   "precision": 11
+  },
+  "death": {
+   "y": 1662,
+   "date": "1662-08-19",
+   "precision": 11
+  },
+  "gnd": "118591843",
+  "bnf": "11918679x",
+  "loc": "n79084279",
+  "image": "FR-631136102 GRA 6025 Portrait de Blaise Pascal par Edelinck (cropped).jpg",
+  "eswiki": "Blaise Pascal",
+  "enwiki": "Blaise Pascal",
+  "gndRecord": {
+   "name": "Pascal, Blaise",
+   "birth": "1623-06-19",
+   "death": "1662-08-19",
+   "birthPlace": "Clermont-Ferrand",
+   "deathPlace": "Paris",
+   "bio": "Theologe, Philosoph, Mathematiker, Physiker, Schriftsteller. Erfinder einer mechanischen Rechenmaschine. - Eintritt in das Kloster Port-Royal - Zentrum des Jansenismus (1654)"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_%28cropped%29.jpg/960px-FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:FR-631136102_GRA_6025_Portrait_de_Blaise_Pascal_par_Edelinck_(cropped).jpg",
+   "width": 2430,
+   "height": 3151,
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "artist": "Gérard Edelinck",
+   "date": "",
+   "title": "Blaise Pascal. Line engraving after G. Edelinck after F. Quesnel, junior. label QS:Lfr,\"Portrait de Blaise Pascal de longueur de buste en vue de trois quarts ve",
+   "description": "Burin exécuté aux environs de 1689-1692 selon Bernard Dorival, \"L'iconographie de Pascal au 17e siècle\" dans Pascal et Port-Royal , 1962, p. 96 ; probablement 1691 selon R. P. Lelong, Bibliothèque his"
+  }
+ },
+ "LEIBNIZ": {
+  "qid": "Q9047",
+  "label": "Gottfried Wilhelm Leibniz",
+  "birth": {
+   "y": 1646,
+   "date": "1646-06-21",
+   "precision": 11
+  },
+  "death": {
+   "y": 1716,
+   "date": "1716-11-14",
+   "precision": 11
+  },
+  "gnd": "118571249",
+  "bnf": "11912259r",
+  "loc": "n79081493",
+  "image": "Christoph Bernhard Francke - Bildnis des Philosophen Leibniz (ca. 1695).jpg",
+  "eswiki": "Gottfried Leibniz",
+  "enwiki": "Gottfried Wilhelm Leibniz",
+  "gndRecord": {
+   "name": "Leibniz, Gottfried Wilhelm",
+   "birth": "1646-07-01",
+   "death": "1716-11-14",
+   "birthPlace": "Leipzig",
+   "deathPlace": "Hannover",
+   "bio": "Einer der bedeutendsten Philosophen des ausgehenden 17. und beginnenden 18. Jahrhunderts sowie einer der wichtigsten Vordenker der Aufklärung. 1670 - 1672 Beratungsfunktion unter Kurfürst Johann Philipp von Schönborn. 1685 - 1690 Europareise im Auftrag der Welfen. Bibliothekar und Hofrat des welfisc"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg/960px-Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_%28ca._1695%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg",
+   "width": 4486,
+   "height": 5538,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Christoph Bernhard Francke",
+   "date": "1695",
+   "title": "German: Bildnis des Philosophen Gottfried Wilhelm Freiherr von Leibniz Portrait of Gottfried Leibniz (1646-1716), German philosopher title QS:P1476,de:\"Bildnis ",
+   "description": ""
+  }
+ },
+ "EULER": {
+  "qid": "Q7604",
+  "label": "Leonhard Euler",
+  "birth": {
+   "y": 1707,
+   "date": "1707-04-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1783,
+   "date": "1783-09-18",
+   "precision": 11
+  },
+  "gnd": "118531379",
+  "bnf": "12157666x",
+  "loc": "n50010222",
+  "image": "Leonhard Euler 2.jpg",
+  "eswiki": "Leonhard Euler",
+  "enwiki": "Leonhard Euler",
+  "gndRecord": {
+   "name": "Euler, Leonhard",
+   "birth": "1707-04-15",
+   "death": "1783-09-18",
+   "birthPlace": "Basel",
+   "deathPlace": "Sankt Petersburg",
+   "bio": "Mathematiker, Physiker, Russland, Schweiz Akademiedirektor; auch astronomische, philosophische und musikalisch-akustische Schriften; 1771 völlige Erblindung"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Leonhard_Euler_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leonhard_Euler_2.jpg",
+   "width": 614,
+   "height": 767,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Jakob Emanuel Handmann",
+   "date": "18 th century date QS:P571,+1750-00-00T00:00:00Z/7 c.1756",
+   "title": "Leonhard Euler (1707-1783)",
+   "description": ""
+  }
+ },
+ "SPINOZA": {
+  "qid": "Q35802",
+  "label": "Benedictus de Spinoza",
+  "birth": {
+   "y": 1632,
+   "date": "1632-11-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1677,
+   "date": "1677-02-21",
+   "precision": 11
+  },
+  "gnd": "118616242",
+  "bnf": "11925350v",
+  "loc": "n79018753",
+  "image": "Spinoza.jpg",
+  "eswiki": "Baruch Spinoza",
+  "enwiki": "Baruch Spinoza",
+  "gndRecord": {
+   "name": "Spinoza, Benedictus de",
+   "birth": "1632-11-24",
+   "death": "1677-02-21",
+   "birthPlace": "Amsterdam",
+   "deathPlace": "Den Haag",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Spinoza.jpg/960px-Spinoza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Spinoza.jpg",
+   "width": 1377,
+   "height": 1600,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "anonymous",
+   "date": "1665",
+   "title": "Portrait of Benedictus de Spinoza (1632-1677) label QS:Lfr,\"Portrait de Benedictus de Spinoza (1632-1677)\" label QS:Len,\"Portrait of Benedictus de Spinoza (1632",
+   "description": ""
+  }
+ },
+ "DANTE": {
+  "qid": "Q1067",
+  "label": "Dante Alighieri",
+  "birth": {
+   "y": 1265,
+   "date": "1265-05-30",
+   "precision": 11
+  },
+  "death": {
+   "y": 1321,
+   "date": "1321-09-13",
+   "precision": 11
+  },
+  "gnd": "118523708",
+  "bnf": "118985852",
+  "loc": "n78095495",
+  "image": "Portrait de Dante.jpg",
+  "eswiki": "Dante Alighieri",
+  "enwiki": "Dante Alighieri",
+  "gndRecord": {
+   "name": "Dante, Alighieri",
+   "birth": "1265-05-12",
+   "death": "1321-09-14",
+   "birthPlace": "Florenz",
+   "deathPlace": "Ravenna",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Portrait_de_Dante.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portrait_de_Dante.jpg",
+   "width": 360,
+   "height": 550,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Sandro Botticelli",
+   "date": "1495",
+   "title": "Portrait of Dante label QS:Lit,\"Ritratto di Dante\" label QS:Lfr,\"Portrait de Dante\" label QS:Les,\"Retrato de Dante\" label QS:Len,\"Portrait of Dante\" label QS:Lh",
+   "description": ""
+  }
+ },
+ "CHAUCER": {
+  "qid": "Q5683",
+  "label": "Geoffrey Chaucer",
+  "birth": {
+   "y": 1343,
+   "date": "1343-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1400,
+   "date": "1400-10-25",
+   "precision": 11
+  },
+  "gnd": "118520245",
+  "bnf": "118963584",
+  "loc": "n79027228",
+  "image": "Portrait of Geoffrey Chaucer (4671380) (cropped) 02.jpg",
+  "eswiki": "Geoffrey Chaucer",
+  "enwiki": "Geoffrey Chaucer",
+  "gndRecord": {
+   "name": "Chaucer, Geoffrey",
+   "birth": "1343",
+   "death": "1400",
+   "birthPlace": "London",
+   "bio": "Mittelengl. Dichter"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Portrait_of_Geoffrey_Chaucer_%284671380%29_%28cropped%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Geoffrey_Chaucer_(4671380)_(cropped)_02.jpg",
+   "width": 702,
+   "height": 883,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "Geoffrey Chaucer",
+   "description": "A portrait from the Welsh Portrait Collection at the National Library of Wales. Depicted person: Geoffrey Chaucer – 14th century English poet and author (1343–1400)"
+  }
+ },
+ "SHAKESPEARE": {
+  "qid": "Q692",
+  "label": "William Shakespeare",
+  "birth": {
+   "y": 1564,
+   "date": "1564-04-00",
+   "precision": 10
+  },
+  "death": {
+   "y": 1616,
+   "date": "1616-04-23",
+   "precision": 11
+  },
+  "gnd": "118613723",
+  "bnf": "119246079",
+  "loc": "n78095332",
+  "image": "Shakespeare.jpg",
+  "eswiki": "William Shakespeare",
+  "enwiki": "William Shakespeare",
+  "gndRecord": {
+   "name": "Shakespeare, William",
+   "birth": "1564-04-23",
+   "death": "1616-04-23",
+   "birthPlace": "Stratford-upon-Avon",
+   "deathPlace": "Stratford-upon-Avon",
+   "bio": "Engl. Dichter und Dramatiker"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/960px-Shakespeare.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Shakespeare.jpg",
+   "width": 2400,
+   "height": 3059,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to John Taylor",
+   "date": "1648",
+   "title": "Portrait of William Shakespeare (1564-1646) title QS:P1476,en:\"Portrait of William Shakespeare (1564-1646) \" label QS:Len,\"Portrait of William Shakespeare (1564",
+   "description": "This was long thought to be the only portrait of William Shakespeare that had any claim to have been painted from life, until another possible life portrait, the Cobbe portrait , was revealed in 2009."
+  }
+ },
+ "SORJUANA": {
+  "qid": "Q183074",
+  "label": "Sor Juana Inés de la Cruz",
+  "birth": {
+   "y": 1651,
+   "date": "1651-11-12",
+   "precision": 11
+  },
+  "death": {
+   "y": 1695,
+   "date": "1695-04-17",
+   "precision": 11
+  },
+  "gnd": "118811223",
+  "bnf": "118866500",
+  "loc": "n80021650",
+  "image": "Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera.jpg",
+  "eswiki": "Juana Inés de la Cruz",
+  "enwiki": "Juana Inés de la Cruz",
+  "gndRecord": {
+   "name": "Juana Inés, de la Cruz",
+   "birth": "1651-11-12",
+   "death": "1695-04-17",
+   "deathPlace": "Mexiko (Stadt)",
+   "bio": "Mex. Nonne u. Dichterin; Eltern: Isabel Ramírez de Santillana + Pedro Manuel de Asbaje y Vargas Machuca; geb. in San Miguel Nepantla"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Sor_Juana_In%C3%A9s_de_la_Cruz%2C_1732_-_Fray_Miguel_de_Herrera.jpg/960px-Sor_Juana_In%C3%A9s_de_la_Cruz%2C_1732_-_Fray_Miguel_de_Herrera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sor_Juana_In%C3%A9s_de_la_Cruz,_1732_-_Fray_Miguel_de_Herrera.jpg",
+   "width": 2337,
+   "height": 2666,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Fray Miguel de Herrera",
+   "date": "2019-12-28 18:08:50",
+   "title": "Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera",
+   "description": "Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera"
+  }
+ },
+ "VOLTAIRE": {
+  "qid": "Q9068",
+  "label": "Voltaire",
+  "birth": {
+   "y": 1694,
+   "date": "1694-11-21",
+   "precision": 11
+  },
+  "death": {
+   "y": 1778,
+   "date": "1778-05-30",
+   "precision": 11
+  },
+  "gnd": "118627813",
+  "bnf": "11928669t",
+  "loc": "n80126267",
+  "image": "Nicolas de Largillière - Portrait de Voltaire (1694-1778) en 1718 - P208 - musée Carnavalet - 5 (cropped).jpg",
+  "eswiki": "Voltaire",
+  "enwiki": "Voltaire",
+  "gndRecord": {
+   "name": "Voltaire",
+   "birth": "1694-11-21",
+   "death": "1778-05-30",
+   "birthPlace": "Paris",
+   "deathPlace": "Paris",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_%281694-1778%29_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_%28cropped%29.jpg/960px-Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_%281694-1778%29_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_(cropped).jpg",
+   "width": 2344,
+   "height": 3123,
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "artist": "Nicolas de Largillière",
+   "date": "from 1718 until 1724 date QS:P,+1750-00-00T00:00:00Z/7,P580,+1718-00-00T00:00:00",
+   "title": "French: Portrait de Voltaire (1694-1778) en 1718 Voltaire the age of twenty-four (?) title QS:P1476,fr:\"Portrait de Voltaire (1694-1778) en 1718 \" label QS:Lfr,",
+   "description": "\"L'existence de la version de Versailles , de plus belle qualité, a fait douter de l'authenticité du portrait du musée Carnavalet, dont l'historique est pourtant assez sûr. D'après les recherches de S"
+  }
+ },
+ "GOETHE": {
+  "qid": "Q5879",
+  "label": "Johann Wolfgang von Goethe",
+  "birth": {
+   "y": 1749,
+   "date": "1749-08-28",
+   "precision": 11
+  },
+  "death": {
+   "y": 1832,
+   "date": "1832-03-22",
+   "precision": 11
+  },
+  "gnd": "118540238",
+  "bnf": "11905269k",
+  "loc": "n79003362",
+  "image": "Goethe (Stieler 1828).jpg",
+  "eswiki": "Johann Wolfgang von Goethe",
+  "enwiki": "Johann Wolfgang von Goethe",
+  "gndRecord": {
+   "name": "Goethe, Johann Wolfgang von",
+   "birth": "1749-08-28",
+   "death": "1832-03-22",
+   "birthPlace": "Frankfurt am Main",
+   "deathPlace": "Weimar",
+   "bio": "Staatsmann, Geheimrat"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Goethe_%28Stieler_1828%29.jpg/960px-Goethe_%28Stieler_1828%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Goethe_(Stieler_1828).jpg",
+   "width": 1972,
+   "height": 2432,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Joseph Karl Stieler",
+   "date": "1828",
+   "title": "Johann Wolfgang von Goethe at age 79",
+   "description": ""
+  }
+ },
+ "MIGUELANGEL": {
+  "qid": "Q5592",
+  "label": "Michelangelo",
+  "birth": {
+   "y": 1475,
+   "date": "1475-03-06",
+   "precision": 11
+  },
+  "death": {
+   "y": 1564,
+   "date": "1564-02-18",
+   "precision": 11
+  },
+  "gnd": "118582143",
+  "bnf": "11885845q",
+  "loc": "n80152368",
+  "image": "Michelangelo Daniele da Volterra (dettaglio).jpg",
+  "eswiki": "Miguel Ángel",
+  "enwiki": "Michelangelo",
+  "gndRecord": {
+   "name": "Michelangelo, Buonarroti",
+   "birth": "1475-03-06",
+   "death": "1564-02-27",
+   "birthPlace": "Caprese Michelangelo",
+   "deathPlace": "Rom",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/960px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg",
+   "width": 1382,
+   "height": 1600,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to Daniele da Volterra",
+   "date": "1545",
+   "title": "Michelangelo Buonarroti (1475–1564) title QS:P1476,en:\"Michelangelo Buonarroti (1475–1564) \" label QS:Len,\"Michelangelo Buonarroti (1475–1564) \" label QS:Lit,\"M",
+   "description": ""
+  }
+ },
+ "ROUSSEAU": {
+  "qid": "Q6527",
+  "label": "Jean-Jacques Rousseau",
+  "birth": {
+   "y": 1712,
+   "date": "1712-06-28",
+   "precision": 11
+  },
+  "death": {
+   "y": 1778,
+   "date": "1778-07-02",
+   "precision": 11
+  },
+  "gnd": "118603426",
+  "bnf": "119228797",
+  "loc": "n79008220",
+  "image": "Jean-Jacques Rousseau (painted portrait).jpg",
+  "eswiki": "Jean-Jacques Rousseau",
+  "enwiki": "Jean-Jacques Rousseau",
+  "gndRecord": {
+   "name": "Rousseau, Jean-Jacques",
+   "birth": "1712-06-28",
+   "death": "1778-07-02",
+   "birthPlace": "Genf",
+   "deathPlace": "Ermenonville",
+   "bio": "Bedeutender Aufklärer; Moralphilosoph, Schriftsteller, Komponist und Botaniker; zeitweilig im Exil in der Schweiz und in England"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Jean-Jacques_Rousseau_%28painted_portrait%29.jpg/960px-Jean-Jacques_Rousseau_%28painted_portrait%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jean-Jacques_Rousseau_(painted_portrait).jpg",
+   "width": 1448,
+   "height": 2016,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Maurice Quentin de La Tour",
+   "date": "third quarter of 18 th century date QS:P571,+1750-00-00T00:00:00Z/7",
+   "title": "Portrait of Jean-Jacques Rousseau (1712–1778)",
+   "description": ""
+  }
+ },
+ "JSBACH": {
+  "qid": "Q1339",
+  "label": "Johann Sebastian Bach",
+  "birth": {
+   "y": 1685,
+   "date": "1685-03-21",
+   "precision": 11
+  },
+  "death": {
+   "y": 1750,
+   "date": "1750-07-28",
+   "precision": 11
+  },
+  "gnd": "11850553X",
+  "bnf": "118897907",
+  "loc": "n79021425",
+  "image": "Johann Sebastian Bach.png",
+  "eswiki": "Johann Sebastian Bach",
+  "enwiki": "Johann Sebastian Bach",
+  "gndRecord": {
+   "name": "Bach, Johann Sebastian",
+   "birth": "1685-03-21",
+   "death": "1750-07-28",
+   "birthPlace": "Eisenach",
+   "deathPlace": "Leipzig",
+   "bio": "Geburtsdatum 21.03.1685 (nach damals vor Ort noch gültigem julianischem Kalender) bzw. 31.03.1685 (nach gregorianischem Kalender)"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Johann_Sebastian_Bach.png/960px-Johann_Sebastian_Bach.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach.png",
+   "width": 1376,
+   "height": 1786,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Elias Gottlob Haussmann",
+   "date": "1748",
+   "title": "Johann Sebastian Bach",
+   "description": "Johann Sebastian Bach (aged 61) in a portrait by Elias Gottlob Haussmann , second version of his 1746 canvas."
+  }
+ },
+ "HANDEL": {
+  "qid": "Q7302",
+  "label": "George Frideric Handel",
+  "birth": {
+   "y": 1685,
+   "date": "1685-02-23",
+   "precision": 11
+  },
+  "death": {
+   "y": 1759,
+   "date": "1759-04-14",
+   "precision": 11
+  },
+  "gnd": "118544489",
+  "bnf": "139873218",
+  "loc": "n79129204",
+  "image": "George Frideric Handel by Balthasar Denner.jpg",
+  "eswiki": "Georg Friedrich Händel",
+  "enwiki": "George Frideric Handel",
+  "gndRecord": {
+   "name": "Händel, Georg Friedrich",
+   "birth": "1685-02-23",
+   "death": "1759-04-14",
+   "birthPlace": "Halle (Saale)",
+   "deathPlace": "London",
+   "bio": "Komponist des Barock, einer der fruchtbarsten und bedeutendsten Musiker der Geschichte (u.a. 42 Opern); 1706-1710 Studienreise durch Italien, ab 1710 in London tätig"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/George_Frideric_Handel_by_Balthasar_Denner.jpg/960px-George_Frideric_Handel_by_Balthasar_Denner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:George_Frideric_Handel_by_Balthasar_Denner.jpg",
+   "width": 2400,
+   "height": 2901,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to Balthasar Denner",
+   "date": "between circa 1726 and circa 1728 date QS:P,+1726-00-00T00:00:00Z/8,P1319,+1726-",
+   "title": "Portrait of Georg Friedrich Händel (1685–1759)",
+   "description": ""
+  }
+ },
+ "VIVALDI": {
+  "qid": "Q1340",
+  "label": "Antonio Vivaldi",
+  "birth": {
+   "y": 1678,
+   "date": "1678-03-04",
+   "precision": 11
+  },
+  "death": {
+   "y": 1741,
+   "date": "1741-07-28",
+   "precision": 11
+  },
+  "gnd": "118627287",
+  "bnf": "139008966",
+  "loc": "n79021280",
+  "image": "Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050.jpg",
+  "eswiki": "Antonio Vivaldi",
+  "enwiki": "Antonio Vivaldi",
+  "gndRecord": {
+   "name": "Vivaldi, Antonio",
+   "birth": "1678-03-04",
+   "death": "1741-07-28",
+   "birthPlace": "Venedig",
+   "deathPlace": "Wien",
+   "bio": "bedeutender Vertreter des Spät-Barock, der als Violinvirtuose Aufsehen erregte und als Meister des Concerto grosso und des Solokonzertes gilt"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Onbekend_-_Antonio_Vivaldi_-_Bologna_Museo_Internationale_e_biblioteca_della_musica_di_bologna_28-04-2012_9-21-050.jpg/960px-Onbekend_-_Antonio_Vivaldi_-_Bologna_Museo_Internationale_e_biblioteca_della_musica_di_bologna_28-04-2012_9-21-050.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Onbekend_-_Antonio_Vivaldi_-_Bologna_Museo_Internationale_e_biblioteca_della_musica_di_bologna_28-04-2012_9-21-050.jpg",
+   "width": 2048,
+   "height": 2719,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "2012-04-28 09:49:45",
+   "title": "Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050",
+   "description": "Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050"
+  }
+ },
+ "BEETHOVEN": {
+  "qid": "Q255",
+  "label": "Ludwig van Beethoven",
+  "birth": {
+   "y": 1770,
+   "date": "1770-12-16",
+   "precision": 11
+  },
+  "death": {
+   "y": 1827,
+   "date": "1827-03-26",
+   "precision": 11
+  },
+  "gnd": "118508288",
+  "bnf": "138912954",
+  "loc": "n79107741",
+  "image": "Beethoven.jpg",
+  "eswiki": "Ludwig van Beethoven",
+  "enwiki": "Ludwig van Beethoven",
+  "gndRecord": {
+   "name": "Beethoven, Ludwig van",
+   "birth": "1770-12-17",
+   "death": "1827-03-26",
+   "birthPlace": "Bonn",
+   "deathPlace": "Wien",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/960px-Beethoven.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Beethoven.jpg",
+   "width": 1200,
+   "height": 1443,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Joseph Karl Stieler",
+   "date": "1820",
+   "title": "German: Portrait Beethovens mit der Partitur zur Missa Solemnis Portrait of Ludwig van Beethoven when composing the Missa Solemnis title QS:P1476,de:\"Portrait B",
+   "description": ""
+  }
+ },
+ "MOZART": {
+  "qid": "Q254",
+  "label": "Wolfgang Amadeus Mozart",
+  "birth": {
+   "y": 1756,
+   "date": "1756-01-27",
+   "precision": 11
+  },
+  "death": {
+   "y": 1791,
+   "date": "1791-12-05",
+   "precision": 11
+  },
+  "gnd": "118584596",
+  "bnf": "14027233b",
+  "loc": "n80022788",
+  "image": "Wolfgang-amadeus-mozart 1.jpg",
+  "eswiki": "Wolfgang Amadeus Mozart",
+  "enwiki": "Wolfgang Amadeus Mozart",
+  "gndRecord": {
+   "name": "Mozart, Wolfgang Amadeus",
+   "birth": "1756-01-27",
+   "death": "1791-12-05",
+   "birthPlace": "Salzburg",
+   "deathPlace": "Wien",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Wolfgang-amadeus-mozart_1.jpg/960px-Wolfgang-amadeus-mozart_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Wolfgang-amadeus-mozart_1.jpg",
+   "width": 2996,
+   "height": 3840,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Barbara Krafft",
+   "date": "1819",
+   "title": "Portrait of Wolfgang Amadeus Mozart label QS:Lru,\"Портрет Вольфганга Амадея Моцарта\" label QS:Lde,\"Bildnis von Wolfgang Amadeus Mozart\" label QS:Lsv,\"Porträtt a",
+   "description": "This posthumous portrait of Wolfgang Amadeus Mozart was painted by Barbara Krafft at the request of Joseph Sonnleithner in 1819, long after Mozart died. Sonnleithner, who was making a \"collection of p"
+  }
+ },
+ "HAYDN": {
+  "qid": "Q7349",
+  "label": "Joseph Haydn",
+  "birth": {
+   "y": 1732,
+   "date": "1732-03-31",
+   "precision": 11
+  },
+  "death": {
+   "y": 1809,
+   "date": "1809-05-31",
+   "precision": 11
+  },
+  "gnd": "118547356",
+  "bnf": "13895053m",
+  "loc": "n79091193",
+  "image": "Joseph Haydn, målning av Thomas Hardy från 1792.jpg",
+  "eswiki": "Joseph Haydn",
+  "enwiki": "Joseph Haydn",
+  "gndRecord": {
+   "name": "Haydn, Joseph",
+   "birth": "1732-03-31",
+   "death": "1809-05-31",
+   "birthPlace": "Rohrau",
+   "deathPlace": "Wien",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Joseph_Haydn%2C_m%C3%A5lning_av_Thomas_Hardy_fr%C3%A5n_1792.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Haydn,_m%C3%A5lning_av_Thomas_Hardy_fr%C3%A5n_1792.jpg",
+   "width": 853,
+   "height": 1078,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Thomas Hardy",
+   "date": "1791 date QS:P571,+1791-00-00T00:00:00Z/9",
+   "title": "Portrait of Joseph Haydn",
+   "description": ""
+  }
+ },
+ "FVITORIA": {
+  "qid": "Q312384",
+  "label": "Francisco de Vitoria",
+  "birth": {
+   "y": 1480,
+   "date": "1480-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1546,
+   "date": "1546-08-12",
+   "precision": 11
+  },
+  "gnd": "118768735",
+  "bnf": "119285624",
+  "loc": "n83011385",
+  "image": "Francisco de Vitoria.jpg",
+  "eswiki": "Francisco de Vitoria",
+  "enwiki": "Francisco de Vitoria",
+  "gndRecord": {
+   "name": "Vitoria, Francisco de",
+   "birth": "1485",
+   "death": "1546",
+   "deathPlace": "Salamanca",
+   "bio": "Geburtsort Burgos oder Vitoria"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Francisco_de_Vitoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Vitoria.jpg",
+   "width": 640,
+   "height": 480,
+   "licence": "CC BY-SA 3.0",
+   "licenceUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "artist": "-- Jacob Burckhardt 16:44, 13 September 2007 (UTC)",
+   "date": "5 February 1998, 03:09:15 (according to Exif data)",
+   "title": "Francisco de Vitoria",
+   "description": "Francisco de Vitoria, Statue vor San Esteban in Salamanca"
+  }
+ },
+ "AZPILCUETA": {
+  "qid": "Q1340260",
+  "label": "Martín de Azpilcueta",
+  "birth": {
+   "y": 1492,
+   "date": "1492-12-13",
+   "precision": 11
+  },
+  "death": {
+   "y": 1586,
+   "date": "1586-06-01",
+   "precision": 11
+  },
+  "gnd": "118944053",
+  "bnf": "12113306f",
+  "loc": "n85050081",
+  "image": "Flickr - Yale Law Library - Martín de Azpilcueta (1492^-1586).jpg",
+  "eswiki": "Martín de Azpilcueta",
+  "enwiki": "Martín de Azpilcueta",
+  "gndRecord": {
+   "name": "Azpilcueta, Martín de",
+   "birth": "1491",
+   "death": "1586",
+   "bio": "Span. Rechtsgelehrter"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flickr_-_Yale_Law_Library_-_Mart%C3%ADn_de_Azpilcueta_%281492%5E-1586%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Flickr_-_Yale_Law_Library_-_Mart%C3%ADn_de_Azpilcueta_(1492%5E-1586).jpg",
+   "width": 569,
+   "height": 768,
+   "licence": "CC BY 2.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+   "artist": "Yale Law Library from New Haven, CT, USA",
+   "date": "2009-08-07 20:45",
+   "title": "Flickr - Yale Law Library - Martín de Azpilcueta (1492^-1586)",
+   "description": "Martín de Azpilcueta (1492?-1586)"
+  }
+ },
+ "FSUAREZ": {
+  "qid": "Q316339",
+  "label": "Francisco Suárez",
+  "birth": {
+   "y": 1548,
+   "date": "1548-01-05",
+   "precision": 11
+  },
+  "death": {
+   "y": 1617,
+   "date": "1617-09-25",
+   "precision": 11
+  },
+  "gnd": "118619799",
+  "bnf": "11930010s",
+  "loc": "n78095702",
+  "image": "Retrato-del-padre-francisco-suarez-valladolid-s.-xvii.png",
+  "eswiki": "Francisco Suárez",
+  "enwiki": "Francisco Suárez",
+  "gndRecord": {
+   "name": "Suárez, Francisco",
+   "birth": "1548-01-05",
+   "death": "1617-09-25",
+   "birthPlace": "Granada",
+   "deathPlace": "Lissabon",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Retrato-del-padre-francisco-suarez-valladolid-s.-xvii.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Retrato-del-padre-francisco-suarez-valladolid-s.-xvii.png",
+   "width": 716,
+   "height": 938,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "1700",
+   "title": "Retrato-del-padre-francisco-suarez-valladolid-s.-xvii",
+   "description": "Painting of Francisco Suarez"
+  }
+ },
+ "JMARIANA": {
+  "qid": "Q939889",
+  "label": "Juan de Mariana",
+  "birth": {
+   "y": 1536,
+   "date": "1536-09-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1624,
+   "date": "1624-02-17",
+   "precision": 11
+  },
+  "gnd": "11878188X",
+  "bnf": "121049571",
+  "loc": "n81099091",
+  "image": "El padre Juan de Mariana (Museo del Prado).jpg",
+  "eswiki": "Juan de Mariana",
+  "enwiki": "Juan de Mariana",
+  "gndRecord": {
+   "name": "Mariana, Juan de",
+   "birth": "1536-04-02",
+   "death": "1624-02-17",
+   "birthPlace": "Talavera de la Reina",
+   "deathPlace": "Toledo",
+   "bio": "Stand 19.05.2015 Span. Jesuit, Historiker und Staatstheoretiker; 1561-64 Prof. theol. in Rom, 1564-69 in Sizilien, 1569-74 Prof. theol. in Paris, danach in Toledo Historiker"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/El_padre_Juan_de_Mariana_%28Museo_del_Prado%29.jpg/960px-El_padre_Juan_de_Mariana_%28Museo_del_Prado%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:El_padre_Juan_de_Mariana_(Museo_del_Prado).jpg",
+   "width": 2254,
+   "height": 2952,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Matías Moreno",
+   "date": "circa 1878 date QS:P571,+1878-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "El padre Juan de Mariana",
+   "description": "Retrato del eclesiástico e historiador español Juan de Mariana (1536-1624), que fue también jesuita y teólogo. Esta obra es una copia del retrato de este historiador conservado en la biblioteca del Pa"
+  }
+ },
+ "LMOLINA": {
+  "qid": "Q436077",
+  "label": "Luis de Molina",
+  "birth": {
+   "y": 1535,
+   "date": "1535-09-29",
+   "precision": 11
+  },
+  "death": {
+   "y": 1600,
+   "date": "1600-10-12",
+   "precision": 11
+  },
+  "gnd": "118734555",
+  "bnf": "12470464x",
+  "loc": "n82116911",
+  "image": "Molina - De Justitia et jure, 1759 - 272.tif",
+  "eswiki": "Luis de Molina",
+  "enwiki": "Luis de Molina",
+  "gndRecord": {
+   "name": "Molina, Luis de",
+   "birth": "1535",
+   "death": "1600",
+   "bio": "Span. Jesuit und Theologe; nicht identisch mit dem Juristen Luis de Molina y Morales (1535-1600)"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Molina_-_De_Justitia_et_jure%2C_1759_-_272.tif/lossy-page1-960px-Molina_-_De_Justitia_et_jure%2C_1759_-_272.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Molina_-_De_Justitia_et_jure,_1759_-_272.tif",
+   "width": 1477,
+   "height": 2339,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Molina, Luis de",
+   "date": "",
+   "title": "De Justitia et jure opera omnia, tractatibus quinque, tomisque totidem comprehensa Tomus primus [-quintus] ... − Editio novissima. Huic diligenter recognitae ac",
+   "description": "5 v. ; fol."
+  }
+ },
+ "FRAYLUISLEON": {
+  "qid": "Q450246",
+  "label": "Luis de León",
+  "birth": {
+   "y": 1527,
+   "date": "1527-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1591,
+   "date": "1591-08-23",
+   "precision": 11
+  },
+  "gnd": "118727532",
+  "bnf": "11912469m",
+  "loc": "n79065135",
+  "image": "Retrato de Fray Luis de León.jpg",
+  "eswiki": "Luis de León",
+  "enwiki": "Luis de León",
+  "gndRecord": {
+   "name": "León, Luis de",
+   "birth": "1527",
+   "death": "1591-08-23",
+   "birthPlace": "Belmonte (Spanien)",
+   "deathPlace": "Madrigal de las Altas Torres",
+   "bio": "Übersetzer antiker Autoren und Lyriker; schloss sich 1544 dem Augustinerorden an, studierte und lehrte in Salamanca; kam 1571 vor das Inquisitionsgericht (wurde u.a. des heimlichen Judaisierens angeklagt), wurde 1575 aus der Gefangenschaft entlassen; später Generalvikar seines Ordens in der Provinz "
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Retrato_de_Fray_Luis_de_Le%C3%B3n.jpg/960px-Retrato_de_Fray_Luis_de_Le%C3%B3n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Fray_Luis_de_Le%C3%B3n.jpg",
+   "width": 2062,
+   "height": 2606,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Francisco Pacheco",
+   "date": "circa 1599 date QS:P,+1599-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Retrato de Fray Luis de León",
+   "description": "Detalle del retrato de Fray Luis de León en Francisco Pacheco, El libro de descripción de verdaderos retratos, ilustres y memorables varones , [Sevilla, s.n., s.a.]- Real Academia de la Historia (Madr"
+  }
+ },
+ "DCOVARRUBIAS": {
+  "qid": "Q1220593",
+  "label": "Diego de Covarubias y Leyva",
+  "birth": {
+   "y": 1512,
+   "date": "1512-07-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1577,
+   "date": "1577-09-27",
+   "precision": 11
+  },
+  "gnd": "118837478",
+  "bnf": "121880842",
+  "loc": "n88071031",
+  "image": "El Greco - Portrait of Diego de Covarrubias y Leiva - Google Art Project.jpg",
+  "eswiki": "Diego de Covarrubias",
+  "enwiki": "Diego de Covarrubias y Leyva",
+  "gndRecord": {
+   "name": "Covarrubias y Leyva, Diego de",
+   "birth": "1512",
+   "death": "1577",
+   "bio": "Jurist Span. Kirchenjurist und Humanist; Bischof von Ciudad Rodrigo und Segovia"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/El_Greco_-_Portrait_of_Diego_de_Covarrubias_y_Leiva_-_Google_Art_Project.jpg/960px-El_Greco_-_Portrait_of_Diego_de_Covarrubias_y_Leiva_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:El_Greco_-_Portrait_of_Diego_de_Covarrubias_y_Leiva_-_Google_Art_Project.jpg",
+   "width": 4341,
+   "height": 5122,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "El Greco",
+   "date": "circa 1600 date QS:P571,+1600-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Portrait of Diego de Covarrubias y Leiva (1512-1577) label QS:Les,\" El arzobispo Diego de Covarrubias \"",
+   "description": "Portrait of the Spanish ecclesiastical Diego de Covarrubias (C.E.1512-1577 / H.E.11,512-11,577), who became bishop of Ciudad Rodrigo, Segovia and Cuenca and archbishop of Santo Domingo."
+  }
+ },
+ "WATTYLER": {
+  "qid": "Q311820",
+  "label": "Wat Tyler",
+  "birth": null,
+  "death": {
+   "y": 1381,
+   "date": "1381-06-15",
+   "precision": 11
+  },
+  "gnd": "119210886",
+  "loc": "n83041803",
+  "image": "William Blake Wat Tyler-bw.jpg",
+  "eswiki": "Wat Tyler",
+  "enwiki": "Wat Tyler",
+  "gndRecord": {
+   "name": "Tyler, Wat",
+   "death": "1381",
+   "bio": "Engl. Bauernführer"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/William_Blake_Wat_Tyler-bw.jpg/960px-William_Blake_Wat_Tyler-bw.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:William_Blake_Wat_Tyler-bw.jpg",
+   "width": 2857,
+   "height": 4000,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "William Blake",
+   "date": "1819",
+   "title": "William Blake Wat Tyler-bw",
+   "description": "Wat Tyler , graphite. One of Blake's visionary heads, the drawing is inscribed by John Varley Wat / Tyler / By Wm Blake from / his Spectre as in the act of Striking the Tax / Gatherer on the head. Dra"
+  }
+ },
+ "MUNTZER": {
+  "qid": "Q153981",
+  "label": "Thomas Müntzer",
+  "birth": {
+   "y": 1489,
+   "date": "1489-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1525,
+   "date": "1525-05-27",
+   "precision": 11
+  },
+  "gnd": "118585533",
+  "bnf": "119163459",
+  "loc": "n50038387",
+  "image": "Thomas Muentzer.jpg",
+  "eswiki": "Thomas Müntzer",
+  "enwiki": "Thomas Müntzer",
+  "gndRecord": {
+   "name": "Müntzer, Thomas",
+   "birth": "1489",
+   "death": "1525-05-27",
+   "birthPlace": "Stolberg (Harz)",
+   "bio": "Richtete im April 1524 in Allstedt eine Druckeroffizin mit Typen Stöckelscher Provenienz ein, um damit die Zensur zu umgehen; als Drucker erwähnt er Hans Reichart bzw. Wychard, Wychart"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Thomas_Muentzer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Thomas_Muentzer.jpg",
+   "width": 536,
+   "height": 727,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Christoph van Sichem",
+   "date": "16 th century date QS:P571,+1550-00-00T00:00:00Z/7 or 17 th century date QS:P571",
+   "title": "Thomas Muentzer",
+   "description": "Contemporary portrait of Thomas Müntzer."
+  }
+ },
+ "OLIVERCROMWELL": {
+  "qid": "Q44279",
+  "label": "Oliver Cromwell",
+  "birth": {
+   "y": 1599,
+   "date": "1599-04-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1658,
+   "date": "1658-09-03",
+   "precision": 11
+  },
+  "gnd": "118522841",
+  "bnf": "121696507",
+  "loc": "n80067079",
+  "image": "Oliver Cromwell by Samuel Cooper.jpg",
+  "eswiki": "Oliver Cromwell",
+  "enwiki": "Oliver Cromwell",
+  "gndRecord": {
+   "name": "Cromwell, Oliver",
+   "birth": "1599-04-25",
+   "death": "1658-09-03",
+   "birthPlace": "Huntingdon",
+   "deathPlace": "Westminster",
+   "bio": "Lord; Engl. Staatsmann und Heerführer, Puritaner"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Oliver_Cromwell_by_Samuel_Cooper.jpg/960px-Oliver_Cromwell_by_Samuel_Cooper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Oliver_Cromwell_by_Samuel_Cooper.jpg",
+   "width": 2400,
+   "height": 2916,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "After Samuel Cooper",
+   "date": "based on a work of 1656",
+   "title": "Oliver Cromwell (copy after an original of 1656) title QS:P1476,en:\"Oliver Cromwell (copy after an original of 1656) \" label QS:Len,\"Oliver Cromwell (copy after",
+   "description": ""
+  }
+ },
+ "ROBESPIERRE": {
+  "qid": "Q44197",
+  "label": "Maximilien Robespierre",
+  "birth": {
+   "y": 1758,
+   "date": "1758-05-06",
+   "precision": 11
+  },
+  "death": {
+   "y": 1794,
+   "date": "1794-07-28",
+   "precision": 11
+  },
+  "gnd": "118601563",
+  "bnf": "11922216p",
+  "loc": "n50061705",
+  "image": "Robespierre.jpg",
+  "eswiki": "Maximilien Robespierre",
+  "enwiki": "Maximilien Robespierre",
+  "gndRecord": {
+   "name": "Robespierre, Maximilien de",
+   "birth": "1758-05-06",
+   "death": "1794-07-28",
+   "birthPlace": "Arras",
+   "deathPlace": "Paris",
+   "bio": "Mitglied der Konstituierenden Nationalversammlung"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Robespierre.jpg/960px-Robespierre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Robespierre.jpg",
+   "width": 2426,
+   "height": 3000,
+   "licence": "CC0",
+   "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "artist": "Unidentified painter",
+   "date": "circa 1790 date QS:P571,+1790-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "French: Portrait de Maximilien de Robespierre (1758-1794), homme politique. Portrait of Maximilien Robespierre title QS:P1476,fr:\"Portrait de Maximilien de Robe",
+   "description": "Portrait of Maximilien Robespierre (1758-1794)"
+  }
+ },
+ "MARAT": {
+  "qid": "Q122290",
+  "label": "Jean-Paul Marat",
+  "birth": {
+   "y": 1743,
+   "date": "1743-05-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1793,
+   "date": "1793-07-13",
+   "precision": 11
+  },
+  "gnd": "118577441",
+  "bnf": "119143643",
+  "loc": "n50040632",
+  "image": "Jean-Paul Marat - portrait peint par Joseph Boze.jpg",
+  "eswiki": "Jean-Paul Marat",
+  "enwiki": "Jean-Paul Marat",
+  "gndRecord": {
+   "name": "Marat, Jean-Paul",
+   "birth": "1743-05-24",
+   "death": "1703-07-13",
+   "birthPlace": "Boudry",
+   "deathPlace": "Paris",
+   "bio": "geborgen in Boudry, Fürstentum Neuenburg, heute Kanton Neuenburg, in der Schweiz. Herausgeber der Zeitung \"L'ami du peuple\""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Jean-Paul_Marat_-_portrait_peint_par_Joseph_Boze.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jean-Paul_Marat_-_portrait_peint_par_Joseph_Boze.jpg",
+   "width": 853,
+   "height": 1100,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Joseph Boze",
+   "date": "1793 date QS:P571,+1793-00-00T00:00:00Z/9",
+   "title": "French: Portrait de Jean-Paul Marat (1743-1793), homme politique title QS:P1476,fr:\"Portrait de Jean-Paul Marat (1743-1793), homme politique \" label QS:Lfr,\"Por",
+   "description": "Portrait of Jean-Paul Marat (1743-1793)"
+  }
+ },
+ "LAFAYETTE": {
+  "qid": "Q186652",
+  "label": "Gilbert du Motier, Marquis de Lafayette",
+  "birth": {
+   "y": 1757,
+   "date": "1757-09-06",
+   "precision": 11
+  },
+  "death": {
+   "y": 1834,
+   "date": "1834-05-20",
+   "precision": 11
+  },
+  "gnd": "118725920",
+  "bnf": "119102656",
+  "loc": "n80038471",
+  "image": "Marquis de Lafayette 2.jpg",
+  "eswiki": "Marqués de La Fayette",
+  "enwiki": "Marquis de Lafayette",
+  "gndRecord": {
+   "name": "Lafayette, Marie Joseph Paul Yves Roch Gilbert Du Motier de",
+   "birth": "1757-09-06",
+   "death": "1834-05-19",
+   "birthPlace": "Chavaniac-Lafayette",
+   "deathPlace": "Paris",
+   "bio": "Staatsmann, Frankreich, USA"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Marquis_de_Lafayette_2.jpg/960px-Marquis_de_Lafayette_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marquis_de_Lafayette_2.jpg",
+   "width": 2252,
+   "height": 2840,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Charles Willson Peale",
+   "date": "between 1779 and 1780 date QS:P571,+1750-00-00T00:00:00Z/7,P1319,+1779-00-00T00:",
+   "title": "Marie Joseph Paul Yves Roch Gilbert Motier, Marquis De Lafayette",
+   "description": "Lafayette in uniform of an American major general"
+  }
+ },
+ "NAPOLEON1": {
+  "qid": "Q517",
+  "label": "Napoleon",
+  "birth": {
+   "y": 1769,
+   "date": "1769-08-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1821,
+   "date": "1821-05-05",
+   "precision": 11
+  },
+  "gnd": "118586408",
+  "bnf": "12008245w",
+  "loc": "n79054933",
+  "image": "Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project.jpg",
+  "eswiki": "Napoleón Bonaparte",
+  "enwiki": "Napoleon",
+  "gndRecord": {
+   "name": "Napoleon I., Frankreich, Kaiser",
+   "birth": "1769-08-15",
+   "death": "1821-05-05",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Sankt Helena",
+   "bio": "1799-1814 Kaiser der Franzosen"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/960px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg",
+   "width": 3079,
+   "height": 5135,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Jacques-Louis David",
+   "date": "1812 date QS:P571,+1812-00-00T00:00:00Z/9",
+   "title": "The Emperor Napoleon in His Study at the Tuileries label QS:Len,\"The Emperor Napoleon in His Study at the Tuileries\" label QS:Lar,\"الإمبراطور ناپُليُون في مكتبه",
+   "description": ""
+  }
+ },
+ "MARCOPOLO": {
+  "qid": "Q6101",
+  "label": "Marco Polo",
+  "birth": {
+   "y": 1254,
+   "date": "1254-09-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1324,
+   "date": "1324-01-08",
+   "precision": 11
+  },
+  "gnd": "118595563",
+  "bnf": "11920191p",
+  "loc": "n79055818",
+  "image": "Marco Polo Mosaic from Palazzo Tursi.jpg",
+  "eswiki": "Marco Polo",
+  "enwiki": "Marco Polo",
+  "gndRecord": {
+   "name": "Polo, Marco",
+   "birth": "1254",
+   "death": "1324",
+   "birthPlace": "Venedig",
+   "deathPlace": "Venedig",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Marco_Polo_Mosaic_from_Palazzo_Tursi.jpg/960px-Marco_Polo_Mosaic_from_Palazzo_Tursi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marco_Polo_Mosaic_from_Palazzo_Tursi.jpg",
+   "width": 1024,
+   "height": 1286,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Salviati",
+   "date": "1867",
+   "title": "Marco Polo Mosaic from Palazzo Tursi",
+   "description": "Mosaic of Marco Polo, Municipal Palace of Genoa: Palazzo Grimaldi Doria-Tursi"
+  }
+ },
+ "COLON": {
+  "qid": "Q7322",
+  "label": "Christopher Columbus",
+  "birth": {
+   "y": 1450,
+   "date": "1450-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1506,
+   "date": "1506-05-19",
+   "precision": 11
+  },
+  "gnd": "118564994",
+  "bnf": "119304566",
+  "loc": "n78085478",
+  "image": "Ridolfo del Ghirlandaio - Ritratto di Cristoforo Colombo (1520).jpg",
+  "eswiki": "Cristóbal Colón",
+  "enwiki": "Christopher Columbus",
+  "gndRecord": {
+   "name": "Colombo, Cristoforo",
+   "birth": "1451",
+   "death": "1506-05-20",
+   "birthPlace": "Genua",
+   "deathPlace": "Valladolid",
+   "bio": "Genueser Seefahrer in spanischen Diensten, Entdecker Amerikas; Giornale di bordo (Commentari et relationes de itineraribus)"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ridolfo_del_Ghirlandaio_-_Ritratto_di_Cristoforo_Colombo_%281520%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ridolfo_del_Ghirlandaio_-_Ritratto_di_Cristoforo_Colombo_(1520).jpg",
+   "width": 915,
+   "height": 1077,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Ridolfo del Ghirlandaio",
+   "date": "circa 1520 date QS:P571,+1520-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Christopher Columbus",
+   "description": ""
+  }
+ },
+ "MAGALLANES": {
+  "qid": "Q1496",
+  "label": "Ferdinand Magellan",
+  "birth": {
+   "y": 1480,
+   "date": "1480-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1521,
+   "date": "1521-04-27",
+   "precision": 11
+  },
+  "gnd": "117518530",
+  "bnf": "11935241t",
+  "loc": "n50039489",
+  "image": "Retrato de Hernando de Magallanes.jpg",
+  "eswiki": "Fernando de Magallanes",
+  "enwiki": "Ferdinand Magellan",
+  "gndRecord": {
+   "name": "Magalhães, Fernão de",
+   "birth": "1480",
+   "death": "1521-04-27",
+   "birthPlace": "Sabrosa",
+   "bio": "gest. auf Mactan, Philippinen, Weltumsegler"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Retrato_de_Hernando_de_Magallanes.jpg/960px-Retrato_de_Hernando_de_Magallanes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Hernando_de_Magallanes.jpg",
+   "width": 1029,
+   "height": 1298,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown artist Unknown artist",
+   "date": "1848",
+   "title": "Retrato de Fernando de Magallanes",
+   "description": "Portrait of the Portuguese soldier and navigator Fernando de Magallanes (1480-1521). This portrait is a cut-out variant of the copy that is kept in the Naval Museum of Madrid; the original, according "
+  }
+ },
+ "ELCANO": {
+  "qid": "Q201510",
+  "label": "Juan Sebastián Elcano",
+  "birth": {
+   "y": 1476,
+   "date": "1476-11-30",
+   "precision": 11
+  },
+  "death": {
+   "y": 1526,
+   "date": "1526-08-04",
+   "precision": 11
+  },
+  "gnd": "118681915",
+  "bnf": "16653567f",
+  "loc": "n86011345",
+  "image": "Elcano.jpg",
+  "eswiki": "Juan Sebastián Elcano",
+  "enwiki": "Juan Sebastián Elcano",
+  "gndRecord": {
+   "name": "Elcano, Juan Sebastián de",
+   "birth": "1476",
+   "death": "1526",
+   "birthPlace": "Guetaria",
+   "bio": "Starb auf See"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Elcano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Elcano.jpg",
+   "width": 242,
+   "height": 241,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "",
+   "date": "",
+   "title": "Elcano",
+   "description": ""
+  }
+ },
+ "CABEZADEVACA": {
+  "qid": "Q250763",
+  "label": "Álvar Núñez Cabeza de Vaca",
+  "birth": {
+   "y": 1485,
+   "date": "1485-00-00",
+   "precision": 8
+  },
+  "death": {
+   "y": 1556,
+   "date": "1556-00-00",
+   "precision": 9
+  },
+  "gnd": "118735705",
+  "bnf": "119179545",
+  "loc": "n79062901",
+  "image": "Cabeza de Vaca Portrait.jpg",
+  "eswiki": "Álvar Núñez Cabeza de Vaca",
+  "enwiki": "Álvar Núñez Cabeza de Vaca",
+  "gndRecord": {
+   "name": "Núñez Cabeza de Vaca, Alvaro",
+   "birth": "1507",
+   "death": "1559",
+   "birthPlace": "Jerez de la Frontera",
+   "deathPlace": "Sevilla",
+   "bio": "spanischer Seefahrer und Entdecker; geb. ca. 1490 in Jerez de la Frontera (Andalusien), gestorben ca. 1556 in Sevilla; Gouverneur der spanischen Kolonie am Río de la Plata im heutigen Paraguay"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cabeza_de_Vaca_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Cabeza_de_Vaca_Portrait.jpg",
+   "width": 225,
+   "height": 352,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "2014-12-11",
+   "title": "Cabeza de Vaca Portrait",
+   "description": "Portrait of Cabeza de Vaca"
+  }
+ },
+ "ORELLANA": {
+  "qid": "Q207901",
+  "label": "Francisco de Orellana",
+  "birth": {
+   "y": 1511,
+   "date": "1511-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1546,
+   "date": "1546-01-01",
+   "precision": 9
+  },
+  "gnd": "12191948X",
+  "bnf": "12337555x",
+  "loc": "n85092981",
+  "image": "Francisco de Orellana Portrait.jpg",
+  "eswiki": "Francisco de Orellana",
+  "enwiki": "Francisco de Orellana",
+  "gndRecord": {
+   "name": "Orellana, Francisco de",
+   "birth": "1511",
+   "death": "1546",
+   "birthPlace": "Trujillo (Provinz Cáceres)",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Francisco_de_Orellana_Portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Francisco_de_Orellana_Portrait.jpg",
+   "width": 183,
+   "height": 275,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "1930-01-01",
+   "title": "Francisco de Orellana Portrait",
+   "description": "Francisco de Orellana"
+  }
+ },
+ "HUMBOLDT": {
+  "qid": "Q6694",
+  "label": "Alexander von Humboldt",
+  "birth": {
+   "y": 1769,
+   "date": "1769-09-14",
+   "precision": 11
+  },
+  "death": {
+   "y": 1859,
+   "date": "1859-05-06",
+   "precision": 11
+  },
+  "gnd": "118554700",
+  "bnf": "119080343",
+  "loc": "n80051862",
+  "image": "Stieler, Joseph Karl - Alexander von Humboldt - 1843.jpg",
+  "eswiki": "Alexander von Humboldt",
+  "enwiki": "Alexander von Humboldt",
+  "gndRecord": {
+   "name": "Humboldt, Alexander von",
+   "birth": "1769-09-14",
+   "death": "1859-05-06",
+   "birthPlace": "Berlin",
+   "deathPlace": "Berlin",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Stieler%2C_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Stieler,_Joseph_Karl_-_Alexander_von_Humboldt_-_1843.jpg",
+   "width": 800,
+   "height": 986,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Joseph Karl Stieler",
+   "date": "1843",
+   "title": "Alexander von Humboldt label QS:Len,\"Alexander von Humboldt\" label QS:Lde,\"Alexander von Humboldt\"",
+   "description": "sitting next to a globe with a manuscript for his life's work \" Cosmos \" 1845-1862"
+  }
+ },
+ "HERNANCORTES": {
+  "qid": "Q7326",
+  "label": "Hernán Cortés",
+  "birth": {
+   "y": 1485,
+   "date": "1485-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1547,
+   "date": "1547-12-02",
+   "precision": 11
+  },
+  "gnd": "118522280",
+  "bnf": "118977574",
+  "loc": "n80133120",
+  "image": "Retrato de Hernán Cortés.jpg",
+  "eswiki": "Hernán Cortés",
+  "enwiki": "Hernán Cortés",
+  "gndRecord": {
+   "name": "Cortés, Hernán",
+   "birth": "1485",
+   "death": "1547-12-02",
+   "birthPlace": "Medellín (Provinz Badajoz)",
+   "deathPlace": "Castilleja de la Cuesta",
+   "bio": "Eroberer des Aztekenreichs; Generalgouverneur von Neuspanien"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg",
+   "width": 788,
+   "height": 928,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown artist Unknown artist",
+   "date": "18 th century date QS:P571,+1750-00-00T00:00:00Z/7",
+   "title": "Hernán Cortés",
+   "description": "This work is an anonymous portrait of the famous Spanish conqueror Hernán Cortés (C.E.1485-1547), based on the painting sent by the portrayed himself to Paulo Giovio, in which he appeared in profile a"
+  }
+ },
+ "FPIZARRO": {
+  "qid": "Q44741",
+  "label": "Francisco Pizarro",
+  "birth": {
+   "y": 1478,
+   "date": "1478-03-16",
+   "precision": 11
+  },
+  "death": {
+   "y": 1541,
+   "date": "1541-06-26",
+   "precision": 11
+  },
+  "gnd": "118594761",
+  "bnf": "120678775",
+  "loc": "n50082729",
+  "image": "Portrait of Francisco Pizarro.jpg",
+  "eswiki": "Francisco Pizarro",
+  "enwiki": "Francisco Pizarro",
+  "gndRecord": {
+   "name": "Pizarro, Francisco",
+   "birth": "1475",
+   "death": "1541-06-26",
+   "birthPlace": "Trujillo (Provinz Cáceres)",
+   "deathPlace": "Lima",
+   "bio": "Eroberer von Peru"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Portrait_of_Francisco_Pizarro.jpg/960px-Portrait_of_Francisco_Pizarro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Francisco_Pizarro.jpg",
+   "width": 2900,
+   "height": 3731,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Amable-Paul Coutan",
+   "date": "between 1834 and 1835 date QS:P,+1834-00-00T00:00:00Z/8,P1319,+1834-00-00T00:00:",
+   "title": "French: François Pizarre, conquistador (1475-1541) Francisco Pizarro, conqueror (1475–1541) title QS:P1476,fr:\"François Pizarre, conquistador (1475-1541) \" labe",
+   "description": ""
+  }
+ },
+ "NUNEZBALBOA": {
+  "qid": "Q19080",
+  "label": "Vasco Núñez de Balboa",
+  "birth": {
+   "y": 1475,
+   "date": "1475-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1519,
+   "date": "1519-01-12",
+   "precision": 11
+  },
+  "gnd": "118652052",
+  "bnf": "12400056r",
+  "loc": "n50017667",
+  "image": "Retrato de Vasco Nuñez de Balboa (1475-1517) - Anónimo.jpg",
+  "eswiki": "Vasco Núñez de Balboa",
+  "enwiki": "Vasco Núñez de Balboa",
+  "gndRecord": {
+   "name": "Balboa, Vasco Núñez de",
+   "birth": "1475",
+   "death": "1519-01-15",
+   "birthPlace": "Jerez de los Caballeros",
+   "bio": "Span. Entdecker, Konquistador und Abenteurer. Als erster Europäer erblickte er den Pazifischen Ozean vom amerikanischen Kontinent aus."
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Retrato_de_Vasco_Nu%C3%B1ez_de_Balboa_%281475-1517%29_-_An%C3%B3nimo.jpg/960px-Retrato_de_Vasco_Nu%C3%B1ez_de_Balboa_%281475-1517%29_-_An%C3%B3nimo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Retrato_de_Vasco_Nu%C3%B1ez_de_Balboa_(1475-1517)_-_An%C3%B3nimo.jpg",
+   "width": 1344,
+   "height": 1800,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Anonymous ( Spain ) Unknown author after a 18th-century engraving",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "Vasco Nuñez de Balboa (1475-1517)",
+   "description": "Copiado del grabado de la obra Retratos de Españoles ilustres , publicada en Madrid, en 1791."
+  }
+ },
+ "DALMAGRO": {
+  "qid": "Q207668",
+  "label": "Diego de Almagro",
+  "birth": {
+   "y": 1475,
+   "date": "1475-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1538,
+   "date": "1538-07-08",
+   "precision": 11
+  },
+  "gnd": "11885920X",
+  "bnf": "16016408h",
+  "loc": "n85366922",
+  "image": "Diego de Almagro.JPG",
+  "eswiki": "Diego de Almagro",
+  "enwiki": "Diego de Almagro",
+  "gndRecord": {
+   "name": "Almagro, Diego de",
+   "birth": "1475",
+   "death": "1538",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Diego_de_Almagro.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Diego_de_Almagro.JPG",
+   "width": 452,
+   "height": 491,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Domingo Mesa",
+   "date": "1873 date QS:P571,+1873-00-00T00:00:00Z/9",
+   "title": "Diego de Almagro label QS:Len,\"Diego de Almagro\"",
+   "description": ""
+  }
+ },
+ "PVALDIVIA": {
+  "qid": "Q203534",
+  "label": "Pedro de Valdivia",
+  "birth": {
+   "y": 1497,
+   "date": "1497-04-17",
+   "precision": 11
+  },
+  "death": {
+   "y": 1553,
+   "date": "1553-12-25",
+   "precision": 11
+  },
+  "gnd": "119295318",
+  "bnf": "121193046",
+  "loc": "n50046652",
+  "image": "Pedro de Valdivia.jpg",
+  "eswiki": "Pedro de Valdivia",
+  "enwiki": "Pedro de Valdivia",
+  "gndRecord": {
+   "name": "Valdivia, Pedro de",
+   "birth": "1500",
+   "death": "1553",
+   "birthPlace": "Villanueva de la Serena",
+   "bio": "Span. Konquistador u. Gouverneur von Chile; Geburtsort auch Castuera in der Provinz Badajoz, Campanario oder Zalamea; Sterbeort Tucapel"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Pedro_de_Valdivia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Pedro_de_Valdivia.jpg",
+   "width": 615,
+   "height": 790,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Federico de Madrazo y Kuntz",
+   "date": "1854 date QS:P571,+1854-00-00T00:00:00Z/9",
+   "title": "Pedro de Valdivia",
+   "description": "Pedro de Valdivia. Portrait of 1854. Gift of Queen Elizabeth II of Spain to the Illustrious Municipality of Santiago"
+  }
+ },
+ "JIMENEZQUESADA": {
+  "qid": "Q347688",
+  "label": "Gonzalo Jiménez de Quesada",
+  "birth": {
+   "y": 1509,
+   "date": "1509-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1579,
+   "date": "1579-02-16",
+   "precision": 11
+  },
+  "gnd": "118787489",
+  "bnf": "12259479c",
+  "loc": "n50082860",
+  "image": "Gonzalo Jimenez de Quesada.jpg",
+  "eswiki": "Gonzalo Jiménez de Quesada",
+  "enwiki": "Gonzalo Jiménez de Quesada",
+  "gndRecord": {
+   "name": "Jiménez de Quesada, Gonzalo",
+   "birth": "1500",
+   "death": "1579",
+   "deathPlace": "Mariquita (Tolima)",
+   "bio": "Span. Konquistador in Kolumbien; Geburtsort Córdoba oder Granada; gründete die heutige kolumbianische Hauptstadt Bogotá"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gonzalo_Jimenez_de_Quesada.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gonzalo_Jimenez_de_Quesada.jpg",
+   "width": 515,
+   "height": 663,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "Gonzalo Jimenez de Quesada",
+   "description": "Portrait of Gonzalo Jiménez de Quesada, a Spanish conquistador of Colombia."
+  }
+ },
+ "SANTOTOMAS": {
+  "qid": "Q9438",
+  "label": "Thomas Aquinas",
+  "birth": {
+   "y": 1225,
+   "date": "1225-01-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1274,
+   "date": "1274-03-07",
+   "precision": 11
+  },
+  "gnd": "118622110",
+  "bnf": "11926496p",
+  "loc": "n78095790",
+  "image": "St-thomas-aquinasFXD.jpg",
+  "eswiki": "Tomás de Aquino",
+  "enwiki": "Thomas Aquinas",
+  "gndRecord": {
+   "name": "Thomas, von Aquin, Heiliger",
+   "birth": "1225",
+   "death": "1274-03-07",
+   "birthPlace": "Castello Roccasecca",
+   "deathPlace": "Priverno-Fossanova",
+   "bio": "Dominikaner (OP), 1323 heiliggesprochen"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/St-thomas-aquinasFXD.jpg/960px-St-thomas-aquinasFXD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:St-thomas-aquinasFXD.jpg",
+   "width": 4004,
+   "height": 6000,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Carlo Crivelli",
+   "date": "1476",
+   "title": "Saint Thomas Aquinas title QS:P1476,en:\"Saint Thomas Aquinas \" label QS:Len,\"Saint Thomas Aquinas \" label QS:Lde,\"Altar von San Domenico in Ascoli, Polyptychon,",
+   "description": "During the 13th century, Saint Thomas Aquinas sought to reconcile Aristotelian philosophy with Augustinian theology. Aquinas employed both reason and faith in the study of metaphysics, moral philosoph"
+  }
+ },
+ "ERASMOROT": {
+  "qid": "Q43499",
+  "label": "Erasmus",
+  "birth": {
+   "y": 1466,
+   "date": "1466-10-28",
+   "precision": 11
+  },
+  "death": {
+   "y": 1536,
+   "date": "1536-07-12",
+   "precision": 11
+  },
+  "gnd": "118530666",
+  "bnf": "11886243m",
+  "loc": "n79055814",
+  "image": "Holbein-erasmus.jpg",
+  "eswiki": "Erasmo de Róterdam",
+  "enwiki": "Erasmus",
+  "gndRecord": {
+   "name": "Erasmus, Desiderius",
+   "birth": "1466-10-28",
+   "death": "1536-07-12",
+   "birthPlace": "Rotterdam",
+   "deathPlace": "Basel",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Holbein-erasmus.jpg/960px-Holbein-erasmus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Holbein-erasmus.jpg",
+   "width": 1618,
+   "height": 2290,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Hans Holbein the Younger",
+   "date": "1523",
+   "title": "Erasmus title QS:P1476,en:\"Erasmus \" label QS:Len,\"Erasmus \" label QS:Lit,\"Erasmus\" label QS:Luk,\"Портрет Еразма Ротердамського (Гольбейн)\" label QS:Lfr,\"Érasme",
+   "description": "Portrait of Desiderius Erasmus of Rotterdam with Renaissance Pilaster."
+  }
+ },
+ "GUTENBERG": {
+  "qid": "Q8958",
+  "label": "Johannes Gutenberg",
+  "birth": {
+   "y": 1400,
+   "date": "1400-00-00",
+   "precision": 9
+  },
+  "death": {
+   "y": 1468,
+   "date": "1468-02-03",
+   "precision": 11
+  },
+  "gnd": "118543768",
+  "bnf": "119782521",
+  "loc": "n50034916",
+  "image": "Gutenberg.jpg",
+  "eswiki": "Johannes Gutenberg",
+  "enwiki": "Johannes Gutenberg",
+  "gndRecord": {
+   "name": "Gutenberg, Johannes",
+   "birth": "1400",
+   "death": "1468",
+   "birthPlace": "Mainz",
+   "deathPlace": "Mainz",
+   "bio": "Erfinder des Buchdrucks"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Gutenberg.jpg/960px-Gutenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Gutenberg.jpg",
+   "width": 1040,
+   "height": 1322,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "",
+   "date": "2004",
+   "title": "Gutenberg",
+   "description": "Johannes Gensfleisch zur Laden zum Gutenberg made after his death."
+  }
+ },
+ "DOMINGOSOTO": {
+  "qid": "Q1237514",
+  "label": "Domingo de Soto",
+  "birth": {
+   "y": 1494,
+   "date": "1494-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1560,
+   "date": "1560-11-25",
+   "precision": 11
+  },
+  "gnd": "118798111",
+  "bnf": "121553716",
+  "loc": "n85221408",
+  "image": "DOMINGO DE SOTO016.JPG",
+  "eswiki": "Domingo de Soto",
+  "enwiki": "Domingo de Soto",
+  "gndRecord": {
+   "name": "Soto, Domingo de",
+   "birth": "1494",
+   "death": "1560",
+   "bio": "Span. Dominikaner (OP), Philosoph und Theologe Theologe, Philosoph"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/DOMINGO_DE_SOTO016.JPG/960px-DOMINGO_DE_SOTO016.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:DOMINGO_DE_SOTO016.JPG",
+   "width": 2048,
+   "height": 1536,
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "artist": "Vicente Alcober Bosch, Valencia (España)",
+   "date": "2015-07-14",
+   "title": "DOMINGO DE SOTO016",
+   "description": "Escultura de Domingo de Soto en Segovia (España); cosmólogo, físico y matemático español, fue precursor de la Física Moderna. Nació en Segovia (España) en 1494 y fue además teólogo perteneciente a la "
+  }
+ },
+ "JANHUS": {
+  "qid": "Q43977",
+  "label": "Jan Hus",
+  "birth": {
+   "y": 1369,
+   "date": "1369-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1415,
+   "date": "1415-07-06",
+   "precision": 11
+  },
+  "gnd": "118554948",
+  "bnf": "12096600d",
+  "loc": "n80057048",
+  "image": "Jan hus 1.jpg",
+  "eswiki": "Jan Hus",
+  "enwiki": "Jan Hus",
+  "gndRecord": {
+   "name": "Hus, Jan",
+   "birth": "1369",
+   "death": "1415-07-06",
+   "birthPlace": "Husinec",
+   "deathPlace": "Konstanz",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jan_hus_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jan_hus_1.jpg",
+   "width": 420,
+   "height": 531,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "",
+   "title": "Jan hus 1",
+   "description": "Jan Hus"
+  }
+ }
+}

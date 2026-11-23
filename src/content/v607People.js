@@ -4,6 +4,8 @@ import {V608_RECORDS} from './v608People.js';
 import {V615_RECORDS} from './v615People.js';
 // 6.1.2: the ten reserve biographies of 6.0.15 replace one-line summaries.
 import V612_RECORDS from './v612People.json' with {type:'json'};
+// 6.1.3: new people of culture, science, Salamanca, revolutions and exploration.
+import {V613_RECORDS} from './v613/index.js';
 import {reliableReferences} from './reliableReferences616.js';
 import {authorityReferences} from '../evidence/authorityReviews.js';
 const WIKI_ES_ESTEBAN = {titulo:'Hrvatska enciklopedija · Stephen Zápolya',url:'https://www.enciklopedija.hr/clanak/66877'};
@@ -54,8 +56,10 @@ const ownRecords = {
   },
 };
 
-const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS};
-export const V612_IDS=Object.keys(V612_RECORDS);
+const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS,...V613_RECORDS};
+// People whose full biography arrives after their English page: they keep its name.
+export const V612_IDS=[...Object.keys(V612_RECORDS),...Object.keys(V613_RECORDS)];
+export const V613_IDS=Object.keys(V613_RECORDS);
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));
 export const V607_PERSON_CONTENT=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,{resumen:r.resumen,biografia:r.parts.map(p=>p[2]).join('\n\n')}]));

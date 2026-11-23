@@ -40,7 +40,8 @@ test('50 previous pending claims have individual citations, separate from new re
  const ledger=JSON.parse(fs.readFileSync(new URL('../docs/audits/2026-10-27-evidence-50.json',import.meta.url)));assert.equal(ledger.length,50);assert.equal(Object.keys(OCTOBER_50_REVIEWS).length,50);assert.equal(new Set(ledger.map(c=>c.id)).size,50);const previous={...CLAIM_REVIEWS};for(const id of Object.keys(OCTOBER_50_REVIEWS))delete previous[id];
  for(const row of ledger){assert.equal(row.before,'pending');const p=PERSONAS.find(p=>p.id===row.id.split(':')[1]),old=personClaims(p,previous).find(c=>c.id===row.id),claim=personClaims(p).find(c=>c.id===row.id);assert.equal(old.certainty,'pending',row.id);assert.equal(claim.certainty,'documented');assert.equal(claim.value,row.value);assert(claim.sources.every(s=>s.url.startsWith('https:')&&s.locator));assert(!Object.hasOwn(POLISH_PROFILES,p.id));}
  // 6.1.2: four Moravian governments of Bohemian kings, still pending review.
- assert.equal(coverageReport(PERSONAS).totals.pending,4217);
+ // 6.1.3: the 51 new people’s governments and unmatched dates remain pending.
+ assert.equal(coverageReport(PERSONAS).totals.pending,4219);
 });
 test('Visconti and Sforza portraits retain identity, artwork dates and bilingual rights; later user selections retain explicit attribution',()=>{
  assert.equal(Object.keys(VISCONTI_SFORZA_IMAGES).length,19);for(const [id,p] of Object.entries(VISCONTI_SFORZA_IMAGES)){assert(PERSONAS.some(p=>p.id===id));assert(fs.existsSync(new URL('../public'+p.archivo,import.meta.url)));assert(p.fuenteUrl&&p.derechosUrl&&p.autor&&p.fecha);const en=ENGLISH_PROFILE_PORTRAITS[id];assert(en?.obra&&en?.tipo&&en?.autor&&en?.fecha,id);}

@@ -34,8 +34,10 @@ test('dates that a checked source gives differently are corrected, with the sour
   for (const [id, year] of Object.entries(expected)) {
     const c = claim(id);
     assert.equal(c.value, year, id);
-    assert.equal(c.certainty, 'documented', id);
     assert.equal(DATE_CORRECTIONS_622[id].to, year, id);
+    // 6.1.3: St Hedwig's birth is disputed among historians (1373 or 1374).
+    if (id === 'person:EDUV1:birth') { assert.equal(c.certainty, 'disputed'); continue; }
+    assert.equal(c.certainty, 'documented', id);
     assert.match(REVIEWS_622[id].note, new RegExp(`Se corrige ${DATE_CORRECTIONS_622[id].from} por ${year}`), id);
   }
   // A source that disagrees with another specific source does not change the date.

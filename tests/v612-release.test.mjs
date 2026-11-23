@@ -90,5 +90,5 @@ test('low-priority SEO: HSTS, an English 404 and footer touch targets', () => {
   assert.match(read('cloudflare/worker.js'), /'\/404-en'/);
   assert.match(read('scripts/generate/prerender-ssg.mjs'), /renderNotFound\('en',siteUrl\)/);
   assert.match(read('src/styles/theme.css'), /\.site-footer-links a \{[^}]*min-height: 24px/);
-  assert.match(read('docs/NEXT_UPDATES.md'), /### 6\.1\.3/);
+  assert.match(read('docs/NEXT_UPDATES.md'), /### Completado en 6\.1\.3/);
 });

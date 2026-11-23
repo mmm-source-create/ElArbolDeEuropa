@@ -54,7 +54,7 @@ test('every partition cell remains attributed in every year through 1800, with m
  }
 });
 test('the medieval inventory distinguishes birth, effective government, later titles and family associations',()=>{
- const inv=earlyPeopleInventory(PERSONAS);assert.equal(inv.length,182);assert.equal(new Set(inv.map(p=>p.id)).size,182);
+ const inv=earlyPeopleInventory(PERSONAS);assert.equal(inv.length,183);assert.equal(new Set(inv.map(p=>p.id)).size,183); // 6.1.3: Leonardo of Pisa
  assert.equal(inv[0].birth,1081);const louis=inv.find(p=>p.id==='LUIS6FRA');assert(louis.governments.some(g=>g.territory==='Francia'&&g.from===1108));
  const family=inv.find(p=>p.id==='EDUVKYB');assert.equal(family.governments.length,0);assert(family.familyAssociations.includes('Habsburgo'));
  assert.equal(new Set(inv.flatMap(p=>p.governments.map(g=>g.territory))).size,69);

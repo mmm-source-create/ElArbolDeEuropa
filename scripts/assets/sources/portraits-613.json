@@ -1,0 +1,903 @@
+{
+  "COPERNICO": {
+    "commons": "File:Nikolaus Kopernikus MOT.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q619",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Nikolaus Kopernikus MOT",
+      "autor": "Autor desconocido",
+      "fecha": "hacia 1580"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Nikolaus Kopernikus MOT",
+      "autor": "Unknown artist",
+      "fecha": "c. 1580"
+    }
+  },
+  "GALILEO": {
+    "commons": "File:Galileo.arp.300pix.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q307",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Galileo Galilei label QS:Ltr,\" Galileo Galilei Portresi\" label QS:Lfr,\"Portrait de Galilée \" label QS:Lml,\"ഗലീലിയൊ\" label QS:Lpt,\"Retrato de Galileu",
+      "autor": "Justus Sustermans",
+      "fecha": "hacia 1640"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Galileo Galilei label QS:Ltr,\" Galileo Galilei Portresi\" label QS:Lfr,\"Portrait de Galilée \" label QS:Lml,\"ഗലീലിയൊ\" label QS:Lpt,\"Retrato de Galileu",
+      "autor": "Justus Sustermans",
+      "fecha": "c. 1640"
+    }
+  },
+  "KEPLER": {
+    "commons": "File:JKepler.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q8963",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "JKepler",
+      "autor": "August Köhler",
+      "fecha": "1910, copia de un retrato de 1610"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "JKepler",
+      "autor": "August Köhler",
+      "fecha": "1910, copy of a 1610 portrait"
+    }
+  },
+  "NEWTON": {
+    "commons": "File:GodfreyKneller-IsaacNewton-1689.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q935",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Isaac Newton (1642-1727) label QS:Lde,\"Porträt des Isaac Newton (1642-1727)\" label QS:Len,\"Portrait of Isaac Newton (1642-1727)\" label QS:Lfr,\"Portr",
+      "autor": "Godfrey Kneller",
+      "fecha": "1689"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Isaac Newton (1642-1727) label QS:Lde,\"Porträt des Isaac Newton (1642-1727)\" label QS:Len,\"Portrait of Isaac Newton (1642-1727)\" label QS:Lfr,\"Portr",
+      "autor": "Godfrey Kneller",
+      "fecha": "1689"
+    }
+  },
+  "FIBONACCI": {
+    "commons": "File:Fibonacci5.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q8763",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Fibonacci5",
+      "autor": "Autor desconocido",
+      "fecha": "antes de 1905"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Fibonacci5",
+      "autor": "Unknown artist",
+      "fecha": "Before 1905"
+    }
+  },
+  "DESCARTES": {
+    "commons": "File:Frans Hals - Portret van René Descartes.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q9191",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of the French philosopher and mathematician René Descartes (1596-1650) title QS:P1476,en:\"Portrait of the French philosopher and mathematician René Des",
+      "autor": "Según Frans Hals",
+      "fecha": "1649"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of the French philosopher and mathematician René Descartes (1596-1650) title QS:P1476,en:\"Portrait of the French philosopher and mathematician René Des",
+      "autor": "After Frans Hals",
+      "fecha": "1649"
+    }
+  },
+  "PASCAL": {
+    "commons": "File:FR-631136102 GRA 6025 Portrait de Blaise Pascal par Edelinck (cropped).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1290",
+    "derechos": "CC BY-SA 4.0",
+    "derechosUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Blaise Pascal. Line engraving after G. Edelinck after F. Quesnel, junior. label QS:Lfr,\"Portrait de Blaise Pascal de longueur de buste en vue de trois quarts ve",
+      "autor": "Gérard Edelinck"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Blaise Pascal. Line engraving after G. Edelinck after F. Quesnel, junior. label QS:Lfr,\"Portrait de Blaise Pascal de longueur de buste en vue de trois quarts ve",
+      "autor": "Gérard Edelinck"
+    }
+  },
+  "LEIBNIZ": {
+    "commons": "File:Christoph Bernhard Francke - Bildnis des Philosophen Leibniz (ca. 1695).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q9047",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "German: Bildnis des Philosophen Gottfried Wilhelm Freiherr von Leibniz Portrait of Gottfried Leibniz (1646-1716), German philosopher title QS:P1476,de:\"Bildnis ",
+      "autor": "Christoph Bernhard Francke",
+      "fecha": "1695"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "German: Bildnis des Philosophen Gottfried Wilhelm Freiherr von Leibniz Portrait of Gottfried Leibniz (1646-1716), German philosopher title QS:P1476,de:\"Bildnis ",
+      "autor": "Christoph Bernhard Francke",
+      "fecha": "1695"
+    }
+  },
+  "EULER": {
+    "commons": "File:Leonhard Euler 2.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q7604",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Leonhard Euler (1707-1783)",
+      "autor": "Jakob Emanuel Handmann",
+      "fecha": "siglo XVIII"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Leonhard Euler (1707-1783)",
+      "autor": "Jakob Emanuel Handmann",
+      "fecha": "18 th century"
+    }
+  },
+  "SPINOZA": {
+    "commons": "File:Spinoza.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q35802",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Benedictus de Spinoza (1632-1677) label QS:Lfr,\"Portrait de Benedictus de Spinoza (1632-1677)\" label QS:Len,\"Portrait of Benedictus de Spinoza (1632",
+      "autor": "Autor desconocido",
+      "fecha": "1665"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Benedictus de Spinoza (1632-1677) label QS:Lfr,\"Portrait de Benedictus de Spinoza (1632-1677)\" label QS:Len,\"Portrait of Benedictus de Spinoza (1632",
+      "autor": "Unknown artist",
+      "fecha": "1665"
+    }
+  },
+  "DANTE": {
+    "commons": "File:Portrait de Dante.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1067",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Dante label QS:Lit,\"Ritratto di Dante\" label QS:Lfr,\"Portrait de Dante\" label QS:Les,\"Retrato de Dante\" label QS:Len,\"Portrait of Dante\" label QS:Lh",
+      "autor": "Sandro Botticelli",
+      "fecha": "1495"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Dante label QS:Lit,\"Ritratto di Dante\" label QS:Lfr,\"Portrait de Dante\" label QS:Les,\"Retrato de Dante\" label QS:Len,\"Portrait of Dante\" label QS:Lh",
+      "autor": "Sandro Botticelli",
+      "fecha": "1495"
+    }
+  },
+  "CHAUCER": {
+    "commons": "File:Portrait of Geoffrey Chaucer (4671380) (cropped) 02.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q5683",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Geoffrey Chaucer",
+      "autor": "Autor desconocido",
+      "fecha": "siglo XIX"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Geoffrey Chaucer",
+      "autor": "Unknown artist",
+      "fecha": "19 th century"
+    }
+  },
+  "SHAKESPEARE": {
+    "commons": "File:Shakespeare.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q692",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of William Shakespeare (1564-1646) title QS:P1476,en:\"Portrait of William Shakespeare (1564-1646) \" label QS:Len,\"Portrait of William Shakespeare (1564",
+      "autor": "Atribuido a John Taylor",
+      "fecha": "1648"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of William Shakespeare (1564-1646) title QS:P1476,en:\"Portrait of William Shakespeare (1564-1646) \" label QS:Len,\"Portrait of William Shakespeare (1564",
+      "autor": "Attributed to John Taylor",
+      "fecha": "1648"
+    }
+  },
+  "SORJUANA": {
+    "commons": "File:Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q183074",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera",
+      "autor": "Fray Miguel de Herrera"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Sor Juana Inés de la Cruz, 1732 - Fray Miguel de Herrera",
+      "autor": "Fray Miguel de Herrera"
+    }
+  },
+  "VOLTAIRE": {
+    "commons": "File:Nicolas de Largillière - Portrait de Voltaire (1694-1778) en 1718 - P208 - musée Carnavalet - 5 (cropped).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q9068",
+    "derechos": "CC0 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "French: Portrait de Voltaire (1694-1778) en 1718 Voltaire the age of twenty-four (?) title QS:P1476,fr:\"Portrait de Voltaire (1694-1778) en 1718 \" label QS:Lfr,",
+      "autor": "Nicolas de Largillière",
+      "fecha": "1718–1724"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "French: Portrait de Voltaire (1694-1778) en 1718 Voltaire the age of twenty-four (?) title QS:P1476,fr:\"Portrait de Voltaire (1694-1778) en 1718 \" label QS:Lfr,",
+      "autor": "Nicolas de Largillière",
+      "fecha": "from 1718 until 1724"
+    }
+  },
+  "GOETHE": {
+    "commons": "File:Goethe (Stieler 1828).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q5879",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Johann Wolfgang von Goethe at age 79",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1828"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Johann Wolfgang von Goethe at age 79",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1828"
+    }
+  },
+  "MIGUELANGEL": {
+    "commons": "File:Michelangelo Daniele da Volterra (dettaglio).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q5592",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Michelangelo Buonarroti (1475–1564) title QS:P1476,en:\"Michelangelo Buonarroti (1475–1564) \" label QS:Len,\"Michelangelo Buonarroti (1475–1564) \" label QS:Lit,\"M",
+      "autor": "Atribuido a Daniele da Volterra",
+      "fecha": "1545"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Michelangelo Buonarroti (1475–1564) title QS:P1476,en:\"Michelangelo Buonarroti (1475–1564) \" label QS:Len,\"Michelangelo Buonarroti (1475–1564) \" label QS:Lit,\"M",
+      "autor": "Attributed to Daniele da Volterra",
+      "fecha": "1545"
+    }
+  },
+  "ROUSSEAU": {
+    "commons": "File:Jean-Jacques Rousseau (painted portrait).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q6527",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Jean-Jacques Rousseau (1712–1778)",
+      "autor": "Maurice Quentin de La Tour",
+      "fecha": "tercer cuarto del siglo XVIII"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Jean-Jacques Rousseau (1712–1778)",
+      "autor": "Maurice Quentin de La Tour",
+      "fecha": "third quarter of 18 th century"
+    }
+  },
+  "JSBACH": {
+    "commons": "File:Johann Sebastian Bach.png",
+    "encuadre": "50% 20%",
+    "qid": "Q1339",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Johann Sebastian Bach",
+      "autor": "Elias Gottlob Haussmann",
+      "fecha": "1748"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Johann Sebastian Bach",
+      "autor": "Elias Gottlob Haussmann",
+      "fecha": "1748"
+    }
+  },
+  "HANDEL": {
+    "commons": "File:George Frideric Handel by Balthasar Denner.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q7302",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Georg Friedrich Händel (1685–1759)",
+      "autor": "Atribuido a Balthasar Denner",
+      "fecha": "hacia 1726–1728"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Georg Friedrich Händel (1685–1759)",
+      "autor": "Attributed to Balthasar Denner",
+      "fecha": "c. 1726–1728"
+    }
+  },
+  "VIVALDI": {
+    "commons": "File:Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1340",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050",
+      "autor": "Autor desconocido"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Onbekend - Antonio Vivaldi - Bologna Museo Internationale e biblioteca della musica di bologna 28-04-2012 9-21-050",
+      "autor": "Unknown artist"
+    }
+  },
+  "BEETHOVEN": {
+    "commons": "File:Beethoven.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q255",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "German: Portrait Beethovens mit der Partitur zur Missa Solemnis Portrait of Ludwig van Beethoven when composing the Missa Solemnis title QS:P1476,de:\"Portrait B",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1820"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "German: Portrait Beethovens mit der Partitur zur Missa Solemnis Portrait of Ludwig van Beethoven when composing the Missa Solemnis title QS:P1476,de:\"Portrait B",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1820"
+    }
+  },
+  "MOZART": {
+    "commons": "File:Wolfgang-amadeus-mozart 1.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q254",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Wolfgang Amadeus Mozart label QS:Lru,\"Портрет Вольфганга Амадея Моцарта\" label QS:Lde,\"Bildnis von Wolfgang Amadeus Mozart\" label QS:Lsv,\"Porträtt a",
+      "autor": "Barbara Krafft",
+      "fecha": "1819"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Wolfgang Amadeus Mozart label QS:Lru,\"Портрет Вольфганга Амадея Моцарта\" label QS:Lde,\"Bildnis von Wolfgang Amadeus Mozart\" label QS:Lsv,\"Porträtt a",
+      "autor": "Barbara Krafft",
+      "fecha": "1819"
+    }
+  },
+  "HAYDN": {
+    "commons": "File:Joseph Haydn, målning av Thomas Hardy från 1792.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q7349",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Joseph Haydn",
+      "autor": "Thomas Hardy",
+      "fecha": "1791"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Joseph Haydn",
+      "autor": "Thomas Hardy",
+      "fecha": "1791"
+    }
+  },
+  "FVITORIA": {
+    "commons": "File:Burgos - Monumento a Santo Domingo de Guzmán, estatua sedente de Francisco de Vitoria.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q312384",
+    "derechos": "CC0 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "es": {
+      "tipo": "Escultura",
+      "obra": "Francisco de Vitoria",
+      "autor": "Fotografía de Zarateman",
+      "fecha": "monumento de Burgos"
+    },
+    "en": {
+      "tipo": "Sculpture",
+      "obra": "Francisco de Vitoria",
+      "autor": "Photograph by Zarateman",
+      "fecha": "monument in Burgos"
+    }
+  },
+  "AZPILCUETA": {
+    "commons": "File:Flickr - Yale Law Library - Martín de Azpilcueta (1492^-1586).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1340260",
+    "derechos": "CC BY 2.0 · Yale Law Library",
+    "derechosUrl": "https://creativecommons.org/licenses/by/2.0",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Flickr - Yale Law Library - Martín de Azpilcueta (1492^-1586)",
+      "autor": "Autor desconocido"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Flickr - Yale Law Library - Martín de Azpilcueta (1492^-1586)",
+      "autor": "Unknown artist"
+    }
+  },
+  "FSUAREZ": {
+    "commons": "File:Retrato-del-padre-francisco-suarez-valladolid-s.-xvii.png",
+    "encuadre": "50% 20%",
+    "qid": "Q316339",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Retrato-del-padre-francisco-suarez-valladolid-s.-xvii",
+      "autor": "Autor desconocido",
+      "fecha": "1700"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Retrato-del-padre-francisco-suarez-valladolid-s.-xvii",
+      "autor": "Unknown artist",
+      "fecha": "1700"
+    }
+  },
+  "JMARIANA": {
+    "commons": "File:El padre Juan de Mariana (Museo del Prado).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q939889",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "El padre Juan de Mariana",
+      "autor": "Matías Moreno",
+      "fecha": "hacia 1878"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "El padre Juan de Mariana",
+      "autor": "Matías Moreno",
+      "fecha": "c. 1878"
+    }
+  },
+  "LMOLINA": {
+    "commons": "File:Luis de Molina.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q436077",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "De Justitia et jure opera omnia, tractatibus quinque, tomisque totidem comprehensa Tomus primus [-quintus] ... − Editio novissima. Huic diligenter recognitae ac",
+      "autor": "Autor desconocido",
+      "fecha": "siglo XVII"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "De Justitia et jure opera omnia, tractatibus quinque, tomisque totidem comprehensa Tomus primus [-quintus] ... − Editio novissima. Huic diligenter recognitae ac",
+      "autor": "Autor desconocido",
+      "fecha": "17th century"
+    }
+  },
+  "FRAYLUISLEON": {
+    "commons": "File:Retrato de Fray Luis de León.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q450246",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Retrato de Fray Luis de León",
+      "autor": "Francisco Pacheco",
+      "fecha": "hacia 1599"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Retrato de Fray Luis de León",
+      "autor": "Francisco Pacheco",
+      "fecha": "c. 1599"
+    }
+  },
+  "DCOVARRUBIAS": {
+    "commons": "File:El Greco - Portrait of Diego de Covarrubias y Leiva - Google Art Project.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1220593",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Portrait of Diego de Covarrubias y Leiva (1512-1577) label QS:Les,\" El arzobispo Diego de Covarrubias \"",
+      "autor": "El Greco",
+      "fecha": "hacia 1600"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Portrait of Diego de Covarrubias y Leiva (1512-1577) label QS:Les,\" El arzobispo Diego de Covarrubias \"",
+      "autor": "El Greco",
+      "fecha": "c. 1600"
+    }
+  },
+  "WATTYLER": {
+    "commons": "File:William Blake Wat Tyler-bw.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q311820",
+    "es": {
+      "tipo": "Dibujo",
+      "obra": "William Blake Wat Tyler-bw",
+      "autor": "William Blake",
+      "fecha": "1819"
+    },
+    "en": {
+      "tipo": "Drawing",
+      "obra": "William Blake Wat Tyler-bw",
+      "autor": "William Blake",
+      "fecha": "1819"
+    }
+  },
+  "MUNTZER": {
+    "commons": "File:Thomas Muentzer.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q153981",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Thomas Muentzer",
+      "autor": "Christoph van Sichem",
+      "fecha": "siglo XVI"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Thomas Muentzer",
+      "autor": "Christoph van Sichem",
+      "fecha": "16 th century"
+    }
+  },
+  "OLIVERCROMWELL": {
+    "commons": "File:Oliver Cromwell by Samuel Cooper.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q44279",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Oliver Cromwell (copy after an original of 1656) title QS:P1476,en:\"Oliver Cromwell (copy after an original of 1656) \" label QS:Len,\"Oliver Cromwell (copy after",
+      "autor": "Según Samuel Cooper",
+      "fecha": "según una obra de 1656"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Oliver Cromwell (copy after an original of 1656) title QS:P1476,en:\"Oliver Cromwell (copy after an original of 1656) \" label QS:Len,\"Oliver Cromwell (copy after",
+      "autor": "After Samuel Cooper",
+      "fecha": "based on a work of 1656"
+    }
+  },
+  "ROBESPIERRE": {
+    "commons": "File:Robespierre.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q44197",
+    "derechos": "CC0 1.0",
+    "derechosUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "French: Portrait de Maximilien de Robespierre (1758-1794), homme politique. Portrait of Maximilien Robespierre title QS:P1476,fr:\"Portrait de Maximilien de Robe",
+      "autor": "Autor desconocido",
+      "fecha": "hacia 1790"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "French: Portrait de Maximilien de Robespierre (1758-1794), homme politique. Portrait of Maximilien Robespierre title QS:P1476,fr:\"Portrait de Maximilien de Robe",
+      "autor": "Unknown artist",
+      "fecha": "c. 1790"
+    }
+  },
+  "MARAT": {
+    "commons": "File:Jean-Paul Marat - portrait peint par Joseph Boze.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q122290",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "French: Portrait de Jean-Paul Marat (1743-1793), homme politique title QS:P1476,fr:\"Portrait de Jean-Paul Marat (1743-1793), homme politique \" label QS:Lfr,\"Por",
+      "autor": "Joseph Boze",
+      "fecha": "1793"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "French: Portrait de Jean-Paul Marat (1743-1793), homme politique title QS:P1476,fr:\"Portrait de Jean-Paul Marat (1743-1793), homme politique \" label QS:Lfr,\"Por",
+      "autor": "Joseph Boze",
+      "fecha": "1793"
+    }
+  },
+  "LAFAYETTE": {
+    "commons": "File:Marquis de Lafayette 2.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q186652",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Marie Joseph Paul Yves Roch Gilbert Motier, Marquis De Lafayette",
+      "autor": "Charles Willson Peale",
+      "fecha": "1779–1780"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Marie Joseph Paul Yves Roch Gilbert Motier, Marquis De Lafayette",
+      "autor": "Charles Willson Peale",
+      "fecha": "1779–1780"
+    }
+  },
+  "NAPOLEON1": {
+    "commons": "File:Jacques-Louis David - The Emperor Napoleon in His Study at the Tuileries - Google Art Project.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q517",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "The Emperor Napoleon in His Study at the Tuileries label QS:Len,\"The Emperor Napoleon in His Study at the Tuileries\" label QS:Lar,\"الإمبراطور ناپُليُون في مكتبه",
+      "autor": "Jacques-Louis David",
+      "fecha": "1812"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "The Emperor Napoleon in His Study at the Tuileries label QS:Len,\"The Emperor Napoleon in His Study at the Tuileries\" label QS:Lar,\"الإمبراطور ناپُليُون في مكتبه",
+      "autor": "Jacques-Louis David",
+      "fecha": "1812"
+    }
+  },
+  "MARCOPOLO": {
+    "commons": "File:Marco Polo Mosaic from Palazzo Tursi.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q6101",
+    "es": {
+      "tipo": "Mosaico",
+      "obra": "Marco Polo Mosaic from Palazzo Tursi",
+      "autor": "Salviati",
+      "fecha": "1867"
+    },
+    "en": {
+      "tipo": "Mosaic",
+      "obra": "Marco Polo Mosaic from Palazzo Tursi",
+      "autor": "Salviati",
+      "fecha": "1867"
+    }
+  },
+  "COLON": {
+    "commons": "File:Ridolfo del Ghirlandaio - Ritratto di Cristoforo Colombo (1520).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q7322",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Christopher Columbus",
+      "autor": "Ridolfo del Ghirlandaio",
+      "fecha": "hacia 1520"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Christopher Columbus",
+      "autor": "Ridolfo del Ghirlandaio",
+      "fecha": "c. 1520"
+    }
+  },
+  "MAGALLANES": {
+    "commons": "File:Retrato de Hernando de Magallanes.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q1496",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Retrato de Fernando de Magallanes",
+      "autor": "Autor desconocido",
+      "fecha": "1848"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Retrato de Fernando de Magallanes",
+      "autor": "Unknown artist",
+      "fecha": "1848"
+    }
+  },
+  "ELCANO": {
+    "commons": "File:Juan Sebastián Elcano (siglo XIX).jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q201510",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Elcano",
+      "autor": "Narciso Sentenach",
+      "fecha": "siglo XIX"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Elcano",
+      "autor": "Narciso Sentenach",
+      "fecha": "19th century"
+    }
+  },
+  "HUMBOLDT": {
+    "commons": "File:Stieler, Joseph Karl - Alexander von Humboldt - 1843.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q6694",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Alexander von Humboldt label QS:Len,\"Alexander von Humboldt\" label QS:Lde,\"Alexander von Humboldt\"",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1843"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Alexander von Humboldt label QS:Len,\"Alexander von Humboldt\" label QS:Lde,\"Alexander von Humboldt\"",
+      "autor": "Joseph Karl Stieler",
+      "fecha": "1843"
+    }
+  },
+  "HERNANCORTES": {
+    "commons": "File:Retrato de Hernán Cortés.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q7326",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Hernán Cortés",
+      "autor": "Autor desconocido",
+      "fecha": "siglo XVIII"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Hernán Cortés",
+      "autor": "Unknown artist",
+      "fecha": "18 th century"
+    }
+  },
+  "FPIZARRO": {
+    "commons": "File:Portrait of Francisco Pizarro.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q44741",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "French: François Pizarre, conquistador (1475-1541) Francisco Pizarro, conqueror (1475–1541) title QS:P1476,fr:\"François Pizarre, conquistador (1475-1541) \" labe",
+      "autor": "Amable-Paul Coutan",
+      "fecha": "1834–1835"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "French: François Pizarre, conquistador (1475-1541) Francisco Pizarro, conqueror (1475–1541) title QS:P1476,fr:\"François Pizarre, conquistador (1475-1541) \" labe",
+      "autor": "Amable-Paul Coutan",
+      "fecha": "1834–1835"
+    }
+  },
+  "NUNEZBALBOA": {
+    "commons": "File:Retrato de Vasco Nuñez de Balboa (1475-1517) - Anónimo.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q19080",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Vasco Nuñez de Balboa (1475-1517)",
+      "autor": "Autor desconocido",
+      "fecha": "siglo XIX"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Vasco Nuñez de Balboa (1475-1517)",
+      "autor": "Unknown artist",
+      "fecha": "19 th century"
+    }
+  },
+  "DALMAGRO": {
+    "commons": "File:Diego de Almagro.JPG",
+    "encuadre": "50% 20%",
+    "qid": "Q207668",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Diego de Almagro label QS:Len,\"Diego de Almagro\"",
+      "autor": "Domingo Mesa",
+      "fecha": "1873"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Diego de Almagro label QS:Len,\"Diego de Almagro\"",
+      "autor": "Domingo Mesa",
+      "fecha": "1873"
+    }
+  },
+  "PVALDIVIA": {
+    "commons": "File:Pedro de Valdivia.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q203534",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Pedro de Valdivia",
+      "autor": "Federico de Madrazo y Kuntz",
+      "fecha": "1854"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Pedro de Valdivia",
+      "autor": "Federico de Madrazo y Kuntz",
+      "fecha": "1854"
+    }
+  },
+  "JIMENEZQUESADA": {
+    "commons": "File:Gonzalo Jimenez de Quesada.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q347688",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Gonzalo Jimenez de Quesada",
+      "autor": "Autor desconocido",
+      "fecha": "siglo XIX"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Gonzalo Jimenez de Quesada",
+      "autor": "Unknown artist",
+      "fecha": "19 th century"
+    }
+  },
+  "SANTOTOMAS": {
+    "commons": "File:St-thomas-aquinasFXD.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q9438",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Saint Thomas Aquinas title QS:P1476,en:\"Saint Thomas Aquinas \" label QS:Len,\"Saint Thomas Aquinas \" label QS:Lde,\"Altar von San Domenico in Ascoli, Polyptychon,",
+      "autor": "Carlo Crivelli",
+      "fecha": "1476"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Saint Thomas Aquinas title QS:P1476,en:\"Saint Thomas Aquinas \" label QS:Len,\"Saint Thomas Aquinas \" label QS:Lde,\"Altar von San Domenico in Ascoli, Polyptychon,",
+      "autor": "Carlo Crivelli",
+      "fecha": "1476"
+    }
+  },
+  "GUTENBERG": {
+    "commons": "File:Gutenberg.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q8958",
+    "es": {
+      "tipo": "Grabado",
+      "obra": "Gutenberg",
+      "autor": "Autor desconocido"
+    },
+    "en": {
+      "tipo": "Engraving",
+      "obra": "Gutenberg",
+      "autor": "Unknown artist"
+    }
+  },
+  "DOMINGOSOTO": {
+    "commons": "File:DOMINGO DE SOTO016 (3x4 cropped).JPG",
+    "encuadre": "50% 20%",
+    "qid": "Q1237514",
+    "derechos": "CC BY-SA 4.0",
+    "derechosUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "es": {
+      "tipo": "Escultura",
+      "obra": "DOMINGO DE SOTO016",
+      "autor": "Fotografía de Vicente Alcober Bosch",
+      "fecha": "escultura de Segovia"
+    },
+    "en": {
+      "tipo": "Sculpture",
+      "obra": "DOMINGO DE SOTO016",
+      "autor": "Photograph by Vicente Alcober Bosch",
+      "fecha": "sculpture in Segovia"
+    }
+  },
+  "JANHUS": {
+    "commons": "File:Jan hus 1.jpg",
+    "encuadre": "50% 20%",
+    "qid": "Q43977",
+    "es": {
+      "tipo": "Retrato",
+      "obra": "Jan hus 1",
+      "autor": "Autor desconocido"
+    },
+    "en": {
+      "tipo": "Portrait",
+      "obra": "Jan hus 1",
+      "autor": "Unknown artist"
+    }
+  }
+}

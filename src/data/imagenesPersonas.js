@@ -3,6 +3,7 @@ import {PORTRAITS_607} from './imagenesPersonas607.js';
 import {PORTRAITS_608} from './imagenesPersonas608.js';
 import {PORTRAITS_609} from './imagenesPersonas609.js';
 import {PORTRAITS_615} from './imagenesPersonas615.js';
+import {PORTRAITS_613} from './imagenesPersonas613.js';
 import {PORTRAITS_604} from './imagenesPersonas604.js';
 import {PORTRAITS_602} from './imagenesPersonas602.js';
 import {PORTRAITS_200_IMAGES} from './imagenesPersonasTanda200.js';
@@ -3120,6 +3121,7 @@ export const IMAGENES_PERSONAS = {
   ...PORTRAITS_608,
   ...PORTRAITS_609,
   ...PORTRAITS_615,
+  ...PORTRAITS_613,
 };
 
 export default IMAGENES_PERSONAS;

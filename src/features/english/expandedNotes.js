@@ -1,4 +1,7 @@
 export const EXPANDED_NOTES = {
+  // 6.1.3
+  "Primer cónsul desde el golpe del 18 de brumario (9–10 de noviembre de 1799); cónsul vitalicio en 1802. El 18 de mayo de 1804 fue proclamado emperador de los franceses, fuera del periodo del Atlas.": "First Consul from the coup of 18 Brumaire (9–10 November 1799); consul for life in 1802. On 18 May 1804 he was proclaimed Emperor of the French, outside the Atlas period.",
+  "Lord Protector de la Mancomunidad de Inglaterra, Escocia e Irlanda desde el 16 de diciembre de 1653 hasta su muerte, el 3 de septiembre de 1658. No fue rey: rechazó la corona en 1657.": "Lord Protector of the Commonwealth of England, Scotland and Ireland from 16 December 1653 until his death on 3 September 1658. He was not king: he refused the crown in 1657.",
   // 6.1.2
   "Los reyes de Bohemia gobernaron Moravia directamente entre 1283 y 1334, sin otorgarla a un margrave propio.": "The kings of Bohemia ruled Moravia directly between 1283 and 1334, without granting it to a margrave of its own.",
   "Corona de Castilla desde 1230; el mapa conserva las denominaciones de Castilla y León.": "Crown of Castile from 1230; the map retains the names Castile and León.",

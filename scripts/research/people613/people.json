@@ -1,0 +1,981 @@
+[
+ {
+  "id": "COPERNICO",
+  "es": "Nicolás Copérnico",
+  "en": "Nicolaus Copernicus",
+  "q": "Nicolaus Copernicus",
+  "nac": 1473,
+  "muer": 1543,
+  "titulo": "Astrónomo / Canónigo",
+  "role": "Astronomer and canon",
+  "reinos": [
+   "Polonia",
+   "Prusia Real"
+  ],
+  "aliases": [
+   "Mikołaj Kopernik",
+   "Copernicus"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "GALILEO",
+  "es": "Galileo Galilei",
+  "en": "Galileo Galilei",
+  "q": "Galileo Galilei",
+  "nac": 1564,
+  "muer": 1642,
+  "titulo": "Astrónomo / Físico",
+  "role": "Astronomer and physicist",
+  "reinos": [
+   "Toscana",
+   "Venecia"
+  ],
+  "aliases": [
+   "Galileo"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "KEPLER",
+  "es": "Johannes Kepler",
+  "en": "Johannes Kepler",
+  "q": "Johannes Kepler",
+  "nac": 1571,
+  "muer": 1630,
+  "titulo": "Astrónomo / Matemático",
+  "role": "Astronomer and mathematician",
+  "reinos": [
+   "Sacro Imperio",
+   "Bohemia",
+   "Austria"
+  ],
+  "aliases": [
+   "Juan Kepler"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "NEWTON",
+  "es": "Isaac Newton",
+  "en": "Isaac Newton",
+  "q": "Isaac Newton",
+  "nac": 1643,
+  "muer": 1727,
+  "titulo": "Físico / Matemático",
+  "role": "Physicist and mathematician",
+  "reinos": [
+   "Inglaterra",
+   "Gran Bretaña"
+  ],
+  "aliases": [
+   "Sir Isaac Newton"
+  ],
+  "grupo": "ciencia",
+  "nota": "Nació el 25 de diciembre de 1642 según el calendario juliano, entonces vigente en Inglaterra; el 4 de enero de 1643 en el gregoriano."
+ },
+ {
+  "id": "FIBONACCI",
+  "es": "Leonardo de Pisa",
+  "en": "Leonardo of Pisa",
+  "q": "Fibonacci",
+  "nac": 1170,
+  "nacAprox": true,
+  "muer": 1250,
+  "muerAprox": true,
+  "titulo": "Matemático",
+  "role": "Mathematician",
+  "reinos": [
+   "Toscana"
+  ],
+  "aliases": [
+   "Fibonacci",
+   "Leonardo Pisano",
+   "Leonardo Fibonacci"
+  ],
+  "grupo": "ciencia",
+  "qid": "Q8763"
+ },
+ {
+  "id": "DESCARTES",
+  "es": "René Descartes",
+  "en": "René Descartes",
+  "q": "René Descartes",
+  "nac": 1596,
+  "muer": 1650,
+  "titulo": "Filósofo / Matemático",
+  "role": "Philosopher and mathematician",
+  "reinos": [
+   "Francia",
+   "Provincias Unidas",
+   "Suecia"
+  ],
+  "aliases": [
+   "Renato Descartes",
+   "Cartesius"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "PASCAL",
+  "es": "Blaise Pascal",
+  "en": "Blaise Pascal",
+  "q": "Blaise Pascal",
+  "nac": 1623,
+  "muer": 1662,
+  "titulo": "Matemático / Filósofo",
+  "role": "Mathematician and philosopher",
+  "reinos": [
+   "Francia"
+  ],
+  "aliases": [
+   "Pascal"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "LEIBNIZ",
+  "es": "Gottfried Wilhelm Leibniz",
+  "en": "Gottfried Wilhelm Leibniz",
+  "q": "Gottfried Wilhelm Leibniz",
+  "nac": 1646,
+  "muer": 1716,
+  "titulo": "Filósofo / Matemático",
+  "role": "Philosopher and mathematician",
+  "reinos": [
+   "Sajonia",
+   "Hannover"
+  ],
+  "aliases": [
+   "Leibniz",
+   "Godofredo Guillermo Leibniz"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "EULER",
+  "es": "Leonhard Euler",
+  "en": "Leonhard Euler",
+  "q": "Leonhard Euler",
+  "nac": 1707,
+  "muer": 1783,
+  "titulo": "Matemático",
+  "role": "Mathematician",
+  "reinos": [
+   "Confederación Suiza",
+   "Rusia",
+   "Prusia"
+  ],
+  "aliases": [
+   "Leonard Euler",
+   "Leonardo Euler"
+  ],
+  "grupo": "ciencia"
+ },
+ {
+  "id": "SPINOZA",
+  "es": "Baruch Spinoza",
+  "en": "Baruch Spinoza",
+  "q": "Baruch Spinoza",
+  "nac": 1632,
+  "muer": 1677,
+  "titulo": "Filósofo",
+  "role": "Philosopher",
+  "reinos": [
+   "Provincias Unidas"
+  ],
+  "aliases": [
+   "Benedictus de Spinoza",
+   "Bento de Espinosa",
+   "Spinoza"
+  ],
+  "grupo": "pensamiento"
+ },
+ {
+  "id": "DANTE",
+  "es": "Dante Alighieri",
+  "en": "Dante Alighieri",
+  "q": "Dante Alighieri",
+  "nac": 1265,
+  "muer": 1321,
+  "titulo": "Poeta",
+  "role": "Poet",
+  "reinos": [
+   "Florencia"
+  ],
+  "aliases": [
+   "Dante"
+  ],
+  "grupo": "letras"
+ },
+ {
+  "id": "CHAUCER",
+  "es": "Geoffrey Chaucer",
+  "en": "Geoffrey Chaucer",
+  "q": "Geoffrey Chaucer",
+  "nac": 1343,
+  "nacAprox": true,
+  "muer": 1400,
+  "titulo": "Poeta",
+  "role": "Poet",
+  "reinos": [
+   "Inglaterra"
+  ],
+  "aliases": [
+   "Chaucer"
+  ],
+  "grupo": "letras"
+ },
+ {
+  "id": "SHAKESPEARE",
+  "es": "William Shakespeare",
+  "en": "William Shakespeare",
+  "q": "William Shakespeare",
+  "nac": 1564,
+  "muer": 1616,
+  "titulo": "Dramaturgo / Poeta",
+  "role": "Playwright and poet",
+  "reinos": [
+   "Inglaterra"
+  ],
+  "aliases": [
+   "Guillermo Shakespeare",
+   "Shakespeare"
+  ],
+  "grupo": "letras"
+ },
+ {
+  "id": "SORJUANA",
+  "es": "Sor Juana Inés de la Cruz",
+  "en": "Juana Inés de la Cruz",
+  "q": "Juana Inés de la Cruz",
+  "nac": 1648,
+  "muer": 1695,
+  "titulo": "Poeta / Religiosa",
+  "role": "Poet and nun",
+  "reinos": [
+   "España"
+  ],
+  "aliases": [
+   "Juana Inés de Asbaje",
+   "Juana de Asbaje y Ramírez",
+   "Sor Juana"
+  ],
+  "grupo": "letras",
+  "nota": "El año de nacimiento se discute: una fe de bautismo de 1648 se le atribuye; su primer biógrafo, Diego Calleja, dio 1651."
+ },
+ {
+  "id": "VOLTAIRE",
+  "es": "Voltaire",
+  "en": "Voltaire",
+  "q": "Voltaire",
+  "nac": 1694,
+  "muer": 1778,
+  "titulo": "Escritor / Filósofo",
+  "role": "Writer and philosopher",
+  "reinos": [
+   "Francia",
+   "Prusia",
+   "Ginebra"
+  ],
+  "aliases": [
+   "François-Marie Arouet",
+   "Francisco María Arouet"
+  ],
+  "grupo": "letras"
+ },
+ {
+  "id": "GOETHE",
+  "es": "Johann Wolfgang von Goethe",
+  "en": "Johann Wolfgang von Goethe",
+  "q": "Johann Wolfgang von Goethe",
+  "nac": 1749,
+  "muer": 1832,
+  "titulo": "Escritor / Ministro",
+  "role": "Writer and minister",
+  "reinos": [
+   "Sajonia-Weimar",
+   "Sacro Imperio"
+  ],
+  "aliases": [
+   "Goethe",
+   "Juan Wolfgang von Goethe"
+  ],
+  "grupo": "letras"
+ },
+ {
+  "id": "MIGUELANGEL",
+  "es": "Miguel Ángel Buonarroti",
+  "en": "Michelangelo Buonarroti",
+  "q": "Michelangelo",
+  "nac": 1475,
+  "muer": 1564,
+  "titulo": "Escultor / Pintor / Arquitecto",
+  "role": "Sculptor, painter and architect",
+  "reinos": [
+   "Florencia",
+   "Estados Pontificios"
+  ],
+  "aliases": [
+   "Michelangelo",
+   "Miguel Ángel",
+   "Michelangelo Buonarroti"
+  ],
+  "grupo": "arte"
+ },
+ {
+  "id": "ROUSSEAU",
+  "es": "Jean-Jacques Rousseau",
+  "en": "Jean-Jacques Rousseau",
+  "q": "Jean-Jacques Rousseau",
+  "nac": 1712,
+  "muer": 1778,
+  "titulo": "Filósofo / Escritor",
+  "role": "Philosopher and writer",
+  "reinos": [
+   "Ginebra",
+   "Francia"
+  ],
+  "aliases": [
+   "Juan Jacobo Rousseau",
+   "Rousseau"
+  ],
+  "grupo": "pensamiento"
+ },
+ {
+  "id": "JSBACH",
+  "es": "Johann Sebastian Bach",
+  "en": "Johann Sebastian Bach",
+  "q": "Johann Sebastian Bach",
+  "nac": 1685,
+  "muer": 1750,
+  "titulo": "Compositor / Organista",
+  "role": "Composer and organist",
+  "reinos": [
+   "Sajonia",
+   "Sajonia-Weimar"
+  ],
+  "aliases": [
+   "Juan Sebastián Bach",
+   "Bach",
+   "J. S. Bach"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "HANDEL",
+  "es": "Georg Friedrich Händel",
+  "en": "George Frideric Handel",
+  "q": "George Frideric Handel",
+  "nac": 1685,
+  "muer": 1759,
+  "titulo": "Compositor",
+  "role": "Composer",
+  "reinos": [
+   "Brandeburgo",
+   "Gran Bretaña"
+  ],
+  "aliases": [
+   "Haendel",
+   "Handel",
+   "Jorge Federico Händel"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "VIVALDI",
+  "es": "Antonio Vivaldi",
+  "en": "Antonio Vivaldi",
+  "q": "Antonio Vivaldi",
+  "nac": 1678,
+  "muer": 1741,
+  "titulo": "Compositor / Sacerdote",
+  "role": "Composer and priest",
+  "reinos": [
+   "Venecia"
+  ],
+  "aliases": [
+   "Il Prete Rosso",
+   "el cura pelirrojo"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "BEETHOVEN",
+  "es": "Ludwig van Beethoven",
+  "en": "Ludwig van Beethoven",
+  "q": "Ludwig van Beethoven",
+  "nac": 1770,
+  "muer": 1827,
+  "titulo": "Compositor / Pianista",
+  "role": "Composer and pianist",
+  "reinos": [
+   "Colonia · ciudad y arzobispo",
+   "Austria"
+  ],
+  "aliases": [
+   "Beethoven"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "MOZART",
+  "es": "Wolfgang Amadeus Mozart",
+  "en": "Wolfgang Amadeus Mozart",
+  "q": "Wolfgang Amadeus Mozart",
+  "nac": 1756,
+  "muer": 1791,
+  "titulo": "Compositor",
+  "role": "Composer",
+  "reinos": [
+   "Sacro Imperio",
+   "Austria"
+  ],
+  "aliases": [
+   "Mozart",
+   "Wolfgang Amadé Mozart"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "HAYDN",
+  "es": "Joseph Haydn",
+  "en": "Joseph Haydn",
+  "q": "Joseph Haydn",
+  "nac": 1732,
+  "muer": 1809,
+  "titulo": "Compositor",
+  "role": "Composer",
+  "reinos": [
+   "Austria",
+   "Hungría"
+  ],
+  "aliases": [
+   "Franz Joseph Haydn",
+   "Haydn"
+  ],
+  "grupo": "musica"
+ },
+ {
+  "id": "FVITORIA",
+  "es": "Francisco de Vitoria",
+  "en": "Francisco de Vitoria",
+  "q": "Francisco de Vitoria",
+  "nac": 1483,
+  "nacAprox": true,
+  "muer": 1546,
+  "titulo": "Teólogo / Jurista",
+  "role": "Theologian and jurist",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Francisco de Victoria"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "AZPILCUETA",
+  "es": "Martín de Azpilcueta",
+  "en": "Martín de Azpilcueta",
+  "q": "Martín de Azpilcueta",
+  "nac": 1492,
+  "muer": 1586,
+  "titulo": "Canonista / Economista",
+  "role": "Canon lawyer and economist",
+  "reinos": [
+   "Navarra",
+   "Castilla",
+   "Portugal"
+  ],
+  "aliases": [
+   "Doctor Navarro",
+   "Navarrus"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "FSUAREZ",
+  "es": "Francisco Suárez",
+  "en": "Francisco Suárez",
+  "q": "Francisco Suárez",
+  "nac": 1548,
+  "muer": 1617,
+  "titulo": "Teólogo / Filósofo",
+  "role": "Theologian and philosopher",
+  "reinos": [
+   "Castilla",
+   "Portugal"
+  ],
+  "aliases": [
+   "Doctor Eximius"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "JMARIANA",
+  "es": "Juan de Mariana",
+  "en": "Juan de Mariana",
+  "q": "Juan de Mariana",
+  "nac": 1536,
+  "muer": 1624,
+  "titulo": "Historiador / Teólogo",
+  "role": "Historian and theologian",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Padre Mariana"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "LMOLINA",
+  "es": "Luis de Molina",
+  "en": "Luis de Molina",
+  "q": "Luis de Molina",
+  "nac": 1535,
+  "muer": 1600,
+  "titulo": "Teólogo / Jurista",
+  "role": "Theologian and jurist",
+  "reinos": [
+   "Castilla",
+   "Portugal"
+  ],
+  "aliases": [
+   "Ludovicus Molina"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "FRAYLUISLEON",
+  "es": "Fray Luis de León",
+  "en": "Luis de León",
+  "q": "Luis de León",
+  "nac": 1527,
+  "muer": 1591,
+  "titulo": "Poeta / Teólogo",
+  "role": "Poet and theologian",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Luis de León",
+   "Fray Luis"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "DCOVARRUBIAS",
+  "es": "Diego de Covarrubias",
+  "en": "Diego de Covarrubias",
+  "q": "Diego de Covarrubias y Leyva",
+  "nac": 1512,
+  "muer": 1577,
+  "titulo": "Jurista / Obispo",
+  "role": "Jurist and bishop",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Diego de Covarrubias y Leyva"
+  ],
+  "grupo": "salamanca"
+ },
+ {
+  "id": "WATTYLER",
+  "es": "Wat Tyler",
+  "en": "Wat Tyler",
+  "q": "Wat Tyler",
+  "muer": 1381,
+  "titulo": "Líder rebelde",
+  "role": "Rebel leader",
+  "reinos": [
+   "Inglaterra"
+  ],
+  "aliases": [
+   "Walter Tyler"
+  ],
+  "grupo": "revolucion"
+ },
+ {
+  "id": "MUNTZER",
+  "es": "Thomas Müntzer",
+  "en": "Thomas Müntzer",
+  "q": "Thomas Müntzer",
+  "nac": 1489,
+  "nacAprox": true,
+  "muer": 1525,
+  "titulo": "Predicador / Líder rebelde",
+  "role": "Preacher and rebel leader",
+  "reinos": [
+   "Turingia",
+   "Sajonia"
+  ],
+  "aliases": [
+   "Tomás Müntzer",
+   "Thomas Münzer"
+  ],
+  "grupo": "revolucion"
+ },
+ {
+  "id": "OLIVERCROMWELL",
+  "es": "Oliver Cromwell",
+  "en": "Oliver Cromwell",
+  "q": "Oliver Cromwell",
+  "nac": 1599,
+  "muer": 1658,
+  "titulo": "Lord Protector",
+  "role": "Lord Protector",
+  "reinos": [
+   "Inglaterra",
+   "Escocia",
+   "Irlanda"
+  ],
+  "aliases": [
+   "Cromwell"
+  ],
+  "grupo": "revolucion",
+  "gobiernos": [
+   {
+    "territorio": "Inglaterra",
+    "titulo": "Lord Protector",
+    "clase": "gobierno",
+    "condicion": "efectivo",
+    "desde": 1653,
+    "hasta": 1658,
+    "nota": "Lord Protector de la Mancomunidad de Inglaterra, Escocia e Irlanda desde el 16 de diciembre de 1653 hasta su muerte, el 3 de septiembre de 1658. No fue rey: rechazó la corona en 1657."
+   }
+  ]
+ },
+ {
+  "id": "ROBESPIERRE",
+  "es": "Maximilien Robespierre",
+  "en": "Maximilien Robespierre",
+  "q": "Maximilien Robespierre",
+  "nac": 1758,
+  "muer": 1794,
+  "titulo": "Abogado / Diputado",
+  "role": "Lawyer and deputy",
+  "reinos": [
+   "Francia"
+  ],
+  "aliases": [
+   "Maximilien de Robespierre",
+   "Maximiliano Robespierre",
+   "el Incorruptible"
+  ],
+  "grupo": "revolucion"
+ },
+ {
+  "id": "MARAT",
+  "es": "Jean-Paul Marat",
+  "en": "Jean-Paul Marat",
+  "q": "Jean-Paul Marat",
+  "nac": 1743,
+  "muer": 1793,
+  "titulo": "Médico / Periodista / Diputado",
+  "role": "Physician, journalist and deputy",
+  "reinos": [
+   "Francia"
+  ],
+  "aliases": [
+   "Juan Pablo Marat",
+   "Marat"
+  ],
+  "grupo": "revolucion"
+ },
+ {
+  "id": "LAFAYETTE",
+  "es": "Marqués de La Fayette",
+  "en": "Marquis de Lafayette",
+  "q": "Gilbert du Motier, Marquis de Lafayette",
+  "nac": 1757,
+  "muer": 1834,
+  "titulo": "Militar / Marqués",
+  "role": "Soldier and marquis",
+  "reinos": [
+   "Francia"
+  ],
+  "aliases": [
+   "Gilbert du Motier",
+   "La Fayette",
+   "Lafayette"
+  ],
+  "grupo": "revolucion"
+ },
+ {
+  "id": "NAPOLEON1",
+  "es": "Napoleón Bonaparte",
+  "en": "Napoleon Bonaparte",
+  "q": "Napoleon",
+  "nac": 1769,
+  "muer": 1821,
+  "titulo": "Primer cónsul / Emperador de los franceses",
+  "role": "First Consul, Emperor of the French",
+  "reinos": [
+   "República francesa",
+   "Francia"
+  ],
+  "aliases": [
+   "Napoleón I",
+   "Napoleone Buonaparte",
+   "Napoleon I"
+  ],
+  "grupo": "revolucion",
+  "gobiernos": [
+   {
+    "territorio": "República francesa",
+    "titulo": "Primer cónsul",
+    "clase": "gobierno",
+    "condicion": "efectivo",
+    "desde": 1799,
+    "hasta": 1804,
+    "nota": "Primer cónsul desde el golpe del 18 de brumario (9–10 de noviembre de 1799); cónsul vitalicio en 1802. El 18 de mayo de 1804 fue proclamado emperador de los franceses, fuera del periodo del Atlas."
+   }
+  ]
+ },
+ {
+  "id": "MARCOPOLO",
+  "es": "Marco Polo",
+  "en": "Marco Polo",
+  "q": "Marco Polo",
+  "nac": 1254,
+  "muer": 1324,
+  "titulo": "Mercader / Viajero",
+  "role": "Merchant and traveller",
+  "reinos": [
+   "Venecia"
+  ],
+  "aliases": [
+   "Il Milione"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "COLON",
+  "es": "Cristóbal Colón",
+  "en": "Christopher Columbus",
+  "q": "Christopher Columbus",
+  "nac": 1451,
+  "nacAprox": true,
+  "muer": 1506,
+  "titulo": "Navegante / Almirante",
+  "role": "Navigator and admiral",
+  "reinos": [
+   "Génova",
+   "Castilla"
+  ],
+  "aliases": [
+   "Cristoforo Colombo",
+   "Christopher Columbus",
+   "Almirante de la Mar Océana"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "MAGALLANES",
+  "es": "Fernando de Magallanes",
+  "en": "Ferdinand Magellan",
+  "q": "Ferdinand Magellan",
+  "nac": 1480,
+  "nacAprox": true,
+  "muer": 1521,
+  "titulo": "Navegante",
+  "role": "Navigator",
+  "reinos": [
+   "Portugal",
+   "Castilla"
+  ],
+  "aliases": [
+   "Fernão de Magalhães",
+   "Ferdinand Magellan"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "ELCANO",
+  "es": "Juan Sebastián Elcano",
+  "en": "Juan Sebastián Elcano",
+  "q": "Juan Sebastián Elcano",
+  "nac": 1486,
+  "nacAprox": true,
+  "muer": 1526,
+  "titulo": "Navegante",
+  "role": "Navigator",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Juan Sebastián de Elcano",
+   "Juan Sebastián del Cano"
+  ],
+  "grupo": "exploracion",
+  "qid": "Q201510"
+ },
+ {
+  "id": "CABEZADEVACA",
+  "es": "Álvar Núñez Cabeza de Vaca",
+  "en": "Álvar Núñez Cabeza de Vaca",
+  "q": "Álvar Núñez Cabeza de Vaca",
+  "nac": 1490,
+  "nacAprox": true,
+  "muer": 1559,
+  "muerAprox": true,
+  "titulo": "Explorador / Gobernador",
+  "role": "Explorer and governor",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Cabeza de Vaca"
+  ],
+  "grupo": "exploracion",
+  "qid": "Q250763"
+ },
+ {
+  "id": "ORELLANA",
+  "es": "Francisco de Orellana",
+  "en": "Francisco de Orellana",
+  "q": "Francisco de Orellana",
+  "nac": 1511,
+  "nacAprox": true,
+  "muer": 1546,
+  "titulo": "Explorador",
+  "role": "Explorer",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Orellana"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "HUMBOLDT",
+  "es": "Alexander von Humboldt",
+  "en": "Alexander von Humboldt",
+  "q": "Alexander von Humboldt",
+  "nac": 1769,
+  "muer": 1859,
+  "titulo": "Naturalista / Explorador",
+  "role": "Naturalist and explorer",
+  "reinos": [
+   "Prusia",
+   "Brandeburgo"
+  ],
+  "aliases": [
+   "Alejandro de Humboldt",
+   "Humboldt"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "HERNANCORTES",
+  "es": "Hernán Cortés",
+  "en": "Hernán Cortés",
+  "q": "Hernán Cortés",
+  "nac": 1485,
+  "muer": 1547,
+  "titulo": "Conquistador / Gobernador",
+  "role": "Conquistador and governor",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Fernando Cortés",
+   "Marqués del Valle de Oaxaca"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "FPIZARRO",
+  "es": "Francisco Pizarro",
+  "en": "Francisco Pizarro",
+  "q": "Francisco Pizarro",
+  "nac": 1478,
+  "nacAprox": true,
+  "muer": 1541,
+  "titulo": "Conquistador / Gobernador",
+  "role": "Conquistador and governor",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Pizarro",
+   "Marqués de la Conquista"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "NUNEZBALBOA",
+  "es": "Vasco Núñez de Balboa",
+  "en": "Vasco Núñez de Balboa",
+  "q": "Vasco Núñez de Balboa",
+  "nac": 1475,
+  "nacAprox": true,
+  "muer": 1519,
+  "titulo": "Explorador / Gobernador",
+  "role": "Explorer and governor",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Balboa"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "DALMAGRO",
+  "es": "Diego de Almagro",
+  "en": "Diego de Almagro",
+  "q": "Diego de Almagro",
+  "nac": 1475,
+  "nacAprox": true,
+  "muer": 1538,
+  "titulo": "Conquistador / Adelantado",
+  "role": "Conquistador and adelantado",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Almagro el Viejo"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "PVALDIVIA",
+  "es": "Pedro de Valdivia",
+  "en": "Pedro de Valdivia",
+  "q": "Pedro de Valdivia",
+  "nac": 1497,
+  "muer": 1553,
+  "titulo": "Conquistador / Gobernador",
+  "role": "Conquistador and governor",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Valdivia"
+  ],
+  "grupo": "exploracion"
+ },
+ {
+  "id": "JIMENEZQUESADA",
+  "es": "Gonzalo Jiménez de Quesada",
+  "en": "Gonzalo Jiménez de Quesada",
+  "q": "Gonzalo Jiménez de Quesada",
+  "nac": 1509,
+  "nacAprox": true,
+  "muer": 1579,
+  "titulo": "Conquistador / Adelantado",
+  "role": "Conquistador and adelantado",
+  "reinos": [
+   "Castilla"
+  ],
+  "aliases": [
+   "Jiménez de Quesada"
+  ],
+  "grupo": "exploracion"
+ }
+]
