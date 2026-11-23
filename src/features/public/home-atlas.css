@@ -1,7 +1,7 @@
 /* 6.0.10 · Home page: the map of Europe opens the page. */
 .public-home.home-atlas{max-width:1240px}
 .home-atlas-hero{position:relative;display:grid;grid-template-columns:minmax(0,560px) 1fr;grid-template-rows:1fr auto;gap:28px 32px;min-height:680px;padding:56px 0 30px;isolation:isolate}
-.home-atlas-map{position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);overflow:hidden;background:var(--home-map-light,url(/home/mapa-1500-claro.webp)) calc(50% + 22vw) 30%/auto 118% no-repeat;transition:background-image .35s ease}
+.home-atlas-map{position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);overflow:hidden;background:var(--home-map-light,url(/home/mapa-1500-claro.webp)) calc(50% + 22vw) 30%/auto 800px no-repeat;transition:background-image .35s ease}
 /* The gradient lies on the map itself: paper on the left, under the copy, and at the bottom. */
 .home-atlas-map::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--eade-paper) 0%,var(--eade-paper) calc(50% - 300px),color-mix(in srgb,var(--eade-paper) 80%,transparent) calc(50% - 120px),color-mix(in srgb,var(--eade-paper) 20%,transparent) calc(50% + 60px),transparent calc(50% + 200px)),linear-gradient(180deg,transparent 70%,var(--eade-paper) 100%)}
 .home-atlas-map-year{position:absolute;right:calc(50% - 600px);bottom:110px;color:color-mix(in srgb,var(--eade-ink) 22%,transparent);font:500 clamp(64px,8vw,112px)/1 var(--eade-serif);letter-spacing:-.04em;pointer-events:none}
@@ -36,7 +36,7 @@
 .home-atlas-years>div button:hover{border-color:var(--eade-wine);color:var(--eade-wine)}
 .home-atlas-years>div button[aria-pressed="true"]{background:var(--eade-wine-fill);border-color:var(--eade-wine-fill);color:#fff}
 .public-home .home-atlas-stats{max-width:none;margin:8px 0 0;border-top:1px solid var(--eade-border);border-bottom:1px solid var(--eade-border)}
-.home-atlas-open{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 18px;border-radius:999px;background:var(--eade-wine-fill);color:#fff!important;font:650 13px/1 var(--eade-sans);text-decoration:none!important;white-space:nowrap}
+.home-atlas-open{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:190px;min-height:40px;padding:0 18px;border-radius:999px;background:var(--eade-wine-fill);color:#fff!important;font:650 13px/1 var(--eade-sans);text-decoration:none!important;white-space:nowrap}
 .home-atlas-open:hover{background:var(--eade-wine-fill-hover)}
 /* Person of the day */
 .home-daily{display:grid;grid-template-columns:340px 1fr;gap:40px;align-items:center;padding:48px 0 30px!important;border-top:0!important}
@@ -78,3 +78,6 @@
 
 /* 6.1.0: on phones the map was a 240 px decorative band and the slowest element of the first view. Hidden, it is not downloaded. */
 @media (max-width:650px){.home-atlas-map{display:none}}
+
+/* 6.1.2: the year inside the button changes; its width must not. Figures of equal width and a fixed minimum. */
+.home-atlas-open,.home-atlas-years>div button,.home-atlas-rulers h2,.home-atlas-map-year{font-variant-numeric:tabular-nums}

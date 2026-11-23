@@ -32,9 +32,6 @@ export const FRONTERAS_V272 = Object.freeze({
   "GIORGI5GEO": {
     "biografia": "Reforzó la autoridad real y reunió territorios fragmentados durante el dominio mongol. La recuperación fue gradual: las fuentes numismáticas matizan la imagen de una ruptura completa e inmediata con el Iljanato. Mantuvo relaciones con mercaderes italianos y con los poderes del Mediterráneo oriental."
   },
-  "MICHAEL8PALA": {
-    "biografia": "Recuperó Constantinopla en 1261 y fundó la última dinastía imperial bizantina. Combinó diplomacia e intervención militar para contener a Carlos de Anjou; los matrimonios de sus hijos enlazaron su casa con las potencias del mar Negro."
-  },
   "EUDOKIAPALEOTREB": {
     "biografia": "Hija de Miguel VIII y hermana de Andrónico II, su matrimonio con Juan II acercó las cortes de Constantinopla y Trebisonda. Respaldó el matrimonio georgiano de su hijo Alejo II, enlazando a los Paleólogos con las redes del Cáucaso."
   },
@@ -55,9 +52,6 @@ export const FRONTERAS_V272 = Object.freeze({
   },
   "TEIMURAZ2GEO": {
     "biografia": "Su colaboración con Nader Shah favoreció el reconocimiento de su poder en Kartli. Él y su hijo Heraclio gobernaron coronas vecinas y buscaron apoyos exteriores para sostener su posición tras el derrumbe del imperio de Nader."
-  },
-  "EREKLE2GEO": {
-    "biografia": "Reunió Kartli y Kajetia en 1762 e intentó fortalecer el reino oriental. El tratado de Gueórguievsk lo vinculó a Rusia, pero no evitó el ataque de Aga Mohamed Kan contra Tiflis en 1795. Su trayectoria conecta la política georgiana con Persia y la expansión rusa."
   },
   "TAIRDELBACHCONN": {
     "biografia": "Expandió el poder de Connacht y disputó la supremacía irlandesa a otras dinastías regionales. Sus hijos Ruaidrí y Cathal representan dos respuestas sucesivas al cambio político del siglo XII."

@@ -1,5 +1,6 @@
 import {completeStories606} from './historias606.js';
 import {STORIES_607_ES} from './historias607.js';
+import {STORIES_612_ES} from './historias612.js';
 import {applyStoryFocus607} from './storyFocus607.js';
 import {STORIES_605_ES} from './historias605.js';
 import {reviseStories604} from './historias604.js';
@@ -4600,6 +4601,7 @@ const HISTORIAS_EXISTENTES = [
   }
 ];
 const HISTORIAS_BASE = [
+  ...STORIES_612_ES,
   ...STORIES_607_ES,
   ...STORIES_605_ES,
   ...STORIES_603_ES,

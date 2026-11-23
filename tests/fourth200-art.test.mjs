@@ -8,6 +8,7 @@ import {REVIEWED_NEXT_100_NAMES} from '../src/data/reviewedNext100Names.js';
 import {REVIEWED_THIRD_100_NAMES} from '../src/data/reviewedThird100Names.js';
 import {REVIEWED_FOURTH_200_PROFILES as profiles} from '../src/features/english/reviewedFourth200Profiles.js';
 import {TRANSLATED_PEOPLE} from '../src/features/english/routes.js';
+import {COMPLETE_ENGLISH_PROFILES} from '../src/features/english/fullProfiles.js';
 import {completeEnglishProfile} from '../scripts/generate/complete-english-profile.mjs';
 import {personClaims} from '../src/evidence/claims.js';
 import {IMAGENES_PERSONAS} from '../src/data/imagenesPersonas.js';
@@ -24,7 +25,7 @@ test('200 distinct additional profiles retain every government, relative, source
  for(const review of reviews){assert(!prior.has(review.id),review.id);const r=TRANSLATED_PEOPLE.find(p=>p.id===review.id),es=read(r),en=completeEnglishProfile(es);assert.equal(es.slug,current(review).slug);assert.equal(es.nombre,current(review).after.nombre);assert.equal(en.translationComplete,true);assert(en.resumen&&en.role);assert.notEqual(en.resumen,es.resumen);
  for(const k of ['id','nac','muer','gobiernos','documentacion','accesosCoronas'])assert.deepEqual(en[k],es[k],review.id+'/'+k);
  for(const k of ['padres','conyuges','hijos','relacionadosDinastia','contemporaneos'])assert.deepEqual(en[k].map(p=>p.id),es[k].map(p=>p.id));
- assert.equal(en.biografiaExtensa.length,(es.biografiaExtensa||[]).length);if(es.biografia&&es.biografia!==es.resumen)assert(profiles[es.id].biography,'Preserve full biography '+es.id);
+ assert.equal(en.biografiaExtensa.length,(es.biografiaExtensa||[]).length);if(es.biografia&&es.biografia!==es.resumen)assert(profiles[es.id].biography||COMPLETE_ENGLISH_PROFILES[es.id]?.biography,'Preserve full biography '+es.id);
  assert.equal(en.localizedClaims.length,personClaims(es).length);for(const c of en.localizedClaims){const original=personClaims(es).find(p=>p.id===c.id);assert.deepEqual(c.sources.map(s=>s.url),original.sources.map(s=>s.url));}
  if(review.before.nombre!==review.after.nombre)assert(PERSONAS.find(p=>p.id===review.id).aliases.includes(review.before.nombre));
  }

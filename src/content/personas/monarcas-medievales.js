@@ -42,9 +42,6 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
   "EDUARDO1ING": {
     "resumen": "Rey de Inglaterra, reformador de la administración regia y protagonista de las guerras de Gales y Escocia. Su intervención en la sucesión escocesa desencadenó un conflicto de larga duración."
   },
-  "WILLIAM1SCOT": {
-    "biografia": "Rey de Escocia durante casi medio siglo. Su largo reinado enlaza la monarquía del siglo XII con la sucesión de Alejandro II."
-  },
   "ALEXANDER2SCOT": {
     "biografia": "Hijo de Guillermo el León. Reinó de 1214 a 1249 y consolidó la frontera anglo-escocesa antes de morir durante una campaña en el oeste."
   },
@@ -71,9 +68,6 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
   },
   "HENRY2CYPRUS": {
     "biografia": "Último rey de Jerusalén que gobernó desde Acre. Tras la caída de la ciudad en 1291 conservó el título de Jerusalén mientras continuaba como rey de Chipre."
-  },
-  "SALADIN": {
-    "biografia": "Sultán ayubí que unificó gran parte de Egipto y Siria. Derrotó al ejército cruzado en Hattin y recuperó Jerusalén en 1187."
   },
   "RAYMOND3TRIPOLI": {
     "biografia": "Conde de Trípoli y uno de los grandes barones del reino. Actuó como regente y fue una figura central en las luchas políticas que precedieron a Hattin."

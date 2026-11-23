@@ -74,7 +74,8 @@ test('los títulos bretones disputados y los vizcondados se mantienen explícito
 });
 
 test('las 75 minibiografías se vinculan al registro general, sin crear grupos regionales de fuentes',()=>{
-  assert.equal(Object.keys(CASAS_V210).length,75);
+  // 6.1.2: Louis VII's short biography was replaced by a full one.
+  assert.equal(Object.keys(CASAS_V210).length,74);
   for(const [id,bio] of Object.entries(CASAS_V210)) {
     assert.ok(by[id],id);assert.ok(bio.biografia.length>120,id);
     assert.ok(sourcesForPerson(id).length,id);

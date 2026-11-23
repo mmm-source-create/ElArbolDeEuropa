@@ -30,7 +30,8 @@ test('the reviewed 100 are distinct complete editions with preserved records and
   assert.equal(translatedEquivalent(`/en/person/${route.en}`,'es'),`/es/persona/${route.es}`);
   if(source.biografia!==source.resumen)assert(COMPLETE_ENGLISH_PROFILES[review.id].biography,review.id+' needs a separate full biography');
  }
- assert.equal(sections,45);
+ // 6.1.2: Saladin's full biography adds three sections.
+ assert.equal(sections,48);
 });
 
 test('all seven houses retain their memberships, governments, branches, related houses and sources',async()=>{

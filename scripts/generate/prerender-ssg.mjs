@@ -58,6 +58,11 @@ try {
   const html=makeStaticDocument(shell,rendered,null,notFoundAssets);
   if(!/Esta rama no existe/.test(html)||!/noindex,follow/.test(html))throw new Error('La página 404 no contiene el contrato esperado');
   await fs.writeFile(path.join(dist,'404.html'),html);
+  // 6.1.2: an English 404 for /en addresses, with its own title and language.
+  const renderedEn=renderNotFound('en',siteUrl);
+  const htmlEn=makeStaticDocument(shell,renderedEn,null,notFoundAssets);
+  if(!/This branch does not exist/.test(htmlEn)||!/<html lang="en">/.test(htmlEn)||!/noindex,follow/.test(htmlEn))throw new Error('The English 404 page does not meet its contract');
+  await fs.writeFile(path.join(dist,'404-en.html'),htmlEn);
  }
  if(await fs.readFile(path.join(dist,'index.html'),'utf8')!==shell)throw new Error('Se ha alterado el shell dinámico');
  await fs.writeFile(path.join(sample?target:dist,sample?'report.json':'ssg-report.json'),JSON.stringify(stats,null,2));

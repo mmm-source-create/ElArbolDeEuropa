@@ -3,10 +3,13 @@ export const STORY_COLLECTIONS = [
   {id:'cruzadas', es:'Cruzadas', en:'Crusades'},
   {id:'cultura-popular', es:'Cultura Popular', en:'Popular Culture'},
   {id:'herencias-conflictivas', es:'Herencias conflictivas', en:'Contested Inheritances'},
+  {id:'dinastias', es:'Dinastías', en:'Dynasties'},
 ];
 const membership = {
   'herencias-conflictivas':['habsburgo-capetos','iberia','ultimo-austria','estuardo-hannover','leonor-aquitania','visconti-sforza','borgona','dos-coronas-dos-hijas','corona-demasiado-grande','dos-rosas','reino-partido-dos','napoles-corona-disputada','federico-emperador-excomulgado','mindaugas-jogaila'],
   cruzadas:['balduino-saladino','sebastian-marruecos','lepanto-alianza','puertas-viena','constantinopla-dos-conquistas','ricardo-felipe-cruzada','federico-emperador-excomulgado'],
+  // 6.1.2: guided stories of a whole house, from its rise to its end.
+  dinastias:['anjou-hungria','jagellones-cracovia-buda','luxemburgo-casa-imperial','oldemburgo-dinamarca','paleologos-ultima-dinastia','romanov-rusia','saboya-alpes-corona','trastamara-montiel-reyes-catolicos','valois-francia','vasa-corona-baltico'],
   'cultura-popular':['balduino-saladino','braveheart-detras-del-mito','dracula-detras-de-la-leyenda','gioconda','favoritos-maquiavelo'],
 };
 export function storyCollections(id) {
