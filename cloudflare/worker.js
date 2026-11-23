@@ -41,7 +41,8 @@ export default {
     assetUrl.pathname = route.asset.replace(/\/index\.html$/, '').replace(/\.html$/, '') || '/';
     const response = await env.ASSETS.fetch(new Request(assetUrl, request));
     if (response.status !== 404) return secure(response, request, env);
-    const notFoundUrl = new URL('/404', url);
+    // 6.1.2: English addresses get the English 404 page.
+    const notFoundUrl = new URL(/^\/en(?:\/|$)/.test(url.pathname) ? '/404-en' : '/404', url);
     const notFound = await env.ASSETS.fetch(new Request(notFoundUrl, request));
     const headers = new Headers(notFound.headers);
     headers.set('X-Robots-Tag', 'noindex, follow');

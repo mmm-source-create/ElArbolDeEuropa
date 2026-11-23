@@ -87,7 +87,8 @@ test('las uniones incluyen enlaces a personas, territorios y la vista anual del 
  const ruta=resolverRuta('/','?atlas=1&panel=europa&anio=1397');assert.equal(ruta.view,'explorer');assert.equal(ruta.panel,'europa');
 });
 test('la ampliación conecta tres generaciones de Kalmar y la ruptura Vasa sin duplicar personas',()=>{
- assert.equal(Object.keys(ESCANDINAVIA_V212).length,47);
+ // 6.1.2: five of these short biographies were replaced by full ones (src/content/v612People.json).
+ assert.equal(Object.keys(ESCANDINAVIA_V212).length,42);
  for(const [id,b] of Object.entries(ESCANDINAVIA_V212)){assert.ok(by[id],id);assert.ok(b.biografia.length>120,id);assert.ok(SOURCES.some(s=>s.personas.includes(id)),id);}
  assert.equal(by.ERICOPOMERANIA.madre,'MARIAMECKPOM');assert.equal(by.MARIAMECKPOM.madre,'INGEBORGVALDEMAR');assert.equal(by.INGEBORGVALDEMAR.padre,'VALDEMAR4DIN');
  assert.equal(by.OLAF2NORD.madre,'MARGARITA1NORD');assert.equal(by.CRISTOBALBAVSUE.madre,'CATHPOMNEUMARK');assert.equal(by.GUSTAV1VASA.padre,'ERIKJOHVASA');

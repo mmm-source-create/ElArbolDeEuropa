@@ -10,6 +10,10 @@ import {connectionUrl} from '../connections/connectionTree.js';
 import '../public/dynasty.css';
 import '../../components/crowns.css';
 import EnglishSuccession from './EnglishSuccession.jsx';
+// 6.1.2: the same hero as the Spanish page: rank and kind, counts and actions.
+const RANK_LABELS={grupo_geografico:'Geographical group',gobierno:'Government',principado:'Principality',señorío:'Lordship',reino:'Kingdom',ducado:'Duchy',ciudad:'City',condado:'County',margraviato:'Margraviate',grupo_historico:'Historical group',emirato:'Emirate',territorio_compuesto:'Composite territory',archiducado:'Archduchy',banato:'Banate',vizcondado:'Viscounty',imperio:'Empire',electorado:'Electorate',califato:'Caliphate',corona_compuesta:'Composite crown',despotado:'Despotate',sultanato:'Sultanate',estado_pontificio:'Papal state',republica:'Republic',landgraviato:'Landgraviate',judicado:'Judicate',gran_ducado:'Grand duchy',marquesado:'Marquisate',burgraviato:'Burgraviate',union_compuesta:'Composite union',zarato:'Tsardom'};
+// The generated data may carry the rank already in English ("county").
+export const rankLabel=clase=>RANK_LABELS[clase]||(clase?String(clase).replaceAll('_',' ').replace(/^./,c=>c.toUpperCase()):'Territory');
 const entityPath=(kind,key)=>{const es=`/es/${kind}/${slugPublico(key)}`;return translatedEquivalent(es,'en')||es;};
 function EntityLink({kind,name,label}){const path=entityPath(kind,name);return <a href={path}>{label||name}{path.startsWith('/es/')?' · ES':''}</a>;}
 function EnglishDynastyConnection({branch:r,internal=false}) {
@@ -25,14 +29,16 @@ export default function EnglishEntity({data:d}){
  const members=(dynasty?d.miembros:d.personas).filter(p=>normalizarBusquedaPublica([p.nombre,p.role,p.sobrenombre,...(p.aliases||[])].join(' ')).includes(normalizarBusquedaPublica(query)));
  const Icon=dynasty?Shield:Landmark;
  const internalBranches=dynasty?d.ramas.filter(r=>r.origen===d.key&&r.destino===d.key):[];
+ const relationCount=(d.casasOrigen?.length||0)+(d.casasDerivadas?.length||0)+(d.casasConectadas?.length||0)+internalBranches.length;
  return <main className={`public-main ${dynasty?'dynasty-page':'territory-page'}`}>
   <nav className="public-breadcrumbs" aria-label="Breadcrumb"><a href="/en">Home</a><span>›</span><a href={dynasty?'/en/dynasties':'/en/territories'}>{dynasty?'Dynasties':'Territories'}</a><span>›</span><span aria-current="page">{d.nombre}</span></nav>
   <header className={`public-page-title ${dynasty?'dynasty-hero':'territory-hero'}`}>
    {d.arms?<figure className="dynasty-hero-figure"><DynastyArms dinastia={d.key} size={76} locale="en"/></figure>:<div className="public-page-icon"><Icon size={22}/></div>}
-   <span>{dynasty?'Houses and lineages':d.naturaleza==='agrupacion'?'Exploration grouping':d.naturaleza==='compuesta'?'Composite entity':'Historical territory'}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>
-   {d.arms?.blazon&&<p className="dynasty-blazon"><b>{nombreEmblema(escudoDe(d.key),'en')}.</b> {d.arms.blazon}<small> {d.arms.note}</small></p>}
-   {dynasty&&<div className="dynasty-counts"><span><b>{d.total}</b> recorded people</span><span><b>{d.ramas.length}</b> documented {d.ramas.length===1?'connection':'connections'}</span></div>}
-   <a className="public-primary" href={`/en/?atlas=1&${dynasty?'dinastia':'territorio'}=${encodeURIComponent(d.key)}`}>Explore in the Atlas <ArrowRight size={15}/></a>
+   <span>{dynasty?`Houses and lineages · ${d.editorial?'History of the house':'People in the Atlas'}`:`${rankLabel(d.clase)} · ${d.naturaleza==='agrupacion'?'Exploration grouping':d.naturaleza==='compuesta'?'Composite entity':'Historical entity'}`}</span><h1>{d.nombre}</h1><p>{d.resumen}</p>
+   {d.arms?.blazon&&<p className="dynasty-blazon"><b>{nombreEmblema(escudoDe(d.key),'en')}.</b> {d.arms.blazon}{d.arms.note&&<small> {d.arms.note}</small>}</p>}
+   {dynasty&&<div className="dynasty-counts"><span><b>{d.total}</b> {d.total===1?'recorded person':'recorded people'}</span><span><b>{relationCount}</b> {relationCount===1?'branch or connection':'branches and connections'}</span></div>}
+   {dynasty?<a className="public-primary" href={`/en/?atlas=1&dinastia=${encodeURIComponent(d.key)}`}>Explore this house in the Atlas <ArrowRight size={15}/></a>
+    :<div className="territory-actions"><a className="public-primary" href={`/en/?atlas=1&territorio=${encodeURIComponent(d.key)}`}>Open in the Atlas <ArrowRight size={15}/></a><a className="public-secondary" href="#succession">Explore succession <ArrowRight size={15}/></a></div>}
   </header>
   {!dynasty&&d.nota&&<p>{d.nota}</p>}
   {!dynasty&&!!d.pertenencias?.length&&<p>{d.pertenencias.map((v,i)=><span key={i}>Part of <EntityLink kind="territorio" name={v.key} label={v.name}/> from {v.desde}. </span>)}</p>}

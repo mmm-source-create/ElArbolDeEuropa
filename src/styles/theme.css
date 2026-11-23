@@ -150,6 +150,8 @@
   text-transform: uppercase;
 }
 .site-footer-links { display: flex; flex-wrap: wrap; gap: 5px 12px; }
+/* 6.1.2: footer links are touch targets of at least 24 px (WCAG 2.5.8). */
+.site-footer-links a { display: inline-flex; align-items: center; min-height: 24px; min-width: 24px; }
 .site-footer a,
 .site-footer button {
   border: 0;

@@ -1,5 +1,5 @@
 import {V605_PROFILES} from '../../content/v605People.js';
-import {V607_PROFILES} from '../../content/v607People.js';
+import {V607_PROFILES, V612_IDS} from '../../content/v607People.js';
 import {V603_PROFILES} from '../../content/v603People.js';
 import {V602_PROFILES} from './v602Profiles.js';
 import {REVIEWED_FOURTH_200_PROFILES} from './reviewedFourth200Profiles.js';
@@ -123,4 +123,8 @@ export const COMPLETE_ENGLISH_PROFILES = reviewPersonProfiles({
   ...V603_PROFILES,
   ...V605_PROFILES,
   ...V607_PROFILES,
+  // 6.1.2: the new biographies keep the English name, nickname and aliases these
+  // people already had, so their pages and links do not change.
+  ...Object.fromEntries(V612_IDS.filter(id=>!V6_PEOPLE[id]).map(id=>[id,{...V607_PROFILES[id],biography:V607_PROFILES[id].sections.map(section=>section[1]).join('\n\n')}])),
+  ...Object.fromEntries(V612_IDS.filter(id=>V6_PEOPLE[id]).map(id=>[id,{...V607_PROFILES[id],biography:V607_PROFILES[id].sections.map(section=>section[1]).join('\n\n'),name:V6_PEOPLE[id].name,role:V6_PEOPLE[id].role||V607_PROFILES[id].role,nickname:V6_PEOPLE[id].nickname||'',aliases:[...new Set([...(V6_PEOPLE[id].aliases||[]),...(V607_PROFILES[id].aliases||[])])],...(V6_PEOPLE[id].slugName?{slugName:V6_PEOPLE[id].slugName}:{})}])),
 });

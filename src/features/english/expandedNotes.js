@@ -1,4 +1,6 @@
 export const EXPANDED_NOTES = {
+  // 6.1.2
+  "Los reyes de Bohemia gobernaron Moravia directamente entre 1283 y 1334, sin otorgarla a un margrave propio.": "The kings of Bohemia ruled Moravia directly between 1283 and 1334, without granting it to a margrave of its own.",
   "Corona de Castilla desde 1230; el mapa conserva las denominaciones de Castilla y León.": "Crown of Castile from 1230; the map retains the names Castile and León.",
   "Reina propietaria de Castilla y León desde 1474. En la Corona de Aragón fue reina consorte desde 1479, cuando Fernando heredó la corona: no fue reina titular de Aragón ni gobernó allí por derecho propio, aunque en 1481 Fernando le otorgó poderes de corregente y lugarteniente general en sus reinos.": "Queen regnant of Castile and León from 1474. Within the Crown of Aragon she was queen consort from 1479, when Ferdinand inherited: she did not hold the Aragonese crown in her own right or govern there as its sovereign. In 1481 Ferdinand nevertheless granted her powers as co-ruler and lieutenant-general in his kingdoms.",
   "Título ducal conservado después de la incorporación del ducado a Francia.": "The ducal title was retained after the duchy was incorporated into France.",

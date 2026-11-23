@@ -24,7 +24,7 @@ test('the third Medieval Lands pass and the DBI articles document more than 900 
   }
   const {totals} = coverageReport(PERSONAS);
   const all = Object.values(totals).reduce((a, b) => a + b, 0);
-  assert.equal(all, 13134);
+  assert.equal(all, 13138); // 6.1.2: four Moravian governments added
   // 6.0.20 left 6 994 documented claims (53.3 %); this release must add at least six points.
   assert.ok(totals.documented / all >= 0.593, `${totals.documented} / ${all}`);
 });
