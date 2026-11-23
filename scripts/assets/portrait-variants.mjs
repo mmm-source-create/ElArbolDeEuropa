@@ -1,7 +1,7 @@
 // Variantes WebP de retratos y su registro en src/data/imageVariants.js (proceso de la V5.18).
 // Uso: node scripts/assets/portrait-variants.mjs <carpeta-originales> [--public public] [--data src/data/imageVariants.js]
 // Cada original se llama <ID>.<webp|jpg|png>; genera <ID>-<ancho>.webp en personas-img/responsive con
-// 96, 192 y 384 px (solo los menores que el original) más el ancho original con un máximo de 768 px.
+// 96, 192, 384 y 576 px (solo los menores que el original) más el ancho original con un máximo de 768 px.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
@@ -12,7 +12,7 @@ const publicDir = option('--public', 'public'), dataFile = option('--data', 'src
 const [sourceDir] = args;
 if (!sourceDir) { console.error('Indica la carpeta de originales.'); process.exit(1); }
 
-const variantWidths = width => [...[96, 192, 384].filter(w => w < Math.min(width, 768)), Math.min(width, 768)];
+const variantWidths = width => [...[96, 192, 384, 576].filter(w => w < Math.min(width, 768)), Math.min(width, 768)];
 
 const dataText = await fs.readFile(dataFile, 'utf8');
 const variants = JSON.parse(dataText.replace(/^export const IMAGE_VARIANTS = /, '').replace(/;\s*$/, ''));

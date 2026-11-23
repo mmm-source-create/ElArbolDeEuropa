@@ -56,6 +56,8 @@
 .home-dynasty-art{display:grid;place-items:center;background:var(--eade-paper-soft);border:1px solid var(--eade-border)}
 .home-feature-dynasty .home-feature-copy p{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 @media (max-width:980px){
+  .home-atlas-map{background-image:var(--home-map-light-small,url(/home/mapa-1500-claro-800.webp))}
+  :root[data-eade-theme="dark"] .home-atlas-map{background-image:var(--home-map-dark-small,url(/home/mapa-1500-oscuro-800.webp))}
   .home-atlas-hero{grid-template-columns:1fr;min-height:0;padding-top:0}
   .home-atlas-map{position:relative;z-index:0;grid-row:1;left:auto;right:auto;margin:0;border-radius:var(--r-md, 10px);height:240px;background-size:cover;background-position:58% 30%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
   .home-atlas-copy{grid-column:1;padding:0;background:none}
@@ -73,3 +75,6 @@
    dropdown is never painted over. */
 .home-atlas-hero{z-index:2}
 .home-atlas-copy{position:relative;z-index:3}
+
+/* 6.1.0: on phones the map was a 240 px decorative band and the slowest element of the first view. Hidden, it is not downloaded. */
+@media (max-width:650px){.home-atlas-map{display:none}}

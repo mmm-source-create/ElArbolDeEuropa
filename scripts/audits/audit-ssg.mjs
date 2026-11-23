@@ -6,7 +6,8 @@ import {loadEnv} from 'vite';
 import {STATIC_SCHEMA,STATIC_DATA_ID,STATIC_FOLDERS,validatePage,parsePage} from '../../src/features/public/staticData.js';
 import {DEFAULT_SITE_URL,entityMeta,publicMeta} from '../../src/features/public/publicMeta.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
-import {routesFromSitemap,assetsForStaticPage,escapeHtml} from '../lib/ssg-utils.mjs';
+import {routesFromSitemap,assetsForStaticPage,escapeHtml,withCssBundle} from '../lib/ssg-utils.mjs';
+import {staticPageData} from '../../src/features/public/catalogPreview.js';
 
 // Comprueba el artefacto escrito, sin confiar en el informe del generador.
 export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
@@ -35,6 +36,8 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  } catch {errors.push('Datos iniciales ausentes, inseguros o distintos del JSON fuente');}
  const links=[...head.matchAll(/<link\b[^>]*>/g)].map(m=>m[0]);
  for(const css of assets.css)if(!links.some(tag=>tag.includes('rel="stylesheet"')&&tag.includes(`href="/${css}"`)))errors.push(`CSS ausente: ${css}`);
+ // 6.1.0: one blocking stylesheet with the page's CSS; the separate files stay as non-applying links.
+ if(assets.cssBundle&&!links.some(tag=>tag.includes('rel="stylesheet"')&&tag.includes(`href="/${assets.cssBundle}"`)&&!tag.includes('media=')))errors.push(`CSS combinado ausente: ${assets.cssBundle}`);
  for(const js of assets.js)if(!head.includes(`src="/${js}"`)&&!links.some(tag=>tag.includes('rel="modulepreload"')&&tag.includes(`href="/${js}"`)))errors.push(`Módulo ausente: ${js}`);
  if(!body.includes('?atlas=1'))errors.push('Falta el acceso al Atlas');
  return errors;
@@ -50,9 +53,9 @@ async function auditBuild(root=process.cwd()) {
  const counts={persona:0,dinastia:0,territorio:0,historia:0,english:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
   try {
-   const assets=assetsForStaticPage(manifest,route.kind,route.path);
+   const assets=await withCssBundle(dist,assetsForStaticPage(manifest,route.kind,route.path),{shell});
    for(const asset of [...assets.css,...assets.js])await fs.access(path.join(dist,asset));
-   const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
+   const data=staticPageData(route,JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8')));
    const page={schema:STATIC_SCHEMA,...route,data};
    if(!validatePage(page))throw new Error('JSON fuente incompleto');
    if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error('Alias no registrado');

@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {staticHeadersFile} from '../cloudflare/routing.js';
+import {staticHeadersFile, staticRedirectsFile} from '../cloudflare/routing.js';
 import {metadataFromHtml, pageFromHtml} from '../src/utils/staticMetadata.js';
 
 export async function prepareCloudflare(source='dist', target='.cloudflare/assets') {
@@ -44,6 +44,7 @@ export async function prepareCloudflare(source='dist', target='.cloudflare/asset
   for(const route of shells){const dir=path.join(target,route),file=path.join(dir,'index.html');if(await fs.access(file).then(()=>true,()=>false))continue;await fs.mkdir(dir,{recursive:true});await fs.writeFile(file,shell);}
   await fs.writeFile(path.join(target,'cloudflare-meta-index.json'),JSON.stringify(index));
   await fs.writeFile(path.join(target,'_headers'),staticHeadersFile());
+  await fs.writeFile(path.join(target,'_redirects'),staticRedirectsFile());
   const files=[];
   async function measure(dir=''){
     for(const entry of await fs.readdir(path.join(target,dir),{withFileTypes:true})){

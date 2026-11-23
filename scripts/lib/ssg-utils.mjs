@@ -62,7 +62,11 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
   return key&&metaKeys.has(`${key[1]}:${key[2]}`)?'':tag;
  }).replace(/<link\b[^>]*>/gi,tag=>/\brel=["'](?:canonical|alternate)["']/i.test(tag)?'':tag);
  const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`,...meta.alternates.map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`),...(meta.jsonLd?[`<script type="application/ld+json">${JSON.stringify(meta.jsonLd).replace(/</g,'\\u003c')}</script>`]:[])];
- const links=[...assets.css.map(file=>`<link rel="stylesheet" href="/${file}">`),...assets.js.map(file=>`<link rel="modulepreload" href="/${file}">`)].filter(tag=>!head.includes(tag.match(/href="([^"]+)"/)[1]));
+ // 6.1.0: with a bundle, one blocking stylesheet. The separate files stay as
+ // links that do not apply (media="not all"): Vite finds them when the page code
+ // loads and does not fetch them again or wait for them before hydrating.
+ const cssLinks=assets.cssBundle?[`<link rel="stylesheet" href="/${assets.cssBundle}">`,...assets.css.map(file=>(assets.cssBundled||assets.css).includes(file)?`<link rel="stylesheet" href="/${file}" media="not all">`:`<link rel="stylesheet" href="/${file}">`)]:assets.css.map(file=>`<link rel="stylesheet" href="/${file}">`);
+ const links=[...(assets.preload||[]),...cssLinks,...assets.js.map(file=>`<link rel="modulepreload" href="/${file}">`)].filter(tag=>!/href="[^"]+"/.test(tag)||!head.includes(tag.match(/href="([^"]+)"/)[1]));
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
  const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;
  head+='\n'+metadata.join('\n')+'\n'+links.join('\n')+'\n'+notice+'\n';
@@ -78,4 +82,19 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
  // Compare complete documents, including the rendered text. On short pages
  // gzip already shares repetitions; the dictionary must earn its overhead.
  return gzipSync(compact).length<gzipSync(ordinary).length?compact:ordinary;
+}
+
+// 6.1.0: the page's stylesheets (6–7 render-blocking requests) joined in one
+// file named after its content. The shell's own stylesheet is not included.
+export async function withCssBundle(dist,assets,{write=false,shell=''}={}) {
+ const own=assets.css.filter(file=>!shell.includes(`/${file}"`));
+ if(own.length<2)return assets;
+ const {createHash}=await import('node:crypto');
+ const fsp=await import('node:fs/promises');const {join}=await import('node:path');
+ const parts=await Promise.all(own.map(file=>fsp.readFile(join(dist,file),'utf8')));
+ const text=parts.map((css,i)=>`/* ${own[i].replace(/^assets\//,'')} */\n${css}`).join('\n');
+ const file=`assets/page-${createHash('sha256').update(text).digest('hex').slice(0,10)}.css`;
+ if(write)await fsp.writeFile(join(dist,file),text);
+ else await fsp.access(join(dist,file));
+ return {...assets,cssBundle:file,cssBundled:own};
 }

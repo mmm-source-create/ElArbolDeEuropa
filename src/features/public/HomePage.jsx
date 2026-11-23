@@ -28,7 +28,8 @@ export function HomePage({ onEnterAtlas, onOpenPanel, prerendered = false }) {
 export {HOME_YEARS} from './homeYears.js';
 import {HOME_YEARS} from './homeYears.js';
 const HOME_YEAR = 1500;
-export const mapImage = (year, dark) => `/home/mapa-${year}-${dark ? 'oscuro' : 'claro'}.webp`;
+// 6.1.0: an 800 px copy (≈40 KB instead of ≈180 KB) for the narrow layout, where the map is 240 px high.
+export const mapImage = (year, dark, small = false) => `/home/mapa-${year}-${dark ? 'oscuro' : 'claro'}${small ? '-800' : ''}.webp`;
 export const HOME_TITLES = {es: 'Seis siglos de Europa, familia a familia', en: 'Six centuries of Europe, family by family'};
 
 const HOME_COPY = {
@@ -98,7 +99,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
   const base = en ? '/en' : '/es';
   const stats = data?.stats || HOME_DATA.stats || {};
   const rulers = (en ? data?.rulersByYear?.[year] : data?.gobernantesPorAnio?.[year]) || (year === HOME_YEAR ? (en ? data?.rulersOfYear : data?.gobernantesAnio) : null);
-  const warm = y => { if (typeof Image === 'function') new Image().src = mapImage(y, document.documentElement.dataset.eadeTheme === 'dark'); };
+  const warm = y => { if (typeof Image === 'function') new Image().src = mapImage(y, document.documentElement.dataset.eadeTheme === 'dark', typeof matchMedia === 'function' && matchMedia('(max-width: 980px)').matches); };
   const searched = (en ? data?.mostSearched : data?.masBuscados) || [];
   const people = (en ? data?.people : data?.personasDestacadas) || [];
   const dynasties = (en ? data?.dynasties : data?.dinastiasCarrusel) || [];
@@ -127,7 +128,7 @@ export function HomeContent({ data = HOME_DATA, locale = "es", title, onEnterAtl
   return (
       <main className="public-main public-home home-atlas">
         <section className="home-atlas-hero">
-          <div className="home-atlas-map" role="img" aria-label={copy.mapOf(year)} style={{'--home-map-light': `url(${mapImage(year, false)})`, '--home-map-dark': `url(${mapImage(year, true)})`}}><span className="home-atlas-map-year" aria-hidden="true">{year}</span></div>
+          <div className="home-atlas-map" role="img" aria-label={copy.mapOf(year)} style={{'--home-map-light': `url(${mapImage(year, false)})`, '--home-map-dark': `url(${mapImage(year, true)})`, '--home-map-light-small': `url(${mapImage(year, false, true)})`, '--home-map-dark-small': `url(${mapImage(year, true, true)})`}}><span className="home-atlas-map-year" aria-hidden="true">{year}</span></div>
           <div className="home-atlas-copy">
             <div className="home-eyebrow">{copy.eyebrow}</div>
             <h1>{title || HOME_TITLES[en ? 'en' : 'es']}</h1>

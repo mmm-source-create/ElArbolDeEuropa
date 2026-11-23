@@ -5,7 +5,8 @@ import {build,loadEnv} from 'vite';
 import {STATIC_SCHEMA,STATIC_FOLDERS,validatePage} from '../../src/features/public/staticData.js';
 import {resolveSiteUrl} from '../../src/app/siteConfig.js';
 import {canonicalDynastySlug} from '../../src/data/dynastyAliases.js';
-import {routesFromSitemap,assetsForStaticPage,makeStaticDocument} from '../lib/ssg-utils.mjs';
+import {routesFromSitemap,assetsForStaticPage,makeStaticDocument,withCssBundle} from '../lib/ssg-utils.mjs';
+import {staticPageData} from '../../src/features/public/catalogPreview.js';
 
 const root=process.cwd(),dist=path.resolve(root,'dist');
 const siteUrl=resolveSiteUrl(loadEnv('production',root,'VITE_').VITE_SITE_URL);
@@ -31,10 +32,15 @@ try {
  await build({configFile:false,root,publicDir:false,logLevel:'error',build:{ssr:'src/features/public/ssg-entry.jsx',outDir:path.join(temp,'renderer'),emptyOutDir:true,minify:false,rolldownOptions:{output:{entryFileNames:'entry.mjs'}}}});
  const {renderPage,renderNotFound}=await import(pathToFileURL(path.join(temp,'renderer/entry.mjs')).href);
  for(const route of routes) {
-  const assets=assetsForStaticPage(manifest,route.kind,route.path);
+  const assets=await withCssBundle(dist,assetsForStaticPage(manifest,route.kind,route.path),{write:true,shell});
+  // 6.1.0: the home map is the largest element of the first view and was found
+  // only after the stylesheets. The theme follows the system unless chosen; the small copy on tablets. Phones do not show the map.
+  if(['/es','/es/','/en','/en/'].includes(route.path))assets.preload=[['min-width: 651px) and (max-width: 980px','-800'],['min-width: 981px','']].flatMap(([width,size])=>[['light','claro'],['dark','oscuro']].map(([scheme,name])=>`<link rel="preload" as="image" href="/home/mapa-1500-${name}${size}.webp" media="(${width}) and (prefers-color-scheme: ${scheme})" fetchpriority="high">`));
   for(const file of [...assets.css,...assets.js])await fs.access(path.join(dist,file));
   stats.assets[route.kind] ||= assets;
-  const data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
+  let data=JSON.parse(await fs.readFile(path.join(dist,STATIC_FOLDERS[route.kind],`${route.slug}${route.chapter?`/capitulo/${route.chapter}`:""}.json`),'utf8'));
+  // 6.1.0: catalogues carry their first items; the page loads the complete file.
+  data=staticPageData(route,data);
   if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error(`Alias dinástico no reconocido: ${route.path}`);
   const page={schema:STATIC_SCHEMA,...route,data};
   if(!validatePage(page))throw new Error(`Metadatos incompletos: ${route.path}`);
@@ -46,7 +52,7 @@ try {
   stats.counts[route.kind]++;stats.pages.push({path:route.path,canonical:rendered.meta.canonical,bytes:Buffer.byteLength(html),js:assets.js});
  }
  if(!sample) {
-  const notFoundAssets=assetsForStaticPage(manifest,'persona');
+  const notFoundAssets=await withCssBundle(dist,assetsForStaticPage(manifest,'persona'),{write:true,shell});
   for(const file of [...notFoundAssets.css,...notFoundAssets.js])await fs.access(path.join(dist,file));
   const rendered=renderNotFound('es',siteUrl);
   const html=makeStaticDocument(shell,rendered,null,notFoundAssets);

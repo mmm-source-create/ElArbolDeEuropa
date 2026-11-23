@@ -1,6 +1,6 @@
 // Una sola definición de los metadatos para el HTML de compilación y el navegador.
 import {translatedEquivalent} from '../english/routes.js';
-import {SITE_NAME, DEFAULT_SITE_URL} from '../../app/siteConfig.js';
+import {SITE_NAME, SITE_NAME_EN, DEFAULT_SITE_URL} from '../../app/siteConfig.js';
 import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE} from './ogImages.js';
 import {personTitle,personDescription,dynastyTitle,territoryTitle,entityDescription,clip} from './seoText.js';
 export {DEFAULT_SITE_URL} from '../../app/siteConfig.js';
@@ -22,7 +22,8 @@ export function publicMeta({title,description,path='/es/',image=OG_DEFAULT_IMAGE
  ],alternates};
 }
 export function entityMeta(kind,data,slug) {
- if(kind==='english')return {title:data?.type==='person'?personTitle(data,'en'):data?.type==='dynasty'?dynastyTitle(data,'en'):data?.type==='territory'?territoryTitle(data,'en'):`${data?.nombre||'English edition'} — The Tree of Europe`,description:data?.type==='person'?personDescription(data,'en'):['dynasty','territory'].includes(data?.type)?entityDescription(data,data.type==='dynasty'?'dinastia':'territorio','en'):data?.description||'Explore European families and stories.',path:data?.path||'/en/',...(data?.ogImage?{image:data.ogImage,imageAlt:`${data.type==='dynasty'?'Arms of':'Portrait of'} ${data.nombre}`}:{})};
+ if(kind==='english'&&data?.type==='home')return {title:ENGLISH_HOME_TITLE,description:data.description,path:'/en/',imageAlt:SITE_NAME_EN};
+ if(kind==='english')return {imageAlt:SITE_NAME_EN,title:data?.type==='person'?personTitle(data,'en'):data?.type==='dynasty'?dynastyTitle(data,'en'):data?.type==='territory'?territoryTitle(data,'en'):`${data?.nombre||'English edition'} — The Tree of Europe`,description:data?.type==='person'?personDescription(data,'en'):['dynasty','territory'].includes(data?.type)?entityDescription(data,data.type==='dynasty'?'dinastia':'territorio','en'):data?.description||'Explore European families and stories.',path:data?.path||'/en/',...(data?.ogImage?{image:data.ogImage,imageAlt:`${data.type==='dynasty'?'Arms of':'Portrait of'} ${data.nombre}`}:{})};
  if(kind==='historia')return {title:`${data?.nombre || 'Historia'} — ${SITE_NAME}`,description:(data?.chapter?data.pasos[data.chapter-1].texto:data?.descripcion||'Historias de Europa, capítulo a capítulo.').slice(0,155),path:`/es/historia/${encodeURIComponent(data?.slug||slug)}${data?.chapter?`/capitulo/${data.chapter}`:''}`};
  if(kind==='persona')return {
   title:data?personTitle(data):`Persona — ${SITE_NAME}`,
@@ -45,6 +46,8 @@ export function entityMeta(kind,data,slug) {
  throw new Error(`Tipo de ficha desconocido: ${kind}`);
 }
 
+// 6.1.0: the English home says what the site is, like the Spanish one.
+export const ENGLISH_HOME_TITLE='The Tree of Europe | Interactive genealogical and historical atlas';
 // Same strings as the client components (HomePage, CatalogPage, PeopleIndexPage).
 export const HOME_META={title:'El Árbol de Europa | Atlas genealógico e histórico interactivo',description:'Explora personas, dinastías, parentescos, reinados, territorios e historias de la Europa medieval y moderna.',path:'/es'};
 export const CATALOG_META={

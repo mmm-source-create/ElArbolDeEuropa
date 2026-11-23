@@ -34,7 +34,7 @@ for (const [slug, nombre] of Object.entries(names)) {
 const compare = locale => (a, b) => a.n.localeCompare(b.n, locale, {sensitivity: 'base'});
 const esPeople = (await read('catalogos/personas.json')).items;
 await write('catalogos/indice.json', {nombre: 'Índice de personas de la A a la Z', slug: 'indice', items: esPeople.map(p => ({n: p.nombre, p: `/es/persona/${p.slug}`, d: lifeDates(p), c: isNamedDynasty(p.dinastia) ? p.dinastia : ''})).sort(compare('es'))});
-const enPeople = (await read('english-meta/people.json')).people;
+const enPeople = (await read('catalogos/people-en.json')).items;
 await write('catalogos/index-en.json', {nombre: 'People from A to Z', slug: 'index-en', items: enPeople.map(p => ({n: p.nombre, p: p.path, d: lifeDates(p, 'en'), c: isNamedDynasty(p.dinastia) ? p.dinastia : ''})).sort(compare('en'))});
 
 // 2. lastmod per URL.

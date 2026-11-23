@@ -236,6 +236,7 @@
     }
   ],
   "redirects": [
+    {"source":"/","destination":"/es","permanent":true},
     {"source":"/en/person/stanis-aw-ii-august-poniatowski","destination":"/en/person/stanislaw-ii-august-poniatowski","permanent":true,"workerFirst":false},
     {"source":"/en/person/w-adys-aw-iv-vasa","destination":"/en/person/wladyslaw-iv-vasa","permanent":true,"workerFirst":false},
     {"source":"/en/person/w-adys-aw-ii-jagie-o","destination":"/en/person/wladyslaw-ii-jagiello","permanent":true,"workerFirst":false},

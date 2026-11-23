@@ -2,14 +2,15 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.0.22**
-- [Notas de 6.0.22](docs/releases/6.0.22.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.0**
+- [Notas de 6.1.0](docs/releases/6.1.0.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.0.22 documenta 308 afirmaciones más con el Diccionario
-Biográfico Español de la RAH y las biografías nacionales escandinavas, y
-corrige cinco fechas comprobadas con varias fuentes. El inventario alcanza
-8 231 afirmaciones documentadas (62,7 %). Las fichas inglesas de territorios
-muestran ya todas sus notas.
+La versión 6.1.0 aplica las correcciones de prioridad alta y media de la
+auditoría SEO: la raíz redirige a la portada, las redirecciones son
+permanentes, cada tipo de página tiene sus datos estructurados, los catálogos
+y la portada pesan bastante menos, y 147 resúmenes ingleses de casas y
+territorios se han reescrito a mano. El inventario sigue en 8 231
+afirmaciones documentadas (62,7 %).
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
