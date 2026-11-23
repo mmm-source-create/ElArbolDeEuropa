@@ -191,7 +191,7 @@ const keys=Object.keys(ENGLISH_NAME_CORRECTIONS).sort((a,b)=>b.length-a.length);
 const pattern=new RegExp('(?<![\\p{L}\\p{N}])(?:'+keys.map(key=>key.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\p{N}])','gu');
 export const englishNameText=text=>typeof text==='string'?text.replace(pattern,name=>ENGLISH_NAME_CORRECTIONS[name]):text;
 export function repairEnglishPresentation(value,key='') {
- if(['path','esPath','slug','enSlug','esSlug','sourceFile','searchAliases','id'].includes(key))return value;
+ if(['path','esPath','slug','enSlug','esSlug','sourceFile','searchAliases','id','key'].includes(key))return value;
  if(typeof value==='string')return /^(?:https?:|\/)/.test(value)?value:englishNameText(englishCredit(value));
  if(Array.isArray(value))return value.map(item=>repairEnglishPresentation(item,key));
  if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([field,item])=>[field,repairEnglishPresentation(item,field)]));

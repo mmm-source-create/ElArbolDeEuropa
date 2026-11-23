@@ -1,5 +1,10 @@
 # Versiones y GitHub Releases
 
+## Serie 6
+
+- [6.1.1: índice territorial bilingüe](releases/6.1.1.md).
+- [6.1.0: SEO y rendimiento](releases/6.1.0.md).
+
 ## Serie V5
 
 Las entregas V5.0–V5.6 se han publicado retrospectivamente desde sus commits

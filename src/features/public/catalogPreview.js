@@ -1,3 +1,4 @@
+import {territoryDirectory,territoryFacets,territoryPreview} from './territoryCatalog.js';
 // 6.1.0: the static catalogue pages carried every item twice (as HTML and as
 // hydration data): about 1 MB each. They now carry the first CATALOG_PREVIEW
 // items in display order, the total and the facet counts; the page loads the
@@ -20,8 +21,8 @@ export function personFacets(items) {
 export function catalogPreview(data, {tipo, key = 'items', full, locale = 'es'}) {
   const items = Array.isArray(data?.[key]) ? data[key] : [];
   if (items.length <= CATALOG_PREVIEW) return data;
-  const ordered = tipo === 'personas' ? featuredOrder(items, locale) : items;
-  return {...data, [key]: ordered.slice(0, CATALOG_PREVIEW), partial: {total: items.length, full, ...(tipo === 'personas' ? {facetas: personFacets(items)} : {})}};
+  const ordered = tipo === 'personas' ? featuredOrder(items, locale) : tipo === 'territorios' ? territoryPreview(items,CATALOG_PREVIEW,locale) : items;
+  return {...data, ...(tipo==='territorios'?{directory:territoryDirectory(items,locale),territoryFacets:territoryFacets(items)}:{}), [key]: ordered.slice(0, CATALOG_PREVIEW), partial: {total: items.length, full, ...(tipo === 'personas' ? {facetas: personFacets(items)} : {})}};
 }
 
 // The data a static page embeds: the source JSON, or its preview for the three

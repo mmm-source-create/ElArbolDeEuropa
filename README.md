@@ -2,15 +2,16 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.0**
-- [Notas de 6.1.0](docs/releases/6.1.0.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.1**
+- [Notas de 6.1.1](docs/releases/6.1.1.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.1.0 aplica las correcciones de prioridad alta y media de la
-auditoría SEO: la raíz redirige a la portada, las redirecciones son
-permanentes, cada tipo de página tiene sus datos estructurados, los catálogos
-y la portada pesan bastante menos, y 147 resúmenes ingleses de casas y
-territorios se han reescrito a mano. El inventario sigue en 8 231
-afirmaciones documentadas (62,7 %).
+La versión 6.1.1 reorganiza el índice de territorios en español e inglés:
+regiones geográficas, naturalezas y tipos diferenciados, búsqueda por variantes,
+filtro de gobiernos por año e índice completo A–Z con enlaces desde el HTML.
+Las tarjetas distinguen las personas vinculadas y quienes tienen un gobierno
+registrado. La guía de [organización territorial](docs/territory-index.md)
+explica cómo mantener esta clasificación. Las [próximas actualizaciones](docs/NEXT_UPDATES.md)
+incluyen «Hoy en la Historia / Today in History» para la portada.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables

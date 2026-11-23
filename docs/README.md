@@ -5,6 +5,9 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 ## Uso y mantenimiento
 
+- [Próximas actualizaciones / Upcoming updates](NEXT_UPDATES.md).
+- [Organización y mantenimiento del índice territorial](territory-index.md).
+
 - [Uso del Atlas, historias y desafíos](ATLAS.md).
 - [Contrato de personas, mandatos y cartografía](data-model.md).
 - [Añadir o corregir una persona](contributing-people.md).

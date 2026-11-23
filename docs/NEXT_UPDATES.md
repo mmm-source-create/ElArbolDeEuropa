@@ -1,4 +1,40 @@
-# Entregas de «next updates»
+# Próximas actualizaciones / Upcoming updates
+
+## Previsto · 23 de noviembre de 2026
+
+### Hoy en la Historia / Today in History
+
+**Pendiente de implementación.** Módulo bilingüe en la portada con una selección
+de acontecimientos, nacimientos y muertes que coincidan con el día y el mes.
+Cada entrada enlazará a su ficha o al capítulo correspondiente, con año y
+referencia documental. Se prevén tres o cuatro entradas y un selector de fecha.
+
+Las fechas completas de nacimiento y muerte permiten iniciar la selección.
+Batallas, matrimonios, coronaciones y otros acontecimientos requieren registrar
+y verificar el día y el mes. El sistema distinguirá calendarios y fechas
+aproximadas, y reunirá las menciones de un mismo acontecimiento para evitar
+que una boda aparezca repetida por sus dos cónyuges. La selección se generará
+como datos ligeros; las páginas independientes por día quedan para una fase
+con contenido suficiente.
+
+**Planned, not implemented.** A bilingual home-page feature with three or four
+anniversaries of events, births and deaths, plus a date selector. Each entry
+will include the year and documentary reference and link to the relevant
+record or story chapter. Exact event dates must be checked before inclusion;
+calendar conventions and approximate dates will remain explicit. References
+to the same event will be combined. The feature will use lightweight generated
+data; separate daily pages will follow only when they offer enough content.
+
+### Completado en 6.1.1 / Completed in 6.1.1
+
+Índice territorial organizado por regiones, con naturaleza y tipo visibles,
+filtros y acceso completo A–Z en español e inglés. Véanse las
+[notas de la entrega](releases/6.1.1.md).
+
+The territory index now offers geographic regions, visible entity kinds and
+types, filters and complete A–Z access in Spanish and English.
+
+## Historial de entregas
 
 La propuesta original se conserva en [archive/next-updates-v2.md](archive/next-updates-v2.md).
 Implementadas sucesivamente en una rama de revisión:
@@ -15,7 +51,7 @@ Implementadas sucesivamente en una rama de revisión:
 - [V2.20](versiones/V2.20.md): portada con familia, historia y año como entradas, más recomendaciones editoriales.
 - [V2.21](versiones/V2.21.md): edición inglesa acotada, con dos historias completas, cinco fichas breves, metodología, rutas equivalentes y disponibilidad explícita.
 
-## Alcance y límites
+## Alcance y límites de las entregas históricas
 
 «Mail limits» significa prevención futura de spam por correo. Se aplaza por indicación del usuario: todavía no hay una función de envío que requiera esos límites.
 
