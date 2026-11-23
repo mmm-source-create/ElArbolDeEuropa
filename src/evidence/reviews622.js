@@ -29,9 +29,10 @@ const CORRECTED = {
     note: 'Se corrige 1574 por 1575: el DBI, Medieval Lands y las fichas de la GND, la BnF y la Library of Congress coinciden en 1575. Britannica da 1574.', noteEn: 'Corrected from 1574 to 1575: the DBI, Medieval Lands and the GND, BnF and Library of Congress records agree on 1575. Britannica gives 1574.'},
   'person:ISABFRA:birth': {...base, sources: [rahSource('24095-isabel-de-francia', 'Isabel de Francia', 'María Raquel García Arancón', 'Isabel de Francia. ?, 18.III.1242 – Hyères, Provenza (Francia), 23.IV.1271. Reina de Navarra.'), loc('n79106846', 'Isabelle, Queen of Navarre, 1242-1271')],
     note: 'Se corrige 1241 por 1242: el Diccionario Biográfico Español da el 18 de marzo de 1242 y la Library of Congress, el mismo año.', noteEn: 'Corrected from 1241 to 1242: the Diccionario Biográfico Español gives 18 March 1242, and the Library of Congress the same year.'},
-  'person:EDUV1:birth': {...base, sources: [gnd('118709496', 'Hedwig, Polen, Königin', '3.10.1373', 'birth')],
-    alternatives: ['c. 1374 (Library of Congress)'],
-    note: 'Se corrige 1374 por 1373: la ficha GND da el 3 de octubre de 1373. La Library of Congress da «hacia 1374».', noteEn: 'Corrected from 1374 to 1373: the GND record gives 3 October 1373. The Library of Congress gives “approximately 1374”.'},
+  // 6.1.3: historians disagree on the year, so the date is shown as disputed.
+  'person:EDUV1:birth': {...base, certainty: 'disputed', sources: [gnd('118709496', 'Hedwig, Polen, Königin', '3.10.1373', 'birth')],
+    alternatives: ['18 feb. 1374 (otra parte de la historiografía)', 'c. 1374 (Library of Congress)'],
+    note: 'Fecha discutida. La ficha GND da el 3 de octubre de 1373; otros historiadores la sitúan el 18 de febrero de 1374 y la Library of Congress da «hacia 1374». El Atlas muestra 1373 sin darlo por cierto.', noteEn: 'Disputed date. The GND record gives 3 October 1373; other historians place it on 18 February 1374, and the Library of Congress gives “approximately 1374”. The Atlas shows 1373 without treating it as certain.'},
   'person:MARGABRAB1323:death': {...base, sources: [fmg('BRABANT%2C%20LOUVAIN.htm', '', 'MARGUERITE de Brabant (9 Feb 1323-1368, bur Lille Saint-Pierre)')],
     note: 'Se corrige 1380 por 1368. La entrada de Medieval Lands es la de la hija de Juan III de Brabante y esposa de Luis de Male, como en el Atlas.', noteEn: 'Corrected from 1380 to 1368. The Medieval Lands entry is that of the daughter of John III of Brabant and wife of Louis of Male, as in the Atlas.'},
 };

@@ -2,9 +2,11 @@
 
 ## Previsto · 23 de noviembre de 2026
 
-### 6.1.3 · Más personas / More people
+### Completado en 6.1.3 / Completed in 6.1.3 · Más personas / More people
 
-**Siguiente versión.** Ampliar la base de personas. Cada persona nueva entra
+Publicado en la 6.1.3: 51 personas nuevas y 5 completadas (ver `docs/releases/6.1.3.md`). El criterio se mantiene para las próximas ampliaciones.
+
+**Criterio.** Ampliar la base de personas. Cada persona nueva entra
 completa:
 - con retrato (cuadro de dominio público con su procedencia);
 - con ficha en español y en inglés;
@@ -15,7 +17,7 @@ completa:
 La traducción y la documentación de las fichas existentes quedan en pausa
 mientras tanto.
 
-**Next release.** Grow the people database. Every new person arrives complete:
+**Criterion.** Grow the people database. Every new person arrives complete:
 a portrait (a public-domain painting with its provenance), Spanish and English
 pages, a biography and a short summary, and dates, parents, marriages and
 governments checked against at least one reference work and cited with its

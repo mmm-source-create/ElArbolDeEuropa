@@ -16,6 +16,7 @@ import {AUTHORITY_REVIEWS_616} from './authorityReviews616.js';
 import {REVIEWS_617} from './reviews617.js';
 import {REVIEWS_621} from './reviews621.js';
 import {REVIEWS_622} from './reviews622.js';
+import {REVIEWS_613} from './reviews613.js';
 import {GND_DISCREPANCY_REVIEWS} from './gndDiscrepancyReviews.js';
 import {FRANCE_LOW_COUNTRIES_REVIEWS} from './franceLowCountriesReviews.js';
 import {BALKANS_FULL_REVIEWS} from './balkansFullReviews.js';
@@ -442,6 +443,8 @@ export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
   ...ROYAL_COVERAGE_REVIEWS,
   // 6.0.22: the DBE reviews only touch pending claims; its five date corrections replace earlier reviews.
   ...REVIEWS_622,
+  // 6.1.3: dates of the new people, checked against their GND records.
+  ...REVIEWS_613,
 }));
 
 export const EDITORIAL_HISTORY = Object.freeze([

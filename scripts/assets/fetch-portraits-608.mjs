@@ -56,6 +56,7 @@ for (const [id, m] of Object.entries(meta)) {
 const HEADERS = {
   '608': '// 6.0.8: portraits for the most relevant people without one, the governors\n// of the Netherlands and the grandchildren of Joanna I. Attributions are kept as published.\n',
   '609': '// 6.0.9: portraits for people who share a name and alternative images (sculpture,\n// miniature, coin) for relevant people without a painted portrait. Attributions are kept as published.\n',
+  '613': '// 6.1.3: portraits for the new people of culture, science, the School of Salamanca,\n// revolutions and exploration, matched on Wikidata and credited from Commons (scripts/research/people613). Attributions are kept as published.\n',
   '615': '// 6.0.15: portraits for Kościuszko and 99 rulers without one, matched on Wikidata and\n// credited from Commons (select-portraits-615.mjs, normalize-portraits-615.mjs). Attributions are kept as published.\n',
 };
 fs.writeFileSync(`src/data/imagenesPersonas${V}.js`, `${HEADERS[V]}export const PORTRAITS_${V} = ${JSON.stringify(es, null, 2)};\n`);

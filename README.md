@@ -2,14 +2,16 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.2**
-- [Notas de 6.1.2](docs/releases/6.1.2.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.3**
+- [Notas de 6.1.3](docs/releases/6.1.3.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.1.2 publica diez historias guiadas de dinastías, que forman una
-colección nueva, y diez biografías completas que sustituyen a minibiografías
-de una línea. Además, estabiliza la portada, añade Moravia a cuatro reyes de
-Bohemia, iguala las fichas inglesas de dinastías y territorios con las
-españolas y completa el SEO de prioridad baja.
+La versión 6.1.3 amplía la base a 2 865 personas. Entran 51 figuras de la
+cultura, la ciencia, la Escuela de Salamanca, las revoluciones y la
+exploración, y se completan cinco que ya estaban. Todas tienen retrato
+(salvo dos de las que no se conserva ninguno), ficha en español y en inglés,
+biografía, minibiografía y fechas contrastadas con su ficha de autoridad.
+Además, se publican seis historias nuevas, entre ellas la colección
+«Compañías libres».
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
