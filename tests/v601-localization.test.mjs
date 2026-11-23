@@ -23,7 +23,7 @@ test('Atlas presentation shares documentary vocabulary and retains original name
 test('all filter role, relationship, region and catalogue labels have English presentation',()=>{
  const read=path=>JSON.parse(readFileSync(new URL(path,import.meta.url)));
  // npm pretest generates this catalogue from the current bilingual sources.
- const people=read('../public/english-meta/people.json').people;
+ const people=read('../public/catalogos/people-en.json').items;
  const labels=[...CATEGORIAS_TITULO,...FILTROS_RELACION].map(item=>item.label).concat(FILTER_REGIONS,people.map(p=>p.papel));
  for(const value of new Set(labels))assert.notEqual(englishLabel(value),value,value);
 });
@@ -39,12 +39,12 @@ test('English credits require a real image, preserve attribution uncertainty, an
 });
 test('English catalogues preserve Spanish filter data, counts, member links and editorial state',()=>{
  const read=path=>JSON.parse(readFileSync(new URL(path,import.meta.url)));
- const spanish=read('../public/catalogos/personas.json').items,english=read('../public/english-meta/people.json').people;
+ const spanish=read('../public/catalogos/personas.json').items,english=read('../public/catalogos/people-en.json').items;
  assert.equal(english.length,spanish.length);
  const byId=new Map(spanish.map(p=>[p.id,p]));
  for(const p of english){const source=byId.get(p.id);for(const field of ['siglo','papel','region','relevancia'])assert.equal(p[field],source[field],`${p.id}/${field}`);assert(p.path.startsWith('/en/'));}
  for(const [es,en]of [['dinastias','dynasties'],['territorios','territories']]){
-  const source=read(`../public/catalogos/${es}.json`).items,items=read(`../public/english-meta/${en}.json`)[en];
+  const source=read(`../public/catalogos/${es}.json`).items,items=read(`../public/catalogos/${en}-en.json`).items;
   assert.equal(items.length,source.length);
   for(const p of items){const original=source.find(item=>item.slug===p.slug);assert(original,p.nombre);assert.equal(p.total,original.total);assert.equal(p.editorial,original.editorial??false);assert(p.path.startsWith('/en/'));for(const member of p.miembros)assert(member.path.startsWith('/en/'));}
  }

@@ -76,7 +76,7 @@ test('Every old chapter URL redirects to an existing new passage in both languag
 
 test('Generated catalogues share dynasty ranking and expose translated collections in search',()=>{
  const read=file=>JSON.parse(fs.readFileSync(`public/${file}`,'utf8'));
- const es=read('catalogos/dinastias.json').items,en=read('english-meta/dynasties.json').dynasties;
+ const es=read('catalogos/dinastias.json').items,en=read('catalogos/dynasties-en.json').items;
  const routes=new Map(TRANSLATED_DYNASTIES.map(d=>[d.es,d.en]));
  assert.deepEqual(en.map(p=>p.path),es.map(p=>`/en/dynasty/${routes.get(p.slug)}`));
  for(const [locale,query,label] of [['es','Herencias conflictivas','Herencias conflictivas'],['en','Contested Inheritances','Contested Inheritances']]){

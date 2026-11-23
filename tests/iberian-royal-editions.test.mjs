@@ -72,5 +72,5 @@ test('both homepages link straight to the tutorial in their language, preserving
 
 test('Sebastian’s requested portrait has a public-domain credit and working responsive assets',()=>{
  const image=IMAGENES_PERSONAS.SEBAS1PORT;assert.match(image.autor,/Cristóvão de Morais/);assert.match(image.institucion,/1165 Pint/);assert.match(image.derechos,/Dominio público/);
- assert(fs.existsSync('public'+image.archivo));const variants=IMAGE_VARIANTS[image.archivo];assert.equal(variants.variants.length,4);for(const v of variants.variants)assert(fs.existsSync('public'+v.src));
+ assert(fs.existsSync('public'+image.archivo));const variants=IMAGE_VARIANTS[image.archivo];assert.equal(variants.variants.length,5);for(const v of variants.variants)assert(fs.existsSync('public'+v.src));
 });

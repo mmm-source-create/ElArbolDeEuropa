@@ -74,3 +74,17 @@ function redirectPatterns(source) {
 // generated page (renamed people). Cloudflare already sends a request with no
 // matching asset to the Worker, and run_worker_first allows at most 100 rules.
 export const redirectWorkerPatterns=[...new Set((config.redirects||[]).filter(rule=>rule.workerFirst!==false).flatMap(rule=>redirectPatterns(rule.source)))];
+
+// 6.1.0: Cloudflare's own trailing-slash and /index.html redirects are 307
+// (temporary). These rules run before html_handling and make them permanent,
+// so search engines consolidate both forms on the canonical URL. The root "/"
+// is not here: the Worker redirects it, because a "/" rule would also redirect
+// the shell that the Worker fetches for embeds and atlas views.
+export function staticRedirectsFile(depth=6){
+  const lines=['/index.html /es 301'];
+  for(let n=1;n<=depth;n++){
+    const path=Array.from({length:n},(_,i)=>`/:p${i}`).join('');
+    lines.push(`${path}/ ${path} 301`,`${path}/index.html ${path} 301`);
+  }
+  return `${lines.join('\n')}\n`;
+}

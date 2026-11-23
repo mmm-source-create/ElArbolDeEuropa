@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import worker from '../cloudflare/worker.js';
-import {resolveHostingRoute,securityHeaders,staticHeadersFile,redirectWorkerPatterns} from '../cloudflare/routing.js';
+import {resolveHostingRoute,securityHeaders,staticHeadersFile,staticRedirectsFile,redirectWorkerPatterns} from '../cloudflare/routing.js';
 import {metadataFromHtml} from '../src/utils/staticMetadata.js';
 const url=path=>new URL(path,'https://example.test');
 const config=JSON.parse(fs.readFileSync(new URL('../wrangler.jsonc',import.meta.url)));
@@ -11,7 +11,7 @@ test('common SSG and atlas URLs remain static-first; only legacy redirects force
  assert.equal(config.assets.html_handling,'drop-trailing-slash');
  assert.equal(config.assets.not_found_handling,'none');
  assert.deepEqual(config.assets.run_worker_first,redirectWorkerPatterns);
- for(const path of ['/','/es/persona/carlos-v','/es/persona/carlos-v?atlas=1','/en/person/charles-v','/assets/main.js','/personas-meta/carlos-v.json']) {
+ for(const path of ['/es/persona/carlos-v','/es/persona/carlos-v?atlas=1','/en/person/charles-v','/assets/main.js','/personas-meta/carlos-v.json']) {
   const pathname=url(path).pathname;
   assert(!redirectWorkerPatterns.some(p=>p.endsWith('*')?pathname.startsWith(p.slice(0,-1)):p===pathname),path);
  }
@@ -68,4 +68,16 @@ test('production is explicit, limited to the owned domains, and temporary hosts 
  assert(config.routes.every(r=>r.custom_domain===true));
  const response=await worker.fetch(new Request('https://example.workers.dev/embed/arbol'),{...env,DEPLOYMENT_ENV:'production'});
  assert.equal(response.headers.get('X-Robots-Tag'),'noindex, nofollow');
+});
+
+test('6.1.0: the root and the alternative URL forms redirect permanently to the canonical page',()=>{
+ assert.deepEqual(resolveHostingRoute(url('/')),{redirect:'/es',status:308});
+ assert(redirectWorkerPatterns.includes('/'));
+ const rules=staticRedirectsFile().trim().split('\n').map(line=>line.split(' '));
+ assert(rules.every(rule=>rule.length===3&&rule[2]==='301'));
+ assert(rules.some(([from,to])=>from==='/:p0/:p1/:p2/'&&to==='/:p0/:p1/:p2'));
+ assert(rules.some(([from,to])=>from==='/:p0/:p1/:p2/:p3/:p4/index.html'&&to==='/:p0/:p1/:p2/:p3/:p4'));
+ // A rule for "/" would also redirect the shell the Worker fetches for embeds.
+ assert(!rules.some(([from])=>from==='/'));
+ assert.match(fs.readFileSync(new URL('../scripts/prepare-cloudflare.mjs',import.meta.url),'utf8'),/'_redirects'\),staticRedirectsFile\(\)/);
 });

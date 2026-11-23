@@ -11,7 +11,7 @@ const STORY_PORTRAITS = {borgona: 'CAR1BORG', emperadores: 'CARLOS5', 'cien-anos
 const TABS_ES = [{value: 'people', label: 'Personas'}, {value: 'stories', label: 'Historias'}];
 const TABS_EN = [{value: 'people', label: 'People'}, {value: 'stories', label: 'Stories'}];
 
-export function Portrait({id, className = '', sizes = '300px'}) {
+export function Portrait({id, className = '', sizes = '(max-width: 650px) 76vw, 300px'}) {
   const image = IMAGENES_PERSONAS[id];
   return <span className={`home-portrait ${className}`} aria-hidden="true">{image
     ? <img {...responsiveImage(image.archivo, sizes)} alt="" loading="lazy" decoding="async" style={{objectPosition: image.encuadre || image.posicion || '50% 20%'}}/>

@@ -28,6 +28,8 @@ import ReadingSkeleton from '../stories/ReadingSkeleton.jsx';
 import StoryCatalog from '../stories/StoryCatalog.jsx';
 import {STORY_PROGRESS_KEY} from '../stories/storyModel.js';
 import {translatedEquivalent} from '../english/routes.js';
+import {featuredOrder, personFacets} from './catalogPreview.js';
+import {loadJsonAsset} from '../../utils/loadAsset.js';
 import '../../styles/theme.css';
 
 const INFO_PAGES = {
@@ -151,7 +153,18 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
   const originalConfig = CATALOG_CONFIG[tipo] || CATALOG_CONFIG.personas;
   const config = en ? {...originalConfig,title:catalogTitle||catalogNames[tipo],eyebrow:{personas:'Atlas index',dinastias:'Houses and lineages',territorios:'Crowns and political territories',historias:'Guided stories'}[tipo],description:{personas:'Search by name, title, dynasty or territory.',dinastias:'Explore the origins, branches, inheritances and connections of the houses in the Atlas.',territorios:'Explore the territories in the database and the people who connect them.',historias:'Stories built from the people, maps, biographies and chronology of the Atlas.'}[tipo]} : originalConfig;
   const Icon = config.icon;
-  const { data, loading, error } = useJson(`/catalogos/${tipo}.json`, initialData);
+  const { data: initial, loading, error } = useJson(`/catalogos/${tipo}.json`, initialData);
+  // 6.1.0: a static page carries the first items; the complete list follows.
+  const preview = initial?.partial || null;
+  const [complete, setComplete] = useState(null);
+  useEffect(() => {
+    if (!preview?.full) return;
+    let cancelled = false;
+    loadJsonAsset(preview.full).then(full => { if (!cancelled && Array.isArray(full?.items)) setComplete(full.items); }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [preview?.full]);
+  const partial = preview && !complete ? preview : null;
+  const data = complete ? {...initial, items: complete} : initial;
   const [query, setQuery] = useState("");
   useEffect(() => {setQuery(new URLSearchParams(window.location.search).get("q") || "");}, [tipo]);
   const [soloHistoria, setSoloHistoria] = useState(false);
@@ -168,16 +181,11 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
     const inicial = item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase();
     const elegidos = lista.filter(item => (siglo === null || (siglo === "sin" ? item.siglo == null : item.siglo === siglo))
       && (!papel || item.papel === papel) && (!region || item.region === region) && (!letra || inicial(item) === letra));
-    return orden === "destacadas" && !q ? elegidos.slice().sort((a, b) => (b.relevancia || 0) - (a.relevancia || 0) || a.nombre.localeCompare(b.nombre, locale)) : elegidos.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre,locale));
+    return orden === "destacadas" && !q ? featuredOrder(elegidos, locale) : elegidos.slice().sort((a,b)=>a.nombre.localeCompare(b.nombre,locale));
   }, [items, query, tipo, soloHistoria, filtrosPersona, orden, locale]);
   useEffect(() => { setLimite(120); }, [query, filtrosPersona, orden]);
   const visibles = tipo === "personas" ? filtrados.slice(0, limite) : filtrados;
-  const facetas = useMemo(() => {
-    if (tipo !== "personas") return null;
-    const contar = clave => { const m = new Map(); for (const item of items) if (item[clave] != null) m.set(item[clave], (m.get(item[clave]) || 0) + 1); return m; };
-    const letras = [...new Set(items.map(item => normalizarBusquedaPublica(item.nombre).charAt(0).toUpperCase()).filter(l => /[A-Z]/.test(l)))].sort();
-    return {siglos: [...contar("siglo")].sort((a, b) => a[0] - b[0]), papeles: [...contar("papel")].sort((a, b) => b[1] - a[1]), regiones: [...contar("region")].sort((a, b) => (a[0] === "Otros") - (b[0] === "Otros") || b[1] - a[1]), letras};
-  }, [items, tipo]);
+  const facetas = useMemo(() => tipo !== "personas" ? null : partial?.facetas || personFacets(items), [items, tipo, partial]);
   // Progreso de lectura guardado en este navegador (solo se lee tras montar).
   const [progresoHistorias, setProgresoHistorias] = useState({});
   useEffect(() => {
@@ -186,6 +194,8 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
   }, [tipo]);
   const alternarFiltro = (clave, valor) => setFiltrosPersona(actual => ({...actual, [clave]: actual[clave] === valor ? null : valor}));
   const filtrosActivos = Object.values(filtrosPersona).filter(v => v !== null).length;
+  // While only the first items are loaded, the counts are those of the whole catalogue.
+  const cuenta = partial && !query.trim() && !filtrosActivos && !soloHistoria ? partial.total : filtrados.length;
   usePublicMeta({
     title: `${config.title} — ${en?SITE_NAME_EN:SITE_NAME}`,
     description: config.description,
@@ -221,10 +231,10 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
         )}
         {!loading && !error && tipo === "personas" && (
           <>
-            <div className="public-catalog-note">{filtrados.length} {filtrados.length === 1 ? tr("persona","person") : tr("personas","people")}{orden === "destacadas" && !query.trim() ? tr(" · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados"," · most relevant first: portraits, extended biographies and recorded governments") : ""}</div>
+            <div className="public-catalog-note">{cuenta} {cuenta === 1 ? tr("persona","person") : tr("personas","people")}{orden === "destacadas" && !query.trim() ? tr(" · las más relevantes primero: con retrato, biografía extensa y gobiernos registrados"," · most relevant first: portraits, extended biographies and recorded governments") : ""}</div>
             <p className="public-catalog-note"><a href={en?"/en/people/a-z":"/es/personas/indice"}>{tr("Ver todas las personas en el índice de la A a la Z","See everyone in the A–Z index")}</a></p>
             <div className="public-person-list">{visibles.map((persona) => <PersonaMiniCard key={persona.id} persona={persona} compact locale={locale}/>)}</div>
-            {visibles.length < filtrados.length && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>{tr("Ver más","Show more")} ({filtrados.length - visibles.length} {tr("restantes","remaining")})</button>}
+            {visibles.length < cuenta && <button type="button" className="public-secondary people-more" onClick={() => setLimite(n => n + 120)}>{tr("Ver más","Show more")} ({cuenta - visibles.length} {tr("restantes","remaining")})</button>}
             {!filtrados.length && <p className="public-muted">{tr("Ninguna persona coincide con estos filtros.","No people match these filters.")}</p>}
           </>
         )}
@@ -241,6 +251,7 @@ export function CatalogPage({ tipo, locale='es', initialData=null, embedded=fals
             ))}
           </div>
         )}
+        {!loading && !error && partial && (tipo === "dinastias" || tipo === "territorios") && <p className="public-catalog-note">{tr(`Se muestran ${filtrados.length} de ${partial.total}; el resto se está cargando.`,`Showing ${filtrados.length} of ${partial.total}; the rest is loading.`)}</p>}
         {!loading && !error && tipo === "dinastias" && <p className="public-catalog-note public-arms-note">{tr("Escudos: autores, procedencia y licencias en","Arms: authors, sources and licences in")} <a href={en?"/en/licences#escudos":"/es/licencias#escudos"}>{tr("Licencias","Licences")}</a>.</p>}
 
         {!loading && !error && tipo === "historias" && <StoryCatalog items={filtrados} progress={progresoHistorias} locale={locale}/>}

@@ -7,6 +7,7 @@ import {ENGLISH_STORY_LABELS} from '../../src/features/english/storyLabels.js';
 import {translatedEquivalent} from '../../src/features/english/routes.js';
 import fs from 'node:fs/promises';
 import {ENGLISH_DYNASTIES,ENGLISH_TERRITORIES} from '../../src/features/english/entityTranslations.js';
+import {entitySummary,entityDisplayName,ENTITY_SUMMARIES_610} from '../../src/features/english/entitySummaries610.js';
 import {ENGLISH_NAMES,PROFILE_LABELS,translatedProfileText} from '../../src/features/english/profileVocabulary.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
 import {escudoDe} from '../../src/content/dinastias/escudos.js';
@@ -56,7 +57,7 @@ export async function englishEntityPages(people){
   const arms=escudoDe(source.nombre);
   const branch=r=>{const sourceTranslation=(translatedSource.ramas||[]).find(item=>item.id===r.id)||{};const translation=t.connections?.[r.id]||ROSES_CONNECTIONS[r.id]||sourceTranslation;if(!Object.keys(translation).length)throw Error(`Translate new house connection: ${r.id}`);return ({...r,...sourceTranslation,...translation,fuentes:sources(r.fuentes),fundador:card(r.fundador,people),personas:r.personas.map(p=>card(p,people))});};
   const house=(h,field)=>{const sourceTranslation=(translatedSource[field]||[]).find(item=>item.nombre===h.nombre||item.key===h.nombre||item.slug===h.slug)||{};const summary=t.houses?.[h.nombre]??ROSES_RELATED_HOUSES[h.nombre]??sourceTranslation.resumen;if(summary===undefined)throw Error(`Translate related house: ${h.nombre}`);return ({...h,...sourceTranslation,key:h.nombre,nombre:term(h.nombre),resumen:summary,miembros:h.miembros.map(p=>card(p,people)),path:translatedEquivalent(`/es/dinastia/${h.slug}`,'en')||`/es/dinastia/${h.slug}`});};
-  pages.push({...source,...translatedSource,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:source.nombre,fuentes:sources(source.fuentes),nombre:entityName(t),description:t.summary,resumen:t.summary,origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
+  pages.push({...source,...translatedSource,type:'dynasty',path:`/en/dynasty/${t.en}`,esPath:`/es/dinastia/${t.es}`,key:source.nombre,fuentes:sources(source.fuentes),nombre:entityDisplayName('dynasty',t.en,entityName(t)),description:entitySummary('dynasty',t.en,t.summary),resumen:entitySummary('dynasty',t.en,t.summary),origen:t.origin,trayectoria:t.history,legado:t.legacy,editorial:true,
    miembros:source.miembros.map(p=>card(p,people)),protagonistas:source.protagonistas.map(p=>card(p,people)),gobiernos:source.gobiernos.map(g=>government(g,people)),territorios:source.territorios.map(key=>({key,name:term(key)})),ramas:source.ramas.map(branch),casasOrigen:source.casasOrigen.map(h=>house(h,'casasOrigen')),casasDerivadas:source.casasDerivadas.map(h=>house(h,'casasDerivadas')),casasConectadas:source.casasConectadas.map(h=>house(h,'casasConectadas')),
    arms:arms?.imagen?{tipo:arms.tipo,...arms.imagen,licencia:englishCredit(arms.imagen.licencia),autor:arms.imagen.en?.autor||englishArmsAuthor(arms.imagen.autor)||t.armsAuthor,blazon:arms.en?.blazon||t.blazon,note:arms.en?.note||t.armsNote,modifications:arms.imagen.en?.modifications||t.armsModifications||'A viewBox was added for responsive scaling; the drawing is unchanged.'}:null,
   });
@@ -66,7 +67,7 @@ export async function englishEntityPages(people){
   const translatedSource=t.translatedSource||{};
   for(const field of ['evolucion','uniones','eventos'])if(source[field]?.length&&!translatedSource[field]?.length)throw Error(`Translate new territory section: ${t.key}/${field}`);
   if((source.sucesiones?.relevos?.length||source.sucesiones?.crisis?.length)&&!translatedSource.sucesiones)throw Error(`Translate new succession: ${t.key}`);
-  pages.push({...source,...translatedSource,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:entityName(t),description:t.summary,resumen:t.summary,
+  pages.push({...source,...translatedSource,type:'territory',path:`/en/territory/${t.en}`,esPath:`/es/territorio/${t.es}`,key:t.key,fuentes:sources(source.fuentes),nombre:entityDisplayName('territory',t.en,entityName(t)),description:entitySummary('territory',t.en,t.summary),resumen:entitySummary('territory',t.en,t.summary),
    gobiernos:source.gobiernos.map(g=>government(g,people,t.notes)),personas:source.personas.map(p=>{const translated=people.find(t=>t.id===p.id),summary=translated?.summary||t.people[p.id];if(p.resumen&&!summary)throw Error(`Missing territory biography: ${p.id}`);return {...card(p,people),resumen:summary};}),
    historias:(source.historias||[]).map(englishEntityStory),
    dinastias:source.dinastias.map(key=>({key,name:term(key)})),relacionados:source.relacionados.map(r=>({...r,nombre:term(r.nombre)})),
@@ -89,3 +90,6 @@ export async function englishEntityPages(people){
  }
  return pages;
 }
+
+// 6.1.0: every hand-written summary must still match a generated page.
+for(const key of Object.keys(ENTITY_SUMMARIES_610)){const [kind,slug]=key.split(':');if(![...ENGLISH_DYNASTIES.map(t=>`dynasty:${t.en}`),...ENGLISH_TERRITORIES.map(t=>`territory:${t.en}`)].includes(key))throw Error(`Summary for an unknown page: ${key}`);}

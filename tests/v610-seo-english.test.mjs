@@ -64,7 +64,7 @@ test('person titles and descriptions carry dates, family and governments', () =>
 
 test('person JSON-LD links parents, spouses and children', () => {
   const data = personJsonLd(federico, {path: '/es/persona/federico-ii-hohenstaufen', description: 'd', siteUrl: SITE});
-  const [person, crumbs] = data['@graph'];
+  const [person, , crumbs] = data['@graph'];
   assert.equal(data['@context'], 'https://schema.org');
   assert.equal(person['@type'], 'Person');
   assert.equal(person.birthDate, '1194');
@@ -77,7 +77,7 @@ test('person JSON-LD links parents, spouses and children', () => {
   assert.deepEqual(crumbs.itemListElement.map(i => i.item), [`${SITE}/es`, `${SITE}/es/personas`, `${SITE}/es/persona/federico-ii-hohenstaufen`]);
   // Approximate years are not presented as exact dates.
   assert.equal(personJsonLd({...federico, nacAprox: true}, {path: '/es/persona/x', siteUrl: SITE})['@graph'][0].birthDate, undefined);
-  assert.equal(entityJsonLd('dinastia', {nombre: 'Habsburgo'}, {path: '/es/dinastia/habsburgo', siteUrl: SITE})['@graph'][0].itemListElement[2].name, 'Casa de Habsburgo');
+  assert.equal(entityJsonLd('dinastia', {nombre: 'Habsburgo'}, {path: '/es/dinastia/habsburgo', siteUrl: SITE})['@graph'].find(n => n['@type'] === 'BreadcrumbList').itemListElement[2].name, 'Casa de Habsburgo');
 });
 
 test('the A–Z index groups people by initial, accents included', () => {
