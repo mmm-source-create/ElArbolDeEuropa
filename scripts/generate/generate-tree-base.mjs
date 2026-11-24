@@ -13,7 +13,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { biografiaExtensaPersona } from "../../src/content/biografias-extensas.js";
 import { IMAGENES_PERSONAS } from "../../src/data/imagenesPersonas.js";
-import { ogPersonaImage, ogPortraitAvailable } from "../../src/features/public/ogImages.js";
+import { IMAGE_VARIANTS } from "../../src/data/imageVariants.js";
 import { regionResolver } from "../../src/domain/filters/filterRegions.js";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "../../src/domain/people/personPresentation.js";
 
@@ -524,7 +524,8 @@ async function generarPortadasPersona() {
       relacionadosDinastia: relacionadosDinastia(persona),
       contemporaneos: contemporaneos(persona),
       historias: HISTORIAS_POR_PERSONA[persona.id] || [],
-      ...(ogPortraitAvailable(IMAGENES_PERSONAS[persona.id]) ? {ogImage: ogPersonaImage(PERSONA_SLUG_POR_ID[persona.id])} : {}),
+      // 6.2.0: the widest published portrait, for the Person structured data.
+      ...(IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id]?.archivo]?.variants.at(-1)?.src ? {imagen: IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id].archivo].variants.at(-1).src} : {}),
     };
     await fs.writeFile(path.join(personaDir, `${meta.slug}.json`), JSON.stringify(meta), "utf8");
   }));

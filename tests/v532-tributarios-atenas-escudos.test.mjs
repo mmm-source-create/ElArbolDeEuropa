@@ -8,7 +8,6 @@ import {TRIBUTARY_RELATIONS, tributaryLayerRelation} from '../src/cartography/tr
 import {aragonCrownRelation} from '../src/cartography/aragonCrownRelations.js';
 import {REINO_COLOR} from '../src/cartography/kingdomMaps.js';
 import {ESCUDOS, escudoDe, CREDITOS_ESCUDOS} from '../src/content/dinastias/escudos.js';
-import {OG_FREE_LICENCE, ogArmsCreditFile} from '../src/features/public/ogImages.js';
 import {personClaims} from '../src/evidence/claims.js';
 
 const read = path => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
@@ -105,7 +104,6 @@ test('los escudos propuestos se usan con su crédito y sus archivos', () => {
   const files = new Set(fs.readdirSync(new URL('../public/escudos/', import.meta.url)));
   for (const c of CREDITOS_ESCUDOS) {
     assert.ok(files.has(c.archivo.replace('/escudos/', '')), c.dinastia);
-    if (!OG_FREE_LICENCE.test(c.licencia)) assert.ok(fs.existsSync(new URL(`../${ogArmsCreditFile(c.archivo)}`, import.meta.url)), c.dinastia);
   }
   assert.equal(files.size, new Set(CREDITOS_ESCUDOS.map(c => c.archivo)).size);
 });

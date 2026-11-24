@@ -1,5 +1,5 @@
 import {resolveHostingRoute, securityHeaders} from './routing.js';
-import {metadataFromHtml} from '../src/utils/staticMetadata.js';
+import {metadataFromHtml, recordFromHtml, spanishRecordRoute} from '../src/utils/staticMetadata.js';
 
 function secure(response, request, env) {
   const headers = new Headers(response.headers);
@@ -30,6 +30,14 @@ export default {
       const html=await env.ASSETS.fetch(new URL(route,url));
       const data=metadataFromHtml(await html.text(),route);
       return secure(Response.json(data),request,env);
+    }
+    // 6.2.0: the same for Spanish records. Files that are still uploaded (the
+    // index, aliases) are served as assets and never reach the Worker.
+    const recordRoute=spanishRecordRoute(url.pathname);
+    if(recordRoute) {
+      const html=await env.ASSETS.fetch(new URL(recordRoute,url));
+      if(!html.ok)return secure(Response.json({error:'not_found'},{status:404}),request,env);
+      return secure(Response.json(recordFromHtml(await html.text(),recordRoute)),request,env);
     }
     const route = resolveHostingRoute(url);
     if (route.redirect) {

@@ -2,6 +2,14 @@
 
 ## Previsto · 23 de noviembre de 2026
 
+### Completado en 6.2.0 / Completed in 6.2.0 · Espacio en Cloudflare / Cloudflare space
+
+Publicado en la 6.2.0 (ver `docs/releases/6.2.0.md`): datos de las fichas en
+español leídos de su página, una tarjeta para compartir rediseñada por idioma,
+retratos sin variante de 96 px y el año de Europa guardado al pasar la pestaña
+a segundo plano. Si vuelve a faltar margen, queda el plan Workers Paid (5 $ al
+mes, 100 000 archivos).
+
 ### Completado en 6.1.3 / Completed in 6.1.3 · Más personas / More people
 
 Publicado en la 6.1.3: 51 personas nuevas y 5 completadas (ver `docs/releases/6.1.3.md`). El criterio se mantiene para las próximas ampliaciones.

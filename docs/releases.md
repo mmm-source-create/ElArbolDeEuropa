@@ -2,6 +2,7 @@
 
 ## Serie 6
 
+- [6.2.0: espacio en Cloudflare y tarjeta para compartir](releases/6.2.0.md).
 - [6.1.4: lectura, búsqueda y reproducción temporal](releases/6.1.4.md).
 
 - [6.1.1: índice territorial bilingüe](releases/6.1.1.md).

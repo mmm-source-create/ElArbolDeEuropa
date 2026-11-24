@@ -6,7 +6,6 @@ import {europeMosaicAt} from '../src/cartography/europePanorama.js';
 import {mapAuthoritiesForPerson} from '../src/cartography/mapAuthorities.js';
 import {TRIBUTARY_RELATIONS} from '../src/cartography/tributaryRelations.js';
 import {ESCUDOS, escudoDe, CREDITOS_ESCUDOS} from '../src/content/dinastias/escudos.js';
-import {OG_FREE_LICENCE, ogArmsCreditFile} from '../src/features/public/ogImages.js';
 
 const read = path => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const data = JSON.parse(read('data/cartography/corridor-locations.json'));
@@ -48,7 +47,6 @@ test('los escudos propuestos llegan a sus casas, con crédito y archivo', () => 
   for (const c of CREDITOS_ESCUDOS) {
     assert.ok(files.has(c.archivo.replace('/escudos/', '')), c.dinastia);
     assert.ok(c.autor && c.fuente.startsWith(c.procedencia==='Aportación del autor'?'https://heraldicon.org/arms/':c.procedencia==='WappenWiki'?'https://wappenwiki.org/index.php/File:':'https://commons.wikimedia.org/wiki/File:'), c.dinastia);
-    if (!OG_FREE_LICENCE.test(c.licencia)) assert.ok(fs.existsSync(new URL(`../${ogArmsCreditFile(c.archivo)}`, import.meta.url)), c.dinastia);
   }
   assert.equal(files.size, new Set(CREDITOS_ESCUDOS.map(c => c.archivo)).size);
 });

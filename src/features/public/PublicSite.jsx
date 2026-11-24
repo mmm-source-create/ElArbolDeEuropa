@@ -18,7 +18,7 @@ import {formatClaimDate} from '../../evidence/claims.js';
 import React, {useState, useMemo, useEffect} from 'react';
 import {Info, Landmark, Scale, Heart, ExternalLink, Users, Shield, BookOpen, Search, ArrowRight, ArrowLeft, GitBranch} from 'lucide-react';
 import {IMAGENES_PERSONAS} from '../../data/imagenesPersonas.js';
-import {usePublicMeta, PublicLayout, Breadcrumbs, useJson, PersonaMiniCard, rutaEntidad, personaDates} from './publicShared.jsx';
+import {usePublicMeta, PublicLayout, Breadcrumbs, useJson, PersonaMiniCard, rutaEntidad, personaDates, BUILD_VERSION} from './publicShared.jsx';
 import ProjectSupport from '../../components/ProjectSupport.jsx';
 import DynastyArms from '../../components/DynastyArms.jsx';
 import DynastyCard from './DynastyCard.jsx';
@@ -295,16 +295,13 @@ export function PersonPage({ slug, legacyId, onExplore, initialData = null }) {
       try {
         let finalSlug = slug;
         if (!finalSlug && legacyId) {
-          const indexResponse = await fetch("/personas-meta/index.json", { cache: "no-store" });
-          if (!indexResponse.ok) throw new Error("index");
-          const index = await indexResponse.json();
+          const index = await loadJsonAsset(`/personas-meta/index.json?v=${encodeURIComponent(BUILD_VERSION)}`);
           finalSlug = index[legacyId] || null;
         }
         if (!finalSlug) throw new Error("slug");
         setResolvedSlug(finalSlug);
-        const response = await fetch(`/personas-meta/${encodeURIComponent(finalSlug)}.json`, { cache: "no-store" });
-        if (!response.ok) throw new Error("persona");
-        const persona = await response.json();
+        // 6.2.0: on Cloudflare the record is read from its static page.
+        const persona = await loadJsonAsset(`/personas-meta/${encodeURIComponent(finalSlug)}.json?v=${encodeURIComponent(BUILD_VERSION)}`);
         if (!cancelled) setState({ loading: false, persona, error: false });
       } catch {
         if (!cancelled) setState({ loading: false, persona: null, error: true });

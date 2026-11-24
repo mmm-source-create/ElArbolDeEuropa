@@ -57,7 +57,7 @@ export function personJsonLd(p, {locale = 'es', path, description, siteUrl}) {
     ...(year(p.nac, p.nacAprox) ? {birthDate: year(p.nac, p.nacAprox)} : {}),
     ...(year(p.muer, p.muerAprox) ? {deathDate: year(p.muer, p.muerAprox)} : {}),
     ...((en ? p.role : p.titulo) ? {jobTitle: en ? p.role : p.titulo} : {}),
-    ...(p.ogImage ? {image: absolute(p.ogImage, siteUrl)} : {}),
+    ...(p.imagen ? {image: absolute(p.imagen, siteUrl)} : {}),
   };
   for (const [field, list] of [['parent', p.padres], ['spouse', p.conyuges], ['children', p.hijos]]) {
     const items = relatives(list, locale, siteUrl);

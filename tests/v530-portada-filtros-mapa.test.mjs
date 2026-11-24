@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/data/personas.js';
 import {publicMeta, entityMeta} from '../src/features/public/publicMeta.js';
-import {OG_DEFAULT_IMAGE, ogPersonaImage, ogDynastyImage} from '../src/features/public/ogImages.js';
+import {OG_DEFAULT_IMAGE, OG_DEFAULT_IMAGE_EN} from '../src/features/public/ogImages.js';
 import {atlasFilterOptions, territoryRegion} from '../src/domain/filters/atlasFilters.js';
 import {TERRITORIOS_SUB, subterritoriosDeFiltro} from '../src/domain/filters/territoryFilters.js';
 import {territoriosDe} from '../src/domain/genealogy/personAccessors.js';
@@ -16,19 +16,21 @@ import {ESCUDOS, escudoDe, CREDITOS_ESCUDOS} from '../src/content/dinastias/escu
 const read = path => fs.readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
 const meta = (m, key) => m.meta.find(([, k]) => k === key)?.[2];
 
-test('cada ficha comparte una imagen de 1200×630 y una tarjeta grande', () => {
-  const carlos = publicMeta(entityMeta('persona', {nombre: 'Carlos V', resumen: 'Emperador.', ogImage: ogPersonaImage('carlos-v')}, 'carlos-v'));
-  assert.equal(meta(carlos, 'og:image'), 'https://www.treeofeurope.eu/og/persona/carlos-v.jpg');
+test('6.2.0: todas las páginas comparten la tarjeta del sitio en su idioma, de 1200×630', () => {
+  const carlos = publicMeta(entityMeta('persona', {nombre: 'Carlos V', resumen: 'Emperador.', ogImage: '/og/persona/carlos-v.jpg'}, 'carlos-v'));
+  assert.equal(meta(carlos, 'og:image'), new URL(OG_DEFAULT_IMAGE, 'https://www.treeofeurope.eu').href);
   assert.equal(meta(carlos, 'og:image:width'), '1200');
-  assert.equal(meta(carlos, 'og:image:alt'), 'Retrato de Carlos V');
+  assert.equal(meta(carlos, 'og:image:alt'), 'El Árbol de Europa');
   assert.equal(meta(carlos, 'twitter:card'), 'summary_large_image');
   assert.equal(meta(carlos, 'twitter:image'), meta(carlos, 'og:image'));
-  const house = publicMeta(entityMeta('dinastia', {nombre: 'Habsburgo', slug: 'habsburgo', ogImage: ogDynastyImage('habsburgo')}, 'habsburgo'));
-  assert.equal(meta(house, 'og:image'), 'https://www.treeofeurope.eu/og/dinastia/habsburgo.jpg');
-  const territory = publicMeta(entityMeta('territorio', {nombre: 'Navarra', resumen: 'Reino.'}, 'navarra'));
-  assert.equal(meta(territory, 'og:image'), new URL(OG_DEFAULT_IMAGE, 'https://www.treeofeurope.eu').href);
-  assert.match(read('index.html'), /property="og:image" content="https:\/\/www\.treeofeurope\.eu\/og\/eade\.jpg"/);
-  assert.match(read('package.json'), /generate-og-images\.mjs/);
+  const house = publicMeta(entityMeta('dinastia', {nombre: 'Habsburgo', slug: 'habsburgo'}, 'habsburgo'));
+  assert.equal(meta(house, 'og:image'), meta(carlos, 'og:image'));
+  const english = publicMeta({title: 'Charles V', description: 'Emperor.', path: '/en/person/charles-v'});
+  assert.equal(meta(english, 'og:image'), new URL(OG_DEFAULT_IMAGE_EN, 'https://www.treeofeurope.eu').href);
+  assert.equal(meta(english, 'og:image:alt'), 'The Tree of Europe');
+  for (const file of [OG_DEFAULT_IMAGE, OG_DEFAULT_IMAGE_EN]) assert.ok(fs.existsSync(new URL(`../public${file}`, import.meta.url)), file);
+  assert.match(read('index.html'), /property="og:image" content="https:\/\/www\.treeofeurope\.eu\/brand\/og-es\.jpg"/);
+  assert.doesNotMatch(read('package.json'), /generate-og-images\.mjs/);
 });
 
 test('los filtros territoriales agrupan por entidad política y región, sin sufijos ni sueltos', () => {
