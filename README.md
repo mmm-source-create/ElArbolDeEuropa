@@ -2,14 +2,13 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.2.0**
-- [Notas de 6.2.0](docs/releases/6.2.0.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.2.1**
+- [Notas de 6.2.1](docs/releases/6.2.1.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.2.0 libera espacio en Cloudflare para seguir ampliando la base:
-las fichas en español leen sus datos de su propia página, como ya hacía la
-edición inglesa, todas las páginas comparten una tarjeta para compartir
-rediseñada y los retratos dejan la variante de 96 px. En el móvil, el año de
-«Europa en este año» también se guarda al pasar la pestaña a segundo plano.
+La versión 6.2.1 corrige el buscador del Atlas: toda la barra sirve para
+empezar a escribir, el texto tiene más sitio y la barra sigue sin cambiar de
+tamaño al escribir. La 6.2.0 liberó espacio en Cloudflare y rediseñó la
+tarjeta para compartir.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables
