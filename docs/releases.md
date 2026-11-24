@@ -2,6 +2,8 @@
 
 ## Serie 6
 
+- [6.1.4: lectura, búsqueda y reproducción temporal](releases/6.1.4.md).
+
 - [6.1.1: índice territorial bilingüe](releases/6.1.1.md).
 - [6.1.0: SEO y rendimiento](releases/6.1.0.md).
 

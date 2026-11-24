@@ -194,6 +194,9 @@ test('Europa es una vista del Atlas: agrupa títulos, abre una persona y restaur
   const axis=document.querySelector('.atlas-timeline-axis');
   await act(async()=>{axis.dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));});
   assert.equal(document.querySelector('.europe-heading h1').textContent,'Europa en 1531');
+  // Manual year changes update the view immediately and settle the URL once.
+  assert.equal(new URLSearchParams(window.location.search).get('anio'),'1530');
+  await act(async()=>{await new Promise(r=>setTimeout(r,400));});
   assert.equal(new URLSearchParams(window.location.search).get('anio'),'1531');assert.match(document.title,/Europa en 1531/);
   const timeline=document.querySelector('.atlas-timeline-scroll');
   await act(async()=>{
