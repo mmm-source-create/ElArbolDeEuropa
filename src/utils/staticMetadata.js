@@ -18,6 +18,9 @@ export function metadataFromHtml(html, expectedPath) {
 // 6.2.0: the Spanish record files map one-to-one onto their static pages.
 const RECORD_FOLDERS = {personas:'persona', dinastias:'dinastia', territorios:'territorio', historias:'historia'};
 export const RECORD_KINDS = Object.freeze(Object.values(RECORD_FOLDERS));
+const FOLDER_FOR_KIND = Object.fromEntries(Object.entries(RECORD_FOLDERS).map(([folder, kind]) => [kind, `${folder}-meta`]));
+// The record file that a static page reproduces (inverse of spanishRecordRoute).
+export const recordFileForPage = page => `/${FOLDER_FOR_KIND[page.kind]}/${page.slug}${page.chapter ? `/capitulo/${page.chapter}` : ''}.json`;
 export function spanishRecordRoute(pathname) {
   const match = String(pathname).match(/^\/(personas|dinastias|territorios|historias)-meta\/([a-z0-9]+(?:-[a-z0-9]+)*)(?:\/capitulo\/([1-9][0-9]*))?\.json$/);
   if (!match) return null;

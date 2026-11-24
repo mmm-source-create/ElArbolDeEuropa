@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {spanishRecordRoute, recordFromHtml} from '../src/utils/staticMetadata.js';
+import {spanishRecordRoute, recordFromHtml, recordFileForPage} from '../src/utils/staticMetadata.js';
 import {serializePage} from '../src/features/public/staticData.js';
 import {IMAGE_VARIANTS} from '../src/data/imageVariants.js';
 import {OG_DEFAULT_IMAGE, OG_DEFAULT_IMAGE_EN} from '../src/features/public/ogImages.js';
@@ -21,6 +21,8 @@ test('Spanish record files map one-to-one onto their static pages', () => {
   // The id → slug index is not a record; chapters only exist for stories.
   for (const path of ['/personas-meta/index.json', '/personas-meta/carlos-v/capitulo/2.json', '/english-meta/person-charles-v.json', '/catalogos/personas.json', '/personas-meta/Carlos V.json'])
     assert.equal(spanishRecordRoute(path), null, path);
+  for (const p of [page, {kind: 'historia', slug: 'mohacs-caida-buda', chapter: 3, path: '/es/historia/mohacs-caida-buda/capitulo/3'}])
+    assert.equal(spanishRecordRoute(recordFileForPage(p)), p.path);
 });
 
 test('the record is read from the page that carries it, and only from that page', () => {
@@ -44,6 +46,9 @@ test('old JSON addresses still answer from the static page through the Worker', 
 
 test('the Cloudflare upload leaves out every record file its page reproduces', () => {
   const source = read('scripts/prepare-cloudflare.mjs');
+  // build-cloudflare.mjs imports this script before prebuild writes src/generated;
+  // staticData.js reaches those generated files, so it must stay out.
+  assert.doesNotMatch(source, /^import .*staticData\.js/m);
   assert.match(source, /Record data differs/);
   assert.match(source, /if\(fromHtml\.has\(relative\)\)continue;/);
   assert.match(read('src/utils/loadAsset.js'), /recordFromHtml\(await loadTextAsset\(record \+ query\), record\)/);
