@@ -2,13 +2,11 @@ import fs from 'node:fs/promises';
 import {buildDynastyPages,auditDynasties} from '../../src/domain/genealogy/dynastyModel.js';
 import {DINASTIA_ALIASES} from '../../src/content/dinastias/index.js';
 import {slugPublico} from '../../src/domain/people/personLabels.js';
-import {escudoDe} from '../../src/content/dinastias/escudos.js';
-import {ogDynastyImage} from '../../src/features/public/ogImages.js';
 
 import {PERSONAS} from '../../src/data/personas.js';
 const errors=auditDynasties(PERSONAS);
 if(errors.length)throw new Error(JSON.stringify(errors));
-const pages=buildDynastyPages(PERSONAS).map(p=>escudoDe(p.nombre)?{...p,ogImage:ogDynastyImage(p.slug)}:p);
+const pages=buildDynastyPages(PERSONAS);
 const out='public/dinastias-meta';
 // Remove obsolete names as well as rebuilding the current catalogue.
 await fs.rm(out,{recursive:true,force:true});

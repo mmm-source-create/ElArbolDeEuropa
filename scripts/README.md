@@ -164,21 +164,13 @@ con las plazas portuguesas, españolas e inglesas como excepciones fechadas. Esc
 después se ejecuta `merge-map-expansions.mjs`. Las celdas que ya gobiernan otras
 revisiones (norte de Siria, Ceuta, Lampedusa) quedan fuera.
 
-### Vistas previas para compartir · V5.30
+### Tarjeta para compartir · V6.2.0
 
-`generate-og-images.mjs`, último paso de `npm run generate`, crea en `public/og/`
-las tarjetas Open Graph de 1200×630: retrato y marca para cada persona con
-retrato, escudo y marca para cada casa con armas, y una tarjeta general. No
-dibuja texto en el servidor; la marca procede de `public/brand/og-wordmark.png`.
-
-### Créditos de escudos en las tarjetas · V5.31
-
-`build-og-arms-credits.mjs` pre-renderiza en `scripts/generate/og-credits/` la
-línea «Escudo: autor · licencia · Wikimedia Commons» de cada escudo CC BY o
-CC BY-SA, con las fuentes del equipo que lo ejecuta. `generate-og-images.mjs` la
-coloca bajo el escudo y falla si falta. Hay que volver a ejecutarlo
-(`node --import ./tests/jsx-loader.mjs scripts/generate/build-og-arms-credits.mjs`)
-cada vez que cambie `src/content/dinastias/escudosCommons.js`.
+Todas las páginas comparten una tarjeta Open Graph de 1200×630 en su idioma:
+`public/brand/og-es.jpg` y `public/brand/og-en.jpg`. Son archivos estáticos que
+dibuja `scripts/assets/og-card.mjs` con Iowan Old Style y el mapa de 1500 de la
+portada; solo hay que volver a ejecutarlo si cambia el diseño. Las tarjetas por
+persona y por casa (V5.30–V6.1) se retiraron en la 6.2.0.
 
 ### Alemania · cobertura de huecos 1200–1800
 

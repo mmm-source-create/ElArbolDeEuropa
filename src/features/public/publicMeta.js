@@ -1,16 +1,18 @@
 // Una sola definición de los metadatos para el HTML de compilación y el navegador.
 import {translatedEquivalent} from '../english/routes.js';
 import {SITE_NAME, SITE_NAME_EN, DEFAULT_SITE_URL} from '../../app/siteConfig.js';
-import {OG_DEFAULT_IMAGE, OG_IMAGE_SIZE} from './ogImages.js';
+import {OG_DEFAULT_IMAGE, OG_DEFAULT_IMAGE_EN, OG_IMAGE_SIZE} from './ogImages.js';
 import {personTitle,personDescription,dynastyTitle,territoryTitle,entityDescription,clip} from './seoText.js';
 export {DEFAULT_SITE_URL} from '../../app/siteConfig.js';
 // 6.0.10: Cloudflare serves both homes without the trailing slash (/es/ answers
 // with a redirect), so the canonical URLs and alternates use /es and /en.
 export const canonicalPath=path=>path==='/es/'?'/es':path==='/en/'?'/en':path;
-export function publicMeta({title,description,path='/es/',image=OG_DEFAULT_IMAGE,imageAlt=SITE_NAME},siteUrl=DEFAULT_SITE_URL) {
+// 6.2.0: every page shares the site card in its language.
+export function publicMeta({title,description,path='/es/',imageAlt},siteUrl=DEFAULT_SITE_URL) {
  const canonical=new URL(canonicalPath(path),siteUrl).href;
- const imageUrl=new URL(image,siteUrl).href;
- const lang=path.startsWith('/en/')?'en':'es';
+ const lang=path.startsWith('/en/')||path==='/en'?'en':'es';
+ const imageUrl=new URL(lang==='en'?OG_DEFAULT_IMAGE_EN:OG_DEFAULT_IMAGE,siteUrl).href;
+ imageAlt=lang==='en'?SITE_NAME_EN:SITE_NAME;
  const equivalent=translatedEquivalent(path,lang==='en'?'es':'en');
  const alternates=[{hreflang:lang,href:canonical},...(equivalent?[{hreflang:lang==='en'?'es':'en',href:new URL(canonicalPath(equivalent),siteUrl).href}]:[]),{hreflang:'x-default',href:lang==='en'&&equivalent?new URL(canonicalPath(equivalent),siteUrl).href:canonical}];
  return {title,description,path,canonical,lang,meta:[
@@ -29,13 +31,11 @@ export function entityMeta(kind,data,slug) {
   title:data?personTitle(data):`Persona — ${SITE_NAME}`,
   description:data?personDescription(data):'Ficha histórica en El Árbol de Europa.',
   path:`/es/persona/${encodeURIComponent(slug||'persona')}`,
-  ...(data?.ogImage?{image:data.ogImage,imageAlt:`Retrato de ${data.nombre}`}:{}),
  };
  if(kind==='dinastia')return {
   title:data?dynastyTitle(data):`Dinastía — ${SITE_NAME}`,
   description:data?entityDescription(data,'dinastia'):'Personas, ramas y territorios de una casa en el Atlas.',
   path:`/es/dinastia/${encodeURIComponent(data?.slug||slug)}`,
-  ...(data?.ogImage?{image:data.ogImage,imageAlt:`Armas de la casa de ${data.nombre}`}:{}),
  };
  if(kind==='territorio')return {
   title:data?territoryTitle(data):'Territorio',

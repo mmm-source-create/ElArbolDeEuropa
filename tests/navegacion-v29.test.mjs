@@ -70,7 +70,7 @@ test('las fuentes son únicas y las asignaciones biográficas y territoriales ex
 });
 test('las imágenes adaptables conservan proporciones y funcionan sin variante registrada', () => {
   const image=responsiveImage('/personas-img/ISAB1CAST.webp','58px');
-  assert.ok(image.srcSet.includes('96w'));assert.equal(image.sizes,'58px');assert.equal(image.width,1270);assert.equal(image.height,1600);
+  assert.ok(image.srcSet.includes('192w')&&!image.srcSet.includes(' 96w'));assert.equal(image.sizes,'58px');assert.equal(image.width,1270);assert.equal(image.height,1600);
   assert.deepEqual(responsiveImage('/sin-variante.webp','58px'),{src:'/sin-variante.webp'});
 });
 test('al reanudar una historia también se conserva el estado al que volver al salir',()=>{

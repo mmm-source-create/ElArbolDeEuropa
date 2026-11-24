@@ -19,7 +19,7 @@ export function SectionHeading({eyebrow,children}) {
 }
 
 const PUBLIC_SITE_URL = resolveSiteUrl(import.meta.env.VITE_SITE_URL);
-const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
+export const BUILD_VERSION = String(SITE_META.buildVersion || SITE_META.personCount || "v2");
 
 
 export function rutaEntidad(tipo, slug, { atlas = false } = {}) {

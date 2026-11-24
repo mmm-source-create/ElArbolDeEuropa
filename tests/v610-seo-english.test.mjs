@@ -42,7 +42,7 @@ const federico = {
   padres: [{nombre: 'Enrique VI', slug: 'enrique-vi'}, {nombre: 'Constanza I de Sicilia', slug: 'constanza-i-de-sicilia'}],
   conyuges: [{nombre: 'Constanza de Aragón', slug: 'constanza-de-aragon'}], hijos: [{nombre: 'Manfredo I de Sicilia', slug: 'manfredo-i-de-sicilia'}],
   gobiernos: [{territorio: 'Sicilia', titulo: 'Rey'}, {territorio: 'Alemania', titulo: 'Rey de Romanos'}],
-  resumen: 'Emperador Hohenstaufen, rey de Sicilia y de Jerusalén.', aliases: ['Federico II'], ogImage: '/og/persona/federico-ii.jpg',
+  resumen: 'Emperador Hohenstaufen, rey de Sicilia y de Jerusalén.', aliases: ['Federico II'], imagen: '/personas-img/responsive/FED2-768.webp',
 };
 
 test('person titles and descriptions carry dates, family and governments', () => {
@@ -72,7 +72,7 @@ test('person JSON-LD links parents, spouses and children', () => {
   assert.deepEqual(person.parent.map(p => p.url), [`${SITE}/es/persona/enrique-vi`, `${SITE}/es/persona/constanza-i-de-sicilia`]);
   assert.equal(person.spouse[0].name, 'Constanza de Aragón');
   assert.equal(person.children[0].url, `${SITE}/es/persona/manfredo-i-de-sicilia`);
-  assert.equal(person.image, `${SITE}/og/persona/federico-ii.jpg`);
+  assert.equal(person.image, `${SITE}/personas-img/responsive/FED2-768.webp`);
   assert.deepEqual(person.hasOccupation.map(o => o.name), ['Rey · Sicilia', 'Rey de Romanos · Alemania']);
   assert.deepEqual(crumbs.itemListElement.map(i => i.item), [`${SITE}/es`, `${SITE}/es/personas`, `${SITE}/es/persona/federico-ii-hohenstaufen`]);
   // Approximate years are not presented as exact dates.

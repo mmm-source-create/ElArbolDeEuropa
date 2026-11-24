@@ -8,7 +8,6 @@ import {REINO_COLOR} from '../src/cartography/kingdomMaps.js';
 import {escudoDe, ESCUDOS} from '../src/content/dinastias/escudos.js';
 import {IMAGENES_PERSONAS} from '../src/data/imagenesPersonas.js';
 import {IMAGE_VARIANTS} from '../src/data/imageVariants.js';
-import {ogPortraitAvailable} from '../src/features/public/ogImages.js';
 import {HISTORIA_DINASTIAS} from '../src/content/dinastias/index.js';
 import {contenidoPersona} from '../src/content/personas/index.js';
 
@@ -54,8 +53,6 @@ test('los papas tienen retrato con procedencia y variantes publicadas', () => {
     assert.ok(IMAGE_VARIANTS[image.archivo]?.variants.length, p.id);
     assert.ok(image.obra && image.autor && image.fuenteUrl.startsWith('https://commons.wikimedia.org/wiki/File:') && image.derechos, p.id);
   }
-  assert.equal(ogPortraitAvailable(IMAGENES_PERSONAS.PAPA_INOCENCIO10), true);
-  assert.equal(ogPortraitAvailable(IMAGENES_PERSONAS.PAPA_GREGORIO9), false);
   assert.ok(contenidoPersona(person('PAPA_CLEMENTE14')).resumen.includes('1773'));
 });
 

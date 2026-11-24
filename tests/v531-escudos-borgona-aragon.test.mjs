@@ -11,7 +11,6 @@ import {aragonCrownRelation} from '../src/cartography/aragonCrownRelations.js';
 import {ARAGON_CROWN_COLOR} from '../src/cartography/mapColors.js';
 import DynastyArms from '../src/components/DynastyArms.jsx';
 import {ESCUDOS, escudoDe, CREDITOS_ESCUDOS} from '../src/content/dinastias/escudos.js';
-import {OG_FREE_LICENCE, ogArmsCreditFile} from '../src/features/public/ogImages.js';
 import {contenidoPersona} from '../src/content/personas/index.js';
 import {personClaims} from '../src/evidence/claims.js';
 
@@ -84,8 +83,6 @@ test('todas las casas usan un escudo liso de Commons con crédito discreto', () 
   }
   const files = fs.readdirSync(new URL('../public/escudos/', import.meta.url));
   assert.deepEqual(files.sort(), [...new Set(CREDITOS_ESCUDOS.map(c => c.archivo.replace('/escudos/', '')))].sort());
-  for (const c of CREDITOS_ESCUDOS.filter(c => !OG_FREE_LICENCE.test(c.licencia)))
-    assert.ok(fs.existsSync(new URL(`../${ogArmsCreditFile(c.archivo)}`, import.meta.url)), c.dinastia);
   // The credit moved from under each shield to the page foot and the licences page.
   assert.doesNotMatch(read('src/features/public/PublicSite.jsx'), /<ArmsCredit/);
   assert.match(read('src/features/public/PublicSite.jsx'), /\/es\/licencias#escudos/);
