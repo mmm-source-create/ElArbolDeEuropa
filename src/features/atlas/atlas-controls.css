@@ -155,7 +155,15 @@ html[data-eade-theme="dark"] .workspace-filter-clear {
 .wrap .workspace-toolbar-search .toolbar-search-box > svg { flex-shrink:0; }
 .wrap .workspace-toolbar-search .toolbar-search-box input { flex:1 1 0; width:0; min-width:0; }
 .wrap .workspace-toolbar-search .toolbar-search-nav { flex:0 0 auto; }
-.wrap .workspace-toolbar-search .toolbar-search-nav[hidden] { display:flex; visibility:hidden; pointer-events:none; }
-.wrap .workspace-toolbar-search .toolbar-search-count { width:11ch; text-align:right; font-variant-numeric:tabular-nums; }
+/* 6.2.1: the box keeps its fixed size, so the controls need no reserved space:
+   while the field is empty the text uses the whole width, and any press inside
+   the box focuses it. */
+.wrap .workspace-toolbar-search .toolbar-search-nav[hidden] { display:none; }
+.wrap .workspace-toolbar-search .toolbar-search-box { cursor:text; }
+.wrap .workspace-toolbar-search .toolbar-search-box button { cursor:pointer; }
+.wrap .workspace-toolbar-search .toolbar-search-count { width:auto; min-width:5ch; text-align:right; font-variant-numeric:tabular-nums; }
 .wrap .workspace-toolbar-search .search-nav-btn { width:24px; height:24px; min-width:24px; padding:0; display:grid; place-items:center; }
 @media(max-width:700px) { .wrap .workspace-toolbar-search .toolbar-search-count { display:none; } }
+/* 6.2.1: on wide screens the search column grows so a long name stays visible
+   beside the counter and the three controls. */
+@media(min-width:1200px) { .workspace-topbar { grid-template-columns: minmax(250px, 420px) minmax(0, 1fr) !important; } }

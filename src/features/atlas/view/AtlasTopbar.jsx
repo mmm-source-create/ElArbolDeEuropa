@@ -16,7 +16,8 @@ export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpe
     <div className={`workspace-topbar${modoTrabajo ? " is-work-mode" : ""}`}>
         <section className="workspace-topbar-section workspace-toolbar-search" onBlur={e=>{if(!e.currentTarget.contains(e.relatedTarget))setSearchOpen(false);}}>
           <div className="toolbar-label sk" style={{"--sk-index":0}}>{en?'Search':'Búsqueda'}</div>
-          <div className="search-box toolbar-search-box sk" style={{"--sk-index":1}}>
+          {/* 6.2.1: the whole box is the field; a press anywhere but on a control focuses it. */}
+          <div className="search-box toolbar-search-box sk" style={{"--sk-index":1}} onMouseDown={e=>{if(e.target.closest('button,input'))return;e.preventDefault();e.currentTarget.querySelector('input')?.focus();}}>
             <Search size={13} aria-hidden="true" />
             <input
               id="atlas-person-search"
