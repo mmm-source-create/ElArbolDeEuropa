@@ -1,3 +1,4 @@
+import {useEuropeYearUrl} from './useEuropeYearUrl.js';
 import {atlasFilterOptions,personMatchesTerritory} from '../../domain/filters/atlasFilters.js';
 import {buildTimelineRows} from './timelineLayout.js';
 import {translatedEquivalent} from '../english/routes.js';
@@ -802,6 +803,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     else {url.pathname = rutaEntidadLocalizada(locale, "persona", slug);url.searchParams.delete("persona");}
     if(quitarPanorama){url.searchParams.delete("escena");if(url.searchParams.get("panel")==="europa")url.searchParams.delete("panel");}
     url.searchParams.set("atlas", "1");
+    if(Number.isInteger(anioGlobal))url.searchParams.set('anio',String(anioGlobal));else url.searchParams.delete('anio');
     writeAtlasIds(url, atlasIds);
     const destino = `${url.pathname}${url.search}${url.hash}`;
     const actual = `${window.location.pathname}${window.location.search}${window.location.hash}`;
@@ -855,6 +857,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (typeof window === "undefined") return undefined;
     const onPopState = () => {
       historyPopRef.current = true;
+      setReproduciendoHistoria(false);
       const incomingStory = resolveStoryNavigation(window.location.pathname, window.location.search, HISTORIAS);
       if (incomingStory) {
         setAtlasScene("atlas");
@@ -1355,11 +1358,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if(Number.isInteger(anioGlobal))url.searchParams.set('anio',String(anioGlobal));else if(scene==='europa')url.searchParams.set('anio','1500');
     window.history.replaceState(window.history.state,'',url.pathname+url.search+url.hash);
   },[anioGlobal]);
-  useEffect(()=>{
-    if(!ready||atlasScene!=='europa'||!Number.isInteger(anioGlobal))return;
-    const url=new URL(window.location.href);url.searchParams.delete('escena');url.searchParams.set('anio',String(anioGlobal));if(url.searchParams.get('panel')==='europa')url.searchParams.delete('panel');
-    window.history.replaceState({eade:'atlas'},'',url.pathname+url.search+url.hash);
-  },[atlasScene,anioGlobal,ready]);
+  useEuropeYearUrl({ready,scene:atlasScene,year:anioGlobal,playing:reproduciendoHistoria});
 
   const filtrosActivosCompactos = useMemo(() => {
     const lista = [];

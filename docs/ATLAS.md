@@ -26,6 +26,24 @@ Las tarjetas agrupan España, la Corona de Castilla y los demás conjuntos segú
 sus reglas fechadas. Los títulos internos permanecen desplegables. Las uniones
 personales y los gobiernos delegados no se convierten en soberanía unitaria.
 
+## Año e historial del navegador
+
+Durante la reproducción, el mapa y los controles avanzan sin cambiar la
+dirección en cada año. Al pausar, terminar o abandonar la página, se guarda
+el último año visible con `replaceState`; al arrastrar el selector se espera
+350 ms sin nuevos cambios. Atrás detiene la reproducción y recupera el estado
+de la entrada seleccionada. Elegir una persona conserva el año que se ve.
+
+Esto limita las direcciones intermedias que algunos navegadores registran en
+su historial de visitas. El historial Atrás/Adelante y la lista general de
+visitas son distintos; `replaceState` sustituye la entrada de la pestaña.
+
+**English.** Playback changes the map and controls without rewriting the URL
+for each year. Pausing, finishing or leaving records the last visible year
+with `replaceState`. Manual scrubbing waits for 350 ms without a new change.
+Back stops playback and restores the selected entry. Choosing a person keeps
+the visible year. This reduces intermediate URLs in the browser’s visit list.
+
 ## Historias por temas
 
 El catálogo de Historias organiza los recorridos en **Cruzadas**, **Cultura popular**, **Dinastías y poder** y **Renacimiento y reformas**. Puedes combinar la búsqueda con un tema; cada historia aparece una sola vez. Los recorridos en preparación se indican dentro de su grupo. El catálogo inglés muestra los recorridos que ya tienen traducción completa.

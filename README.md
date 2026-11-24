@@ -2,16 +2,15 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.3**
-- [Notas de 6.1.3](docs/releases/6.1.3.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.1.4**
+- [Notas de 6.1.4](docs/releases/6.1.4.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.1.3 amplía la base a 2 865 personas. Entran 51 figuras de la
-cultura, la ciencia, la Escuela de Salamanca, las revoluciones y la
-exploración, y se completan cinco que ya estaban. Todas tienen retrato
-(salvo dos de las que no se conserva ninguno), ficha en español y en inglés,
-biografía, minibiografía y fechas contrastadas con su ficha de autoridad.
-Además, se publican seis historias nuevas, entre ellas la colección
-«Compañías libres».
+La versión 6.1.4 ajusta la lectura de fichas personales y la navegación entre
+casas: biografía a todo el ancho, separación uniforme entre bloques, títulos
+con más aire y el enlace «Ver ficha» siempre al final de cada tarjeta. El
+buscador del Atlas mantiene su tamaño al escribir. La reproducción de Europa
+actualiza la dirección al pausar o terminar, evitando una dirección por año.
+Los retratos de portada comparten el tratamiento visual de las historias.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables

@@ -1,0 +1,160 @@
+{
+  "version": "6.1.4",
+  "date": "2026-11-24",
+  "base": {
+    "version": "6.1.3",
+    "commit": "6a75d4656779a6810051b8347e60bdc2ba4cec4c"
+  },
+  "scope": "Bilingual interface and year URL synchronization; no historical content changes.",
+  "tests": {
+    "suiteTests": 879,
+    "suiteInitialPassed": 878,
+    "suiteInitialFailed": 1,
+    "initialFailure": "Existing integration expected the year URL immediately; updated to check the immediate view and deferred URL.",
+    "updatedIntegration": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    "releaseTests": {
+      "tests": 7,
+      "passed": 7,
+      "includedInSuite": true
+    },
+    "effectivePassedAfterTargetedRerun": 879
+  },
+  "dataContract": {
+    "people": 2865,
+    "governments": 3032,
+    "errors": 0
+  },
+  "english": {
+    "people": 2865,
+    "dynasties": 521,
+    "territories": 1041,
+    "completeStories": 60,
+    "paths": 4997,
+    "errors": 0
+  },
+  "staticPages": {
+    "version": "6.1.4",
+    "expected": 9991,
+    "counts": {
+      "persona": 2865,
+      "dinastia": 521,
+      "territorio": 1041,
+      "historia": 560,
+      "english": 4997,
+      "catalogo": null
+    },
+    "errors": []
+  },
+  "publicRegression": {
+    "pages": 4993,
+    "differences": 0
+  },
+  "security": {
+    "repositoryIssues": 0,
+    "unexceptedHighOrCritical": 0,
+    "existingException": "GHSA-fc5q-39xc-vjpf"
+  },
+  "cloudflare": {
+    "files": 19791,
+    "freeFileLimit": 20000,
+    "remainingFiles": 209,
+    "largest": {
+      "path": "assets/corridor-locations-YksGtyWY.json",
+      "bytes": 12615491
+    },
+    "bytes": 797162319,
+    "reusedEnglishMetadata": 4997,
+    "ssgPages": 9991,
+    "excluded": [
+      ".vite",
+      "english-meta",
+      "ssg-audit.json",
+      "ssg-report.json"
+    ],
+    "dryRunPassed": true,
+    "published": false
+  },
+  "visual": {
+    "languages": [
+      "es",
+      "en"
+    ],
+    "viewports": [
+      [
+        1280,
+        900
+      ],
+      [
+        375,
+        812
+      ]
+    ],
+    "search": {
+      "desktop": {
+        "empty": [
+          298,
+          44
+        ],
+        "typed": [
+          298,
+          44
+        ]
+      },
+      "mobile": {
+        "empty": [
+          329,
+          44
+        ],
+        "typed": [
+          329,
+          44
+        ],
+        "cleared": [
+          329,
+          44
+        ]
+      }
+    },
+    "person": {
+      "desktopArticleWidth": 1040,
+      "desktopBiographyWidth": 1040,
+      "mobileArticleWidth": 353,
+      "mobileBiographyWidth": 353,
+      "desktopSectionGap": 36,
+      "mobileSectionGap": 24,
+      "titleBottomMargin": 16,
+      "horizontalOverflow": false
+    },
+    "dynasty": {
+      "recordsAlwaysLast": true,
+      "englishCardsChecked": 9,
+      "sample": [
+        "View the connection in the tree",
+        "Read the record"
+      ]
+    },
+    "homePortraits": {
+      "sameGradient": true,
+      "sameFilter": true,
+      "filter": "sepia(0.15)"
+    },
+    "playback": {
+      "initialYear": 1500,
+      "observedDuringYear": 1522,
+      "urlDuringYear": 1500,
+      "pausedYear": 1539,
+      "urlAfterPauseYear": 1539
+    }
+  },
+  "screenshots": [
+    "outputs/6.1.4/persona-es-desktop.jpg",
+    "outputs/6.1.4/person-en-mobile.jpg",
+    "outputs/6.1.4/anjou-es-mobile.jpg",
+    "outputs/6.1.4/atlas-en-mobile.jpg",
+    "outputs/6.1.4/portada-en-mobile.jpg"
+  ]
+}

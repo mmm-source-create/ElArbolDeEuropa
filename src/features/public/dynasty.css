@@ -39,3 +39,6 @@
 .dynasty-sources { margin-top: 24px; }
 @media (max-width: 900px) { .dynasty-history { grid-template-columns: 1fr; } }
 @media (max-width: 620px) { .dynasty-branches { grid-template-columns: 1fr; } .dynasty-nav { gap: 12px 18px; } }
+
+/* The record link is always the final action, with or without a tree connection. */
+.public-entity-card > .dynasty-card-record { padding-top:18px; }

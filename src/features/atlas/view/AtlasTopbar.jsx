@@ -36,10 +36,9 @@ export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpe
                 }
               }}
             />
-            {queryTrim && (
-              <div className="toolbar-search-nav">
-                <span className="toolbar-search-count">
-                  {searchMatchIds.length ? `${Math.max(1, currentSearchIndex + 1)} / ${searchMatchIds.length} ${en?'people':'personas'}` : `0 ${en?'people':'personas'}`}
+              <div className="toolbar-search-nav" hidden={!queryTrim}>
+                <span className="toolbar-search-count" aria-label={searchMatchIds.length?`${Math.max(1,currentSearchIndex+1)} / ${searchMatchIds.length} ${en?'people':'personas'}`:`0 ${en?'people':'personas'}`}>
+                  {searchMatchIds.length ? `${Math.max(1, currentSearchIndex + 1)} / ${searchMatchIds.length}` : '0'}
                 </span>
                 <button type="button" className="nav-btn search-nav-btn" aria-label={en?'Previous person in search':'Persona anterior de la búsqueda'} disabled={!searchMatchIds.length} onClick={() => irACoincidencia(-1)}>
                   <ChevronRight size={10} style={{ transform: "rotate(180deg)" }} />
@@ -49,7 +48,6 @@ export default function AtlasTopbar({vm, searchOpen, searchResults, setSearchOpe
                 </button>
                 <button type="button" className="nav-btn search-nav-btn" aria-label={en?'Clear search':'Borrar búsqueda'} title={en?'Clear search':'Borrar búsqueda'} onClick={() => { setQuery(''); setSearchOpen(false); }}><X size={12}/></button>
               </div>
-            )}
           </div>
           {searchOpen && queryTrim && <div id="atlas-search-results" className="atlas-search-results" aria-label={en?'Results from the entire database':'Resultados de toda la base'}>
             <span role="status">{searchResults.total ? `${searchResults.total} ${en?'matches in the Atlas':'coincidencias en el Atlas'}` : en?'No matches':'No hay coincidencias'}</span>

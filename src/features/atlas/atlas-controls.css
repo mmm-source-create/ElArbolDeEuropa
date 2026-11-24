@@ -149,3 +149,13 @@ html[data-eade-theme="dark"] .workspace-filter-clear {
 .workspace-filter-panel .atlas-filter-mode.ui-segments { display:grid; align-items:stretch; grid-template-columns:repeat(2,minmax(0,1fr)); width:100%; min-width:0; box-sizing:border-box; }
 .workspace-filter-panel .atlas-filter-mode.ui-segments>button { min-width:0; max-width:100%; white-space:normal; overflow-wrap:anywhere; padding:9px 8px; }
 .workspace-filter-scroll .filter-section-title, .workspace-filter-scroll .atlas-filter-heading { min-width:0; white-space:normal; overflow-wrap:anywhere; }
+
+/* 6.1.4: search keeps the same geometry before typing, while typing and after clearing. */
+.wrap .workspace-toolbar-search .toolbar-search-box { display:flex; align-items:center; width:100%; max-width:100%; height:44px; min-height:44px; box-sizing:border-box; }
+.wrap .workspace-toolbar-search .toolbar-search-box > svg { flex-shrink:0; }
+.wrap .workspace-toolbar-search .toolbar-search-box input { flex:1 1 0; width:0; min-width:0; }
+.wrap .workspace-toolbar-search .toolbar-search-nav { flex:0 0 auto; }
+.wrap .workspace-toolbar-search .toolbar-search-nav[hidden] { display:flex; visibility:hidden; pointer-events:none; }
+.wrap .workspace-toolbar-search .toolbar-search-count { width:11ch; text-align:right; font-variant-numeric:tabular-nums; }
+.wrap .workspace-toolbar-search .search-nav-btn { width:24px; height:24px; min-width:24px; padding:0; display:grid; place-items:center; }
+@media(max-width:700px) { .wrap .workspace-toolbar-search .toolbar-search-count { display:none; } }

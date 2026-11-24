@@ -13,7 +13,7 @@ export default function DynastyCard({item,headingLevel=2,relationship,children,s
     </div></div><strong aria-label={`${item.total} ${unit}`}>{item.total}<small aria-hidden="true">{unit}</small></strong></div>
     {item.resumen&&<p className="public-muted public-dynasty-summary">{item.resumen}</p>}
     {showMembers&&!!item.miembros?.length&&<div className="public-entity-members">{item.miembros.map(p=><a key={p.id} href={p.path||`/es/persona/${p.slug}`}>{p.nombre}{en&&(!p.path||p.path.startsWith('/es/'))?' · ES':''}</a>)}</div>}
-    <a className="public-entity-action" href={path}>{en?'Read the record':'Ver ficha'}{en&&path.startsWith('/es/')?' · ES':''}<ArrowRight size={13}/></a>
     {children&&<div className="dynasty-card-connections">{children}</div>}
+    <a className="public-entity-action dynasty-card-record" href={path}>{en?'Read the record':'Ver ficha'}{en&&path.startsWith('/es/')?' · ES':''}<ArrowRight size={13}/></a>
   </article>;
 }
