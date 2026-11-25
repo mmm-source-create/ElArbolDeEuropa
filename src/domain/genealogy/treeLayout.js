@@ -529,7 +529,7 @@ export function createPartnerUnitBlueprint(ids, byId) {
   };
 }
 
-export function buildRows(people, gen) {
+export function buildRows(people, gen, options = {}) {
   const maxGen = Math.max(0, ...Object.values(gen));
   const rows = Array.from({ length: maxGen + 1 }, () => []);
   const inputIndex = Object.fromEntries(people.map((persona, index) => [persona.id, index]));
@@ -569,6 +569,10 @@ export function buildRows(people, gen) {
       (childrenOf[parentId] ||= []).push(persona.id);
     });
   });
+
+  // 6.3.2: una pareja en filas distintas también atrae a sus dos miembros.
+  const crossPartnersOf = (id) => listaParejas(BY_ID[id])
+    .filter((partnerId) => knownIds.has(partnerId) && gen[partnerId] !== gen[id]);
 
   const normalizedOrder = (rowsState) => rowsState.map((row) => {
     const order = new Map();
@@ -641,8 +645,9 @@ export function buildRows(people, gen) {
         current[rowIndex] = sortRow(current[rowIndex], (id) => {
           const persona = BY_ID[id];
           if (!persona) return [];
-          return [persona.padre, persona.madre]
-            .map((parentId) => order[gen[parentId]]?.get(parentId))
+          return [persona.padre, persona.madre, ...(options.crossPartners ? crossPartnersOf(id) : [])]
+            .filter((otherId) => knownIds.has(otherId) && gen[otherId] < rowIndex)
+            .map((otherId) => order[gen[otherId]]?.get(otherId))
             .filter(Number.isFinite);
         });
         order = normalizedOrder(current);
@@ -650,7 +655,7 @@ export function buildRows(people, gen) {
     } else {
       for (let rowIndex = maxGen - 1; rowIndex >= 0; rowIndex -= 1) {
         current[rowIndex] = sortRow(current[rowIndex], (id) =>
-          (childrenOf[id] || [])
+          [...(childrenOf[id] || []), ...(options.crossPartners ? crossPartnersOf(id).filter((otherId) => gen[otherId] > rowIndex) : [])]
             .map((childId) => order[gen[childId]]?.get(childId))
             .filter(Number.isFinite)
         );
@@ -669,7 +674,10 @@ export function buildRows(people, gen) {
   // reduce cruces, distancia entre generaciones o dispersión de hermanos.
   current = best.map((row) => row.map((unit) => unit.slice()));
   let currentScore=scoreRows(current);
-  for (let round = 0; round < 2; round += 1) {
+  // Cada intercambio vuelve a puntuar todo el árbol: en una selección grande
+  // del Atlas (6.3.2) esta pasada se omite para que responda al momento.
+  const swapRounds = people.length > (options.swapLimit ?? Infinity) ? 0 : 2;
+  for (let round = 0; round < swapRounds; round += 1) {
     for (let rowIndex = 0; rowIndex < current.length; rowIndex += 1) {
       for (let index = 0; index < current[rowIndex].length - 1; index += 1) {
         const before = currentScore;
@@ -686,6 +694,19 @@ export function buildRows(people, gen) {
         }
       }
     }
+  }
+
+  // 6.3.2: quien no tiene parientes visibles va al final de su fila, por
+  // fecha, en lugar de quedar entre familias ajenas.
+  if (options.isolatedLast) {
+    const related = (id) => [BY_ID[id]?.padre, BY_ID[id]?.madre, ...(childrenOf[id] || []), ...crossPartnersOf(id)]
+      .some((otherId) => knownIds.has(otherId));
+    const year = (unit) => mediana(unit.map((id) => BY_ID[id]?.nac).filter(Number.isFinite)) ?? Infinity;
+    best = best.map((row) => {
+      const isolated = row.filter((unit) => !unit.some(related));
+      if (!isolated.length) return row;
+      return [...row.filter((unit) => unit.some(related)), ...isolated.slice().sort((a, b) => year(a) - year(b))];
+    });
   }
 
   return best;
@@ -723,20 +744,89 @@ export function pavaNonDecreasing(targets, weights) {
   return result;
 }
 
+// 6.3.2: el espacio entre dos unidades depende de su parentesco. Hermanos
+// (mismos padres) quedan más juntos; familias sin relación, más separadas.
+export const TREE_SIBLING_GAP = 44;
+export const TREE_FAMILY_GAP = 128;
+const parentKeyOf = (persona) => [persona?.padre, persona?.madre].filter(Boolean).sort().join("|");
+export function unitGap(left, right, byId) {
+  if (!left || !right) return TREE_FAMILY_GAP;
+  const keys = new Set(left.ids.map((id) => parentKeyOf(byId[id])).filter(Boolean));
+  return right.ids.some((id) => keys.has(parentKeyOf(byId[id]))) ? TREE_SIBLING_GAP : TREE_FAMILY_GAP;
+}
+
+// 6.3.2: un grupo grande de hermanos sin pareja ni hijos visibles se reparte
+// en dos líneas al tresbolillo. Cada caja de la segunda línea queda bajo el
+// hueco entre dos de la primera, por donde baja su conector.
+export const TREE_FAN_MIN = 8;
+const TREE_FAN_LINE_GAP = 34;
+export function createFanBlueprint(ids) {
+  const step = TREE_BOX_W + TREE_SIBLING_GAP;
+  const firstLine = Math.ceil(ids.length / 2);
+  const boxes = ids.map((id, index) => {
+    const second = index >= firstLine;
+    const column = second ? index - firstLine : index;
+    return {
+      id,
+      x: column * step + (second ? step / 2 : 0),
+      y: second ? TREE_BOX_H + TREE_FAN_LINE_GAP : 0,
+      w: TREE_BOX_W,
+      h: TREE_BOX_H,
+    };
+  });
+  return {
+    ids: ids.slice(),
+    boxes,
+    contacts: {},
+    fan: true,
+    width: Math.max(...boxes.map((box) => box.x + box.w)),
+    height: TREE_BOX_H * 2 + TREE_FAN_LINE_GAP,
+  };
+}
+
+function groupFans(row, byId, childrenById, visible) {
+  const leafKey = (unit) => {
+    if (unit.length !== 1) return null;
+    const persona = byId[unit[0]];
+    if (!persona || (childrenById[unit[0]] || []).some((id) => visible.has(id))) return null;
+    const parents = [persona.padre, persona.madre].filter((id) => visible.has(id));
+    return parents.length ? parents.sort().join("|") : null;
+  };
+  const groups = new Map();
+  row.forEach((unit) => {
+    const key = leafKey(unit);
+    if (key) groups.set(key, [...(groups.get(key) || []), unit[0]]);
+  });
+  const fans = new Map([...groups].filter(([, ids]) => ids.length >= TREE_FAN_MIN));
+  if (!fans.size) return row.map((ids) => ({ids}));
+  const placed = new Set();
+  return row.flatMap((unit) => {
+    const key = leafKey(unit);
+    if (!fans.has(key)) return [{ids: unit}];
+    if (placed.has(key)) return [];
+    placed.add(key);
+    return [{ids: fans.get(key), fan: true}];
+  });
+}
+
 export function computeTreeLayout(rows, byId, childrenById) {
+  const visible = new Set(rows.flat(2));
   const rowUnits = rows.map((row, rowIndex) => {
-    const blueprints = row.map((ids) => createPartnerUnitBlueprint(ids, byId));
-    const totalWidth = blueprints.reduce((sum, unit) => sum + unit.width, 0)
-      + Math.max(0, blueprints.length - 1) * TREE_UNIT_GAP;
+    const blueprints = groupFans(row, byId, childrenById, visible)
+      .map(({ids, fan}) => fan ? createFanBlueprint(ids) : createPartnerUnitBlueprint(ids, byId));
+    const gaps = blueprints.map((unit, index) => index ? unitGap(blueprints[index - 1], unit, byId) : 0);
+    const totalWidth = blueprints.reduce((sum, unit, index) => sum + unit.width + gaps[index], 0);
     let cursor = -totalWidth / 2;
     return blueprints.map((blueprint, unitIndex) => {
+      cursor += gaps[unitIndex];
       const unit = {
         ...blueprint,
         key: `${rowIndex}-${unitIndex}-${blueprint.ids.join("-")}`,
         row: rowIndex,
         x: cursor,
+        gapBefore: gaps[unitIndex],
       };
-      cursor += unit.width + TREE_UNIT_GAP;
+      cursor += unit.width;
       return unit;
     });
   });
@@ -747,15 +837,16 @@ export function computeTreeLayout(rows, byId, childrenById) {
     return map;
   };
 
-  const repositionRow = (rowIndex, direction) => {
+  const repositionRow = (rowIndex, direction, inertia = 0.18) => {
     const row = rowUnits[rowIndex];
     if (!row.length) return;
     const unitByPerson = rebuildUnitByPerson();
     const offsets = [];
     let offset = 0;
     row.forEach((unit, index) => {
+      offset += unit.gapBefore;
       offsets[index] = offset;
-      offset += unit.width + TREE_UNIT_GAP;
+      offset += unit.width;
     });
 
     const targets = [];
@@ -776,7 +867,7 @@ export function computeTreeLayout(rows, byId, childrenById) {
 
       const currentCenter = unit.x + unit.width / 2;
       const targetCenter = references.length
-        ? currentCenter * 0.18 + mediana(references) * 0.82
+        ? currentCenter * inertia + mediana(references) * (1 - inertia)
         : currentCenter;
       targets[index] = targetCenter - unit.width / 2 - offsets[index];
       weights[index] = references.length ? Math.min(6, references.length + 1) : 0.35;
@@ -792,6 +883,9 @@ export function computeTreeLayout(rows, byId, childrenById) {
     for (let rowIndex = 1; rowIndex < rowUnits.length; rowIndex += 1) repositionRow(rowIndex, "down");
     for (let rowIndex = rowUnits.length - 2; rowIndex >= 0; rowIndex -= 1) repositionRow(rowIndex, "up");
   }
+  // 6.3.2: una última bajada sin inercia deja cada grupo de hermanos centrado
+  // bajo sus padres y apila las cadenas de hijo único.
+  for (let rowIndex = 1; rowIndex < rowUnits.length; rowIndex += 1) repositionRow(rowIndex, "down", 0);
 
   const allUnits = rowUnits.flat();
   const minX = allUnits.length ? Math.min(...allUnits.map((unit) => unit.x)) : 0;
