@@ -19,6 +19,7 @@ const CASTILLA_LEON = {blason: 'Cuartelado de Castilla y León: 1.º y 4.º, de 
   capas: [['cuartelado', [CASTILLA, LEON, LEON, CASTILLA]]]};
 
 export const ESCUDOS = Object.freeze({
+ Bonaparte:{blason:'De azur, un águila de oro con un haz de rayos entre las garras.',capas:[['campo','azur']],nota:'Armas del Imperio francés desde 1804, con manto y ornamentos imperiales. Las ramas y los reinos de la familia emplearon composiciones propias.',en:{blazon:'Azure, an eagle or holding a thunderbolt in its talons.',note:'Arms of the French Empire from 1804, with the imperial mantle and ornaments. Branches and family kingdoms used their own compositions.'}},
 
   "Tarnowski": {
     "blason": "De azur, un creciente de oro acompañado en jefe de una estrella de seis puntas del mismo metal.",

@@ -8,7 +8,7 @@ import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
 import runtime from '../../generated/englishV6Runtime.json' with {type:'json'};
 import {PERSONAS} from '../../data/personas.js';
 import {slugBasePersona,slugPublico} from '../../domain/people/personPresentation.js';
-export const TRANSLATED_DYNASTIES=[{es:'calderon',en:'calderon'},{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))].map(route=>ENGLISH_SLUGS_618.dynasties[route.es]?{...route,en:ENGLISH_SLUGS_618.dynasties[route.es].en}:route);
+export const TRANSLATED_DYNASTIES=[{es:"bonaparte",en:"bonaparte"},{es:'calderon',en:'calderon'},{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))].map(route=>ENGLISH_SLUGS_618.dynasties[route.es]?{...route,en:ENGLISH_SLUGS_618.dynasties[route.es].en}:route);
 // 6.0.18: entity URLs built from machine-translated names use the reviewed name (englishSlugs618.js).
 const entitySlug=(kind,route)=>ENGLISH_SLUGS_618[kind][route.es]?{...route,en:ENGLISH_SLUGS_618[kind][route.es].en}:route;
 export const TRANSLATED_TERRITORIES=[{es:'normandia',en:'normandy'},...runtime.territories.map(({es,en})=>({es,en}))].map(route=>entitySlug('territories',route));
@@ -699,7 +699,7 @@ const existingTranslatedIds=new Set([...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATE
 const ADDITIONAL_TRANSLATED_PEOPLE=Object.entries(runtime.additionalPeople||{}).filter(([id])=>!existingTranslatedIds.has(id)).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);
 // 6.0.9: people renamed without their title use their new addresses; the old ones redirect.
 // 6.0.16: URLs built from machine-translated names move to the corrected name; the old ones redirect.
-const retitled=route=>{const s=TITLE_NAME_SLUGS_609[route.id],fix=ENGLISH_SLUGS_616[route.id];const next=s?{...route,...(s.es?{es:s.es}:{}),...(s.en?{en:s.en}:{})}:route;const fix618=ENGLISH_SLUGS_618.people[route.id];return fix618?{...next,en:fix618.en}:fix?{...next,en:fix.en}:next;};
+const retitled=original=>{const route=original.id==='FREDERIC1WURTTKING'?{...original,en:'frederick-i-king-of-wurttemberg'}:original;const s=TITLE_NAME_SLUGS_609[route.id],fix=ENGLISH_SLUGS_616[route.id];const next=s?{...route,...(s.es?{es:s.es}:{}),...(s.en?{en:s.en}:{})}:route;const fix618=ENGLISH_SLUGS_618.people[route.id];return fix618?{...next,en:fix618.en}:fix?{...next,en:fix.en}:next;};
 export const TRANSLATED_PEOPLE=[...LEGACY_TRANSLATED_PEOPLE,...V6_TRANSLATED_PEOPLE,...ADDITIONAL_TRANSLATED_PEOPLE].map(retitled);
 export function englishRoute(pathname) {
  const path=String(pathname).replace(/\/$/,'');

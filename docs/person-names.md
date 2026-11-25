@@ -67,3 +67,22 @@ Las 200 fichas se publican completas en inglés: resúmenes, las 16 biografías 
 El nombre público no lleva el título detrás de una coma: Alejandro Farnesio, no «Alejandro Farnesio, príncipe de Parma». El título va en los cargos y el nombre anterior queda como variante. A diferencia de la regla 8, estas fichas sí cambian de dirección: la antigua redirige de forma permanente (308) a la nueva en `routes.json`. Cuando el nombre nuevo coincide con el de otra persona, la nueva dirección lleva el identificador y la otra conserva la suya.
 
 Se conservan los títulos ordinales que distinguen una línea de homónimos (Gerald FitzGerald, VIII conde de Kildare), los nombres de pila sin apellido cuya única identificación es el título (Federico, príncipe de Gales) y los epítetos que no son títulos (Strongbow, Skanderbeg). Las decisiones están en `src/data/titleNames609.js` y el detalle en [nombres-6.0.9](editorial/nombres-6.0.9.md).
+
+## 6.2.2 · Farnesio y Bonaparte
+
+Se conserva **Ranuccio I / Ranuccio II Farnesio** en español y **Ranuccio I /
+Ranuccio II Farnese** en inglés. «Renato» no sustituye a Ranuccio. Los nuevos
+Francisco y Antonio usan el exónimo y apellido españoles; la edición inglesa
+conserva Francesco y Antonio Farnese. Los identificadores previos no cambian.
+Dorotea Sofía se muestra como «de Neoburgo»; «de Neuburg» sigue en la búsqueda y
+se conserva la URL publicada.
+
+La princesa Isabel Farnesio (1668–1718) tiene una ruta propia que la distingue de
+su sobrina Isabel, reina de España (1692–1766). Federico I de Wurtemberg
+(1754–1816), rey desde 1806 y duque como Federico II desde 1797, conserva una
+identidad distinta de Federico I, duque del siglo XVI.
+
+English: retain Ranuccio and Farnese; the Neuburg spelling and existing links
+remain valid. Isabella Farnese, princess of Parma (1668–1718), is distinct from
+Elisabeth Farnese, queen of Spain. Frederick I, king of Württemberg, is distinct
+from the earlier duke of the same name.

@@ -82,7 +82,7 @@ test('real English biographies, sources, chapters and catalogues survive compact
  const files=['english-meta/person-charles-v.json','english-meta/person-alexander-iii-of-scotland.json','catalogos/personas.json','catalogos/historias.json'];
  for(const file of files){const record=JSON.parse(await fs.readFile(new URL('../public/'+file,import.meta.url),'utf8'));assert.deepEqual(parsePage(serializePage(record)),record,file);const wrapped={schema:2,kind:file.startsWith('english-meta')?'english':'catalogo',slug:record.slug,path:record.path,chapter:null,data:record};assert.deepEqual(parsePage(serializePage(wrapped)),JSON.parse(JSON.stringify(wrapped)),file+' embedded envelope');if(file==='english-meta/person-charles-v.json')assert(gzipSync(serializePage(record)).length<gzipSync(JSON.stringify(record)).length*0.8,'Charles V transfer budget');}
  const people=JSON.parse(await fs.readFile(new URL('../public/catalogos/personas.json',import.meta.url),'utf8'));
- assert.equal(people.items.length,2865);assert(people.items.every(p=>!Object.hasOwn(p,'resumen')));
+ assert.equal(people.items.length,2904);assert(people.items.every(p=>!Object.hasOwn(p,'resumen')));
  const person=JSON.parse(await fs.readFile(new URL('../public/personas-meta/carlos-v.json',import.meta.url),'utf8'));
  assert(person.resumen.length>100);assert(person.biografiaExtensa);assert(person.fuentes.length);
 });

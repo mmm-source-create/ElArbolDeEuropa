@@ -1,0 +1,1608 @@
+{
+ "FRANCISCOFARNESIO": {
+  "qid": "Q555354",
+  "label": "Francesco Farnese",
+  "birth": {
+   "y": 1678,
+   "date": "1678-05-19",
+   "precision": 11
+  },
+  "death": {
+   "y": 1727,
+   "date": "1727-05-26",
+   "precision": 11
+  },
+  "gnd": "116693169",
+  "loc": "nr00005951",
+  "image": "Francesco Farnese, Duke of Parma by Ilario Spolverini.jpg",
+  "eswiki": "Francisco Farnesio",
+  "enwiki": "Francesco Farnese",
+  "gndRecord": {
+   "name": "Francesco, Parma-Piacenza, Herzog",
+   "birth": "1678",
+   "death": "1727",
+   "bio": "verheiratet mit Dorothea Sophie von der Pfalz (1670-1748), Herzog von Parma"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Francesco_Farnese%2C_Duke_of_Parma_by_Ilario_Spolverini.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Francesco_Farnese,_Duke_of_Parma_by_Ilario_Spolverini.jpg",
+   "width": 892,
+   "height": 1170,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to Ilario Spolverini / Formerly attributed to Domenico Ghislandi",
+   "date": "circa 1710-1720",
+   "title": "Italian: Ritratto di Francesco Farnese, duca di Parma Portrait of Francesco Farnese, Duke of Parma title QS:P1476,it:\"Ritratto di Francesco Farnese, duca di Par",
+   "description": "Portrait of Francesco Farnese (1678-1727)"
+  }
+ },
+ "ANTONIOFARNESIO": {
+  "qid": "Q548485",
+  "label": "Antonio Farnese",
+  "birth": {
+   "y": 1679,
+   "date": "1679-11-29",
+   "precision": 11
+  },
+  "death": {
+   "y": 1731,
+   "date": "1731-01-20",
+   "precision": 11
+  },
+  "gnd": "1114292915",
+  "bnf": "16656274m",
+  "loc": "n97865260",
+  "image": "Antonio Farnese, Duke of Parma - Galleria nazionale, Parma.jpg",
+  "eswiki": "Antonio Farnesio",
+  "enwiki": "Antonio Farnese",
+  "gndRecord": {
+   "name": "Antonio, Parma und Piacenza, Herzog",
+   "birth": "1679",
+   "death": "1731",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Antonio_Farnese%2C_Duke_of_Parma_-_Galleria_nazionale%2C_Parma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Antonio_Farnese,_Duke_of_Parma_-_Galleria_nazionale,_Parma.jpg",
+   "width": 739,
+   "height": 1181,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "circa 1700-1749",
+   "title": "Portrait of Antonio Farnese (1679-1731) label QS:Len,\"Portrait of Antonio Farnese (1679-1731)\"",
+   "description": "Portrait of Antonio Farnese (1679-1731)"
+  }
+ },
+ "MARIAESTEFARN": {
+  "qid": "Q2633673",
+  "label": "Maria d'Este",
+  "birth": {
+   "y": 1644,
+   "date": "1644-12-08",
+   "precision": 11
+  },
+  "death": {
+   "y": 1684,
+   "date": "1684-08-20",
+   "precision": 11
+  },
+  "image": "Maria d Este.jpg",
+  "eswiki": "María de Este",
+  "enwiki": "Maria d'Este",
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Maria_d_Este.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maria_d_Este.jpg",
+   "width": 850,
+   "height": 1001,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "17 th century date QS:P571,+1650-00-00T00:00:00Z/7",
+   "title": "French: Marie d'Este, duchesse de Parme label QS:Lfr,\"Marie d'Este, duchesse de Parme\"",
+   "description": ""
+  }
+ },
+ "ISABELLAESTEFARN": {
+  "qid": "Q2445155",
+  "label": "Isabella d'Este, Duchess of Parma",
+  "birth": {
+   "y": 1635,
+   "date": "1635-10-03",
+   "precision": 11
+  },
+  "death": {
+   "y": 1666,
+   "date": "1666-08-21",
+   "precision": 11
+  },
+  "gnd": "118864777",
+  "image": "Isabella d'Este duchessa di Parma.jpg",
+  "eswiki": "Isabel de Este (1635-1666)",
+  "enwiki": "Isabella d'Este, Duchess of Parma",
+  "gndRecord": {
+   "name": "Isabella, Parma, Herzogin",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Isabella_d%27Este_duchessa_di_Parma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Isabella_d%27Este_duchessa_di_Parma.jpg",
+   "width": 930,
+   "height": 1175,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Frans Denys",
+   "date": "circa 1666-1670",
+   "title": "Italian: Ritratto di Isabella d'Este title QS:P1476,it:\"Ritratto di Isabella d'Este\" label QS:Lit,\"Ritratto di Isabella d'Este\"",
+   "description": "Portrait of Isabella d'Este, Duchess of Parma (1635-1666), wife of Ranuccio II Farnese (1630-1694)."
+  }
+ },
+ "MARGVIOLANTESAVOIA": {
+  "qid": "Q2447071",
+  "label": "Margaret Yolande of Savoy",
+  "birth": {
+   "y": 1635,
+   "date": "1635-11-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1663,
+   "date": "1663-04-29",
+   "precision": 11
+  },
+  "gnd": "1018068287",
+  "image": "Marguerite Yolande of Savoy - Galleria Nazionale di Parma.png",
+  "eswiki": "Margarita Yolanda de Saboya",
+  "enwiki": "Margaret Yolande of Savoy",
+  "gndRecord": {
+   "name": "Margherita Violante, Parma, Herzogin",
+   "birth": "1635-11-15",
+   "death": "1663-04-29",
+   "birthPlace": "Turin",
+   "deathPlace": "Parma",
+   "bio": "Zweite Tochter von Herzog Victor Amadeus I. von Savoyen  (1587-1637) u. Christine von Frankreich  (1606-63), Tochter König Heinrichs IV.; heiratet 1660e  Ranuccio II. Farnese, Herzog von Parma (1630-94) heiratete 1660 Herzog Rainutio II. von Parma"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Marguerite_Yolande_of_Savoy_-_Galleria_Nazionale_di_Parma.png/960px-Marguerite_Yolande_of_Savoy_-_Galleria_Nazionale_di_Parma.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Marguerite_Yolande_of_Savoy_-_Galleria_Nazionale_di_Parma.png",
+   "width": 1317,
+   "height": 1711,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "circa 1640-1660",
+   "title": "\"ritratto di Margherita Violante di Savoia\"",
+   "description": "Portrait of Margaret Yolande of Savoy (1635-1663), wife of Ranuccio II Farnese (1630-1694)"
+  }
+ },
+ "MARGMARIAFARNESIO": {
+  "qid": "Q2550274",
+  "label": "Margherita Maria Farnese",
+  "birth": {
+   "y": 1664,
+   "date": "1664-11-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1718,
+   "date": "1718-06-17",
+   "precision": 11
+  },
+  "image": "Dorothea Sophie of Neuburg, formerly identified as Margherita Maria Farnese - Galleria nazionale, Parma.jpg",
+  "eswiki": "Margarita María Farnesio",
+  "enwiki": "Margherita Maria Farnese",
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Dorothea_Sophie_of_Neuburg%2C_formerly_identified_as_Margherita_Maria_Farnese_-_Galleria_nazionale%2C_Parma.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Dorothea_Sophie_of_Neuburg,_formerly_identified_as_Margherita_Maria_Farnese_-_Galleria_nazionale,_Parma.jpg",
+   "width": 953,
+   "height": 1515,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "between 1690 and 1699 date QS:P,+1690-00-00T00:00:00Z/8,P1319,+1690-00-00T00:00:",
+   "title": "Italian: Ritratto di Dorotea Sofia di Neoburgo Portrait of Dorothea Sophie of Neuburg title QS:P1476,it:\"Ritratto di Dorotea Sofia di Neoburgo \" label QS:Lit,\"R",
+   "description": "Portrait of Countess Palatine Dorothea Sophie of Neuburg (1670-1748), formerly identified as her sister-in-law Margherita Maria Farnese (1664-1718)"
+  }
+ },
+ "TERESAFARNESIO": {
+  "error": "no search"
+ },
+ "ISABELLAFARNESIO1668": {
+  "error": "no match",
+  "candidates": [
+   "Q229867",
+   "Q116469263",
+   "Q27756085",
+   "Q59771176"
+  ]
+ },
+ "MARGARITAMEDICIFARN": {
+  "qid": "Q1100966",
+  "label": "Margherita de' Medici",
+  "birth": {
+   "y": 1612,
+   "date": "1612-05-31",
+   "precision": 11
+  },
+  "death": {
+   "y": 1679,
+   "date": "1679-02-06",
+   "precision": 11
+  },
+  "gnd": "13734077X",
+  "loc": "no2009167031",
+  "image": "Margherita de Médici.jpeg",
+  "eswiki": "Margarita de Médici",
+  "enwiki": "Margherita de' Medici",
+  "gndRecord": {
+   "name": "Margarita, Parma, Herzogin",
+   "birth": "1612",
+   "death": "1679",
+   "bio": "Tochter des Großherzogs der Toskana, Cosimo II. de' Medici (1590-1621); seit 1628 mit Herzog Edoardo I. von Parma verheiratet, der 1646 starb"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Margherita_de_M%C3%A9dici.jpeg/960px-Margherita_de_M%C3%A9dici.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Margherita_de_M%C3%A9dici.jpeg",
+   "width": 2324,
+   "height": 3012,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Justus Sustermans",
+   "date": "16 th century date QS:P571,+1550-00-00T00:00:00Z/7",
+   "title": "Margherita de Médici",
+   "description": "Portrait of Margherita de' Medici (1612-1679)"
+  }
+ },
+ "MARGALDOBRANDINIFARN": {
+  "qid": "Q1100436",
+  "label": "Margherita Aldobrandini",
+  "birth": {
+   "y": 1588,
+   "date": "1588-03-29",
+   "precision": 11
+  },
+  "death": {
+   "y": 1646,
+   "date": "1646-08-09",
+   "precision": 11
+  },
+  "gnd": "131913883",
+  "loc": "no2009167036",
+  "image": "Margarita Aldobrandini, Duchess of Parma by Bartolome Gonzalez, held in the Hermitage collection.jpg",
+  "eswiki": "Margarita Aldobrandini",
+  "enwiki": "Margherita Aldobrandini",
+  "gndRecord": {
+   "name": "Margarete, Parma, Herzogin",
+   "birth": "1585",
+   "death": "1646",
+   "bio": "Ital. Adelige; Frau des Ranuccio I. Farnese, Herzog von Parma und Piacenza"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Margarita_Aldobrandini%2C_Duchess_of_Parma_by_Bartolome_Gonzalez%2C_held_in_the_Hermitage_collection.jpg/960px-Margarita_Aldobrandini%2C_Duchess_of_Parma_by_Bartolome_Gonzalez%2C_held_in_the_Hermitage_collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Margarita_Aldobrandini,_Duchess_of_Parma_by_Bartolome_Gonzalez,_held_in_the_Hermitage_collection.jpg",
+   "width": 1052,
+   "height": 1472,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Bartolomé González y Serrano",
+   "date": "between 1610 and 1623 date QS:P,+1650-00-00T00:00:00Z/7,P1319,+1610-00-00T00:00:",
+   "title": "Portrait of Margarita Aldobrandini, Duchess of Parma title QS:P1476,en:\"Portrait of Margarita Aldobrandini, Duchess of Parma \" label QS:Len,\"Portrait of Margari",
+   "description": ""
+  }
+ },
+ "MARIAFARNESIOESTE": {
+  "qid": "Q2445165",
+  "label": "Maria Caterina Farnese",
+  "birth": {
+   "y": 1615,
+   "date": "1615-02-18",
+   "precision": 11
+  },
+  "death": {
+   "y": 1646,
+   "date": "1646-07-25",
+   "precision": 11
+  },
+  "gnd": "101531368X",
+  "image": "Matteo Loves 1610-1662 - Maria Farnese - Musée d'Art et d'Histoire, Geneva.jpg",
+  "eswiki": "María Farnesio",
+  "enwiki": "Maria Caterina Farnese",
+  "gndRecord": {
+   "name": "Farnese, Maria",
+   "birth": "1615",
+   "death": "1646",
+   "bio": "eine Schwester des Herzogs von Parma"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Matteo_Loves_1610-1662_-_Maria_Farnese_-_Mus%C3%A9e_d%27Art_et_d%27Histoire%2C_Geneva.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Matteo_Loves_1610-1662_-_Maria_Farnese_-_Mus%C3%A9e_d%27Art_et_d%27Histoire,_Geneva.jpg",
+   "width": 640,
+   "height": 1125,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Matteo Loves",
+   "date": "1633 date QS:P571,+1633-00-00T00:00:00Z/9",
+   "title": "French: Portrait de Marie Farnèse, épouse du duc François 1er d'Este label QS:Lfr,\"Portrait de Marie Farnèse, épouse du duc François 1er d'Este\"",
+   "description": "Ritratto di Maria Farnese , prima moglie di Francesco I d'Este"
+  }
+ },
+ "VITTORIAFARNESIOESTE": {
+  "qid": "Q2301541",
+  "label": "Vittoria Farnese d'Este",
+  "birth": {
+   "y": 1618,
+   "date": "1618-04-29",
+   "precision": 11
+  },
+  "death": {
+   "y": 1649,
+   "date": "1649-08-10",
+   "precision": 11
+  },
+  "gnd": "1015313825",
+  "image": "Sustermans, Justus - Vittoria Farnese d'Este.jpg",
+  "eswiki": "Victoria Farnesio",
+  "enwiki": "Vittoria Farnese",
+  "gndRecord": {
+   "name": "Farnese, Vittoria",
+   "birth": "1618",
+   "death": "1649",
+   "bio": "Francesco I. d'Este heiratete 1648 Vittoria Farnese, die Schwester seiner verstorbenen ersten Frau Maria (1615-1646) und Großtante des Herzogs von Parma"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Sustermans%2C_Justus_-_Vittoria_Farnese_d%27Este.jpg/960px-Sustermans%2C_Justus_-_Vittoria_Farnese_d%27Este.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Sustermans,_Justus_-_Vittoria_Farnese_d%27Este.jpg",
+   "width": 2164,
+   "height": 2605,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Workshop of Justus Sustermans",
+   "date": "1648 date QS:P571,+1648-00-00T00:00:00Z/9",
+   "title": "Sustermans, Justus - Vittoria Farnese d'Este",
+   "description": "Ritratto di Vittoria Farnese (1618-1649), moglie di Francesco I d'Este, duca di Modena"
+  }
+ },
+ "ALFONSO4ESTE": {
+  "qid": "Q932379",
+  "label": "Alfonso IV d'Este, Duke of Modena",
+  "birth": {
+   "y": 1634,
+   "date": "1634-10-14",
+   "precision": 11
+  },
+  "death": {
+   "y": 1662,
+   "date": "1662-07-16",
+   "precision": 11
+  },
+  "gnd": "119386437",
+  "loc": "nr97015798",
+  "image": "Justus Sustermans - Portrait of Alfonso IV d'Este.jpg",
+  "eswiki": "Alfonso IV de Este",
+  "enwiki": "Alfonso IV d'Este",
+  "gndRecord": {
+   "name": "Alfonso IV., Modena, Herzog",
+   "birth": "1634-02-02",
+   "death": "1662-07-16",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Justus_Sustermans_-_Portrait_of_Alfonso_IV_d%27Este.jpg/960px-Justus_Sustermans_-_Portrait_of_Alfonso_IV_d%27Este.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Justus_Sustermans_-_Portrait_of_Alfonso_IV_d%27Este.jpg",
+   "width": 2000,
+   "height": 2383,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Justus Sustermans",
+   "date": "1649",
+   "title": "Alfonso IV d'Este title QS:P1476,en:\"Alfonso IV d'Este \" label QS:Len,\"Alfonso IV d'Este \"",
+   "description": ""
+  }
+ },
+ "FRANCESCO2ESTE": {
+  "qid": "Q715243",
+  "label": "Francesco II d'Este, Duke of Modena",
+  "birth": {
+   "y": 1660,
+   "date": "1660-03-06",
+   "precision": 11
+  },
+  "death": {
+   "y": 1694,
+   "date": "1694-09-06",
+   "precision": 11
+  },
+  "gnd": "119386445",
+  "bnf": "15011854f",
+  "loc": "n90667496",
+  "image": "Ritratto di Francesco II d'Este.png",
+  "eswiki": "Francisco II de Este",
+  "enwiki": "Francesco II d'Este",
+  "gndRecord": {
+   "name": "Franz II., Modena, Herzog",
+   "birth": "1660",
+   "death": "1694",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Ritratto_di_Francesco_II_d%27Este.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ritratto_di_Francesco_II_d%27Este.png",
+   "width": 570,
+   "height": 716,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown Person",
+   "date": "18 th century date QS:P,+1750-00-00T00:00:00Z/7",
+   "title": "Ritratto di Francesco II d'Este",
+   "description": "Oirtrait of Francesco II D' Este"
+  }
+ },
+ "ELISABETHAMALIAPAL": {
+  "qid": "Q237761",
+  "label": "Landgravine Elisabeth Amalie of Hesse-Darmstadt",
+  "birth": {
+   "y": 1635,
+   "date": "1635-03-20",
+   "precision": 11
+  },
+  "death": {
+   "y": 1709,
+   "date": "1709-08-04",
+   "precision": 11
+  },
+  "gnd": "12890285X",
+  "image": "Elisabeth Amalia Magdalena im Jahr 1705.jpg",
+  "eswiki": "Isabel Amalia de Hesse-Darmstadt",
+  "enwiki": "Princess Elisabeth Amalie of Hesse-Darmstadt",
+  "gndRecord": {
+   "name": "Elisabeth Amalie Magdalene, Pfalz, Kurfürstin",
+   "birth": "1635",
+   "death": "1709",
+   "birthPlace": "Gießen",
+   "deathPlace": "Neuburg a.d. Donau",
+   "bio": "Tochter von Landgraf Georg II. von Hessen-Darmstadt; ab 1653 verheiratet mit Kurfürst Philipp Wilhelm von der Pfalz"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Elisabeth_Amalia_Magdalena_im_Jahr_1705.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Elisabeth_Amalia_Magdalena_im_Jahr_1705.jpg",
+   "width": 803,
+   "height": 998,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Jan Frans van Douven",
+   "date": "circa 1705 date QS:P571,+1705-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Elisabeth Amalia Magdalena im Jahr 1705",
+   "description": "Landgravine Elisabeth Amalie of Hesse-Darmstadt (1635-1709), Electress Palatine, wife of Philip William, Elector Palatine (1615-1690)"
+  }
+ },
+ "CARLOBONAPARTE": {
+  "qid": "Q151869",
+  "label": "Carlo Bonaparte",
+  "birth": {
+   "y": 1746,
+   "date": "1746-03-29",
+   "precision": 11
+  },
+  "death": {
+   "y": 1785,
+   "date": "1785-02-24",
+   "precision": 11
+  },
+  "gnd": "123287162",
+  "bnf": "118927092",
+  "loc": "no2003009983",
+  "image": "Carlo Buonaparte.jpg",
+  "eswiki": "Carlo Buonaparte",
+  "enwiki": "Carlo Buonaparte",
+  "gndRecord": {
+   "name": "Buonaparte, Carlo Maria",
+   "birth": "1746",
+   "death": "1785",
+   "bio": "Ital. Steuerbeamter, Vater Napoleons I.; königlicher Rat"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Carlo_Buonaparte.jpg/960px-Carlo_Buonaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Carlo_Buonaparte.jpg",
+   "width": 1378,
+   "height": 1786,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to Anton Raphael Mengs",
+   "date": "circa 1766-1779",
+   "title": "French: Charles-Marie Bonaparte (1746-1785) label QS:Lfr,\"Charles-Marie Bonaparte (1746-1785)\"",
+   "description": "Portrait of a man, presumably Carlo Maria Buonaparte (1746-1785), father of Napoleon Bonaparte. This is one of few portraits of the father of Napoleon. In this half–length posthumous (?) portrait, Car"
+  }
+ },
+ "LETIZIARAMOLINO": {
+  "qid": "Q151995",
+  "label": "Maria-Letizia Bonaparte",
+  "birth": {
+   "y": 1750,
+   "date": "1750-08-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1836,
+   "date": "1836-02-02",
+   "precision": 11
+  },
+  "gnd": "118661310",
+  "bnf": "11938514g",
+  "loc": "n81022674",
+  "image": "(Venice) Madame Letizia Bonaparte by Antonio Canova - Gallerie Accademia.jpg",
+  "eswiki": "María Leticia Ramolino",
+  "enwiki": "Letizia Bonaparte",
+  "gndRecord": {
+   "name": "Bonaparte, Maria Letizia",
+   "birth": "1750",
+   "death": "1836",
+   "bio": "Mutter Napoleons I."
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/%28Venice%29_Madame_Letizia_Bonaparte_by_Antonio_Canova_-_Gallerie_Accademia.jpg/960px-%28Venice%29_Madame_Letizia_Bonaparte_by_Antonio_Canova_-_Gallerie_Accademia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:(Venice)_Madame_Letizia_Bonaparte_by_Antonio_Canova_-_Gallerie_Accademia.jpg",
+   "width": 5717,
+   "height": 5783,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Didier Descouens",
+   "date": "Taken on 4 November 2016",
+   "title": "(Venice) Madame Letizia Bonaparte by Antonio Canova - Gallerie Accademia",
+   "description": ""
+  }
+ },
+ "JOSEBONAPARTE": {
+  "qid": "Q7726",
+  "label": "Joseph Bonaparte",
+  "birth": {
+   "y": 1768,
+   "date": "1768-01-07",
+   "precision": 11
+  },
+  "death": {
+   "y": 1844,
+   "date": "1844-07-28",
+   "precision": 11
+  },
+  "gnd": "118713140",
+  "bnf": "12459535c",
+  "loc": "n50038058",
+  "image": "Joseph Bonaparte (by Wicar).jpg",
+  "eswiki": "José Bonaparte",
+  "enwiki": "Joseph Bonaparte",
+  "gndRecord": {
+   "name": "Joseph, Spanien, König",
+   "birth": "1768-01-07",
+   "death": "1844-07-28",
+   "birthPlace": "Corte",
+   "deathPlace": "Florenz",
+   "bio": "1807-1808 König von Neapel; 1808-1813 König von Spanien; lebte teilweise in der Schweiz und in New Jersey im Exil König von Neapel 1806-08; König von Spanien 1808-13; ältester Bruder Napoleons I."
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Joseph_Bonaparte_%28by_Wicar%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Joseph_Bonaparte_(by_Wicar).jpg",
+   "width": 522,
+   "height": 817,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Jean-Baptiste Wicar",
+   "date": "1808 date QS:P571,+1808-00-00T00:00:00Z/9",
+   "title": "Portrait of Joseph Bonaparte (1768-1844), King of Neapel label QS:Len,\"Portrait of Joseph Bonaparte (1768-1844), King of Neapel\" label QS:Lfr,\"Portrait de Josep",
+   "description": ""
+  }
+ },
+ "LUCIENBONAPARTE": {
+  "qid": "Q151098",
+  "label": "Lucien Bonaparte",
+  "birth": {
+   "y": 1775,
+   "date": "1775-05-21",
+   "precision": 11
+  },
+  "death": {
+   "y": 1840,
+   "date": "1840-06-29",
+   "precision": 11
+  },
+  "gnd": "118513141",
+  "bnf": "12521132v",
+  "loc": "n82141622",
+  "image": "Fabre - Lucien Bonaparte.jpg",
+  "eswiki": "Luciano Bonaparte",
+  "enwiki": "Lucien Bonaparte",
+  "gndRecord": {
+   "name": "Bonaparte, Lucien",
+   "birth": "1775",
+   "death": "1840",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Viterbo",
+   "bio": "Franz. Politiker und Dichter; 2. Bruder Napoleon I.; Prinz von Canino und Musignano"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Fabre_-_Lucien_Bonaparte.jpg/960px-Fabre_-_Lucien_Bonaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fabre_-_Lucien_Bonaparte.jpg",
+   "width": 2497,
+   "height": 3192,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François-Xavier Fabre",
+   "date": "after 1800 date QS:P571,+1800-00-00T00:00:00Z/7,P1319,+1800-00-00T00:00:00Z/9",
+   "title": "Portrait of Luciano Bonaparte in Villa Rufinella (1775-1840)",
+   "description": ""
+  }
+ },
+ "ELISABONAPARTE": {
+  "qid": "Q151083",
+  "label": "Elisa Bonaparte",
+  "birth": {
+   "y": 1777,
+   "date": "1777-01-03",
+   "precision": 11
+  },
+  "death": {
+   "y": 1820,
+   "date": "1820-08-06",
+   "precision": 11
+  },
+  "gnd": "118505483",
+  "bnf": "11985691h",
+  "loc": "n83018191",
+  "image": "Portrait of Elisa Bonaparte.jpg",
+  "eswiki": "Elisa Bonaparte",
+  "enwiki": "Elisa Bonaparte",
+  "gndRecord": {
+   "name": "Elisa, Lucca, Fürstin",
+   "birth": "1777",
+   "death": "1820",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Villa Vicentina",
+   "bio": "Älteste Schwester Napoleons; regierende Fürstin von Lucca und Piombino, Herzogin von Massa-Carrara, Großherzogin von Toskana"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Portrait_of_Elisa_Bonaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Elisa_Bonaparte.jpg",
+   "width": 740,
+   "height": 1145,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to François Kinson",
+   "date": "1810 date QS:P571,+1810-00-00T00:00:00Z/9",
+   "title": "Portrait of Elisa Bonaparte",
+   "description": ""
+  }
+ },
+ "LUISBONAPARTE": {
+  "qid": "Q7729",
+  "label": "Louis Bonaparte",
+  "birth": {
+   "y": 1778,
+   "date": "1778-09-02",
+   "precision": 11
+  },
+  "death": {
+   "y": 1846,
+   "date": "1846-07-25",
+   "precision": 11
+  },
+  "gnd": "118896156",
+  "bnf": "12653242q",
+  "loc": "n84078645",
+  "image": "LouisBonaparte Holland.jpg",
+  "eswiki": "Luis Bonaparte",
+  "enwiki": "Louis Bonaparte",
+  "gndRecord": {
+   "name": "Louis Bonaparte, Holland, König",
+   "birth": "1778",
+   "death": "1846",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Livorno",
+   "bio": "Dritter Bruder Napoleons I., Vater von Napoleon III., Graf von Saint-Leu"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/LouisBonaparte_Holland.jpg/960px-LouisBonaparte_Holland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:LouisBonaparte_Holland.jpg",
+   "width": 4026,
+   "height": 6134,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Charles Howard Hodges",
+   "date": "1809",
+   "title": "Portrait of Lodewijk Napoleon Bonaparte (1778-1846)",
+   "description": ""
+  }
+ },
+ "PAULINABONAPARTE": {
+  "qid": "Q152785",
+  "label": "Pauline Bonaparte",
+  "birth": {
+   "y": 1780,
+   "date": "1780-10-20",
+   "precision": 11
+  },
+  "death": {
+   "y": 1825,
+   "date": "1825-06-09",
+   "precision": 11
+  },
+  "gnd": "118513540",
+  "bnf": "11985695w",
+  "loc": "n80043451",
+  "image": "Pauline Bonaparte princesse Borghese.jpg",
+  "eswiki": "Paulina Bonaparte",
+  "enwiki": "Pauline Bonaparte",
+  "gndRecord": {
+   "name": "Borghese, Pauline",
+   "birth": "1780-10-20",
+   "death": "1825-06-09",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Florenz",
+   "bio": "Buchbesitz: Privatbibliothek Pauline Princess Burghese Bonaparte Schwester Napoleons I.; 1803 Ehefrau von Camillo Borghese, nachmals Herzog von Guastalla und Generalgouverneur des Piemont"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Pauline_Bonaparte_princesse_Borghese.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Pauline_Bonaparte_princesse_Borghese.jpg",
+   "width": 960,
+   "height": 1400,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Marie-Guillemine Benoist",
+   "date": "1808",
+   "title": "Portrait of Pauline Bonaparte (1780-1825)",
+   "description": "Pauline Bonaparte suo jure Duchess of Guastalla and Princess Borghese as the wife of Camillo Borghese, 6th Prince of Sulmona, and Napoleon's younger sister"
+  }
+ },
+ "CAROLINABONAPARTE": {
+  "qid": "Q152782",
+  "label": "Caroline Bonaparte",
+  "birth": {
+   "y": 1782,
+   "date": "1782-03-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1839,
+   "date": "1839-05-18",
+   "precision": 11
+  },
+  "gnd": "118585827",
+  "bnf": "120481563",
+  "loc": "n50051519",
+  "image": "Caroline Bonaparte (1782-1839) (A).jpg",
+  "eswiki": "Carolina Bonaparte",
+  "enwiki": "Caroline Bonaparte",
+  "gndRecord": {
+   "name": "Karoline, Neapel, Königin",
+   "birth": "1782-03-25",
+   "death": "1839-05-18",
+   "birthPlace": "Ajaccio",
+   "deathPlace": "Florenz",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Caroline_Bonaparte_%281782-1839%29_%28A%29.jpg/960px-Caroline_Bonaparte_%281782-1839%29_%28A%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Caroline_Bonaparte_(1782-1839)_(A).jpg",
+   "width": 1614,
+   "height": 2240,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François Gérard",
+   "date": "between 1810 and 1812 date QS:P571,+1810-00-00T00:00:00Z/8,P1319,+1810-00-00T00:",
+   "title": "Portrait of Caroline Bonaparte , queen of Naples and of the Two Sicilies , by François Gérard or his workshop.",
+   "description": "The picture is probably painted between 1810 and 1812. This portrait depicts Queen Caroline Bonaparte sitting, the royal crown resting beside her on a velvet cushion. A rich drapery and a monumental c"
+  }
+ },
+ "JERONIMOBONAPARTE": {
+  "qid": "Q151087",
+  "label": "Jérôme Bonaparte",
+  "birth": {
+   "y": 1784,
+   "date": "1784-11-15",
+   "precision": 11
+  },
+  "death": {
+   "y": 1860,
+   "date": "1860-06-24",
+   "precision": 11
+  },
+  "gnd": "118557432",
+  "bnf": "120850140",
+  "loc": "n85811080",
+  "image": "King Jerome Bonaparte.jpg",
+  "eswiki": "Jerónimo Bonaparte",
+  "enwiki": "Jérôme Bonaparte",
+  "gndRecord": {
+   "name": "Jérôme, Westfalen, König",
+   "birth": "1784-11-15",
+   "death": "1860-06-24",
+   "bio": "Franz. Marineoffizier (zuletzt Konteradmiral), Kg. von Westfalen (1807-1813)"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/King_Jerome_Bonaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:King_Jerome_Bonaparte.jpg",
+   "width": 794,
+   "height": 1200,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François Gérard",
+   "date": "1811 date QS:P571,+1811-00-00T00:00:00Z/9",
+   "title": "Portrait of Jérôme Bonaparte (1784-1860)",
+   "description": ""
+  }
+ },
+ "JULIECLARY": {
+  "qid": "Q235412",
+  "label": "Julie Clary",
+  "birth": {
+   "y": 1771,
+   "date": "1771-12-26",
+   "precision": 11
+  },
+  "death": {
+   "y": 1845,
+   "date": "1845-04-07",
+   "precision": 11
+  },
+  "gnd": "118714074",
+  "loc": "n92082342",
+  "image": "Julie Clary by Robert Lefèvre.jpg",
+  "eswiki": "Julia Clary",
+  "enwiki": "Julie Clary",
+  "gndRecord": {
+   "name": "Julie, Spanien, Königin",
+   "birth": "1771",
+   "death": "1845",
+   "bio": "Frau von Joseph Bonaparte"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Julie_Clary_by_Robert_Lef%C3%A8vre.jpg/960px-Julie_Clary_by_Robert_Lef%C3%A8vre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Julie_Clary_by_Robert_Lef%C3%A8vre.jpg",
+   "width": 1293,
+   "height": 1964,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Robert Lefèvre",
+   "date": "1807",
+   "title": "French: Marie-Julie Clary, reine de Naples (1777-1845), et sa fille Zénaïde (1801-1854) Marie-Julie Clary, Queen of Naples (1777-1845) title QS:P1476,fr:\"Marie-",
+   "description": ""
+  }
+ },
+ "JOSEFINABEAUHARNAIS": {
+  "qid": "Q171480",
+  "label": "Joséphine de Beauharnais",
+  "birth": {
+   "y": 1763,
+   "date": "1763-06-23",
+   "precision": 11
+  },
+  "death": {
+   "y": 1814,
+   "date": "1814-05-29",
+   "precision": 11
+  },
+  "gnd": "118558420",
+  "bnf": "12164162n",
+  "loc": "n50038062",
+  "image": "Baron François Gérard - Joséphine in coronation costume - Google Art Project.jpg",
+  "eswiki": "Josefina de Beauharnais",
+  "enwiki": "Joséphine de Beauharnais",
+  "gndRecord": {
+   "name": "Josephine, Frankreich, Kaiserin",
+   "birth": "1763",
+   "death": "1814",
+   "bio": "1. Gattin Napoleons I."
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project.jpg/960px-Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project.jpg",
+   "width": 3924,
+   "height": 5312,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Baron François Gérard (1770 - 1837) – Painter (French) Born in Rome. Died in Paris. Details on Google Art Project",
+   "date": "(1807 - 1808)",
+   "title": "Joséphine en costume de sacre Joséphine in coronation costume title QS:P1476,en:\"Joséphine in coronation costume\" label QS:Len,\"Joséphine in coronation costume\"",
+   "description": ""
+  }
+ },
+ "MARIALUISAAUSTRIAPARMA": {
+  "qid": "Q157491",
+  "label": "Marie Louise, Duchess of Parma",
+  "birth": {
+   "y": 1791,
+   "date": "1791-12-12",
+   "precision": 11
+  },
+  "death": {
+   "y": 1847,
+   "date": "1847-12-17",
+   "precision": 11
+  },
+  "gnd": "118577891",
+  "bnf": "119638272",
+  "loc": "n50043678",
+  "image": "L'impératriceMarie-Louise.jpg",
+  "eswiki": "María Luisa de Austria",
+  "enwiki": "Marie Louise, Duchess of Parma",
+  "gndRecord": {
+   "name": "Marie Louise, Frankreich, Kaiserin",
+   "birth": "1791-12-12",
+   "death": "1847-12-17",
+   "birthPlace": "Wien",
+   "deathPlace": "Parma",
+   "bio": "2. Ehefrau Napoleons I.. Tochter Kaiser Franz II. von Österreich"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/L%27imp%C3%A9ratriceMarie-Louise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:L%27imp%C3%A9ratriceMarie-Louise.jpg",
+   "width": 741,
+   "height": 891,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François Gérard",
+   "date": "1810 date QS:P571,+1810-00-00T00:00:00Z/9",
+   "title": "French: Portrait de l'Impératrice Marie-Louise (1791-1847) Portrait of Empress Marie Louise title QS:P1476,fr:\"Portrait de l'Impératrice Marie-Louise (1791-1847",
+   "description": ""
+  }
+ },
+ "HORTENSEBEAUHARNAIS": {
+  "qid": "Q229875",
+  "label": "Hortense de Beauharnais",
+  "birth": {
+   "y": 1783,
+   "date": "1783-04-10",
+   "precision": 11
+  },
+  "death": {
+   "y": 1837,
+   "date": "1837-10-05",
+   "precision": 11
+  },
+  "gnd": "118553720",
+  "bnf": "12564000h",
+  "loc": "n84078646",
+  "image": "Hortense de Beauharnais.jpg",
+  "eswiki": "Hortensia de Beauharnais",
+  "enwiki": "Hortense de Beauharnais",
+  "gndRecord": {
+   "name": "Hortense, Niederlande, Königin",
+   "birth": "1783-04-10",
+   "death": "1837-10-05",
+   "birthPlace": "Paris",
+   "deathPlace": "Arenenberg (Salenstein)",
+   "bio": "Königin von Holland 1806-10"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Hortense_de_Beauharnais.jpg/960px-Hortense_de_Beauharnais.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Hortense_de_Beauharnais.jpg",
+   "width": 3826,
+   "height": 4702,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Anne-Louis Girodet",
+   "date": "between 1805 and 1809 date QS:P571,+1805-00-00T00:00:00Z/8,P1319,+1805-00-00T00:",
+   "title": "Hortense de Beauharnais . [ 1 ] Alternative title(s): Portrait of Hortense de Beauharnais, Queen of Holland, wife of King Louis Napoleon .",
+   "description": ""
+  }
+ },
+ "JOAQUINMURAT": {
+  "qid": "Q151173",
+  "label": "Joachim Murat",
+  "birth": {
+   "y": 1767,
+   "date": "1767-03-25",
+   "precision": 11
+  },
+  "death": {
+   "y": 1815,
+   "date": "1815-10-13",
+   "precision": 11
+  },
+  "gnd": "118746928",
+  "bnf": "119639427",
+  "loc": "n50040041",
+  "image": "Murat2.jpg",
+  "eswiki": "Joaquín Murat",
+  "enwiki": "Joachim Murat",
+  "gndRecord": {
+   "name": "Joachim, Neapel, König",
+   "birth": "1767-03-25",
+   "death": "1815-10-13",
+   "deathPlace": "Pizzo",
+   "bio": "Franz. Kavallerieoffizier, Marschall (seit 1804), als Joachim Großherzog von Berg und Kleve (1806-08), König von Neapel (seit 1808); geb. in Labastide-Fortunière"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Murat2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Murat2.jpg",
+   "width": 843,
+   "height": 1024,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François Gérard",
+   "date": "circa 1808 date QS:P571,+1808-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Murat2",
+   "description": "Fragment of portrait of Joachim Murat , Prince d’Empire, Grand Duke of Clèves and of Berg, King of Naples under the name of Napoleon in 1808 (1767-1815), Marshal of France in 1804"
+  }
+ },
+ "CATALINAWURTTBONAPARTE": {
+  "qid": "Q236184",
+  "label": "Catharina of Württemberg",
+  "birth": {
+   "y": 1783,
+   "date": "1783-02-21",
+   "precision": 11
+  },
+  "death": {
+   "y": 1835,
+   "date": "1835-11-29",
+   "precision": 11
+  },
+  "gnd": "101423004",
+  "bnf": "10734120v",
+  "loc": "nr90009150",
+  "image": "Catherine of Würtemberg (1783–1835), Wife of Jérôme Bonaparte, King of Westphalia.jpg",
+  "eswiki": "Catalina de Wurtemberg",
+  "enwiki": "Catharina of Württemberg",
+  "gndRecord": {
+   "name": "Katharina, Westfalen, Königin",
+   "birth": "1783",
+   "death": "1835",
+   "bio": "Gattin Jérôme Bonapartes, König v. Westfalen; Tochter Friedrichs I., König von Württemberg"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Catherine_of_W%C3%BCrtemberg_%281783%E2%80%931835%29%2C_Wife_of_J%C3%A9r%C3%B4me_Bonaparte%2C_King_of_Westphalia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Catherine_of_W%C3%BCrtemberg_(1783%E2%80%931835),_Wife_of_J%C3%A9r%C3%B4me_Bonaparte,_King_of_Westphalia.jpg",
+   "width": 737,
+   "height": 944,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "François Kinson",
+   "date": "c.1810–1820",
+   "title": "Catherine of Würtemberg (1783–1835), Wife of Jérôme Bonaparte, King of Westphalia",
+   "description": "Kinsoen, Francois Joseph; Catherine of Wurtemberg (1783-1835), Wife of Jerome Bonaparte, King of Westphalia; The Bowes Museum; http://www.artuk.org/artworks/catherine-of-wurtemberg-17831835-wife-of-je"
+  }
+ },
+ "HUGHALBERTODONNELL": {
+  "qid": "Q5932131",
+  "label": "Hugh O'Donnell, 2nd Earl of Tyrconnell",
+  "birth": {
+   "y": 1606,
+   "date": "1606-01-01",
+   "precision": 9
+  },
+  "death": {
+   "y": 1642,
+   "date": "1642-01-01",
+   "precision": 9
+  },
+  "enwiki": "Hugh O'Donnell, 2nd Earl of Tyrconnell"
+ },
+ "ALEJANDROOREILLY": {
+  "qid": "Q1651702",
+  "label": "Alejandro O'Reilly",
+  "birth": {
+   "y": 1723,
+   "date": "1723-10-23",
+   "precision": 11
+  },
+  "death": {
+   "y": 1794,
+   "date": "1794-03-23",
+   "precision": 11
+  },
+  "gnd": "1176766465",
+  "loc": "n84055668",
+  "image": "Alejandro O'Reilly by Francisco José de Goya.jpg",
+  "eswiki": "Alejandro O'Reilly",
+  "enwiki": "Alejandro O'Reilly",
+  "gndRecord": {
+   "name": "O'Reilly, Alejandro",
+   "birth": "1723-10-24",
+   "death": "1794-03-23",
+   "birthPlace": "Baltrasna",
+   "deathPlace": "Bonete",
+   "bio": "1769-1770 Gouverneur von Louisiana."
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Alejandro_O%27Reilly_by_Francisco_Jos%C3%A9_de_Goya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Alejandro_O%27Reilly_by_Francisco_Jos%C3%A9_de_Goya.jpg",
+   "width": 374,
+   "height": 440,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Francisco José de Goya",
+   "date": "1700s date QS:P,+1700-00-00T00:00:00Z/8",
+   "title": "Alejandro O'Reilly by Francisco José de Goya",
+   "description": "Alejandro O'Reilly ."
+  }
+ },
+ "PEDROPABLOOREILLY": {
+  "error": "no search"
+ },
+ "AMBROSIOOHIGGINS": {
+  "qid": "Q1388469",
+  "label": "Ambrosio O'Higgins, 1st Marquis of Osorno",
+  "birth": {
+   "y": 1720,
+   "date": "1720-02-13",
+   "precision": 11
+  },
+  "death": {
+   "y": 1801,
+   "date": "1801-03-19",
+   "precision": 11
+  },
+  "gnd": "189575816",
+  "loc": "n94040524",
+  "image": "Portrait of Ambrosio O'Higgins.jpg",
+  "eswiki": "Ambrosio O'Higgins",
+  "enwiki": "Ambrosio O'Higgins, 1st Marquess of Osorno",
+  "gndRecord": {
+   "name": "O'Higgins, Ambrosio",
+   "deathPlace": "Lima",
+   "bio": "Irischstämmiger spanischer Gouverneur von Chile und Vizekönig von Peru; Geburtsort Ballynary"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Portrait_of_Ambrosio_O%27Higgins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_Ambrosio_O%27Higgins.jpg",
+   "width": 491,
+   "height": 800,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Pedro Díaz",
+   "date": "1798 date QS:P571,+1798-00-00T00:00:00Z/9",
+   "title": "Portrait of Ambrosio O'Higgins",
+   "description": "Retrato de Ambrosio O'Higgins (1720-1801), gobernador de Chile (1788-1796) y virrey del Perú (1796-1800)"
+  }
+ },
+ "BERNARDOOHIGGINS": {
+  "qid": "Q28930",
+  "label": "Bernardo O'Higgins",
+  "birth": {
+   "y": 1778,
+   "date": "1778-08-20",
+   "precision": 11
+  },
+  "death": {
+   "y": 1842,
+   "date": "1842-10-24",
+   "precision": 11
+  },
+  "gnd": "119516608",
+  "bnf": "12088744k",
+  "loc": "n50034064",
+  "image": "Ohiggins.jpg",
+  "eswiki": "Bernardo O'Higgins",
+  "enwiki": "Bernardo O'Higgins",
+  "gndRecord": {
+   "name": "O'Higgins, Bernardo",
+   "birth": "1778",
+   "death": "1842",
+   "birthPlace": "Chillán",
+   "deathPlace": "Lima",
+   "bio": "Chilenischer General und Unabhängigkeitskämpfer (1778-1842)"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ohiggins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ohiggins.jpg",
+   "width": 852,
+   "height": 1087,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "José Gil de Castro",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "Portrait of Bernardo O'Higgins holding the Chilean Constitution. label QS:Len,\"Portrait of Bernardo O'Higgins holding the Chilean Constitution.\"",
+   "description": "Portrait of Bernardo O'Higgins holding the Chilean Constitution."
+  }
+ },
+ "RICARDOWALL": {
+  "qid": "Q2397740",
+  "label": "Ricardo Wall",
+  "birth": {
+   "y": 1694,
+   "date": "1694-11-05",
+   "precision": 11
+  },
+  "death": {
+   "y": 1777,
+   "date": "1777-12-26",
+   "precision": 11
+  },
+  "gnd": "1030113548",
+  "bnf": "144985922",
+  "loc": "no2010089953",
+  "image": "Ricardo Wall.jpg",
+  "eswiki": "Ricardo Wall",
+  "enwiki": "Ricardo Wall",
+  "gndRecord": {
+   "name": "Wall, Ricardo",
+   "birth": "1694",
+   "death": "1777",
+   "birthPlace": "Nantes",
+   "bio": "Ir. Soldat, Diplomat u. Minister in span. Diensten. Geb. in Frankreich"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Ricardo_Wall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Ricardo_Wall.jpg",
+   "width": 591,
+   "height": 703,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown artist Unknown artist",
+   "date": "18 th century date QS:P571,+1750-00-00T00:00:00Z/7",
+   "title": "Ricardo Wall",
+   "description": "Retrato del político y militar de orígen irlandés Ricardo Wall (1694-1777), que fue teniente general del ejército español y Secretario de Estado y de Guerra durante el reinado de Carlos III de España "
+  }
+ },
+ "JOSEODONNELL1722": {
+  "error": "no search"
+ },
+ "CARLOSODONNELL": {
+  "qid": "Q56401231",
+  "label": "Carlos O'Donnell y Anethan",
+  "birth": {
+   "y": 1772,
+   "date": "1772-04-22",
+   "precision": 11
+  },
+  "death": {
+   "y": 1830,
+   "date": "1830-02-08",
+   "precision": 11
+  },
+  "eswiki": "Carlos O'Donnell y Anhetan",
+  "enwiki": "Carlos O'Donnell"
+ },
+ "LEOPOLDOODONNELL": {
+  "qid": "Q454265",
+  "label": "Leopoldo O'Donnell, 1st Duke of Tetuan",
+  "birth": {
+   "y": 1809,
+   "date": "1809-01-12",
+   "precision": 11
+  },
+  "death": {
+   "y": 1867,
+   "date": "1867-11-05",
+   "precision": 11
+  },
+  "gnd": "118786741",
+  "loc": "n81007085",
+  "image": "Leopoldo O'Donnell y Jorris.jpg",
+  "eswiki": "Leopoldo O'Donnell",
+  "enwiki": "Leopoldo O'Donnell",
+  "gndRecord": {
+   "name": "O'Donnell y Jorris, Leopoldo",
+   "birth": "1809-01-12",
+   "death": "1867-11-05",
+   "birthPlace": "Santa Cruz de Tenerife",
+   "deathPlace": "Biarritz",
+   "bio": "Er war mehrfach spanischer Ministerpräsident. Seit 1839 trug er den Titel Graf von Lucena, seit 1860 Herzog von Tetuán."
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Leopoldo_O%27Donnell_y_Jorris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Leopoldo_O%27Donnell_y_Jorris.jpg",
+   "width": 953,
+   "height": 1200,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "Leopoldo O'Donnell y Jorris",
+   "description": "Retrato del general español, Leopoldo O'Donnell y Jorís (1809-1867)"
+  }
+ },
+ "RANUCCIO2FARN": {
+  "qid": "Q555008",
+  "label": "Ranuccio II Farnese",
+  "birth": {
+   "y": 1630,
+   "date": "1630-09-17",
+   "precision": 11
+  },
+  "death": {
+   "y": 1694,
+   "date": "1694-12-11",
+   "precision": 11
+  },
+  "gnd": "102328102",
+  "loc": "nr00005945",
+  "image": "Jacob Denys - Portrait of Ranuccio II.jpg",
+  "eswiki": "Ranuccio II Farnesio",
+  "enwiki": "Ranuccio II Farnese",
+  "gndRecord": {
+   "name": "Ranuccio II., Parma, Duca",
+   "birth": "1630",
+   "death": "1694",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Jacob_Denys_-_Portrait_of_Ranuccio_II.jpg/960px-Jacob_Denys_-_Portrait_of_Ranuccio_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Jacob_Denys_-_Portrait_of_Ranuccio_II.jpg",
+   "width": 2500,
+   "height": 4173,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Attributed to Jacob Denys",
+   "date": "circa 1675-1699",
+   "title": "Portrait of Ranuccio II Farnese, Duke of Parma (1630-1694) label QS:Len,\"Portrait of Ranuccio II Farnese, Duke of Parma (1630-1694)\"",
+   "description": ""
+  }
+ },
+ "ODOARDO2PRINCEFARN": {
+  "qid": "Q964936",
+  "label": "Odoardo Farnese, Hereditary Prince of Parma",
+  "birth": {
+   "y": 1666,
+   "date": "1666-08-12",
+   "precision": 11
+  },
+  "death": {
+   "y": 1693,
+   "date": "1693-09-06",
+   "precision": 11
+  },
+  "gnd": "119112086",
+  "loc": "n97875395",
+  "image": "Edouard-II-Farnese-pere-dElisabeth.jpg",
+  "eswiki": "Eduardo II Farnesio",
+  "enwiki": "Odoardo Farnese, Hereditary Prince of Parma",
+  "gndRecord": {
+   "name": "Odoardo, Parma, Prinz",
+   "birth": "1666",
+   "death": "1693",
+   "bio": "Sohn d. Herzogs Ranuccio II. von Parma; sein Vater überlebte ihn"
+  },
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Edouard-II-Farnese-pere-dElisabeth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Edouard-II-Farnese-pere-dElisabeth.jpg",
+   "width": 553,
+   "height": 800,
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "artist": "Martial Desbois (1630-1700)",
+   "date": "between 1683 and 1693 date QS:P571,+1650-00-00T00:00:00Z/7,P1319,+1683-00-00T00:",
+   "title": "Edouard-II-Farnese-pere-dElisabeth",
+   "description": "Portrait d' Édouard II Farnèse (1666-1693), prince héréditaire de Parme, en buste, de face, dans une bordure ovale. Un cartouche ovale dans la partie inférieure, où est marqué : Odoardo Farnese Princi"
+  }
+ },
+ "DOROTHEASOPHIEFARN": {
+  "qid": "Q60431",
+  "label": "Countess Palatine Dorothea Sophie of Neuburg",
+  "birth": {
+   "y": 1670,
+   "date": "1670-07-05",
+   "precision": 11
+  },
+  "death": {
+   "y": 1748,
+   "date": "1748-09-15",
+   "precision": 11
+  },
+  "gnd": "12227671X",
+  "loc": "n97860441",
+  "image": "Molinaretto (Dorotea Sofía de Neoburgo, duquesa de Parma).jpg",
+  "eswiki": "Dorotea Sofía de Neoburgo",
+  "enwiki": "Countess Palatine Dorothea Sophie of Neuburg",
+  "gndRecord": {
+   "name": "Dorothea Sophia, Parma, Prinzessin",
+   "birth": "1670",
+   "death": "1748",
+   "bio": "Tochter des Pfalzgrafen Philipp Wilhelm, in erster Ehe verh. mit Prinz Odoardo von Farnese, in zweiter Ehe mit Herzog Francesco Farnese von Parma"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Molinaretto_%28Dorotea_Sof%C3%ADa_de_Neoburgo%2C_duquesa_de_Parma%29.jpg/960px-Molinaretto_%28Dorotea_Sof%C3%ADa_de_Neoburgo%2C_duquesa_de_Parma%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Molinaretto_(Dorotea_Sof%C3%ADa_de_Neoburgo,_duquesa_de_Parma).jpg",
+   "width": 1415,
+   "height": 1920,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Giovanni Maria delle Piane",
+   "date": "circa 1715 date QS:P571,+1715-00-00T00:00:00Z/9,P1480,Q5727902",
+   "title": "Dorothea Sophie of Neuburg, Duchess of Parma",
+   "description": ""
+  }
+ },
+ "PHILIPWILHELMPAL": {
+  "qid": "Q60514",
+  "label": "Philip William, Elector Palatine",
+  "birth": {
+   "y": 1615,
+   "date": "1615-11-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1690,
+   "date": "1690-09-02",
+   "precision": 11
+  },
+  "gnd": "118742221",
+  "bnf": "14977455s",
+  "loc": "no99052629",
+  "image": "Anonym Herzog Philipp Wilhelm.jpg",
+  "eswiki": "Felipe Guillermo del Palatinado-Neoburgo",
+  "enwiki": "Philip William, Elector Palatine",
+  "gndRecord": {
+   "name": "Philipp Wilhelm, Pfalz, Kurfürst",
+   "birth": "1615-11-24",
+   "death": "1690-09-12",
+   "bio": "Pfalzgraf und Herzog von Pfalz-Neuburg (1653-1690), Herzog von Jülich-Berg (1653-1690) sowie Kurfürst von der Pfalz (1685-1690)"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Anonym_Herzog_Philipp_Wilhelm.jpg/960px-Anonym_Herzog_Philipp_Wilhelm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Anonym_Herzog_Philipp_Wilhelm.jpg",
+   "width": 1444,
+   "height": 1838,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unidentified painter",
+   "date": "between 1680 and 1690 date QS:P,+1650-00-00T00:00:00Z/7,P1319,+1680-00-00T00:00:",
+   "title": "German: Philipp Wilhelm (1615 - 1690), Pfalzgraf bei Rhein zu Neuburg, Herzog von Jülich-Berg, seit 1685 Kurfürst von der Pfalz label QS:Lde,\"Philipp Wilhelm (1",
+   "description": "Portrait of Philip William, Elector Palatine (1615-1690), husband of Anna Catherine Constance Vasa (1619-1651) and Landgravine Elisabeth Amalie of Hesse-Darmstadt (1635-1709)."
+  }
+ },
+ "FREDERIC1WURTTKING": {
+  "qid": "Q170179",
+  "label": "Frederick I of Württemberg",
+  "birth": {
+   "y": 1754,
+   "date": "1754-11-06",
+   "precision": 11
+  },
+  "death": {
+   "y": 1816,
+   "date": "1816-10-30",
+   "precision": 11
+  },
+  "gnd": "118703218",
+  "bnf": "10680884x",
+  "loc": "n84113592",
+  "image": "Seele-Friedrich I..jpg",
+  "eswiki": "Federico I de Wurtemberg",
+  "enwiki": "Frederick I of Württemberg",
+  "gndRecord": {
+   "name": "Friedrich I., Württemberg, König",
+   "birth": "1754-11-06",
+   "death": "1816-10-30",
+   "birthPlace": "Trzebiatów",
+   "deathPlace": "Stuttgart",
+   "bio": "Geb. in Treptow, gest. in Stuttgart; ab 1797 als Friedrich II. Herzog und von 1806 bis 1816 als Friedrich I. der erste König von Württemberg ab 1797 als Friedrich II. Herzog von Württemberg, ab 1803 Kurfürst, 1806 bis 1816 als Friedrich I. 1. König von Württemberg, heiratete 1780 Prinzessin Auguste "
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Seele-Friedrich_I..jpg/960px-Seele-Friedrich_I..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Seele-Friedrich_I..jpg",
+   "width": 1419,
+   "height": 1868,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Johann Baptist Seele",
+   "date": "circa 1806-1808",
+   "title": "Portrait of Frederick I of Württemberg (1754-1816) label QS:Len,\"Portrait of Frederick I of Württemberg (1754-1816)\" label QS:Lde,\"König Friedrich I. von Württe",
+   "description": "Portrait of Frederick I of Württemberg (1754-1816)"
+  }
+ },
+ "GIOVFRANCALDOBRANDINI": {
+  "qid": "Q3767259",
+  "label": "Giovanni Francesco Aldobrandini",
+  "birth": {
+   "y": 1545,
+   "date": "1545-03-11",
+   "precision": 11
+  },
+  "death": {
+   "y": 1601,
+   "date": "1601-09-17",
+   "precision": 11
+  },
+  "gnd": "1033659053",
+  "image": "Recueil. Portraits de Jean François Aldobrandini (XVIe-XVIIIe s.) - btv1b8529069n.jpg",
+  "gndRecord": {
+   "name": "Aldobrandini, Giovanni Francesco",
+   "birth": "1545-03-11",
+   "death": "1601-09-17",
+   "birthPlace": "Florenz",
+   "deathPlace": "Varaždin",
+   "bio": "Neffe von Papst Klemens VIII.; General der päpstlichen Armee; starb im Kampf gegen die Türken in Ungarn"
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Recueil._Portraits_de_Jean_Fran%C3%A7ois_Aldobrandini_%28XVIe-XVIIIe_s.%29_-_btv1b8529069n.jpg/960px-Recueil._Portraits_de_Jean_Fran%C3%A7ois_Aldobrandini_%28XVIe-XVIIIe_s.%29_-_btv1b8529069n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Recueil._Portraits_de_Jean_Fran%C3%A7ois_Aldobrandini_(XVIe-XVIIIe_s.)_-_btv1b8529069n.jpg",
+   "width": 1987,
+   "height": 2556,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "",
+   "date": "",
+   "title": "Recueil. Portraits de Jean François Aldobrandini (XVIe-XVIIIe s.)",
+   "description": "Sujet : Aldobrandini, Jean-François (1545-1601) -- Portraits Portraits Appartient à l’ensemble documentaire : IconEST2"
+  }
+ },
+ "OLIMPIAALDOBRANDINI1567": {
+  "qid": "Q69885126",
+  "label": "Olimpia Aldobrandini",
+  "birth": {
+   "y": 1567,
+   "date": "1567-04-28",
+   "precision": 11
+  },
+  "death": {
+   "y": 1637,
+   "date": "1637-04-28",
+   "precision": 11
+  },
+  "gnd": "1042343292",
+  "enwiki": "Olimpia Aldobrandini (1567–1637)",
+  "gndRecord": {
+   "name": "Aldobrandini, Olimpia",
+   "birth": "1567",
+   "death": "1637",
+   "bio": ""
+  }
+ },
+ "MARIANANEOBURG": {
+  "qid": "Q57651",
+  "label": "Maria Anna of Neuburg",
+  "birth": {
+   "y": 1667,
+   "date": "1667-10-28",
+   "precision": 11
+  },
+  "death": {
+   "y": 1740,
+   "date": "1740-07-16",
+   "precision": 11
+  },
+  "gnd": "123154405",
+  "loc": "no2001065360",
+  "image": "Maria Anna, Countess Palatine of the Rhine in Neuburg, Queen of Spain.jpg",
+  "eswiki": "Mariana de Neoburgo",
+  "enwiki": "Maria Anna of Neuburg",
+  "gndRecord": {
+   "name": "Maria Anna, Spanien, Königin",
+   "birth": "1667-10-28",
+   "death": "1740-07-16",
+   "birthPlace": "Benrath",
+   "deathPlace": "Guadalajara (Spanien)",
+   "bio": ""
+  },
+  "imageInfo": {
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Maria_Anna%2C_Countess_Palatine_of_the_Rhine_in_Neuburg%2C_Queen_of_Spain.jpg/960px-Maria_Anna%2C_Countess_Palatine_of_the_Rhine_in_Neuburg%2C_Queen_of_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Maria_Anna,_Countess_Palatine_of_the_Rhine_in_Neuburg,_Queen_of_Spain.jpg",
+   "width": 1518,
+   "height": 1832,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Wilhelm Humer",
+   "date": "after a work of the 17 th century date QS:P571,+1650-00-00T00:00:00Z/7",
+   "title": "Maria Anna (1667-1740), Pfalzgräfin bei Rhein zu Neuburg, Königin von Spanien",
+   "description": "Portrait of Maria Anna of Neuburg (1667-1740), second wife of Charles II of Spain (1661-1700)."
+  }
+ },
+ "FRANCOISCLARY": {
+  "qid": "Q3084267",
+  "label": "François Clary",
+  "birth": {
+   "y": 1725,
+   "date": "1725-02-24",
+   "precision": 11
+  },
+  "death": {
+   "y": 1794,
+   "date": "1794-01-20",
+   "precision": 11
+  },
+  "image": "François Clary (1725-1794).jpg",
+  "enwiki": "François Clary",
+  "imageInfo": {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Fran%C3%A7ois_Clary_%281725-1794%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "descriptionUrl": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Clary_(1725-1794).jpg",
+   "width": 180,
+   "height": 254,
+   "licence": "Public domain",
+   "licenceUrl": "",
+   "artist": "Unknown author Unknown author",
+   "date": "19 th century date QS:P571,+1850-00-00T00:00:00Z/7",
+   "title": "François Clary (1725-1794).",
+   "description": ""
+  }
+ }
+}

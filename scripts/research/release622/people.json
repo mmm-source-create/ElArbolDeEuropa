@@ -1,0 +1,290 @@
+[
+  {
+    "id": "FRANCISCOFARNESIO",
+    "q": "Francesco Farnese",
+    "nac": 1678,
+    "muer": 1727
+  },
+  {
+    "id": "ANTONIOFARNESIO",
+    "q": "Antonio Farnese",
+    "nac": 1679,
+    "muer": 1731
+  },
+  {
+    "id": "MARIAESTEFARN",
+    "q": "Maria d'Este",
+    "nac": 1644,
+    "muer": 1684
+  },
+  {
+    "id": "ISABELLAESTEFARN",
+    "q": "Isabella d'Este",
+    "nac": 1635,
+    "muer": 1666
+  },
+  {
+    "id": "MARGVIOLANTESAVOIA",
+    "q": "Margaret Yolande of Savoy",
+    "nac": 1635,
+    "muer": 1663
+  },
+  {
+    "id": "MARGMARIAFARNESIO",
+    "q": "Margherita Maria Farnese",
+    "nac": 1664,
+    "muer": 1718
+  },
+  {
+    "id": "TERESAFARNESIO",
+    "q": "Teresa Farnese",
+    "nac": 1665,
+    "muer": 1702
+  },
+  {
+    "id": "ISABELLAFARNESIO1668",
+    "q": "Isabella Farnese",
+    "nac": 1668,
+    "muer": 1718
+  },
+  {
+    "id": "MARGARITAMEDICIFARN",
+    "q": "Margherita de' Medici",
+    "nac": 1612,
+    "muer": 1679
+  },
+  {
+    "id": "MARGALDOBRANDINIFARN",
+    "q": "Margherita Aldobrandini",
+    "nac": 1588,
+    "muer": 1646
+  },
+  {
+    "id": "MARIAFARNESIOESTE",
+    "q": "Maria Caterina Farnese",
+    "nac": 1615,
+    "muer": 1646
+  },
+  {
+    "id": "VITTORIAFARNESIOESTE",
+    "q": "Vittoria Farnese",
+    "nac": 1618,
+    "muer": 1649
+  },
+  {
+    "id": "ALFONSO4ESTE",
+    "q": "Alfonso IV d'Este",
+    "nac": 1634,
+    "muer": 1662
+  },
+  {
+    "id": "FRANCESCO2ESTE",
+    "q": "Francesco II d'Este",
+    "nac": 1660,
+    "muer": 1694
+  },
+  {
+    "id": "ELISABETHAMALIAPAL",
+    "q": "Elisabeth Amalie of Hesse-Darmstadt",
+    "nac": 1635,
+    "muer": 1709
+  },
+  {
+    "id": "CARLOBONAPARTE",
+    "q": "Carlo Buonaparte",
+    "nac": 1746,
+    "muer": 1785
+  },
+  {
+    "id": "LETIZIARAMOLINO",
+    "q": "Letizia Bonaparte",
+    "nac": 1750,
+    "muer": 1836
+  },
+  {
+    "id": "JOSEBONAPARTE",
+    "q": "Joseph Bonaparte",
+    "nac": 1768,
+    "muer": 1844
+  },
+  {
+    "id": "LUCIENBONAPARTE",
+    "q": "Lucien Bonaparte",
+    "nac": 1775,
+    "muer": 1840
+  },
+  {
+    "id": "ELISABONAPARTE",
+    "q": "Elisa Bonaparte",
+    "nac": 1777,
+    "muer": 1820
+  },
+  {
+    "id": "LUISBONAPARTE",
+    "q": "Louis Bonaparte",
+    "nac": 1778,
+    "muer": 1846
+  },
+  {
+    "id": "PAULINABONAPARTE",
+    "q": "Pauline Bonaparte",
+    "nac": 1780,
+    "muer": 1825
+  },
+  {
+    "id": "CAROLINABONAPARTE",
+    "q": "Caroline Bonaparte",
+    "nac": 1782,
+    "muer": 1839
+  },
+  {
+    "id": "JERONIMOBONAPARTE",
+    "q": "Jérôme Bonaparte",
+    "nac": 1784,
+    "muer": 1860
+  },
+  {
+    "id": "JULIECLARY",
+    "q": "Julie Clary",
+    "nac": 1771,
+    "muer": 1845
+  },
+  {
+    "id": "JOSEFINABEAUHARNAIS",
+    "q": "Joséphine de Beauharnais",
+    "nac": 1763,
+    "muer": 1814
+  },
+  {
+    "id": "MARIALUISAAUSTRIAPARMA",
+    "q": "Marie Louise, Duchess of Parma",
+    "nac": 1791,
+    "muer": 1847
+  },
+  {
+    "id": "HORTENSEBEAUHARNAIS",
+    "q": "Hortense de Beauharnais",
+    "nac": 1783,
+    "muer": 1837
+  },
+  {
+    "id": "JOAQUINMURAT",
+    "q": "Joachim Murat",
+    "nac": 1767,
+    "muer": 1815
+  },
+  {
+    "id": "CATALINAWURTTBONAPARTE",
+    "q": "Catharina of Württemberg",
+    "nac": 1783,
+    "muer": 1835
+  },
+  {
+    "id": "HUGHALBERTODONNELL",
+    "q": "Hugh O'Donnell, 2nd Earl of Tyrconnell",
+    "nac": 1606,
+    "muer": 1642
+  },
+  {
+    "id": "ALEJANDROOREILLY",
+    "q": "Alejandro O'Reilly",
+    "nac": 1723,
+    "muer": 1794
+  },
+  {
+    "id": "PEDROPABLOOREILLY",
+    "q": "Pedro Pablo O'Reilly",
+    "nac": 1768,
+    "muer": 1832
+  },
+  {
+    "id": "AMBROSIOOHIGGINS",
+    "q": "Ambrosio O'Higgins",
+    "nac": 1720,
+    "muer": 1801
+  },
+  {
+    "id": "BERNARDOOHIGGINS",
+    "q": "Bernardo O'Higgins",
+    "nac": 1778,
+    "muer": 1842
+  },
+  {
+    "id": "RICARDOWALL",
+    "q": "Richard Wall",
+    "nac": 1694,
+    "muer": 1777
+  },
+  {
+    "id": "JOSEODONNELL1722",
+    "q": "José O'Donnell y O'Donnell",
+    "nac": 1722,
+    "muer": 1787
+  },
+  {
+    "id": "CARLOSODONNELL",
+    "q": "Carlos O'Donnell",
+    "nac": 1772,
+    "muer": 1830
+  },
+  {
+    "id": "LEOPOLDOODONNELL",
+    "q": "Leopoldo O'Donnell",
+    "nac": 1809,
+    "muer": 1867
+  },
+  {
+    "id": "RANUCCIO2FARN",
+    "q": "Ranuccio II Farnese",
+    "nac": 1630,
+    "muer": 1694
+  },
+  {
+    "id": "ODOARDO2PRINCEFARN",
+    "q": "Odoardo Farnese, Hereditary Prince of Parma",
+    "nac": 1666,
+    "muer": 1693
+  },
+  {
+    "id": "DOROTHEASOPHIEFARN",
+    "q": "Dorothea Sophie of Neuburg",
+    "nac": 1670,
+    "muer": 1748
+  },
+  {
+    "id": "PHILIPWILHELMPAL",
+    "q": "Philip William, Elector Palatine",
+    "nac": 1615,
+    "muer": 1690
+  },
+  {
+    "id": "FREDERIC1WURTTKING",
+    "q": "Frederick I of Württemberg",
+    "nac": 1754,
+    "muer": 1816
+  },
+  {
+    "id": "GIOVFRANCALDOBRANDINI",
+    "q": "Giovanni Francesco Aldobrandini",
+    "nac": 1545,
+    "muer": 1601
+  },
+  {
+    "id": "OLIMPIAALDOBRANDINI1567",
+    "q": "Olimpia Aldobrandini",
+    "nac": 1567,
+    "muer": 1637
+  },
+  {
+    "id": "MARIANANEOBURG",
+    "q": "Maria Anna of Neuburg",
+    "nac": 1667,
+    "muer": 1740
+  },
+  {
+    "id": "FRANCOISCLARY",
+    "q": "François Clary",
+    "nac": 1725,
+    "muer": 1794
+  }
+]

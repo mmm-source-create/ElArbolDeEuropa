@@ -1,0 +1,647 @@
+{
+  "CARLOBONAPARTE": {
+    "name": "Carlo Buonaparte",
+    "role": "Lawyer and Corsican nobleman",
+    "aliases": [],
+    "resumen": "Abogado corso y padre de Napoleón, José y sus hermanos. Tras apoyar a Paoli se acomodó al dominio francés y obtuvo para sus hijos acceso a la enseñanza de la monarquía.",
+    "summary": "Corsican lawyer and father of Napoleon, Joseph and their siblings. After supporting Paoli he accommodated French rule and obtained access for his sons to the monarchy’s educational institutions.",
+    "parts": [
+      [
+        "Una familia de Ajaccio",
+        "A family of Ajaccio",
+        "Nació en 1746 en una familia de la pequeña nobleza corsa. Estudió derecho y se casó con Letizia Ramolino. Su actividad política comenzó en el entorno de Pasquale Paoli, durante los últimos años de la independencia corsa.",
+        "Born in 1746 into the minor Corsican nobility, he studied law and married Letizia Ramolino. His political activity began in Pasquale Paoli’s circle during the final years of Corsican independence."
+      ],
+      [
+        "El dominio francés",
+        "French rule",
+        "Después de la conquista francesa de 1769 aceptó el nuevo régimen. El reconocimiento de la nobleza familiar permitió que sus hijos accedieran a becas y escuelas reservadas a ese estamento. En 1778 acompañó a José y Napoleón al continente. El reconocimiento de la nobleza familiar en Francia permitió solicitar plazas y becas para los hijos. Napoleón se formó en escuelas militares, mientras José siguió inicialmente otra orientación. Carlos murió en Montpellier en 1785, antes de que la Revolución abriera las carreras que transformarían la posición de su familia. Letizia quedó al frente de los hijos que todavía dependían de ella.",
+        "After the French conquest of 1769 he accepted the new regime. Recognition of the family’s nobility enabled his sons to obtain scholarships and places at schools reserved for that estate. In 1778 he accompanied Joseph and Napoleon to the mainland. Recognition of the family’s nobility in France made it possible to seek places and scholarships for the children. Napoleon attended military schools, while Joseph initially followed a different path. Carlo died at Montpellier in 1785, before the Revolution opened the careers that transformed his family’s position. Letizia remained responsible for the children still dependent on her."
+      ],
+      [
+        "La educación de sus hijos",
+        "His children’s education",
+        "Napoleón continuó su formación militar en Brienne y París, mientras José se orientó hacia el derecho. Carlo murió en Montpellier en 1785. Su familia afrontó después las rupturas políticas de la Revolución y el exilio de Córcega.",
+        "Napoleon continued his military education at Brienne and Paris, while Joseph turned towards law. Carlo died at Montpellier in 1785. His family subsequently faced the political ruptures of the Revolution and exile from Corsica."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Carlo Buonaparte",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "LETIZIARAMOLINO": {
+    "name": "Letizia Ramolino",
+    "role": "Mother of Napoleon",
+    "aliases": [],
+    "resumen": "Madre de los ocho hermanos Bonaparte que alcanzaron la edad adulta. Acompañó la emigración familiar de Córcega a Francia y, durante el Imperio, recibió el tratamiento de Madame Mère.",
+    "summary": "Mother of the eight Bonaparte siblings who reached adulthood. She accompanied the family’s migration from Corsica to France and during the Empire received the style Madame Mère.",
+    "parts": [
+      [
+        "La familia corsa",
+        "The Corsican family",
+        "Nació en Ajaccio en 1750 y se casó con Carlo Buonaparte. La vida familiar transcurrió durante la lucha de Paoli y la conquista francesa de Córcega. Ocho de sus hijos sobrevivieron hasta la edad adulta.",
+        "Born at Ajaccio in 1750, she married Carlo Buonaparte. Family life unfolded during Paoli’s struggle and the French conquest of Corsica. Eight of her children survived to adulthood."
+      ],
+      [
+        "De Córcega al Imperio",
+        "From Corsica to the Empire",
+        "Quedó viuda en 1785. En 1793 la ruptura de los Bonaparte con Paoli obligó a la familia a refugiarse en Francia. El ascenso militar y político de Napoleón llevó después a varios de sus hijos a ocupar tronos europeos.",
+        "She was widowed in 1785. In 1793 the Bonapartes’ rupture with Paoli forced the family to take refuge in France. Napoleon’s military and political rise subsequently placed several of her children on European thrones."
+      ],
+      [
+        "Madame Mère y el exilio",
+        "Madame Mère and exile",
+        "Bajo el Imperio fue conocida como Madame Mère y conservó una posición propia dentro de la familia. Tras la caída de Napoleón se instaló en Roma, donde también encontró refugio su medio hermano, el cardenal Fesch. Murió allí en 1836. La elevación de sus hijos a tronos europeos no eliminó sus desacuerdos ni sus dificultades familiares. Letizia mantuvo una posición propia dentro del entorno imperial. Después de la derrota de Napoleón se instaló en Roma, donde pasó sus últimos años. La madre que había organizado la supervivencia de la familia en Córcega vivió también la dispersión de sus hijos en el exilio.",
+        "Under the Empire she was known as Madame Mère and retained her own position within the family. After Napoleon’s fall she settled in Rome, where her half-brother Cardinal Fesch also found refuge. She died there in 1836. Her children’s elevation to European thrones did not remove their disagreements or family difficulties. Letizia maintained her own position within the imperial circle. After Napoleon’s defeat she settled in Rome, where she spent her final years. The mother who had organised the family’s survival in Corsica also lived through her children’s dispersal in exile."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Letizia Ramolino",
+        "url": "https://www.napoleon.org/histoire-des-2-empires/bibliographies/madame-mere-maria-letizia-ramolino-epouse-bonaparte-1750-1836/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "JOSEBONAPARTE": {
+    "name": "Joseph Bonaparte",
+    "role": "King of Naples and Spain",
+    "aliases": [],
+    "resumen": "Hermano mayor de Napoleón, diplomático y rey de Nápoles y de España. Su reinado español quedó condicionado por la guerra, la resistencia a la ocupación y los mandos militares franceses.",
+    "summary": "Napoleon’s elder brother, diplomat and king of Naples and Spain. His Spanish reign was shaped by war, resistance to the occupation and the French military commanders.",
+    "parts": [
+      [
+        "Diplomacia y República",
+        "Diplomacy and the Republic",
+        "Nació en 1768 y se formó como abogado. Tras el exilio de Córcega se casó con Julie Clary en 1794. Representó a Francia en Italia y participó en las negociaciones de Mortefontaine, Lunéville y Amiens.",
+        "Born in 1768, he trained as a lawyer. After exile from Corsica he married Julie Clary in 1794. He represented France in Italy and participated in the negotiations at Mortefontaine, Lunéville and Amiens."
+      ],
+      [
+        "Dos coronas",
+        "Two crowns",
+        "Napoleón lo hizo rey de Nápoles en 1806 y lo trasladó al trono español en 1808. Intentó aplicar reformas administrativas y apoyarse en los afrancesados. La guerra y su autoridad limitada sobre los mariscales franceses dificultaron el gobierno. La monarquía de José contó con ministros y partidarios españoles, pero dependía de unas fuerzas francesas cuyas prioridades decidía Napoleón. La guerra impidió consolidar el gobierno en amplias zonas del país. La derrota de Vitoria en 1813 precipitó la salida del rey y el abandono de un proyecto que había tratado de combinar la autoridad dinástica con reformas administrativas.",
+        "Napoleon made him king of Naples in 1806 and transferred him to the Spanish throne in 1808. He attempted administrative reforms and sought support among the afrancesados. War and his limited authority over French marshals hampered his government. Joseph’s monarchy had Spanish ministers and supporters but depended on French forces whose priorities Napoleon determined. War prevented the government from consolidating control across large parts of the country. The defeat at Vitoria in 1813 precipitated the king’s departure and the abandonment of a project that had attempted to combine dynastic authority with administrative reform."
+      ],
+      [
+        "Vitoria y el exilio",
+        "Vitoria and exile",
+        "Abandonó definitivamente Madrid en 1813 y la derrota de Vitoria precipitó el final de su reinado. Tras la caída imperial vivió muchos años en Estados Unidos como conde de Survilliers. Regresó a Europa y murió en Florencia en 1844.",
+        "He left Madrid for the last time in 1813 and defeat at Vitoria accelerated the end of his reign. After the Empire fell he lived for many years in the United States as Count of Survilliers. He returned to Europe and died at Florence in 1844."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Joseph Bonaparte",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/bonaparte-joseph"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      },
+      {
+        "titulo": "Real Academia Matritense de Heráldica y Genealogía · Descendencia de José Bonaparte",
+        "url": "https://ramhg.es/wp-content/uploads/2024/09/anales-11_2008-02_rey.pdf"
+      }
+    ]
+  },
+  "LUCIENBONAPARTE": {
+    "name": "Lucien Bonaparte",
+    "role": "Politician and prince of Canino",
+    "aliases": [],
+    "resumen": "Hermano de Napoleón y presidente del Consejo de los Quinientos durante el golpe de Brumario. Su ruptura con el emperador lo llevó a instalarse en Italia, donde recibió el título de príncipe de Canino.",
+    "summary": "Napoleon’s brother and president of the Council of Five Hundred during the Brumaire coup. His break with the emperor led him to settle in Italy, where he received the title prince of Canino.",
+    "parts": [
+      [
+        "Un político de la Revolución",
+        "A politician of the Revolution",
+        "Nació en 1775 y participó en la política revolucionaria en el sur de Francia. Elegido al Consejo de los Quinientos, llegó a presidirlo en 1799. Su intervención durante el golpe del 18-19 de Brumario ayudó a asegurar el poder de Napoleón.",
+        "Born in 1775, he participated in revolutionary politics in southern France. Elected to the Council of Five Hundred, he became its president in 1799. His intervention during the coup of 18–19 Brumaire helped secure Napoleon’s power."
+      ],
+      [
+        "El desacuerdo familiar",
+        "The family disagreement",
+        "Fue ministro del Interior y embajador en Madrid. Se enfrentó a su hermano por cuestiones políticas y por su matrimonio con Alexandrine de Bleschamp. Abandonó Francia y se estableció en Italia, fuera del sistema de reinos familiares del emperador. Como presidente del Consejo de los Quinientos, desempeñó un papel importante en la crisis del golpe de Brumario. La cooperación con Napoleón no se convirtió en obediencia permanente. Su elección matrimonial y sus decisiones políticas provocaron una ruptura duradera con el emperador, y su vida posterior transcurrió en buena parte fuera de Francia, vinculada a Italia y a sus intereses intelectuales.",
+        "He served as minister of the interior and ambassador at Madrid. He quarrelled with his brother over politics and his marriage to Alexandrine de Bleschamp. He left France and settled in Italy, outside the emperor’s system of family kingdoms. As president of the Council of Five Hundred, he played an important role in the crisis of the Brumaire coup. Cooperation with Napoleon did not become permanent obedience. His choice of marriage and political decisions caused a lasting breach with the emperor, and much of his later life was spent outside France, connected to Italy and his intellectual interests."
+      ],
+      [
+        "Canino y los Cien Días",
+        "Canino and the Hundred Days",
+        "Detenido por los británicos cuando intentaba viajar a América, pasó varios años en Inglaterra. El papa le concedió el principado de Canino en 1814. Volvió a apoyar a Napoleón durante los Cien Días y después regresó a Italia, donde murió en 1840.",
+        "Detained by the British while attempting to travel to America, he spent several years in England. The pope granted him the principality of Canino in 1814. He again supported Napoleon during the Hundred Days, then returned to Italy, where he died in 1840."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Lucien Bonaparte",
+        "url": "https://www.napoleon.org/histoire-des-2-empires/biographies/bonaparte-lucien-1775-1840-frere-de-napoleon-ier/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "ELISABONAPARTE": {
+    "name": "Elisa Bonaparte",
+    "role": "Princess of Lucca and grand duchess of Tuscany",
+    "aliases": [],
+    "resumen": "Hermana de Napoleón que gobernó Lucca y Piombino y ejerció el gobierno de Toscana. Aplicó reformas administrativas y fomentó la explotación del mármol de Carrara y la actividad cultural de su corte.",
+    "summary": "Napoleon’s sister who ruled Lucca and Piombino and governed Tuscany. She introduced administrative reforms and promoted Carrara’s marble industry and the cultural life of her court.",
+    "parts": [
+      [
+        "De Ajaccio a Francia",
+        "From Ajaccio to France",
+        "Nació en 1777 como Maria Anna Buonaparte y fue conocida como Elisa. Recibió educación en Saint-Cyr y acompañó a su familia al exilio francés. En 1797 se casó con el oficial corso Félix Baciocchi.",
+        "Born in 1777 as Maria Anna Buonaparte, she became known as Elisa. She was educated at Saint-Cyr and accompanied her family into French exile. In 1797 she married the Corsican officer Félix Baciocchi."
+      ],
+      [
+        "Lucca y Piombino",
+        "Lucca and Piombino",
+        "En 1805 recibió con su marido el principado de Lucca y Piombino, aunque desempeñó el papel principal en el gobierno. Reorganizó instituciones y finanzas y prestó atención a las comunicaciones, la beneficencia y la producción de mármol de Carrara. Su gobierno italiano estuvo asociado a la administración, las obras públicas y la reorganización de los territorios puestos bajo su autoridad. Su marido, Félix Baciocchi, compartió títulos, pero Elisa ejerció una intervención política propia. La concesión de Toscana amplió su posición dentro del sistema imperial, aunque dependía del poder militar y de las decisiones de su hermano.",
+        "In 1805 she and her husband received the principality of Lucca and Piombino, although she played the leading role in government. She reorganised institutions and finances and paid attention to communications, charitable institutions and Carrara’s marble production. Her Italian government was associated with administration, public works and the reorganisation of the territories placed under her authority. Her husband Félix Baciocchi shared titles, but Elisa exercised political influence of her own. The grant of Tuscany enlarged her position within the imperial system, though it depended on her brother’s military power and decisions."
+      ],
+      [
+        "Toscana y la caída imperial",
+        "Tuscany and the imperial collapse",
+        "Desde 1809 fue gran duquesa de Toscana y gobernó un territorio integrado en el sistema imperial francés. La caída de Napoleón puso fin a su autoridad en 1814. Pasó sus últimos años bajo vigilancia austríaca y murió en 1820.",
+        "From 1809 she was grand duchess of Tuscany and governed a territory integrated into the French imperial system. Napoleon’s fall ended her authority in 1814. She spent her final years under Austrian surveillance and died in 1820."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Elisa Bonaparte",
+        "url": "https://www.napoleon.org/histoire-des-2-empires/biographies/bonaparte-elisa-1777-1820-grande-duchesse-de-toscane"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "LUISBONAPARTE": {
+    "name": "Louis Bonaparte",
+    "role": "King of Holland",
+    "aliases": [],
+    "resumen": "Hermano de Napoleón y rey de Holanda entre 1806 y 1810. Su intento de defender los intereses neerlandeses frente a las exigencias imperiales terminó en la abdicación y anexión del reino a Francia.",
+    "summary": "Napoleon’s brother and king of Holland from 1806 to 1810. His attempt to defend Dutch interests against imperial demands ended in his abdication and the kingdom’s annexation to France.",
+    "parts": [
+      [
+        "La familia imperial",
+        "The imperial family",
+        "Nació en 1778 y siguió una carrera militar junto a Napoleón. En 1802 se casó con Hortense de Beauharnais, hija de Josefina. Su matrimonio reunió a las familias del primer cónsul y de su esposa.",
+        "Born in 1778, he followed a military career alongside Napoleon. In 1802 he married Hortense de Beauharnais, Joséphine’s daughter. Their marriage joined the families of the first consul and his wife."
+      ],
+      [
+        "El reino de Holanda",
+        "The kingdom of Holland",
+        "Recibió la corona de Holanda en 1806. Intentó ejercer como soberano del país y atender sus intereses económicos. Las obligaciones militares y el bloqueo continental impuestos por su hermano provocaron conflictos continuos con París. La defensa de los intereses comerciales holandeses lo enfrentó a las exigencias de la guerra económica contra Gran Bretaña. Luis buscó actuar como soberano de sus súbditos, mientras Napoleón esperaba una aplicación estricta de su política continental. La abdicación de 1810 fue seguida por la anexión del reino al Imperio francés; la corona de Holanda desapareció con ella.",
+        "He received the crown of Holland in 1806. He attempted to act as the country’s sovereign and attend to its economic interests. Military obligations and the Continental Blockade imposed by his brother caused continuing conflicts with Paris. Defending Dutch commercial interests brought him into conflict with the demands of economic warfare against Britain. Louis sought to act as his subjects’ sovereign, while Napoleon expected strict enforcement of his continental policy. The abdication of 1810 was followed by the kingdom’s annexation to the French Empire, and the crown of Holland disappeared with it."
+      ],
+      [
+        "Abdicación y descendencia",
+        "Abdication and descendants",
+        "Abdicó en 1810 y Napoleón anexionó Holanda. Vivió después principalmente en Italia como conde de Saint-Leu y murió en 1846. Su hijo Luis Napoleón llegaría a ser presidente de la República francesa y emperador con el nombre de Napoleón III.",
+        "He abdicated in 1810 and Napoleon annexed Holland. He subsequently lived mainly in Italy as Count of Saint-Leu and died in 1846. His son Louis Napoleon later became president of the French Republic and emperor as Napoleon III."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Louis Bonaparte",
+        "url": "https://www.napoleon.org/histoire-des-2-empires/biographies/bonaparte-louis-1778-1846-roi-de-hollande-comte-de-saint-leu"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "PAULINABONAPARTE": {
+    "name": "Pauline Bonaparte",
+    "role": "Princess Borghese",
+    "aliases": [],
+    "resumen": "Hermana de Napoleón, esposa del general Leclerc y después de Camillo Borghese. Su retrato escultórico como Venus, realizado por Canova, fue una de las imágenes más conocidas de la familia imperial.",
+    "summary": "Napoleon’s sister, wife of General Leclerc and later Camillo Borghese. Her sculptural portrait as Venus, made by Canova, became one of the imperial family’s best-known images.",
+    "parts": [
+      [
+        "Paulina y Leclerc",
+        "Pauline and Leclerc",
+        "Nació en 1780 y se trasladó con la familia a Francia. Se casó con Charles Leclerc en 1797 y lo acompañó a Saint-Domingue. La expedición francesa intentó restablecer el control colonial y terminó en una catástrofe militar y sanitaria.",
+        "Born in 1780, she moved to France with her family. She married Charles Leclerc in 1797 and accompanied him to Saint-Domingue. The French expedition attempted to re-establish colonial control and ended in military and medical catastrophe."
+      ],
+      [
+        "La princesa Borghese",
+        "Princess Borghese",
+        "Leclerc murió de fiebre amarilla en 1802. Al año siguiente Paulina se casó con Camillo Borghese y entró en una de las grandes familias romanas. Canova la representó como Venus vencedora en una escultura vinculada a ese matrimonio. El primer matrimonio la llevó a Saint-Domingue, donde la expedición francesa intentó restablecer el control colonial y murió su marido Charles Leclerc. Después, la unión con Camillo Borghese la vinculó a una gran familia romana. La escultura de Canova que la representa como Venus vencedora hizo de su imagen una de las obras más conocidas del arte de la época napoleónica.",
+        "Leclerc died of yellow fever in 1802. The following year Pauline married Camillo Borghese, entering one of Rome’s great families. Canova represented her as Venus Victorious in a sculpture associated with that marriage. Her first marriage took her to Saint-Domingue, where the French expedition attempted to restore colonial control and her husband Charles Leclerc died. Her subsequent marriage to Camillo Borghese connected her to a great Roman family. Canova’s sculpture depicting her as Venus Victorious made her image one of the best-known works of Napoleonic art."
+      ],
+      [
+        "La caída de Napoleón",
+        "Napoleon’s fall",
+        "Conservó una relación de apoyo personal a su hermano y lo visitó durante su exilio en Elba. Tras la caída del Imperio vivió en Italia. Murió en Florencia en 1825; la escultura de Canova permaneció en la colección Borghese.",
+        "She maintained a personally supportive relationship with her brother and visited him during his exile on Elba. After the Empire fell she lived in Italy. She died at Florence in 1825; Canova’s sculpture remained in the Borghese collection."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Pauline Bonaparte",
+        "url": "https://www.napoleon.org/en/young-historians/napodoc/napoleon-i-and-his-family"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "CAROLINABONAPARTE": {
+    "name": "Caroline Bonaparte",
+    "role": "Queen consort of Naples",
+    "aliases": [],
+    "resumen": "Hermana menor de Napoleón y esposa de Joaquín Murat. Fue reina de Nápoles entre 1808 y 1815 e intervino en la política napolitana, buscando conservar el reino cuando el poder imperial se derrumbó.",
+    "summary": "Napoleon’s youngest sister and wife of Joachim Murat. Queen of Naples from 1808 to 1815, she intervened in Neapolitan politics and sought to preserve the kingdom as imperial power collapsed.",
+    "parts": [
+      [
+        "El matrimonio con Murat",
+        "Marriage to Murat",
+        "Nació en Ajaccio en 1782. Se casó con Joaquín Murat en 1800, antes del establecimiento del Imperio. La pareja recibió los ducados de Berg y Cléveris en 1806 y se convirtió en uno de los principales hogares de la familia imperial.",
+        "Born at Ajaccio in 1782, she married Joachim Murat in 1800, before the establishment of the Empire. The couple received Berg and Cleves in 1806 and became one of the imperial family’s principal households."
+      ],
+      [
+        "Reina de Nápoles",
+        "Queen of Naples",
+        "En 1808 José Bonaparte dejó Nápoles para ocupar el trono español y Murat lo sucedió. Carolina participó en la vida política y en el gobierno durante las ausencias de su marido. La pareja reunió una corte y una importante colección artística. El traslado de José Bonaparte a España dejó el trono napolitano a Joaquín Murat en 1808. Carolina participó en la vida política y cortesana de Nápoles y actuó durante las ausencias de su marido. La posición de ambos dependía de la expansión francesa, pero el deseo de conservar el reino llevó a Murat a negociar con los adversarios de Napoleón cuando el Imperio empezó a derrumbarse.",
+        "In 1808 Joseph Bonaparte left Naples for the Spanish throne and Murat succeeded him. Caroline participated in politics and government during her husband’s absences. The couple assembled a court and an important art collection. Joseph Bonaparte’s transfer to Spain left the Neapolitan throne to Joachim Murat in 1808. Caroline participated in Naples’s political and court life and acted during her husband’s absences. Their position depended on French expansion, but the wish to retain the kingdom led Murat to negotiate with Napoleon’s opponents as the Empire began to collapse."
+      ],
+      [
+        "La supervivencia del reino",
+        "The kingdom’s survival",
+        "Tras los desastres franceses de 1812 y 1813, Carolina y Murat negociaron con Austria para conservar Nápoles. El intento fracasó en 1815 y Murat fue ejecutado. Carolina vivió después en el exilio y murió en Florencia en 1839.",
+        "After the French disasters of 1812 and 1813, Caroline and Murat negotiated with Austria to preserve Naples. The attempt failed in 1815 and Murat was executed. Caroline subsequently lived in exile and died at Florence in 1839."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Caroline Bonaparte",
+        "url": "https://www.napoleon.org/en/young-historians/napodoc/caroline-murat-the-grand-duchesse-of-berg-and-of-cleves"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "JERONIMOBONAPARTE": {
+    "name": "Jérôme Bonaparte",
+    "role": "King of Westphalia",
+    "aliases": [],
+    "resumen": "Hermano menor de Napoleón y rey de Westfalia entre 1807 y 1813. Su matrimonio con Catalina de Wurtemberg enlazó a los Bonaparte con una dinastía alemana y fundó una nueva rama familiar.",
+    "summary": "Napoleon’s youngest brother and king of Westphalia from 1807 to 1813. His marriage to Catharina of Württemberg connected the Bonapartes to a German dynasty and founded a new family branch.",
+    "parts": [
+      [
+        "El hermano menor",
+        "The youngest brother",
+        "Nació en 1784 y comenzó su carrera en la marina. Durante una estancia en Estados Unidos se casó con Elizabeth Patterson en 1803. Napoleón rechazó esa unión y promovió su separación para organizar un matrimonio dinástico europeo.",
+        "Born in 1784, he began his career in the navy. During a stay in the United States he married Elizabeth Patterson in 1803. Napoleon rejected the union and promoted their separation in order to arrange a European dynastic marriage."
+      ],
+      [
+        "El reino de Westfalia",
+        "The kingdom of Westphalia",
+        "Se casó con Catalina de Wurtemberg en 1807 y recibió el nuevo reino de Westfalia. Su capital fue Kassel. La constitución, las reformas legales y la eliminación de privilegios convivieron con una fuerte carga fiscal y militar al servicio del Imperio. Westfalia se formó con territorios alemanes de procedencias diversas y tuvo su capital en Kassel. El nuevo reino introdujo reformas legales y administrativas vinculadas al modelo francés. Su hacienda soportó las cargas militares y las exigencias de la guerra imperial. La derrota de Napoleón destruyó el Estado que había proporcionado a Jerónimo su corona y obligó a la pareja real al exilio.",
+        "He married Catharina of Württemberg in 1807 and received the new kingdom of Westphalia, with Kassel as its capital. Its constitution, legal reforms and removal of privileges coexisted with a heavy fiscal and military burden in the Empire’s service. Westphalia was formed from German territories of different origins and had its capital at Kassel. The new kingdom introduced legal and administrative reforms connected to the French model. Its finances bore military burdens and the demands of imperial warfare. Napoleon’s defeat destroyed the state that had given Jérôme his crown and forced the royal couple into exile."
+      ],
+      [
+        "Del exilio al Segundo Imperio",
+        "From exile to the Second Empire",
+        "La derrota francesa de 1813 puso fin al reino. Participó en la campaña de 1815 y pasó después largos años fuera de Francia. Bajo Napoleón III volvió a ocupar honores públicos y fue gobernador de los Inválidos. Murió en 1860.",
+        "French defeat in 1813 ended the kingdom. He participated in the campaign of 1815 and then spent many years outside France. Under Napoleon III he again received public honours and became governor of Les Invalides. He died in 1860."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Jérôme Bonaparte",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/bonaparte-jerome/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "JULIECLARY": {
+    "name": "Julie Clary",
+    "role": "Queen consort of Naples and Spain",
+    "aliases": [],
+    "resumen": "Esposa de José Bonaparte y hermana de Désirée Clary, reina de Suecia. Fue reina consorte de Nápoles y de España, aunque pasó buena parte de los reinados de su marido en Francia.",
+    "summary": "Wife of Joseph Bonaparte and sister of Désirée Clary, queen of Sweden. She was queen consort of Naples and Spain, although she spent much of her husband’s reigns in France.",
+    "parts": [
+      [
+        "Los Clary de Marsella",
+        "The Clarys of Marseille",
+        "Nació en 1771 en una familia de comerciantes de Marsella. Se casó con José Bonaparte en 1794, después del exilio de los Bonaparte de Córcega. Su hermana Désirée se casó con Jean-Baptiste Bernadotte. La relación de las hermanas Clary con los Bonaparte comenzó en el entorno de Marsella después de la llegada de la familia corsa a Francia. Mientras Julia se casó con José, Désirée estuvo prometida a Napoleón y después se unió a Bernadotte. Los dos matrimonios llevaron a las hijas del mercader François Clary a las monarquías europeas por trayectorias distintas.",
+        "Born in 1771 into a Marseille merchant family, she married Joseph Bonaparte in 1794 after the Bonapartes’ exile from Corsica. Her sister Désirée married Jean-Baptiste Bernadotte. The Clary sisters’ connection with the Bonapartes began around Marseille after the Corsican family’s arrival in France. While Julie married Joseph, Désirée became engaged to Napoleon and subsequently married Bernadotte. The two marriages brought the daughters of the merchant François Clary into European monarchies through different careers."
+      ],
+      [
+        "La familia de José",
+        "Joseph’s family",
+        "José fue primero diplomático y después rey de Nápoles y de España. Julie mantuvo su hogar y la educación de sus hijas Zénaïde y Charlotte principalmente en Francia. La guerra peninsular dificultó la vida de la corte de su marido.",
+        "Joseph served first as a diplomat and then as king of Naples and Spain. Julie maintained her household and the education of their daughters Zénaïde and Charlotte mainly in France. The Peninsular War disrupted her husband’s court."
+      ],
+      [
+        "Después del Imperio",
+        "After the Empire",
+        "Tras la caída de Napoleón, José se instaló durante muchos años en Estados Unidos. Julie permaneció en Europa y volvió a reunirse con él al final de su vida en Florencia. Murió en 1845, un año después de José.",
+        "After Napoleon’s fall Joseph settled for many years in the United States. Julie remained in Europe and rejoined him towards the end of his life at Florence. She died in 1845, a year after Joseph."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Julie Clary",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/bonaparte-joseph"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      },
+      {
+        "titulo": "Real Academia Matritense de Heráldica y Genealogía · Descendencia de José Bonaparte",
+        "url": "https://ramhg.es/wp-content/uploads/2024/09/anales-11_2008-02_rey.pdf"
+      }
+    ]
+  },
+  "JOSEFINABEAUHARNAIS": {
+    "name": "Joséphine de Beauharnais",
+    "role": "Empress consort of the French",
+    "aliases": [],
+    "resumen": "Primera esposa de Napoleón y emperatriz de los franceses desde 1804. Sus hijos del matrimonio con Alexandre de Beauharnais, Eugène y Hortense, ocuparon un lugar importante en el sistema familiar napoleónico.",
+    "summary": "Napoleon’s first wife and empress of the French from 1804. Her children by Alexandre de Beauharnais, Eugène and Hortense, held important places in the Napoleonic family system.",
+    "parts": [
+      [
+        "De Martinica a París",
+        "From Martinique to Paris",
+        "Nació en Martinica en 1763 como Marie-Josèphe-Rose Tascher de La Pagerie. Se casó con Alexandre de Beauharnais, con quien tuvo a Eugène y Hortense. Él fue ejecutado durante el Terror; Josefina sobrevivió a su propio encarcelamiento.",
+        "Born in Martinique in 1763 as Marie-Josèphe-Rose Tascher de La Pagerie, she married Alexandre de Beauharnais and had two children, Eugène and Hortense. He was executed during the Terror; Joséphine survived her own imprisonment."
+      ],
+      [
+        "El matrimonio con Bonaparte",
+        "Marriage to Bonaparte",
+        "Se casó con Napoleón en 1796 y acompañó su ascenso de general a primer cónsul y emperador. Fue coronada emperatriz en 1804. Sus hijos se integraron en la política dinástica imperial mediante cargos y matrimonios. La coronación de 1804 dio forma pública a su nueva condición imperial. Josefina reunió en Malmaison colecciones artísticas y plantas de distintas procedencias, y se relacionó con artistas y naturalistas. La falta de un hijo común que continuara la dinastía llevó a la separación de 1809; conservó el título de emperatriz y su residencia mientras Napoleón preparaba una nueva alianza matrimonial.",
+        "She married Napoleon in 1796 and accompanied his rise from general to first consul and emperor. She was crowned empress in 1804. Her children entered imperial dynastic politics through offices and marriages. The coronation of 1804 publicly established her imperial position. At Malmaison Joséphine assembled art collections and plants from different regions and maintained contacts with artists and naturalists. The absence of a shared son to continue the dynasty led to their separation in 1809; she retained the title of empress and her residence while Napoleon prepared a new marriage alliance."
+      ],
+      [
+        "Malmaison",
+        "Malmaison",
+        "La ausencia de un heredero común condujo a la disolución del matrimonio en 1809. Josefina conservó su título y una casa propia en Malmaison, donde reunió colecciones y cultivó su interés por las plantas. Murió en 1814.",
+        "The absence of a shared heir led to the dissolution of their marriage in 1809. Joséphine retained her title and a household at Malmaison, where she assembled collections and pursued her interest in plants. She died in 1814."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Joséphine de Beauharnais",
+        "url": "https://www.napoleon.org/histoire-des-2-empires/biographies/beauharnais-josephine-de-1736-1814-imperatrice-des-francais/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "MARIALUISAAUSTRIAPARMA": {
+    "name": "Marie Louise of Austria",
+    "role": "Empress consort and duchess of Parma",
+    "aliases": [],
+    "resumen": "Hija de Francisco II y segunda esposa de Napoleón. Fue emperatriz de los franceses y madre del rey de Roma; tras la caída imperial gobernó Parma como duquesa hasta 1847.",
+    "summary": "Daughter of Francis II and Napoleon’s second wife. She was empress of the French and mother of the King of Rome; after the imperial collapse she ruled Parma as duchess until 1847.",
+    "parts": [
+      [
+        "Una archiduquesa en Francia",
+        "An archduchess in France",
+        "Nació en Viena en 1791, hija del emperador Francisco II. El acuerdo matrimonial de 1810 selló una aproximación entre Austria y Napoleón después de la guerra de 1809. Se convirtió en la segunda esposa del emperador francés.",
+        "Born at Vienna in 1791, she was a daughter of Emperor Francis II. The marriage agreement of 1810 sealed a rapprochement between Austria and Napoleon after the war of 1809. She became the French emperor’s second wife."
+      ],
+      [
+        "Emperatriz y madre",
+        "Empress and mother",
+        "En 1811 nació su hijo Napoleón Francisco, conocido como rey de Roma. María Luisa ejerció la regencia durante ausencias del emperador. En 1814 regresó al entorno de su familia austríaca, mientras Napoleón fue enviado a Elba. El enlace de 1810 siguió a la derrota austríaca de 1809 y sirvió a una nueva aproximación entre Viena y París. El nacimiento de un hijo en 1811 proporcionó al emperador un heredero. Después de 1814, María Luisa regresó al entorno de su familia austríaca; los acuerdos de la restauración europea le atribuyeron el ducado de Parma, que gobernó hasta su muerte.",
+        "In 1811 she gave birth to Napoleon Francis, known as the King of Rome. Marie Louise served as regent during the emperor’s absences. In 1814 she returned to her Austrian family’s circle while Napoleon was sent to Elba. The marriage of 1810 followed Austria’s defeat in 1809 and served a new rapprochement between Vienna and Paris. The birth of a son in 1811 gave the emperor an heir. After 1814 Marie Louise returned to her Austrian family’s circle; the European restoration settlement assigned her the duchy of Parma, which she ruled until her death."
+      ],
+      [
+        "La duquesa de Parma",
+        "The duchess of Parma",
+        "El arreglo europeo posterior le atribuyó Parma, Piacenza y Guastalla. Tomó posesión en 1816 y gobernó hasta su muerte en 1847. Su trayectoria parmesana continuó durante décadas después del final del Imperio francés.",
+        "The European settlement assigned her Parma, Piacenza and Guastalla. She took possession in 1816 and ruled until her death in 1847. Her Parmesan career continued for decades after the end of the French Empire."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Marie Louise of Austria",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/marie-louise-of-austria/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "HORTENSEBEAUHARNAIS": {
+    "name": "Hortense de Beauharnais",
+    "role": "Queen consort of Holland",
+    "aliases": [],
+    "resumen": "Hija de Josefina de Beauharnais y esposa de Luis Bonaparte. Fue reina de Holanda y madre de Luis Napoleón, futuro Napoleón III, continuando la unión de ambas familias.",
+    "summary": "Daughter of Joséphine de Beauharnais and wife of Louis Bonaparte. She was queen of Holland and mother of Louis Napoleon, the future Napoleon III, continuing the link between the two families.",
+    "parts": [
+      [
+        "La hija de Josefina",
+        "Joséphine’s daughter",
+        "Nació en 1783, hija de Alexandre de Beauharnais y Josefina. La ejecución de su padre y el segundo matrimonio de su madre transformaron su posición familiar. Creció en el entorno de Bonaparte y recibió una educación vinculada a las artes.",
+        "Born in 1783 to Alexandre de Beauharnais and Joséphine, her father’s execution and her mother’s second marriage transformed her family position. She grew up in Bonaparte’s circle and received an education connected to the arts."
+      ],
+      [
+        "Reina de Holanda",
+        "Queen of Holland",
+        "Se casó con Luis Bonaparte en 1802 y fue reina consorte desde 1806. La relación matrimonial fue difícil y estuvo marcada por separaciones. Sus hijos incluyeron a Luis Napoleón, nacido en París en 1808.",
+        "She married Louis Bonaparte in 1802 and became queen consort in 1806. Their marriage was difficult and marked by separations. Their children included Louis Napoleon, born in Paris in 1808."
+      ],
+      [
+        "Arenenberg",
+        "Arenenberg",
+        "Después de 1815 vivió fuera de Francia y estableció su residencia en Arenenberg, Suiza. Allí educó a Luis Napoleón y mantuvo la memoria y las relaciones de la familia imperial. Murió en 1837, antes del ascenso político de su hijo. El futuro Napoleón III creció dentro de una familia marcada por la caída del Imperio y el exilio. Hortensia mantuvo la memoria napoleónica mientras vivía en Suiza, en Arenenberg. La muerte temprana de sus otros hijos hizo de Luis Napoleón la figura que prolongó la ambición política de la rama de Luis Bonaparte, hasta convertirse en presidente y después emperador de los franceses.",
+        "After 1815 she lived outside France and established her residence at Arenenberg in Switzerland. There she educated Louis Napoleon and maintained the imperial family’s memory and connections. She died in 1837, before her son’s political rise. The future Napoleon III grew up in a family shaped by the Empire’s fall and exile. Hortense maintained the Napoleonic memory while living at Arenenberg in Switzerland. The early deaths of her other sons made Louis Napoleon the figure who continued the political ambition of Louis Bonaparte’s branch, eventually becoming president and then emperor of the French."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Hortense de Beauharnais",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/life-and-reign-of-napoleon-iii"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "JOAQUINMURAT": {
+    "name": "Joachim Murat",
+    "role": "Marshal of France and king of Naples",
+    "aliases": [],
+    "resumen": "Mariscal de Napoleón y esposo de Carolina Bonaparte. Recibió Berg y Cléveris antes de convertirse en rey de Nápoles; perdió el reino en 1815 y fue fusilado tras intentar recuperarlo.",
+    "summary": "Napoleon’s marshal and husband of Caroline Bonaparte. He received Berg and Cleves before becoming king of Naples; he lost the kingdom in 1815 and was shot after attempting to recover it.",
+    "parts": [
+      [
+        "La carrera de caballería",
+        "The cavalry career",
+        "Nació en 1767 y ascendió durante las guerras revolucionarias. Se distinguió como jefe de caballería y colaboró con Bonaparte en el golpe de Brumario. En 1800 se casó con Carolina Bonaparte, hermana de Napoleón.",
+        "Born in 1767, he rose during the Revolutionary Wars. He distinguished himself as a cavalry commander and supported Bonaparte in the Brumaire coup. In 1800 he married Napoleon’s sister Caroline Bonaparte."
+      ],
+      [
+        "Los tronos italianos",
+        "The Italian thrones",
+        "Nombrado mariscal en 1804, recibió Berg y Cléveris en 1806 y la corona de Nápoles en 1808. Su gobierno continuó reformas administrativas iniciadas bajo José Bonaparte. Participó también en las grandes campañas imperiales como comandante de caballería. La monarquía napolitana de Murat promovió reformas, pero tuvo que sostenerse entre la tutela francesa y la amenaza de restauración borbónica. En 1814 buscó conservar la corona mediante una alianza con Austria. Su regreso a la guerra al año siguiente terminó con la derrota; capturado tras un intento de recuperar el reino, fue fusilado en Pizzo en octubre de 1815.",
+        "Made a marshal in 1804, he received Berg and Cleves in 1806 and the crown of Naples in 1808. His government continued administrative reforms begun under Joseph Bonaparte. He also participated in major imperial campaigns as a cavalry commander. Murat’s Neapolitan monarchy promoted reforms but had to survive between French tutelage and the threat of a Bourbon restoration. In 1814 he sought to preserve his crown through an alliance with Austria. His return to war the next year ended in defeat; captured after attempting to recover the kingdom, he was executed at Pizzo in October 1815."
+      ],
+      [
+        "La campaña de 1815",
+        "The campaign of 1815",
+        "Intentó conservar su reino negociando con Austria, pero en 1815 volvió a la guerra y fue derrotado en Tolentino. Una expedición posterior para recuperar el trono terminó con su captura y ejecución en Pizzo. Carolina y sus hijos vivieron en el exilio.",
+        "He attempted to retain his kingdom by negotiating with Austria, but returned to war in 1815 and was defeated at Tolentino. A later expedition to recover the throne ended in his capture and execution at Pizzo. Caroline and their children lived in exile."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Bibliothèque nationale de France · Joachim Murat",
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb119639427"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      },
+      {
+        "titulo": "Service historique de la Défense · Inventaire XG, Murat",
+        "url": "https://www.servicehistorique.sga.defense.gouv.fr/sites/default/files/notices_files/SHDGR_INV_XG.pdf"
+      }
+    ]
+  },
+  "CATALINAWURTTBONAPARTE": {
+    "name": "Catharina of Württemberg",
+    "role": "Queen consort of Westphalia",
+    "aliases": [],
+    "resumen": "Hija de Federico I de Wurtemberg y segunda esposa de Jerónimo Bonaparte. Fue reina consorte de Westfalia y mantuvo su matrimonio después de la caída del reino en 1813.",
+    "summary": "Daughter of Frederick I of Württemberg and second wife of Jérôme Bonaparte. She was queen consort of Westphalia and maintained her marriage after the kingdom fell in 1813.",
+    "parts": [
+      [
+        "La princesa de Wurtemberg",
+        "The Württemberg princess",
+        "Nació en 1783, hija del futuro rey Federico I de Wurtemberg. Su matrimonio con Jerónimo Bonaparte en 1807 formó parte de la reorganización napoleónica de Alemania y del acercamiento entre la nueva familia imperial y las casas reinantes.",
+        "Born in 1783, she was a daughter of the future King Frederick I of Württemberg. Her marriage to Jérôme Bonaparte in 1807 formed part of Napoleon’s reorganisation of Germany and the rapprochement between the new imperial family and reigning houses."
+      ],
+      [
+        "La corte de Kassel",
+        "The court at Kassel",
+        "Como esposa de Jerónimo fue reina del nuevo Estado de Westfalia, cuya capital era Kassel. La corte combinó el ceremonial monárquico con reformas políticas y legales promovidas por el sistema imperial francés.",
+        "As Jérôme’s wife she was queen of the new state of Westphalia, whose capital was Kassel. The court combined monarchical ceremonial with political and legal reforms promoted by the French imperial system."
+      ],
+      [
+        "Después de Westfalia",
+        "After Westphalia",
+        "El reino desapareció en 1813. Catalina permaneció junto a su marido pese a las presiones familiares para separarse. La pareja vivió después fuera de Francia; sus hijos continuaron una de las principales ramas de los Bonaparte. Murió en 1835. La derrota de 1813 deshizo el reino de Westfalia y dejó a Catalina y Jerónimo sin trono. Pese a los intereses de su familia de origen, permaneció junto a su marido. Federico concedió a Jerónimo el título de príncipe de Montfort en 1816. Catalina vivió hasta 1835, años antes de que su esposo recuperara una posición oficial bajo la presidencia de Luis Napoleón.",
+        "The kingdom disappeared in 1813. Catharina remained with her husband despite family pressure to separate. The couple subsequently lived outside France; their children continued one of the principal Bonaparte branches. She died in 1835. The defeat of 1813 dismantled the kingdom of Westphalia and left Catharina and Jérôme without a throne. Despite the interests of her birth family, she remained with her husband. Frederick granted Jérôme the title of prince of Montfort in 1816. Catharina lived until 1835, years before her husband regained an official position under Louis Napoleon’s presidency."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Fondation Napoléon · Catharina of Württemberg",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/bonaparte-jerome/"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "FREDERIC1WURTTKING": {
+    "name": "Frederick I of Württemberg",
+    "role": "King of Württemberg",
+    "aliases": [],
+    "resumen": "Duque y después primer rey de Wurtemberg desde 1806. Padre de Catalina, reina de Westfalia, amplió su Estado bajo la protección de Napoleón y conservó el rango real tras cambiar de alianza.",
+    "summary": "Duke and then first king of Württemberg from 1806. Father of Catharina, queen of Westphalia, he enlarged his state under Napoleon’s protection and retained his royal rank after changing alliances.",
+    "parts": [
+      [
+        "La casa de Wurtemberg",
+        "The House of Württemberg",
+        "Nació en 1754, hijo del duque Federico Eugenio. Su carrera inicial transcurrió en el servicio militar y en las relaciones con Rusia y Prusia. Heredó el ducado de Wurtemberg en 1797.",
+        "Born in 1754, he was a son of Duke Frederick Eugene. His early career involved military service and connections with Russia and Prussia. He inherited the duchy of Württemberg in 1797."
+      ],
+      [
+        "La alianza napoleónica",
+        "The Napoleonic alliance",
+        "Se convirtió en elector en 1803 y rey en 1806. La alianza con Napoleón le permitió incorporar territorios y abandonar el Sacro Imperio. En 1807 su hija Catalina se casó con Jerónimo Bonaparte, rey de Westfalia. El paso de ducado a electorado y después a reino transformó su rango en pocos años. Las incorporaciones territoriales procedían de la reorganización de los Estados alemanes durante las guerras napoleónicas. El matrimonio de Catalina con Jerónimo reforzó la alianza dinástica, mientras la salida del Sacro Imperio situó al nuevo reino dentro del orden continental organizado por Francia.",
+        "He became elector in 1803 and king in 1806. His alliance with Napoleon enabled him to acquire territories and leave the Holy Roman Empire. In 1807 his daughter Catharina married Jérôme Bonaparte, king of Westphalia. The progression from duchy to electorate and then kingdom transformed his rank within a few years. Territorial acquisitions arose from the reorganisation of the German states during the Napoleonic Wars. Catharina’s marriage to Jérôme strengthened the dynastic alliance, while departure from the Holy Roman Empire placed the new kingdom within the continental order organised by France."
+      ],
+      [
+        "El cambio de alianza",
+        "The change of alliance",
+        "En 1813 se unió a los adversarios de Napoleón y conservó su reino en el arreglo de 1815. Su reinado estuvo marcado por la centralización del Estado y los conflictos con los estamentos. Murió en 1816 y lo sucedió Guillermo I.",
+        "In 1813 he joined Napoleon’s opponents and retained his kingdom in the settlement of 1815. His reign was marked by state centralisation and conflicts with the estates. He died in 1816 and was succeeded by William I."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Deutsche Biographie · Friedrich I, rey de Wurtemberg",
+        "url": "https://www.deutsche-biographie.de/pnd118703218.html"
+      },
+      {
+        "titulo": "Deutsche Nationalbibliothek · Federico I de Wurtemberg",
+        "url": "https://d-nb.info/gnd/118703218"
+      },
+      {
+        "titulo": "Fondation Napoléon · Familia y juventud de Napoleón",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/1769-1793-napoleon-bonapartes-early-years/"
+      }
+    ]
+  },
+  "FRANCOISCLARY": {
+    "name": "François Clary",
+    "role": "Marseille merchant and shipowner",
+    "aliases": [],
+    "resumen": "Comerciante y armador de Marsella, padre de Julie y Désirée Clary. Sus hijas se casaron con José Bonaparte y Jean-Baptiste Bernadotte, futuro rey de Suecia.",
+    "summary": "Marseille merchant and shipowner, father of Julie and Désirée Clary. His daughters married Joseph Bonaparte and Jean-Baptiste Bernadotte, the future king of Sweden.",
+    "parts": [
+      [
+        "El comercio marsellés",
+        "Marseille trade",
+        "Nació en Marsella en 1725 y desarrolló una carrera como comerciante y armador. Perteneció al mundo mercantil que vinculaba la ciudad con el comercio mediterráneo y ocupó un cargo municipal como échevin.",
+        "Born at Marseille in 1725, he developed a career as a merchant and shipowner. He belonged to the mercantile world connecting the city to Mediterranean trade and held municipal office as an échevin."
+      ],
+      [
+        "La familia Clary",
+        "The Clary family",
+        "De su matrimonio con Françoise-Rose Somis nacieron Julie y Désirée. La familia entró en contacto con los Bonaparte después de su salida de Córcega. La posición económica de los Clary precedió a la fortuna política de esos nuevos parientes.",
+        "His marriage to Françoise-Rose Somis produced Julie and Désirée. The family came into contact with the Bonapartes after their departure from Corsica. The Clarys’ economic position preceded the political success of these new relatives."
+      ],
+      [
+        "Dos hijas reinas",
+        "Two daughters who became queens",
+        "Murió en 1794, antes de los reinados de sus hijas. Julie se casó ese año con José Bonaparte y fue reina consorte de Nápoles y España. Désirée se casó en 1798 con Bernadotte, que llegó a ser Carlos XIV Juan de Suecia. La boda de Julia con José tuvo lugar en 1794, el año de la muerte de François. Désirée se casó con Bernadotte en 1798. El ascenso político y militar de los dos yernos convirtió aquellas uniones marsellesas en vínculos con tronos europeos. Las carreras de sus hijas pertenecen por ello a una generación posterior a la actividad mercantil con la que François había consolidado el patrimonio familiar.",
+        "He died in 1794, before his daughters’ reigns. Julie married Joseph Bonaparte that year and became queen consort of Naples and Spain. Désirée married Bernadotte in 1798; he became Charles XIV John of Sweden. Julie’s wedding to Joseph took place in 1794, the year of François’s death. Désirée married Bernadotte in 1798. The two sons-in-law’s political and military rise turned these Marseille unions into connections with European thrones. His daughters’ careers thus belonged to a generation after the commercial activity through which François had consolidated the family fortune."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "Real Academia Matritense de Heráldica y Genealogía · Descendencia de José Bonaparte",
+        "url": "https://ramhg.es/wp-content/uploads/2024/09/anales-11_2008-02_rey.pdf"
+      },
+      {
+        "titulo": "Fondation Napoléon · Joseph Bonaparte",
+        "url": "https://www.napoleon.org/en/history-of-the-two-empires/biographies/bonaparte-joseph"
+      }
+    ]
+  }
+}

@@ -28,7 +28,8 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  const groups = agrupacionesPoliticasEnMapa(person,year,{view}), result = new Map();
  for (const mandate of active) {
   const kind = authorityKind(mandate,year);
-  const group = kind==='sovereign'
+  const castilianNavarre=view==='panorama'&&person.id==='FERN2ARAG'&&mandate.territorio==='Navarra'&&year>=1512&&year<=1516;
+  const group = kind==='sovereign'&&!castilianNavarre
    ? groups.find(g=>g.territorios.has(mandate.territorio)) : null;
   const imperial = ['Alemania','Sacro Imperio'].includes(mandate.territorio);
   const republican=isRepublicanOffice(person,mandate,year);
@@ -57,6 +58,12 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
    const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
    for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
   }
+ }
+ // The conquered Navarre was incorporated into Castile in 1515, while Ferdinand
+ // ruled Aragon and governed Castile as regent. Its northern frontier stays dated.
+ if(view==='panorama'&&person.id==='FERN2ARAG'&&year>=1512&&year<=1516){
+  const navarre=result.get('Navarra|sovereign|');
+  if(navarre){navarre.color=REINO_COLOR.Castilla;navarre.sharedSovereign='castilla-leon';}
  }
  // 6.0.15: realms handed over by a living parent who keeps ruling the same
  // monarchy (Naples in 1554 and the Netherlands in 1555, from Charles V to

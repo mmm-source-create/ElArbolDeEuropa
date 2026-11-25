@@ -31,7 +31,9 @@ function paint(svg, colors, theme) {
 }
 
 await fs.mkdir('public/home', {recursive: true});
-for (const year of HOME_YEARS) {
+const requestedYears=process.argv.slice(2).map(Number);
+if(requestedYears.some(y=>!Number.isInteger(y)||y<1200||y>1800))throw Error('Years must be integers from 1200 to 1800');
+for (const year of requestedYears.length?requestedYears:HOME_YEARS) {
   const mosaic = europeMosaicAt(data, year, PERSONAS);
   const colors = new Map();
   for (const [id, layers] of mosaic.byLocation) colors.set(id, layers[0].mosaicColor);

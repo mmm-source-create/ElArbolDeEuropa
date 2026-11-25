@@ -1,3 +1,4 @@
+import {LABELS_622,NOTES_622} from './vocabulary622.js';
 import {V605_EVIDENCE_TEXT} from './v605Vocabulary.js';
 import {INTERFACE_LABELS} from './interfaceLabels.js';
 import {FOURTH_200_NAMES,FOURTH_200_LABELS,FOURTH_200_NOTES} from './reviewedFourth200Vocabulary.js';
@@ -21,6 +22,7 @@ import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'
 import {CLAIM_TEXTS_621} from './claimTexts621.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+ ...LABELS_622,
   // 6.1.3: titles of the new people of culture, science, Salamanca, revolutions and exploration.
   "Astrónomo / Canónigo":"Astronomer and canon","Astrónomo / Físico":"Astronomer and physicist","Astrónomo / Matemático":"Astronomer and mathematician","Físico / Matemático":"Physicist and mathematician","Matemático":"Mathematician","Filósofo / Matemático":"Philosopher and mathematician","Matemático / Filósofo":"Mathematician and philosopher","Filósofo":"Philosopher","Dramaturgo / Poeta":"Playwright and poet","Poeta / Religiosa":"Poet and nun","Escritor / Filósofo":"Writer and philosopher","Escritor / Ministro":"Writer and minister","Escultor / Pintor / Arquitecto":"Sculptor, painter and architect","Filósofo / Escritor":"Philosopher and writer","Compositor / Organista":"Composer and organist","Compositor":"Composer","Compositor / Sacerdote":"Composer and priest","Compositor / Pianista":"Composer and pianist","Teólogo / Jurista":"Theologian and jurist","Canonista / Economista":"Canon lawyer and economist","Teólogo / Filósofo":"Theologian and philosopher","Historiador / Teólogo":"Historian and theologian","Poeta / Teólogo":"Poet and theologian","Jurista / Obispo":"Jurist and bishop","Líder rebelde":"Rebel leader","Predicador / Líder rebelde":"Preacher and rebel leader","Abogado / Diputado":"Lawyer and deputy","Médico / Periodista / Diputado":"Physician, journalist and deputy","Militar / Marqués":"Soldier and marquis","Primer cónsul / Emperador de los franceses":"First Consul, Emperor of the French","Mercader / Viajero":"Merchant and traveller","Navegante / Almirante":"Navigator and admiral","Navegante":"Navigator","Explorador / Gobernador":"Explorer and governor","Explorador":"Explorer","Naturalista / Explorador":"Naturalist and explorer","Conquistador / Gobernador":"Conquistador and governor","Conquistador / Adelantado":"Conquistador and adelantado",
 'Pisa':'Pisa','Calderón':'Calderón','Duque / Valido':'Duke / Royal favourite',
@@ -85,6 +87,7 @@ export const ENGLISH_NAMES = {
 };
 
 export const PROFILE_NOTES = {
+ ...NOTES_622,
   ...runtime.notes,
   ...V607_NOTES,
   ...FOURTH_200_NOTES,

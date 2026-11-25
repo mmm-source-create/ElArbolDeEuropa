@@ -1,3 +1,4 @@
+import {RELEASE_622_REVIEWS} from './release622Reviews.js';
 import {V605_REVIEWS} from './v605Reviews.js';
 import {withSuccessionDates619} from './successionDates619.js';
 import {REVIEWS_620} from './reviews620.js';
@@ -445,6 +446,7 @@ export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
   ...REVIEWS_622,
   // 6.1.3: dates of the new people, checked against their GND records.
   ...REVIEWS_613,
+  ...RELEASE_622_REVIEWS,
 }));
 
 export const EDITORIAL_HISTORY = Object.freeze([
