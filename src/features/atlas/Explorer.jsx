@@ -535,6 +535,8 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     return layoutSelection(visiblePeople, BY_ID, HIJOS_POR_ID);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [visibleSignature]);
+  // 6.3.3: columnas por dinastía del árbol completo, para una selección muy grande.
+  const baseColumns = useMemo(() => new Map(Object.entries(TREE_BASE.columns || {})), [TREE_BASE.columns]);
   const treeGen = useMemo(() => selectionTree ? {...gen, ...selectionTree.gen} : gen, [selectionTree, gen]);
   const inheritedRows = useMemo(() => {
     if (selectionTree) return null;
@@ -553,9 +555,9 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   const treeLayout = useMemo(() => {
     if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID, connectionResult.edges);
     const layout = selectionTree ? selectionTree.layout
-      : visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
+      : visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID, {columnOf: baseColumns});
     return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
-  }, [visibleRows, selectionTree, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout]);
+  }, [visibleRows, selectionTree, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout, baseColumns]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
   const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);

@@ -586,13 +586,22 @@ export function buildRows(people, gen, options = {}) {
     return order;
   });
 
+  // 6.3.3: con columnas por dinastía, cada fila se ordena primero por la
+  // columna de la casa y, dentro de ella, por la posición de la familia.
+  const columnOf = options.columnOf || null;
+  const unitColumn = (unit) => {
+    if (!columnOf) return 0;
+    const value = columnOf.get(unit[0]);
+    return Number.isFinite(value) ? value : 1e6;
+  };
   const sortRow = (row, refFn) => row
     .map((unit, originalIndex) => {
       const refs = unit.flatMap((id) => refFn(id)).filter(Number.isFinite);
+      const local = refs.length ? mediana(refs) : columnOf ? originalIndex / Math.max(1, row.length) : originalIndex;
       return {
         unit,
         originalIndex,
-        key: refs.length ? mediana(refs) : originalIndex,
+        key: columnOf ? unitColumn(unit) * 4 + local : local,
       };
     })
     .sort((a, b) => a.key - b.key || a.originalIndex - b.originalIndex)
@@ -680,6 +689,7 @@ export function buildRows(people, gen, options = {}) {
   for (let round = 0; round < swapRounds; round += 1) {
     for (let rowIndex = 0; rowIndex < current.length; rowIndex += 1) {
       for (let index = 0; index < current[rowIndex].length - 1; index += 1) {
+        if (columnOf && unitColumn(current[rowIndex][index]) !== unitColumn(current[rowIndex][index + 1])) continue;
         const before = currentScore;
         [current[rowIndex][index], current[rowIndex][index + 1]] = [current[rowIndex][index + 1], current[rowIndex][index]];
         const after = scoreRows(current);
@@ -698,6 +708,10 @@ export function buildRows(people, gen, options = {}) {
 
   // 6.3.2: quien no tiene parientes visibles va al final de su fila, por
   // fecha, en lugar de quedar entre familias ajenas.
+  // The initial order may score best: the columns are imposed in any case.
+  if (columnOf) best = best.map((row) => row.map((unit, index) => ({unit, index}))
+    .sort((a, b) => unitColumn(a.unit) - unitColumn(b.unit) || a.index - b.index).map(({unit}) => unit));
+
   if (options.isolatedLast) {
     const related = (id) => [BY_ID[id]?.padre, BY_ID[id]?.madre, ...(childrenOf[id] || []), ...crossPartnersOf(id)]
       .some((otherId) => knownIds.has(otherId));
@@ -705,6 +719,12 @@ export function buildRows(people, gen, options = {}) {
     best = best.map((row) => {
       const isolated = row.filter((unit) => !unit.some(related));
       if (!isolated.length) return row;
+      if (columnOf) {
+        // Al final de su columna, por fecha.
+        const indexed = row.map((unit, index) => ({unit, index, isolated: !unit.some(related)}));
+        return indexed.sort((a, b) => unitColumn(a.unit) - unitColumn(b.unit) || a.isolated - b.isolated
+          || (a.isolated ? year(a.unit) - year(b.unit) : a.index - b.index)).map(({unit}) => unit);
+      }
       return [...row.filter((unit) => unit.some(related)), ...isolated.slice().sort((a, b) => year(a) - year(b))];
     });
   }
@@ -809,12 +829,23 @@ function groupFans(row, byId, childrenById, visible) {
   });
 }
 
-export function computeTreeLayout(rows, byId, childrenById) {
+// 6.3.3: entre dos casas (columnas) queda un pasillo más ancho.
+export const TREE_COLUMN_GAP = 260;
+const COLUMN_PULL = 0.8;
+
+export function computeTreeLayout(rows, byId, childrenById, options = {}) {
   const visible = new Set(rows.flat(2));
+  const columnOf = options.columnOf || null;
+  const columnOfUnit = (unit) => {
+    const value = columnOf?.get(unit.ids[0]);
+    return Number.isFinite(value) ? value : null;
+  };
   const rowUnits = rows.map((row, rowIndex) => {
     const blueprints = groupFans(row, byId, childrenById, visible)
       .map(({ids, fan}) => fan ? createFanBlueprint(ids) : createPartnerUnitBlueprint(ids, byId));
-    const gaps = blueprints.map((unit, index) => index ? unitGap(blueprints[index - 1], unit, byId) : 0);
+    const gaps = blueprints.map((unit, index) => !index ? 0
+      : columnOf && columnOfUnit(blueprints[index - 1]) !== columnOfUnit(unit) ? TREE_COLUMN_GAP
+      : unitGap(blueprints[index - 1], unit, byId));
     const totalWidth = blueprints.reduce((sum, unit, index) => sum + unit.width + gaps[index], 0);
     let cursor = -totalWidth / 2;
     return blueprints.map((blueprint, unitIndex) => {
@@ -835,6 +866,20 @@ export function computeTreeLayout(rows, byId, childrenById) {
     const map = {};
     rowUnits.forEach((row) => row.forEach((unit) => unit.ids.forEach((id) => { map[id] = unit; })));
     return map;
+  };
+
+  // Centro de cada columna en todo el árbol, para que una casa forme una franja.
+  let columnCenters = new Map();
+  const updateColumnCenters = () => {
+    if (!columnOf) return;
+    const sums = new Map();
+    rowUnits.forEach((row) => row.forEach((unit) => {
+      const column = columnOfUnit(unit);
+      if (column === null) return;
+      const [sum, weight] = sums.get(column) || [0, 0];
+      sums.set(column, [sum + (unit.x + unit.width / 2) * unit.ids.length, weight + unit.ids.length]);
+    }));
+    columnCenters = new Map([...sums].map(([column, [sum, weight]]) => [column, sum / weight]));
   };
 
   const repositionRow = (rowIndex, direction, inertia = 0.18) => {
@@ -866,9 +911,14 @@ export function computeTreeLayout(rows, byId, childrenById) {
       });
 
       const currentCenter = unit.x + unit.width / 2;
-      const targetCenter = references.length
+      let targetCenter = references.length
         ? currentCenter * inertia + mediana(references) * (1 - inertia)
         : currentCenter;
+      const columnCenter = columnCenters.get(columnOfUnit(unit));
+      if (Number.isFinite(columnCenter)) {
+        const pull = references.length ? COLUMN_PULL : 0.7;
+        targetCenter = targetCenter * (1 - pull) + columnCenter * pull;
+      }
       targets[index] = targetCenter - unit.width / 2 - offsets[index];
       weights[index] = references.length ? Math.min(6, references.length + 1) : 0.35;
     });
@@ -880,6 +930,7 @@ export function computeTreeLayout(rows, byId, childrenById) {
   };
 
   for (let pass = 0; pass < 10; pass += 1) {
+    updateColumnCenters();
     for (let rowIndex = 1; rowIndex < rowUnits.length; rowIndex += 1) repositionRow(rowIndex, "down");
     for (let rowIndex = rowUnits.length - 2; rowIndex >= 0; rowIndex -= 1) repositionRow(rowIndex, "up");
   }
