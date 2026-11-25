@@ -1,54 +1,105 @@
 // 6.3.2 · Filas propias para las selecciones del árbol.
-// Una selección (una familia, una dinastía, unos grados de parentesco) ya no
-// hereda las filas cronológicas del árbol completo. Sus filas se recalculan con
-// las personas visibles:
+// 6.3.3 · El mismo cálculo sirve para el árbol completo precalculado.
+// Las filas se calculan con las personas visibles:
+//   - un matrimonio comparte siempre fila: la pareja (con todas sus parejas)
+//     forma un bloque que se mueve entero;
 //   - un hijo va siempre por debajo de sus padres y, si nada lo impide, justo
 //     una fila por debajo;
-//   - los hermanos completos comparten fila;
-//   - la pareja comparte fila cuando no rompe lo anterior; si no, se une entre
-//     filas (Manuel I de Portugal con María de Aragón y con Leonor, hermana de
-//     Carlos V, que están en generaciones distintas);
-//   - la cronología solo coloca los grupos sin parentesco visible entre sí.
+//   - los hermanos completos comparten fila cuando el matrimonio lo permite;
+//   - cada fila corresponde aproximadamente a una generación de ~28 años: quien
+//     encabeza una línea sin padres registrados se coloca en la fila de su
+//     fecha, no arriba del todo, y no deja una línea vertical de decenas de filas.
+// Solo si una pareja es imposible en la misma fila (un dato que la haría
+// antepasada de sí misma) se une entre filas con una línea discontinua.
 import {listaParejas, mediana} from './relations.js';
 import {buildRows, computeTreeLayout} from './treeLayout.js';
+import {dynastyColumns} from './dynastyColumns.js';
 
 const SIBLING_SPLIT = 8;
-const PARTNER_SPLIT = 5;
+
+// Año de referencia para la fila: el nacimiento; si falta, uno aproximado a
+// partir del primer gobierno o de la muerte.
+export function referenceYear(person) {
+  if (Number.isFinite(person?.nac)) return {year: person.nac, approximate: Boolean(person.nacAprox)};
+  const starts = (person?.gobiernos || []).map(g => g.desde).filter(Number.isFinite);
+  if (starts.length) return {year: Math.min(...starts) - 25, approximate: true};
+  if (Number.isFinite(person?.muer)) return {year: person.muer - 55, approximate: true};
+  return null;
+}
 const EXTRA_SPAN = 3;
+const CHRONOLOGY = 1;
 
 export function selectionGenerations(people, byId) {
   const ids = people.map(person => person.id);
   const known = new Set(ids);
-  const parents = new Map(ids.map(id => [id, [byId[id]?.padre, byId[id]?.madre].filter(parentId => parentId && parentId !== id && known.has(parentId))]));
+  const person = id => byId[id] || people.find(p => p.id === id);
+  const parents = new Map(ids.map(id => [id, [person(id)?.padre, person(id)?.madre].filter(parentId => parentId && parentId !== id && known.has(parentId))]));
   const children = new Map(ids.map(id => [id, []]));
   ids.forEach(id => parents.get(id).forEach(parentId => children.get(parentId).push(id)));
   const partners = new Map(ids.map(id => [id, new Set()]));
-  people.forEach(person => listaParejas(person).forEach(partnerId => {
-    if (!known.has(partnerId) || partnerId === person.id) return;
-    partners.get(person.id).add(partnerId);
-    partners.get(partnerId).add(person.id);
+  people.forEach(p => listaParejas(p).forEach(partnerId => {
+    if (!known.has(partnerId) || partnerId === p.id) return;
+    partners.get(p.id).add(partnerId);
+    partners.get(partnerId).add(p.id);
   }));
 
-  // Orden topológico por filiación; un ciclo (dato erróneo) no bloquea nada.
-  const pending = new Map(ids.map(id => [id, parents.get(id).length]));
-  const order = ids.filter(id => !pending.get(id));
-  for (let index = 0; index < order.length; index += 1) {
-    children.get(order[index]).forEach(childId => {
-      pending.set(childId, pending.get(childId) - 1);
-      if (!pending.get(childId)) order.push(childId);
+  // Bloques de pareja. Un bloque que contendría a un antepasado y a su
+  // descendiente es imposible: sus miembros quedan sueltos.
+  const blockOf = new Map();
+  const buildBlocks = (separate) => {
+    blockOf.clear();
+    const blocks = [];
+    ids.forEach(id => {
+      if (blockOf.has(id)) return;
+      const members = [id];
+      blockOf.set(id, blocks.length);
+      if (!separate.has(id)) for (let k = 0; k < members.length; k += 1) partners.get(members[k]).forEach(other => {
+        if (!blockOf.has(other) && !separate.has(other)) { blockOf.set(other, blocks.length); members.push(other); }
+      });
+      blocks.push(members);
     });
+    return blocks;
+  };
+  let separate = new Set();
+  let blocks, order, blockParents, blockChildren;
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    blocks = buildBlocks(separate);
+    blockParents = blocks.map(() => new Set());
+    blockChildren = blocks.map(() => new Set());
+    blocks.forEach((members, b) => members.forEach(id => parents.get(id).forEach(parentId => {
+      const pb = blockOf.get(parentId);
+      if (pb !== b) { blockParents[b].add(pb); blockChildren[pb].add(b); }
+    })));
+    const pending = blockParents.map(set => set.size);
+    order = blocks.map((_, b) => b).filter(b => !pending[b]);
+    for (let k = 0; k < order.length; k += 1) blockChildren[order[k]].forEach(c => { pending[c] -= 1; if (!pending[c]) order.push(c); });
+    if (order.length === blocks.length) break;
+    const placed = new Set(order);
+    const stuck = blocks.flatMap((members, b) => placed.has(b) || members.length < 2 ? [] : members);
+    if (!stuck.length) break;
+    stuck.forEach(id => separate.add(id));
   }
   const ordered = new Set(order);
-  ids.forEach(id => { if (!ordered.has(id)) order.push(id); });
-  const acyclic = id => ordered.has(id);
+  blocks.forEach((_, b) => { if (!ordered.has(b)) order.push(b); });
+  const acyclic = b => ordered.has(b);
 
-  const gen = Object.fromEntries(ids.map(id => [id, 0]));
-  order.forEach(id => {
-    if (!acyclic(id)) return;
-    parents.get(id).forEach(parentId => { gen[id] = Math.max(gen[id], gen[parentId] + 1); });
-  });
+  const blockGen = blocks.map(() => 0);
+  order.forEach(b => { if (acyclic(b)) blockParents[b].forEach(pb => { blockGen[b] = Math.max(blockGen[b], blockGen[pb] + 1); }); });
+  const gen = new Proxy({}, {get: (_, id) => blockGen[blockOf.get(id)]});
 
-  // Los términos del coste que toca cada persona.
+  // Ritmo generacional y fila esperada por fecha de nacimiento.
+  const gaps = [];
+  ids.forEach(id => parents.get(id).forEach(parentId => {
+    const gap = person(id).nac - person(parentId).nac;
+    if (Number.isFinite(gap) && gap >= 14 && gap <= 65) gaps.push(gap);
+  }));
+  const span = Math.max(22, Math.min(35, mediana(gaps) || 28));
+  const dated = ids.filter(id => Number.isFinite(person(id)?.nac) && !person(id).nacAprox);
+  const originOf = () => mediana(dated.map(id => person(id).nac - gen[id] * span));
+  let origin = originOf();
+  const reference = new Map(ids.map(id => [id, referenceYear(person(id))]));
+  const expected = id => Number.isFinite(origin) && reference.get(id) ? (reference.get(id).year - origin) / span : null;
+
   const siblingGroups = new Map();
   ids.forEach(id => {
     const own = parents.get(id);
@@ -59,86 +110,116 @@ export function selectionGenerations(people, byId) {
   });
   const groupsOf = new Map(ids.map(id => [id, []]));
   siblingGroups.forEach((members, key) => { if (members.length > 1) members.forEach(id => groupsOf.get(id).push(key)); });
-
   const groupCost = key => {
     const members = siblingGroups.get(key);
     const counts = new Map();
     members.forEach(id => counts.set(gen[id], (counts.get(gen[id]) || 0) + 1));
     return SIBLING_SPLIT * (members.length - Math.max(...counts.values()));
   };
-  const localCost = changed => {
+  const localCost = changedBlocks => {
     let total = 0;
     const groups = new Set();
     const edges = new Set();
-    changed.forEach(id => {
+    changedBlocks.forEach(b => blocks[b].forEach(id => {
       groupsOf.get(id).forEach(key => groups.add(key));
-      partners.get(id).forEach(partnerId => edges.add(id < partnerId ? `p:${id}:${partnerId}` : `p:${partnerId}:${id}`));
-      parents.get(id).forEach(parentId => edges.add(`c:${parentId}:${id}`));
-      children.get(id).forEach(childId => edges.add(`c:${id}:${childId}`));
-    });
+      parents.get(id).forEach(parentId => edges.add(`${parentId}>${id}`));
+      children.get(id).forEach(childId => edges.add(`${id}>${childId}`));
+      const e = expected(id);
+      if (e !== null) total += CHRONOLOGY * Math.abs(gen[id] - e) * (reference.get(id).approximate ? 0.5 : 1);
+    }));
     groups.forEach(key => { total += groupCost(key); });
     edges.forEach(edge => {
-      const [kind, a, b] = edge.split(':');
-      if (kind === 'p') total += PARTNER_SPLIT * Math.abs(gen[a] - gen[b]);
-      else if (acyclic(a) && acyclic(b)) total += EXTRA_SPAN * Math.max(0, gen[b] - gen[a] - 1);
+      const [a, b] = edge.split('>');
+      if (acyclic(blockOf.get(a)) && acyclic(blockOf.get(b))) total += EXTRA_SPAN * Math.max(0, gen[b] - gen[a] - 1);
     });
     return total;
   };
 
-  // Mueve a una persona de fila: los descendientes bajan lo justo para seguir
-  // por debajo de sus padres. Devuelve los cambios para poder deshacerlos.
-  const apply = (id, target) => {
-    const previous = new Map([[id, gen[id]]]);
-    gen[id] = target;
-    const queue = [id];
+  // Mueve un bloque; sus descendientes bajan lo justo. Devuelve lo cambiado.
+  const apply = (b, target) => {
+    const previous = new Map([[b, blockGen[b]]]);
+    blockGen[b] = target;
+    const queue = [b];
     while (queue.length) {
       const current = queue.shift();
-      children.get(current).forEach(childId => {
-        if (!acyclic(childId) || gen[childId] > gen[current]) return;
-        if (!previous.has(childId)) previous.set(childId, gen[childId]);
-        gen[childId] = gen[current] + 1;
-        queue.push(childId);
+      blockChildren[current].forEach(c => {
+        if (!acyclic(c) || blockGen[c] > blockGen[current]) return;
+        if (!previous.has(c)) previous.set(c, blockGen[c]);
+        blockGen[c] = blockGen[current] + 1;
+        queue.push(c);
       });
     }
     return previous;
   };
-  const affected = previous => {
-    const set = new Set(previous.keys());
-    previous.forEach((_, id) => partners.get(id).forEach(partnerId => set.add(partnerId)));
-    return set;
-  };
 
-  const limit = Math.max(4, Math.min(24, Math.ceil(40000 / Math.max(1, ids.length))));
-  for (let round = 0; round < limit; round += 1) {
-    let improved = false;
-    order.forEach(id => {
-      if (!acyclic(id)) return;
-      const floor = Math.max(0, ...parents.get(id).map(parentId => gen[parentId] + 1));
-      const candidates = new Set();
-      partners.get(id).forEach(partnerId => candidates.add(gen[partnerId]));
-      groupsOf.get(id).forEach(key => siblingGroups.get(key).forEach(siblingId => candidates.add(gen[siblingId])));
-      if (children.get(id).length) candidates.add(Math.min(...children.get(id).map(childId => gen[childId])) - 1);
-      candidates.add(floor);
-      candidates.delete(gen[id]);
-      [...candidates].filter(target => target >= floor).sort((a, b) => a - b).forEach(target => {
-        if (target === gen[id]) return;
-        const trial = apply(id, target);
-        const scope = affected(trial);
-        const newCost = localCost(scope);
-        trial.forEach((value, changedId) => { gen[changedId] = value; });
-        if (newCost < localCost(scope)) {
-          apply(id, target);
-          improved = true;
-        }
+  const optimise = rounds => {
+    for (let round = 0; round < rounds; round += 1) {
+      let improved = false;
+      order.forEach(b => {
+        if (!acyclic(b)) return;
+        const floor = Math.max(-Infinity, ...[...blockParents[b]].map(pb => blockGen[pb] + 1));
+        const candidates = new Set();
+        blocks[b].forEach(id => {
+          groupsOf.get(id).forEach(key => siblingGroups.get(key).forEach(other => candidates.add(gen[other])));
+          const e = expected(id);
+          if (e !== null) candidates.add(Math.round(e));
+        });
+        // Justo encima de cada hijo: los demás hijos bajan con él si compensa.
+        blockChildren[b].forEach(c => candidates.add(blockGen[c] - 1));
+        if (Number.isFinite(floor)) candidates.add(floor);
+        candidates.delete(blockGen[b]);
+        [...candidates].filter(target => !(target < floor)).sort((x, y) => x - y).forEach(target => {
+          if (target === blockGen[b]) return;
+          const trial = apply(b, target);
+          const scope = new Set(trial.keys());
+          const newCost = localCost(scope);
+          trial.forEach((value, changed) => { blockGen[changed] = value; });
+          if (newCost < localCost(scope) - 1e-9) { apply(b, target); improved = true; }
+        });
       });
-    });
-    if (!improved) break;
-  }
+      // Un grupo de hermanos se mueve entero: uno a uno nunca compensa.
+      siblingGroups.forEach(members => {
+        if (members.length < 2) return;
+        const memberBlocks = [...new Set(members.map(id => blockOf.get(id)))].filter(acyclic);
+        new Set(members.map(id => gen[id])).forEach(target => {
+          if (memberBlocks.every(b => blockGen[b] === target)) return;
+          const floorOk = memberBlocks.every(b => [...blockParents[b]].every(pb => blockGen[pb] + 1 <= target));
+          if (!floorOk) return;
+          const before = new Map();
+          memberBlocks.forEach(b => apply(b, target).forEach((value, changed) => { if (!before.has(changed)) before.set(changed, value); }));
+          const scope = new Set(before.keys());
+          const newCost = localCost(scope);
+          const after = new Map([...scope].map(b => [b, blockGen[b]]));
+          before.forEach((value, changed) => { blockGen[changed] = value; });
+          if (newCost < localCost(scope) - 1e-9) { after.forEach((value, changed) => { blockGen[changed] = value; }); improved = true; }
+        });
+      });
+      if (!improved) break;
+    }
+  };
+  const rounds = Math.max(3, Math.min(16, Math.ceil(30000 / Math.max(1, ids.length))));
+  optimise(rounds);
+  origin = originOf();
+  optimise(2);
 
-  alignComponentsByChronology(people, gen, parents, partners);
-  const min = Math.min(...Object.values(gen));
-  if (Number.isFinite(min) && min) ids.forEach(id => { gen[id] -= min; });
-  return gen;
+  // Una cabeza de línea sin fecha baja hasta justo encima de su hijo más alto:
+  // de abajo arriba, para que una cadena entera de antepasados sin fecha baje.
+  // Solo se mueve una línea sin ninguna fecha por encima: si un antepasado
+  // tiene fecha, el hueco se quedaría igual, solo cambiaría de sitio.
+  const undated = b => blocks[b].every(id => !reference.get(id));
+  const undatedLine = new Map();
+  order.forEach(b => undatedLine.set(b, undated(b) && [...blockParents[b]].every(pb => undatedLine.get(pb))));
+  order.slice().reverse().forEach(b => {
+    if (!acyclic(b) || !undatedLine.get(b) || !blockChildren[b].size) return;
+    const target = Math.min(...[...blockChildren[b]].map(c => blockGen[c])) - 1;
+    if (target > blockGen[b]) blockGen[b] = target;
+  });
+
+  const result = Object.fromEntries(ids.map(id => [id, gen[id]]));
+  alignComponentsByChronology(people, result, parents, partners);
+  const min = Math.min(...Object.values(result));
+  if (Number.isFinite(min) && min) ids.forEach(id => { result[id] -= min; });
+  return result;
 }
 
 // Grupos sin parentesco visible entre sí: cada uno se desplaza en bloque a la
@@ -176,8 +257,9 @@ function alignComponentsByChronology(people, gen, parents, partners) {
   components.sort((a, b) => b.length - a.length);
   const origin = component => {
     const exact = component.filter(id => Number.isFinite(byId[id].nac) && !byId[id].nacAprox);
-    const dated = exact.length ? exact : component.filter(id => Number.isFinite(byId[id].nac));
-    return mediana(dated.map(id => byId[id].nac - gen[id] * span));
+    if (exact.length) return mediana(exact.map(id => byId[id].nac - gen[id] * span));
+    const approximate = component.filter(id => referenceYear(byId[id]));
+    return mediana(approximate.map(id => referenceYear(byId[id]).year - gen[id] * span));
   };
   const reference = origin(components[0]);
   if (!Number.isFinite(reference)) return;
@@ -211,9 +293,10 @@ export function crossRowPartners(people, gen) {
 export const SELECTION_TREE_LIMIT = 1500;
 const SELECTION_SWAP_LIMIT = 250;
 
-export function layoutSelection(people, byId, childrenById) {
+export function layoutSelection(people, byId, childrenById, {swapLimit = SELECTION_SWAP_LIMIT} = {}) {
   const gen = selectionGenerations(people, byId);
-  const rows = buildRows(people, gen, {crossPartners: true, isolatedLast: true, swapLimit: SELECTION_SWAP_LIMIT});
-  const layout = computeTreeLayout(rows, byId, childrenById);
-  return {gen, rows, layout: {...layout, crossPartners: crossRowPartners(people, gen)}};
+  const columnOf = dynastyColumns(people, gen);
+  const rows = buildRows(people, gen, {crossPartners: true, isolatedLast: true, swapLimit, columnOf});
+  const layout = computeTreeLayout(rows, byId, childrenById, {columnOf});
+  return {gen, rows, columns: Object.fromEntries(columnOf), layout: {...layout, crossPartners: crossRowPartners(people, gen)}};
 }
