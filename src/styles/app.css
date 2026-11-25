@@ -1344,9 +1344,11 @@ html, body {
 .mapa-authority-key { display: grid; gap: 5px; margin-top: 9px; }
 .mapa-authority-key span { display: flex; align-items: center; gap: 7px; }
 .mapa-authority-key i { width: 18px; height: 13px; border: 1px solid #65594b; border-radius: var(--r-sm, 6px); background: #876641; }
-.mapa-authority-key .mapa-key-delegated { background: repeating-linear-gradient(45deg, #907085 0 3px, #e1d8df 3px 5px); }
-.mapa-authority-key .mapa-key-disputed { background: repeating-linear-gradient(-45deg, #756598 0 3px, #ddd7e7 3px 5px); }
-.mapa-authority-key .mapa-key-mixed { background: repeating-linear-gradient(0deg, #86715d 0 3px, #eee5d9 3px 5px); }
+/* 6.2.4: the keys copy the map patterns: the authority colour with dark marks. */
+.mapa-authority-key .mapa-key-delegated { background: repeating-linear-gradient(45deg, rgba(27,23,18,.4) 0 1px, transparent 1px 5px), #907085; }
+.mapa-authority-key .mapa-key-disputed { background: repeating-linear-gradient(45deg, rgba(27,23,18,.4) 0 1px, transparent 1px 5px), repeating-linear-gradient(-45deg, rgba(27,23,18,.4) 0 1px, transparent 1px 5px), #756598; }
+.mapa-authority-key .mapa-key-mixed { background: repeating-linear-gradient(0deg, rgba(27,23,18,.4) 0 1px, transparent 1px 5px), #86715d; }
+.mapa-authority-key .mapa-key-several { background: repeating-linear-gradient(45deg, #295D8E 0 4px, #BA3737 4px 8px); }
 .mapa-region-inspector .mapa-authority-badge { display: inline-block; margin: 0 0 5px; padding: 2px 6px; border: 1px solid var(--eade-border); border-radius: var(--r-sm, 6px); font-size: var(--fs-2xs, 10px); font-weight: 700; }
 .mapa-authority-delegated { border-left: 3px solid #907085 !important; }
 .mapa-authority-disputed { border-left: 3px solid #756598 !important; }
@@ -3437,11 +3439,11 @@ body.atlas-work-mode-active {
 .global-year-heading-row { flex-wrap:wrap; }
 .workspace-topbar-secondary > .workspace-toolbar-view { justify-content: flex-start; gap: 7px; }
 
-.mapa-authority-key .mapa-key-tributary { background: radial-gradient(circle, #876641 1.4px, transparent 1.6px) 0 0 / 6px 6px, #eee5d9; }
+.mapa-authority-key .mapa-key-tributary { background: radial-gradient(circle, rgba(27,23,18,.5) 1.3px, transparent 1.6px) 0 0 / 5px 5px, linear-gradient(rgba(255,255,255,.26), rgba(255,255,255,.26)), #6FA59B; }
 .mapa-dependency-toggle { display: flex; align-items: center; gap: 8px; padding-block: 10px; cursor: pointer; }
 .mapa-dependency-toggle input { accent-color: var(--accent); }
 .mapa-authority-tributary { border-style: dotted; }
 
 .atlas-filter-explanation{font-size:var(--fs-xs, 11px);line-height:1.6;color:var(--muted,#a9a195)}.atlas-filter-heading{font-size:var(--fs-2xs, 10px);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 9px}.atlas-filter-mode{display:grid;gap:6px;font-size:var(--fs-xs, 11px)}.atlas-filter-mode select{max-width:100%;background:var(--eade-paper-soft);color:inherit;border:1px solid var(--eade-border);padding:8px;border-radius:var(--r-sm, 6px)}
 .mapa-authority-apanage,.mapa-authority-vassal,.mapa-authority-fief{border:1px dashed var(--eade-border);}
-.mapa-key-apanage{background:repeating-linear-gradient(90deg,#295D8E 0 5px,#829db7 5px 6px);}
+.mapa-key-apanage{background:repeating-linear-gradient(90deg,rgba(27,23,18,.4) 0 1px,transparent 1px 5px),#5B84B1;}

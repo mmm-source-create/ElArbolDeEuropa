@@ -42,6 +42,9 @@ export default function NotFoundPage({locale = 'es'}) {
       document.head.appendChild(robots);
     }
     robots.setAttribute('content', 'noindex,follow');
+    // 6.2.4: a noindex page declares no canonical URL or language alternates.
+    const links = [...document.querySelectorAll('link[rel="canonical"], link[data-eade-hreflang]')];
+    links.forEach(link => link.remove());
     return () => { if (created) robots.remove(); };
   }, []);
 

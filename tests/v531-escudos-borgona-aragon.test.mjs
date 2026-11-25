@@ -70,7 +70,8 @@ test('los reyes ven a sus vasallos en su propio mapa', () => {
   assert.ok(!kinds('PEDRO4ARAG', 1370).includes('Atenas'));
   assert.ok(kinds('ALF4ARAG', 1330).includes('Judicado de Arborea'));
   assert.deepEqual(kinds('JAIME2MAL', 1300), []);
-  assert.match(read('src/features/atlas/MapaEuropa.jsx'), /'apanage','feudal','vassal'/);
+  // 6.2.4: the vassal kinds share the fief pattern (moved to authorityPatterns.js).
+  assert.match(read('src/features/atlas/authorityPatterns.js'), /\['apanage', 'feudal', 'vassal', 'fief'\]\.includes\(kind\) \? 'M\.45 0 L\.45 \.9'/);
 });
 
 test('todas las casas usan un escudo liso de Commons con crédito discreto', () => {

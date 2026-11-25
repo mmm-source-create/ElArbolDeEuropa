@@ -130,6 +130,21 @@ export function pageJsonLd(page, meta, site) {
   if (kind === 'historia') return storyJsonLd(data, {...options, locale: 'es'});
   if (kind === 'english' && data.type === 'story') return storyJsonLd(data, {...options, locale: 'en'});
   if (kind === 'catalogo' && page.slug === 'inicio') return siteJsonLd({...options, locale: 'es'});
+  if (kind === 'catalogo') return catalogJsonLd(page.slug, data, {...options, name: meta.title});
   if (kind === 'english' && data.type === 'home') return siteJsonLd({...options, locale: 'en'});
   return null;
+}
+
+// 6.2.4: the Spanish catalogues are collections of the records they list. The
+// list names the first entries the page shows (at most 50) and the full count.
+const CATALOG_ITEM_PATH = {personas: '/es/persona/', dinastias: '/es/dinastia/', territorios: '/es/territorio/', historias: '/es/historia/'};
+export function catalogJsonLd(slug, data, {path, description, siteUrl, name}) {
+  const items = (data?.items || []).filter(item => item && (item.p || (item.slug && CATALOG_ITEM_PATH[slug])));
+  if (!items.length) return null;
+  const url = absolute(path, siteUrl);
+  const entries = items.slice(0, 50).map((item, index) => ({'@type': 'ListItem', position: index + 1, name: item.n || item.nombre || item.titulo, url: absolute(item.p || `${CATALOG_ITEM_PATH[slug]}${item.slug}`, siteUrl)}));
+  const total = data.partial?.total || data.items.length;
+  const label = String(name || '').split(' — ')[0];
+  const trail = breadcrumbs(slug === 'indice' ? [['Inicio', '/es'], ['Personas', '/es/personas'], [label, path]] : [['Inicio', '/es'], [label, path]], siteUrl);
+  return {'@context': 'https://schema.org', '@graph': [webPage('CollectionPage', {url, name: label, description, locale: 'es', siteUrl, extra: {mainEntity: {'@type': 'ItemList', numberOfItems: total, itemListElement: entries}}}), trail]};
 }

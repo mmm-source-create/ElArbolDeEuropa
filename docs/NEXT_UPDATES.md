@@ -2,24 +2,13 @@
 
 ## Previsto · 23 de noviembre de 2026
 
-### SEO 1 · Indexación y metadatos / Indexing and metadata
+### Completado en 6.2.4 / Completed in 6.2.4 · SEO 1
 
-**Pendiente.** Revisión de Search Console del 25 de noviembre de 2026.
-
-- **Direcciones antiguas.** Redirigir con 301 los slugs que ya no existen y que
-  Google sigue pidiendo: `/es/persona/carlos-v-i-de-espana` (recibió clics) →
-  `/es/persona/carlos-v`; `/es/persona/matilde-de-inglaterra`, que hoy son dos
-  personas, a la que corresponda o a una página de desambiguación. Guardar un
-  historial de slugs para que cada cambio futuro deje su redirección.
-- **Página 404.** Quitar la canónica (`/es/404`, `/en/404`): es `noindex`.
-- **Catálogo de personas.** `/es/personas` tiene una descripción de 48
-  caracteres y no lleva JSON-LD; darle descripción completa y `CollectionPage`.
-- **Portada inglesa.** Actualizar las cifras de la descripción («2,800
-  people, 500 houses»).
-- **En Search Console** (lo hace el autor): validar la corrección de los 16
-  errores 4xx del 16–17 de noviembre, pedir la reindexación de las cinco fichas
-  en las que Google eligió otra canónica (rastreos de septiembre, anteriores al
-  HTML estático) y volver a enviar `/sitemap.xml`.
+Publicado en la 6.2.4 (ver `docs/releases/6.2.4.md`): redirecciones de los slugs
+antiguos con un historial de URL comprobado en cada build, página 404 sin
+canónica y JSON-LD de los catálogos. Quedan para el autor, en Search Console:
+validar la corrección de los 4xx del 16–17 de noviembre, pedir la reindexación
+de las cinco fichas con otra canónica y volver a enviar `/sitemap.xml`.
 
 ### SEO 2 · Rendimiento y rastreo / Performance and crawling
 

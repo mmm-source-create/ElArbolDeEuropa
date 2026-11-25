@@ -60,6 +60,8 @@ export function catalogMeta(slug,data) {
  if(slug==='inicio')return HOME_META;
  if(slug==='indice')return {title:`Índice de personas de la A a la Z — ${SITE_NAME}`,description:`Las ${data.items.length} personas del Atlas por orden alfabético, con sus fechas y su casa.`,path:'/es/personas/indice'};
  if(slug==='index-en')return {title:'People from A to Z — The Tree of Europe',description:`All ${data.items.length} people in the Atlas in alphabetical order, with their dates and house.`,path:'/en/people/a-z'};
+ // 6.2.4: the people catalogue describes what it lists, with the current count.
+ if(slug==='personas'&&data){const total=data.partial?.total||data.items?.length;if(total)return {...CATALOG_META.personas,title:`Personas de la Europa medieval y moderna — ${SITE_NAME}`,description:`Las ${total.toLocaleString('es-ES')} personas del Atlas: reyes, reinas, nobles, papas y figuras de la cultura. Busca por nombre, título, dinastía o territorio.`};}
  if(CATALOG_META[slug])return CATALOG_META[slug];
  throw new Error(`Catálogo desconocido: ${slug}`);
 }
