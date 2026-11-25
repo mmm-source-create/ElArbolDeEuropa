@@ -5,7 +5,7 @@ import {IMAGENES_PERSONAS} from '../../src/data/imagenesPersonas.js';
 import {responsiveImage} from '../../src/utils/responsiveImage.js';
 // 6.3.2: a record carries what the generator computes for it.
 export const portraitFor=id=>IMAGENES_PERSONAS[id]?.archivo?{...IMAGENES_PERSONAS[id],responsive:responsiveImage(IMAGENES_PERSONAS[id].archivo,'(max-width: 680px) 280px, 320px')}:null;
-const withComputed=record=>({...record,claims:personClaims(record),crownTimeline:crownTimelineData(record,record.accesosCoronas||[])});
+const withComputed=record=>JSON.parse(JSON.stringify({...record,claims:personClaims(record),crownTimeline:crownTimelineData(record,record.accesosCoronas||[])}));
 const member=n=>({id:`P${n}`,slug:`persona-${n}`,nombre:`Persona ${n}`,titulo:'Rey',dinastia:'Casa de prueba',nac:1200,muer:1270});
 const government=(territorio,desde,hasta,condicion='efectivo')=>({territorio,titulo:'Rey',clase:'reinado',condicion,desde,hasta});
 const payload=(kind,slug,data)=>({schema:STATIC_SCHEMA,kind,slug,path:`/es/${kind}/${slug}`,data:{slug,...data}});
