@@ -8,6 +8,8 @@ import {HISTORIAS,EVENTOS_HISTORICOS} from '../../src/data/historias.js';
 import {repairEnglishPresentation,englishNameText} from '../../src/features/english/nameCorrections.js';
 import {englishAliases} from '../../src/features/english/aliasTranslations.js';
 import fs from 'node:fs/promises';
+import {PERSONAS} from '../../src/data/personas.js';
+import {slugBasePersona} from '../../src/domain/people/personPresentation.js';
 import {V6_DYNASTIES,V6_LABELS,V6_NAMES,V6_NOTES,V6_PEOPLE,V6_PORTRAITS,V6_STORIES,V6_TERRITORIES} from '../../src/features/english/v6/index.js';
 import {COMPLETE_ENGLISH_PROFILES} from '../../src/features/english/fullProfiles.js';
 
@@ -26,6 +28,10 @@ const storyRoutes=Object.fromEntries(Object.entries(V6_STORIES).map(([id,entry])
 const timelineLabels=Object.fromEntries(EVENTOS_HISTORICOS.map(event=>{if(!TIMELINE_TITLES[event.id])throw Error(`Missing English event title: ${event.id}`);return [event.titulo,TIMELINE_TITLES[event.id]];}));
 const timelineNotes=Object.fromEntries(EVENTOS_HISTORICOS.filter(event=>TIMELINE_DESCRIPTIONS[event.id]).map(event=>[event.descripcion,TIMELINE_DESCRIPTIONS[event.id]]));
 const runtime={additionalPeople:Object.fromEntries(Object.entries({...V602_PROFILES,...V605_PROFILES,...V607_PROFILES,...Object.fromEntries(['FRANCESCOSALVIATIARC','RODRIGOCALDERON','CRISTOBALSANDOVALUCEDA'].map(id=>[id,V603_PROFILES[id]]))}).filter(([id])=>!Object.hasOwn(V6_PEOPLE,id)).map(([id,p])=>[id,p.name])),v6People:Object.fromEntries(Object.entries(V6_PEOPLE).map(([id,profile])=>[id,profile.slugName||profile.name])),dynasties,territories,storyRoutes};
+// 6.3.2: the Spanish address of every translated person, so that the route
+// table does not load the whole people database in the browser.
+const spanishCounts=PERSONAS.reduce((result,person)=>{const base=slugBasePersona(person,'es');result[base]=(result[base]||0)+1;return result;},{});
+runtime.spanishSlugs=Object.fromEntries(PERSONAS.filter(person=>Object.hasOwn(runtime.v6People,person.id)||Object.hasOwn(runtime.additionalPeople,person.id)).map(person=>{const base=slugBasePersona(person,'es');return [person.id,spanishCounts[base]>1?`${base}-${slugPublico(person.id)}`:base];}));
 await fs.mkdir(new URL('../../src/generated/',import.meta.url),{recursive:true});
 await Promise.all([
  fs.writeFile(new URL('../../src/generated/englishV6Runtime.json',import.meta.url),JSON.stringify(runtime)),

@@ -2,6 +2,7 @@
 
 ## Serie 6
 
+- [6.3.2: árbol de las selecciones y fichas más ligeras](releases/6.3.2.md).
 - [6.3.1: hidratación después del primer pintado](releases/6.3.1.md).
 - [6.3.0: SEO II, jerifato de La Meca y revisión del árbol](releases/6.3.0.md).
 - [6.2.4: patrones del mapa y SEO I](releases/6.2.4.md).

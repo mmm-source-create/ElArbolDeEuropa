@@ -1,12 +1,10 @@
 import {resolveSiteUrl} from '../../app/siteConfig.js';
 import SiteHeader from '../../components/SiteHeader.jsx';
 import SiteFooter from '../../components/SiteFooter.jsx';
-import {IMAGENES_PERSONAS} from '../../data/imagenesPersonas.js';
 import { HOMONYM_YEARS } from "../../data/homonyms.js";
 import {documentaryLife} from '../../domain/time/documentaryDates.js';
 import SITE_META from '../../generated/siteMeta.json';
 import {loadJsonAsset} from '../../utils/loadAsset.js';
-import {responsiveImage} from '../../utils/responsiveImage.js';
 import {setMetaContent, ensureCanonical, setHreflangAlternates} from './headMetadata.js';
 import {publicMeta} from './publicMeta.js';
 import {Crown, ArrowRight} from 'lucide-react';
@@ -76,13 +74,19 @@ export function Breadcrumbs({ items, locale = 'es' }) {
   );
 }
 
+// 6.3.2: a record brings the thumbnails of the people it links (`thumb`).
+// Catalogue and dynasty pages register a lookup over the portrait table, so a
+// record page does not load that table.
+let thumbnailFor = () => null;
+export function setThumbnailLookup(lookup) { thumbnailFor = lookup; }
+
 export function PersonaMiniCard({ persona, compact = false, locale = 'es' }) {
   if (!persona) return null;
-  const image = IMAGENES_PERSONAS[persona.id];
+  const image = 'thumb' in persona ? persona.thumb : thumbnailFor(persona.id);
   return (
     <a className={`public-person-card${compact ? " is-compact" : ""}`} href={persona.path || rutaEntidad("persona", persona.slug)}>
       {image ? (
-        <span className="public-person-thumb"><img {...responsiveImage(image.archivo, compact ? "44px" : "58px")} alt="" loading="lazy" decoding="async" style={{ objectPosition: image.encuadre || image.posicion || "50% 20%" }} /></span>
+        <span className="public-person-thumb"><img src={image.src} srcSet={image.srcSet} sizes={compact ? "44px" : "58px"} width={image.width} height={image.height} alt="" loading="lazy" decoding="async" style={{ objectPosition: image.position }} /></span>
       ) : (
         <span className="public-person-thumb is-placeholder"><Crown size={18} /></span>
       )}

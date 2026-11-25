@@ -1,7 +1,7 @@
 import {englishSourceTitle} from '../features/english/v535Vocabulary.js';
 import {useState} from 'react';
-import {sourcesForPerson} from '../content/sources.js';
-import {CERTAINTY,EDITORIAL_HISTORY,PILOT_PERSON_IDS,citationText,formatClaimDate} from '../evidence/claims.js';
+import {CERTAINTY,citationText,formatClaimDate} from '../evidence/claimFormat.js';
+import {EDITORIAL_HISTORY,PILOT_PERSON_IDS} from '../evidence/editorialHistory.js';
 import './evidence.css';
 import {profileClaims,profileLabel} from '../features/english/profilePresentation.js';
 import {governmentDateRange, governmentCalendarLabel} from '../domain/time/governmentDates.js';
@@ -23,17 +23,19 @@ export function EvidenceMark({claim,locale='es'}) {
   return <span className={`evidence-status evidence-${claim.certainty}`} title={claim.sources.length ? `${label} · ${claim.sources[0].title}` : label}>{label}</span>;
 }
 
-export default function EvidencePanel({person,personId=person?.id,personNameById,compact=false,locale='es'}) {
+// 6.3.2: a public record brings its claims (`claims`) and context references
+// (`fuentes`) in its page data. The Atlas computes them and passes them in.
+export default function EvidencePanel({person,personId=person?.id,personNameById,compact=false,locale='es',claims:givenClaims,contextual:givenContextual}) {
   const [copyStatus,setCopyStatus]=useState('');
   if (!person) return null;
   const en=locale==='en';
   const label=(es,english)=>en?english:es;
   const fieldEn={'Nacimiento':'Birth','Fallecimiento':'Death','Padre':'Father','Madre':'Mother','Matrimonio o vínculo conyugal':'Marriage or partnership','Gobierno':'Government','Sucesión':'Succession'};
   const certaintyEn={documented:'Documented',approximate:'Approximate',disputed:'Disputed',inferred:'Inferred',pending:'Pending review'};
-  const claims=profileClaims(person);
+  const claims=givenClaims||profileClaims(person);
   const relatedNames=new Map([...(person.padres||[]),...(person.conyuges||[]),...(person.hijos||[])].filter(p=>p?.id&&p?.nombre).map(p=>[p.id,p.nombre]));
   const nameById=id=>personNameById?.(id)||person.evidenceNames?.[id]||relatedNames.get(id)||null;
-  const contextual=sourcesForPerson(personId);
+  const contextual=givenContextual||person.fuentes||[];
   const unsourced=claims.filter(claim=>!claim.sources.length).length;
   const copy=async(claim)=>{
     const translated=en&&claim.field==='Gobierno'?{...claim,value:{...claim.value,titulo:profileLabel(person,claim.value.titulo),territorio:profileLabel(person,claim.value.territorio)}}:claim;

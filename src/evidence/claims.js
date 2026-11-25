@@ -6,14 +6,12 @@ import {ACCESOS_CORONAS} from '../content/coronas/index.js';
 import {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS} from './reviewRecords.js';
 import {authorityParentReview} from './authorityReviews.js';
 import {SOURCES} from '../content/sources.js';
-import {governmentDateRange, governmentCalendarLabel} from '../domain/time/governmentDates.js';
+import {CERTAINTY, citationText, formatClaimDate} from './claimFormat.js';
+export {CERTAINTY, citationText, formatClaimDate};
 const SOURCE_TITLES = new Map(SOURCES.map(source => [source.url, source.titulo]));
 const GENERAL_URLS = new Set(SOURCES.filter(source => source.general).map(source => source.url));
 export {CLAIM_REVIEWS, EDITORIAL_HISTORY, PILOT_PERSON_IDS};
-export const CERTAINTY = Object.freeze({
-  documented: 'Documentado', approximate: 'Aproximado', disputed: 'Discutido',
-  inferred: 'Inferido', pending: 'Pendiente de revisión',
-});
+
 
 
 const year = value => Number.isInteger(value) ? value : null;
@@ -124,25 +122,6 @@ export function coverageReport(people, territories = {}, stories = []) {
     incompleteDates:people.filter(person => !year(person.nac) || !year(person.muer)).length,
     governmentsWithoutSource:claims.filter(claim => claim.field === 'Gobierno' && !claim.sources.length).length,
     possibleContradictions,territoryGaps,storiesToReview};
-}
-
-export function citationText(claim, personName, locale = 'es', personNameById = () => null) {
-  const english = locale === 'en';
-  const subject = personName || claim.subject.id;
-  const value = typeof claim.value === 'object'
-    ? `${claim.field === 'Sucesión' ? (english ? 'Succession' : 'Sucesión') : claim.value.titulo || (english ? 'Government' : 'Gobierno')} ${english ? 'in' : 'en'} ${claim.value.territorio}, ${claim.field === 'Gobierno' ? governmentDateRange(claim.value,locale) : claim.interval.from ?? '?'}${claim.field === 'Gobierno' && governmentCalendarLabel(claim.value,locale) ? ` (${governmentCalendarLabel(claim.value,locale)})` : ''}`
-    : ['Padre','Madre','Matrimonio o vínculo conyugal'].includes(claim.field)
-      ? personNameById(claim.value) || String(claim.value) : claim.timeLabel || String(claim.value);
-  const field = english ? ({Nacimiento:'birth',Fallecimiento:'death',Padre:'father',Madre:'mother','Matrimonio o vínculo conyugal':'marriage or partnership',Gobierno:'government',Sucesión:'succession'}[claim.field] || claim.field.toLowerCase()) : claim.field.toLowerCase();
-  const located = claim.sources.length ? claim.sources.map(source=>`${source.title}${source.locator ? `, ${source.locator}` : ''} (${source.url})`).join('; ')+'.' : english ? 'No claim-specific source; pending review.' : 'Sin fuente específica; pendiente de revisión.';
-  const alternatives=claim.alternatives.length ? ` ${english ? 'Recorded alternatives' : 'Alternativas registradas'}: ${claim.alternatives.join('; ')}.` : '';
-  return `${subject}, ${field}: ${value}${claim.exactDate ? ` (${claim.exactDate})` : ''}. El Árbol de Europa, ${english ? 'claim' : 'afirmación'} ${claim.id}. ${located}${alternatives}`;
-}
-
-export function formatClaimDate(claim,locale='es') {
-  if (claim?.timeLabel) return claim.timeLabel;
-  if (claim?.exactDate) return new Intl.DateTimeFormat(locale==='en'?'en-GB':'es-ES',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(`${claim.exactDate}T00:00:00Z`));
-  return claim?.value ?? '';
 }
 
 // These are triage leads, not automatically diagnosed historical mistakes.

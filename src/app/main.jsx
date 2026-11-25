@@ -38,7 +38,7 @@ const renderApp=()=>import("./App.jsx").then(({default:App})=>{
 const loaders={
   english:page=>import('../features/english/EnglishPage.jsx').then(module=>({Component:module.default,props:{page}})),
   historia:page=>import('../features/stories/StoryPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,chapter:page.chapter,initialData:page.data}})),
-  persona:page=>import('../features/public/PublicSite.jsx').then(module=>({Component:module.PersonPage,props:{slug:page.slug,initialData:page.data,onExplore:()=>window.location.assign(`${page.path}?atlas=1`)}})),
+  persona:page=>import('../features/public/PersonPage.jsx').then(module=>({Component:module.PersonPage,props:{slug:page.slug,initialData:page.data,onExplore:()=>window.location.assign(`${page.path}?atlas=1`)}})),
   dinastia:page=>import('../features/public/DynastyPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,initialData:page.data}})),
   catalogo:page=>import('../features/public/CatalogStaticPage.jsx').then(module=>({Component:module.default,props:{page}})),
   territorio:page=>import('../features/public/TerritoryPage.jsx').then(module=>({Component:module.TerritoryPage,props:{slug:page.slug,initialData:page.data}})),

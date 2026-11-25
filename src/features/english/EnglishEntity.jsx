@@ -1,3 +1,4 @@
+import '../public/thumbnailLookup.js';
 import {escudoDe,nombreEmblema} from '../../content/dinastias/escudos.js';
 import DynastyArms from '../../components/DynastyArms.jsx';
 import {useState} from 'react';

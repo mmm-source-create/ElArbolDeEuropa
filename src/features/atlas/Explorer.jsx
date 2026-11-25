@@ -19,6 +19,7 @@ import { rutaEntidadLocalizada, slugPersonaPorLocale, rutaPublicaDesdePath, pers
 import { setMetaContent, ensureCanonical, setHreflangAlternates } from "../public/headMetadata.js";
 import { BY_ID, HIJOS_POR_ID, listaAmantes, siglosDePersona, fechasIncompletas, estaVivaEn, listaParejas } from "../../domain/genealogy/relations.js";
 import { splitPartnerComponents, computeTreeLayout, routeFamilyConnectors } from "../../domain/genealogy/treeLayout.js";
+import { layoutSelection, SELECTION_TREE_LIMIT } from "../../domain/genealogy/selectionTree.js";
 import {
   ancestorsOf, descendantsOf, conjuntoFoco, buildGraph,
   rutasDeComparacion, computeParentGroups,
@@ -527,7 +528,16 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
   for(const row of timelineVirtual.items) for(const entry of row.people || []) timelineVirtual.byKey.set(`person:${entry.person.id}`,row);
   const visibleIds = visiblePeople.map((persona) => persona.id);
   const visibleSignature = visibleIds.join("|");
-  const visibleRows = useMemo(() => {
+  // 6.3.2: una selección parcial calcula sus propias filas (hermanos juntos,
+  // hijos una fila por debajo); el árbol completo usa la base precalculada.
+  const selectionTree = useMemo(() => {
+    if (visiblePeople.length === PERSONAS.length || visiblePeople.length > SELECTION_TREE_LIMIT) return null;
+    return layoutSelection(visiblePeople, BY_ID, HIJOS_POR_ID);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [visibleSignature]);
+  const treeGen = useMemo(() => selectionTree ? {...gen, ...selectionTree.gen} : gen, [selectionTree, gen]);
+  const inheritedRows = useMemo(() => {
+    if (selectionTree) return null;
     const visible = new Set(visibleIds);
     return rows.map((row) =>
       row.flatMap((unit) => {
@@ -538,12 +548,14 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     // La firma contiene exactamente los IDs visibles y mantiene el layout
     // estable cuando solo cambia el texto de búsqueda.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [rows, visibleSignature]);
+  }, [rows, visibleSignature, selectionTree]);
+  const visibleRows = selectionTree ? selectionTree.rows : inheritedRows;
   const treeLayout = useMemo(() => {
     if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID, connectionResult.edges);
-    const layout = visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
+    const layout = selectionTree ? selectionTree.layout
+      : visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID);
     return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
-  }, [visibleRows, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout]);
+  }, [visibleRows, selectionTree, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
   const renderedTreeUnits = useMemo(() => treeLayout.units.filter(unit => intersectsViewport(unit, treeViewport)), [treeLayout.units, treeViewport]);
@@ -660,17 +672,17 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     return s;
   }, [comparePath]);
 
-  const groupsByRow = useMemo(() => computeParentGroups(PERSONAS, gen), [gen]);
+  const groupsByRow = useMemo(() => computeParentGroups(PERSONAS, treeGen), [treeGen]);
 
   const routing = useMemo(() => connectionSet ? {families:[]} : routeFamilyConnectors({
     groupsByRow,
     positions,
     pairContacts: treeLayout.pairContacts,
-    gen,
+    gen: treeGen,
     rows: visibleRows,
     rowBands: treeLayout.rowBands,
     canvasWidth: treeLayout.width,
-  }), [connectionSet, groupsByRow, positions, treeLayout.pairContacts, gen, visibleRows, treeLayout.rowBands, treeLayout.width]);
+  }), [connectionSet, groupsByRow, positions, treeLayout.pairContacts, treeGen, visibleRows, treeLayout.rowBands, treeLayout.width]);
 
   const relacionFocoId = hovered || seleccion?.id || null;
   const amantesFoco = new Set(relacionFocoId ? listaAmantes(BY_ID[relacionFocoId]) : []);
@@ -736,6 +748,17 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
         })}
       </React.Fragment>
     );
+  });
+
+  // 6.3.2: una pareja que la selección deja en filas contiguas se une con una
+  // línea discontinua entre sus fichas.
+  const crossPartnerLines = connectionSet ? [] : (treeLayout.crossPartners || []).map(({key, upper, lower}) => {
+    const a = positions[upper], b = positions[lower];
+    if (!a || !b) return null;
+    const focus = relacionFocoId === upper || relacionFocoId === lower;
+    return <path key={`partners-${key}`} className="family-connector family-connector-partners"
+      d={`M ${a.x + a.w / 2} ${a.y + a.h} L ${b.x + b.w / 2} ${b.y}`} fill="none" strokeDasharray="6 5"
+      stroke={focus ? "#7A2E2E" : "#B9AF98"} strokeWidth={focus ? 2.05 : 1.25}/>;
   });
 
   const scrollBy = (dx, dy) => scrollRef.current?.scrollBy({ left: dx, top: dy, behavior: "smooth" });
@@ -1468,7 +1491,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, visiblePeople,
     renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds,
     irACoincidencia, limpiarSoloFiltros, comparePaths, comparePath,
-    connectorLayerKey, connectors, scrollBy, onPointerDown,
+    connectorLayerKey, connectors: [...crossPartnerLines, ...connectors], scrollBy, onPointerDown,
     onPointerMove, endDrag, cambiarZoomArbol, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria,
     compartirPersona, renderPersonBox, miniScaleX, miniScaleY,

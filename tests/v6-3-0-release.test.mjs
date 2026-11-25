@@ -32,7 +32,7 @@ test('the Sharifate of Mecca is a dependency under Mamluk and then Ottoman sover
 });
 
 test('SEO II: the portrait is fetched first and the hydration code waits for the page', () => {
-  assert.match(read('src/features/public/PublicSite.jsx'), /decoding="async" fetchPriority="high"/);
+  assert.match(read('src/features/public/PersonPage.jsx'), /decoding="async" fetchPriority="high"/);
   assert.doesNotMatch(read('scripts/lib/ssg-utils.mjs'), /rel=\\?"modulepreload\\?"/);
   const main = read('src/app/main.jsx');
   assert.match(main, /const afterPaint=\(\)=>nextFrame\(\(\)=>setTimeout\(hydrate,0\)\);\s*if\(document\.readyState==='complete'\)afterPaint\(\);\s*else window\.addEventListener\('load',afterPaint,\{once:true\}\);/);
