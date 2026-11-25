@@ -61,7 +61,7 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
   const key=tag.match(/\b(name|property)=["']([^"']+)["']/i);
   return key&&metaKeys.has(`${key[1]}:${key[2]}`)?'':tag;
  }).replace(/<link\b[^>]*>/gi,tag=>/\brel=["'](?:canonical|alternate)["']/i.test(tag)?'':tag);
- const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`,...meta.alternates.map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`),...(meta.jsonLd?[`<script type="application/ld+json">${JSON.stringify(meta.jsonLd).replace(/</g,'\\u003c')}</script>`]:[])];
+ const metadata=[`<title>${escapeHtml(meta.title)}</title>`,...meta.meta.map(([attr,key,value])=>`<meta ${attr}="${key}" content="${escapeHtml(value)}">`),...(meta.canonical?[`<link rel="canonical" href="${escapeHtml(meta.canonical)}">`]:[]),...(meta.alternates||[]).map(a=>`<link rel="alternate" data-eade-hreflang="1" hreflang="${a.hreflang}" href="${escapeHtml(a.href)}">`),...(meta.jsonLd?[`<script type="application/ld+json">${JSON.stringify(meta.jsonLd).replace(/</g,'\\u003c')}</script>`]:[])];
  // 6.1.0: with a bundle, one blocking stylesheet. The separate files stay as
  // links that do not apply (media="not all"): Vite finds them when the page code
  // loads and does not fetch them again or wait for them before hydrating.

@@ -33,43 +33,13 @@ import {
   colorTerritorioEnMapa,
 } from "../../cartography/kingdomMaps.js";
 import { reinadosActivos } from "../../domain/government/reigns.js";
+import {authorityFill} from './authorityPatterns.js';
 import {englishLabel,englishNote} from '../english/v6/atlasPresentation.js';
 
 const MAP_ZOOM_FACTOR = 0.82;
 const MAP_MIN_ZOOM = 0.015;
 const MAP_PAN_STEP = 0.12;
 const MAP_DRAG_THRESHOLD = 4;
-
-function authorityFill(svg, color, kind) {
-  if (!['delegated', 'disputed', 'mixed', 'tributary','apanage','feudal','vassal','fief'].includes(kind)) return color;
-  const namespace = 'http://www.w3.org/2000/svg';
-  const id = `atlas-${kind}-${color.replace(/[^a-z0-9]/gi, '')}`;
-  if (!svg.getElementById(id)) {
-    const defs = svg.querySelector('#map defs') || svg.querySelector('defs');
-    const pattern = document.createElementNS(namespace, 'pattern');
-    pattern.setAttribute('id', id);
-    pattern.setAttribute('width', '0.9');
-    pattern.setAttribute('height', '0.9');
-    pattern.setAttribute('patternUnits', 'userSpaceOnUse');
-    const rect = document.createElementNS(namespace, 'rect');
-    rect.setAttribute('width', '0.9'); rect.setAttribute('height', '0.9'); rect.setAttribute('fill', color);
-    const line = document.createElementNS(namespace, 'path');
-    line.setAttribute('d', kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage','feudal','vassal','fief'].includes(kind)?'M.45 0 L.45 .9':kind === 'delegated' ? 'M0 0 L.9 .9' : 'M0 0 L.9 .9 M0 .9 L.9 0');
-    // 6.0.14: dark stripes read on light and dark themes alike (white ones
-    // glared on the dark map).
-    line.setAttribute('stroke', '#1b1712'); line.setAttribute('stroke-opacity', '.34'); line.setAttribute('stroke-width', '.16');
-    if (kind === 'tributary') {
-      const veil = document.createElementNS(namespace, 'rect');
-      veil.setAttribute('width', '.9'); veil.setAttribute('height', '.9');
-      veil.setAttribute('fill', '#fff'); veil.setAttribute('fill-opacity', '.66');
-      const dot = document.createElementNS(namespace, 'circle');
-      dot.setAttribute('cx', '.45'); dot.setAttribute('cy', '.45'); dot.setAttribute('r', '.13');
-      dot.setAttribute('fill', color); pattern.append(rect, veil, dot);
-    } else pattern.append(rect, line);
-    defs?.append(pattern);
-  }
-  return `url(#${id})`;
-}
 
 function parseViewBox(svg) {
   const values = String(svg.getAttribute("viewBox") || "")
@@ -310,19 +280,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           const colors=[...new Set(layers.map(layer=>layer.mosaicColor))];
           const scopes=layers.flatMap(layer=>(layer.scopes||[]).filter(scope=>scope.ids.includes(id)));
           const disputed=scopes.some(s=>/disput|ocupaci/i.test(s.condition||''));
-          let fill=authorityFill(svg,colors[0],mosaicAuthorityKind(layers,disputed));
-          if(colors.length>1) {
-            const namespace='http://www.w3.org/2000/svg';
-            const patternId='europe-mosaic-'+colors.join('-').replace(/[^a-z0-9]/gi,'');
-            if(!svg.getElementById(patternId)) {
-              const pattern=document.createElementNS(namespace,'pattern');
-              pattern.setAttribute('id',patternId);pattern.setAttribute('patternUnits','userSpaceOnUse');
-              pattern.setAttribute('width','1.2');pattern.setAttribute('height','1.2');pattern.setAttribute('patternTransform','rotate(45)');
-              colors.forEach((color,i)=>{const rect=document.createElementNS(namespace,'rect');rect.setAttribute('x',String(i*1.2/colors.length));rect.setAttribute('width',String(1.2/colors.length+.005));rect.setAttribute('height','1.2');rect.setAttribute('fill',color);pattern.append(rect);});
-              svg.querySelector('defs')?.append(pattern);
-            }
-            fill=`url(#${patternId})`;
-          }
+          const fill=authorityFill(svg,colors,mosaicAuthorityKind(layers,disputed));
           target.style.setProperty('fill',fill,'important');target.style.setProperty('stroke',colors[0],'important');
           pintadosRef.current.add(id);
         }
@@ -525,8 +483,15 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           <p>Colours identify documented authorities for the selected year. They do not imply that every territory formed a single centralised state.</p>
         </> : <>{MAP_READING_GUIDE.paragraphs.map(text=><p key={text}>{text}</p>)}{MAP_READING_GUIDE.examples.map(text=><p key={text}>{text}</p>)}</>}
         <p><a href={en?'/en/methodology':'/es/proyecto#como-leer-el-mapa'}>{tr('Criterios y referencias históricas','Historical criteria and references')}</a></p>
-        <p>{tr('El rayado claro indica disputa u ocupación. Varios colores señalan atribuciones diferentes en una misma celda. Pulsa una región para consultar autoridades y fuentes.','Light hatching indicates dispute or occupation. Multiple colours show different attributions within one cell. Select a region to inspect authorities and sources.')}</p>
-        <p>{tr('Las líneas verticales marcan dependencias con gobierno propio, en un tono del color de su soberano: feudos y apanages dentro de Francia (azul real, granate borgoñón o color inglés según quién los tenga), vasallos de la Corona de Aragón, tributarios otomanos como Valaquia, Moldavia o Transilvania y feudos como la Prusia ducal o Curlandia. Solo se marcan los años en que la dependencia está documentada. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.','Vertical lines mark dependencies with their own government, tinted with the overlord’s colour: fiefs and appanages within France, vassals of the Crown of Aragon, Ottoman tributaries such as Wallachia, Moldavia or Transylvania, and fiefs such as Ducal Prussia or Courland. They appear only for years in which the dependency is documented.')}</p>
+        <div className="mapa-authority-key">
+          <span><i className="mapa-key-solid" aria-hidden="true"/>{tr('Autoridad territorial','Territorial authority')}</span>
+          <span><i className="mapa-key-disputed" aria-hidden="true"/>{tr('Control disputado / ocupación','Disputed control / occupation')}</span>
+          <span><i className="mapa-key-apanage" aria-hidden="true"/>{tr('Feudo, apanage o vasallo · gobierno propio','Fief, appanage or vassal · own government')}</span>
+          <span><i className="mapa-key-tributary" aria-hidden="true"/>{tr('Estado tributario · gobierno propio','Tributary state · own government')}</span>
+          <span><i className="mapa-key-several" aria-hidden="true"/>{tr('Varias atribuciones en una celda','Several attributions in one cell')}</span>
+        </div>
+        <p>{tr('El rayado cruzado oscuro indica disputa u ocupación. Las bandas de varios colores señalan atribuciones diferentes en una misma celda; si una de ellas es una disputa o una dependencia, su signo se conserva encima. Pulsa una región para consultar autoridades y fuentes.','Dark cross-hatching indicates dispute or occupation. Bands of several colours show different attributions within one cell; when one of them is a dispute or a dependency, its sign stays on top. Select a region to inspect authorities and sources.')}</p>
+        <p>{tr('Las líneas verticales marcan feudos, apanages y vasallos con gobierno propio, en un tono del color de su señor: feudos y apanages dentro de Francia (azul real, granate borgoñón o color inglés según quién los tenga), vasallos de la Corona de Aragón y feudos como la Prusia ducal o Curlandia. Los puntos marcan Estados tributarios con gobierno propio, en un tono del color de su soberano: Valaquia, Moldavia o Transilvania respecto del Imperio otomano, o Nóvgorod y Perm respecto de Moscú. Solo se marcan los años en que la dependencia está documentada. Las tierras del rey de Inglaterra llevan su color; hasta 1336 se tenían en feudo del rey francés.','Vertical lines mark fiefs, appanages and vassals with their own government, tinted with their lord’s colour: fiefs and appanages within France (royal blue, Burgundian maroon or the English colour depending on the holder), vassals of the Crown of Aragon, and fiefs such as Ducal Prussia or Courland. Dots mark tributary states with their own government, tinted with their sovereign’s colour: Wallachia, Moldavia or Transylvania under the Ottoman Empire, or Novgorod and Perm under Moscow. They appear only for years in which the dependency is documented. The English king’s lands take his colour; until 1336 they were held in fief of the French king.')}</p>
         <p>{mosaic?.reviewedLayerCount||0} {tr('jurisdicciones revisadas','reviewed jurisdictions')} · {mosaic?.approximateLayerCount||0} {tr('equivalencias aproximadas. El gris indica que falta una atribución para este año.','approximate matches. Grey indicates that no attribution is available for this year.')}</p>
       </details>}
       {!panorama && seleccion && <details className="mapa-color-legend" inert={!mapReady || paintingLife}>

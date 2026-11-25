@@ -16,5 +16,7 @@ export function renderPage(page,siteUrl) {
 export function renderNotFound(locale='es',siteUrl) {
  const english=locale==='en',meta=publicMeta({title:english?'Error 404 — This branch does not exist':'Error 404 — Esta rama no existe',description:english?'Page not found in The Tree of Europe.':'Página no encontrada en El Árbol de Europa.',path:english?'/en/404':'/es/404'},siteUrl);
  meta.meta.push(['name','robots','noindex,follow']);
+ // 6.2.4: a noindex page declares no canonical URL or language alternates.
+ meta.canonical=null;meta.alternates=[];
  return {html:renderToString(<React.StrictMode><NotFoundPage locale={locale}/></React.StrictMode>),meta};
 }

@@ -28942,6 +28942,6 @@
     ],
     "tree": "1d0e0b8615d3e7e8b520493916370fd619755afa537fbe28a2a6e27f9bc800d1"
   },
-  "reason": "6.2.2: 39 personas bilingües y tres biografías ampliadas; familias Farnesio–Este–Neoburgo y Bonaparte, conexiones irlandesas, cinco mandatos fechados, retratos y casa de Bonaparte; nota de Navarra y nombres conservando las rutas válidas.",
+  "reason": "6.2.4: patrones del mapa, JSON-LD de catálogos, 404 sin canónica y redirecciones de slugs antiguos",
   "schema": 1
 }

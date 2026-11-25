@@ -33,4 +33,5 @@ copyPublic();
 run(process.execPath,['--max-old-space-size=6144','scripts/generate/prerender-ssg.mjs']);
 run(process.execPath,['scripts/audits/audit-ssg.mjs']);
 run(process.execPath,['scripts/audits/audit-story-editorial.mjs','--built']);
+run(process.execPath,['scripts/audits/audit-url-history.mjs']);
 await prepareCloudflare();
