@@ -8,7 +8,15 @@ const run=(command,args)=>{
   if(result.error)throw result.error;
   if(result.status!==0)process.exit(result.status||1);
 };
-if(!process.argv.includes('--reuse-generated'))run(process.platform==='win32'?'npm.cmd':'npm',['run','prebuild']);
+const npm=process.platform==='win32'?'npm.cmd':'npm';
+// 6.2.3: Workers Builds stops a build after 20 minutes, and the data audits of
+// prebuild alone take about 15 there. GitHub CI runs those audits (npm run build
+// runs prebuild) before every merge, so Workers Builds only regenerates the data.
+const SKIP_AUDITS=process.env.WORKERS_CI==='1';
+if(!process.argv.includes('--reuse-generated')){
+  if(SKIP_AUDITS){run(process.execPath,['scripts/generate/generate-english-v6-runtime.mjs']);run(npm,['run','generate']);}
+  else run(npm,['run','prebuild']);
+}
 run(process.execPath,['node_modules/vite/bin/vite.js','build','--manifest']);
 // Read/write instead of native copyfile: local macOS duplicate resources can
 // leave native copyfile waiting indefinitely. Original public files stay intact.
