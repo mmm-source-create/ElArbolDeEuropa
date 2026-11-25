@@ -2,6 +2,39 @@
 
 ## Previsto · 23 de noviembre de 2026
 
+### SEO 1 · Indexación y metadatos / Indexing and metadata
+
+**Pendiente.** Revisión de Search Console del 25 de noviembre de 2026.
+
+- **Direcciones antiguas.** Redirigir con 301 los slugs que ya no existen y que
+  Google sigue pidiendo: `/es/persona/carlos-v-i-de-espana` (recibió clics) →
+  `/es/persona/carlos-v`; `/es/persona/matilde-de-inglaterra`, que hoy son dos
+  personas, a la que corresponda o a una página de desambiguación. Guardar un
+  historial de slugs para que cada cambio futuro deje su redirección.
+- **Página 404.** Quitar la canónica (`/es/404`, `/en/404`): es `noindex`.
+- **Catálogo de personas.** `/es/personas` tiene una descripción de 48
+  caracteres y no lleva JSON-LD; darle descripción completa y `CollectionPage`.
+- **Portada inglesa.** Actualizar las cifras de la descripción («2,800
+  people, 500 houses»).
+- **En Search Console** (lo hace el autor): validar la corrección de los 16
+  errores 4xx del 16–17 de noviembre, pedir la reindexación de las cinco fichas
+  en las que Google eligió otra canónica (rastreos de septiembre, anteriores al
+  HTML estático) y volver a enviar `/sitemap.xml`.
+
+### SEO 2 · Rendimiento y rastreo / Performance and crawling
+
+**Pendiente.**
+
+- **LCP en móvil (6,0 s en PageSpeed, rendimiento 70).** El retrato se pinta
+  pronto (FCP 0,9 s), así que el LCP tardío apunta a que la hidratación vuelve
+  a pintar la imagen; comprobarlo y corregirlo. Añadir `fetchpriority="high"`
+  y precarga al retrato de la ficha. Bajar el bloqueo de JavaScript (TBT 350 ms).
+- **Presupuesto de rastreo.** El 44 % de las peticiones de Google son
+  JavaScript, frente al 39 % de HTML, y unas 4 960 páginas siguen «descubiertas,
+  sin indexar». Reducir el JavaScript que necesitan las fichas estáticas.
+- **Peso del HTML.** Portada 257 KB y ficha de Habsburgo 325 KB.
+- **Enlazado interno** hacia las fichas más profundas.
+
 ### Completado en 6.2.0 / Completed in 6.2.0 · Espacio en Cloudflare / Cloudflare space
 
 Publicado en la 6.2.0 (ver `docs/releases/6.2.0.md`): datos de las fichas en
