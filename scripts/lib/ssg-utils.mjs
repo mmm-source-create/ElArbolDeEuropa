@@ -66,7 +66,10 @@ export function makeStaticDocument(shell,{html,meta},page,assets) {
  // links that do not apply (media="not all"): Vite finds them when the page code
  // loads and does not fetch them again or wait for them before hydrating.
  const cssLinks=assets.cssBundle?[`<link rel="stylesheet" href="/${assets.cssBundle}">`,...assets.css.map(file=>(assets.cssBundled||assets.css).includes(file)?`<link rel="stylesheet" href="/${file}" media="not all">`:`<link rel="stylesheet" href="/${file}">`)]:assets.css.map(file=>`<link rel="stylesheet" href="/${file}">`);
- const links=[...(assets.preload||[]),...cssLinks,...assets.js.map(file=>`<link rel="modulepreload" href="/${file}">`)].filter(tag=>!/href="[^"]+"/.test(tag)||!head.includes(tag.match(/href="([^"]+)"/)[1]));
+ // 6.3.0: no module preloads. The page is complete without JavaScript; up to
+ // 1.4 MB of preloaded modules delayed the portrait (LCP 6 s on a slow phone).
+ // main.jsx loads the hydration code once the page has loaded.
+ const links=[...(assets.preload||[]),...cssLinks].filter(tag=>!/href="[^"]+"/.test(tag)||!head.includes(tag.match(/href="([^"]+)"/)[1]));
  // La preferencia no cambia el HTML que React hidrata. Se aplica antes del primer dibujo.
  const notice=`<script>${SCREEN_NOTICE_SCRIPT}</script>`;
  head+='\n'+metadata.join('\n')+'\n'+links.join('\n')+'\n'+notice+'\n';

@@ -29,6 +29,7 @@ const sources = {
   prussia: source('Gran Enciclopèdia Catalana · Prússia', 'https://www.enciclopedia.cat/gran-enciclopedia-catalana/prussia', 'Tras el segundo tratado de Toruń (1466) la Orden presta vasallaje al rey polaco por la Prusia oriental; el ducado laico de 1525 conserva el carácter de feudo polaco hasta el tratado de Wehlau (1657) y la paz de Oliva (1660).'),
   teutonicRefusal: source('Kurt Forstreuter · Neue Deutsche Biographie 5 (1961), p. 526 · Friedrich, Herzog von Sachsen', 'https://www.deutsche-biographie.de/sfz27778.html', 'Elegido gran maestre el 29 de septiembre de 1498, rehúsa reconocer la paz de Toruń de 1466.'),
   brittany: source('Larousse · Bretagne', 'https://www.larousse.fr/encyclopedie/autre-region/Bretagne/110138', 'Enrique II se convierte en guardián de Bretaña y casa a su hijo Godofredo con Constanza; afirma su autoridad tras la muerte de Godofredo (1186); Felipe Augusto libra a Bretaña de la tutela inglesa.'),
+  mecca: source('Nebi Bozkurt y Mustafa Sabri Küçükaşcı · TDV · Mekke', 'https://islamansiklopedisi.org.tr/mekke', 'Tras la restauración del califato abasí en Egipto por Baybars, el emirato de La Meca queda ligado a los mamelucos. En 1517 el jerife Barakat viste el caftán enviado por Selim I y hace leer la jutba en su nombre: «Mekke’de Osmanlı hâkimiyeti fiilen başlamış oldu». La surre y otras asignaciones se envían a La Meca.'),
   brittanyAngevin: source('J. A. Everard · Brittany and the Angevins: Province and Empire 1158–1203 (Cambridge University Press, 2000)', 'https://www.cambridge.org/core/books/brittany-and-the-angevins/introduction/A954BB7431A06D787E909EBE351F0037', 'Enrique II incorpora el ducado al «imperio angevino» y lo concede a su hijo Godofredo; capítulos sobre el gobierno de Enrique II, el duque Godofredo (1166–1186) y el final de la Bretaña angevina (1186–1203).'),
 };
 
@@ -87,6 +88,15 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
   {id: 'prussia-poland', subject: 'Prusia', overlord: 'Polonia', type: 'feudo',
     periods: [[1525, 1656]], sources: [sources.prussia],
     note: 'Ducado laico y hereditario de los Hohenzollern, feudo de la Corona polaca desde el homenaje de Alberto en Cracovia (1525). Conserva sus instituciones; la unión con Brandeburgo (1618) no cambia el vínculo, que termina con el tratado de Wehlau (septiembre de 1657).'},
+  // 6.3.0: the sharifs of Mecca kept their emirate under the sultan's
+  // sovereignty and received payments from him rather than paying tribute, so
+  // the Hejaz is marked as a dependency with its own government, not a tributary.
+  {id: 'hejaz-mamluk', subject: 'Jerifato de La Meca', subjectLabel: 'Jerifato de La Meca · bajo soberanía mameluca', overlord: 'Sultanato mameluco', type: 'feudo',
+    periods: [[1261, 1516]], sources: [sources.mecca],
+    note: 'Tras la restauración del califato abasí en El Cairo (1261), el emirato de La Meca queda ligado a los sultanes mamelucos. Los jerifes conservan el gobierno de La Meca y Medina y reciben cada año envíos del sultán.'},
+  {id: 'hejaz-ottoman', subject: 'Jerifato de La Meca', subjectLabel: 'Jerifato de La Meca · bajo soberanía otomana', overlord: 'Imperio otomano', type: 'feudo',
+    periods: [[1517, 1800]], sources: [sources.mecca],
+    note: 'En 1517 el jerife Barakat viste el caftán enviado por Selim I y hace leer la jutba en su nombre: empieza la soberanía otomana. Los jerifes conservan el gobierno del Hiyaz junto a un sanjak otomano en Yeda; no pagan tributo, sino que reciben del sultán la surre y otras asignaciones.'},
   {id: 'brittany-angevin', subject: 'Bretaña', overlord: 'Normandía', overlordLabel: 'los reyes angevinos de Inglaterra', type: 'feudo',
     periods: [[1166, 1195], [1200, 1201]], sources: [sources.brittany, sources.brittanyAngevin],
     note: 'El ducado entra en el «imperio angevino»: Enrique II lo gobierna como guardián de la duquesa Constanza desde 1166 y lo concede a su hijo Godofredo. Sigue dentro del reino de Francia. Se excluyen 1196–1199, cuando Constanza y Arturo se apoyan en Felipe II frente a Ricardo, y desde 1202, cuando Arturo rinde homenaje directamente al rey de Francia.'},

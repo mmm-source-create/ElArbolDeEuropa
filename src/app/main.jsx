@@ -1,6 +1,5 @@
 import React from "react";
 import {createRoot,hydrateRoot} from "react-dom/client";
-import {readInitialPage} from "../features/public/staticData.js";
 import "../styles/index.css";
 // Both editions need the same public layout on a fresh direct visit, before
 // any lazy route is loaded. Keep the shared theme ahead of preferences.
@@ -33,21 +32,35 @@ window.addEventListener('vite:preloadError', event => {
 });
 
 const root=document.getElementById("root");
-const page=readInitialPage(document,window.location);
-if(page) {
-  const loaders={
-    english:()=>import('../features/english/EnglishPage.jsx').then(module=>({Component:module.default,props:{page}})),
-    historia:()=>import('../features/stories/StoryPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,chapter:page.chapter,initialData:page.data}})),
-    persona:()=>import('../features/public/PublicSite.jsx').then(module=>({Component:module.PersonPage,props:{slug:page.slug,initialData:page.data,onExplore:()=>window.location.assign(`${page.path}?atlas=1`)}})),
-    dinastia:()=>import('../features/public/DynastyPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,initialData:page.data}})),
-    catalogo:()=>import('../features/public/CatalogStaticPage.jsx').then(module=>({Component:module.default,props:{page}})),
-    territorio:()=>import('../features/public/TerritoryPage.jsx').then(module=>({Component:module.TerritoryPage,props:{slug:page.slug,initialData:page.data}})),
-  };
-  loaders[page.kind]?.().then(({Component,props})=>{
-    if(Component)hydrateRoot(root,<React.StrictMode><Component {...props}/></React.StrictMode>);
+const renderApp=()=>import("./App.jsx").then(({default:App})=>{
+  createRoot(root).render(<React.StrictMode><App/></React.StrictMode>);
+});
+const loaders={
+  english:page=>import('../features/english/EnglishPage.jsx').then(module=>({Component:module.default,props:{page}})),
+  historia:page=>import('../features/stories/StoryPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,chapter:page.chapter,initialData:page.data}})),
+  persona:page=>import('../features/public/PublicSite.jsx').then(module=>({Component:module.PersonPage,props:{slug:page.slug,initialData:page.data,onExplore:()=>window.location.assign(`${page.path}?atlas=1`)}})),
+  dinastia:page=>import('../features/public/DynastyPage.jsx').then(module=>({Component:module.default,props:{slug:page.slug,initialData:page.data}})),
+  catalogo:page=>import('../features/public/CatalogStaticPage.jsx').then(module=>({Component:module.default,props:{page}})),
+  territorio:page=>import('../features/public/TerritoryPage.jsx').then(module=>({Component:module.TerritoryPage,props:{slug:page.slug,initialData:page.data}})),
+};
+// 6.3.0: the entry point imports no page module. staticData.js reaches the
+// English routes and their data (about 800 KB compressed); it loads with the
+// page code, after the page itself (portrait and stylesheet). The static page
+// is complete without JavaScript.
+const params=new URLSearchParams(window.location.search);
+const homePanel=/^\/es\/?$/.test(window.location.pathname)&&(params.has('panel')||params.has('persona'));
+const staticPage=Boolean(document.getElementById('eade-initial-page'))&&params.get('atlas')!=='1'&&!homePanel;
+if(staticPage) {
+  // The full validation of the embedded data comes with its code; an invalid
+  // page falls back to the application. The Atlas and the home panels open the
+  // application at once, as before.
+  const hydrate=()=>import('../features/public/staticData.js').then(({readInitialPage})=>{
+    const page=readInitialPage(document,window.location);
+    if(!page||!loaders[page.kind])return renderApp();
+    return loaders[page.kind](page).then(({Component,props})=>{
+      if(Component)hydrateRoot(root,<React.StrictMode><Component {...props}/></React.StrictMode>);
+    });
   });
-} else {
-  import("./App.jsx").then(({default:App})=>{
-    createRoot(root).render(<React.StrictMode><App/></React.StrictMode>);
-  });
-}
+  if(document.readyState==='complete')hydrate();
+  else window.addEventListener('load',hydrate,{once:true});
+} else renderApp();

@@ -41,6 +41,7 @@ const TRIBUTARY_TINTS = Object.freeze({
   'prussia-order-poland': '#E9A3E0', 'perm-moscow': '#93A97F', 'novgorod-moscow': '#8FA67C',
   'granada-castile-jaen': '#F4EC94', 'murcia-castile-alcaraz': '#C9BE3E', 'menorca-mallorca-capdepera': '#C77A73',
   'brittany-angevin': '#B08A72', 'tunis-hafsid-spain':'#DED174',
+  'hejaz-mamluk': '#D6B47E', 'hejaz-ottoman': '#7FB8A8',
 });
 // 6.0.14: Prussia's overlord is Poland in union with Lithuania, so its tint
 // follows the union colour, except in 1492–1500, when the two had different kings.

@@ -2,6 +2,7 @@
 
 ## Serie 6
 
+- [6.3.0: SEO II, jerifato de La Meca y revisión del árbol](releases/6.3.0.md).
 - [6.2.4: patrones del mapa y SEO I](releases/6.2.4.md).
 - [6.2.3: publicación de la 6.2.2 dentro del límite de Cloudflare](releases/6.2.3.md).
 - [6.2.2: Farnesio, Bonaparte, conexiones irlandesas y mapa común](releases/6.2.2.md).

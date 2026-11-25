@@ -10,7 +10,8 @@ import {routesFromSitemap,assetsForStaticPage,escapeHtml,withCssBundle} from '..
 import {staticPageData} from '../../src/features/public/catalogPreview.js';
 
 // Comprueba el artefacto escrito, sin confiar en el informe del generador.
-export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
+// shellPreloads: the module preloads of the entry point (index.html), allowed on every page.
+export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL,shellPreloads=new Set()) {
  const errors=auditScriptPolicy(html,siteUrl);
  const head=html.match(/<head>([\s\S]*?)<\/head>/i)?.[1]||'';
  const meta=publicMeta(entityMeta(page.kind,page.data,page.slug),siteUrl);
@@ -38,7 +39,8 @@ export function auditDocument(html,page,assets,siteUrl=DEFAULT_SITE_URL) {
  for(const css of assets.css)if(!links.some(tag=>tag.includes('rel="stylesheet"')&&tag.includes(`href="/${css}"`)))errors.push(`CSS ausente: ${css}`);
  // 6.1.0: one blocking stylesheet with the page's CSS; the separate files stay as non-applying links.
  if(assets.cssBundle&&!links.some(tag=>tag.includes('rel="stylesheet"')&&tag.includes(`href="/${assets.cssBundle}"`)&&!tag.includes('media=')))errors.push(`CSS combinado ausente: ${assets.cssBundle}`);
- for(const js of assets.js)if(!head.includes(`src="/${js}"`)&&!links.some(tag=>tag.includes('rel="modulepreload"')&&tag.includes(`href="/${js}"`)))errors.push(`Módulo ausente: ${js}`);
+ // 6.3.0: static pages do not preload their own modules; main.jsx loads them after the page.
+ for(const tag of links.filter(tag=>tag.includes('rel="modulepreload"'))){const href=tag.match(/href="([^"]+)"/)?.[1];if(!shellPreloads.has(href))errors.push(`Precarga de módulos en una página estática: ${href}`);}
  if(!body.includes('?atlas=1'))errors.push('Falta el acceso al Atlas');
  return errors;
 }
@@ -49,6 +51,7 @@ async function auditBuild(root=process.cwd()) {
  const routes=routesFromSitemap(await fs.readFile(path.join(dist,'sitemap-full.xml'),'utf8'),siteUrl);
  const manifest=JSON.parse(await fs.readFile(path.join(dist,'.vite/manifest.json'),'utf8'));
  const shell=await fs.readFile(path.join(dist,'index.html'),'utf8');
+ const shellPreloads=new Set([...shell.matchAll(/<link\b[^>]*rel="modulepreload"[^>]*>/g)].map(m=>m[0].match(/href="([^"]+)"/)?.[1]));
  if(!shell.includes('<div id="root"></div>')||shell.includes(STATIC_DATA_ID))throw new Error('El shell del Atlas ha sido reemplazado');
  const counts={persona:0,dinastia:0,territorio:0,historia:0,english:0},errors=auditScriptPolicy(shell,siteUrl).map(e=>`Shell: ${e}`);
  for(const route of routes) {
@@ -60,7 +63,7 @@ async function auditBuild(root=process.cwd()) {
    if(!validatePage(page))throw new Error('JSON fuente incompleto');
    if(route.kind==='dinastia'&&canonicalDynastySlug(route.slug)!==data.slug)throw new Error('Alias no registrado');
    const html=await fs.readFile(path.join(dist,route.path.slice(1),'index.html'),'utf8');
-   errors.push(...auditDocument(html,page,assets,siteUrl).map(e=>`${route.path}: ${e}`));
+   errors.push(...auditDocument(html,page,assets,siteUrl,shellPreloads).map(e=>`${route.path}: ${e}`));
    counts[route.kind]++;
   } catch(error) {errors.push(`${route.path}: ${error.message}`);}
  }

@@ -5898,7 +5898,7 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "note": "Jerifes de La Meca y emires de Medina, bajo la soberanía de los ayubíes y, desde 1250, de los mamelucos.",
+      "note": "Jerifes de La Meca y emires de Medina, bajo la soberanía de los ayubíes y, desde la década de 1260, de los mamelucos.",
       "scopeLabel": "hiyaz · 1200–1516",
       "authorityCondition": "autoridad regional"
     },
@@ -5952,9 +5952,9 @@
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "note": "Los jerifes reconocen al sultán otomano desde 1517 y conservan el gobierno del Hiyaz.",
+      "note": "Los jerifes reconocen la soberanía del sultán otomano desde 1517 y conservan el gobierno del Hiyaz; reciben sus asignaciones y no le pagan tributo.",
       "scopeLabel": "hiyaz · 1517–1800",
-      "authorityCondition": "autonomía tributaria"
+      "authorityCondition": "autoridad regional"
     },
     {
       "name": "Imperio corasmio · 1200–1230 · revisión Oriente Medio 119",
