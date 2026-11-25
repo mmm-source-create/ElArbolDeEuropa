@@ -12,10 +12,12 @@ const assets={css:['assets/ficha.css'],js:['assets/ficha.js']};
 const sitemap=urls=>`<urlset>${urls.map(url=>`<url><loc>https://www.treeofeurope.eu${url}</loc></url>`).join('')}</urlset>`;
 const htmlFor=page=>makeStaticDocument(shell,{html:`<h1>${page.data.nombre}</h1><a href="${page.path}?atlas=1">Atlas</a>`,meta:publicMeta(entityMeta(page.kind,page.data,page.slug))},page,assets);
 
-test('la auditoría reconoce los preloads con crossorigin de una compilación multipágina',()=>{
- const html=htmlFor(person).replace('rel="modulepreload" href=', 'rel="modulepreload" crossorigin href=');
+test('6.3.0: las páginas estáticas no precargan sus módulos; la auditoría lo detecta',()=>{
+ const html=htmlFor(person);
+ assert.doesNotMatch(html,/rel="modulepreload"/);
  assert.deepEqual(auditDocument(html,person,assets),[]);
- assert(auditDocument(html.replace('href="/assets/ficha.js"','href="/assets/otra.js"'),person,assets).some(error=>error.includes('Módulo ausente')));
+ const preloaded=html.replace('</head>','<link rel="modulepreload" href="/assets/ficha.js"></head>');
+ assert(auditDocument(preloaded,person,assets).some(error=>error.includes('Precarga de módulos')));
 });
 
 test('SSG admite solo fichas públicas y conserva el escape hacia el Atlas',()=>{

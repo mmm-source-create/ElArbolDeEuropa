@@ -89,6 +89,9 @@ const P = (from, through, identity, sourceKeys, note, extra = {}) => ({from, thr
 const LOCAL = {authorityCondition: 'autoridad regional'};
 const EMPTY = {authorityCondition: 'sin poblamiento documentado'};
 const TRIBUTE = {authorityCondition: 'autonomía tributaria'};
+// 6.3.0: the sharifs of Mecca were not tributaries (they received the sultan's
+// payments); the sovereignty is the hejaz-ottoman relation in tributaryRelations.js.
+const SUZERAINTY = {authorityCondition: 'autoridad regional'};
 
 // Shared runs of the Iranian plateau.
 const MONGOL_PERSIA = [
@@ -133,8 +136,8 @@ const CHRONOLOGY = {
   'desierto-sirio': [P(FROM, THROUGH, 'Desierto sirio · tribus beduinas', ['arabia', 'iraq'], 'Estepa y desierto de las tribus beduinas entre Siria y Mesopotamia.', LOCAL)],
   // Arabia.
   hiyaz: [
-    P(FROM, 1516, 'Jerifato de La Meca', ['arabia', 'mamelucchi'], 'Jerifes de La Meca y emires de Medina, bajo la soberanía de los ayubíes y, desde 1250, de los mamelucos.', LOCAL),
-    P(1517, THROUGH, 'Jerifato de La Meca', ['arabia'], 'Los jerifes reconocen al sultán otomano desde 1517 y conservan el gobierno del Hiyaz.', TRIBUTE),
+    P(FROM, 1516, 'Jerifato de La Meca', ['arabia', 'mamelucchi'], 'Jerifes de La Meca y emires de Medina, bajo la soberanía de los ayubíes y, desde la década de 1260, de los mamelucos.', LOCAL),
+    P(1517, THROUGH, 'Jerifato de La Meca', ['arabia'], 'Los jerifes reconocen la soberanía del sultán otomano desde 1517 y conservan el gobierno del Hiyaz; reciben sus asignaciones y no le pagan tributo.', SUZERAINTY),
   ],
   'arabia-tribus': [P(FROM, THROUGH, 'Arabia · tribus beduinas', ['arabia'], 'Desiertos del Nafud, el Dahna y el norte de Arabia, de las tribus beduinas (Shammar, Anaza y otras).', LOCAL)],
   najd: [
