@@ -1,0 +1,455 @@
+{
+  "VITTORIAFARNESIOESTE": {
+    "qid": "Q2301541",
+    "gnd": "1015313825",
+    "gndRecord": {
+      "name": "Farnese, Vittoria",
+      "birth": "1618",
+      "death": "1649",
+      "bio": "Francesco I. d'Este heiratete 1648 Vittoria Farnese, die Schwester seiner verstorbenen ersten Frau Maria (1615-1646) und Großtante des Herzogs von Parma"
+    }
+  },
+  "FREDERIC1WURTTKING": {
+    "qid": "Q170179",
+    "gnd": "118703218",
+    "bnf": "10680884x",
+    "loc": "n84113592",
+    "gndRecord": {
+      "name": "Friedrich I., Württemberg, König",
+      "birth": "1754-11-06",
+      "death": "1816-10-30",
+      "birthPlace": "Trzebiatów",
+      "deathPlace": "Stuttgart",
+      "bio": "Geb. in Treptow, gest. in Stuttgart; ab 1797 als Friedrich II. Herzog und von 1806 bis 1816 als Friedrich I. der erste König von Württemberg ab 1797 als Friedrich II. Herzog von Württemberg, ab 1803 Kurfürst, 1806 bis 1816 als Friedrich I. 1. König von Württemberg, heiratete 1780 Prinzessin Auguste "
+    }
+  },
+  "RANUCCIO2FARN": {
+    "qid": "Q555008",
+    "gnd": "102328102",
+    "loc": "nr00005945",
+    "gndRecord": {
+      "name": "Ranuccio II., Parma, Duca",
+      "birth": "1630",
+      "death": "1694",
+      "bio": ""
+    }
+  },
+  "MARGMARIAFARNESIO": {
+    "qid": "Q2550274"
+  },
+  "ELISABETHAMALIAPAL": {
+    "qid": "Q237761",
+    "gnd": "12890285X",
+    "gndRecord": {
+      "name": "Elisabeth Amalie Magdalene, Pfalz, Kurfürstin",
+      "birth": "1635",
+      "death": "1709",
+      "birthPlace": "Gießen",
+      "deathPlace": "Neuburg a.d. Donau",
+      "bio": "Tochter von Landgraf Georg II. von Hessen-Darmstadt; ab 1653 verheiratet mit Kurfürst Philipp Wilhelm von der Pfalz"
+    }
+  },
+  "MARIAFARNESIOESTE": {
+    "qid": "Q2445165",
+    "gnd": "101531368X",
+    "gndRecord": {
+      "name": "Farnese, Maria",
+      "birth": "1615",
+      "death": "1646",
+      "bio": "eine Schwester des Herzogs von Parma"
+    }
+  },
+  "CARLOBONAPARTE": {
+    "qid": "Q151869",
+    "gnd": "123287162",
+    "bnf": "118927092",
+    "loc": "no2003009983",
+    "gndRecord": {
+      "name": "Buonaparte, Carlo Maria",
+      "birth": "1746",
+      "death": "1785",
+      "bio": "Ital. Steuerbeamter, Vater Napoleons I.; königlicher Rat"
+    }
+  },
+  "TERESAFARNESIO": {},
+  "AMBROSIOOHIGGINS": {
+    "qid": "Q1388469",
+    "gnd": "189575816",
+    "loc": "n94040524",
+    "gndRecord": {
+      "name": "O'Higgins, Ambrosio",
+      "deathPlace": "Lima",
+      "bio": "Irischstämmiger spanischer Gouverneur von Chile und Vizekönig von Peru; Geburtsort Ballynary"
+    }
+  },
+  "ODOARDO2PRINCEFARN": {
+    "qid": "Q964936",
+    "gnd": "119112086",
+    "loc": "n97875395",
+    "gndRecord": {
+      "name": "Odoardo, Parma, Prinz",
+      "birth": "1666",
+      "death": "1693",
+      "bio": "Sohn d. Herzogs Ranuccio II. von Parma; sein Vater überlebte ihn"
+    }
+  },
+  "MARGALDOBRANDINIFARN": {
+    "qid": "Q1100436",
+    "gnd": "131913883",
+    "loc": "no2009167036",
+    "gndRecord": {
+      "name": "Margarete, Parma, Herzogin",
+      "birth": "1585",
+      "death": "1646",
+      "bio": "Ital. Adelige; Frau des Ranuccio I. Farnese, Herzog von Parma und Piacenza"
+    }
+  },
+  "JERONIMOBONAPARTE": {
+    "qid": "Q151087",
+    "gnd": "118557432",
+    "bnf": "120850140",
+    "loc": "n85811080",
+    "gndRecord": {
+      "name": "Jérôme, Westfalen, König",
+      "birth": "1784-11-15",
+      "death": "1860-06-24",
+      "bio": "Franz. Marineoffizier (zuletzt Konteradmiral), Kg. von Westfalen (1807-1813)"
+    }
+  },
+  "CAROLINABONAPARTE": {
+    "qid": "Q152782",
+    "gnd": "118585827",
+    "bnf": "120481563",
+    "loc": "n50051519",
+    "gndRecord": {
+      "name": "Karoline, Neapel, Königin",
+      "birth": "1782-03-25",
+      "death": "1839-05-18",
+      "birthPlace": "Ajaccio",
+      "deathPlace": "Florenz",
+      "bio": ""
+    }
+  },
+  "DOROTHEASOPHIEFARN": {
+    "qid": "Q60431",
+    "gnd": "12227671X",
+    "loc": "n97860441",
+    "gndRecord": {
+      "name": "Dorothea Sophia, Parma, Prinzessin",
+      "birth": "1670",
+      "death": "1748",
+      "bio": "Tochter des Pfalzgrafen Philipp Wilhelm, in erster Ehe verh. mit Prinz Odoardo von Farnese, in zweiter Ehe mit Herzog Francesco Farnese von Parma"
+    }
+  },
+  "MARIAESTEFARN": {
+    "qid": "Q2633673"
+  },
+  "PAULINABONAPARTE": {
+    "qid": "Q152785",
+    "gnd": "118513540",
+    "bnf": "11985695w",
+    "loc": "n80043451",
+    "gndRecord": {
+      "name": "Borghese, Pauline",
+      "birth": "1780-10-20",
+      "death": "1825-06-09",
+      "birthPlace": "Ajaccio",
+      "deathPlace": "Florenz",
+      "bio": "Buchbesitz: Privatbibliothek Pauline Princess Burghese Bonaparte Schwester Napoleons I.; 1803 Ehefrau von Camillo Borghese, nachmals Herzog von Guastalla und Generalgouverneur des Piemont"
+    }
+  },
+  "MARIANANEOBURG": {
+    "qid": "Q57651",
+    "gnd": "123154405",
+    "loc": "no2001065360",
+    "gndRecord": {
+      "name": "Maria Anna, Spanien, Königin",
+      "birth": "1667-10-28",
+      "death": "1740-07-16",
+      "birthPlace": "Benrath",
+      "deathPlace": "Guadalajara (Spanien)",
+      "bio": ""
+    }
+  },
+  "RICARDOWALL": {
+    "qid": "Q2397740",
+    "gnd": "1030113548",
+    "bnf": "144985922",
+    "loc": "no2010089953",
+    "gndRecord": {
+      "name": "Wall, Ricardo",
+      "birth": "1694",
+      "death": "1777",
+      "birthPlace": "Nantes",
+      "bio": "Ir. Soldat, Diplomat u. Minister in span. Diensten. Geb. in Frankreich"
+    }
+  },
+  "HORTENSEBEAUHARNAIS": {
+    "qid": "Q229875",
+    "gnd": "118553720",
+    "bnf": "12564000h",
+    "loc": "n84078646",
+    "gndRecord": {
+      "name": "Hortense, Niederlande, Königin",
+      "birth": "1783-04-10",
+      "death": "1837-10-05",
+      "birthPlace": "Paris",
+      "deathPlace": "Arenenberg (Salenstein)",
+      "bio": "Königin von Holland 1806-10"
+    }
+  },
+  "MARIALUISAAUSTRIAPARMA": {
+    "qid": "Q157491",
+    "gnd": "118577891",
+    "bnf": "119638272",
+    "loc": "n50043678",
+    "gndRecord": {
+      "name": "Marie Louise, Frankreich, Kaiserin",
+      "birth": "1791-12-12",
+      "death": "1847-12-17",
+      "birthPlace": "Wien",
+      "deathPlace": "Parma",
+      "bio": "2. Ehefrau Napoleons I.. Tochter Kaiser Franz II. von Österreich"
+    }
+  },
+  "ANTONIOFARNESIO": {
+    "qid": "Q548485",
+    "gnd": "1114292915",
+    "bnf": "16656274m",
+    "loc": "n97865260",
+    "gndRecord": {
+      "name": "Antonio, Parma und Piacenza, Herzog",
+      "birth": "1679",
+      "death": "1731",
+      "bio": ""
+    }
+  },
+  "LUISBONAPARTE": {
+    "qid": "Q7729",
+    "gnd": "118896156",
+    "bnf": "12653242q",
+    "loc": "n84078645",
+    "gndRecord": {
+      "name": "Louis Bonaparte, Holland, König",
+      "birth": "1778",
+      "death": "1846",
+      "birthPlace": "Ajaccio",
+      "deathPlace": "Livorno",
+      "bio": "Dritter Bruder Napoleons I., Vater von Napoleon III., Graf von Saint-Leu"
+    }
+  },
+  "ISABELLAFARNESIO1668": {},
+  "FRANCESCO2ESTE": {
+    "qid": "Q715243",
+    "gnd": "119386445",
+    "bnf": "15011854f",
+    "loc": "n90667496",
+    "gndRecord": {
+      "name": "Franz II., Modena, Herzog",
+      "birth": "1660",
+      "death": "1694",
+      "bio": ""
+    }
+  },
+  "ISABELLAESTEFARN": {
+    "qid": "Q2445155",
+    "gnd": "118864777",
+    "gndRecord": {
+      "name": "Isabella, Parma, Herzogin",
+      "bio": ""
+    }
+  },
+  "JOSEFINABEAUHARNAIS": {
+    "qid": "Q171480",
+    "gnd": "118558420",
+    "bnf": "12164162n",
+    "loc": "n50038062",
+    "gndRecord": {
+      "name": "Josephine, Frankreich, Kaiserin",
+      "birth": "1763",
+      "death": "1814",
+      "bio": "1. Gattin Napoleons I."
+    }
+  },
+  "LEOPOLDOODONNELL": {
+    "qid": "Q454265",
+    "gnd": "118786741",
+    "loc": "n81007085",
+    "gndRecord": {
+      "name": "O'Donnell y Jorris, Leopoldo",
+      "birth": "1809-01-12",
+      "death": "1867-11-05",
+      "birthPlace": "Santa Cruz de Tenerife",
+      "deathPlace": "Biarritz",
+      "bio": "Er war mehrfach spanischer Ministerpräsident. Seit 1839 trug er den Titel Graf von Lucena, seit 1860 Herzog von Tetuán."
+    }
+  },
+  "ALEJANDROOREILLY": {
+    "qid": "Q1651702",
+    "gnd": "1176766465",
+    "loc": "n84055668",
+    "gndRecord": {
+      "name": "O'Reilly, Alejandro",
+      "birth": "1723-10-24",
+      "death": "1794-03-23",
+      "birthPlace": "Baltrasna",
+      "deathPlace": "Bonete",
+      "bio": "1769-1770 Gouverneur von Louisiana."
+    }
+  },
+  "LUCIENBONAPARTE": {
+    "qid": "Q151098",
+    "gnd": "118513141",
+    "bnf": "12521132v",
+    "loc": "n82141622",
+    "gndRecord": {
+      "name": "Bonaparte, Lucien",
+      "birth": "1775",
+      "death": "1840",
+      "birthPlace": "Ajaccio",
+      "deathPlace": "Viterbo",
+      "bio": "Franz. Politiker und Dichter; 2. Bruder Napoleon I.; Prinz von Canino und Musignano"
+    }
+  },
+  "JOAQUINMURAT": {
+    "qid": "Q151173",
+    "gnd": "118746928",
+    "bnf": "119639427",
+    "loc": "n50040041",
+    "gndRecord": {
+      "name": "Joachim, Neapel, König",
+      "birth": "1767-03-25",
+      "death": "1815-10-13",
+      "deathPlace": "Pizzo",
+      "bio": "Franz. Kavallerieoffizier, Marschall (seit 1804), als Joachim Großherzog von Berg und Kleve (1806-08), König von Neapel (seit 1808); geb. in Labastide-Fortunière"
+    }
+  },
+  "HUGHALBERTODONNELL": {
+    "qid": "Q5932131"
+  },
+  "JULIECLARY": {
+    "qid": "Q235412",
+    "gnd": "118714074",
+    "loc": "n92082342",
+    "gndRecord": {
+      "name": "Julie, Spanien, Königin",
+      "birth": "1771",
+      "death": "1845",
+      "bio": "Frau von Joseph Bonaparte"
+    }
+  },
+  "ALFONSO4ESTE": {
+    "qid": "Q932379",
+    "gnd": "119386437",
+    "loc": "nr97015798",
+    "gndRecord": {
+      "name": "Alfonso IV., Modena, Herzog",
+      "birth": "1634-02-02",
+      "death": "1662-07-16",
+      "bio": ""
+    }
+  },
+  "ELISABONAPARTE": {
+    "qid": "Q151083",
+    "gnd": "118505483",
+    "bnf": "11985691h",
+    "loc": "n83018191",
+    "gndRecord": {
+      "name": "Elisa, Lucca, Fürstin",
+      "birth": "1777",
+      "death": "1820",
+      "birthPlace": "Ajaccio",
+      "deathPlace": "Villa Vicentina",
+      "bio": "Älteste Schwester Napoleons; regierende Fürstin von Lucca und Piombino, Herzogin von Massa-Carrara, Großherzogin von Toskana"
+    }
+  },
+  "MARGARITAMEDICIFARN": {
+    "qid": "Q1100966",
+    "gnd": "13734077X",
+    "loc": "no2009167031",
+    "gndRecord": {
+      "name": "Margarita, Parma, Herzogin",
+      "birth": "1612",
+      "death": "1679",
+      "bio": "Tochter des Großherzogs der Toskana, Cosimo II. de' Medici (1590-1621); seit 1628 mit Herzog Edoardo I. von Parma verheiratet, der 1646 starb"
+    }
+  },
+  "JOSEBONAPARTE": {
+    "qid": "Q7726",
+    "gnd": "118713140",
+    "bnf": "12459535c",
+    "loc": "n50038058",
+    "gndRecord": {
+      "name": "Joseph, Spanien, König",
+      "birth": "1768-01-07",
+      "death": "1844-07-28",
+      "birthPlace": "Corte",
+      "deathPlace": "Florenz",
+      "bio": "1807-1808 König von Neapel; 1808-1813 König von Spanien; lebte teilweise in der Schweiz und in New Jersey im Exil König von Neapel 1806-08; König von Spanien 1808-13; ältester Bruder Napoleons I."
+    }
+  },
+  "FRANCOISCLARY": {
+    "qid": "Q3084267"
+  },
+  "CATALINAWURTTBONAPARTE": {
+    "qid": "Q236184",
+    "gnd": "101423004",
+    "bnf": "10734120v",
+    "loc": "nr90009150",
+    "gndRecord": {
+      "name": "Katharina, Westfalen, Königin",
+      "birth": "1783",
+      "death": "1835",
+      "bio": "Gattin Jérôme Bonapartes, König v. Westfalen; Tochter Friedrichs I., König von Württemberg"
+    }
+  },
+  "FRANCISCOFARNESIO": {
+    "qid": "Q555354",
+    "gnd": "116693169",
+    "loc": "nr00005951",
+    "gndRecord": {
+      "name": "Francesco, Parma-Piacenza, Herzog",
+      "birth": "1678",
+      "death": "1727",
+      "bio": "verheiratet mit Dorothea Sophie von der Pfalz (1670-1748), Herzog von Parma"
+    }
+  },
+  "MARGVIOLANTESAVOIA": {
+    "qid": "Q2447071",
+    "gnd": "1018068287",
+    "gndRecord": {
+      "name": "Margherita Violante, Parma, Herzogin",
+      "birth": "1635-11-15",
+      "death": "1663-04-29",
+      "birthPlace": "Turin",
+      "deathPlace": "Parma",
+      "bio": "Zweite Tochter von Herzog Victor Amadeus I. von Savoyen  (1587-1637) u. Christine von Frankreich  (1606-63), Tochter König Heinrichs IV.; heiratet 1660e  Ranuccio II. Farnese, Herzog von Parma (1630-94) heiratete 1660 Herzog Rainutio II. von Parma"
+    }
+  },
+  "BERNARDOOHIGGINS": {
+    "qid": "Q28930",
+    "gnd": "119516608",
+    "bnf": "12088744k",
+    "loc": "n50034064",
+    "gndRecord": {
+      "name": "O'Higgins, Bernardo",
+      "birth": "1778",
+      "death": "1842",
+      "birthPlace": "Chillán",
+      "deathPlace": "Lima",
+      "bio": "Chilenischer General und Unabhängigkeitskämpfer (1778-1842)"
+    }
+  },
+  "LETIZIARAMOLINO": {
+    "qid": "Q151995",
+    "gnd": "118661310",
+    "bnf": "11938514g",
+    "loc": "n81022674",
+    "gndRecord": {
+      "name": "Bonaparte, Maria Letizia",
+      "birth": "1750",
+      "death": "1836",
+      "bio": "Mutter Napoleons I."
+    }
+  }
+}

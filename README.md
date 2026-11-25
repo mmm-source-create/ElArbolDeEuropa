@@ -2,13 +2,14 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.2.1**
-- [Notas de 6.2.1](docs/releases/6.2.1.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.2.2**
+- [Notas de 6.2.2](docs/releases/6.2.2.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
-La versión 6.2.1 corrige el buscador del Atlas: toda la barra sirve para
-empezar a escribir, el texto tiene más sitio y la barra sigue sin cambiar de
-tamaño al escribir. La 6.2.0 liberó espacio en Cloudflare y rediseñó la
-tarjeta para compartir.
+La versión 6.2.2 incorpora 39 personas con biografía y resumen en español e
+inglés: los Farnesio de Parma, los Bonaparte y seis trayectorias irlandesas e
+hispánicas. Añade la historia de la casa de Bonaparte, revisa la presentación de
+Navarra, la Confederación Suiza y los tributarios en el mapa común, y usa Europa
+en 1655 en las tarjetas para compartir.
 La web se publica en Cloudflare (Workers con Static Assets, plan gratuito).
 
 El mapa utiliza EU V Locations con superficies fechadas y fuentes consultables

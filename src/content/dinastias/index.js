@@ -1,3 +1,4 @@
+import {BONAPARTE_HISTORY} from './bonaparte622.js';
 import {POLISH_HOUSES_HISTORY} from './polonia-tanda3.js';
 import {YORK_HISTORY,ROSES_HOUSE_RELATIONS} from './dos-rosas.js';
 import {TREINTA_CASAS} from './treinta-casas.js';
@@ -20,6 +21,7 @@ const BRITANNICA='https://www.britannica.com/';
 
 // A house history is editorial context. Branches and matrimonial transfers are distinct relations.
 export const HISTORIA_DINASTIAS = {
+ Bonaparte:BONAPARTE_HISTORY,
  Calderón:{resumen:'Familia vinculada a Rodrigo Calderón, conde de la Oliva y marqués de Siete Iglesias, en la corte de Felipe III.',origen:'Rodrigo Calderón nació en Amberes en 1576, en una familia relacionada con el servicio militar de la monarquía hispánica.',trayectoria:'El servicio al duque de Lerma le proporcionó cargos, títulos y una posición central en su red cortesana. La caída de su protector dio paso a su detención en 1619.',legado:'Su ejecución en 1621 se incorporó a la literatura sobre el favor regio y la caída de los poderosos. La ficha reúne la rama documentada por Rodrigo; otros linajes homónimos necesitan vínculos propios.',territorios:['España'],protagonistas:['RODRIGOCALDERON'],fuentes:['https://brasilhis.usal.es/es/node/8485','https://www.ucm.es/data/cont/docs/446-2013-11-29-j-2013_maq_lopez%20gomez.pdf']},
  Berlichingen:{resumen:'Linaje de caballeros de Franconia, conocido por Götz von Berlichingen y sus posesiones en Jagsthausen y Hornberg.',origen:'La familia pertenecía a la nobleza caballeresca de Franconia y poseía bienes en los valles del Jagst y del Kocher.',trayectoria:'Götz sirvió a distintos príncipes y participó en querellas nobiliarias y en la guerra de los Campesinos de 1525. Sus conflictos muestran las tensiones entre la caballería, las ciudades y los principados territoriales.',legado:'Su autobiografía y el drama de Goethe difundieron el nombre familiar. Las ramas del linaje mantuvieron trayectorias propias en la nobleza alemana.',territorios:['Sacro Imperio'],protagonistas:['GOTZBERLICHINGEN'],fuentes:['https://www.deutsche-biographie.de/sfz3943.html','https://www.leo-bw.de/en-GB/themenmodul/bauernkrieg/personen/goetz-von-berlichingen']},
   ...POLISH_HOUSES_HISTORY,

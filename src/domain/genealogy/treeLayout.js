@@ -1,3 +1,4 @@
+import {countFamilyCrossings} from './crossingCount.js';
 import { mergeIntervals, assignIntervalLanes, roundedPath } from "./treeGeometry.js";
 import { BY_ID, clavePareja, listaParejas, mediana } from "./relations.js";
 
@@ -619,15 +620,7 @@ export function buildRows(people, gen) {
       });
     });
 
-    let crossings = 0;
-    Object.values(edgesByLayer).forEach((edges) => {
-      for (let i = 0; i < edges.length; i += 1) {
-        for (let j = i + 1; j < edges.length; j += 1) {
-          if (edges[i].familyKey === edges[j].familyKey) continue;
-          if ((edges[i].source - edges[j].source) * (edges[i].target - edges[j].target) < 0) crossings += 1;
-        }
-      }
-    });
+    const crossings=Object.values(edgesByLayer).reduce((total,edges)=>total+countFamilyCrossings(edges),0);
 
     let siblingSpread = 0;
     Object.values(siblingGroups).forEach((values) => {
@@ -675,13 +668,15 @@ export function buildRows(people, gen) {
   // Última pasada local: un intercambio adyacente solo se conserva si
   // reduce cruces, distancia entre generaciones o dispersión de hermanos.
   current = best.map((row) => row.map((unit) => unit.slice()));
+  let currentScore=scoreRows(current);
   for (let round = 0; round < 2; round += 1) {
     for (let rowIndex = 0; rowIndex < current.length; rowIndex += 1) {
       for (let index = 0; index < current[rowIndex].length - 1; index += 1) {
-        const before = scoreRows(current);
+        const before = currentScore;
         [current[rowIndex][index], current[rowIndex][index + 1]] = [current[rowIndex][index + 1], current[rowIndex][index]];
         const after = scoreRows(current);
         if (after < before) {
+          currentScore=after;
           if (after < bestScore) {
             bestScore = after;
             best = current.map((row) => row.map((unit) => unit.slice()));

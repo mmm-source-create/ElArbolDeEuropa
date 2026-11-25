@@ -1,3 +1,4 @@
+import {PORTRAITS_622_EN} from './portraits622.js';
 import {PORTRAITS_605_EN} from './portraits605.js';
 import {PORTRAITS_607_EN} from './portraits607.js';
 import {PORTRAITS_608_EN} from './portraits608.js';
@@ -81,4 +82,5 @@ export const ENGLISH_PROFILE_PORTRAITS = {
  ...PORTRAITS_609_EN,
  ...PORTRAITS_615_EN,
  ...PORTRAITS_613_EN,
+ ...PORTRAITS_622_EN,
 };

@@ -1,6 +1,7 @@
 // The same editorial rule is published in both methodology pages.
 export const PERSON_NAMING_POLICY = {
  es:{title:'Nombres, títulos y sobrenombres',paragraphs:[
+  'Los duques Farnesio conservan Ranuccio en español y en inglés; el apellido es Farnesio en español y Farnese en inglés. Dorotea Sofía de Neoburgo conserva Neuburg como variante de búsqueda.',
   'El encabezado usa el nombre habitual en la historiografía del idioma de la página. Para los soberanos, se conserva el ordinal histórico y se añade el reino cuando ayuda a distinguirlos: Pedro I de Rusia, Catalina II de Rusia o Luis IX de Francia. No se inventa un ordinal por simetría con otro idioma.',
   'En Portugal se conservan los exónimos españoles Alfonso, Juan, Pedro, Eduardo y Sebastián. La edición inglesa usa Afonso, John y Peter, y las formas Denis of Portugal, Edward of Portugal, Henry of Portugal y Sebastian of Portugal, sin imponerles un ordinal por simetría. Duarte, Dinis y los otros ordinales documentados siguen como variantes. Boabdil se conserva como sobrenombre de Muhammad XII de Granada; las numeraciones nazaríes alternativas se identifican expresamente.',
   'Los títulos oficiales, los distintos ordinales de una misma persona y sus fechas pertenecen a los cargos: Carlos V también fue Carlos I en las coronas hispánicas. El nombre de una persona no demuestra soberanía ni reúne automáticamente sus territorios.',
@@ -9,6 +10,7 @@ export const PERSON_NAMING_POLICY = {
   'Los nombres anteriores y las variantes conocidas permanecen disponibles en la búsqueda. Los identificadores y enlaces publicados se conservan cuando se revisa una denominación. Una ficha en inglés mantiene las mismas personas, fechas, vínculos y gobiernos que su original español.',
  ]},
  en:{title:'Names, titles and nicknames',paragraphs:[
+  'The Farnese dukes retain Ranuccio in both languages; the family name is Farnesio in Spanish and Farnese in English. Dorothea Sophie of Neuburg retains the Spanish form Neoburgo as a search variant.',
   'The heading uses the name established in the historical literature of the page’s language. For rulers, retain the historical regnal number and add the kingdom when it helps distinguish them: Peter I of Russia, Catherine II of Russia or Louis IX of France. Do not invent a regnal number merely to match another language: John of England is not normally called John I in English.',
   'Portuguese rulers use established English forms such as Afonso, John and Peter, and Denis of Portugal, Edward of Portugal, Henry of Portugal and Sebastian of Portugal without adding numbers merely to match Spanish. Duarte, Dinis and documented alternative regnal numbers remain searchable. Boabdil is retained as the nickname of Muhammad XII of Granada; alternative Nasrid numbering systems are explicitly identified.',
   'Official titles, different regnal numbers held by one person and their dates belong to the offices: Charles V was also Charles I in the Spanish crowns. A person’s name neither proves sovereignty nor automatically merges their territories.',

@@ -1,3 +1,4 @@
+import {V622_RECORDS} from './v622/index.js';
 import {V603_REFERENCES} from './v603People.js';
 import {SUCCESSION_SOURCES_619} from '../evidence/successionDates619.js';
 import {SOURCES_620} from '../evidence/reviews620.js';
@@ -1515,6 +1516,12 @@ export const SOURCES = [
     "nota": "Referencia auxiliar: cronología y orientación bibliográfica."
   }
 ];
+// 6.2.2: merge the actual articles, keeping the established publication registry unique.
+for(const [id,record] of Object.entries(V622_RECORDS))for(const ref of record.refs){
+ const previous=SOURCES.find(s=>s.url===ref.url);
+ if(previous)previous.personas=[...new Set([...(previous.personas||[]),id])];
+ else SOURCES.push({...ref,grupo:'Historia cultural y política',territorios:[],personas:[id]});
+}
 // General bibliography lists each publication once; entity pages retain the individual references.
 // Reuse a bibliography entry when its URL already exists, preserving its
 // person associations and adding only the newly reviewed territories.

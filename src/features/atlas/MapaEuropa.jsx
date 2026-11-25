@@ -1,3 +1,4 @@
+import {mosaicAuthorityKind} from '../../cartography/mosaicAuthorityKind.js';
 import {renderImperialOverlay} from '../../cartography/imperialOverlay.js';
 import {IMPERIAL_FRAME_RANGE} from '../../cartography/imperialFrame.js';
 import {MAP_READING_GUIDE} from '../../content/mapReadingGuide.js';
@@ -309,7 +310,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           const colors=[...new Set(layers.map(layer=>layer.mosaicColor))];
           const scopes=layers.flatMap(layer=>(layer.scopes||[]).filter(scope=>scope.ids.includes(id)));
           const disputed=scopes.some(s=>/disput|ocupaci/i.test(s.condition||''));
-          let fill=authorityFill(svg,colors[0],disputed?'disputed':layers.some(l=>l.crownRelation||l.tributaryRelation)?'apanage':'sovereign');
+          let fill=authorityFill(svg,colors[0],mosaicAuthorityKind(layers,disputed));
           if(colors.length>1) {
             const namespace='http://www.w3.org/2000/svg';
             const patternId='europe-mosaic-'+colors.join('-').replace(/[^a-z0-9]/gi,'');

@@ -1,0 +1,109 @@
+{
+  "release": "6.2.2",
+  "date": "2026-11-25",
+  "base": "51b822cf5252b6139eb56e4b69545b03a74be0fd",
+  "people": 2904,
+  "newPeople": 39,
+  "expandedBiographies": 3,
+  "languages": [
+    "es",
+    "en"
+  ],
+  "newPortraitsAndReplacements": 40,
+  "approvedPortraitExceptions": [
+    "TERESAFARNESIO",
+    "MARGMARIAFARNESIO"
+  ],
+  "claimSpecificReviews": 182,
+  "routes": {
+    "added": 80,
+    "removed": 0
+  },
+  "tests": {
+    "fullSuite": {
+      "total": 900,
+      "passed": 898,
+      "failed": 2,
+      "failures": [
+        "UI assertion depended on rendering taking less than the debounce delay; timing is covered independently and the integration now checks the settled value.",
+        "A catalogue was regenerated concurrently with the full test run."
+      ]
+    },
+    "finalTargeted": {
+      "total": 35,
+      "passed": 35,
+      "failed": 0,
+      "includes": "Both failed tests, all 6.2.2 tests, the crossing counter and tree geometry."
+    }
+  },
+  "treeOptimization": {
+    "sameGeneratedGeometryBytes": true,
+    "sha256": "919ee581eabf0b9755e588eb0605ffd7d0a091bc3239f1f2a7838f9a9582022f"
+  },
+  "audits": {
+    "build": {
+      "errors": 0
+    },
+    "personNames": {
+      "errors": 0
+    },
+    "dataContract": {
+      "errors": 0,
+      "governments": 3037
+    },
+    "people": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "dynasties": {
+      "errors": 0
+    },
+    "security": {
+      "repositoryIssues": 0,
+      "dependencies": "No high/critical outside the existing GHSA-fc5q-39xc-vjpf exception."
+    }
+  },
+  "ssg": {
+    "pages": 10071,
+    "expected": 10071,
+    "errors": 0
+  },
+  "regression": {
+    "range": [
+      1200,
+      1800
+    ],
+    "baselineUpdated": true,
+    "expectedChangedYears": [
+      "1512–1516: Navarre mandate note",
+      "1658–1731: new Modena and Parma mandates",
+      "1797–1800: Frederick of Württemberg"
+    ],
+    "geometryChanged": false
+  },
+  "cloudflare": {
+    "files": 13547,
+    "freeFileLimit": 20000,
+    "remainingFiles": 6453,
+    "largest": {
+      "path": "assets/corridor-locations-YksGtyWY.json",
+      "bytes": 12615491
+    },
+    "bytes": 718752957,
+    "reusedEnglishMetadata": 5037,
+    "recordsFromHtml": 5027,
+    "ssgPages": 10071,
+    "excluded": [
+      ".vite",
+      "english-meta",
+      "map-audit",
+      "ssg-audit.json",
+      "ssg-report.json"
+    ]
+  },
+  "visualReview": {
+    "shareCards": "Both 1200×630 cards inspected visually.",
+    "browser": "The local Francesco profile opened with its correct title. DOM inspection failed because the browser debugger was unattached; full browser visual review remains incomplete."
+  },
+  "productionDeployed": false
+}

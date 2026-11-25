@@ -67,7 +67,7 @@ test('English dynasty and territory pages match the Spanish hero: arms, counts, 
     const d = json(`public/english-meta/${file}`);
     if (d.arms) { arms++; assert.ok(d.arms.blazon, file); }
   }
-  assert.equal(arms, 168);
+  assert.equal(arms, 169);
   assert.equal(json('public/english-meta/dynasty-montfort-of-brittany.json').arms.blazon, ARMS_EN_612['Montfort-Bretaña'][0]);
   assert.equal(json('public/english-meta/territory-dreux.json').clase, 'condado');
   assert.match(read('src/features/english/EnglishEntity.jsx'), /condado:'County'/);
