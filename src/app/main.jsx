@@ -61,6 +61,11 @@ if(staticPage) {
       if(Component)hydrateRoot(root,<React.StrictMode><Component {...props}/></React.StrictMode>);
     });
   });
-  if(document.readyState==='complete')hydrate();
-  else window.addEventListener('load',hydrate,{once:true});
+  // 6.3.1: and only after a frame has been painted. On a fast connection the
+  // page loads before its first paint, and hydrating at once delayed the
+  // portrait by the time the code takes to run.
+  const nextFrame=window.requestAnimationFrame?.bind(window)||(callback=>setTimeout(callback,16));
+  const afterPaint=()=>nextFrame(()=>setTimeout(hydrate,0));
+  if(document.readyState==='complete')afterPaint();
+  else window.addEventListener('load',afterPaint,{once:true});
 } else renderApp();

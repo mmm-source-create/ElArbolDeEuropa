@@ -35,7 +35,7 @@ test('SEO II: the portrait is fetched first and the hydration code waits for the
   assert.match(read('src/features/public/PublicSite.jsx'), /decoding="async" fetchPriority="high"/);
   assert.doesNotMatch(read('scripts/lib/ssg-utils.mjs'), /rel=\\?"modulepreload\\?"/);
   const main = read('src/app/main.jsx');
-  assert.match(main, /if\(document\.readyState==='complete'\)hydrate\(\);\s*else window\.addEventListener\('load',hydrate,\{once:true\}\);/);
+  assert.match(main, /const afterPaint=\(\)=>nextFrame\(\(\)=>setTimeout\(hydrate,0\)\);\s*if\(document\.readyState==='complete'\)afterPaint\(\);\s*else window\.addEventListener\('load',afterPaint,\{once:true\}\);/);
   // The entry point loads no page data module up front: staticData.js reaches the
   // English routes (about 800 KB compressed) and now comes with the page code.
   assert.doesNotMatch(main, /^import .*staticData\.js/m);
