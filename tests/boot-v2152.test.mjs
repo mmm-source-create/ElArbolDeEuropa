@@ -48,7 +48,7 @@ for (const mode of ['SSG', 'SPA']) test(`el arranque real ${mode} inserta una so
   try {
     await act(async () => {
       await import(`${pathToFileURL(path.join(temp, 'entry.mjs')).href}?mode=${mode}`);
-      await new Promise(resolve => setTimeout(resolve, 50));
+      await new Promise(resolve => setTimeout(resolve, 150));
     });
     assert.equal(document.querySelector('h1')?.textContent, mode, errors.join('\n'));
     if (mode === 'SSG') assert.equal(document.querySelector('h1'), heading);
