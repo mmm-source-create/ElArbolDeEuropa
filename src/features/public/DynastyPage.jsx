@@ -1,3 +1,4 @@
+import './thumbnailLookup.js';
 import {connectionUrl} from '../connections/connectionTree.js';
 import {entityMeta} from "./publicMeta.js";
 import {useMemo,useState} from 'react';

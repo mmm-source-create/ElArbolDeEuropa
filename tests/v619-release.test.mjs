@@ -71,7 +71,8 @@ test('date validation rejects impossible dates, annual mismatches and unsourced 
 test('dates, calendar and new evidence read correctly in both languages and copied citations', () => {
   const es=PERSONAS.find(p=>p.id==='JUANAGREY'), [en]=applyEnglishPersonPresentation([{...es}]);
   for (const [person,locale,day,calendar] of [[es,'es','10 de julio de 1553','Calendario juliano'],[en,'en','10 July 1553','Julian calendar']]) {
-    const html=renderToStaticMarkup(React.createElement(EvidencePanel,{person,locale}));
+    // 6.3.2: the Atlas passes the claims it computes; a record brings its own.
+    const html=renderToStaticMarkup(React.createElement(EvidencePanel,{person,locale,claims:person.localizeClaims?.()||personClaims(person)}));
     assert(html.includes(day));assert(html.includes(calendar));
     const claim=(person.localizeClaims?.()||personClaims(person)).find(c=>c.field==='Gobierno');
     assert(citationText(claim,person.nombre,locale).includes(day));

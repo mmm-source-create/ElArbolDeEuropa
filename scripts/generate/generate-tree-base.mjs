@@ -14,6 +14,9 @@ import path from "node:path";
 import { biografiaExtensaPersona } from "../../src/content/biografias-extensas.js";
 import { IMAGENES_PERSONAS } from "../../src/data/imagenesPersonas.js";
 import { IMAGE_VARIANTS } from "../../src/data/imageVariants.js";
+import { responsiveImage } from "../../src/utils/responsiveImage.js";
+import { personClaims } from "../../src/evidence/claims.js";
+import { crownTimelineData } from "../../src/domain/government/crownTimelineModel.js";
 import { regionResolver } from "../../src/domain/filters/filterRegions.js";
 import { aliasesDePersona, biografiaPublicaPersona, contenidoEditorialPersona, resumenCortoPersona, slugBasePersona, slugPublico, tieneContenidoEditorial } from "../../src/domain/people/personPresentation.js";
 
@@ -479,6 +482,22 @@ function catalogoAgrupado(valores, selector) {
     .sort((a, b) => b.total - a.total || a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base" }));
 }
 
+// 6.3.2: la ficha lleva resueltos su retrato, las miniaturas de las personas
+// enlazadas, sus afirmaciones y las etapas de sus coronas. Al hidratarla, el
+// navegador no carga la base de personas, las imágenes ni la evidencia.
+const PORTRAIT_SIZES = "(max-width: 680px) 280px, 320px";
+function miniatura(id) {
+  const image = IMAGENES_PERSONAS[id];
+  if (!image?.archivo) return null;
+  const {sizes, ...responsive} = responsiveImage(image.archivo);
+  return {...responsive, position: image.encuadre || image.posicion || "50% 20%"};
+}
+const conMiniatura = (ref) => ref && ({...ref, thumb: miniatura(ref.id)});
+function retratoFicha(id) {
+  const image = IMAGENES_PERSONAS[id];
+  return image?.archivo ? {...image, responsive: responsiveImage(image.archivo, PORTRAIT_SIZES)} : null;
+}
+
 async function generarPortadasPersona() {
   const personaDir = path.join(ROOT, "public", "personas-meta");
   await fs.rm(personaDir, { recursive: true, force: true });
@@ -518,15 +537,19 @@ async function generarPortadasPersona() {
       biografia: biografiaPublicaPersona(persona),
       ...(biografiaExtensaPersona(persona) ? {biografiaExtensa: biografiaExtensaPersona(persona)} : {}),
       fuentes: sourcesForPerson(persona.id),
-      padres,
-      conyuges,
-      hijos,
-      relacionadosDinastia: relacionadosDinastia(persona),
-      contemporaneos: contemporaneos(persona),
+      padres: padres.map(conMiniatura),
+      conyuges: conyuges.map(conMiniatura),
+      hijos: hijos.map(conMiniatura),
+      relacionadosDinastia: relacionadosDinastia(persona).map(conMiniatura),
+      contemporaneos: contemporaneos(persona).map(conMiniatura),
+      retrato: retratoFicha(persona.id),
       historias: HISTORIAS_POR_PERSONA[persona.id] || [],
       // 6.2.0: the widest published portrait, for the Person structured data.
       ...(IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id]?.archivo]?.variants.at(-1)?.src ? {imagen: IMAGE_VARIANTS[IMAGENES_PERSONAS[persona.id].archivo].variants.at(-1).src} : {}),
     };
+    // Calculadas sobre la propia ficha, como antes las calculaba el navegador.
+    meta.claims = personClaims(meta);
+    meta.crownTimeline = crownTimelineData(meta, meta.accesosCoronas);
     await fs.writeFile(path.join(personaDir, `${meta.slug}.json`), JSON.stringify(meta), "utf8");
   }));
 }

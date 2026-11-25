@@ -21,6 +21,8 @@ import {rutaEntidadLocalizada, slugPersonaPorLocale} from '../atlasRoutes.js';
 import {slugPublico} from '../../../domain/people/personLabels.js';
 import {nombrePrincipal, sobrenombreDePersona, formatoFechas, nRomano} from '../timelineUtils.js';
 import EvidencePanel from '../../../components/EvidencePanel.jsx';
+import {personClaims} from '../../../evidence/claims.js';
+import {sourcesForPerson} from '../../../content/sources.js';
 import SegmentedControl from '../../../ui/SegmentedControl.jsx';
 import {englishLabel,englishProfileFor} from '../../english/v6/atlasPresentation.js';
 import {localizedPortrait} from '../../english/imageCredits.js';
@@ -282,7 +284,7 @@ export default function AtlasBiographyPanel({vm, bioMobileOpen, bioScrollRef, bi
                   <section id="bio-section-fuentes" data-bio-section="fuentes" className="bio-scroll-section bio-source-tab" aria-labelledby="bio-heading-fuentes" tabIndex={-1}>
                     <h4 id="bio-heading-fuentes" className="bio-section-heading">{tr('Fuentes','Sources')}</h4>
                     <DocumentationNotes persona={personaBio} locale={locale}/>
-                    <EvidencePanel person={personaBio} personNameById={id=>BY_ID[id]?.nombre} compact locale={locale}/>
+                    <EvidencePanel person={personaBio} claims={personaBio.localizedClaims||personaBio.localizeClaims?.()||personClaims(personaBio)} contextual={sourcesForPerson(personaBio.id)} personNameById={id=>BY_ID[id]?.nombre} compact locale={locale}/>
                     <p>{tr('Las fechas y relaciones incompletas se indican en la ficha. Consulta el método y la bibliografía general para interpretar los datos.','Incomplete dates and relationships are identified in the profile. Consult the methodology and general bibliography when interpreting the data.')}</p>
                     <a className="bio-full-profile-link" href={en?'/en/methodology':'/es/fuentes'}>{tr('Fuentes y metodología','Sources and methodology')} <ExternalLink size={11}/></a>
                     <button type="button" onClick={()=>setInfoProyecto('reportar')}>{tr('Sugerir una corrección documentada','Suggest a documented correction')}</button>

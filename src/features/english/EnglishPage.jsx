@@ -1,3 +1,4 @@
+import '../public/thumbnailLookup.js';
 import EnglishEntity from './EnglishEntity.jsx';
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { ArrowRight, BookOpen, Search, Users, Info } from 'lucide-react';

@@ -6,8 +6,7 @@ import {ROSES_HOUSES} from './rosesHouseTranslations.js';
 import {NEXT_HOUSES} from './nextHouseTranslations.js';
 import {REVIEWED_HOUSES} from './reviewedHouseTranslations.js';
 import runtime from '../../generated/englishV6Runtime.json' with {type:'json'};
-import {PERSONAS} from '../../data/personas.js';
-import {slugBasePersona,slugPublico} from '../../domain/people/personPresentation.js';
+import {slugPublico} from '../../domain/people/personLabels.js';
 export const TRANSLATED_DYNASTIES=[{es:"bonaparte",en:"bonaparte"},{es:'calderon',en:'calderon'},{es:'berlichingen',en:'berlichingen'},...POLISH_HOUSES.map(({es,en})=>({es,en})),...ROSES_HOUSES.map(({es,en})=>({es,en})),...NEXT_HOUSES.map(({es,en})=>({es,en})),...REVIEWED_HOUSES.map(({es,en})=>({es,en})),{es:'anjou-hungria',en:'anjou-hungary'},...runtime.dynasties.map(({es,en})=>({es,en}))].map(route=>ENGLISH_SLUGS_618.dynasties[route.es]?{...route,en:ENGLISH_SLUGS_618.dynasties[route.es].en}:route);
 // 6.0.18: entity URLs built from machine-translated names use the reviewed name (englishSlugs618.js).
 const entitySlug=(kind,route)=>ENGLISH_SLUGS_618[kind][route.es]?{...route,en:ENGLISH_SLUGS_618[kind][route.es].en}:route;
@@ -689,8 +688,8 @@ const LEGACY_TRANSLATED_PEOPLE = [
  {"id": "ALRASHIDALMOH", "es": "abd-al-wahid-al-rashid", "en": "abd-al-wahid-al-rashid"},
  {"id": "IBNHUDMURCIA", "es": "muhammad-ibn-hud", "en": "muhammad-ibn-hud"},
 ];
-const spanishCounts=PERSONAS.reduce((result,person)=>{const base=slugBasePersona(person,'es');result[base]=(result[base]||0)+1;return result;},{});
-const spanishSlugById=Object.fromEntries(PERSONAS.map(person=>{const base=slugBasePersona(person,'es');return[person.id,spanishCounts[base]>1?`${base}-${slugPublico(person.id)}`:base];}));
+// 6.3.2: computed by generate-english-v6-runtime.mjs from the people database.
+const spanishSlugById=runtime.spanishSlugs;
 const usedEnglishSlugs=new Set(LEGACY_TRANSLATED_PEOPLE.map(item=>item.en));
 const translatedPersonRoute=([id,name])=>{const base=slugPublico(name);const en=usedEnglishSlugs.has(base)?`${base}-${slugPublico(id)}`:base;usedEnglishSlugs.add(en);return{id,es:spanishSlugById[id],en};};
 const V6_TRANSLATED_PEOPLE=Object.entries(runtime.v6People).sort(([a],[b])=>a.localeCompare(b)).map(translatedPersonRoute);

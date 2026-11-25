@@ -7,7 +7,7 @@ import {fileURLToPath,pathToFileURL} from 'node:url';
 import {JSDOM} from 'jsdom';
 import {act} from 'react';
 import {build} from 'vite';
-import {person,dynasty,territory} from './fixtures/static-pages.mjs';
+import {person,dynasty,territory,portraitFor} from './fixtures/static-pages.mjs';
 import {makeStaticDocument} from '../scripts/lib/ssg-utils.mjs';
 import {STORY_PROGRESS_KEY} from '../src/features/stories/storyModel.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
@@ -173,7 +173,7 @@ test('el capítulo inglés se hidrata y conserva idioma, progreso y regreso equi
 
 test('la ficha inglesa comparte el retrato, cabecera y relaciones de la española sin presentar notas originales como traducciones',async()=>{
  const path='/en/person/isabella-i-of-castile';
- const page={schema:STATIC_SCHEMA,kind:'english',slug:'person-isabella-i-of-castile',chapter:null,path,data:{...structuredClone(person.data),chapter:null,id:'ISAB1CAST',slug:'person-isabella-i-of-castile',path,esPath:'/es/persona/isabel-i-de-castilla',type:'person',nombre:'Isabella I of Castile',role:'Queen of Castile',summary:'A translated short profile.',description:'A translated short profile.',padres:[{id:'P2',nombre:'A documented parent',slug:'persona-2'}]}};
+ const page={schema:STATIC_SCHEMA,kind:'english',slug:'person-isabella-i-of-castile',chapter:null,path,data:{...structuredClone(person.data),retrato:portraitFor('ISAB1CAST'),chapter:null,id:'ISAB1CAST',slug:'person-isabella-i-of-castile',path,esPath:'/es/persona/isabel-i-de-castilla',type:'person',nombre:'Isabella I of Castile',role:'Queen of Castile',summary:'A translated short profile.',description:'A translated short profile.',padres:[{id:'P2',nombre:'A documented parent',slug:'persona-2'}]}};
  await hydrated(page,node=>{
   assert.equal(document.documentElement.lang,'en');
   assert.ok(node.querySelector('.public-person-hero .public-portrait img'));

@@ -19,7 +19,7 @@ before(async () => {
   temp = await fs.mkdtemp(path.resolve('.ssg-build-boot-'));
   const routeModules = new Map([
     ['./App.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'SPA');}`],
-    ['../features/public/PublicSite.jsx', `import React from 'react';export function PersonPage(){return React.createElement('h1',null,'SSG');}`],
+    ['../features/public/PersonPage.jsx', `import React from 'react';export function PersonPage(){return React.createElement('h1',null,'SSG');}`],
     ['../features/public/DynastyPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'DINASTÍA');}`],
     ['../features/public/TerritoryPage.jsx', `import React from 'react';export function TerritoryPage(){return React.createElement('h1',null,'TERRITORIO');}`],
     ['../features/english/EnglishPage.jsx', `import React from 'react';export default function Page(){return React.createElement('h1',null,'ENGLISH');}`],
