@@ -226714,88 +226714,6 @@
       "scopeLabel": "Mâcon · 1477–1789"
     },
     {
-      "name": "Charolais · 1200–1750 · revisión Francia 322",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1200,
-        "through": 1750
-      },
-      "versions": [
-        {
-          "from": 1200,
-          "ids": [
-            "Charolles"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477."
-        }
-      ],
-      "note": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        },
-        {
-          "title": "William R. Shepherd · France in 1453",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
-          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
-        },
-        {
-          "title": "William R. Shepherd · Frontiers of France, 1601–1766",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_frontiers_1601_1766.jpg",
-          "locator": "Historical Atlas (1923), p. 126: adquisiciones fechadas y fronteras del reino, incluidas Alsacia, Lorena y los Países Bajos meridionales."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Charolais · 1200–1750"
-    },
-    {
-      "name": "Charolais · 1751–1789 · revisión Francia 323",
-      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
-      "color": "#86715d",
-      "coverage": {
-        "from": 1751,
-        "through": 1789
-      },
-      "versions": [
-        {
-          "from": 1751,
-          "ids": [
-            "Charolles"
-          ],
-          "oldIds": [],
-          "borderline": [],
-          "event": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477."
-        }
-      ],
-      "note": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477.",
-      "sources": [
-        {
-          "title": "William R. Shepherd · France in 1328",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1328.jpg",
-          "locator": "Historical Atlas (1923), p. 76: dominio regio, apanages y otros feudos; comparación visual de sus contornos con las celdas SVG completas."
-        },
-        {
-          "title": "William R. Shepherd · France in 1453",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_1453_shepherd.jpg",
-          "locator": "Historical Atlas (1923), p. 81: dominio regio, apanages, feudos y Calais; ruta de 1415 y extensión de las posesiones inglesas en 1428."
-        },
-        {
-          "title": "William R. Shepherd · Frontiers of France, 1601–1766",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/france_frontiers_1601_1766.jpg",
-          "locator": "Historical Atlas (1923), p. 126: adquisiciones fechadas y fronteras del reino, incluidas Alsacia, Lorena y los Países Bajos meridionales."
-        }
-      ],
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "scopeLabel": "Charolais · 1751–1789"
-    },
-    {
       "name": "Francia · 1790–1800 · revisión Francia 324",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
@@ -237470,6 +237388,12 @@
           "title": "Archives départementales du Nord · Parlement de Flandre",
           "url": "https://archivesdepartementales.lenord.fr/media/bcedcb8f-7905-4015-ac76-f8c8faa0ad4c.pdf",
           "locator": "Introducción, organización y extensión del ressort: conquistas de 1667/1678, restituciones de Ath y Courtrai, ocupación holandesa de Lille en 1708–1713 y Tournai en 1709; retorno de Lille y reducción del ressort después de Utrecht."
+        },
+        {
+          "title": "Archives départementales du Nord · Cambrai, 3 G 25–26",
+          "url": "https://archivesdepartementales.lenord.fr/media/0613e1b3-da8f-40d4-8f9f-3b20de53b535.pdf",
+          "locator": "3 G 25–26, control español desde 1595 y jurisdicción episcopal disputada.",
+          "locatorEn": "Archives 3 G 25–26: the Spanish capture of Cambrai in 1595, Philip II’s patents of 1596 and 1598, and continuing episcopal claims."
         }
       ],
       "precision": "regional_approximation",
@@ -242514,15 +242438,16 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Condado de Looz/Loon, incorporado al temporal de Lieja en 1366; título y superficie conservados, sin atribuirlo a Limburgo."
+          "event": "Condado de Looz integrado en el principado de Lieja desde 1366, con instituciones propias."
         }
       ],
-      "note": "Condado de Looz/Loon, incorporado al temporal de Lieja en 1366; título y superficie conservados, sin atribuirlo a Limburgo.",
+      "note": "Condado de Looz integrado en el principado de Lieja desde 1366, con instituciones propias.",
       "sources": [
         {
-          "title": "Service public de Wallonie · Le territoire de la Wallonie",
-          "url": "https://connaitrelawallonie.wallonie.be/sites/wallonie/files/pages/wallonie_au_fil_des_siecles.pdf",
-          "locator": "Atlas histórico: principados y provincias desde la Edad Media; Lieja, Stavelot-Malmedy y Bouillon distintos de las provincias borgoñonas, españolas y austríacas hasta finales del XVIII."
+          "title": "Archives de l’État en Belgique · La noblesse du comté de Looz",
+          "url": "https://www.arch.be/index.php?l=fr&m=nos-projets&pr=la-noblesse-du-comte-de-looz",
+          "locator": "Intégration du comté à la principauté de Liège en 1366; maintien d’une partie de son indépendance institutionnelle.",
+          "locatorEn": "The county was incorporated into the Prince-Bishopric of Liège in 1366 while retaining part of its institutional autonomy."
         }
       ],
       "precision": "regional_approximation",
@@ -256162,12 +256087,12 @@
       "scopeLabel": "Señorío de Cuijk · 1200–1472"
     },
     {
-      "name": "Señorío de Cuijk · 1473–1647 · revisión Francia 1053",
+      "name": "Señorío de Cuijk · 1473–1576 · revisión 637",
       "corridor": "Francia y Países Bajos · continuidad geográfica completa",
       "color": "#86715d",
       "coverage": {
         "from": 1473,
-        "through": 1647
+        "through": 1576
       },
       "versions": [
         {
@@ -256177,25 +256102,141 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Señorío y Land van Cuijk, distinto del ducado de Brabante; vinculación borgoñona/habsbúrgica y señoríos interiores. La incorporación a la Generalidad se fecha en 1648; no se absorbe en Brabante por el nombre de la provincia contemporánea."
+          "event": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648."
         }
       ],
-      "note": "Señorío y Land van Cuijk, distinto del ducado de Brabante; vinculación borgoñona/habsbúrgica y señoríos interiores. La incorporación a la Generalidad se fecha en 1648; no se absorbe en Brabante por el nombre de la provincia contemporánea.",
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
       "sources": [
         {
-          "title": "William R. Shepherd · The Netherlands, 1559–1609",
-          "url": "https://maps.lib.utexas.edu/maps/historical/shepherd/netherlands_1559-1608.jpg",
-          "locator": "Historical Atlas (1923), p. 117: provincias, ciudades en posesión española y frontera de 1609/1648; comparación visual, no correspondencia del topónimo con una provincia moderna."
+          "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+          "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+          "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648.",
+          "locatorEn": "RAAP report 6742, section 4.10.2, p. 90: changes of military control in 1577, 1586 and 1602; formal incorporation in 1648."
         },
         {
-          "title": "Willem Frijhoff y Marijke Spies · 1650: Bevochten eendracht",
-          "url": "https://www.dbnl.org/tekst/frij005bevo01_01/frij005bevo01_01_0003.php",
-          "locator": "Capítulo 2: Generaliteitslanden, Hulst en 1645, Brabante de los Estados, condominio de Maastricht y partición del Alto Güeldres; las jurisdicciones interiores no se sustituyen por un simple mapa de las siete provincias."
+          "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+          "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+          "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611.",
+          "locatorEn": "The lordship was pledged to William of Orange in 1559, confiscated in 1568 and granted hereditarily to Maurice in 1611."
         }
       ],
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Señorío de Cuijk · 1473–1647"
+      "scopeLabel": "Señorío de Cuijk · 1473–1576"
+    },
+    {
+      "name": "Señorío de Cuijk · 1577–1585 · revisión 637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1577,
+        "through": 1585
+      },
+      "versions": [
+        {
+          "from": 1577,
+          "ids": [
+            "Cuijk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648."
+        }
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "sources": [
+        {
+          "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+          "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+          "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648.",
+          "locatorEn": "RAAP report 6742, section 4.10.2, p. 90: changes of military control in 1577, 1586 and 1602; formal incorporation in 1648."
+        },
+        {
+          "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+          "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+          "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611.",
+          "locatorEn": "The lordship was pledged to William of Orange in 1559, confiscated in 1568 and granted hereditarily to Maurice in 1611."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1577–1585"
+    },
+    {
+      "name": "Señorío de Cuijk · 1586–1601 · revisión 637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1586,
+        "through": 1601
+      },
+      "versions": [
+        {
+          "from": 1586,
+          "ids": [
+            "Cuijk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648."
+        }
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "sources": [
+        {
+          "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+          "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+          "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648.",
+          "locatorEn": "RAAP report 6742, section 4.10.2, p. 90: changes of military control in 1577, 1586 and 1602; formal incorporation in 1648."
+        },
+        {
+          "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+          "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+          "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611.",
+          "locatorEn": "The lordship was pledged to William of Orange in 1559, confiscated in 1568 and granted hereditarily to Maurice in 1611."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1586–1601"
+    },
+    {
+      "name": "Señorío de Cuijk · 1602–1647 · revisión 637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1602,
+        "through": 1647
+      },
+      "versions": [
+        {
+          "from": 1602,
+          "ids": [
+            "Cuijk"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648."
+        }
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "sources": [
+        {
+          "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+          "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+          "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648.",
+          "locatorEn": "RAAP report 6742, section 4.10.2, p. 90: changes of military control in 1577, 1586 and 1602; formal incorporation in 1648."
+        },
+        {
+          "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+          "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+          "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611.",
+          "locatorEn": "The lordship was pledged to William of Orange in 1559, confiscated in 1568 and granted hereditarily to Maurice in 1611."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1602–1647"
     },
     {
       "name": "Aquitania · 1200–1450 · revisión Francia 1054",
@@ -257978,6 +258019,386 @@
       "precision": "regional_approximation",
       "limitedCore": false,
       "scopeLabel": "Chartres · 1432–1789"
+    },
+    {
+      "name": "Charolais · 1200–1389 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1200,
+        "through": 1389
+      },
+      "versions": [
+        {
+          "from": 1200,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de Charolais, feudo del reino de Francia."
+        }
+      ],
+      "note": "Condado de Charolais, feudo del reino de Francia.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1200–1389"
+    },
+    {
+      "name": "Charolais · 1390–1476 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1390,
+        "through": 1476
+      },
+      "versions": [
+        {
+          "from": 1390,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Charolais pertenece a los duques de Borgoña desde la adquisición de 1390."
+        }
+      ],
+      "note": "Charolais pertenece a los duques de Borgoña desde la adquisición de 1390.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1390–1476"
+    },
+    {
+      "name": "Charolais · 1477–1492 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1477,
+        "through": 1492
+      },
+      "versions": [
+        {
+          "from": 1477,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Luis XI confisca Charolais en 1477; el tratado de Senlis lo devuelve a los Habsburgo en 1493."
+        }
+      ],
+      "note": "Luis XI confisca Charolais en 1477; el tratado de Senlis lo devuelve a los Habsburgo en 1493.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1477–1492"
+    },
+    {
+      "name": "Charolais · 1493–1597 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1493,
+        "through": 1597
+      },
+      "versions": [
+        {
+          "from": 1493,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Posesión habsbúrgica devuelta por el tratado de Senlis de 1493, vinculada a la herencia borgoñona; la superioridad francesa y las confiscaciones de guerra afectan a su jurisdicción."
+        }
+      ],
+      "note": "Posesión habsbúrgica devuelta por el tratado de Senlis de 1493, vinculada a la herencia borgoñona; la superioridad francesa y las confiscaciones de guerra afectan a su jurisdicción.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1493–1597"
+    },
+    {
+      "name": "Charolais · 1598–1633 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1598,
+        "through": 1633
+      },
+      "versions": [
+        {
+          "from": 1598,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Felipe II cede Charolais a Isabel Clara Eugenia en 1598. Lo conserva hasta su muerte en 1633, cuando vuelve a Felipe IV."
+        }
+      ],
+      "note": "Felipe II cede Charolais a Isabel Clara Eugenia en 1598. Lo conserva hasta su muerte en 1633, cuando vuelve a Felipe IV.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1598–1633"
+    },
+    {
+      "name": "Charolais · 1634–1673 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1634,
+        "through": 1673
+      },
+      "versions": [
+        {
+          "from": 1634,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado de la Monarquía Hispánica bajo superioridad francesa, sujeto a confiscaciones durante las guerras entre ambas coronas."
+        }
+      ],
+      "note": "Condado de la Monarquía Hispánica bajo superioridad francesa, sujeto a confiscaciones durante las guerras entre ambas coronas.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1634–1673"
+    },
+    {
+      "name": "Charolais · 1674–1678 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1674,
+        "through": 1678
+      },
+      "versions": [
+        {
+          "from": 1674,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Confiscación francesa durante la guerra de Holanda; restitución a la Corona española en 1679."
+        }
+      ],
+      "note": "Confiscación francesa durante la guerra de Holanda; restitución a la Corona española en 1679.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1674–1678"
+    },
+    {
+      "name": "Charolais · 1679–1683 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1679,
+        "through": 1683
+      },
+      "versions": [
+        {
+          "from": 1679,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Charolais vuelve a la Corona española tras la paz de Nimega y permanece en su patrimonio hasta la adjudicación de 1684."
+        }
+      ],
+      "note": "Charolais vuelve a la Corona española tras la paz de Nimega y permanece en su patrimonio hasta la adjudicación de 1684.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1679–1683"
+    },
+    {
+      "name": "Charolais · 1684–1760 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1684,
+        "through": 1760
+      },
+      "versions": [
+        {
+          "from": 1684,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Condado adjudicado a los Borbón-Condé en 1684 como compensación por una deuda española."
+        }
+      ],
+      "note": "Condado adjudicado a los Borbón-Condé en 1684 como compensación por una deuda española.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1684–1760"
+    },
+    {
+      "name": "Charolais · 1761–1789 · revisión637",
+      "corridor": "Francia y Países Bajos · continuidad geográfica completa",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1761,
+        "through": 1789
+      },
+      "versions": [
+        {
+          "from": 1761,
+          "ids": [
+            "Charolles"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Luis XV incorpora Charolais al dominio real por la permuta de 1761."
+        }
+      ],
+      "note": "Luis XV incorpora Charolais al dominio real por la permuta de 1761.",
+      "sources": [
+        {
+          "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+          "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+          "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+          "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+        },
+        {
+          "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+          "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+          "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+          "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Charolais · 1761–1789"
     },
     {
       "name": "Sicilia · 1198–1199 · atlas medieval 1",
@@ -327603,15 +328024,16 @@
           ],
           "oldIds": [],
           "borderline": [],
-          "event": "Autonomía creciente del consejo bajo señorío arzobispal."
+          "event": "Ciudad de Colonia bajo señorío temporal del arzobispo hasta Worringen (1288), con autonomía municipal creciente."
         }
       ],
-      "note": "Autonomía creciente del consejo bajo señorío arzobispal.",
+      "note": "Ciudad de Colonia bajo señorío temporal del arzobispo hasta Worringen (1288), con autonomía municipal creciente.",
       "sources": [
         {
           "title": "LVR · Kurfürstentum Köln",
           "url": "https://rheinische-geschichte.lvr.de/Orte-und-Raeume/kurfuerstentum-koeln-/DE-2086/lido/57d118e0651e25.73195779",
-          "locator": "Arzobispado territorial y posesiones de Westfalia; autonomía efectiva de la ciudad de Colonia desde 1288 y carta imperial de 1475. Vest Recklinghausen y ducado de Westfalia permanecen separados de los ducados vecinos."
+          "locator": "Worringen, 1288: pérdida del gobierno urbano del arzobispo; reconocimiento formal de la ciudad imperial en 1475.",
+          "locatorEn": "Worringen, 1288: the archbishop lost control of the city; formal recognition as an imperial city followed in 1475."
         }
       ],
       "precision": "regional_approximation",
@@ -374017,8 +374439,6 @@
       "Francia · 1790–1800 · revisión Francia 319",
       "Mâcon · 1435–1476 · revisión Francia 320",
       "Mâcon · 1477–1789 · revisión Francia 321",
-      "Charolais · 1200–1750 · revisión Francia 322",
-      "Charolais · 1751–1789 · revisión Francia 323",
       "Francia · 1790–1800 · revisión Francia 324",
       "Condado de Borgoña · 1200–1476 · revisión Francia 325",
       "Condado de Borgoña · 1477–1492 · revisión Francia 326",
@@ -374748,7 +375168,10 @@
       "Génova · 1221–1352 · revisión Francia 1050",
       "Francia · 1200–1800 · revisión Francia 1051",
       "Señorío de Cuijk · 1200–1472 · revisión Francia 1052",
-      "Señorío de Cuijk · 1473–1647 · revisión Francia 1053",
+      "Señorío de Cuijk · 1473–1576 · revisión 637",
+      "Señorío de Cuijk · 1577–1585 · revisión 637",
+      "Señorío de Cuijk · 1586–1601 · revisión 637",
+      "Señorío de Cuijk · 1602–1647 · revisión 637",
       "Aquitania · 1200–1450 · revisión Francia 1054",
       "Aquitania · 1451–1451 · revisión Francia 1055",
       "Aquitania · 1452–1452 · revisión Francia 1056",
@@ -374794,7 +375217,17 @@
       "Francia · 1449–1800 · revisión Francia 1096",
       "Chartres · 1420–1431 · revisión Francia 1097",
       "Chartres · 1286–1419 · revisión Francia 1098",
-      "Chartres · 1432–1789 · revisión Francia 1099"
+      "Chartres · 1432–1789 · revisión Francia 1099",
+      "Charolais · 1200–1389 · revisión637",
+      "Charolais · 1390–1476 · revisión637",
+      "Charolais · 1477–1492 · revisión637",
+      "Charolais · 1493–1597 · revisión637",
+      "Charolais · 1598–1633 · revisión637",
+      "Charolais · 1634–1673 · revisión637",
+      "Charolais · 1674–1678 · revisión637",
+      "Charolais · 1679–1683 · revisión637",
+      "Charolais · 1684–1760 · revisión637",
+      "Charolais · 1761–1789 · revisión637"
     ],
     "limitations": [
       "Las superficies proceden de celdas SVG completas, contrastadas con mapas históricos. Sus bordes no reproducen todos los enclaves, derechos señoriales ni fronteras de cada año; la precisión es regional, no catastral.",

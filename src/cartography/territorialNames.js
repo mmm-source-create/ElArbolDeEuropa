@@ -5,6 +5,7 @@
 
 // A survey label, an owner and a control episode are not territorial identity.
 export const EDITORIAL_ALIASES = Object.freeze({
+  'Condado de Charolais':'Charolais',
   // 6.3.4: fichas duplicadas fusionadas; la capa del mapa conserva su nombre.
   "Principado de Beloózero": "Beloózero",
   "Principado de Pólotsk": "Pólotsk",

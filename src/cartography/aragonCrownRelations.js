@@ -80,7 +80,7 @@ export function aragonCrownRelation(name,year) {
 const EXCLUDED_CONDITIONS=['rival','ocupación','disputado','regencia','gobierno delegado'];
 export function aragonCrownEntries(person,year,data,ownEntries=[]) {
  if(!data)return [];
- const ruled=new Set(gobiernosDe(person).filter(g=>gobiernoEfectivo(g)&&g.desde<=year&&year<=g.hasta&&!g.ambito&&!EXCLUDED_CONDITIONS.includes(g.condicion)).map(g=>g.territorio));
+ const ruled=new Set(gobiernosDe(person).filter(g=>gobiernoEfectivo(g,year)&&g.desde<=year&&year<=g.hasta&&!g.ambito&&!EXCLUDED_CONDITIONS.includes(g.condicion)).map(g=>g.territorio));
  if(!['Aragón','Trinacria','Mallorca'].some(t=>ruled.has(t)))return [];
  const owned=new Set(ownEntries.filter(e=>e.paint).flatMap(e=>e.ids));
  const entries=new Map();

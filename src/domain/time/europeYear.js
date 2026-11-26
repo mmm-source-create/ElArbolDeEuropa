@@ -8,7 +8,7 @@ export function vidaEnAnio(p,anio) {
  if(!Number.isInteger(anio))return null;
  const [nMin,nMax]=documentaryBounds(p,'nac'),[mMin,mMax]=documentaryBounds(p,'muer');
  if(anio<nMin||anio>mMax)return null;
- const activo=gobiernosDe(p).some(g=>mandatoEn(g,anio)&&gobiernoEfectivo(g));
+ const activo=gobiernosDe(p).some(g=>mandatoEn(g,anio)&&gobiernoEfectivo(g,anio));
  if(Number.isFinite(nMax)&&Number.isFinite(mMin)&&anio>=nMax&&anio<=mMin) {
   const aprox=['nac','muer'].some(c=>p[`${c}Aprox`]||documentaryDate(p,c)?.tipo==='aproximada');
   return aprox?'Fechas aproximadas':'Vida registrada';
@@ -28,8 +28,8 @@ export function europaEnAnio({personas,anio,eventos=[],crisis=[],uniones=[],terr
  const mandatos=personas.flatMap(p=>gobiernosDe(p).filter(g=>territorioIncluido(g.territorio)&&mandatoEn(g,anio)).map(g=>({...g,persona:p})));
  const vinculado=x=>alcanceCompleto||(x.personas||[]).some(id=>ids.has(id))||(x.territorios||[]).some(t=>territorios.has(t));
  return {
-  gobiernos:mandatos.filter(gobiernoEfectivo).sort((a,b)=>a.territorio.localeCompare(b.territorio,'es')||a.desde-b.desde||a.persona.nombre.localeCompare(b.persona.nombre,'es')),
-  nominales:mandatos.filter(g=>!gobiernoEfectivo(g)),
+  gobiernos:mandatos.filter(g=>gobiernoEfectivo(g,anio)).sort((a,b)=>a.territorio.localeCompare(b.territorio,'es')||a.desde-b.desde||a.persona.nombre.localeCompare(b.persona.nombre,'es')),
+  nominales:mandatos.filter(g=>!gobiernoEfectivo(g,anio)),
   vivas:personas.flatMap(persona=>{const estado=vidaEnAnio(persona,anio);return estado?[{persona,estado}]:[];}).sort((a,b)=>a.persona.nombre.localeCompare(b.persona.nombre,'es')),
   eventos:eventos.filter(e=>{const desde=e.desde??e.anio,hasta=e.hasta??desde;return mandatoEn({desde,hasta},anio)&&vinculado(e);}),
   crisis:crisis.filter(c=>intervaloEn(c,anio)&&(alcanceCompleto||c.candidatos.some(x=>ids.has(x.persona))||c.territorios.some(t=>territorios.has(t)))),

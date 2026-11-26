@@ -31,7 +31,8 @@ test('the reviewed 100 are distinct complete editions with preserved records and
   if(source.biografia!==source.resumen)assert(COMPLETE_ENGLISH_PROFILES[review.id].biography,review.id+' needs a separate full biography');
  }
  // 6.1.2: Saladin's full biography adds three sections.
- assert.equal(sections,48);
+ // 6.3.7: Henry III gains three bilingual chapters.
+ assert.equal(sections,51);
 });
 
 test('all seven houses retain their memberships, governments, branches, related houses and sources',async()=>{

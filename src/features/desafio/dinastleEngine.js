@@ -23,7 +23,7 @@ export function dinastleDay(date=new Date()) {
 }
 export const dayNumber=day=>Math.floor((Date.parse(day+'T12:00:00Z')-Date.parse(DINASTLE_EPOCH+'T12:00:00Z'))/86400000)+1;
 function dinastleRoles(person) {
- const active=gobiernosDe(person).filter(gobiernoEfectivo);
+ const active=gobiernosDe(person).filter(g=>gobiernoEfectivo(g));
  const roles=[];
  for(const g of active) {
   if(/regencia|regente/i.test(g.condicion+' '+g.titulo))roles.push('Regencia');
@@ -56,7 +56,7 @@ export function buildDinastleModel(people,stories=[],events=[]) {
  for(const s of stories)for(const step of s.pasos||[])linkGroup([step.persona,...(step.personas||[])]);
  const names=new Map();for(const p of people){const slug=slugBasePersona(p);names.set(slug,(names.get(slug)||0)+1);}
  const entries=people.map(person=>({person,id:person.id,house:GENERIC_HOUSES.has(person.dinastia)?null:canonicalDynasty(person.dinastia),
-  territories:unique([...territoriosDe(person),...gobiernosDe(person).filter(gobiernoEfectivo).map(g=>g.territorio)]),roles:dinastleRoles(person),
+  territories:unique([...territoriosDe(person),...gobiernosDe(person).filter(g=>gobiernoEfectivo(g)).map(g=>g.territorio)]),roles:dinastleRoles(person),
   year:Number.isInteger(person.nac)?person.nac:null,approximate:!!person.nacAprox,
   href:'/es/persona/'+slugBasePersona(person)+(names.get(slugBasePersona(person))>1?'-'+slugPublico(person.id):'')}));
  const eligible=entries.filter(e=>editorial.has(e.id)&&e.year!==null&&e.house&&e.roles.length&&e.territories.length).sort((a,b)=>a.id.localeCompare(b.id));

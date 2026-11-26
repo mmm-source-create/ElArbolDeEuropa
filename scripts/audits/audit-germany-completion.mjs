@@ -68,9 +68,20 @@ export function auditGermanyCompletion(data, review, geography, baseline, later=
   if(later && (later.schema!==1 || JSON.stringify([...later.ids].sort())!==JSON.stringify(laterIds)))
     throw Error('Later review exclusions do not match the scope of the later reviews');
   const before = validateGermanyCompletion(review,geography,baseline);
-  for(const c of preservationCorrections)if(before.has(c.locationId)||!c.reason||!c.source?.startsWith('https://')
+  for(const c of preservationCorrections)if(!c.reason||!c.source?.startsWith('https://')
     ||!Number.isInteger(c.from)||!Number.isInteger(c.through)||c.from<1200||c.through>1800||c.from>c.through
     ||!c.previous?.length||!c.expected?.length)throw Error('Invalid later preservation correction');
+  // A sourced revision may also correct a retained German attribution, but
+  // never fill a baseline gap or alter the baseline it claims to replace.
+  for(const c of preservationCorrections.filter(c=>before.has(c.locationId))){
+    const cell=before.get(c.locationId);
+    if(c.scope!=='retained')throw Error('Retained correction needs explicit scope');
+    for(let year=c.from;year<=c.through;year++){
+      if(cell.gaps.some(g=>g.from<=year&&year<=g.through)
+        ||JSON.stringify([...cell.changes.findLast(x=>x.from<=year).identities].sort())!==JSON.stringify([...c.previous].sort()))
+        throw Error('Retained correction does not match the independent baseline');
+    }
+  }
   const palette = atlasMosaicPalette(data);
   const report = {scope:review.scope,baselineCommit:baseline.commit,
     summary:{cells:before.size,years:601,cellYears:before.size*601,filledCellYears:0,
@@ -92,7 +103,8 @@ export function auditGermanyCompletion(data, review, geography, baseline, later=
           report.summary.missingLocalEvidence++;fail('local evidence',id,year);
         }
       } else {
-        const expected = cell.changes.findLast(change=>change.from<=year).identities;
+        const correction=preservationCorrections.find(c=>c.locationId===id&&c.from<=year&&year<=c.through);
+        const expected = correction?.expected||cell.changes.findLast(change=>change.from<=year).identities;
         if(JSON.stringify(layers.map(layer=>layer.entityId).sort())!==JSON.stringify(expected)) {
           report.summary.changedRetainedCellYears++;fail('retained attribution changed',id,year);
         }

@@ -106,7 +106,7 @@ function calcularEstadisticas(personas) {
   }, {})).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "es"));
   const dinastias = contar(lista.map((persona) => persona.dinastia));
   const territorios = contar(lista.flatMap((persona) => territoriosDe(persona)));
-  const gobernantes = lista.filter((persona) => listaReinados(persona).some(reinadoEsEfectivo)).length;
+  const gobernantes = lista.filter((persona) => listaReinados(persona).some(r=>reinadoEsEfectivo(r))).length;
   const reinados = lista.flatMap((persona) => listaReinados(persona)
     .filter((reinado) => reinadoEsEfectivo(reinado) && Number.isFinite(reinado.desde) && Number.isFinite(reinado.hasta))
     .map((reinado) => ({ persona, reinado, duracion: reinado.hasta - reinado.desde })));

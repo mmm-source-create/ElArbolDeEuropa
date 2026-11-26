@@ -13,13 +13,15 @@ const usedTerritories = new Set(PERSONAS.flatMap(persona => (persona.gobiernos |
   .filter(gobiernoEfectivo).map(gobierno => gobierno.territorio)));
 const mappedTerritories = new Set();
 const missing = new Map();
+// Geometry changes are common to all mandates; collect them once.
+const geometryChangeYears=[...new Set([...mapData.territories,...mapData.additionalTerritories]
+  .flatMap(layer=>[layer,...(layer.temporalExtensions||[])].flatMap(entry=>entry.versions.map(v=>v.from))))];
 for (const person of PERSONAS) for (const g of person.gobiernos || []) {
   if (!gobiernoEfectivo(g)) continue;
   const start = Math.max(g.desde, mapData.from), end = Math.min(g.hasta, mapData.through);
   if (start > end) continue;
   // Probe all geometry change dates within each mandate, as well as its start.
-  const years = new Set([start, end, ...[...mapData.territories, ...mapData.additionalTerritories]
-    .flatMap(layer => [layer,...(layer.temporalExtensions || [])].flatMap(entry => entry.versions.map(v => v.from))).filter(y => y >= start && y <= end),
+  const years = new Set([start, end, ...geometryChangeYears.filter(y => y >= start && y <= end),
     ...mapData.overrides.flatMap(o => [o.from, o.through + 1]).filter(y => y >= start && y <= end)]);
   for (const year of years) for (const entry of mapAuthoritiesForPerson(person, year, mapData)) {
     if (entry.ids.some(id => pathIds.has(id))) mappedTerritories.add(entry.territory);

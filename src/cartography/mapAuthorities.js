@@ -39,7 +39,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
   const entries = [];
   for (const government of gobiernosDe(person)) {
     if (government.desde > year || government.hasta < year) continue;
-    const effective = gobiernoEfectivo(government);
+    const effective = gobiernoEfectivo(government,year);
     if (!effective && !includeClaims) continue;
     const legacyIds = idsDeGobiernoEnAño(government, year, person.id);
     let ids = mapData
@@ -120,7 +120,7 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
       color: disputed.color, ids: disputed.ids});
   }
   // The Swedish military occupation precedes its legally distinct 1648 fief.
-  if (gobiernosDe(person).some(g => g.territorio === 'Suecia' && gobiernoEfectivo(g)
+  if (gobiernosDe(person).some(g => g.territorio === 'Suecia' && gobiernoEfectivo(g,year)
       && g.desde <= year && year <= g.hasta) && year >= 1630 && year <= 1647) {
     const occupation = pilotLocationsFor(mapData, 'Pomerania', year).filter(id =>
       pilotLocationsFor(mapData, 'Suecia', year).includes(id));

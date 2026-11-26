@@ -1,3 +1,5 @@
+import {DANISH_DEPENDENCIES_637} from './danishDependencies637.js';
+import {MONGOL_DEPENDENCIES_637} from './mongolDependencies637.js';
 import {LOUIS_HUNGARY_DEPENDENCIES} from './louisHungaryDependencies.js';
 import {ANGEVIN_DEPENDENCIES} from './angevinDependencies.js';
 import {EASTERN_EUROPE_DEPENDENCIES} from './easternEuropeDependencies.js';
@@ -6,7 +8,7 @@ import {EASTERN_EUROPE_DEPENDENCIES} from './easternEuropeDependencies.js';
 import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 import {gobiernoEfectivo} from '../data/territorios.js';
 import {territorialIdentity, territorialLabel} from './territorialIdentity.js';
-import {reviewedMapLayers, reviewedLayerLocations, reviewedLayerEvidence} from './locationMapPilot.js';
+import {reviewedMapLayers, reviewedLayerLocations, reviewedLayerEvidence,reviewedLayerActive} from './locationMapPilot.js';
 import {tributaryColor} from './mapColors.js';
 
 const source = (title, url, locator) => ({title, url, locator});
@@ -50,6 +52,8 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
     note:'Los Ludovisi tienen el principado en feudo de la Corona española desde 1634, con presidio español. La ocupación francesa (1646–1650) interrumpe la relación; la trama termina con la muerte de Carlos II, sin decidir la guerra de Sucesión.'},
   ...LOUIS_HUNGARY_DEPENDENCIES,
   ...EASTERN_EUROPE_DEPENDENCIES,
+  ...MONGOL_DEPENDENCIES_637,
+  ...DANISH_DEPENDENCIES_637,
   ...ANGEVIN_DEPENDENCIES,
   {id: 'ragusa-ottoman', subject: 'República de Ragusa', overlord: 'Imperio otomano',
     periods: [[1458, 1683], [1695, 1800]], sources: [sources.ragusa],
@@ -136,7 +140,7 @@ export function subjectRulers(relation, year, people) {
   if (!relation || !Number.isInteger(year) || !people) return [];
   const subject = territorialIdentity(relation.subject);
   return people.filter(person => gobiernosDe(person).some(g => territorialIdentity(g.territorio) === subject && g.desde <= year && year <= g.hasta
-    && gobiernoEfectivo(g) && !['regencia', 'gobierno delegado', 'titular', 'pretensión'].includes(g.condicion) && !g.ambito));
+    && gobiernoEfectivo(g,year) && !['regencia', 'gobierno delegado', 'titular', 'pretensión'].includes(g.condicion) && !g.ambito));
 }
 
 export function tributaryEntriesFor(person, year, data, ownEntries = [], relations = TRIBUTARY_RELATIONS) {
@@ -147,7 +151,7 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
     if (!period) return [];
     const offices = relation.overlordOffices || [{territory:relation.overlord}];
     const office = gobiernosDe(person).find(g => offices.some(o => o.territory === g.territorio && (!o.people || o.people.includes(person.id)))
-      && gobiernoEfectivo(g) && g.desde <= year && year <= g.hasta
+      && gobiernoEfectivo(g,year) && g.desde <= year && year <= g.hasta
       && !['regencia', 'gobierno delegado', 'rival', 'disputado', 'ocupación'].includes(g.condicion)
       && !g.ambito && (relation.overlord !== 'Imperio otomano' || g.titulo === 'Sultán'));
     if (!office) return [];
@@ -163,4 +167,18 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
       mapSources: relation.sources, mapNote: relation.note,
       mapScopes: layers.map(layer => ({ids: reviewedLayerLocations(data, layer, year).filter(id=>relationCoversLocation(relation,id)), ...reviewedLayerEvidence(layer, year)}))}];
   });
+}
+
+// Only candidate dependency layers need an annual institutional-overlord row.
+const dependencyLayers=new WeakMap();
+export function dependencyLayersAt(data,year){
+ if(!data)return [];
+ if(!dependencyLayers.has(data))dependencyLayers.set(data,reviewedMapLayers(data).flatMap(layer=>{
+  const identity=territorialIdentity(layer.name),relations=TRIBUTARY_RELATIONS.filter(r=>coversSubject(r,identity));
+  return relations.length?[{layer,relations}]:[];
+ }));
+ return dependencyLayers.get(data).flatMap(({layer,relations})=>{
+  const active=relations.flatMap(r=>{const period=r.periods.find(([a,b])=>a<=year&&year<=b);return period?[{...r,from:period[0],through:period[1]}]:[];});
+  return active.length&&reviewedLayerActive(data,layer,year)?[{layer,relations:active}]:[];
+ });
 }

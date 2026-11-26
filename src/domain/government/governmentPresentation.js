@@ -1,3 +1,4 @@
+import {SEPARATE_EXTERIOR_POLICIES} from '../../cartography/foreignPolicyExceptions.js';
 import {isRepublicanOffice} from '../filters/atlasFilters.js';
 import {mandateIdentity,identityLabel} from '../../cartography/territorialNames.js';
 import {ORANGE_NASSAU} from '../../cartography/mapColors.js';
@@ -23,7 +24,7 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  if (!person || !Number.isInteger(year)) return [];
  const cacheKey=`${view}:${year}`;
  if(cache.get(person)?.has(cacheKey))return cache.get(person).get(cacheKey);
- const active=gobiernosDe(person).filter(m=>gobiernoEfectivo(m)&&m.desde<=year&&year<=m.hasta);
+ const active=gobiernosDe(person).filter(m=>gobiernoEfectivo(m,year)&&m.desde<=year&&year<=m.hasta);
  if(!active.length)return [];
  const groups = agrupacionesPoliticasEnMapa(person,year,{view}), result = new Map();
  for (const mandate of active) {
@@ -50,12 +51,14 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
  if(view==='panorama'){
   const sovereign=[...result.values()].filter(g=>g.kind==='sovereign'&&!['sacro-imperio','provincias-unidas'].includes(g.id)
    &&!g.mandates.every(m=>m.condicion==='jure uxoris'));
-  if(sovereign.length>1){
+  if(sovereign.length>1&&!SEPARATE_EXTERIOR_POLICIES[person.id]){
    const first=g=>Math.min(...g.mandates.map(m=>m.desde));
    // 6.0.14: the Austrian Habsburg monarchy ranks just above a kingdom, so Ferdinand I
    // keeps its red when he gains Bohemia and Hungary (1526).
    const rank=g=>AUSTRIAN_MONARCHY.has(g.id)?RANK.reinado+.5:Math.max(...g.mandates.map(m=>RANK[m.clase]||1));
-   const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
+   // England remains the colour anchor under the Protectorate too, whose offices are not royal titles.
+   const british=sovereign.find(g=>g.mandates.some(m=>m.territorio==='Gran Bretaña'))||sovereign.find(g=>g.mandates.some(m=>m.territorio==='Inglaterra'));
+   const primary=british||[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
    for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
   }
   // 6.3.4: a military occupation is painted in the occupier's colour (as the
@@ -83,7 +86,7 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
    if(group.kind!=='sovereign'||group.mandates.every(m=>m.condicion==='jure uxoris'))continue;
    const own=group.mandates.filter(m=>m.condicion!=='jure uxoris');
    const parentGroup=continuing.find(g=>own.every(m=>g.miembros?.has(m.territorio)
-    &&gobiernosDe(parent).some(pm=>pm.territorio===m.territorio&&gobiernoEfectivo(pm)&&pm.desde<=year&&pm.hasta>=year-1)));
+    &&gobiernosDe(parent).some(pm=>pm.territorio===m.territorio&&gobiernoEfectivo(pm,year)&&pm.desde<=year&&pm.hasta>=year-1)));
    if(!parentGroup)continue;
    const parentColor=governmentGroupsAt(parent,year,{view:'panorama'}).find(g=>g.id===parentGroup.id)?.color||parentGroup.color;
    group.color=parentColor;group.sharedSovereign=parentGroup.id;group.inheritedFrom=parent.id;
@@ -114,7 +117,7 @@ export function groupedGovernmentIntervals(person) {
  const changes=[1230,1516,1526,1541,1549,1569,1588,1619,1707,1715,1716,1749,1765].filter(y=>from<y&&y<=through);
  // A dated disputed-control interval changes the kind of authority too.
  const disputes=mandates.flatMap(g=>intervalosDisputadosDe(g).flatMap(period=>[period.desde,period.hasta+1]));
- const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...disputes,...changes])].sort((a,b)=>a-b), result=[];
+ const cuts=[...new Set([...mandates.flatMap(g=>[g.desde,g.hasta+1]),...mandates.flatMap(g=>g.ejercicioHasta?[g.ejercicioHasta+1]:[]),...disputes,...changes])].sort((a,b)=>a-b), result=[];
  for(let i=0;i<cuts.length-1;i++) for(const group of governmentGroupsAt(person,cuts[i])) {
   const previous=result.findLast(g=>g.key===group.key&&g.label===group.label&&g.color===group.color&&g.through===cuts[i]-1);
   if(previous) previous.through=cuts[i+1]-1;

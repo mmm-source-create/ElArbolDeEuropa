@@ -34,6 +34,8 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 ## Resultados de revisión
 
+- [6.3.7: revisión del mapa caso por caso, español e inglés](reviews/6.3.7-map-review.md).
+
 - [6.3.6: inventario de familias y fechas](audits/6.3.6-family-gaps.es.md) · [English](audits/6.3.6-family-gaps.en.md).
 
 - [6.0.20: 147 afirmaciones documentadas y casos pendientes](reports/6.0.20-documentacion.md).

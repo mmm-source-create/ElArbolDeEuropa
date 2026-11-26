@@ -1689,4 +1689,4 @@ export function componentesDe(nombre, vistos = new Set()) {
  if(vistos.has(nombre)) return []; vistos.add(nombre);
  return [...new Set((TERRITORIOS[nombre]?.componentes || []).flatMap(n => [n,...componentesDe(n,vistos)]))];
 }
-export function gobiernoEfectivo(g) { return g.efectivo !== false && !["pretensión","titular","rival","disputado"].includes(g.condicion); }
+export function gobiernoEfectivo(g, year = null) { return g.efectivo !== false && !["pretensión","titular","rival","disputado"].includes(g.condicion) && (!Number.isInteger(year) || !Number.isInteger(g.ejercicioHasta) || year <= g.ejercicioHasta); }

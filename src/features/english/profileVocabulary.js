@@ -1,3 +1,4 @@
+import {NOTES_637} from './notes637.js';
 import {LABELS_636,NOTES_636} from './vocabulary636.js';
 import {LABELS_622,NOTES_622} from './vocabulary622.js';
 import {LABELS_630,NOTES_630} from './vocabulary630.js';
@@ -25,6 +26,8 @@ import runtime from '../../generated/englishVocabularyRuntime.json' with {type:'
 import {CLAIM_TEXTS_621} from './claimTexts621.js';
 // Display translations only: canonical dynasty and territory keys stay intact.
 export const PROFILE_LABELS = {
+ 'Tirol y Austria Anterior':'Tyrol and the Austrian Forelands',
+ 'Horda de Oro':'Golden Horde','Condado de Charolais':'County of Charolais',
  ...LABELS_622,
  ...LABELS_636,
  ...LABELS_630,
@@ -95,6 +98,7 @@ export const ENGLISH_NAMES = {
 export const PROFILE_NOTES = {
  ...NOTES_622,
  ...NOTES_636,
+ ...NOTES_637,
  ...NOTES_630,
  ...NOTES_634,
   ...runtime.notes,

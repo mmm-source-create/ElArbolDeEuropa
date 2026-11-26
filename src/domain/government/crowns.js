@@ -6,13 +6,13 @@ export const claveMandato = g => `${g.territorio}|${g.desde}|${g.clase}`;
 
 export function coronasEn(persona, anio) {
  const activos=gobiernosDe(persona).filter(g=>mandatoEn(g,anio));
- return {efectivos:activos.filter(gobiernoEfectivo),nominales:activos.filter(g=>!gobiernoEfectivo(g))};
+ return {efectivos:activos.filter(g=>gobiernoEfectivo(g,anio)),nominales:activos.filter(g=>!gobiernoEfectivo(g,anio))};
 }
 
 // Cambios por año. Un inicio y un final dentro del mismo año no prueban simultaneidad diaria.
 export function etapasCoronas(persona) {
  const gobiernos=gobiernosDe(persona).filter(g=>Number.isInteger(g.desde)&&Number.isInteger(g.hasta)&&g.desde<=g.hasta);
- const cortes=[...new Set(gobiernos.flatMap(g=>[g.desde,g.hasta+1]))].sort((a,b)=>a-b);
+ const cortes=[...new Set(gobiernos.flatMap(g=>[g.desde,g.hasta+1,...(g.ejercicioHasta?[g.ejercicioHasta+1]:[])]))].sort((a,b)=>a-b);
  return cortes.slice(0,-1).map((desde,i)=>({desde,hasta:cortes[i+1]-1,...coronasEn({gobiernos},desde)})).filter(e=>e.efectivos.length||e.nominales.length);
 }
 export function accesosDe(persona, accesos=[], relevos=[]) {

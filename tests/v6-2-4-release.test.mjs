@@ -45,7 +45,7 @@ test('tributaries take dots and fiefs lines, as the common-map legend now says',
   const map = read('src/features/atlas/MapaEuropa.jsx');
   assert.doesNotMatch(map, /El rayado claro indica/);
   assert.doesNotMatch(map, /tributarios otomanos como Valaquia, Moldavia o Transilvania y feudos/);
-  assert.match(map, /Los puntos marcan Estados tributarios/);
+  assert.match(map, /Los puntos indican Estados tributarios/);
   assert.match(map, /mapa-key-several/);
   assert.match(read('src/styles/app.css'), /\.mapa-key-disputed \{ background: repeating-linear-gradient\(45deg[^}]*-45deg/);
 });

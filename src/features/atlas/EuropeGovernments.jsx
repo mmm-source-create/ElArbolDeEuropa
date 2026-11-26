@@ -11,6 +11,7 @@ import {translatedEquivalent} from '../english/routes.js';
 const {personRegion}=regionResolver(componentesDe);
 // Entities of the government table that are not components of a mapped root.
 const ENTITY_REGION={
+ 'Charolais':1,'Principado episcopal de Cambrai':1,'Austria Anterior':3,'Tirol y Austria Anterior':3,
  'Monarquía Hispánica':0,'Monarquía de los Habsburgo austríacos':3,'Dinamarca-Noruega':5,'Monarquía danesa':5,
  'Anhalt-Dessau':3,'Anhalt-Zerbst':3,'Sajonia-Lauenburgo':3,'Schleswig':5,
  'Urgel':0,'Castellbó':0,'Gandía':0,'Brasil':0,

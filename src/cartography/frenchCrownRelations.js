@@ -76,7 +76,7 @@ export function frenchCrownRelation(name,year) {
 }
 
 export function frenchCrownEntries(person,year,data,ownEntries=[]) {
- const office=gobiernosDe(person).find(g=>g.territorio==='Francia'&&gobiernoEfectivo(g)&&g.desde<=year&&year<=g.hasta&&!g.ambito&&!['rival','ocupación','disputado','regencia','gobierno delegado'].includes(g.condicion));
+ const office=gobiernosDe(person).find(g=>g.territorio==='Francia'&&gobiernoEfectivo(g,year)&&g.desde<=year&&year<=g.hasta&&!g.ambito&&!['rival','ocupación','disputado','regencia','gobierno delegado'].includes(g.condicion));
  if(!office||!data||year>=1790)return [];
  const owned=new Set(ownEntries.filter(e=>e.paint).flatMap(e=>e.ids));
  return reviewedMapLayers(data).flatMap(layer=>{

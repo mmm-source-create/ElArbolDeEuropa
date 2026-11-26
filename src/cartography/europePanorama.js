@@ -11,7 +11,7 @@ import {governmentGroupsAt} from '../domain/government/governmentPresentation.js
 import {vidaEnAnio} from '../domain/time/europeYear.js';
 import {atlasPoliticalMosaicAt,atlasMosaicPalette} from './atlasMosaic.js';
 import {pilotJurisdictionsFor,mapLocationsForGovernment} from './locationMapPilot.js';
-import {REINO_COLOR, idsDeGobiernoEnAño} from './kingdomMaps.js';
+import {REINO_COLOR, datedTerritoryColor, idsDeGobiernoEnAño} from './kingdomMaps.js';
 const CURATED_COLORS=new Set([...Object.values(REINO_COLOR),...Object.values(MAP_COLORS)].filter(c=>typeof c==='string'&&c.startsWith('#')).map(c=>c.toLowerCase()));
 import {territorialIdentity} from './territorialIdentity.js';
 
@@ -84,6 +84,13 @@ export function europeMosaicAt(data,year,people) {
    }
   }
  }
+ // A reviewed Netherlandish phase may lack an individual lordship title (Cuijk).
+ // Its explicit political attribution follows the active Low Countries government,
+ // anchored in recorded provincial mandates, rather than an unrelated palette tint.
+ const netherlandsAnchors=new Set(['Brabante','Flandes','Henao','Condado de Borgoña']);
+ const netherlandsGroups=[...new Map([...routes.values()].flat().filter(g=>g.kind==='sovereign'&&netherlandsAnchors.has(g.territory))
+  .map(g=>[`${g.id}|${g.color}`,g])).values()];
+ const netherlandsPolity=netherlandsGroups.length===1?netherlandsGroups[0]:null;
  const layers=mosaic.layers.map(layer=>{
   const candidates=(layer.memberNames||[layer.name]).flatMap(n=>routes.get(n)||[]);
   const unique=[...new Map(candidates.map(g=>[`${g.id}|${g.personId}|${g.kind}`,g])).values()];
@@ -106,7 +113,7 @@ export function europeMosaicAt(data,year,people) {
   }
   const identity=territorialIdentity(layer.name);
   const republic=names.some(n=>franceLowCountriesPoliticalKeys(n,year).includes('Provincias Unidas'));
-  const baseColor=layer.politicalColorGroup==='polonia-lituania'?REINO_COLOR['Polonia-Lituania']:REINO_COLOR[identity] || layer.mosaicColor;
+  const baseColor=layer.politicalColorGroup ? layer.mosaicColor : datedTerritoryColor(identity,year) || layer.mosaicColor;
   return {...layer,mosaicColor:shared?.color || REINO_COLOR[identity] || layer.mosaicColor,
    crownRelation:aragon.values().next().value||crown.values().next().value||null,english,crown,aragon,tributary,tributaryCandidates,phasesById,republic,politicalLabel:shared?.label || layer.displayName || layer.name,candidates,baseColor};
  });
@@ -138,12 +145,13 @@ export function europeMosaicAt(data,year,people) {
   const crownRelation=aragonRelation||frenchRelation;
   // The Burgundian state and its Habsburg heirs keep their colour inside the
   // kingdom too; the fief pattern still marks the French suzerainty.
-  const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)&&applicable.every(g=>g.id===applicable[0].id)?applicable[0]:null;
+  const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)&&applicable.every(g=>g.id===applicable[0].id)?applicable[0]
+   :!applicable.length&&layer.politicalColorGroup==='paises-bajos-habsburgicos'?netherlandsPolity:null;
   const confederation=swissConfederationAt(layer.entityId,year);
   const color=confederation?confederation.color:layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
-   :polity&&['herencia-borgonona','paises-bajos'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
-  const politicalGroup=confederation?confederation.id:layer.republic?'republica-neerlandesa':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
-  const politicalLabel=confederation?confederation.label:tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:layer.displayName||layer.name);
+   :['charolais-archducal','schleswig-holstein'].includes(layer.politicalColorGroup)?layer.baseColor:polity&&['herencia-borgonona','paises-bajos','monarquia-hispanica-exterior'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
+  const politicalGroup=confederation?confederation.id:layer.republic?'republica-neerlandesa':layer.politicalColorGroup==='charolais-archducal'?'charolais-archducal':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
+  const politicalLabel=confederation?confederation.label:tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:polity?.label||layer.displayName||layer.name);
   // 6.0.12: reviewed colours for territories that clashed with a neighbour;
   // relation tints keep their own families.
   // Curated colours (kingdom table, map constants, political groups) are kept;

@@ -69,9 +69,6 @@ export const MONARCAS_MODERNOS = Object.freeze({
   "EDUARDO6ING": {
     "resumen": "Hijo de Enrique VIII y Juana Seymour, llegó al trono siendo niño. Durante su breve reinado la Reforma inglesa avanzó de forma decisiva bajo gobiernos de regencia."
   },
-  "ENRIQ3FRA": {
-    "resumen": "Último rey de la casa de Valois. Su reinado estuvo dominado por las guerras de religión y la lucha entre la Liga Católica, los hugonotes y la propia autoridad monárquica."
-  },
   "CARLOS9FRA": {
     "resumen": "Rey de Francia durante una fase especialmente violenta de las guerras de religión. Su nombre quedó ligado a la matanza de San Bartolomé de 1572 y a la profunda crisis de la monarquía Valois."
   },
