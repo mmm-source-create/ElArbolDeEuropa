@@ -33,7 +33,6 @@ export const TERRITORY_REGION={
  "Nueva Zembla":6,
  "Obispado de Curlandia":5,
  "Obispado de Dorpat":5,
- "Obispado de Riga":5,
  "Obispado de Ösel-Wiek":5,
  "Orden de Livonia":5,
  "Principado de Chernígov":6,

@@ -134,7 +134,6 @@ export const ENTITY_SUMMARIES_610 = {
   'territory:principality-of-brunswick': {summary: 'The Brunswick share of a Welf partition.'},
   'territory:principality-of-gottingen': {summary: 'A separate principality.'},
   'territory:principality-of-grubenhagen': {summary: 'A separate principality, with its branches and a later disputed inheritance.'},
-  'territory:principality-of-leiningen': {summary: 'The senior line was raised to princely rank; it was not mediatised before 1800.'},
   'territory:principality-of-luneburg': {summary: 'A division of the Welf lands; the war of succession of 1370–1388 did not end the principality’s identity.'},
   'territory:principality-of-rugen': {summary: 'A Slavic principality held in fief from Denmark, with an island core and lands on the mainland.'},
   'territory:riedesel-lordship-in-lauterbach': {summary: 'Legal independence from Fulda, as a territory of imperial barons.'},

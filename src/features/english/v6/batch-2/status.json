@@ -595,7 +595,6 @@
       "ejercito-zaporogo",
       "senorio-de-faucigny",
       "comuna-de-vercelli",
-      "obispado-de-riga",
       "comuna-de-albenga",
       "comuna-de-mondovi",
       "bardi-y-compiano",
@@ -611,8 +610,7 @@
       "beylicato-de-candar",
       "beylicato-de-esref",
       "asti",
-      "cervia",
-      "senorio-de-ioannina"
+      "cervia"
     ],
     "stories": [
       "papales",
@@ -631,7 +629,7 @@
     "notes": 3895,
     "portraits": 0,
     "dynasties": 82,
-    "territories": 174,
+    "territories": 172,
     "completeStories": 3,
     "plannedStoryCards": 2,
     "storyEntries": 5

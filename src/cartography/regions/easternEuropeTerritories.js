@@ -1,6 +1,7 @@
 export const EASTERN_EUROPE_TERRITORIES = Object.freeze({
   Podolia:{clase:"ducado",naturaleza:"entidad",componentes:[],nota:"Ámbito de los duques Koriatovich. El homenaje a Luis I de Hungría de 1377 se limita a las superficies podolias documentadas; no convierte Lituania en un feudo húngaro."},
   "Arzobispado de Riga": {
+    "etapas": [{"clase":"gobierno","desde":1201,"hasta":1254,"nota":"Obispado de Riga hasta su elevación a arzobispado en 1255."}],
     "clase": "gobierno",
     "naturaleza": "entidad",
     "componentes": [],
@@ -145,12 +146,6 @@ export const EASTERN_EUROPE_TERRITORIES = Object.freeze({
     "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
   },
   "Obispado de Dorpat": {
-    "clase": "gobierno",
-    "naturaleza": "entidad",
-    "componentes": [],
-    "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
-  },
-  "Obispado de Riga": {
     "clase": "gobierno",
     "naturaleza": "entidad",
     "componentes": [],
