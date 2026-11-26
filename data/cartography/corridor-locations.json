@@ -61137,7 +61137,7 @@
     },
     {
       "corridor": "Ampliación balcánica documentada",
-      "name": "Morea veneciana (núcleos)",
+      "name": "Morea veneciana · núcleos",
       "color": "#4f97a9",
       "coverage": {
         "from": 1699,
@@ -62086,7 +62086,7 @@
       ],
       "note": "Superficie del Peloponeso, incluidos sus relieves; las seis ciudades de la primera revisión dejan de sustituir a toda la provincia.",
       "supersedes": [
-        "Morea veneciana (núcleos)"
+        "Morea veneciana · núcleos"
       ]
     },
     {
@@ -362502,7 +362502,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Peloponnesian_Mountains1",
       "action": "add",
       "from": 1699,
@@ -362515,7 +362515,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Chalandritsa",
       "action": "add",
       "from": 1699,
@@ -362528,7 +362528,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Pontikokastro",
       "action": "add",
       "from": 1699,
@@ -362541,7 +362541,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Ermioni",
       "action": "add",
       "from": 1699,
@@ -362554,7 +362554,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Nafplio",
       "action": "add",
       "from": 1699,
@@ -362567,7 +362567,7 @@
       "supplement": "map-expansion"
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "id": "Peloponnesian_Mountains2",
       "action": "add",
       "from": 1699,
@@ -364792,7 +364792,7 @@
       "Epiro de los Tocco",
       "Eslavonia disputada (núcleos)",
       "Monte Athos autónomo bajo autoridad otomana",
-      "Morea veneciana (núcleos)"
+      "Morea veneciana · núcleos"
     ],
     "westernLayers": 6,
     "centralLayers": 27,

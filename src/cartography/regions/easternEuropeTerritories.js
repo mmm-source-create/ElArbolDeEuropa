@@ -168,12 +168,6 @@ export const EASTERN_EUROPE_TERRITORIES = Object.freeze({
     "componentes": [],
     "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
   },
-  "Principado de Beloózero": {
-    "clase": "principado",
-    "naturaleza": "entidad",
-    "componentes": [],
-    "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
-  },
   "Principado de Chernígov": {
     "clase": "principado",
     "naturaleza": "entidad",
@@ -223,12 +217,6 @@ export const EASTERN_EUROPE_TERRITORIES = Object.freeze({
     "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
   },
   "Principado de Pereyáslavl-Zalesski": {
-    "clase": "principado",
-    "naturaleza": "entidad",
-    "componentes": [],
-    "nota": "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común."
-  },
-  "Principado de Pólotsk": {
     "clase": "principado",
     "naturaleza": "entidad",
     "componentes": [],

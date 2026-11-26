@@ -30,7 +30,9 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    const territorial=(t?.etapas||[]).map(e=>e.clase).concat(t?.clase||[]);
    const normalize=c=>({reino:'reinado',estado_pontificio:'pontificado',territorio_compuesto:'gobierno',republica:'gobierno'})[c]||c;
    // 6.1.3: the English Commonwealth (Cromwell’s protectorate) was a government, not a reign.
-   const permitidas={Inglaterra:['gobierno'],'Imperio otomano':['emirato'],Croacia:['banato'],Transilvania:['gobierno'], 'Transilvania habsbúrgica':['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'],Milán:['gobierno'], 'Países Bajos':['reinado'], 'Austria Interior':['ducado','archiducado','gobierno'], Silesia:['gobierno'], Moravia:['gobierno'], 'Palatinado-Neoburgo':['gobierno']};
+   const permitidas={Inglaterra:['gobierno'],Escocia:['gobierno'],Irlanda:['gobierno'],'Imperio otomano':['emirato'],Croacia:['banato'],Transilvania:['gobierno'], 'Transilvania habsbúrgica':['gobierno'],Valaquia:['voivodato'],Moldavia:['voivodato'],Bulgaria:['zarato'],Serbia:['despotado'],Rusia:['principado'],Sajonia:['ducado'],Baviera:['electorado'],Brandeburgo:['margraviato'],Palatinado:['condado','principado'],Florencia:['ducado'],Nassau:['principado'],Urbino:['condado'],Anjou:['condado'],Hannover:['electorado'],Milán:['gobierno'], 'Países Bajos':['reinado'], 'Austria Interior':['ducado','archiducado','gobierno'], Silesia:['gobierno'], Moravia:['gobierno'], 'Palatinado-Neoburgo':['gobierno'],
+     // 6.3.4: the French occupation of Savoy (1536–1559) is a government, not a ducal reign.
+     Saboya:['gobierno']};
    // A delegated administrator's office does not turn a county into a new
    // "government" territory. Validate the office and sovereign separately.
    const delegatedOffice=g.condicion==='gobierno delegado'&&g.soberano&&g.soberano!==p.id

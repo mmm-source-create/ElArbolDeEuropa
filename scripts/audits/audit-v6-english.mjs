@@ -59,13 +59,14 @@ const unique=(values,label)=>{const seen=new Set();for(const value of values){if
 if(!V6_READY)errors.push('central V6 readiness is false');
 if(Object.keys(V6_PEOPLE).length!==2096)errors.push(`pending people total: ${Object.keys(V6_PEOPLE).length}/2096`);
 if(V6_DYNASTIES.length!==493)errors.push(`pending dynasties total: ${V6_DYNASTIES.length}/493`);
-if(V6_TERRITORIES.length!==1040)errors.push(`pending territories total: ${V6_TERRITORIES.length}/1040`);
+// 6.3.4: three duplicate territory records were merged into their main entity.
+if(V6_TERRITORIES.length!==1037)errors.push(`pending territories total: ${V6_TERRITORIES.length}/1037`);
 // 6.1.2: ten dynasty stories.
 // 6.1.3: six more stories.
 if(Object.keys(V6_STORIES).length!==56)errors.push(`pending story entries total: ${Object.keys(V6_STORIES).length}/56`);
 if(Object.keys(COMPLETE_ENGLISH_PROFILES).length!==PERSONAS.length)errors.push(`complete people total: ${Object.keys(COMPLETE_ENGLISH_PROFILES).length}/${PERSONAS.length}`);
 if(ENGLISH_DYNASTIES.length!==522)errors.push(`complete dynasties total: ${ENGLISH_DYNASTIES.length}/522`);
-if(ENGLISH_TERRITORIES.length!==1041)errors.push(`complete territories total: ${ENGLISH_TERRITORIES.length}/1041`);
+if(ENGLISH_TERRITORIES.length!==1038)errors.push(`complete territories total: ${ENGLISH_TERRITORIES.length}/1038`);
 if(TRANSLATED_STORIES.filter(story=>story.chapters>0).length!==60)errors.push(`complete stories total: ${TRANSLATED_STORIES.filter(story=>story.chapters>0).length}/60`);
 if(TRANSLATED_STORIES.filter(story=>story.chapters===0).length!==0)errors.push(`planned story cards total: ${TRANSLATED_STORIES.filter(story=>story.chapters===0).length}/0`);
 unique(V6_DYNASTIES.map(item=>item.en),'dynasty slugs');

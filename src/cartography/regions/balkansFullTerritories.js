@@ -518,12 +518,6 @@ export const BALKANS_FULL_TERRITORIES = Object.freeze({
     "componentes": [],
     "nota": "Jurisdicción regional con fases fechadas y evidencia localizada en la revisión balcánica. Los cambios de señor, tributo u ocupación no crean por sí solos otra identidad; una celda puede incluir varias jurisdicciones."
   },
-  "Principado de Antioquía": {
-    "clase": "principado",
-    "naturaleza": "entidad",
-    "componentes": [],
-    "nota": "Entidad regional con sus fases, relaciones de superioridad y fuentes localizadas en la revisión cartográfica. La dependencia tributaria no equivale a administración provincial directa; una ocupación no cambia por sí sola su identidad."
-  },
   "Principado de Arbanon": {
     "clase": "principado",
     "naturaleza": "entidad",

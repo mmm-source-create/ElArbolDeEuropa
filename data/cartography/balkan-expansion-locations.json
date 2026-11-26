@@ -259,7 +259,7 @@
       "reason": "La fuente fecha el sometimiento y las nuevas guarniciones de Mani en 1670–1671. Esta pieza de Taygetos llega a la frontera de Leuctro y se incorpora sólo después de ese cambio, como aproximación de jurisdicción; no representa toda la península de Mani."
     },
     {
-      "territory": "Morea veneciana (núcleos)",
+      "territory": "Morea veneciana · núcleos",
       "from": 1699,
       "through": 1714,
       "ids": [
@@ -1319,7 +1319,7 @@
     },
     {
       "corridor": "Ampliación balcánica documentada",
-      "name": "Morea veneciana (núcleos)",
+      "name": "Morea veneciana · núcleos",
       "color": "#4f97a9",
       "coverage": {
         "from": 1699,

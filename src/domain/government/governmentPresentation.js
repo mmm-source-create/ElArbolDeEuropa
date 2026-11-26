@@ -58,6 +58,12 @@ export function governmentGroupsAt(person, year, {view = 'personal'} = {}) {
    const primary=[...sovereign].sort((a,b)=>rank(b)-rank(a)||b.mandates.length-a.mandates.length||first(a)-first(b)||a.id.localeCompare(b.id))[0];
    for(const group of sovereign)if(group!==primary){group.color=primary.color;group.sharedSovereign=primary.id;}
   }
+  // 6.3.4: a military occupation is painted in the occupier's colour (as the
+  // Piedmont phase under France, 1536–1559), not in the occupied state's own
+  // colour, which made the territory look as if its ruler had not changed.
+  const main=sovereign.find(g=>!g.sharedSovereign)||sovereign[0];
+  if(main)for(const group of result.values())
+   if(group.kind==='disputed'&&group.mandates.every(m=>m.condicion==='ocupación')){group.color=main.color;group.sharedSovereign=main.id;}
  }
  // The conquered Navarre was incorporated into Castile in 1515, while Ferdinand
  // ruled Aragon and governed Castile as regent. Its northern frontier stays dated.

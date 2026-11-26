@@ -241,6 +241,12 @@
   ],
   "redirects": [
     {"source":"/","destination":"/es","permanent":true},
+    {"source":"/es/territorio/principado-de-beloozero","destination":"/es/territorio/beloozero","permanent":true,"workerFirst":false},
+    {"source":"/en/territory/principality-of-beloozero","destination":"/en/territory/beloozero","permanent":true,"workerFirst":false},
+    {"source":"/es/territorio/principado-de-polotsk","destination":"/es/territorio/polotsk","permanent":true,"workerFirst":false},
+    {"source":"/en/territory/principality-of-polotsk","destination":"/en/territory/polotsk","permanent":true,"workerFirst":false},
+    {"source":"/es/territorio/principado-de-antioquia","destination":"/es/territorio/antioquia","permanent":true,"workerFirst":false},
+    {"source":"/en/territory/principality-of-antioch","destination":"/en/territory/antioch","permanent":true,"workerFirst":false},
     {"source":"/es/persona/carlos-v-i-de-espana","destination":"/es/persona/carlos-v","permanent":true,"workerFirst":false},
     {"source":"/es/persona/matilde-de-inglaterra","destination":"/es/persona/matilde-de-inglaterra-matildaing","permanent":true,"workerFirst":false},
     {"source":"/es/persona/juana-de-inglaterra","destination":"/es/persona/juana-de-inglaterra-joanenglandscot","permanent":true,"workerFirst":false},

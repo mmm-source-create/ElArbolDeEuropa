@@ -19,7 +19,7 @@ const ENTITY_REGION={
  'Confederación Suiza':3,'Habsburgo':3,'Ansbach':3,'Austria Interior':3,'Baden':3,'Berg':3,'Brunswick':3,'Cléveris':3,'Hannover':3,'Hesse':3,'Hesse-Darmstadt':3,'Hesse-Kassel':3,'Holstein':3,'Jülich':3,'Kulmbach':3,'Mark':3,'Mecklemburgo':3,'Meißen':3,'Moravia':3,'Nassau':3,'Oldemburgo':3,'Palatinado-Neoburgo':3,'Pomerania':3,'Ravensberg':3,'Silesia':3,'Suabia':3,'Tirol':3,'Turingia':3,'Württemberg':3,'Condado de Bihar':3,'Condado de Temes':3,
  'Gravina':4,'Fano':4,'Cesena':4,'Rímini':4,'Administración de ocupación austro-rusa de Lombardía':4,'Administración francesa de Piamonte':4,'Comuna y República de Florencia':4,'Forlì':4,'Imola':4,'Pesaro':4,'República Cisalpina':4,'República de Venecia':4,'Saluzzo':4,'Tarento':4,
  'Curlandia':6,
- 'Acaya':7,'Durazzo':7,'Albania':7,'Comuna de Mljet':7,'Dobruja':7,'Eslavonia':7,'Gran Principado de Transilvania':7,'Herzegovina':7,'Imperio otomano':7,'Kosovo':7,'Monte Athos autónomo bajo autoridad otomana':7,'Morea':7,'Morea veneciana (núcleos)':7,'Prilep':7,'Principado de Transilvania':7,'República de Ragusa':7,'Sirmia':7,'Trebisonda':7,'Voivodato de Transilvania':7,'Zeta':7,
+ 'Acaya':7,'Durazzo':7,'Albania':7,'Comuna de Mljet':7,'Dobruja':7,'Eslavonia':7,'Gran Principado de Transilvania':7,'Herzegovina':7,'Imperio otomano':7,'Kosovo':7,'Monte Athos autónomo bajo autoridad otomana':7,'Morea':7,'Morea veneciana · núcleos':7,'Prilep':7,'Principado de Transilvania':7,'República de Ragusa':7,'Sirmia':7,'Trebisonda':7,'Voivodato de Transilvania':7,'Zeta':7,
  'Antioquía':8,'Armenia cilicia':8,'Transjordania':8,'Trípoli':8,
 };
 // Crowns and empires lead each region; lordships, duchies and republics follow
