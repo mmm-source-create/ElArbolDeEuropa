@@ -105,6 +105,10 @@ export const ENGLISH_TERRITORY_NOTES_622 = Object.freeze({
  "Dominios de los condes, separados del landgraviato hessiano.": "The counts’ lands, separate from the Hessian landgraviate.",
  "Compra por los Königsegg.": "Purchased by the Königseggs.",
  "Dominio condal y sus ramas; no principado del XIX.": "Comital lands and their branches; not the nineteenth-century principality.",
+ // 6.3.5: one record for the county and the principality of 1779.
+ "Dominio condal y sus ramas; la línea principal es elevada a principado en 1779, sin mediatización anterior a 1800.": "Comital lands and their branches; the senior line was raised to a principality in 1779 and was not mediatised before 1800.",
+ "Obispado de Riga hasta su elevación a arzobispado en 1255.": "Bishopric of Riga until it was raised to an archbishopric in 1255.",
+ "Principado de la línea principal desde 1779.": "Principality of the senior line from 1779.",
  "Agrupación cartográfica de jurisdicciones, comunidades o fases de transición; no acredita un gobierno único. Alternancia de ocupaciones hispánicas y de Orange; no una continuidad neerlandesa uniforme.": "Map grouping of jurisdictions, communities or transitional phases; it does not establish a single government. Alternating Spanish and Orange occupations; not a uniform Dutch continuity.",
  "Condado separado, con posteriores reunificaciones y disputas dinásticas.": "Separate county, with later reunifications and dynastic disputes.",
  "Condado de Mansfeld; desde 1570 administración de deuda por Sajonia y Magdeburgo, con porciones que no coinciden exactamente con la celda.": "County of Mansfeld; from 1570 debt administration by Saxony and Magdeburg, with shares that do not match the map cell exactly.",

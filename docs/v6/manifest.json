@@ -9,8 +9,8 @@
     "pendingPeople": 2096,
     "dynasties": 519,
     "pendingDynasties": 493,
-    "territories": 1038,
-    "pendingTerritories": 1037,
+    "territories": 1033,
+    "pendingTerritories": 1032,
     "availableStories": 22,
     "pendingAvailableStories": 18,
     "plannedStoryCards": 9
@@ -581,7 +581,6 @@
         "senorio-de-carpatos",
         "beylicato-de-hamid",
         "despotado-de-arta",
-        "republica-de-venecia",
         "senorio-de-lesbos",
         "sultanato-de-rum",
         "hetmanato-cosaco",
@@ -1236,7 +1235,6 @@
         "ejercito-zaporogo",
         "senorio-de-faucigny",
         "comuna-de-vercelli",
-        "obispado-de-riga",
         "comuna-de-albenga",
         "comuna-de-mondovi",
         "bardi-y-compiano",
@@ -1252,8 +1250,7 @@
         "beylicato-de-candar",
         "beylicato-de-esref",
         "asti",
-        "cervia",
-        "senorio-de-ioannina"
+        "cervia"
       ],
       "stories": [
         "papales",
@@ -1790,7 +1787,6 @@
         "saint-pol",
         "principado-episcopal-de-merseburgo",
         "sajonia-merseburgo",
-        "principado-de-leiningen",
         "principado-de-gottingen",
         "principado-de-rugen",
         "abadia-principesca-de-kempten",
@@ -2478,7 +2474,6 @@
         "distrito-de-piltene",
         "senorios-del-pays-de-vaud",
         "marquesado-de-massa",
-        "ducado-de-aquitania",
         "emirato-de-mallorca",
         "senorio-de-gothia",
         "dalmacia-austriaca",

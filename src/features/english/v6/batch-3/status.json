@@ -526,7 +526,6 @@
       "saint-pol",
       "principado-episcopal-de-merseburgo",
       "sajonia-merseburgo",
-      "principado-de-leiningen",
       "principado-de-gottingen",
       "principado-de-rugen",
       "abadia-principesca-de-kempten",
@@ -631,7 +630,7 @@
     "notes": 6296,
     "portraits": 0,
     "dynasties": 82,
-    "territories": 173,
+    "territories": 172,
     "completeStories": 3,
     "plannedStories": 2
   },

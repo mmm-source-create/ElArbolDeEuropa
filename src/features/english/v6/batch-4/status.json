@@ -591,7 +591,6 @@
       "distrito-de-piltene",
       "senorios-del-pays-de-vaud",
       "marquesado-de-massa",
-      "ducado-de-aquitania",
       "emirato-de-mallorca",
       "senorio-de-gothia",
       "dalmacia-austriaca",
@@ -624,7 +623,7 @@
   "counts": {
     "people": 350,
     "dynasties": 82,
-    "territories": 171,
+    "territories": 170,
     "completeStories": 3,
     "plannedStories": 1,
     "names": 1895,

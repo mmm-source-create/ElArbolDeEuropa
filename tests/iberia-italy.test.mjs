@@ -143,7 +143,8 @@ test('islands without documented settlement are a geographic condition, and iden
   assert.deepEqual(owners('Funchal', 1200), ['Islas sin autoridad política documentada']);
   assert.deepEqual(owners('Funchal', 1500), ['Portugal']);
   assert.equal(territorialColor('Islas sin autoridad política documentada'), '#8d9da0');
-  for (const phase of review.assignments) assert(TERRITORIOS[phase.identity], phase.identity);
+  // 6.3.5: a merged identity (Ducado de Aquitania) keeps its layer name and resolves to its record.
+  for (const phase of review.assignments) assert(TERRITORIOS[phase.identity] || TERRITORIOS[territorialIdentity(phase.identity)], phase.identity);
   assert(!review.assignments.some(phase => ['Gibraltar meriní','Menorca británica','Menorca francesa'].includes(phase.identity)));
   assert.equal(owners('Ciudadela_de_Menorca', 1715)[0], owners('Ciudadela_de_Menorca', 1758)[0]);
 });

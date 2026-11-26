@@ -32057,52 +32057,6 @@
     }
   },
   {
-    "key": "Principado de Leiningen",
-    "es": "principado-de-leiningen",
-    "en": "principality-of-leiningen",
-    "name": "Principality of Leiningen",
-    "summary": "The main line is lifted, without mediatization prior to 1800.",
-    "notes": "The main line is lifted, without mediatization prior to 1800.",
-    "translatedSource": {
-      "sourceFile": "principado-de-leiningen.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Principality of Leiningen",
-      "slug": "principado-de-leiningen",
-      "clase": "government",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "The main line is lifted, without mediatization prior to 1800.",
-      "resumen": "The main line is lifted, without mediatization prior to 1800.",
-      "evolucion": [
-        {
-          "anio": 1779,
-          "texto": "The main line is lifted, without mediatization prior to 1800."
-        }
-      ],
-      "editorial": true,
-      "fuentes": [
-        {
-          "titulo": "IEG-MAPS · Alemania en 1792",
-          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm"
-        },
-        {
-          "titulo": "IEG-MAPS · Alemania en 1378",
-          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp378d.htm"
-        }
-      ],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
     "key": "Principado de Göttingen",
     "es": "principado-de-gottingen",
     "en": "principality-of-gottingen",

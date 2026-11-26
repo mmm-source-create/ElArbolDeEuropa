@@ -733,5 +733,170 @@
     "reviewedAt": "2026-11-26",
     "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
     "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-635-Bayonne-1200",
+    "locationId": "Bayonne",
+    "from": 1200,
+    "through": 1450,
+    "previous": [
+      "Ducado de Aquitania"
+    ],
+    "expected": [
+      "Aquitania"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el Ducado de Aquitania es la misma entidad que Aquitania; el mapa dibujaba las dos capas a la vez. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html"
+  },
+  {
+    "id": "fusion-635-Mauleon-1200",
+    "locationId": "Mauleon",
+    "from": 1200,
+    "through": 1450,
+    "previous": [
+      "Ducado de Aquitania"
+    ],
+    "expected": [
+      "Aquitania"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el Ducado de Aquitania es la misma entidad que Aquitania; el mapa dibujaba las dos capas a la vez. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html"
+  },
+  {
+    "id": "fusion-635-Tarbes-1360",
+    "locationId": "Tarbes",
+    "from": 1360,
+    "through": 1372,
+    "previous": [
+      "Ducado de Aquitania"
+    ],
+    "expected": [
+      "Aquitania"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el Ducado de Aquitania es la misma entidad que Aquitania; el mapa dibujaba las dos capas a la vez. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html"
+  },
+  {
+    "id": "fusion-635-Tosse-1200",
+    "locationId": "Tosse",
+    "from": 1200,
+    "through": 1450,
+    "previous": [
+      "Ducado de Aquitania"
+    ],
+    "expected": [
+      "Aquitania"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el Ducado de Aquitania es la misma entidad que Aquitania; el mapa dibujaba las dos capas a la vez. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://www.gasconrolls.org/fr/the-project/historical-introduction/index.html"
+  },
+  {
+    "id": "fusion-635-Gulbene-1201",
+    "locationId": "Gulbene",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Koknese-1201",
+    "locationId": "Koknese",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Limbazi-1201",
+    "locationId": "Limbazi",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Rauna-1201",
+    "locationId": "Rauna",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Riga-1201",
+    "locationId": "Riga",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Salaspils-1201",
+    "locationId": "Salaspils",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "fusion-635-Straupe-1201",
+    "locationId": "Straupe",
+    "from": 1201,
+    "through": 1254,
+    "previous": [
+      "Obispado de Riga"
+    ],
+    "expected": [
+      "Arzobispado de Riga"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
+    "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
   }
 ]

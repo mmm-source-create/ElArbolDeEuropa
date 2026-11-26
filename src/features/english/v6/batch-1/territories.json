@@ -43396,40 +43396,6 @@
     "people": []
   },
   {
-    "key": "República de Venecia",
-    "es": "republica-de-venecia",
-    "en": "republic-of-venice",
-    "name": "Republic of Venice",
-    "summary": "",
-    "notes": "The Republican Authority of the Late Period; Candia's losses and the end of the Republic are resolved in its own versions. The dogo is its elected judge, not hereditary owner.",
-    "editorial": false,
-    "translatedSource": {
-      "sourceFile": "republica-de-venecia.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Republic of Venice",
-      "slug": "republica-de-venecia",
-      "clase": "Government",
-      "naturaleza": "entity",
-      "desde": 1651,
-      "hasta": 1796,
-      "nota": "The Republican Authority of the Late Period; Candia's losses and the end of the Republic are resolved in its own versions. The dogo is its elected judge, not hereditary owner.",
-      "componentes": [],
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    },
-    "people": []
-  },
-  {
     "key": "Señorío de Lesbos",
     "es": "senorio-de-lesbos",
     "en": "lordship-of-lesbos",

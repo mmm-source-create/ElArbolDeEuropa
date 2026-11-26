@@ -165,7 +165,7 @@ export const CHRONOLOGY_COLLECTIVE_AUTHORITIES = Object.freeze([
     ]
   },
   {
-    "territorio": "República de Venecia",
+    "territorio": "Venecia",
     "nombre": "República de Venecia",
     "desde": 1651,
     "hasta": 1796,

@@ -204,7 +204,7 @@ function GeneralCatalogPage({ tipo, locale='es', initialData=null, embedded=fals
         </section>
         <label className="public-search"><Search size={16} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={`${tr("Buscar en","Search")} ${config.title.toLowerCase()}…`} aria-label={`${tr("Buscar en","Search")} ${config.title.toLowerCase()}`} /><span>{filtrados.length}</span></label>
 
-        {tipo === "dinastias" && <label className="dynasty-editorial-filter"><input type="checkbox" checked={soloHistoria} onChange={e=>setSoloHistoria(e.target.checked)}/>{tr('Mostrar solo casas con historia desarrollada','Show only houses with a developed history')}</label>}
+        {tipo === "dinastias" && <div className="dynasty-editorial-filter people-facet"><div><button type="button" aria-pressed={soloHistoria} onClick={()=>setSoloHistoria(value=>!value)}>{tr('Mostrar solo casas con historia desarrollada','Show only houses with a developed history')}</button></div></div>}
         {loading && <ReadingSkeleton kind="catalog-list" list={tipo === "personas" ? "people" : tipo === "historias" ? "stories" : "entities"}/>}
         {error && <div className="public-error">{tr('No se ha podido cargar este catálogo. Puedes seguir explorando el atlas.','This catalogue could not load. You can continue exploring the Atlas.')}</div>}
 

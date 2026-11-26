@@ -44475,36 +44475,6 @@
     }
   },
   {
-    "key": "Obispado de Riga",
-    "es": "obispado-de-riga",
-    "en": "bishopric-of-riga",
-    "name": "Bishopric of Riga",
-    "summary": "",
-    "notes": "Regional identity documented in Eastern Review V5.26. Each area, dependency and transfer is dated separately; the layer does not presuppose a common personal sovereign.",
-    "translatedSource": {
-      "sourceFile": "obispado-de-riga.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Bishopric of Riga",
-      "slug": "obispado-de-riga",
-      "clase": "Government",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "Regional identity documented in Eastern Review V5.26. Each area, dependency and transfer is dated separately; the layer does not presuppose a common personal sovereign.",
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
     "key": "Comuna de Albenga",
     "es": "comuna-de-albenga",
     "en": "albenga-commune",
@@ -45003,37 +44973,5 @@
         "resumen": "Lord of Cesena, 1429–1465. Lord of the Malatesta dynasty."
       }
     ]
-  },
-  {
-    "key": "Señorío de Ioannina",
-    "es": "senorio-de-ioannina",
-    "en": "lordship-of-ioannina",
-    "name": "Lordship of Ioannina",
-    "summary": "",
-    "notes": "Elau Buondelmonti government core represented during the documented interval.",
-    "translatedSource": {
-      "sourceFile": "senorio-de-ioannina.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Lordship of Ioannina",
-      "slug": "senorio-de-ioannina",
-      "clase": "Lordship",
-      "naturaleza": "entity",
-      "desde": 1400,
-      "hasta": 1411,
-      "nota": "Elau Buondelmonti government core represented during the documented interval.",
-      "componentes": [],
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
   }
 ]

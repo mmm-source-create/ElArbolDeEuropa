@@ -58,23 +58,40 @@ export default function TerritoryCatalog({locale='es',initialData=null,embedded=
     <main className="public-main public-catalog territory-catalog">
       <Breadcrumbs locale={locale} items={[{label:tr('Inicio','Home'),href:en?'/en':'/es'},{label:title}]}/>
       <header className="public-page-title"><div className="public-page-icon"><Landmark size={22}/></div><span>{tr('Geografía e historia política','Geography and political history')}</span><h1>{title}</h1><p>{description}</p></header>
-      <div className="territory-catalog-intro"><p>{tr('Cada ficha distingue su naturaleza y reúne sus gobiernos, personas y conexiones. Un territorio puede aparecer en varias regiones.','Each record identifies its nature and brings together its governments, people and connections. A territory may appear in more than one region.')}</p><a href="#territory-directory" onClick={()=>{const directory=document.getElementById('territory-directory');if(directory)directory.open=true;}}>{tr('Consultar el índice completo A–Z','Browse the complete A–Z index')}</a></div>
       {loading&&<ReadingSkeleton kind="catalog-list" list="entities" locale={locale}/>}
       {error&&<p role="alert">{tr('No se ha podido cargar el catálogo.','The catalogue could not load.')}</p>}
       {data&&<>
+        {/* 6.3.5: search and regions first, as in the people and dynasty indexes; the other filters stay folded. */}
         <section className="territory-catalog-controls" aria-label={tr('Buscar y filtrar territorios','Search and filter territories')}>
-          <label className="public-search"><Search size={18}/><input value={filters.query} onChange={e=>update('query',e.target.value)} placeholder={tr('Buscar nombre, variante o persona…','Search a name, variant or person…')} aria-label={tr('Buscar territorios','Search territories')}/></label>
-          <div className="territory-catalog-filters">
-            <label>{tr('Región','Region')}<select value={filters.region} onChange={e=>update('region',e.target.value)}><option value="">{tr('Todas las regiones','All regions')}</option>{Object.keys(TERRITORY_REGIONS).filter(key=>facets.regiones[key]).map(key=><option key={key} value={key}>{territoryLabel(TERRITORY_REGIONS,key,locale)} ({facets.regiones[key]})</option>)}</select></label>
-            <label>{tr('Naturaleza','Entity kind')}<select value={filters.nature} onChange={e=>update('nature',e.target.value)}><option value="">{tr('Todas las naturalezas','All entity kinds')}</option>{Object.keys(TERRITORY_NATURES).filter(key=>facets.naturalezas[key]).map(key=><option key={key} value={key}>{territoryLabel(TERRITORY_NATURES,key,locale)}</option>)}</select></label>
-            <label>{tr('Tipo','Type')}<select value={filters.type} onChange={e=>update('type',e.target.value)}><option value="">{tr('Todos los tipos','All types')}</option>{Object.keys(facets.clases).sort((a,b)=>territoryLabel(TERRITORY_CLASSES,a,locale).localeCompare(territoryLabel(TERRITORY_CLASSES,b,locale),locale)).map(key=><option key={key} value={key}>{territoryLabel(TERRITORY_CLASSES,key,locale)}</option>)}</select></label>
-            <label>{tr('Con gobierno registrado en','With government recorded in')}<input type="number" inputMode="numeric" step="1" value={filters.year} onChange={e=>update('year',e.target.value)} placeholder={tr('Cualquier año','Any year')} aria-describedby="territory-year-help"/></label>
+          <label className="public-search"><Search size={16}/><input value={filters.query} onChange={e=>update('query',e.target.value)} placeholder={tr('Buscar nombre, variante o persona…','Search a name, variant or person…')} aria-label={tr('Buscar territorios','Search territories')}/></label>
+          <div className="people-facets">
+            <div className="people-facets-head">
+              <a className="territory-catalog-az" href="#territory-directory" onClick={()=>{const directory=document.getElementById('territory-directory');if(directory)directory.open=true;}}>{tr('Índice completo A–Z','Complete A–Z index')}</a>
+              {active&&<button type="button" className="people-facets-clear" onClick={reset}>{tr('Quitar filtros','Clear filters')}</button>}
+            </div>
+            <div className="people-facet"><span>{tr('Región','Region')}</span><div>
+              <button type="button" aria-pressed={!filters.region} onClick={()=>update('region','')}>{tr('Todas','All')}</button>
+              {Object.keys(TERRITORY_REGIONS).filter(key=>facets.regiones[key]).map(key=><button key={key} type="button" aria-pressed={filters.region===key} onClick={()=>update('region',filters.region===key?'':key)}>{territoryLabel(TERRITORY_REGIONS,key,locale)}<small>{facets.regiones[key]}</small></button>)}
+            </div></div>
+            <details className="territory-catalog-more" open={Boolean(filters.nature||filters.type||filters.year||filters.history)||undefined}>
+              <summary>{tr('Más filtros','More filters')}{[filters.nature,filters.type,filters.year,filters.history].filter(Boolean).length?<small> · {[filters.nature,filters.type,filters.year,filters.history].filter(Boolean).length}</small>:null}</summary>
+              <div className="people-facet"><span>{tr('Naturaleza','Entity kind')}</span><div>
+                {Object.keys(TERRITORY_NATURES).filter(key=>facets.naturalezas[key]).map(key=><button key={key} type="button" aria-pressed={filters.nature===key} onClick={()=>update('nature',filters.nature===key?'':key)}>{territoryLabel(TERRITORY_NATURES,key,locale)}</button>)}
+              </div></div>
+              <div className="people-facet"><span>{tr('Tipo','Type')}</span><div>
+                <select className="territory-catalog-select" value={filters.type} onChange={e=>update('type',e.target.value)} aria-label={tr('Tipo de territorio','Territory type')}><option value="">{tr('Todos los tipos','All types')}</option>{Object.keys(facets.clases).sort((a,b)=>territoryLabel(TERRITORY_CLASSES,a,locale).localeCompare(territoryLabel(TERRITORY_CLASSES,b,locale),locale)).map(key=><option key={key} value={key}>{territoryLabel(TERRITORY_CLASSES,key,locale)}</option>)}</select>
+              </div></div>
+              <div className="people-facet"><span>{tr('Gobierno','Government')}</span><div className="territory-catalog-year">
+                <input type="number" inputMode="numeric" step="1" value={filters.year} onChange={e=>update('year',e.target.value)} placeholder={tr('Año','Year')} aria-label={tr('Con gobierno registrado en el año','With a government recorded in the year')} aria-describedby="territory-year-help"/>
+                <small id="territory-year-help">{tr('Territorios con algún mandato registrado ese año.','Territories with a government recorded in that year.')}</small>
+              </div></div>
+              <div className="people-facet"><span>{tr('Historia','History')}</span><div>
+                <button type="button" aria-pressed={filters.history} onClick={()=>update('history',!filters.history)}>{tr('Con historia desarrollada','With a developed history')}</button>
+              </div></div>
+            </details>
           </div>
-          <p id="territory-year-help" className="territory-catalog-help">{tr('El año consulta los mandatos de la base. Sus intervalos indican la cobertura de esos registros.','The year searches the governments in the database. Their intervals indicate the coverage of those records.')}</p>
-          <div className="territory-catalog-options"><label><input type="checkbox" checked={filters.history} onChange={e=>update('history',e.target.checked)}/>{tr('Con historia desarrollada','With a developed history')}</label>{active&&<button type="button" onClick={reset}>{tr('Quitar filtros','Clear filters')}</button>}</div>
         </section>
-        <nav className="territory-catalog-regions" aria-label={tr('Explorar por región','Explore by region')}><button type="button" aria-pressed={!filters.region} onClick={()=>update('region','')}>{tr('Todas','All')}</button>{Object.keys(TERRITORY_REGIONS).filter(key=>facets.regiones[key]).map(key=><button key={key} type="button" aria-pressed={filters.region===key} onClick={()=>update('region',filters.region===key?'':key)}>{territoryLabel(TERRITORY_REGIONS,key,locale)}<small>{facets.regiones[key]}</small></button>)}</nav>
-        <div className="territory-catalog-results-head"><p role="status">{count} {count===1?tr('territorio','territory'):tr('territorios','territories')}{partial&&active?tr(' · resultados iniciales',' · initial results'):''}</p>{active?<span className="territory-catalog-order-hint">A–Z</span>:<div className="territory-catalog-view" role="group" aria-label={tr('Presentación','View')}>{[['regions',tr('Por regiones','By region')],['alphabetical','A–Z']].map(([key,label])=><button key={key} type="button" aria-pressed={view===key} onClick={()=>setView(key)}>{label}</button>)}</div>}</div>
+        <div className="territory-catalog-results-head"><p role="status">{count} {count===1?tr('territorio','territory'):tr('territorios','territories')}{partial&&active?tr(' · resultados iniciales',' · initial results'):''}</p>{active?<span className="territory-catalog-order-hint">A–Z</span>:<div className="people-order territory-catalog-view" role="group" aria-label={tr('Presentación','View')}>{[['regions',tr('Por regiones','By region')],['alphabetical','A–Z']].map(([key,label])=><button key={key} type="button" aria-pressed={view===key} onClick={()=>setView(key)}>{label}</button>)}</div>}</div>
         {partial&&<p className="territory-catalog-load" role="status">{loadError?<>{tr('No se ha podido cargar la lista ampliada. El índice A–Z contiene todas las fichas.','The extended list could not load. The A–Z index contains every record.')} <button type="button" onClick={()=>setRetry(n=>n+1)}>{tr('Reintentar','Retry')}</button></>:tr('Cargando el resto del catálogo… El índice A–Z ya está disponible.','Loading the rest of the catalogue… The A–Z index is already available.')}</p>}
         {regional?<div className="territory-catalog-sections">{Object.keys(TERRITORY_REGIONS).map(region=>{
           const members=territoryFeaturedOrder(filtered.filter(item=>item.regiones.includes(region)),locale,region);if(!members.length)return null;

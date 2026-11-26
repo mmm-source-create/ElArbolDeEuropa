@@ -37139,38 +37139,6 @@
     }
   },
   {
-    "key": "Ducado de Aquitania",
-    "es": "ducado-de-aquitania",
-    "en": "duchy-of-aquitaine",
-    "name": "Duchy of Aquitaine",
-    "summary": "",
-    "notes": {
-      "Jurisdicción con fases fechadas y fuentes localizadas en la revisión de Iberia e Italia. Un cambio de gobernante, dependencia u ocupación no cambia por sí solo su identidad.": "Jurisdiction with dated phases and sources located at Iberia and Italy's review. A change of ruler, dependence or occupation does not by itself change his or her identity."
-    },
-    "translatedSource": {
-      "sourceFile": "ducado-de-aquitania.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Duchy of Aquitaine",
-      "slug": "ducado-de-aquitania",
-      "clase": "Government",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "Jurisdiction with dated phases and sources located at Iberia and Italy's review. A change of ruler, dependence or occupation does not by itself change his or her identity.",
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
     "key": "Emirato de Mallorca",
     "es": "emirato-de-mallorca",
     "en": "emirate-of-majorca",

@@ -15814,7 +15814,7 @@
       "clase": "gobierno",
       "naturaleza": "entidad",
       "componentes": [],
-      "nota": "Dominio condal y sus ramas; no principado del XIX.",
+      "nota": "Dominio condal y sus ramas; la línea principal es elevada a principado en 1779, sin mediatización anterior a 1800.",
       "resumen": "Dominio condal y sus ramas; no principado del XIX.",
       "sourceKeys": [
         "ieg1378",
@@ -15824,31 +15824,23 @@
         {
           "anio": 1200,
           "texto": "Dominio condal y sus ramas; no principado del XIX."
-        }
-      ],
-      "existing": false,
-      "mapFrom": 1200,
-      "mapThrough": 1778
-    },
-    "Principado de Leiningen": {
-      "clase": "gobierno",
-      "naturaleza": "entidad",
-      "componentes": [],
-      "nota": "Elevación de la línea principal, sin mediatización anterior a 1800.",
-      "resumen": "Elevación de la línea principal, sin mediatización anterior a 1800.",
-      "sourceKeys": [
-        "ieg1378",
-        "ieg1792"
-      ],
-      "evolucion": [
+        },
         {
           "anio": 1779,
           "texto": "Elevación de la línea principal, sin mediatización anterior a 1800."
         }
       ],
       "existing": false,
-      "mapFrom": 1779,
-      "mapThrough": 1793
+      "mapFrom": 1200,
+      "mapThrough": 1778,
+      "etapas": [
+        {
+          "clase": "principado",
+          "desde": 1779,
+          "hasta": 1793,
+          "nota": "Principado de la línea principal desde 1779."
+        }
+      ]
     },
     "Dominios de los Welf en Sajonia": {
       "clase": "gobierno",

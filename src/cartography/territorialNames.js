@@ -9,6 +9,13 @@ export const EDITORIAL_ALIASES = Object.freeze({
   "Principado de Beloózero": "Beloózero",
   "Principado de Pólotsk": "Pólotsk",
   "Principado de Antioquía": "Antioquía",
+  // El ducado de Aquitania es Aquitania: el mapa dibujaba dos capas a la vez con colores distintos.
+  "Ducado de Aquitania": "Aquitania",
+  // Cambios de rango de una misma entidad: una ficha con su etapa fechada.
+  "Obispado de Riga": "Arzobispado de Riga",
+  "Principado de Leiningen": "Condado de Leiningen",
+  // La República de Venecia es Venecia; su gobierno colectivo tardío va en la misma ficha que los dogos.
+  "República de Venecia": "Venecia",
   'Livonia polaca · Latgalia': 'Livonia polaca',
   'Lituania · voivodato de Polotsk': 'Lituania',
   'Rusia · ocupación de Polotsk': 'Rusia',
