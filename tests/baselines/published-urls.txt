@@ -787,6 +787,7 @@
 /en/person/andronikos-iii-palaiologos
 /en/person/angela-maria-caterina-d-este
 /en/person/angelina-arianiti
+/en/person/anna-abashidze
 /en/person/anna-caterina-gonzaga
 /en/person/anna-colonna
 /en/person/anna-d-este
@@ -1068,6 +1069,7 @@
 /en/person/braccio-da-montone
 /en/person/burcardo-v-de-hohenberg
 /en/person/burchard-v-of-hohenberg
+/en/person/burdukhan-of-alania
 /en/person/callixtus-iii
 /en/person/camilla-barbadori
 /en/person/camillo-pamphilj
@@ -1351,6 +1353,7 @@
 /en/person/daniel-from-moscow
 /en/person/daniel-of-moscow
 /en/person/dante-alighieri
+/en/person/darejan-dadiani
 /en/person/darejan-of-kakheti
 /en/person/daumantas-of-pskov
 /en/person/david-datuna-of-kakheti
@@ -1875,6 +1878,7 @@
 /en/person/germaine-of-foix
 /en/person/gertrude-of-merania
 /en/person/gertrudis-of-hohenberg
+/en/person/ghias-ad-din
 /en/person/gian-galeazzo-sforza
 /en/person/gian-galeazzo-visconti
 /en/person/gian-gastone-of-tuscany
@@ -1942,6 +1946,7 @@
 /en/person/guy-of-brittany
 /en/person/guy-of-dampierre
 /en/person/guy-of-lusignan
+/en/person/gvantsa-kakhaberidze
 /en/person/haakon-iii-of-norway
 /en/person/haakon-iv-of-norway
 /en/person/haakon-v-of-norway
@@ -2276,6 +2281,7 @@
 /en/person/jelisava-nemanjic
 /en/person/jeremi-wisniowiecki
 /en/person/jerome-bonaparte
+/en/person/jeronimo-de-ayanz-y-beaumont
 /en/person/jesse-of-kartli
 /en/person/joachim-frederick-of-brandenburg
 /en/person/joachim-i-nestor-of-brandenburg
@@ -2571,7 +2577,9 @@
 /en/person/latcu-of-moldova
 /en/person/laudomia-piccolomini
 /en/person/laudomy-acciaiuoli
+/en/person/laura-dianti
 /en/person/laura-marsili
+/en/person/laura-martinozzi
 /en/person/lazar-brankovic
 /en/person/lazar-hrebeljanovic
 /en/person/leo-i-of-cilician-armenia
@@ -2982,6 +2990,7 @@
 /en/person/marquis-de-lafayette
 /en/person/martha-of-armagnac
 /en/person/martim-afonso-teles-de-meneses
+/en/person/martin-cortes-de-albacar
 /en/person/martin-de-azpilcueta
 /en/person/martin-i-of-aragon
 /en/person/martin-i-of-sicily
@@ -3063,6 +3072,7 @@
 /en/person/maximilian-iii-of-austria
 /en/person/maximilian-iv-joseph-of-bavaria
 /en/person/maximilian-philip-hieronymus-of-bavaria-leuchtenberg
+/en/person/maximilian-sforza
 /en/person/maximilien-robespierre
 /en/person/mayor-alfonso-de-meneses
 /en/person/mayor-guillen-de-guzman
@@ -3457,6 +3467,7 @@
 /en/person/rudolf-iv-of-austria
 /en/person/rupert-ii-of-the-palatinate
 /en/person/rupert-of-germany
+/en/person/rusudan-of-circassia
 /en/person/rusudan-of-georgia
 /en/person/ruxandra-rares
 /en/person/sad-of-granada
@@ -3680,6 +3691,7 @@
 /en/person/treniota
 /en/person/troggia-gazela
 /en/person/tube-mechthid
+/en/person/tuta-gurieli
 /en/person/tvrtko-i-of-bosnia
 /en/person/tvrtko-ii-of-bosnia
 /en/person/ugone-ii-of-arborea
@@ -7143,6 +7155,7 @@
 /es/persona/andronico-iii-paleologo
 /es/persona/angela-maria-caterina-de-este
 /es/persona/angelina-arianiti
+/es/persona/anna-abashidze
 /es/persona/anna-colonna
 /es/persona/anna-jablonowska
 /es/persona/annabella-drummond
@@ -7333,6 +7346,7 @@
 /es/persona/bouchard-de-avesnes
 /es/persona/braccio-da-montone
 /es/persona/burcardo-v-de-hohenberg
+/es/persona/burdukhan-de-alania
 /es/persona/calinichia-de-valaquia
 /es/persona/calixto-iii
 /es/persona/camilla-barbadori
@@ -7605,6 +7619,7 @@
 /es/persona/dan-ii-de-valaquia
 /es/persona/daniel-de-moscu
 /es/persona/dante-alighieri
+/es/persona/darejan-dadiani
 /es/persona/darejan-de-kajetia
 /es/persona/daumantas-de-pskov
 /es/persona/david-datuna-de-kajetia
@@ -8114,6 +8129,7 @@
 /es/persona/germana-de-foix
 /es/persona/gertrudis-de-hohenberg
 /es/persona/gertrudis-de-merania
+/es/persona/ghias-ad-din
 /es/persona/gian-galeazzo-sforza
 /es/persona/gian-galeazzo-visconti
 /es/persona/gian-gastone-de-toscana
@@ -8224,6 +8240,7 @@
 /es/persona/gustavo-iv-adolfo-de-suecia
 /es/persona/guttorm-de-noruega
 /es/persona/guy-de-bretana
+/es/persona/gvantsa-kakhaberidze
 /es/persona/haakon-iii-de-noruega
 /es/persona/haakon-iv-de-noruega
 /es/persona/haakon-v-de-noruega
@@ -8509,6 +8526,7 @@
 /es/persona/jelisava-nemanjic
 /es/persona/jeremi-wisniowiecki
 /es/persona/jeronimo-bonaparte
+/es/persona/jeronimo-de-ayanz-y-beaumont
 /es/persona/jesse-de-kartli
 /es/persona/joan-fitzgerald
 /es/persona/joan-fitzgerald-condesa-de-ormond
@@ -8818,7 +8836,9 @@
 /es/persona/latcu-de-moldavia
 /es/persona/laudomia-acciaiuoli
 /es/persona/laudomia-piccolomini
+/es/persona/laura-dianti
 /es/persona/laura-marsili
+/es/persona/laura-martinozzi
 /es/persona/lazar-brankovic
 /es/persona/lazar-hrebeljanovic
 /es/persona/leon-i-de-armenia-cilicia
@@ -9245,6 +9265,7 @@
 /es/persona/marko-mrnjavcevic
 /es/persona/marques-de-la-fayette
 /es/persona/martin-alfonso-tellez-de-meneses
+/es/persona/martin-cortes-de-albacar
 /es/persona/martin-de-azpilcueta
 /es/persona/martin-el-joven-de-sicilia
 /es/persona/martin-i
@@ -9297,6 +9318,7 @@
 /es/persona/maximiliano-iii-de-austria
 /es/persona/maximiliano-iii-jose-de-baviera
 /es/persona/maximiliano-iv-jose-de-baviera
+/es/persona/maximiliano-sforza
 /es/persona/maximilien-robespierre
 /es/persona/mayor-alfonso-de-meneses
 /es/persona/mayor-guillen-de-guzman
@@ -9608,6 +9630,7 @@
 /es/persona/ruaidri-ua-conchobair
 /es/persona/ruperto-de-alemania
 /es/persona/ruperto-ii-del-palatinado
+/es/persona/rusudan-de-circasia
 /es/persona/rusudan-de-georgia
 /es/persona/ruxandra-rares
 /es/persona/saad-de-granada
@@ -9790,6 +9813,7 @@
 /es/persona/traidenis
 /es/persona/treniota
 /es/persona/troggia-gazela
+/es/persona/tuta-gurieli
 /es/persona/tvrtko-i-de-bosnia
 /es/persona/tvrtko-ii-de-bosnia
 /es/persona/ugone-ii-de-arborea

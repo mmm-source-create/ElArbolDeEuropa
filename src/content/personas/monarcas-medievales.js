@@ -246,9 +246,6 @@ export const MONARCAS_MEDIEVALES = Object.freeze({
   "SULEIMAN1OSM": {
     "resumen": "Sultán otomano durante la gran expansión territorial y cultural del imperio en el siglo XVI. Sus campañas en Hungría y el Mediterráneo lo convirtieron en el principal rival oriental de los Habsburgo."
   },
-  "LUCRECIABORJA": {
-    "resumen": "Hija de Alejandro VI y figura central de las alianzas dinásticas de los Borja. Tras varios matrimonios políticos se convirtió en duquesa de Ferrara y desarrolló una importante corte cultural."
-  },
   "BIRGERJARL": {
     "resumen": "Gran magnate y regente sueco asociado a la consolidación de la monarquía y a la expansión del poder real. La dinastía de sus descendientes dominaría Suecia durante generaciones."
   }

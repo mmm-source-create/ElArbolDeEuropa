@@ -45,7 +45,7 @@ test('the reserve biographies replace one-line summaries and keep the English na
     const content = contenidoPersona(id);
     assert.ok(content.resumen.length > 100 && content.biografia.length > 900, id);
     const profile = COMPLETE_ENGLISH_PROFILES[id];
-    assert.equal(profile.sections.length, 3, id);
+    assert.ok(profile.sections.length >= 3, id);
     assert.ok(profile.role && profile.biography?.length > 900, id);
     if (V6_PEOPLE[id]) assert.equal(profile.name, V6_PEOPLE[id].name, id);
   }

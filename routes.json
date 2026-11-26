@@ -241,6 +241,12 @@
   ],
   "redirects": [
     {"source":"/","destination":"/es","permanent":true},
+    {"source":"/es/persona/sancha-de-aragon","destination":"/es/persona/sancia-de-aragon","permanent":true,"workerFirst":false},
+    {"source":"/es/persona/sancha-de-aragon/","destination":"/es/persona/sancia-de-aragon","permanent":true,"workerFirst":false},
+    {"source":"/persona/sancha-de-aragon","destination":"/es/persona/sancia-de-aragon","permanent":true,"workerFirst":false},
+    {"source":"/persona/sancha-de-aragon/","destination":"/es/persona/sancia-de-aragon","permanent":true,"workerFirst":false},
+    {"source":"/en/person/sancha-of-aragon","destination":"/en/person/sancia-of-aragon","permanent":true,"workerFirst":false},
+    {"source":"/en/person/sancha-of-aragon/","destination":"/en/person/sancia-of-aragon","permanent":true,"workerFirst":false},
     {"source":"/es/territorio/senorio-de-ioannina","destination":"/es/territorio/despotado-de-ioannina","permanent":true,"workerFirst":false},
     {"source":"/en/territory/lordship-of-ioannina","destination":"/en/territory/despotate-of-ioannina","permanent":true,"workerFirst":false},
     {"source":"/es/territorio/obispado-de-riga","destination":"/es/territorio/arzobispado-de-riga","permanent":true,"workerFirst":false},

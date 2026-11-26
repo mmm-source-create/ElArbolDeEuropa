@@ -1,3 +1,4 @@
+import {PORTRAITS_636} from './imagenesPersonas636.js';
 import {PORTRAITS_622} from './imagenesPersonas622.js';
 import {PORTRAITS_605} from './imagenesPersonas605.js';
 import {PORTRAITS_607} from './imagenesPersonas607.js';
@@ -3124,6 +3125,7 @@ export const IMAGENES_PERSONAS = {
   ...PORTRAITS_615,
   ...PORTRAITS_613,
  ...PORTRAITS_622,
+ ...PORTRAITS_636,
 };
 
 export default IMAGENES_PERSONAS;

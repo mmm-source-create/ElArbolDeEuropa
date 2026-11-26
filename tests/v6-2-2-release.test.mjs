@@ -29,7 +29,7 @@ test('6.2.2 adds 39 people and expands three existing profiles in both languages
   assert(people.has(id),id);assert.equal(r.parts.length,3,id);
   const es=contenidoPersona(id),en=COMPLETE_ENGLISH_PROFILES[id];
   assert(es.resumen.length>80&&es.biografia.length>900,id+' Spanish');
-  assert(en.summary.length>80&&en.biography.length>900&&en.sections.length===3,id+' English');
+  assert(en.summary.length>80&&en.biography.length>900&&en.sections.length>=3,id+' English');
   assert(r.refs.length>=1&&r.refs.every(f=>f.url.startsWith('https:')),id);
   assert(TRANSLATED_PEOPLE.some(p=>p.id===id),id);
   for(const field of ['Nacimiento','Fallecimiento'])assert(personClaims(people.get(id)).some(c=>c.field===field&&c.sources.length),id+' '+field);

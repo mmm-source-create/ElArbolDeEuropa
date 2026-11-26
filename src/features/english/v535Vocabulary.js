@@ -1,3 +1,4 @@
+import {SOURCE_TITLES_636} from './sourceTitles636.js';
 import {SOURCE_TITLES_622} from './sourceTitles622.js';
 import {SOURCE_TITLE_TRANSLATIONS} from './sourceTitleTranslations.js';
 import {SOURCE_TITLES_616} from './sourceTitles616.js';
@@ -81,7 +82,7 @@ export const V535_SOURCE_TITLES = {
 export const englishSourceTitle = title => {
   if (!title) return title;
   const bare = title.replace(/ ↗$/, '');
-  const exact = SOURCE_TITLES_622[bare] || SOURCE_TITLE_TRANSLATIONS[bare] || V535_SOURCE_TITLES[bare] || SOURCE_TITLES_616[bare];
+  const exact = SOURCE_TITLES_636[bare] || SOURCE_TITLES_622[bare] || SOURCE_TITLE_TRANSLATIONS[bare] || V535_SOURCE_TITLES[bare] || SOURCE_TITLES_616[bare];
   return (exact || bare).replaceAll('Ficha de autoridad GND', 'GND authority record') + (bare === title ? '' : ' ↗');
 };
 

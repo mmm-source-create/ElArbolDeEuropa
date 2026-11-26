@@ -57,7 +57,8 @@ for(const batch of manifest.batches){
 
 const unique=(values,label)=>{const seen=new Set();for(const value of values){if(!value)errors.push(`${label}: empty value`);else if(seen.has(value))errors.push(`${label}: duplicate ${value}`);else seen.add(value);}};
 if(!V6_READY)errors.push('central V6 readiness is false');
-if(Object.keys(V6_PEOPLE).length!==2096)errors.push(`pending people total: ${Object.keys(V6_PEOPLE).length}/2096`);
+// 6.3.6: Sancha/Sancia of Aragon is one person; the retired URL redirects.
+if(Object.keys(V6_PEOPLE).length!==2095)errors.push(`pending people total: ${Object.keys(V6_PEOPLE).length}/2095`);
 if(V6_DYNASTIES.length!==493)errors.push(`pending dynasties total: ${V6_DYNASTIES.length}/493`);
 // 6.3.4–6.3.5: eight duplicate territory records were merged into their main entity.
 if(V6_TERRITORIES.length!==1032)errors.push(`pending territories total: ${V6_TERRITORIES.length}/1032`);

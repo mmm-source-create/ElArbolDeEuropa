@@ -34,6 +34,8 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 ## Resultados de revisión
 
+- [6.3.6: inventario de familias y fechas](audits/6.3.6-family-gaps.es.md) · [English](audits/6.3.6-family-gaps.en.md).
+
 - [6.0.20: 147 afirmaciones documentadas y casos pendientes](reports/6.0.20-documentacion.md).
 - [6.0.21: años que no coinciden con Medieval Lands](versiones/6.0.21-discrepancias.md).
 - [6.0.22: fechas comprobadas con varias fuentes](versiones/6.0.22-fechas.md).

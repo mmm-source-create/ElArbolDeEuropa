@@ -10,7 +10,6 @@ export const MINIBIOGRAFIAS_V523 = Object.freeze({
   "ALB3AUST": {"resumen": "Duque de Austria desde 1365. Por el tratado de Neuberg (1379) conservó la Austria propiamente dicha, mientras su hermano Leopoldo III recibía los demás territorios de la casa."},
   "ANNASAVOYBYZ": {"resumen": "Hija de Amadeo V de Saboya y esposa de Andrónico III Paleólogo. Fue regente por su hijo Juan V durante la guerra civil contra Juan Cantacuceno (1341–1347)."},
   "FRED2SAX": {"resumen": "Elector de Sajonia desde 1428, de la casa de Wettin. Gobernó con su hermano Guillermo, con quien libró la guerra fratricida sajona; sus hijos Ernesto y Alberto dividieron después los dominios."},
-  "HELENADRAGAS": {"resumen": "Hija del señor serbio Constantino Dragaš y esposa de Manuel II Paleólogo. Fue madre de los dos últimos emperadores bizantinos, Juan VIII y Constantino XI."},
   "ISABELLA2JER": {"resumen": "Reina de Jerusalén desde su nacimiento en 1212, hija de Juan de Brienne y María de Montferrato. Casada en 1225 con el emperador Federico II, murió al dar a luz a Conrado en 1228."},
   "GEORGEWILLIAMBRAND": {"resumen": "Elector de Brandeburgo y duque de Prusia desde 1619. Durante su gobierno Brandeburgo sufrió duramente la guerra de los Treinta Años, ocupado por suecos e imperiales."},
   "MICHAEL9PALA": {"resumen": "Hijo de Andrónico II, asociado al trono como coemperador. Dirigió campañas contra los turcos y la Compañía Catalana sin éxito, y murió antes que su padre en 1320."},
