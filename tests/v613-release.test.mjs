@@ -22,7 +22,7 @@ const EXISTING = ['SANTOTOMAS', 'ERASMOROT', 'GUTENBERG', 'DOMINGOSOTO', 'JANHUS
 test('the expansion adds 51 people of culture, science, Salamanca, revolutions and exploration', () => {
   assert.equal(NEW.length, 51);
   for (const id of ['COPERNICO', 'GALILEO', 'NEWTON', 'SHAKESPEARE', 'SORJUANA', 'JSBACH', 'MOZART', 'BEETHOVEN', 'FVITORIA', 'FSUAREZ', 'WATTYLER', 'NAPOLEON1', 'MARCOPOLO', 'COLON', 'ELCANO', 'HUMBOLDT']) assert.ok(people.has(id), id);
-  assert.deepEqual(people.get('OLIVERCROMWELL').gobiernos.map(g => [g.territorio, g.titulo, g.desde, g.hasta]), [['Inglaterra', 'Lord Protector', 1653, 1658]]);
+  assert.deepEqual(people.get('OLIVERCROMWELL').gobiernos.map(g => [g.territorio, g.titulo, g.desde, g.hasta]), [['Inglaterra', 'Lord Protector', 1653, 1658], ['Escocia', 'Lord Protector', 1653, 1658], ['Irlanda', 'Lord Protector', 1653, 1658]]); // 6.3.4: the three kingdoms of the Commonwealth
   assert.deepEqual(people.get('NAPOLEON1').gobiernos.map(g => [g.titulo, g.desde]), [['Primer cónsul', 1799]]);
   assert.equal(people.get('JANHUS').nac, 1369);
 });

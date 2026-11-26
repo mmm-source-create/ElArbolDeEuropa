@@ -13,6 +13,8 @@ export const LABELS_634 = {
 };
 
 export const NOTES_634 = {
+  'Rey de la corona croato-húngara, de la que forma parte Eslavonia, desde su coronación de 1385, con oposición de los partidarios de María.':
+    'King of the Croatian-Hungarian crown, which includes Slavonia, from his coronation in 1385, opposed by the supporters of Mary.',
   [ALTA_NOTA]: ALTA_EN,
   [BAJA_NOTA]: BAJA_EN,
   [ALTA_NOTA + SAXON]: ALTA_EN + SAXON_EN,
@@ -21,7 +23,6 @@ export const NOTES_634 = {
     'The Lusatias joined the Bohemian Confederation of 1619 that elected him king; occupied by the elector of Saxony in 1620.',
   'Reino de Eslavonia, unido a Croacia bajo los banes dentro de la Corona húngara; banes y duques se registran aparte.':
     'Kingdom of Slavonia, joined to Croatia under the bans within the Hungarian Crown; bans and dukes are recorded separately.',
-  'Duque de Eslavonia, Croacia y Dalmacia por delegación de Luis I.': 'Duke of Slavonia, Croatia and Dalmatia by delegation of Louis I.',
   'Heredera de Ramón Berenguer IV, con Forcalquier.': 'Heiress of Raymond Berengar IV, with Forcalquier.',
   'Conde de Provenza y Forcalquier por su matrimonio con Beatriz.': 'Count of Provence and Forcalquier through his marriage to Beatrice.',
   'Conserva Provenza y Forcalquier tras la muerte de Beatriz (1267).': 'Kept Provence and Forcalquier after Beatrice’s death (1267).',

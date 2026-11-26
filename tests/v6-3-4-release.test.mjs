@@ -31,11 +31,11 @@ test('los reyes de Bohemia gobiernan las Lusacias hasta la paz de Praga, sin ám
   assert.equal(TERRITORIOS['Baja Lusacia'].clase, 'margraviato');
 });
 
-test('cada rey de Hungría que gobierna Croacia gobierna también Eslavonia desde 1200', () => {
+test('cada rey de Hungría que reina en Croacia reina también en Eslavonia desde 1200', () => {
   for (const p of PERSONAS) {
     const gs = gobiernosDe(p);
     if (!gs.some(g => g.territorio === 'Hungría')) continue;
-    for (const g of gs.filter(g => g.territorio === 'Croacia' && g.hasta >= 1200)) {
+    for (const g of gs.filter(g => g.territorio === 'Croacia' && g.hasta >= 1200 && g.condicion !== 'gobierno delegado')) {
       assert.ok(gs.some(s => s.territorio === 'Eslavonia' && s.desde === Math.max(1200, g.desde) && s.hasta === g.hasta), `${p.id} ${g.desde}`);
     }
   }

@@ -84,8 +84,8 @@ test('both editions retain the same identities, filters and native HTML director
     const preview=catalogPreview(data,{tipo:'territorios',locale,full:'/unused.json'});
     const doc=new JSDOM(renderToStaticMarkup(React.createElement(TerritoryCatalog,{locale,initialData:preview,embedded:true}))).window.document;
     assert.equal(doc.querySelectorAll('h1').length,1);
-    assert.equal(doc.querySelectorAll('#territory-directory li a').length,1041);
-    assert.equal(new Set([...doc.querySelectorAll('#territory-directory li a')].map(a=>a.getAttribute('href'))).size,1041);
+    assert.equal(doc.querySelectorAll('#territory-directory li a').length,1038); // 6.3.4: three duplicates merged
+    assert.equal(new Set([...doc.querySelectorAll('#territory-directory li a')].map(a=>a.getAttribute('href'))).size,1038);
     assert.equal(doc.querySelectorAll('select').length,3);
     assert.equal(doc.querySelectorAll('.territory-catalog-region').length,10);
     if(locale==='en')assert.doesNotMatch(doc.querySelector('.territory-catalog-controls').textContent,/Naturaleza|Península|Con gobierno|Quitar filtros/);

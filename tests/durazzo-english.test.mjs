@@ -1,4 +1,5 @@
 import test from 'node:test';
+import preservationCorrections from '../data/cartography/germany-completion-preservation-corrections.json' with {type:'json'};
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {PERSONAS} from '../src/data/personas.js';
@@ -72,13 +73,15 @@ test('a delegated duke does not change Croatia into a sovereign duchy',()=>{
 
 test('the German preservation check permits only the reviewed Butrint change and keeps its original baseline',()=>{
   const current=new Map([['Butrint',[{entityId:'Nápoles'}]],['Other',[{entityId:'Other'}]]]);
-  const before=originalPreservationMap(current,1384);
+  // 6.3.4: other reviewed corrections (merged eastern identities) refer to cells outside this fixture.
+  const butrint=preservationCorrections.filter(c=>c.locationId==='Butrint');
+  const before=originalPreservationMap(current,1384,butrint);
   assert.equal(current.get('Butrint')[0].entityId,'Nápoles');
   assert.equal(before.get('Butrint')[0].entityId,'Epiro');
-  assert.deepEqual(originalPreservationMap(current,1381),current);
-  assert.throws(()=>originalPreservationMap(new Map([['Butrint',[{entityId:'Venecia'}]]]),1384),/Unexpected preservation correction/);
+  assert.deepEqual(originalPreservationMap(current,1381,butrint),current);
+  assert.throws(()=>originalPreservationMap(new Map([['Butrint',[{entityId:'Venecia'}]]]),1384,butrint),/Unexpected preservation correction/);
   const unexpected=new Map(current);unexpected.set('Other',[{entityId:'Changed'}]);
-  assert.notEqual(preservationHash(originalPreservationMap(unexpected,1384)),preservationHash(before));
+  assert.notEqual(preservationHash(originalPreservationMap(unexpected,1384,butrint)),preservationHash(before));
 });
 
 test('requested heraldry keeps credited source drawings and correct Nasrid dates',()=>{
