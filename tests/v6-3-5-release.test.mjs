@@ -6,6 +6,9 @@ import {TERRITORIOS} from '../src/data/territorios.js';
 import {territorialIdentity} from '../src/cartography/territorialIdentity.js';
 import {europeMosaicAt} from '../src/cartography/europePanorama.js';
 import {DISTINCT_TERRITORY_NAMES, territoryNameKey} from '../src/data/territoryNameCollisions.js';
+import {governmentTableAt} from '../src/cartography/europePanorama.js';
+import {COLLECTIVE_AUTHORITIES} from '../src/cartography/politicalMapIndex.js';
+import {conciseMapNote} from '../src/cartography/mapNotes.js';
 
 const read = name => JSON.parse(fs.readFileSync(`data/cartography/${name}.json`, 'utf8'));
 const data = read('corridor-locations');
@@ -45,6 +48,7 @@ test('cambios de rango de una misma entidad: una ficha con etapas y redireccione
     ['Ducado de Aquitania', 'Aquitania', 'ducado-de-aquitania', 'duchy-of-aquitaine', 'aquitania', 'aquitaine'],
     ['Obispado de Riga', 'Arzobispado de Riga', 'obispado-de-riga', 'bishopric-of-riga', 'arzobispado-de-riga', 'archbishopric-of-riga'],
     ['Principado de Leiningen', 'Condado de Leiningen', 'principado-de-leiningen', 'principality-of-leiningen', 'condado-de-leiningen', 'county-of-leiningen'],
+    ['República de Venecia', 'Venecia', 'republica-de-venecia', 'republic-of-venice', 'venecia', 'venice'],
     ['Señorío de Ioannina', 'Despotado de Ioannina', 'senorio-de-ioannina', 'lordship-of-ioannina', 'despotado-de-ioannina', 'despotate-of-ioannina'],
   ]) {
     assert.equal(TERRITORIOS[gone], undefined, gone);
@@ -77,4 +81,35 @@ test('ninguna ficha nueva coincide con otra sin una razón histórica documentad
   for (const entry of DISTINCT_TERRITORY_NAMES.filter(e => e.merged)) {
     assert.equal(entry.names.filter(name => TERRITORIOS[name]).length, 1, `${entry.names.join(' | ')}: debe quedar una sola ficha`);
   }
+});
+
+test('la República de Venecia y sus dogos son una sola entidad en el cuadro de gobiernos', () => {
+  const venice = COLLECTIVE_AUTHORITIES.find(c => c.nombre === 'República de Venecia');
+  assert.equal(venice.territorio, 'Venecia');
+  const rows = governmentTableAt(PERSONAS, 1700, COLLECTIVE_AUTHORITIES).filter(row => (row.collectives || []).includes(venice) || row.governments.some(g => g.mandates.some(m => m.territorio === 'Venecia')));
+  assert.equal(rows.length, 1, 'una sola fila para Venecia');
+  assert.ok(rows[0].collectives.includes(venice));
+});
+
+test('las notas del mapa común se quedan con lo que importa en el año elegido', () => {
+  assert.equal(conciseMapNote('Comuna, señorío y ducado estenses; intervalo comunal de 1306–1336. La muerte de Alfonso IV de 1662 o Francesco I de 1658 no extingue el territorio.', 1594), 'Comuna, señorío y ducado estenses.');
+  assert.equal(conciseMapNote('Ducado de Parma y Piacenza, con sucesiones Farnese, Borbón y austríaca antes del retorno borbónico de 1748. Conserva la jurisdicción durante las sucesiones y no desaparece desde 1695.', 1594), 'Ducado de Parma y Piacenza.');
+  assert.equal(conciseMapNote('Carmagnola conquistada por Saboya en 1588. El tratado de Lyon de 1601 no retrasa trece años su incorporación efectiva.', 1600), 'Carmagnola conquistada por Saboya en 1588.');
+  assert.equal(conciseMapNote('Arzobispado de Riga: Obispado de Riga, 1201–1254.  Contornos comarcales aproximados; la datación regional no acredita la fundación de cada localidad ni una frontera municipal exacta.', 1230), null);
+  const map = fs.readFileSync('src/features/atlas/MapaEuropa.jsx', 'utf8');
+  assert.match(map, /mapNote\(entry\.mapNote\)/);
+  assert.match(map, /if\(en&&text===value\)return null/, 'una nota sin traducir no aparece en español en el mapa inglés');
+});
+
+test('Google encuentra un favicon de lado múltiplo de 48 px y /favicon.ico', () => {
+  const shell = fs.readFileSync('index.html', 'utf8');
+  for (const size of [48, 96, 192]) {
+    assert.match(shell, new RegExp(`rel="icon" type="image/png" sizes="${size}x${size}" href="/brand/favicon-${size}.png"`));
+    const png = fs.readFileSync(`public/brand/favicon-${size}.png`);
+    assert.equal(png.readUInt32BE(16), size);
+    assert.equal(png.readUInt32BE(20), size);
+  }
+  const ico = fs.readFileSync('public/favicon.ico');
+  assert.equal(ico.readUInt16LE(2), 1, 'icono');
+  assert.equal(ico.readUInt8(6), 48, 'la primera imagen mide 48 px');
 });

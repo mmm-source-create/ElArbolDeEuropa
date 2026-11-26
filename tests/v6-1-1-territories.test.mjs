@@ -84,9 +84,11 @@ test('both editions retain the same identities, filters and native HTML director
     const preview=catalogPreview(data,{tipo:'territorios',locale,full:'/unused.json'});
     const doc=new JSDOM(renderToStaticMarkup(React.createElement(TerritoryCatalog,{locale,initialData:preview,embedded:true}))).window.document;
     assert.equal(doc.querySelectorAll('h1').length,1);
-    assert.equal(doc.querySelectorAll('#territory-directory li a').length,1034); // 6.3.4–6.3.5: seven duplicates merged
-    assert.equal(new Set([...doc.querySelectorAll('#territory-directory li a')].map(a=>a.getAttribute('href'))).size,1034);
-    assert.equal(doc.querySelectorAll('select').length,3);
+    assert.equal(doc.querySelectorAll('#territory-directory li a').length,1033); // 6.3.4–6.3.5: eight duplicates merged
+    assert.equal(new Set([...doc.querySelectorAll('#territory-directory li a')].map(a=>a.getAttribute('href'))).size,1033);
+    // 6.3.5: region and entity kind are chips; only the type stays a select, inside «More filters».
+    assert.equal(doc.querySelectorAll('select').length,1);
+    assert.ok(doc.querySelector('.territory-catalog-more select'));
     assert.equal(doc.querySelectorAll('.territory-catalog-region').length,10);
     if(locale==='en')assert.doesNotMatch(doc.querySelector('.territory-catalog-controls').textContent,/Naturaleza|Península|Con gobierno|Quitar filtros/);
   }
@@ -116,11 +118,12 @@ test('a failed extended list remains recoverable and filters use the loaded full
     assert.equal(document.querySelectorAll('#territory-directory li a').length,2);
     await act(async()=>document.querySelector('.territory-catalog-load button').click());
     assert.equal(document.querySelector('.territory-catalog-load'),null);assert.equal(calls,2);
-    const select=document.querySelectorAll('select')[2];
+    // 6.3.5: type is the folded filter's only select; clearing is the facets' link.
+    const select=document.querySelector('.territory-catalog-select');
     await act(async()=>{select.value='condado';select.dispatchEvent(new dom.window.Event('change',{bubbles:true}));});
     assert.equal(document.querySelector('.territory-catalog-results-head p').textContent,'1 territorio');
     assert.equal(document.querySelector('.territory-catalog-card h3').textContent,'Condado de Borgoña');
-    await act(async()=>document.querySelector('.territory-catalog-options button').click());
+    await act(async()=>document.querySelector('.people-facets-clear').click());
     assert.equal(document.querySelector('.territory-catalog-results-head p').textContent,'2 territorios');
   }finally{
     await act(async()=>app.unmount());dom.window.close();

@@ -35,6 +35,7 @@ import {
 import { reinadosActivos } from "../../domain/government/reigns.js";
 import {authorityFill} from './authorityPatterns.js';
 import {englishLabel,englishNote} from '../english/v6/atlasPresentation.js';
+import {conciseMapNote} from '../../cartography/mapNotes.js';
 
 const MAP_ZOOM_FACTOR = 0.82;
 const MAP_MIN_ZOOM = 0.015;
@@ -79,6 +80,8 @@ function viewBoxString(box) {
 // coloreado imperativo de los territorios.
 export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, onSelectPersona, initialViewport = null, onViewportChange, panorama = false, locale = 'es' }) {
   const en=locale==='en',tr=(es,english)=>en?english:es,term=value=>en?englishLabel(value):value,note=value=>en?englishNote(value):value;
+  // 6.3.5: a layer note keeps only what concerns the chosen year; an untranslated one is not shown in English.
+  const mapNote=value=>{if(!value)return null;const text=en?englishNote(value):value;if(en&&text===value)return null;return conciseMapNote(text,anioGlobal,locale);};
   // EU V Locations is the Atlas map. The old Provinces SVG remains only as
   // the geometric source for the migration crosswalk.
   const containerRef = useRef(null);
@@ -544,7 +547,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
             {entry.government?.soberano && <p>{tr('En nombre de','On behalf of')} {PERSONAS.find(p => p.id === entry.government.soberano)?.nombre || entry.government.soberano}. {tr('El gobierno superior se consulta en su ficha.','The higher government is available in that profile.')}</p>}
             {entry.kind === 'regional' && <small>{tr('La jurisdicción tiene fuentes territoriales; el mandato de su gobernante en este año sigue pendiente de documentar.','The jurisdiction has territorial sources; its ruler’s mandate for this year still awaits documentation.')}</small>}
             {[...new Set((entry.governments||[entry.government]).map(g=>g?.nota).filter(Boolean))].map(text=><p key={text}>{note(text)}</p>)}
-            {entry.mapNote && <p>{note(entry.mapNote)}</p>}
+            {mapNote(entry.mapNote) && <p>{mapNote(entry.mapNote)}</p>}
             {[...new Map((entry.mapSources || []).map(mapSourceReference).map(source => [source.url, source])).values()].map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{term(source.title || source.label || tr('Fuente territorial','Territorial source'))}{source.locator ? ` · ${source.locator}` : ''}</a>)}
             {entry.collective && <p>{note(entry.collective.nota)}</p>}
             {entry.collective?.fuente && <a href={entry.collective.fuente.url} target="_blank" rel="noreferrer">{term(entry.collective.fuente.title)}</a>}
@@ -559,7 +562,7 @@ export function MapaEuropa({ seleccion, anioGlobal = null, onSelectTerritorio, o
           </li>)}</ul></details>}
           {pilotContext.length > 0 ? <ul>{pilotContext.map(entry => <li key={`${entry.name}-${entry.corridor}`}>
           <strong>{term(entry.name)}</strong><div>{term(entry.corridor)}</div>
-          {entry.note && <p>{note(entry.note)}</p>}
+          {mapNote(entry.note) && <p>{mapNote(entry.note)}</p>}
           {entry.activeReason && <p>{note(entry.activeReason)}</p>}
           {entry.source && <a href={entry.source} target="_blank" rel="noreferrer">{tr('Fuente histórica de la capa','Historical layer source')}</a>}
           {entry.correction && <><p>{note(entry.correction.reason)}</p><a href={entry.correction.source} target="_blank" rel="noreferrer">{tr('Fuente de la corrección','Correction source')}</a>{entry.correction.supportingSources?.map(mapSourceReference).map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{term(source.title || source.label || tr('Fuente complementaria','Supporting source'))}</a>)}</>}

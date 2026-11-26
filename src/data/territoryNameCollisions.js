@@ -31,7 +31,7 @@ export const DISTINCT_TERRITORY_NAMES = Object.freeze([
   {names:['Clermont','Obispado de Clermont'], reason:'Clermont-en-Beauvaisis (condado) y el obispado de Clermont en Auvernia: lugares distintos.'},
   {names:['Turena','Vizcondado de Turena'], reason:'Touraine (condado y ducado del Loira) y el vizcondado de Turenne (Lemosín): lugares distintos con el mismo nombre en español.'},
   {names:['Banato de Temes','Condado de Temes'], reason:'El condado medieval húngaro y el Banato habsbúrgico de 1718–1778, con otra administración y otros límites.'},
-  {names:['República de Venecia','Venecia'], reason:'Pendiente de decisión: «República de Venecia» es el gobierno colectivo tardío (1651–1796) y «Venecia» lleva los mandatos de los dogos.', pending:true},
+  {names:['República de Venecia','Venecia'], reason:'Ninguna: fusionadas en 6.3.5; el gobierno colectivo de la República (1651–1796) va en la ficha de Venecia junto a los dogos.', merged:true},
   {names:['Castilla','Corona de Castilla'], reason:'El reino y la corona compuesta (1230) que reúne Castilla, León y sus reinos.'},
   {names:['Aragón','Corona de Aragón'], reason:'El reino y la corona compuesta (1137) con Cataluña, Valencia y Mallorca.'},
   {names:['Borgoña','Condado de Borgoña'], reason:'El ducado de Borgoña (Dijon) y el condado de Borgoña o Franco Condado (Besanzón).'},

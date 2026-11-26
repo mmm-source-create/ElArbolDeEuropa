@@ -1783,9 +1783,6 @@ const aliases={
   "Comuna y República de Florencia": [
     "Florencia"
   ],
-  "República de Venecia": [
-    "Venecia"
-  ],
   "Estados de Holanda": [
     "Holanda"
   ],

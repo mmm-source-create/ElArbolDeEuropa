@@ -9,8 +9,8 @@
     "pendingPeople": 2096,
     "dynasties": 519,
     "pendingDynasties": 493,
-    "territories": 1034,
-    "pendingTerritories": 1033,
+    "territories": 1033,
+    "pendingTerritories": 1032,
     "availableStories": 22,
     "pendingAvailableStories": 18,
     "plannedStoryCards": 9
@@ -581,7 +581,6 @@
         "senorio-de-carpatos",
         "beylicato-de-hamid",
         "despotado-de-arta",
-        "republica-de-venecia",
         "senorio-de-lesbos",
         "sultanato-de-rum",
         "hetmanato-cosaco",

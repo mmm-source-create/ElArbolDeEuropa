@@ -247,6 +247,8 @@
     {"source":"/en/territory/bishopric-of-riga","destination":"/en/territory/archbishopric-of-riga","permanent":true,"workerFirst":false},
     {"source":"/es/territorio/principado-de-leiningen","destination":"/es/territorio/condado-de-leiningen","permanent":true,"workerFirst":false},
     {"source":"/en/territory/principality-of-leiningen","destination":"/en/territory/county-of-leiningen","permanent":true,"workerFirst":false},
+    {"source":"/es/territorio/republica-de-venecia","destination":"/es/territorio/venecia","permanent":true,"workerFirst":false},
+    {"source":"/en/territory/republic-of-venice","destination":"/en/territory/venice","permanent":true,"workerFirst":false},
     {"source":"/es/territorio/ducado-de-aquitania","destination":"/es/territorio/aquitania","permanent":true,"workerFirst":false},
     {"source":"/en/territory/duchy-of-aquitaine","destination":"/en/territory/aquitaine","permanent":true,"workerFirst":false},
     {"source":"/es/territorio/principado-de-beloozero","destination":"/es/territorio/beloozero","permanent":true,"workerFirst":false},
