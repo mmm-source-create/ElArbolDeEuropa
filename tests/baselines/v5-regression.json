@@ -3,7 +3,7 @@
     "counts": {
       "governments": 3119,
       "people": 2904,
-      "territories": 1034
+      "territories": 1033
     },
     "geometry": {
       "inventory": "69e492c964586e10c072eaf6e6eebe567c2d7d98b2605423176417066dd3696a",
@@ -3709,7 +3709,6 @@
       "República de Nóvgorod": "ef665f32d6e2428158306626134b25e5db28f1ab1fd7b0f6508c429c3e19e045",
       "República de Pisa": "001fa692a9f8a3079c26bb9cc7da85c55fb037d0a73d06a11a1ae5a8e49fe8e6",
       "República de Pskov": "06d9699d406d22aa7044ea45269d376d89caf2700075e96513d9c2d4f2078d86",
-      "República de Venecia": "b7a4ffc4b597a9a835f49f767222c506840cc56bd7d9b90b51e16eddf1f10a43",
       "República francesa": "3fa76e5132d464ea0a4080bc04a030cc3ee507622caa7269c90df2deb173ce7c",
       "Rethel": "919b344cf7daac6c567b9f55deed6743449818b4d7d319af58aaff5963e58f8c",
       "Richmond": "8b934d667170e2ee06475da52e8c0a1bc9d8954b8c05410df688a74614b1c075",
@@ -8771,16 +8770,16 @@
     "counts": {
       "catalogo": 7,
       "dinastia": 522,
-      "english": 5030,
+      "english": 5029,
       "historia": 560,
       "persona": 2904,
-      "territorio": 1034
+      "territorio": 1033
     },
     "meta": {
       "dynastyCount": 522,
       "personCount": 2904,
       "storyCount": 60,
-      "territoryCount": 1034
+      "territoryCount": 1033
     },
     "pages": {
       "/en/": "1124167a4473a3a5b4cb6ed0b657910edd295de1dbc364b7a1d49c0d28dbe90d",
@@ -12779,7 +12778,7 @@
       "/en/story/visconti-and-sforza/chapter/7": "798ce58837d7abd6c9fb85aeddb6936dd9f51ee75f384f668996ccaa96b434a3",
       "/en/story/visconti-and-sforza/chapter/8": "f2796c9312ab7310e394eafd2be449b08bc3575418a3575b53d63ed356dbd684",
       "/en/story/visconti-and-sforza/chapter/9": "52bde1ab4480a6dd6ac8c46d9a33388b80ba3a777b99acdd3c9d02eb6ef501e6",
-      "/en/territories": "f86c12735b35a4dc6d16f59fa0db411d758678e281862f258a41ca5780549f1e",
+      "/en/territories": "e9431a95cdc6d02d25b5c03885103d4a63040a1ba7f2f174a8068eaa37f02b6b",
       "/en/territory/abbey-of-disentis-and-lordships-of-the-upper-rhine": "c0a748426a94c2300d86adbb93bcac4017a787d21f3fd82dbec89b4db14cdcbd",
       "/en/territory/abbey-of-saint-claude": "ce52211fdca56cccc2407d3f962fa77ee727a46b6c762d43608c9d065192b9b5",
       "/en/territory/achaea": "5798c99ec011ee7543c3d85008f92fcef26093fcac9888459f60beb33d90f7c8",
@@ -13623,7 +13622,6 @@
       "/en/territory/republic-of-novgorod": "913208b4a7ebb108243442f46139c85a8592f35372b04613d3f616224cd2c2c4",
       "/en/territory/republic-of-pisa": "6a6a6050d58f83cc908704e1c7e2d03ace0408ccde11b23f860031059b6e08a1",
       "/en/territory/republic-of-pskov": "77db23883e8b94b5d60243b275a523105eac7f2e1b6a0efc85b96a08af1e2b69",
-      "/en/territory/republic-of-venice": "d34bdebdbf9f40de3bc4c4ec946128e9e88c0c5a21cdb0d720f8f47b5fdce886",
       "/en/territory/rethel": "71be8e76eee75fea56d8cbfe5938f1fdefee1e7d943ed6610b5392f5a1fd6a41",
       "/en/territory/richmond": "07078a562dec46d8462a33a184f85617696ec8210dd3d0438cf53caa6d0a8010",
       "/en/territory/riedesel-lordship-in-lauterbach": "4f1ba90a9fa508201dcdf20f93c7f6dd5181e98980eebf7bd056c4289ce46080",
@@ -13814,7 +13812,7 @@
       "/en/territory/zurich": "47b7f50bc18ec5009e2e97d9acb32f8082f7a9f5ca03cf310dbbd0f1ae00170d",
       "/en/territory/zurich-imperial-city-and-fraumunster": "c6ab7a6d058f3e9da5a2b1fab6e9d841b0bf74d3f44b6db2972945d4a802df97",
       "/en/territory/zurich-under-the-zahringer": "11be0c458e580119efcef132fd4e0601d993cd7ebc68e58292520ea034e86c52",
-      "/es": "8156525a39b9fbfca70f0f6019d06f9a96ffb59dcee45a2264622ce6538b217a",
+      "/es": "3c84a82c1b2aeec663c68dd6757fccb160b510e638402276895610724bfd926e",
       "/es/dinastia/acciaiuoli": "96401fc5ad6ae0fffac6b29babc90b09e9bd598031513947545f93f255502205",
       "/es/dinastia/alagon": "87137780e614711d9233c5388eb23f0bea978e351b47b081790d22c03694c22e",
       "/es/dinastia/alania": "4ef7fcc54e925b5081c20d7fbd59807da6418505ff285d71b590ffe24a7d575b",
@@ -18591,7 +18589,6 @@
       "/es/territorio/republica-de-novgorod": "46179f58af2a1d090d2b68760fd2ea614c8ff29187392f8d921ff92001bb5a2d",
       "/es/territorio/republica-de-pisa": "1e1054ffee7ca7d631c96d62e428ad831f56741c8fef8399ea6b091559fba05a",
       "/es/territorio/republica-de-pskov": "ee39b757161d2a629bad984db1d059c06679f442c49262f217bf4bcc8400f159",
-      "/es/territorio/republica-de-venecia": "b5ddafc7aba5c7689455add4a9f14cd8cf7cb81c6d2ba77a59ec558fd3d42df5",
       "/es/territorio/republica-francesa": "e2285b4fd80ab38ce2c54311543b1d87401011113821f52ea03d308719a68b55",
       "/es/territorio/republica-helvetica": "0e2ad3cb84ebb116e1ac1fe158162f85f0c2223af5ea2c6e8500e682bd389c18",
       "/es/territorio/republica-ligur": "f7754aa2e929f755e0afad7158350558741397e784f06b71039f552ae42076a0",
@@ -18839,7 +18836,7 @@
       "/es/territorio/zurich": "4f35cb252a4281ce27401f71011b75383b8a9212f213c292ca29a1c371b2e4b9",
       "/es/territorio/zurich-bajo-los-zahringer": "510503e9d88e0bb8e76e988fb43c35e405bd73efd1869a7a9d4352ca34b2bbf4",
       "/es/territorio/zurich-ciudad-imperial-y-fraumunster": "d05dd827a220f89e82473ba8ad9b7d71c86f91630dec7b465a10754ffa8a5ced",
-      "/es/territorios": "53010600eeadb320b2c636cb9a3707f29c89fd9b4bedbbf61eb1cf05aa9327af"
+      "/es/territorios": "209de2b240a416864dc101db65074badea61037edee0d3edc12b0ee523f7b032"
     },
     "paths": [
       "/en",
@@ -23682,7 +23679,6 @@
       "/en/territory/republic-of-novgorod",
       "/en/territory/republic-of-pisa",
       "/en/territory/republic-of-pskov",
-      "/en/territory/republic-of-venice",
       "/en/territory/rethel",
       "/en/territory/richmond",
       "/en/territory/riedesel-lordship-in-lauterbach",
@@ -28655,7 +28651,6 @@
       "/es/territorio/republica-de-novgorod",
       "/es/territorio/republica-de-pisa",
       "/es/territorio/republica-de-pskov",
-      "/es/territorio/republica-de-venecia",
       "/es/territorio/republica-francesa",
       "/es/territorio/republica-helvetica",
       "/es/territorio/republica-ligur",
@@ -28907,6 +28902,6 @@
     ],
     "tree": "3eaff6970de1aa4d92e2782e4dc30252d3548f0337120bdcd2640f90ce5ec0bd"
   },
-  "reason": "6.3.5: Aquitania, Riga, Leiningen e Ioannina en una ficha por entidad",
+  "reason": "6.3.5: Venecia en una ficha, notas del mapa por año e índice de territorios",
   "schema": 1
 }
