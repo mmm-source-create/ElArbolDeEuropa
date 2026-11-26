@@ -20393,7 +20393,47 @@
           "resumen": "Daughter of Amadeus VII and Bona of Berry, she married Juan James of Montferrat. She was the mother of William VIII, Boniface III and Isabel, wife of Ludovico I of Saluzzo."
         }
       ],
-      "eventos": [],
+      "eventos": [
+        {
+          "id": "LEONARDO_FRANCIA_1516",
+          "timeline": "historia",
+          "anio": 1516,
+          "titulo": "Francis I calls Leonardo to France",
+          "categoria": "culture",
+          "personas": [
+            "LEONARDODAVINCI",
+            "FRAN1FRA",
+            "FRANCESCOMELZI"
+          ],
+          "descripcion": "Leonardo moves to France accompanied by Francesco Melzi and enters the orbit of Francis I."
+        },
+        {
+          "id": "LEONARDO_MUERTE_1519",
+          "timeline": "historia",
+          "anio": 1519,
+          "titulo": "Leonardo is dead .",
+          "categoria": "culture",
+          "personas": [
+            "LEONARDODAVINCI",
+            "FRAN1FRA",
+            "FRANCESCOMELZI"
+          ],
+          "descripcion": "Leonardo is dying in France. The Gioconda remained with him until his last years and ended up joining the French royal collection."
+        },
+        {
+          "id": "MUERTE_ENRIQUE2_1559",
+          "anio": 1559,
+          "titulo": "Henry II's death from France",
+          "categoria": "dinastia",
+          "personas": [
+            "ENRIQ2FRA",
+            "FRANC2FRA",
+            "CATAMEDICI",
+            "FRAN1GUISA"
+          ],
+          "descripcion": "The accidental death of Henry II leaves his crown to Francis II. The youth of the new king elevates the influence of the Guisa and puts Catherine of Medici at an increasing dystatic and confessional crisis."
+        }
+      ],
       "historias": []
     }
   },
@@ -40938,7 +40978,22 @@
       "dinastias": [],
       "relacionados": [],
       "personas": [],
-      "eventos": [],
+      "eventos": [
+        {
+          "id": "AUGSBURGO_1555",
+          "timeline": "principal",
+          "anio": 1555,
+          "titulo": "Peace of Augsburg",
+          "categoria": "religion",
+          "personas": [
+            "CARLOS5",
+            "FERN1EMP",
+            "JUANFED1SAX",
+            "FELIPEHESSE"
+          ],
+          "descripcion": "The agreement legally accepts the coexistence of Catholic and Lutheran territories within the Empire and recognizes that religious unity can no longer be restored by simple imperial imposition."
+        }
+      ],
       "historias": []
     }
   },
@@ -43852,38 +43907,6 @@
       "nombre": "Principalities of Severia",
       "slug": "principados-de-severia",
       "clase": "Government",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "Regional identity documented in the Eastern Review V5.26. Each area, dependence and transfer date separately and the cape does not require a common sovereign personnel.",
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
-    "key": "Principado de Pólotsk",
-    "es": "principado-de-polotsk",
-    "en": "principality-of-polotsk",
-    "name": "Principality of Polotsk",
-    "summary": "",
-    "notes": "Regional identity documented in the Eastern Review V5.26. Each area, dependence and transfer date separately and the cape does not require a common sovereign personnel.",
-    "people": [],
-    "editorial": false,
-    "translatedSource": {
-      "sourceFile": "principado-de-polotsk.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Principality of Polotsk",
-      "slug": "principado-de-polotsk",
-      "clase": "Principality",
       "naturaleza": "entity",
       "componentes": [],
       "nota": "Regional identity documented in the Eastern Review V5.26. Each area, dependence and transfer date separately and the cape does not require a common sovereign personnel.",

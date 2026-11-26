@@ -250,7 +250,7 @@ export const CHRONOLOGY_COLLECTIVE_AUTHORITIES = Object.freeze([
     }
   },
   {
-    "territorio": "Morea veneciana (núcleos)",
+    "territorio": "Morea veneciana · núcleos",
     "desde": 1699,
     "hasta": 1714,
     "nombre": "Administración colonial de la República de Venecia",

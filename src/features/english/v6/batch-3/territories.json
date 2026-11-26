@@ -30713,7 +30713,22 @@
       "dinastias": [],
       "relacionados": [],
       "personas": [],
-      "eventos": [],
+      "eventos": [
+        {
+          "id": "AUGSBURGO_1555",
+          "timeline": "principal",
+          "anio": 1555,
+          "titulo": "Peace of Augsburg",
+          "categoria": "religion",
+          "personas": [
+            "CARLOS5",
+            "FERN1EMP",
+            "JUANFED1SAX",
+            "FELIPEHESSE"
+          ],
+          "descripcion": "The agreement legally accepts the coexistence of Catholic and Lutheran territories within the Empire and recognizes that religious unity can no longer be restored by simple imperial imposition."
+        }
+      ],
       "historias": []
     }
   },

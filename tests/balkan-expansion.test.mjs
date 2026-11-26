@@ -60,7 +60,7 @@ test('Ermioni is Venetian before 1537 while the unresolved Damala cell stays out
 });
 
 test('Morea follows the Venetian treaty and Ottoman reconquest without inheriting all of 1650', () => {
-  const name='Morea veneciana (núcleos)';
+  const name='Morea veneciana · núcleos';
   assert.deepEqual(ids(name,1698),[]);
   assert(ids(name,1700).includes('Nafplio'));
   assert.equal(ids(name,1700).length,6);

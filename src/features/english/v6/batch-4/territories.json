@@ -33176,7 +33176,202 @@
           "resumen": "Ban de Slavonia, 1530-1534 (delegated government). Ban."
         }
       ],
-      "eventos": [],
+      "eventos": [
+        {
+          "id": "AUGSBURGO_1555",
+          "timeline": "principal",
+          "anio": 1555,
+          "titulo": "Peace of Augsburg",
+          "categoria": "religion",
+          "personas": [
+            "CARLOS5",
+            "FERN1EMP",
+            "JUANFED1SAX",
+            "FELIPEHESSE"
+          ],
+          "descripcion": "The agreement legally accepts the coexistence of Catholic and Lutheran territories within the Empire and recognizes that religious unity can no longer be restored by simple imperial imposition."
+        },
+        {
+          "id": "PRAGMATICA_1713",
+          "anio": 1713,
+          "titulo": "Pragmatic Sanction by Charles VI",
+          "categoria": "dynasty",
+          "personas": [
+            "CARLOS6HRE",
+            "MARIATERESAHAB"
+          ],
+          "descripcion": "In the absence of a male heir, Charles VI attempts to secure the indivisibility of the Habsburg dominions and the succession of his future daughter Maria Teresa."
+        },
+        {
+          "id": "CARLOS7_1742",
+          "anio": 1742,
+          "titulo": "Charles VII breaks the Habsburg continuity",
+          "categoria": "dynasty",
+          "personas": [
+            "CARLOS7HRE",
+            "MARIAAMALIAHAB1701",
+            "MARIATERESAHAB"
+          ],
+          "descripcion": "In the midst of the War of Austrian Succession, the elector Wittelsbach Carlos Alberto obtains the imperial crown and proves that dignity remains elective, even after centuries of Habsburg predominance."
+        },
+        {
+          "id": "FRANCISCO1_1745",
+          "anio": 1745,
+          "titulo": "Francis I inaugurated the House of Habsburg-Lorraine",
+          "categoria": "dynasty",
+          "personas": [
+            "FRAN1HRE",
+            "MARIATERESAHAB"
+          ],
+          "descripcion": "The election of Francis Esteban returns the crown to the dynastic environment of Maria Theresa and creates the Habsburg-Lorraine line."
+        },
+        {
+          "id": "JOSE2_1765",
+          "anio": 1765,
+          "titulo": "Joseph II, the reformist emperor",
+          "categoria": "political",
+          "personas": [
+            "JOSE2HRE",
+            "MARIATERESAHAB",
+            "FRAN1HRE"
+          ],
+          "descripcion": "Joseph II succeeded his father as emperor and, after 1780, attempted to reform the Habsburg dominions quickly, clashing repeatedly with territorial and corporate privileges."
+        },
+        {
+          "id": "REVOLUCION_FRANCESA_1789",
+          "timeline": "principal",
+          "anio": 1789,
+          "titulo": "French Revolution",
+          "categoria": "political",
+          "personas": [
+            "MARIAANTONIETA",
+            "JOSE2HRE",
+            "LEOP2HRE"
+          ],
+          "descripcion": "The French revolution upset the European political balance and turned the fate of Maria Antonieta, sister of Joseph II and Leopold II, into an international dynastic problem."
+        },
+        {
+          "id": "FRANCISCO2_1792",
+          "anio": 1792,
+          "titulo": "Francis II in the face of revolutionary Europe",
+          "categoria": "dynasty",
+          "personas": [
+            "FRAN2HRE",
+            "LEOP2HRE"
+          ],
+          "descripcion": "Francis II inherits the imperial crown in the midst of a revolutionary war. By 1800, the old empire was still in existence, but it was facing a transformation that would culminate a few years later."
+        },
+        {
+          "id": "VIENA_1683",
+          "timeline": "principal",
+          "anio": 1683,
+          "titulo": "Vienna's relief and battle",
+          "categoria": "War",
+          "personas": [
+            "JUAN3SOBIESKI",
+            "LEOP1HRE",
+            "CHARLES5LOR",
+            "STARHEMBERG",
+            "MAX2EMANBAV",
+            "JOHANNGEORG3SAX",
+            "KARAMUSTAFA",
+            "MEHMED4OSM"
+          ],
+          "descripcion": "The relief army led by John III Sobieski, with Polish, Habsburg and Holy Roman Empire forces, broke through the Ottoman siege of Vienna on September 12, 1683. The victory opens a new phase of the war in Hungary and reinforces the rise of the Habsburg monarchy in Central Europe."
+        },
+        {
+          "id": "THOKOLY_1682",
+          "anio": 1682,
+          "titulo": "Hungarian rebellion opens a door to the sultan",
+          "categoria": "political",
+          "personas": [
+            "IMRETHOKOLY",
+            "LEOP1HRE",
+            "MEHMED4OSM",
+            "KARAMUSTAFA"
+          ],
+          "descripcion": "Imre Thököly leads a Hungarian opposition to the Habsburgs and seeks Ottoman support. The internal conflict of the monarchy of Leopold I is mixed with imperial rivalry in central Europe."
+        },
+        {
+          "id": "ALIANZA_VIENA_1683",
+          "anio": 1683,
+          "titulo": "Leopold and Sobieski agree to help each other",
+          "categoria": "political",
+          "personas": [
+            "LEOP1HRE",
+            "JUAN3SOBIESKI",
+            "PAPA_INOCENCIO11"
+          ],
+          "descripcion": "With papal mediation, Leopold I and John III Sobieski agree a defensive alliance. If Vienna or Krakow are attacked, the other sovereign must come to the aid of the ally."
+        },
+        {
+          "id": "SITIO_VIENA_1683",
+          "anio": 1683,
+          "titulo": "Kara Mustafa near Vienna",
+          "categoria": "War",
+          "personas": [
+            "KARAMUSTAFA",
+            "MEHMED4OSM",
+            "LEOP1HRE",
+            "STARHEMBERG"
+          ],
+          "descripcion": "The great vizier Kara Mustafa leads the Ottoman army to Vienna. Leopold leaves the capital and Ernst Rüdiger von Starhemberg organizes the defense as the fortifications suffer weeks of siege and mine work."
+        },
+        {
+          "id": "EJERCITO_SOCORRO_1683",
+          "timeline": "historia",
+          "anio": 1683,
+          "titulo": "Poles, Emperors and German Princes gather",
+          "categoria": "War",
+          "personas": [
+            "JUAN3SOBIESKI",
+            "CHARLES5LOR",
+            "MAX2EMANBAV",
+            "JOHANNGEORG3SAX",
+            "LEOP1HRE"
+          ],
+          "descripcion": "Charles V of Lorraine coordinated the imperial forces and joined contingents from Bavaria, Saxony and other territories of the Empire. Sobieski arrives with the Polish army and takes command of the rescue operation."
+        },
+        {
+          "id": "LIGA_SANTA_1684",
+          "anio": 1684,
+          "titulo": "From saving Vienna to moving on to the offensive",
+          "categoria": "political",
+          "personas": [
+            "LEOP1HRE",
+            "JUAN3SOBIESKI",
+            "PAPA_INOCENCIO11",
+            "CHARLES5LOR"
+          ],
+          "descripcion": "After the victory, a new Holy League is formed. The Habsburgs, Poland and Venice transform an emergency defense into a prolonged war against the Ottoman Empire."
+        },
+        {
+          "id": "BUDA_1686",
+          "anio": 1686,
+          "titulo": "Buddha falls to the coalition",
+          "categoria": "War",
+          "personas": [
+            "LEOP1HRE",
+            "CHARLES5LOR",
+            "MAX2EMANBAV",
+            "MEHMED4OSM"
+          ],
+          "descripcion": "The conquest of Buddha shows that Vienna was not an isolated episode. The war that began in 1683 became a Habsburg expansion by Hungary and permanently altered the balance of central Europe."
+        },
+        {
+          "id": "DURAZZO_NAP_1382",
+          "anio": 1382,
+          "titulo": "Two branches argue over an inheritance",
+          "categoria": "dynasty",
+          "personas": [
+            "CARLOS3NAP",
+            "JUANA1NAP",
+            "LUIS1ANJOU"
+          ],
+          "descripcion": "Juana had chosen Louis of Anjou as heir, but Charles of Durazzo conquered the kingdom. His death and Juana's left the next generation with a war between Anjou and Durazzo, not a peaceful succession.",
+          "timeline": "historia"
+        }
+      ],
       "historias": []
     },
     "people": {
@@ -35358,38 +35553,6 @@
     }
   },
   {
-    "key": "Principado de Antioquía",
-    "es": "principado-de-antioquia",
-    "en": "principality-of-antioch",
-    "name": "Principality of Antioch",
-    "summary": "",
-    "notes": {
-      "Entidad regional con sus fases, relaciones de superioridad y fuentes localizadas en la revisión cartográfica. La dependencia tributaria no equivale a administración provincial directa; una ocupación no cambia por sí sola su identidad.": "Regional entity with its phases, superiority relations and sources located in the mapping review. Tax dependence does not amount to direct provincial administration and an occupation does not by itself change its identity."
-    },
-    "translatedSource": {
-      "sourceFile": "principado-de-antioquia.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Principality of Antioch",
-      "slug": "principado-de-antioquia",
-      "clase": "Principality",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "Regional entity with its phases, superiority relations and sources located in the mapping review. Tax dependence does not amount to direct provincial administration and an occupation does not by itself change its identity.",
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
     "key": "Principado episcopal de Ginebra",
     "es": "principado-episcopal-de-ginebra",
     "en": "prince-bishopric-of-geneva",
@@ -36517,38 +36680,6 @@
       "naturaleza": "entity",
       "componentes": [],
       "nota": "A territorial jurisdiction of stable identity and the succession of holders, an occupation or dystatic integration does not create another entity. The complete areas and their dates are documented in the review of France and the Netherlands.",
-      "editorial": false,
-      "fuentes": [],
-      "gobiernos": [],
-      "dinastias": [],
-      "relacionados": [],
-      "personas": [],
-      "eventos": [],
-      "historias": []
-    }
-  },
-  {
-    "key": "Principado de Beloózero",
-    "es": "principado-de-beloozero",
-    "en": "principality-of-beloozero",
-    "name": "Principality of Beloozero",
-    "summary": "",
-    "notes": {
-      "Identidad regional documentada en la revisión oriental V5.26. Cada superficie, dependencia y transferencia se fecha por separado; la capa no presupone un soberano personal común.": "Regional identity documented in the Eastern Review V5.26. Each area, dependence and transfer date separately and the cape does not require a common sovereign personnel."
-    },
-    "translatedSource": {
-      "sourceFile": "principado-de-beloozero.json",
-      "uniones": [],
-      "sucesiones": {
-        "relevos": [],
-        "crisis": []
-      },
-      "nombre": "Principality of Beloozero",
-      "slug": "principado-de-beloozero",
-      "clase": "Principality",
-      "naturaleza": "entity",
-      "componentes": [],
-      "nota": "Regional identity documented in the Eastern Review V5.26. Each area, dependence and transfer date separately and the cape does not require a common sovereign personnel.",
       "editorial": false,
       "fuentes": [],
       "gobiernos": [],

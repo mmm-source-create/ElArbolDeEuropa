@@ -358,5 +358,380 @@
     "reviewedAt": "2026-10-24",
     "reason": "Revisión posterior de plazas norteafricanas, fuera del inventario alemán. Corrección de ocupación o evacuación documentada en docs/revision-plazas-africanas-2026-10-24.md; se conserva la huella de referencia original.",
     "source": "https://brill.com/view/journals/erl/9/3/article-p281_002.pdf"
+  },
+  {
+    "id": "fusion-634-Antioch-1200",
+    "locationId": "Antioch",
+    "from": 1200,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Arsuz-1200",
+    "locationId": "Arsuz",
+    "from": 1200,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Artah-1200",
+    "locationId": "Artah",
+    "from": 1200,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Badozhsky-1238",
+    "locationId": "Badozhsky",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Beloozero-1238",
+    "locationId": "Beloozero",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Charonda-1238",
+    "locationId": "Charonda",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Georgievskoye-1238",
+    "locationId": "Georgievskoye",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Goroditse_Megra-1238",
+    "locationId": "Goroditse_Megra",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Iskenderun-1200",
+    "locationId": "Iskenderun",
+    "from": 1200,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Kirillov-1238",
+    "locationId": "Kirillov",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Kubenskoye-1238",
+    "locationId": "Kubenskoye",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Latakia-1255",
+    "locationId": "Latakia",
+    "from": 1255,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Lyepyel-1200",
+    "locationId": "Lyepyel",
+    "from": 1200,
+    "through": 1306,
+    "previous": [
+      "Principado de Pólotsk"
+    ],
+    "expected": [
+      "Pólotsk"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Nikolskoye_Andoma-1238",
+    "locationId": "Nikolskoye_Andoma",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Nikolskoye_Kema-1238",
+    "locationId": "Nikolskoye_Kema",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Svir_Beloozero-1238",
+    "locationId": "Svir_Beloozero",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Trapessac-1200",
+    "locationId": "Trapessac",
+    "from": 1200,
+    "through": 1267,
+    "previous": [
+      "Principado de Antioquía"
+    ],
+    "expected": [
+      "Antioquía"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://islamansiklopedisi.org.tr/antakya"
+  },
+  {
+    "id": "fusion-634-Ulla-1200",
+    "locationId": "Ulla",
+    "from": 1200,
+    "through": 1306,
+    "previous": [
+      "Principado de Pólotsk"
+    ],
+    "expected": [
+      "Pólotsk"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Ushachy-1200",
+    "locationId": "Ushachy",
+    "from": 1200,
+    "through": 1306,
+    "previous": [
+      "Principado de Pólotsk"
+    ],
+    "expected": [
+      "Pólotsk"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Ust_Ugla-1238",
+    "locationId": "Ust_Ugla",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Ustye-1238",
+    "locationId": "Ustye",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Vashki-1238",
+    "locationId": "Vashki",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Vognema-1238",
+    "locationId": "Vognema",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Vytegra-1238",
+    "locationId": "Vytegra",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
+  },
+  {
+    "id": "fusion-634-Yorga-1238",
+    "locationId": "Yorga",
+    "from": 1238,
+    "through": 1388,
+    "previous": [
+      "Principado de Beloózero"
+    ],
+    "expected": [
+      "Beloózero"
+    ],
+    "reviewedAt": "2026-11-26",
+    "reason": "6.3.4: ficha territorial duplicada fusionada con su entidad principal. La capa conserva su nombre y su geometría; solo cambia la identidad que la nombra.",
+    "source": "https://commons.wikimedia.org/wiki/File:Shepherd-c-138-139.jpg"
   }
 ]

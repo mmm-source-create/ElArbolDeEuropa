@@ -10,6 +10,10 @@ import {netherlandsGovernorScope} from './netherlandsGovernorScopes.js';
 // Dated regional scopes shared by painting, inspection and the coverage audit.
 // Each ID remains an approximate map cell; sources document authority and named sites.
 const AUTHORITY_MAP_SCOPES = Object.freeze([
+  // 6.3.4: la ocupación francesa de Saboya no comprende Aosta ni Niza.
+  {personId:'FRAN1FRA',territory:'Saboya',from:1536,through:1547,ids:['Chambery','Annecy','Faucigny','La_Roche_Sur_Foron','Sallanches','Moutiers','Saint_Jean_de_Maurienne','Graian_Alps1','Bourg_En_Bresse','Bage','Belley','Thoire'],source:{title:'Enciclopedia Italiana · Savoia',url:'https://www.treccani.it/enciclopedia/savoia_%28Enciclopedia-Italiana%29/',locator:'Ocupación francesa de 1536–1559 y restitución a Manuel Filiberto en la paz de Cateau-Cambrésis.'},note:'Saboya propia, Bresse y Bugey bajo ocupación francesa. Aosta y Niza siguen con el duque; el Chablais y Gex pasan a Berna y al Valais en 1536.'},
+  // 6.3.4: la ocupación francesa de Saboya no comprende Aosta ni Niza.
+  {personId:'ENRIQ2FRA',territory:'Saboya',from:1547,through:1559,ids:['Chambery','Annecy','Faucigny','La_Roche_Sur_Foron','Sallanches','Moutiers','Saint_Jean_de_Maurienne','Graian_Alps1','Bourg_En_Bresse','Bage','Belley','Thoire'],source:{title:'Enciclopedia Italiana · Savoia',url:'https://www.treccani.it/enciclopedia/savoia_%28Enciclopedia-Italiana%29/',locator:'Ocupación francesa de 1536–1559 y restitución a Manuel Filiberto en la paz de Cateau-Cambrésis.'},note:'Saboya propia, Bresse y Bugey bajo ocupación francesa. Aosta y Niza siguen con el duque; el Chablais y Gex pasan a Berna y al Valais en 1536.'},
   {
     personId:'CARLOS3NAP',territory:'Nápoles',from:1381,through:1381,
     excludedIds:['Corfu'],

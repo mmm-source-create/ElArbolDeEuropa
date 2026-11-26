@@ -1448,6 +1448,17 @@ export const CHRONOLOGY_ROUTES = Object.freeze([
     "nota": "Ducado real de Wrocław y Środa Śląska; Głogów sólo desde 1508"
   },
   {
+    "personId": "FERN4BOH",
+    "territorio": "Silesia",
+    "desde": 1646,
+    "hasta": 1654,
+    "atlasAliases": [
+      "Silesia real (Wrocław y Środa)",
+      "Silesia real (Głogów)"
+    ],
+    "nota": "Ducado real de Wrocław y Środa Śląska; Głogów sólo desde 1508"
+  },
+  {
     "personId": "LEOP1HRE",
     "territorio": "Silesia",
     "desde": 1657,
@@ -1812,7 +1823,7 @@ const CHRONOLOGY_ROUTE_ADDITIONS = Object.freeze([
   {
     "governmentTerritory": "Venecia",
     "append": [
-      "Morea veneciana (núcleos)"
+      "Morea veneciana · núcleos"
     ],
     "note": "Añadir a la ruta agregada de la República si existen mandatos personales de los dux en 1699–1714; en su ausencia la autoridad provincial colectiva proporciona cobertura documentada."
   },

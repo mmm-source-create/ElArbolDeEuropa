@@ -586,7 +586,6 @@
       "coucy",
       "laval",
       "principados-de-severia",
-      "principado-de-polotsk",
       "looz",
       "principado-de-riazan",
       "condado-de-forcalquier",
@@ -626,7 +625,7 @@
   "counts": {
     "people": 350,
     "dynasties": 82,
-    "territories": 173,
+    "territories": 172,
     "stories": 3,
     "plannedStories": 1
   },

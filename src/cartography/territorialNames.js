@@ -5,6 +5,10 @@
 
 // A survey label, an owner and a control episode are not territorial identity.
 export const EDITORIAL_ALIASES = Object.freeze({
+  // 6.3.4: fichas duplicadas fusionadas; la capa del mapa conserva su nombre.
+  "Principado de Beloózero": "Beloózero",
+  "Principado de Pólotsk": "Pólotsk",
+  "Principado de Antioquía": "Antioquía",
   'Livonia polaca · Latgalia': 'Livonia polaca',
   'Lituania · voivodato de Polotsk': 'Lituania',
   'Rusia · ocupación de Polotsk': 'Rusia',
@@ -73,7 +77,7 @@ export const EDITORIAL_ALIASES = Object.freeze({
   'Núcleos borgoñones y anexiones bajo Francia': 'Francia',
   'República francesa': 'Francia',
   'Transilvania habsbúrgica': 'Transilvania',
-  'Morea veneciana (núcleos)': 'Morea',
+  'Morea veneciana · núcleos': 'Morea',
   'Morea veneciana · superficie regional': 'Morea',
   'Normandía · ocupación inglesa': 'Ducado de Normandía',
   'Bulgaria · gobierno rival en Tarnovo': 'Bulgaria',

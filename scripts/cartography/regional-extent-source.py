@@ -201,7 +201,7 @@ burgundy = base('Borgoña', 1450)
 replace('Borgoña', [v(1200, burgundy, 'Ducado capeto: extensión regional, no sólo Dijon y tres ciudades.'), v(1651, [], 'Ducado incorporado a Francia; los duques titulares no lo gobiernan.')], EARLIER['Borgoña']['sources'], 'Ducado de Borgoña centrado en Dijon, separado del condado y de los Países Bajos. Los señoríos de Nevers, Rethel y Auxerre mantienen sus propias jurisdicciones.')
 county = base('Condado de Borgoña', 1500)
 dated_surface('Condado de Borgoña', [v(1651, county, 'Condado español: superficie regional completa.'), v(1668, [], 'Conquista francesa; la restitución se refleja en el año siguiente.'), v(1669, county, 'Restitución de Aquisgrán.'), v(1674, [], 'Segunda conquista francesa; soberanía cedida en 1678.')], 'Franco Condado separado de la Borgoña ducal. La cesión jurídica de 1678 no retrasa hasta ese año la pérdida militar de 1674.')
-layer('Morea veneciana · superficie regional', 1699, 1714, [v(1699, morea, 'Provincia veneciana reconocida por Karlowitz; recuperada por los otomanos en 1715.')], ['karlowitz', 'atam'], 'Superficie del Peloponeso, incluidos sus relieves; las seis ciudades de la primera revisión dejan de sustituir a toda la provincia.', '#AA806B', ['Morea veneciana (núcleos)'])
+layer('Morea veneciana · superficie regional', 1699, 1714, [v(1699, morea, 'Provincia veneciana reconocida por Karlowitz; recuperada por los otomanos en 1715.')], ['karlowitz', 'atam'], 'Superficie del Peloponeso, incluidos sus relieves; las seis ciudades de la primera revisión dejan de sustituir a toda la provincia.', '#AA806B', ['Morea veneciana · núcleos'])
 
 
 # Anatolia: explicit regional cell lists reviewed in the labelled geometry

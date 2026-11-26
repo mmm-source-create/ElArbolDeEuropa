@@ -7,7 +7,7 @@ const REGIONAL_ALIASES = Object.freeze({
   'Silesia prusiana (núcleos)': 'Silesia · parte prusiana',
   'Silesia austríaca (núcleo de Teschen)': 'Silesia · remanente austríaco',
   'Sicilia': 'Reino de Sicilia antes de 1282',
-  'Morea veneciana (núcleos)': 'Morea veneciana · superficie regional',
+  'Morea veneciana · núcleos': 'Morea veneciana · superficie regional',
 });
 
 export function regionalExtentJurisdictions(names, territory, year, personId) {
