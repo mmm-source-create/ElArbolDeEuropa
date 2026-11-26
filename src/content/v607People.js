@@ -6,6 +6,7 @@ import {V615_RECORDS} from './v615People.js';
 import V612_RECORDS from './v612People.json' with {type:'json'};
 // 6.1.3: new people of culture, science, Salamanca, revolutions and exploration.
 import {V622_RECORDS} from './v622/index.js';
+import {V636_RECORDS} from './v636/index.js';
 import {V613_RECORDS} from './v613/index.js';
 import {reliableReferences} from './reliableReferences616.js';
 import {authorityReferences} from '../evidence/authorityReviews.js';
@@ -57,9 +58,9 @@ const ownRecords = {
   },
 };
 
-const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS,...V613_RECORDS,...V622_RECORDS};
+const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS,...V613_RECORDS,...V622_RECORDS,...V636_RECORDS};
 // People whose full biography arrives after their English page: they keep its name.
-export const V612_IDS=[...Object.keys(V612_RECORDS),...Object.keys(V613_RECORDS),...Object.keys(V622_RECORDS)];
+export const V612_IDS=[...new Set([...Object.keys(V612_RECORDS),...Object.keys(V613_RECORDS),...Object.keys(V622_RECORDS),...Object.keys(V636_RECORDS)])];
 export const V613_IDS=Object.keys(V613_RECORDS);
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));

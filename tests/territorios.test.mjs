@@ -124,7 +124,7 @@ test('cada biografía tiene una sola definición editorial y no repite el mismo 
 
 test('la ampliación V2.8 incorpora personas distintas con biografía y parentescos existentes',()=>{
  assert.equal(new Set(PERSONAS.map(p=>p.id)).size,PERSONAS.length);
- assert.equal(Object.keys(FRONTERAS_V28).length,152);
+ assert.equal(Object.keys(FRONTERAS_V28).length,149);
  for(const [id,content] of Object.entries(FRONTERAS_V28)) {
   const p=by[id];assert.ok(p,id);assert.ok(content.biografia.length>120,id);
   for(const relative of [p.padre,p.madre,p.conyuge,p.conyuge2,...(p.conyuges||[])].filter(Boolean))assert.ok(by[relative],`${id}: ${relative}`);

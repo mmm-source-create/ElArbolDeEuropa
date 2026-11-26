@@ -1,5 +1,17 @@
 # Próximas actualizaciones / Upcoming updates
 
+## Familias y fechas · continuación de 6.3.6 / Family and date research
+
+El [inventario completo](audits/6.3.6-family-gaps.es.md) ([English](audits/6.3.6-family-gaps.en.md)) enumera todos los candidatos originales, con instantáneas JSON anterior y posterior. La 6.3.6 revisa ocho unidades familiares y completa el segundo progenitor de nueve personas existentes. Quedan 309 progenitores sin cónyuge registrado, 431 personas con un solo progenitor y 345 personas sin padres registrados a las que falta alguna fecha vital. Las listas se solapan; no son 1.085 familias distintas. El último grupo crece al incorporar personas cuya cronología sigue sin conocerse.
+
+Siguientes lotes: otras ramas Bagrationi e Imericia, después Armenia y el resto de las cadenas del inventario. En cada lote se revisarán conjuntamente progenitores, hijos, parejas y fechas. La filiación de los otros hijos de Levan de Kartli, el primer matrimonio de Heraclio II y los padres de Darejan requieren fuentes específicas. El matrimonio anulado de Sancha con Onorato Gaetani consta en su biografía; queda pendiente una ficha propia de Onorato. La ausencia de un matrimonio registrado no se resolverá inventándolo.
+
+Retratos pendientes: Jerónimo de Ayanz, Alfonso de Aragón, Sancha de Aragón y las consortes georgianas sin efigie identificada. La recreación moderna de Ayanz inspirada en Servet y las identificaciones dudosas de Alfonso y Sancha quedan fuera. Martín Cortés lleva una ilustración de su tratado de 1556, identificada como tal.
+
+The full inventory lists every original candidate, with before and after JSON snapshots. Release 6.3.6 reviews eight family units and supplies the missing parent of nine existing people. Remaining candidates: 309 parents without a recorded spouse, 431 people with one recorded parent, and 345 people without recorded parents and with a missing vital date. These groups overlap. The last group grows when newly added people have unknown dates.
+
+Next batches will cover other Bagrationi and Imeretian branches, Armenia, then the other chains. Each batch will review parents, children, partners and dates together. Levan of Kartli’s other children, Heraclius II’s first marriage and Darejan’s parents need specific evidence. Sancha’s annulled marriage to Onorato Gaetani is covered in her biography; his own profile remains pending. No marriage will be inferred merely from recorded children. Reliable portraits remain pending for Ayanz, Alfonso of Aragon, Sancha and the Georgian consorts without identified likenesses. Cortés’s image is labelled as an illustration from his 1556 treatise.
+
 ## Previsto · 23 de noviembre de 2026
 
 ### Completado en 6.2.4 / Completed in 6.2.4 · SEO 1

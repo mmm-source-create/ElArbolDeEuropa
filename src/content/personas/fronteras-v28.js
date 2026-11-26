@@ -83,9 +83,6 @@ export const FRONTERAS_V28 = Object.freeze({
   "GIORGI11KARTLI": {
     "biografia": "Alternó el trono de Kartli con el servicio militar al sah. Tras perder la corona y recuperarla nominalmente, dirigió fuerzas safávidas en Afganistán, donde murió en una rebelión. Los periodos lejos del reino se distinguen de su gobierno presencial."
   },
-  "LEVANKARTLI": {
-    "biografia": "Hijo de Vajtang V y padre de Vajtang VI. Desempeñó responsabilidades en el gobierno georgiano y en la corte safávida. Sus hijos fueron candidatos al trono en una época en que la investidura persa y el control local no siempre coincidían."
-  },
   "KAIKHOSROKARTLI": {
     "biografia": "Recibió la corona mientras continuaba al servicio de los safávidas fuera de Georgia. Murió durante la campaña de Kandahar. Vajtang, su hermano, administraba Kartli, por lo que su título no se representa como gobierno presencial continuo."
   },
@@ -194,14 +191,8 @@ export const FRONTERAS_V28 = Object.freeze({
   "ARCHILPRINCEIMER": {
     "biografia": "Hermano de Salomón I y padre de Salomón II. Su matrimonio con Helena, hija de Heraclio II, enlazó la última generación real de Imericia con la monarquía unida de Kartli-Kajetia."
   },
-  "HELENAEREKLE": {
-    "biografia": "Hija de Heraclio II y esposa del príncipe Archil de Imericia. Fue madre de Salomón II: esta conexión ayuda a explicar el respaldo oriental a su candidatura al trono occidental."
-  },
   "SOLOMON2IMER": {
     "biografia": "Accedió al poder con apoyo de su abuelo Heraclio II y disputó la corona a David II. La expansión rusa terminó con su deposición en 1810. Murió exiliado en Trebisonda, después de intentar recuperar el reino."
-  },
-  "GIORGI12GEO": {
-    "biografia": "Último rey de Kartli-Kajetia, heredó una monarquía debilitada por la invasión persa y las disputas familiares. Solicitó protección rusa, pero su muerte precedió a la anexión del reino. La sucesión dinástica no llegó a convertirse en otro reinado efectivo."
   },
   "GUYCONSTCYP": {
     "biografia": "Hijo de Hugo III y hermano de Enrique II, ejerció el cargo de condestable. No llegó a reinar, pero su hijo Hugo IV heredó la corona después de la muerte de Enrique. Su matrimonio lo vinculó a los Ibelin de Beirut."

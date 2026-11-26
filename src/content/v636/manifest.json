@@ -1,0 +1,86 @@
+{
+  "baseCommit": "13e8cac9bb080bb89cf3ee4c10a7f35e91e64751",
+  "newIds": [
+    "JERONIMOAYANZ",
+    "MARTINCORTESALBACAR",
+    "MAXIMILIANOSFORZA",
+    "BURDUKHANALANIA",
+    "GHIASADDINRUSUDAN",
+    "GVANTSAKAKHABERIDZE",
+    "TUTAGURIELI",
+    "RUSUDANCIRCASIA",
+    "ANNAABASHIDZE",
+    "DAREJANDADIANI",
+    "LAURADIANTI",
+    "LAURAMARTINOZZI"
+  ],
+  "updatedIds": [
+    "GIORGI3GEO",
+    "BURDUKHANALANIA",
+    "RUSUDANGEO",
+    "GHIASADDINRUSUDAN",
+    "DAVID7GEO",
+    "GVANTSAKAKHABERIDZE",
+    "LEVANKARTLI",
+    "TUTAGURIELI",
+    "VAKHTANG6KARTLI",
+    "RUSUDANCIRCASIA",
+    "EREKLE2GEO",
+    "ANNAABASHIDZE",
+    "DAREJANDADIANI",
+    "ALFONSO4ESTE",
+    "LAURAMARTINOZZI",
+    "ALFONSO1ESTE",
+    "ANASFOR",
+    "TAMARGEO",
+    "DEMETRIO2GEO",
+    "TAMARKARTLI",
+    "GIORGI12GEO",
+    "HELENAEREKLE",
+    "ALFONSOMONTECCHIOESTE",
+    "FRANCESCO2ESTE",
+    "DAVID6GEO",
+    "BAYEZID1OSM",
+    "HELENADRAGAS",
+    "ALFONSOBISCEGLIE",
+    "SANCIABORGIA"
+  ],
+  "mergedIds": {
+    "SANCHAARAG": "SANCIABORGIA"
+  },
+  "familyUnits": [
+    [
+      "GIORGI3GEO",
+      "BURDUKHANALANIA"
+    ],
+    [
+      "RUSUDANGEO",
+      "GHIASADDINRUSUDAN"
+    ],
+    [
+      "DAVID7GEO",
+      "GVANTSAKAKHABERIDZE"
+    ],
+    [
+      "LEVANKARTLI",
+      "TUTAGURIELI"
+    ],
+    [
+      "VAKHTANG6KARTLI",
+      "RUSUDANCIRCASIA"
+    ],
+    [
+      "EREKLE2GEO",
+      "ANNAABASHIDZE",
+      "DAREJANDADIANI"
+    ],
+    [
+      "ALFONSO1ESTE",
+      "LAURADIANTI"
+    ],
+    [
+      "ALFONSO4ESTE",
+      "LAURAMARTINOZZI"
+    ]
+  ]
+}

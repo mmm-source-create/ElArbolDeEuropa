@@ -233,9 +233,6 @@ export const SUCESIONES_V27 = {
   "MATIAS1HUN": {
     "resumen": "Fortaleció el ejército y la administración húngaros y disputó territorios a los Habsburgo y a los Jagellón. Su biblioteca y su corte hicieron de Buda un centro del humanismo renacentista."
   },
-  "ALFONSO2NAP": {
-    "resumen": "Su breve reinado coincidió con la invasión de Italia por Carlos VIII de Francia. Abdicó en favor de su hijo Fernando II cuando la posición de la dinastía se derrumbaba."
-  },
   "FELIPEVREUX": {
     "resumen": "Fue rey de Navarra por su matrimonio con Juana II. Participó en campañas peninsulares y murió tras la expedición contra Algeciras."
   },
@@ -331,9 +328,6 @@ export const SUCESIONES_V27 = {
   },
   "CLAUDEFRA": {
     "resumen": "Heredó los derechos sobre Bretaña y fue reina consorte por su matrimonio con Francisco I. La transmisión de su herencia contribuyó a la unión del ducado con la corona francesa."
-  },
-  "ALFONSO1ESTE": {
-    "resumen": "Defendió Ferrara frente a las presiones pontificias durante las guerras de Italia. Su experiencia artillera y sus alianzas fueron esenciales para la supervivencia del ducado."
   },
   "HERC2ESTE": {
     "resumen": "Su matrimonio con Renata de Francia conectó Ferrara con la monarquía francesa. Las simpatías reformadas de la duquesa hicieron de la corte un espacio de tensión religiosa."

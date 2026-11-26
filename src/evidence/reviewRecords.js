@@ -1,4 +1,5 @@
 import {RELEASE_622_REVIEWS} from './release622Reviews.js';
+import {RELEASE_636_REVIEWS} from './release636Reviews.js';
 import {V605_REVIEWS} from './v605Reviews.js';
 import {withSuccessionDates619} from './successionDates619.js';
 import {REVIEWS_620} from './reviews620.js';
@@ -237,7 +238,9 @@ const identityReview = (certainty, source, note, extra = {}) => ({
   certainty, sources: [source], note, reviewedAt: '2026-10-11', editor: 'El Árbol de Europa', ...extra,
 });
 
-export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
+// 6.3.6: the retired Sancha duplicate is covered by the surviving Sancia claims.
+const currentPersonReviews636 = records => Object.fromEntries(Object.entries(records).filter(([id]) => !id.startsWith('person:SANCHAARAG:')));
+export const CLAIM_REVIEWS = Object.freeze(currentPersonReviews636(withSuccessionDates619({
   ...V605_REVIEWS,
   ...POLISH_NEW_REVIEWS,
   ...OCTOBER_50_REVIEWS,
@@ -444,5 +447,6 @@ export const CLAIM_REVIEWS = Object.freeze(withSuccessionDates619({
   // 6.1.3: dates of the new people, checked against their GND records.
   ...REVIEWS_613,
   ...RELEASE_622_REVIEWS,
-}));
+  ...RELEASE_636_REVIEWS,
+})));
 

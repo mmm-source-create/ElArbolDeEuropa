@@ -1,27 +1,9 @@
 export const FRONTERAS_V272 = Object.freeze({
-  "GIORGI3GEO": {
-    "biografia": "Asoció al trono a su hija Tamar para asegurar la sucesión de los Bagrationi. Su política de expansión y sus conflictos con la aristocracia prepararon el escenario de la monarquía georgiana de finales del siglo XII."
-  },
-  "TAMARGEO": {
-    "biografia": "Gobernó por derecho propio y llevó a Georgia a una etapa de gran influencia caucásica. La expansión militar, el patrocinio cultural y el apoyo a la aparición de Trebisonda vinculan su reinado con el mundo bizantino. Sus hijos Jorge IV y Rusudán la sucedieron."
-  },
   "DAVIDSOSLAN": {
     "biografia": "Segundo esposo de Tamar y destacado jefe militar de su reino. Su posición de consorte y sus victorias apoyaron la autoridad de la reina, sin convertirlo en el origen de los derechos sucesorios de los Bagrationi."
   },
   "GIORGI4GEO": {
     "biografia": "Heredó la monarquía de Tamar, pero los primeros enfrentamientos con los mongoles cambiaron las perspectivas de expansión del reino. Su muerte dejó un hijo menor, David, y la corona pasó a su hermana Rusudán."
-  },
-  "RUSUDANGEO": {
-    "biografia": "La invasión jorezmita y después la presión mongola quebraron la posición alcanzada por su madre Tamar. Su reinado explica la transición desde la expansión georgiana hacia el tributo y la intervención exterior en la sucesión."
-  },
-  "DAVID6GEO": {
-    "biografia": "Hijo de Rusudán, compartió la corona con su primo David VII por decisión mongola. Tras rebelarse, consolidó su poder en el oeste: la monarquía de Imericia nació de una fractura del reino, no de una nueva dinastía."
-  },
-  "DAVID7GEO": {
-    "biografia": "Hijo de Jorge IV y primo de David Narin, recibió la confirmación mongola para compartir el trono. Su gobierno quedó ligado a las campañas y exigencias fiscales del Iljanato; después de la separación occidental conservó el núcleo oriental."
-  },
-  "DEMETRIO2GEO": {
-    "biografia": "Reinó en la Georgia oriental sometida al Iljanato y participó en sus campañas. Su ejecución por orden del kan ilustra hasta qué punto la soberanía de los Bagrationi dependía de la política de la corte mongola."
   },
   "BEKA1JAKELI": {
     "biografia": "Señor de Samtsje, gobernó una frontera entre Georgia, el mundo mongol y Trebisonda. Los matrimonios de sus hijas enlazan su casa con los Bagrationi y los Grandes Comnenos; su nieto Jorge V creció en su entorno."
@@ -43,12 +25,6 @@ export const FRONTERAS_V272 = Object.freeze({
   },
   "DJIADJAKJAKELI": {
     "biografia": "Hija de Beka I de Samtsje y esposa de Alejo II de Trebisonda. La oposición de Andrónico II a este matrimonio revela que las alianzas familiares del mar Negro podían contradecir los planes de Constantinopla."
-  },
-  "VAKHTANG6KARTLI": {
-    "biografia": "Impulsó la codificación jurídica, la imprenta y la cultura escrita georgianas. Su carrera estuvo condicionada por la investidura persa, la presión otomana y una ayuda rusa que no logró consolidar su poder; terminó exiliado en Rusia."
-  },
-  "TAMARKARTLI": {
-    "biografia": "Hija de Vajtang VI y esposa de Teimuraz II, enlazó las ramas de Kartli y Kajetia. Fue madre de Heraclio II, que reuniría ambas coronas en 1762."
   },
   "TEIMURAZ2GEO": {
     "biografia": "Su colaboración con Nader Shah favoreció el reconocimiento de su poder en Kartli. Él y su hijo Heraclio gobernaron coronas vecinas y buscaron apoyos exteriores para sostener su posición tras el derrumbe del imperio de Nader."

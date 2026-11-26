@@ -65,7 +65,8 @@ import b6Status from './batch-6/status.json' with {type:'json'};
 const mergeObjects=(...items)=>Object.assign({},...items);
 const mergeArrays=(...items)=>items.flatMap(item=>Array.isArray(item)?item:[]);
 
-export const V6_PEOPLE=reviewPersonProfiles(mergeObjects(b1People,b2People,b3People,b4People,b5People,b6People));
+// 6.3.6: SANCHAARAG was a duplicate of SANCIABORGIA; its public URLs redirect.
+export const V6_PEOPLE=Object.fromEntries(Object.entries(reviewPersonProfiles(mergeObjects(b1People,b2People,b3People,b4People,b5People,b6People))).filter(([id])=>id!=='SANCHAARAG'));
 export const V6_NAMES=reviewPersonNames(mergeObjects(b1Names,b2Names,b3Names,b4Names,b5Names,b6Names));
 const RAW_V6_LABELS=mergeObjects(b1Labels,b2Labels,b3Labels,b4Labels,b5Labels,b6Labels);
 // Reviewed house and territory names replace the machine translations in the batches.

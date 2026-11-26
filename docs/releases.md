@@ -2,6 +2,7 @@
 
 ## Serie 6
 
+- [6.3.6: familias, biografías y documentación](releases/6.3.6.md).
 - [6.3.5: una ficha por entidad](releases/6.3.5.md).
 - [6.3.4: coherencia de territorios y coronas](releases/6.3.4.md).
 - [6.3.3: matrimonios juntos y columnas por dinastía](releases/6.3.3.md).
