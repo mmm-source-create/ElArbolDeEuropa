@@ -2,8 +2,8 @@
 
 Atlas histórico y genealógico para explorar personas, dinastías, territorios y sus conexiones familiares.
 
-- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.3.6**
-- [Notas de 6.3.6](docs/releases/6.3.6.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
+- [Web](https://www.treeofeurope.eu/es/) · Versión del repositorio: **6.3.7**
+- [Notas de 6.3.7](docs/releases/6.3.7.md) · [Documentación e historial](docs/README.md) · [Publicación en Cloudflare](docs/CLOUDFLARE.md) · [Seguridad](SECURITY.md)
 
 La versión 6.2.2 incorpora 39 personas con biografía y resumen en español e
 inglés: los Farnesio de Parma, los Bonaparte y seis trayectorias irlandesas e

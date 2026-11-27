@@ -1,0 +1,291 @@
+[
+  {
+    "id": "01",
+    "title": "Cambrai, Países Bajos y Franco Condado",
+    "result": "Cambrai recibe el gobierno efectivo de los reyes españoles desde 1595. Alberto e Isabel comparten un único conjunto territorial, incluido el Franco Condado, en 1598–1621.",
+    "resultEn": "Cambrai receives effective Spanish royal governments from 1595. Albert and Isabella share one territorial group, including Franche-Comté, in 1598–1621.",
+    "sources": [
+      {
+        "title": "University of Leiden · Act of cession, 6 May 1598",
+        "url": "https://dutchrevolt.library.universiteitleiden.nl/nederlands/bronnen/dutch_bronnen_1598-05-06-a-fra/"
+      },
+      {
+        "title": "Archives départementales du Nord · Cambrai, 3 G 25–26",
+        "url": "https://archivesdepartementales.lenord.fr/media/0613e1b3-da8f-40d4-8f9f-3b20de53b535.pdf"
+      },
+      {
+        "title": "Werner Thomas · The Spanish Faction at the court of Albert and Isabella, pp. 206–207",
+        "url": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/20/71/99/03/2020719903/2020719903.pdf"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Cuijk",
+    "result": "El color sigue el control efectivo: español hasta 1576, Estados en 1577–1585, español en 1586–1601 y Estados desde 1602. La señoría de los Orange se distingue del gobierno territorial.",
+    "resultEn": "Colour follows effective control: Spanish until 1576, States in 1577–1585, Spanish in 1586–1601 and States from 1602. Orange lordship is distinguished from territorial government.",
+    "sources": [
+      {
+        "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+        "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+        "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648."
+      },
+      {
+        "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+        "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+        "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611."
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "Melilla y plazas africanas",
+    "result": "Las plazas castellanas conservan el amarillo de Castilla antes de 1516; adoptan el dorado común en 1516. Se conservan las fechas de conquista y los intervalos de control de cada plaza.",
+    "resultEn": "Castilian outposts retain Castile’s yellow before 1516 and adopt the common Spanish gold in 1516. Each outpost’s conquest and control dates remain intact.",
+    "sources": [
+      {
+        "title": "Treccani · Melilla",
+        "url": "https://www.treccani.it/enciclopedia/melilla/"
+      },
+      {
+        "title": "Treccani · Orano",
+        "url": "https://www.treccani.it/enciclopedia/orano/"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Enrique III de Francia y Polonia-Lituania",
+    "result": "Reinado formal 1573–1575; ejercicio efectivo hasta junio de 1574; reclamación separada 1575–1589. Las coronas francesa y polaco-lituana no comparten color exterior.",
+    "resultEn": "Formal reign 1573–1575; effective exercise until June 1574; separate claim 1575–1589. The French and Polish-Lithuanian crowns retain separate exterior colours.",
+    "sources": [
+      {
+        "title": "BnF · Henri de Valois (1551–1589)",
+        "url": "https://heritage.bnf.fr/france-pologne/henri-valois-1551-1589"
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Saboya y Piamonte en los años 1710",
+    "result": "El marrón procedía del título de rey de Sicilia, no de una alternancia entre Saboya y Piamonte. Sicilia entra en la agrupación saboyana en 1713–1720, que conserva el violeta; Cerdeña sigue la misma unidad desde 1720.",
+    "resultEn": "The brown came from the Sicilian royal title, not alternating Savoy/Piedmont priority. Sicily joins the Savoyard group in 1713–1720, retaining violet; Sardinia follows the same group from 1720.",
+    "sources": [
+      {
+        "title": "Treccani · Vittorio Amedeo II di Savoia",
+        "url": "https://www.treccani.it/enciclopedia/vittorio-amedeo-ii-di-savoia_(Dizionario-Biografico)/"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Inglaterra y Escocia",
+    "result": "El cambio al azul escocés se producía durante el Protectorado: los tres cargos tenían el mismo rango y se elegía Escocia por orden alfabético. Inglaterra conserva su marrón y lo comparte con los otros territorios del mismo gobierno.",
+    "resultEn": "The change to Scottish blue occurred under the Protectorate: the three offices ranked equally and Scotland won alphabetically. England retains its brown, shared by the territories of the same government.",
+    "sources": [
+      {
+        "title": "The Royal Family · The Interregnum (1649–1660)",
+        "url": "https://www.royal.uk/interregnum-1649-1660",
+        "locator": "Oliver Cromwell, Lord Protector desde 1653; muerte en 1658."
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Gran Bretaña y Dinamarca",
+    "result": "Gran Bretaña pasa a un marrón más ocre, próximo a la familia inglesa y separado del rojo danés.",
+    "resultEn": "Great Britain receives a more ochre brown, related to the English colour family and distinct from Danish red.",
+    "sources": [
+      {
+        "title": "UK Parliament · Act of Union 1707",
+        "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "title": "Sajonia en 1638",
+    "result": "Se unifican las capas albertina, electoral y de Wittenberg desde 1547. Antes de ese año conservan sus distintas identidades. Se elimina el rayado causado por la superposición de la misma Sajonia.",
+    "resultEn": "Albertine, electoral and Wittenberg layers merge from 1547; their earlier identities remain distinct. The striping caused by duplicate Saxon layers is removed.",
+    "sources": [
+      {
+        "title": "SLUB Dresden · Eine Totenmesse für Kurfürst Moritz",
+        "url": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "title": "Austria Anterior en 1638",
+    "result": "Se añaden los gobiernos de las tierras anteriores a Fernando II, Leopoldo V, Fernando Carlos, Segismundo Francisco y la regencia de Claudia de Médici, con fuentes particulares. Tirol y las tierras anteriores conservan un conjunto propio durante la rama tirolesa.",
+    "resultEn": "Sourced Foreland governments are added for Ferdinand II, Leopold V, Ferdinand Charles, Sigismund Francis and Claudia de’ Medici’s regency. Tyrol and the Forelands retain a separate group under the Tyrolean branch.",
+    "sources": [
+      {
+        "title": "Schönbrunn Group · Ferdinand Karl, ruler of Tirol and the Vorlande",
+        "url": "https://www.habsburger.net/de/personen/habsburger/ferdinand-karl"
+      },
+      {
+        "title": "Deutsche Biographie · Leopold V., Erzherzog von Österreich",
+        "url": "https://www.deutsche-biographie.de/sfz57437.html"
+      },
+      {
+        "title": "Schönbrunn Group · Sigismund Franz",
+        "url": "https://www.habsburger.net/de/personen/habsburger/sigismund-franz"
+      },
+      {
+        "title": "Deutsche Biographie · Claudia, Erzherzogin von Österreich",
+        "url": "https://www.deutsche-biographie.de/sfz56745.html"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Looz desde 1366",
+    "result": "Looz comparte el color de Lieja desde su incorporación en 1366, conservando su identidad y sus instituciones en la información territorial.",
+    "resultEn": "Looz shares Liège’s colour from incorporation in 1366 while retaining its county identity and institutions in territorial information.",
+    "sources": [
+      {
+        "title": "Archives de l’État en Belgique · La noblesse du comté de Looz",
+        "url": "https://www.arch.be/index.php?l=fr&m=nos-projets&pr=la-noblesse-du-comte-de-looz",
+        "locator": "Intégration du comté à la principauté de Liège en 1366; maintien d’une partie de son indépendance institutionnelle."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Ciudad de Colonia hasta 1288",
+    "result": "La ciudad se integra en el color y la autoridad temporal del arzobispo hasta 1287. Desde Worringen, en 1288, se representa aparte; el reconocimiento imperial formal de 1475 continúa indicado.",
+    "resultEn": "The city shares the archbishop’s colour and temporal authority through 1287. It is represented separately from Worringen in 1288; formal imperial recognition in 1475 remains explicit.",
+    "sources": [
+      {
+        "title": "LVR · Kurfürstentum Köln",
+        "url": "https://rheinische-geschichte.lvr.de/Orte-und-Raeume/kurfuerstentum-koeln-/DE-2086/lido/57d118e0651e25.73195779",
+        "locator": "Worringen, 1288: pérdida del gobierno urbano del arzobispo; reconocimiento formal de la ciudad imperial en 1475."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Dependencias de la Horda",
+    "result": "Añadidos Kyiv, Galicia-Volinia, Vladímir-Súzdal, Moscú y Nóvgorod, con gobierno local. Galicia-Volinia interrumpe el vínculo durante la rebelión de Danylo y desde la autonomía de sus sucesores en 1301. Los cortes de Vladímir y Nóvgorod siguen sus fases territoriales y el paso a la dependencia moscovita; no afirman un pago anual uniforme.",
+    "resultEn": "Added Kyiv, Galicia-Volhynia, Vladimir-Suzdal, Moscow and Novgorod, retaining local government. Galicia-Volhynia’s relationship stops during Danylo’s revolt and from his successors’ autonomy in 1301. Vladimir and Novgorod cutoffs follow territorial phases and Muscovite dependence, without implying uniform annual payments.",
+    "sources": [
+      {
+        "title": "Canadian Institute of Ukrainian Studies · Tatars",
+        "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CT%5CA%5CTatars.htm",
+        "locator": "Danylo: sumisión en 1246, guerra contra Kuremsa en 1252–1257 y campaña de Burundai en 1259. Lev acepta a Nogay; sus sucesores de comienzos del siglo XIV son independientes. Kyiv conserva príncipes vasallos.",
+        "locatorEn": "Danylo: submission in 1246, war against Kuremsa in 1252–1257, and Burundai’s campaign in 1259. Lev accepts Nogay; his early fourteenth-century successors are independent. Kyiv retains vassal princes."
+      },
+      {
+        "title": "Canadian Institute of Ukrainian Studies · Kyiv principality",
+        "url": "https://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CK%5CY%5CKyivprincipality.htm",
+        "locator": "Destrucción de 1240, supervivencia del principado e incorporación a Lituania en 1362.",
+        "locatorEn": "Destruction in 1240, survival of the principality, and incorporation into Lithuania in 1362."
+      },
+      {
+        "title": "A. A. Gorsky · Golden Horde Review 10/2 (2022), pp. 303–313",
+        "url": "https://goldhorde.ru/en/stati2022-2-3/",
+        "locator": "Resumen: convocatoria de 1242–1243 y reconocimiento de Yaroslav por Batu, origen del gobierno mediante príncipes locales.",
+        "locatorEn": "Abstract: the summons of 1242–1243 and Batu’s recognition of Yaroslav, establishing rule through local princes."
+      },
+      {
+        "title": "Janet Martin · Medieval Russia, 980–1584 · Chronology",
+        "url": "https://assets.cambridge.org/97805218/59165/frontmatter/9780521859165_frontmatter.pdf",
+        "locator": "Cronología, pp. xviii–xxiii: censo de Nóvgorod en 1259, concesiones principescas de los kanes y enfrentamiento del Ugrá en 1480.",
+        "locatorEn": "Chronology, pp. xviii–xxiii: the Novgorod census of 1259, princely grants by the khans, and the Ugra confrontation of 1480."
+      },
+      {
+        "title": "The Cambridge History of the Mongol Empire · The Rus’ Principalities (2023)",
+        "url": "https://www.cambridge.org/core/books/cambridge-history-of-the-mongol-empire/rus-principalities/911C3421D072F30E76F46B3AD73DCA9D",
+        "locator": "Resumen del capítulo: yarliks para Vladímir, monopolio moscovita del tributo en el siglo XIV y final efectivo del dominio mongol en 1480.",
+        "locatorEn": "Chapter summary: yarlighs for Vladimir, Moscow’s fourteenth-century monopoly over tribute collection, and the effective end of Mongol rule in 1480."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Charolais hasta 1684",
+    "result": "Separadas la posesión habsbúrgica, la confiscación francesa de 1674–1678, la restitución de 1679, la adjudicación a los Condé en 1684 y la incorporación real de 1761. Isabel conserva su título comital hasta 1633. Las confiscaciones anteriores se advierten en la nota territorial; sus calendarios locales requieren una revisión específica.",
+    "resultEn": "Separated Habsburg possession, the French confiscation of 1674–1678, restoration in 1679, the Condé award in 1684 and royal incorporation in 1761. Isabella retains her comital title until 1633. Earlier confiscations remain explicit in the territorial note; their local calendars require a separate review.",
+    "sources": [
+      {
+        "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+        "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+        "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+        "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+      },
+      {
+        "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+        "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+        "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+        "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Flandes bajo Carlos V",
+    "result": "El color de la política exterior de Carlos V prevalece sobre el tinte feudal francés. En 1523 Flandes comparte el dorado hispánico y conserva el patrón de feudo francés; el vínculo termina en el corte existente de 1526, antes de su confirmación en Cambrai (1529).",
+    "resultEn": "Charles V’s foreign-policy colour takes precedence over the French feudal tint. In 1523 Flanders shares Spanish gold while retaining the French-fief pattern; the relationship ends at the existing 1526 cutoff, before confirmation at Cambrai in 1529.",
+    "sources": [
+      {
+        "title": "Service public de Wallonie · Traité de Cateau-Cambrésis (1559)",
+        "url": "https://connaitrelawallonie.wallonie.be/histoire-et-symboles/histoire/atlas-historique/dispositions-du-traite-de-cateau-cambresis-1559",
+        "locator": "Párrafos 2–3: Flandes y Artois pasan a la órbita imperial por los tratados de Madrid (1526) y Cambrai (1529).",
+        "locatorEn": "Paragraphs 2–3: Flanders and Artois entered the imperial orbit under the treaties of Madrid (1526) and Cambrai (1529)."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "title": "Schleswig y Holstein",
+    "result": "Color ducal común desde Ribe (1460) hasta la ruptura exterior de Gottorp en 1657. Schleswig lleva trama de feudo danés hasta 1657; Holstein, de feudo imperial desde 1474, conservada también después de su reunión bajo el duque-rey en 1773. El gobierno conjunto no convierte Holstein en feudo danés. Se conservan las fechas de integración de 1721 y 1773.",
+    "resultEn": "Shared ducal colour from Ribe (1460) until Gottorp’s foreign-policy break in 1657. Schleswig has a Danish-fief pattern through 1657; Holstein an imperial-fief pattern from 1474, including after reunion under the duke-king in 1773. Joint government does not make Holstein a Danish fief. Existing integration dates of 1721 and 1773 are retained.",
+    "sources": [
+      {
+        "title": "Landesarchiv Schleswig-Holstein · Ribebrevet, 5 March 1460",
+        "url": "https://danmarkshistorien.lex.dk/Ribebrevet,_5._marts_1460",
+        "locator": "Carta de Ribe: elección de Cristián I como duque de Schleswig y conde de Holstein; leyes propias y vinculación de ambos territorios.",
+        "locatorEn": "Ribe charter: election of Christian I as Duke of Schleswig and Count of Holstein; separate laws and association of the two territories."
+      },
+      {
+        "title": "Aarhus Universitet · De danske konger som hertuger af Slesvig og Holsten",
+        "url": "https://lex.dk/De_danske_konger_som_hertuger_af_Slesvig_og_Holsten_1460-1864",
+        "locator": "Kongens rolle: Schleswig es feudo danés y Holstein imperial. Fællesregeringen: decisiones comunes de guerra y paz; fin del gobierno compartido en 1721 y 1773.",
+        "locatorEn": "Kongens rolle: Schleswig is a Danish fief and Holstein an imperial one. Fællesregeringen: common decisions on war and peace; joint government ends in 1721 and 1773."
+      },
+      {
+        "title": "Aarhus Universitet · Hertugerne af Gottorp 1544–1773",
+        "url": "https://lex.dk/Hertugerne_af_Gottorp_1544-1773",
+        "locator": "Gobierno conjunto y política exterior compartida; alianza de Gottorp con Suecia desde 1657 y soberanía obtenida en la paz de Roskilde de 1658.",
+        "locatorEn": "Joint government and shared foreign policy; Gottorp’s alliance with Sweden from 1657 and sovereignty gained at the Peace of Roskilde in 1658."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "title": "Rügen y Pomerania bajo Dinamarca",
+    "result": "Añadida la dependencia danesa de Pomerania en 1185–1226 y la de Rügen hasta 1437. Tras 1325, la trama afecta solo al antiguo principado de Rügen dentro de Pomerania-Wolgast, no a todo el ducado. Las conquistas directas danesas de Holstein y Estonia ya siguen sus fases propias.",
+    "resultEn": "Added Danish dependence for Pomerania in 1185–1226 and Rügen through 1437. After 1325 the pattern covers only the former principality of Rügen within Pomerania-Wolgast, not the whole duchy. Direct Danish conquests in Holstein and Estonia retain their own existing phases.",
+    "sources": [
+      {
+        "title": "Nils G. Bartholdy · Det danske kongevåben (University of Copenhagen)",
+        "url": "https://hum.ku.dk/kalender/2021/november/det-danske-kongevaaben/nils_bartholdy_samlet.pdf",
+        "locator": "Apartado sobre el título de rey de los vendos: Rügen sigue siendo feudo danés con duques pomeranos como vasallos después de 1325; Eric pone fin al vínculo en 1438.",
+        "locatorEn": "Section on the title King of the Wends: Rügen remains a Danish fief with Pomeranian dukes as vassals after 1325; Eric ends the relationship in 1438."
+      },
+      {
+        "title": "Gyldendal og Politikens Danmarkshistorie · Krig og fred",
+        "url": "https://gyldendalogpolitikensdanmarkshistorie.lex.dk/Krig_og_fred",
+        "locator": "Cronología 1184–1185: sometimiento de Mecklenburg y Pomerania; 1224–1227: rebelión de los príncipes y derrota danesa.",
+        "locatorEn": "Chronology 1184–1185: subjection of Mecklenburg and Pomerania; 1224–1227: princely revolt and Danish defeat."
+      },
+      {
+        "title": "Aarhus Universitet · Kongerigets politiske udvikling, 1050–1340",
+        "url": "https://cas.au.dk/danmarkshistorien/lektioner/lektion-2-hoejmiddelalderen-1050-1340/4-kongerigets-politiske-udvikling",
+        "locator": "Expansión danesa en Pomerania; conquista de Holstein y ocupación de Hamburgo y Lübeck en 1201; derrota de Bornhöved en 1227.",
+        "locatorEn": "Danish expansion into Pomerania; conquest of Holstein and occupation of Hamburg and Lübeck in 1201; defeat at Bornhöved in 1227."
+      }
+    ]
+  }
+]

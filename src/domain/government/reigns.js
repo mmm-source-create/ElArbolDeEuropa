@@ -18,8 +18,8 @@ export function listaReinados(persona) {
     );
 }
 
-export function reinadoEsEfectivo(reinado) {
-  return Boolean(reinado) && gobiernoEfectivo(reinado);
+export function reinadoEsEfectivo(reinado, year = null) {
+  return Boolean(reinado) && gobiernoEfectivo(reinado, year);
 }
 
 // Los años del dataset son inclusivos. Esto permite representar también
@@ -27,7 +27,7 @@ export function reinadoEsEfectivo(reinado) {
 export function reinadosActivos(persona, año, { soloEfectivos = false } = {}) {
   if (!Number.isFinite(año)) return [];
   return listaReinados(persona).filter((r) =>
-    (!soloEfectivos || reinadoEsEfectivo(r))
+    (!soloEfectivos || reinadoEsEfectivo(r, año))
     && año >= r.desde && año <= r.hasta
   );
 }
@@ -49,7 +49,7 @@ export function territoriosGobernadosEnAño(persona, año) {
 export function esGobernante(persona) {
   if (!persona) return false;
   const reinadosDetallados = listaReinados(persona);
-  if (reinadosDetallados.length) return reinadosDetallados.some(reinadoEsEfectivo);
+  if (reinadosDetallados.length) return reinadosDetallados.some(r=>reinadoEsEfectivo(r));
   return false;
 }
 

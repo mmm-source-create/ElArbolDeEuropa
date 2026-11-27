@@ -2,6 +2,7 @@
 import {intervalosDisputadosDe} from '../genealogy/personAccessors.js';
 
 export function authorityKind(government, year = null) {
+  if (Number.isInteger(year) && Number.isInteger(government?.ejercicioHasta) && year > government.ejercicioHasta) return 'titular';
   if (['titular', 'pretensión'].includes(government?.condicion) || government?.efectivo === false) return 'titular';
   const disputes = intervalosDisputadosDe(government);
   if (disputes.some(period => period.desde <= year && year <= period.hasta)) return 'disputed';

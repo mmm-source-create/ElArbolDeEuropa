@@ -1,3 +1,4 @@
+import {SEPARATE_EXTERIOR_POLICIES} from './foreignPolicyExceptions.js';
 import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
 import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR, GREAT_BRITAIN_COLOR, SAVOY_COLOR} from './mapColors.js';
 import {authorityKind} from '../domain/government/authorityKind.js';
@@ -424,6 +425,7 @@ const PERSONAS_HERENCIA_BORGONONA = new Set([
   'FEL3BORG', 'CAR1BORG', 'MARIABORG', 'FEL1CAST', 'CARLOS5', 'FEL2ESP',
 ]);
 const FEUDOS_HERENCIA_BORGONONA = new Set([
+  'Países Bajos', 'Charolais',
   'Borgoña', 'Condado de Borgoña', 'Artois', 'Flandes', 'Nevers', 'Rethel',
   'Auxerre', 'Ponthieu', 'Namur', 'Brabante', 'Limburgo', 'Henao', 'Holanda',
   'Zelanda', 'Luxemburgo', 'Güeldres', 'Frisia', 'Utrecht', 'Overijssel',
@@ -441,7 +443,7 @@ const MONARQUIA_HISPANICA = new Set([
 ]);
 const DOMINIOS_INGLESES_EN_FRANCIA = new Set(['Normandía', 'Anjou', 'Maine', 'Turena', 'Poitou', 'Aquitania',
   'Ducado de Aquitania', 'Gascuña', 'Ponthieu', 'Calais']);
-const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Cerdeña']);
+const ESTADOS_SABOYANOS = new Set(['Saboya', 'Piamonte', 'Sicilia', 'Cerdeña']);
 const TIERRAS_AUSTRIACAS = new Set(['Austria', 'Austria Interior', 'Austria Anterior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria',
   'Norte de Serbia habsbúrgico', 'Oltenia habsbúrgica', 'Banato de Temes', 'Reino de Galicia y Lodomeria']);
 const ADMINISTRACION_AUSTRO_BOHEMIA = new Set(['Austria', 'Austria Interior', 'Tirol', 'Carintia', 'Carniola', 'Ducado de Estiria', 'Bohemia', 'Moravia', 'Silesia']);
@@ -558,6 +560,13 @@ const AGRUPACIONES_POLITICAS = [
     fuente: 'https://www.psp.cz/eknih/snemy/v010/1527/t016200.htm',
   },
   {
+    id:'tirol-austria-anterior',nombre:'Tirol y Austria Anterior',desde:1564,hasta:1665,
+    territorios:new Set(['Tirol','Austria Anterior']),color:REINO_COLOR.Tirol,
+    aplica:active=>active.has('Tirol')&&active.has('Austria Anterior')&&!active.has('Austria'),
+    nota:'Tirol y las tierras anteriores austríacas bajo la rama tirolesa de los Habsburgo.',
+    fuente:'https://www.habsburger.net/de/personen/habsburger/ferdinand-karl',
+  },
+  {
     id: 'tierras-austriacas', nombre: 'Tierras austríacas reunidas', territorios: TIERRAS_AUSTRIACAS,
     color: REINO_COLOR.Austria, desde: -Infinity,
     aplica: (activos) => [...TIERRAS_AUSTRIACAS].filter(territorio => activos.has(territorio)).length > 1,
@@ -567,7 +576,7 @@ const AGRUPACIONES_POLITICAS = [
   {
     id: 'saboya', nombre: 'Estados saboyanos', territorios: ESTADOS_SABOYANOS,
     color: REINO_COLOR.Saboya, desde: -Infinity,
-    aplica: activos => [...ESTADOS_SABOYANOS].filter(t=>activos.has(t)).length>1,
+    aplica: activos => (activos.has('Saboya')||activos.has('Piamonte'))&&[...ESTADOS_SABOYANOS].filter(t=>activos.has(t)).length>1,
     nota: 'Conjunto de territorios gobernados por la casa de Saboya, solo cuando su gobierno está fechado y activo.',
     fuente:'https://www.treccani.it/enciclopedia/savoia_(Dizionario-di-Storia)/',
   },
@@ -609,6 +618,7 @@ export const MAP_GROUP_REVIEW = Object.freeze({
   'monarquia-hispanica':{personal:true,reason:'España: coronas de Castilla y Aragón, Navarra y sus dominios italianos. Portugal y los Países Bajos se muestran aparte.'},
   'corona-aragon':{personal:true,reason:'Reinos de la Corona de Aragón gobernados por el mismo rey.'},
   'corona-bohemia':{personal:true,reason:'Tierras de la Corona de Bohemia desde 1348.'},
+  'tirol-austria-anterior':{personal:true,reason:'Tirol y las tierras anteriores bajo su propia rama soberana.'},
   'tierras-austriacas':{personal:true,reason:'Tierras austríacas reunidas por la misma persona; las particiones con otro gobernante no se funden.'},
   'saboya':{personal:true,reason:'Estados de la casa de Saboya gobernados a la vez.'},
   'paises-bajos':{personal:true,reason:'Sucesión común desde 1549: un solo conjunto, sin dividirlo en provincias.'},
@@ -643,6 +653,7 @@ const UNION_RULE={
 const joinNames=names=>names.length<2?names.join(''):`${names.slice(0,-1).join(', ')} ${/^h?i(?!e)/i.test(names.at(-1))?'e':'y'} ${names.at(-1)}`;
 
 function personalUnionInPanorama(persona,año,activeMandates,groups) {
+  if(SEPARATE_EXTERIOR_POLICIES[persona?.id])return groups;
   const crowns=activeMandates.filter(m=>UNION_CROWN_CLASSES.has(m.clase));
   if(crowns.length<2)return groups;
   const units=[];
@@ -802,8 +813,10 @@ const PERSONAL_TERRITORY_COLORS = Object.freeze({
   León:'#B09B4A','Condado de Barcelona':'#A87539',Valencia:'#A45967',Cerdeña:'#577C62',
   Piamonte:'#758B4E',Ravensberg:'#648593',
 });
+// The Castilian presidios enter the shared Spanish palette in 1516, with the crowns.
+export const datedTerritoryColor=(territory,year)=>territory==='Presidios españoles del Magreb'&&year<1516?REINO_COLOR.Castilla:REINO_COLOR[territory];
 export function colorTerritorioEnMapa(persona, territorio, año) {
-  const base=PERSONAL_TERRITORY_COLORS[territorio] || REINO_COLOR[territorio] || fallbackTerritoryColor(territorio);
+  const base=PERSONAL_TERRITORY_COLORS[territorio] || datedTerritoryColor(territorio,año) || fallbackTerritoryColor(territorio);
   const grupos=agrupacionesPoliticasEnMapa(persona,año);
   // A dated cartographic supplement without its own mandate (Charolais,
   // Cuijk) follows the group it belongs to; a recorded title never does.

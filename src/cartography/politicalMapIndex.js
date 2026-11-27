@@ -1,3 +1,4 @@
+import {dependencyLayersAt,relationCoversLocation} from './tributaryRelations.js';
 import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 import {idsDeReinoEnAño} from './kingdomMaps.js';
 import {imperialFrameIds} from './imperialFrame.js';
@@ -159,6 +160,19 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
         kind: layer.authorityCondition === 'sin poblamiento documentado' ? 'physical' : 'regional',
         paint:true, ids:[id], mapNote:evidence.note, mapSources:evidence.sources,
         regionalEvidence:true});
+    }
+  }
+  // A documented dependency does not require an invented personal mandate.
+  for (const {layer,relations} of dependencyLayersAt(mapData,year)) {
+    for (const relation of relations) {
+      for (const id of reviewedLayerLocations(mapData,layer,year).filter(id=>relationCoversLocation(relation,id))) {
+        if ((regions.get(id)||[]).some(entry=>entry.relationship?.id===relation.id)) continue;
+        push(id,{person:null,government:null,claim:null,territory:territorialIdentity(layer.name),
+          collective:{nombre:relation.overlordLabel||relation.overlord},
+          relationship:{...relation,subjectLabel:relation.subjectLabel||relation.subject},
+          kind:relation.type==='feudo'?'fief':'tributary',paint:true,ids:[id],
+          mapSources:relation.sources,mapNote:relation.note});
+      }
     }
   }
   for(const [id,entries] of regions)regions.set(id,mergeMapAuthorityEntries(entries));

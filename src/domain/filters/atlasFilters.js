@@ -47,7 +47,7 @@ export function isRepublicanOffice(person,mandate,year=null) {
 }
 export function personMatchesTerritory(person,filter,year=null,governmentsOnly=false) {
  if(filter==='Provincias Unidas')return gobiernosDe(person).some(g=>isRepublicanOffice(person,g,year));
- const values=governmentsOnly?gobiernosDe(person).filter(g=>gobiernoEfectivo(g)&&(year==null||g.desde<=year&&year<=g.hasta)).map(g=>g.territorio):territoriosDe(person);
+ const values=governmentsOnly?gobiernosDe(person).filter(g=>gobiernoEfectivo(g,year)&&(year==null||g.desde<=year&&year<=g.hasta)).map(g=>g.territorio):territoriosDe(person);
  return values.some(n=>{if(governmentsOnly&&year!=null&&filter==='Hungría'&&(n==='Transilvania habsbúrgica'||n==='Transilvania'&&year>1540||n==='Banato de Temes'&&year<1779))return false;return n===filter||subterritoriosDeFiltro(filter).includes(n);});
 }
 

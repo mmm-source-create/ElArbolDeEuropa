@@ -168,3 +168,9 @@ inicial; la navegación carga los datos del despliegue vigente por su ruta
 normal. No se convierte el formato antiguo silenciosamente. El build genera
 HTML, JSON y módulos juntos. La [V5.7](versiones/V5.7.md) explica la revisión explícita de
 la base pública necesaria para cambiar el nombre del campo.
+
+## Final del ejercicio efectivo / End of effective government
+
+`gobiernos[].ejercicioHasta` es un año opcional dentro del intervalo formal `desde`–`hasta`. Desde el año siguiente, el mandato deja de aportar autoridad efectiva y color de gobierno al atlas, sin acortar las fechas formales de la ficha. La nota documental conserva la precisión mensual o diaria cuando existe. Las pretensiones posteriores se registran por separado.
+
+`gobiernos[].ejercicioHasta` is an optional year within the formal `desde`–`hasta` interval. From the following year the mandate ceases to supply effective authority or government colour to the atlas, while its formal profile dates remain intact. Documentary notes retain month or day precision where known. Later claims have separate records.

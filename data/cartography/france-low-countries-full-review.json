@@ -2011,9 +2011,46 @@
       "locator": "Carta de 1875, BnF GED-7313: Sens y Auxerre dentro del dominio de obediencia inglesa; diferencias entre dominio real y feudos. Champaña y corredor de Reims cambian durante la campaña de 1429."
     },
     "govlist": {
-      "title": "Wikipedia · List of governors of the Habsburg Netherlands",
-      "url": "https://en.wikipedia.org/wiki/List_of_governors_of_the_Habsburg_Netherlands",
-      "locator": "Tabla de gobernadores: nombre, entrada y salida del cargo y soberano que los nombró; respalda el mandato, no la geometría."
+      "title": "Encyclopaedia Britannica · Spanish Netherlands",
+      "url": "https://www.britannica.com/place/Spanish-Netherlands",
+      "locator": "Contexto del dominio de los Habsburgo españoles en los Países Bajos. Los mandatos personales tienen sus propias revisiones documentales.",
+      "locatorEn": "Context for Spanish Habsburg rule in the Netherlands. Personal mandates have their own individual documentary reviews."
+    },
+    "cambrai637": {
+      "title": "Archives départementales du Nord · Cambrai, 3 G 25–26",
+      "url": "https://archivesdepartementales.lenord.fr/media/0613e1b3-da8f-40d4-8f9f-3b20de53b535.pdf",
+      "locator": "3 G 25–26, control español desde 1595 y jurisdicción episcopal disputada.",
+      "locatorEn": "Archives 3 G 25–26: the Spanish capture of Cambrai in 1595, Philip II’s patents of 1596 and 1598, and continuing episcopal claims."
+    },
+    "cuijk637": {
+      "title": "RAAP / gemeente Land van Cuijk · Erfgoed in de gemeente Land van Cuijk, p. 90",
+      "url": "https://repository.officiele-overheidspublicaties.nl/externebijlagen/exb-2024-16204/1/bijlage/exb-2024-16204.pdf",
+      "locator": "Página 90, §4.10.2: Grave española antes de 1577; Estados en 1577, española en 1586, Estados en 1602. La Generalidad se consolida en 1648.",
+      "locatorEn": "RAAP report 6742, section 4.10.2, p. 90: changes of military control in 1577, 1586 and 1602; formal incorporation in 1648."
+    },
+    "cuijklords637": {
+      "title": "BHIC · Bestuur en rechtspraak Grave 1572–1795",
+      "url": "https://beta.bhic.nl/verhalen/bestuur-en-rechtspraak-grave-1572-1795",
+      "locator": "La señoría pignoraticia concedida a Guillermo de Orange en 1559, confiscada en 1568; Mauricio obtiene el feudo hereditario en 1611.",
+      "locatorEn": "The lordship was pledged to William of Orange in 1559, confiscated in 1568 and granted hereditarily to Maurice in 1611."
+    },
+    "looz637": {
+      "title": "Archives de l’État en Belgique · La noblesse du comté de Looz",
+      "url": "https://www.arch.be/index.php?l=fr&m=nos-projets&pr=la-noblesse-du-comte-de-looz",
+      "locator": "Intégration du comté à la principauté de Liège en 1366; maintien d’une partie de son indépendance institutionnelle.",
+      "locatorEn": "The county was incorporated into the Prince-Bishopric of Liège in 1366 while retaining part of its institutional autonomy."
+    },
+    "charolais637": {
+      "title": "Claude Courtépée et Edmé Béguillet · Description historique et topographique du duché de Bourgogne, IV (1779)",
+      "url": "https://brionnais.fr/pm/site/histoire_Charolais.htm",
+      "locator": "Coup d’œil sur le Charolais: adquisición borgoñona, confiscación de 1477, devolución en 1493, cesión de 1598, sucesión de 1633, confiscación de 1674, restitución de 1679 y adjudicación de 1684; permuta real de 1761.",
+      "locatorEn": "Coup d’œil sur le Charolais: Burgundian acquisition, confiscation in 1477, return in 1493, cession in 1598, succession in 1633, confiscation in 1674, return in 1679 and award in 1684; royal exchange in 1761."
+    },
+    "charolais-archives637": {
+      "title": "Maison des Sciences de l’Homme de Dijon · Archives du comté de Charolais (1961), p. 189",
+      "url": "https://pandor.u-bourgogne.fr/pleade/functions/ead/detached/MSHDB/MSHDB_1961_FASC_22.pdf",
+      "locator": "Los príncipes de Condé suceden a los reyes de España como poseedores del condado desde 1684.",
+      "locatorEn": "The princes of Condé succeed the kings of Spain as holders of the county from 1684."
     }
   },
   "assignments": [
@@ -9757,49 +9794,6 @@
       "scopeLabel": "Mâcon · 1477–1789"
     },
     {
-      "from": 1200,
-      "through": 1750,
-      "identity": "Charolais",
-      "governmentTerritories": [
-        "Charolais"
-      ],
-      "ids": [
-        "Charolles"
-      ],
-      "sourceKeys": [
-        "fr1328",
-        "fr1453",
-        "frfront"
-      ],
-      "note": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477.",
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "name": "Charolais · 1200–1750 · revisión Francia 322",
-      "scopeLabel": "Charolais · 1200–1750"
-    },
-    {
-      "from": 1751,
-      "through": 1789,
-      "identity": "Charolais",
-      "governmentTerritories": [
-        "Francia",
-        "Charolais"
-      ],
-      "ids": [
-        "Charolles"
-      ],
-      "sourceKeys": [
-        "fr1328",
-        "fr1453",
-        "frfront"
-      ],
-      "note": "Condado de Charolais: posesión borgoñona desde 1390, herencia habsbúrgica y pretensiones de soberanía española hasta las cesiones y enajenaciones del XVIII. La compra de 1751 no se adelanta a 1477.",
-      "precision": "regional_approximation",
-      "limitedCore": false,
-      "name": "Charolais · 1751–1789 · revisión Francia 323",
-      "scopeLabel": "Charolais · 1751–1789"
-    },
-    {
       "from": 1790,
       "through": 1800,
       "identity": "Francia",
@@ -15696,14 +15690,15 @@
       "through": 1676,
       "identity": "Principado episcopal de Cambrai",
       "governmentTerritories": [
-        "Países Bajos"
+        "Principado episcopal de Cambrai"
       ],
       "ids": [
         "Cambrai"
       ],
       "sourceKeys": [
         "wall",
-        "northcourt"
+        "northcourt",
+        "cambrai637"
       ],
       "note": "Ciudad, temporal episcopal y Cambrésis, con jurisdicciones interiores; toma española de 1595 distinta de los derechos episcopales previos, conquista francesa de 1677. No se absorbe en el condado de Artois.",
       "precision": "regional_approximation",
@@ -18462,9 +18457,9 @@
         "Hasselt"
       ],
       "sourceKeys": [
-        "wall"
+        "looz637"
       ],
-      "note": "Condado de Looz/Loon, incorporado al temporal de Lieja en 1366; título y superficie conservados, sin atribuirlo a Limburgo.",
+      "note": "Condado de Looz integrado en el principado de Lieja desde 1366, con instituciones propias.",
       "precision": "regional_approximation",
       "limitedCore": false,
       "name": "Looz · 1366–1793 · revisión Francia 713",
@@ -25816,9 +25811,9 @@
       "scopeLabel": "Señorío de Cuijk · 1200–1472"
     },
     {
-      "name": "Señorío de Cuijk · 1473–1647 · revisión Francia 1053",
+      "name": "Señorío de Cuijk · 1473–1576 · revisión 637",
       "from": 1473,
-      "through": 1647,
+      "through": 1576,
       "identity": "Señorío de Cuijk",
       "governmentTerritories": [
         "Señorío de Cuijk",
@@ -25828,13 +25823,76 @@
         "Cuijk"
       ],
       "sourceKeys": [
-        "nlmap",
-        "generality"
+        "cuijk637",
+        "cuijklords637"
       ],
-      "note": "Señorío y Land van Cuijk, distinto del ducado de Brabante; vinculación borgoñona/habsbúrgica y señoríos interiores. La incorporación a la Generalidad se fecha en 1648; no se absorbe en Brabante por el nombre de la provincia contemporánea.",
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
       "precision": "regional_approximation",
       "limitedCore": false,
-      "scopeLabel": "Señorío de Cuijk · 1473–1647"
+      "scopeLabel": "Señorío de Cuijk · 1473–1576"
+    },
+    {
+      "name": "Señorío de Cuijk · 1577–1585 · revisión 637",
+      "from": 1577,
+      "through": 1585,
+      "identity": "Señorío de Cuijk",
+      "governmentTerritories": [
+        "Provincias Unidas",
+        "Señorío de Cuijk"
+      ],
+      "ids": [
+        "Cuijk"
+      ],
+      "sourceKeys": [
+        "cuijk637",
+        "cuijklords637"
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1577–1585"
+    },
+    {
+      "name": "Señorío de Cuijk · 1586–1601 · revisión 637",
+      "from": 1586,
+      "through": 1601,
+      "identity": "Señorío de Cuijk",
+      "governmentTerritories": [
+        "Señorío de Cuijk",
+        "Países Bajos"
+      ],
+      "ids": [
+        "Cuijk"
+      ],
+      "sourceKeys": [
+        "cuijk637",
+        "cuijklords637"
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1586–1601"
+    },
+    {
+      "name": "Señorío de Cuijk · 1602–1647 · revisión 637",
+      "from": 1602,
+      "through": 1647,
+      "identity": "Señorío de Cuijk",
+      "governmentTerritories": [
+        "Provincias Unidas",
+        "Señorío de Cuijk"
+      ],
+      "ids": [
+        "Cuijk"
+      ],
+      "sourceKeys": [
+        "cuijk637",
+        "cuijklords637"
+      ],
+      "note": "Grave y Land van Cuijk: control español hasta 1576, de los Estados en 1577–1585, español en 1586–1601 y de los Estados desde 1602; señorío de los Orange con concesiones y confiscaciones propias. La Generalidad se consolida en 1648.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "scopeLabel": "Señorío de Cuijk · 1602–1647"
     },
     {
       "from": 1200,
@@ -26916,6 +26974,214 @@
       ],
       "name": "Chartres · 1432–1789 · revisión Francia 1099",
       "scopeLabel": "Chartres · 1432–1789"
+    },
+    {
+      "from": 1200,
+      "through": 1389,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Condado de Charolais, feudo del reino de Francia.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1200–1389 · revisión637",
+      "scopeLabel": "Charolais · 1200–1389"
+    },
+    {
+      "from": 1390,
+      "through": 1476,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Borgoña",
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Charolais pertenece a los duques de Borgoña desde la adquisición de 1390.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1390–1476 · revisión637",
+      "scopeLabel": "Charolais · 1390–1476"
+    },
+    {
+      "from": 1477,
+      "through": 1492,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Francia"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Luis XI confisca Charolais en 1477; el tratado de Senlis lo devuelve a los Habsburgo en 1493.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1477–1492 · revisión637",
+      "scopeLabel": "Charolais · 1477–1492"
+    },
+    {
+      "from": 1493,
+      "through": 1597,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Flandes",
+        "Brabante",
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Posesión habsbúrgica devuelta por el tratado de Senlis de 1493, vinculada a la herencia borgoñona; la superioridad francesa y las confiscaciones de guerra afectan a su jurisdicción.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1493–1597 · revisión637",
+      "scopeLabel": "Charolais · 1493–1597"
+    },
+    {
+      "from": 1598,
+      "through": 1633,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Felipe II cede Charolais a Isabel Clara Eugenia en 1598. Lo conserva hasta su muerte en 1633, cuando vuelve a Felipe IV.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1598–1633 · revisión637",
+      "scopeLabel": "Charolais · 1598–1633"
+    },
+    {
+      "from": 1634,
+      "through": 1673,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Castilla",
+        "Aragón",
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Condado de la Monarquía Hispánica bajo superioridad francesa, sujeto a confiscaciones durante las guerras entre ambas coronas.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1634–1673 · revisión637",
+      "scopeLabel": "Charolais · 1634–1673"
+    },
+    {
+      "from": 1674,
+      "through": 1678,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Francia"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Confiscación francesa durante la guerra de Holanda; restitución a la Corona española en 1679.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1674–1678 · revisión637",
+      "scopeLabel": "Charolais · 1674–1678"
+    },
+    {
+      "from": 1679,
+      "through": 1683,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Castilla",
+        "Aragón",
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Charolais vuelve a la Corona española tras la paz de Nimega y permanece en su patrimonio hasta la adjudicación de 1684.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1679–1683 · revisión637",
+      "scopeLabel": "Charolais · 1679–1683"
+    },
+    {
+      "from": 1684,
+      "through": 1760,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Condado adjudicado a los Borbón-Condé en 1684 como compensación por una deuda española.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1684–1760 · revisión637",
+      "scopeLabel": "Charolais · 1684–1760"
+    },
+    {
+      "from": 1761,
+      "through": 1789,
+      "identity": "Charolais",
+      "governmentTerritories": [
+        "Francia",
+        "Charolais"
+      ],
+      "ids": [
+        "Charolles"
+      ],
+      "sourceKeys": [
+        "charolais637",
+        "charolais-archives637"
+      ],
+      "note": "Luis XV incorpora Charolais al dominio real por la permuta de 1761.",
+      "precision": "regional_approximation",
+      "limitedCore": false,
+      "name": "Charolais · 1761–1789 · revisión637",
+      "scopeLabel": "Charolais · 1761–1789"
     }
   ],
   "allowedMixedCells": [

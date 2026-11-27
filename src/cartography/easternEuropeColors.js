@@ -1,4 +1,5 @@
 export const EASTERN_EUROPE_COLORS = Object.freeze({
+  "Horda de Oro": "#927B43",
   "Arzobispado de Riga": "#387794",
   "Bulgaria del Volga": "#949138",
   "Ciudad libre de Riga": "#387B94",

@@ -1984,19 +1984,21 @@
     },
     {
       "name": "Colonia · ciudad y arzobispo · 1200–1287 · cobertura alemana 28",
-      "identity": "Colonia · ciudad y arzobispo",
+      "identity": "Electorado de Colonia",
       "from": 1200,
       "through": 1287,
       "ids": [
         "Cologne"
       ],
-      "governmentTerritories": [],
+      "governmentTerritories": [
+        "Electorado de Colonia"
+      ],
       "sourceKeys": [
-        "cologneHistory"
+        "cologne637"
       ],
       "precision": "regional_approximation",
       "limitedCore": true,
-      "note": "Autonomía creciente del consejo bajo señorío arzobispal."
+      "note": "Ciudad de Colonia bajo señorío temporal del arzobispo hasta Worringen (1288), con autonomía municipal creciente."
     },
     {
       "name": "Ciudad libre de Colonia · 1288–1793 · cobertura alemana 28",
@@ -20821,6 +20823,12 @@
       "title": "LEO-BW · Welzheim, Ortsgeschichte",
       "url": "https://www.leo-bw.de/en-GB/web/guest/detail-gis/-/Detail/details/ORT/labw_ortslexikon/1669/Welzheim",
       "locator": "Señorío de Rechberg vendido a Limpurg en 1335; superioridad feudal de Württemberg; reversión de 1713 y reincorporación fechada en 1732, distinta de 1736 en la cronología municipal. Se conserva la transición como intervalo, sin una falsa precisión anual."
+    },
+    "cologne637": {
+      "title": "LVR · Kurfürstentum Köln",
+      "url": "https://rheinische-geschichte.lvr.de/Orte-und-Raeume/kurfuerstentum-koeln-/DE-2086/lido/57d118e0651e25.73195779",
+      "locator": "Worringen, 1288: pérdida del gobierno urbano del arzobispo; reconocimiento formal de la ciudad imperial en 1475.",
+      "locatorEn": "Worringen, 1288: the archbishop lost control of the city; formal recognition as an imperial city followed in 1475."
     }
   },
   "allowedMixedCells": [],

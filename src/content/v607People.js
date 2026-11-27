@@ -1,3 +1,4 @@
+import {V637_RECORDS} from './v637/index.js';
 // 6.0.7: new people, complete in Spanish and English in the same delivery.
 import {GOVERNOR_RECORDS} from './v607Governors.js';
 import {V608_RECORDS} from './v608People.js';
@@ -58,9 +59,9 @@ const ownRecords = {
   },
 };
 
-const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS,...V613_RECORDS,...V622_RECORDS,...V636_RECORDS};
+const records={...ownRecords,...GOVERNOR_RECORDS,...V608_RECORDS,...V615_RECORDS,...V612_RECORDS,...V613_RECORDS,...V622_RECORDS,...V636_RECORDS,...V637_RECORDS};
 // People whose full biography arrives after their English page: they keep its name.
-export const V612_IDS=[...new Set([...Object.keys(V612_RECORDS),...Object.keys(V613_RECORDS),...Object.keys(V622_RECORDS),...Object.keys(V636_RECORDS)])];
+export const V612_IDS=[...new Set([...Object.keys(V612_RECORDS),...Object.keys(V613_RECORDS),...Object.keys(V622_RECORDS),...Object.keys(V636_RECORDS),...Object.keys(V637_RECORDS)])];
 export const V613_IDS=Object.keys(V613_RECORDS);
 
 export const V607_BIOGRAPHIES=Object.fromEntries(Object.entries(records).map(([id,r])=>[id,r.parts.map(([titulo,,texto])=>({titulo,texto}))]));

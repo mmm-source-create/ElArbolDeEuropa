@@ -118,3 +118,11 @@ El PDF se obtiene mediante el diálogo de impresión del navegador («Guardar PD
 La edición inglesa traduce recorridos concretos; las fichas extensas y el Atlas completo permanecen en español, indicado antes de abrirlos. No se han añadido grandes ampliaciones históricas ni cambiado la cartografía.
 
 La publicación está preparada en una propuesta de GitHub. La integración en `main` es la que activa el despliegue de producción según el flujo del repositorio.
+
+## Dependencias medievales · continuación de 6.3.7 / Medieval dependencies
+
+Completadas las fases documentadas de Kyiv, Galicia-Volinia, Vladímir-Súzdal, Moscú y Nóvgorod, y los vínculos daneses de Rügen y Pomerania. Ampliar Tver y Riazán exige cronologías propias; revisar también las confiscaciones y restituciones locales de Charolais anteriores a 1674. Inventario y fuentes: [revisión 6.3.7](reviews/6.3.7-map-review.md).
+
+Reviewed phases are available for Kyiv, Galicia-Volhynia, Vladimir-Suzdal, Moscow and Novgorod, plus Danish ties with Rügen and Pomerania. Tver and Ryazan need individual chronologies; Charolais’s local confiscations and returns before 1674 also need further review. See the 6.3.7 case register for sources.
+
+Austria Anterior, 1623–1629: documentar por separado los dos tercios hereditarios de Leopoldo V y el tercio reservado a Fernando II, delimitado en 1625. La cesión del conjunto a Leopoldo se completa en 1630. / Austrian Forelands, 1623–1629: document Leopold V’s hereditary two-thirds and Ferdinand II’s reserved third separately, following the division of 1625. The entire territory passed to Leopold in 1630.

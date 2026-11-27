@@ -1,0 +1,38 @@
+{
+  "ENRIQ3FRA": {
+    "name": "Henry III of France",
+    "role": "King of France; former king of Poland and grand duke of Lithuania",
+    "aliases": [
+      "Henry of Valois",
+      "Henryk Walezy"
+    ],
+    "resumen": "Enrique de Valois fue elegido rey de Polonia y gran duque de Lituania en 1573. Abandonó el reino en junio de 1574 para suceder a su hermano en Francia. Perdió el trono polaco-lituano en 1575 y mantuvo la reclamación del título hasta su muerte en 1589.",
+    "summary": "Henry of Valois was elected king of Poland and grand duke of Lithuania in 1573. He left in June 1574 to succeed his brother in France. He lost the Polish-Lithuanian throne in 1575 and maintained his claim to the title until his death in 1589.",
+    "parts": [
+      [
+        "La elección polaco-lituana",
+        "The Polish-Lithuanian election",
+        "La muerte de Segismundo II Augusto abrió una elección en la que participó la nobleza de la República de las Dos Naciones. Enrique, hijo de Enrique II de Francia y Catalina de Médici, fue elegido el 11 de mayo de 1573. La candidatura francesa combinaba el interés por el Báltico con la rivalidad frente a los Habsburgo. Fue coronado en Cracovia el 21 de febrero de 1574.",
+        "The death of Sigismund II Augustus led to an election by the nobility of the Commonwealth. Henry, son of Henry II of France and Catherine de’ Medici, was elected on 11 May 1573. French interest in the Baltic and rivalry with the Habsburgs supported his candidacy. He was crowned in Kraków on 21 February 1574."
+      ],
+      [
+        "La salida de Cracovia",
+        "Departure from Kraków",
+        "En junio de 1574 recibió la noticia de la muerte de su hermano Carlos IX. Salió de Cracovia disfrazado en la noche del 18 al 19 de junio. Prometió volver, pero permaneció en Francia. Desde su partida dejó de ejercer personalmente el gobierno polaco-lituano. La nobleza abrió una nueva elección en 1575.",
+        "In June 1574 he learned that his brother Charles IX had died. Disguised, he left Kraków on the night of 18–19 June. He promised to return but remained in France. His departure ended his personal exercise of Polish-Lithuanian government. The nobility opened a new election in 1575."
+      ],
+      [
+        "Francia y la reclamación del título",
+        "France and the claim to the title",
+        "Enrique fue coronado rey de Francia el 13 de febrero de 1575. Su reinado francés quedó marcado por las guerras de religión. Conservó la reclamación de la corona polaco-lituana después de perder el trono en 1575 y hasta su muerte en 1589. En 1578 creó la Orden del Espíritu Santo.",
+        "Henry was crowned king of France on 13 February 1575. Religious wars marked his French reign. After losing the Polish-Lithuanian throne in 1575, he retained his claim until his death in 1589. He founded the Order of the Holy Spirit in 1578."
+      ]
+    ],
+    "refs": [
+      {
+        "titulo": "BnF · Henri de Valois (1551–1589)",
+        "url": "https://heritage.bnf.fr/france-pologne/henri-valois-1551-1589"
+      }
+    ]
+  }
+}

@@ -4,6 +4,7 @@ import review from '../../../data/cartography/german-swiss-expansion-review.json
 // JSX imports) so the build generators can use it too.
 export const FILTER_REGIONS=['Península ibérica','Francia y Países Bajos','Islas Británicas','Sacro Imperio y Europa central','Italia y Mediterráneo','Escandinavia y Báltico','Europa oriental','Balcanes y Bizancio','Fuera de Europa','Otros'];
 export const TERRITORY_REGION={
+ 'Charolais':1,'Principado episcopal de Cambrai':1,'Austria Anterior':3,'Tirol y Austria Anterior':3,
  'Lucca':4,'Confederación Suiza':3,
  'República francesa':1, // 6.1.3: Napoleon’s consulate
  ...Object.fromEntries(Object.keys(review.entities).map(name => [name,3])),

@@ -5,7 +5,8 @@ export const ORANGE_NASSAU = '#C08A38';
 export const FRENCH_CROWN_COLOR = '#295D8E';
 export const BURGUNDIAN_COLOR = '#8E295C';
 export const ENGLISH_CROWN_COLOR = '#7A4F3B';
-export const GREAT_BRITAIN_COLOR = '#945C52';
+export const GREAT_BRITAIN_COLOR = '#745B3D';
+export const SCHLESWIG_HOLSTEIN_COLOR = '#997B50';
 export const SAVOY_COLOR = '#8175A7';
 // The Commonwealth stays apart from the violet Bohemian crown, Moravia and
 // Transylvania that border it.
@@ -33,6 +34,8 @@ export const aragonVassalColor = relation => relation.holder === 'Aragón' ? ARA
 // border each other and the Ottoman provinces). Poland's own magenta gives way
 // to the Commonwealth's rose in 1569.
 const TRIBUTARY_TINTS = Object.freeze({
+  'schleswig-denmark':'#BB827D','rugen-denmark':'#BF8B84','pomerania-denmark':'#AD6C66',
+  'kyiv-horde':'#B8A36A','galicia-volhynia-horde':'#CBB681','vladimir-horde':'#A59058','moscow-horde':'#B7A471','novgorod-horde':'#CCBF93',
   'bosnia-louis-hungary':'#D79D65','ragusa-louis-hungary':'#E6B78C','wallachia-louis-hungary':'#CCA578','wallachia-reconciliation-louis-hungary':'#CCA578','moldavia-peter-louis-hungary':'#E8C69F','podolia-louis-hungary':'#D8A056','serbia-lazar-louis-hungary':'#E0B176','serbia-rastislalic-louis-hungary':'#C58D57','vidin-louis-hungary':'#EDCCA7',
   'wallachia-ottoman': '#6FA59B', 'moldavia-ottoman': '#A5CCC2', 'transylvania-ottoman': '#4F9A80',
   'crimea-ottoman': '#7DB3A6', 'serbia-ottoman': '#9CC9BC', 'byzantium-ottoman': '#A3CBC0', 'tarnovo-ottoman': '#5E9C8E',
@@ -46,7 +49,7 @@ const TRIBUTARY_TINTS = Object.freeze({
 // 6.0.14: Prussia's overlord is Poland in union with Lithuania, so its tint
 // follows the union colour, except in 1492–1500, when the two had different kings.
 const POLISH_FIEFS = new Set(['prussia-poland', 'prussia-order-poland']);
-export const tributaryColor = (relation, year) => POLISH_FIEFS.has(relation.id)
+export const tributaryColor = (relation, year) => ['schleswig-denmark','holstein-empire'].includes(relation.id)&&year>=1460&&year<=1656?SCHLESWIG_HOLSTEIN_COLOR:relation.id==='holstein-empire'?(year>=1773?'#9B514C':SCHLESWIG_HOLSTEIN_COLOR):POLISH_FIEFS.has(relation.id)
   ? (year >= 1492 && year <= 1500 ? '#E9A3E0' : '#E3A6B5') : TRIBUTARY_TINTS[relation.id] || '#9AA59A';
 export function authorityColor(entry, territorialColor) {
   if (entry.color) return entry.color;

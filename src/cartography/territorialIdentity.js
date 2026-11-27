@@ -7,7 +7,7 @@ import {MIDDLE_EAST_IDENTITIES} from './regions/middleEastRoutes.js';
 import {EARLY_MEDIEVAL_IDENTITIES} from './regions/earlyMedievalRoutes.js';
 import {POLAND_LITHUANIA_IDENTITIES} from './regions/polandLithuaniaRoutes.js';
 import {franceLowCountriesPoliticalKeys} from './regions/franceLowCountriesRoutes.js';
-import {ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR, POLAND_LITHUANIA_COLOR} from './mapColors.js';
+import {SCHLESWIG_HOLSTEIN_COLOR, ORANGE_NASSAU, FRENCH_CROWN_COLOR, BURGUNDIAN_COLOR, POLAND_LITHUANIA_COLOR} from './mapColors.js';
 import {FRANCE_LOW_COUNTRIES_IDENTITIES} from './regions/franceLowCountriesRoutes.js';
 import {IBERIA_ITALY_IDENTITIES} from './regions/iberiaItalyRoutes.js';
 import {BOSNIA_HUM_IDENTITIES} from './regions/bosniaHumRoutes.js';
@@ -35,10 +35,12 @@ const ALIASES = Object.freeze({
 
 });
 
-export const territorialIdentity = name => identityIn(ALIASES, name);
+// 1547: the Albertine duchy and the Wittenberg electoral lands form Electoral Saxony.
+const SAXON_ELECTORAL_IDENTITIES=new Set(['Sajonia albertina','Sajonia electoral','Sajonia-Wittenberg']);
+export const territorialIdentity = (name,year=null) => {const identity=identityIn(ALIASES,name);return year>=1547&&SAXON_ELECTORAL_IDENTITIES.has(identity)?'Sajonia':identity;};
 
 export function territorialLabel(name, year) {
-  return identityLabel(territorialIdentity(name), year);
+  return identityLabel(territorialIdentity(name,year), year);
 }
 
 // The color depends on identity alone, not on alphabetic position, survey
@@ -70,9 +72,12 @@ export function continuityJurisdictions(names, territory, year, personId) {
 
 // Color integration follows dated political attribution, never proximity or a dynasty name.
 export function politicalColorGroup(name, year) {
+  if(year>=1460&&year<=1656&&['Schleswig','Holstein'].includes(territorialIdentity(name)))return {id:'schleswig-holstein',color:SCHLESWIG_HOLSTEIN_COLOR};
   if (year >= 1569 && year <= 1794 && ['Polonia', 'Lituania', 'Prusia Real', 'Livonia del Commonwealth', 'Livonia polaca', 'Principado episcopal de Warmia'].includes(territorialIdentity(name)))
     return {id:'polonia-lituania', color:POLAND_LITHUANIA_COLOR};
   const keys = franceLowCountriesPoliticalKeys(name, year);
+  if(territorialIdentity(name)==='Charolais'&&year>=1598&&year<=1633)return {id:'charolais-archducal',color:BURGUNDIAN_COLOR};
+  if(keys.includes('Principado de Lieja'))return {id:'principado-lieja',color:territorialColor('Principado de Lieja')};
   if (keys.includes('Provincias Unidas')) return {id:'republica-neerlandesa', color:ORANGE_NASSAU};
   if (keys.includes('República Bátava')) return {id:'republica-batava', color:ORANGE_NASSAU};
   if (keys.includes('Francia')) return {id:'corona-francesa', color:FRENCH_CROWN_COLOR};
@@ -83,7 +88,7 @@ export function politicalColorGroup(name, year) {
 export function coalesceTerritorialLayers(layers, year) {
   const groups = new Map();
   for (const layer of layers) {
-    const identity = territorialIdentity(layer.name);
+    const identity = territorialIdentity(layer.name,year);
     const polity = politicalColorGroup(layer.name, year);
     const groupKey = `${identity}\u0000${polity?.id || ''}`;
     const scope = {name: layer.name, ids: [...layer.ids], note: layer.note,

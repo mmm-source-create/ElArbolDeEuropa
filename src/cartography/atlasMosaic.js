@@ -49,7 +49,7 @@ function approximateGovernmentLayers(data, people, year, directByLocation, palet
       : new Map(personClaims(person).filter(claim => claim.field === 'Gobierno')
         .map(claim => [claim.value, claim]));
     for (const government of listaReinados(person)) {
-      if (!reinadoEsEfectivo(government) || government.desde > year || government.hasta < year) continue;
+      if (!reinadoEsEfectivo(government, year) || government.desde > year || government.hasta < year) continue;
 
       // Reviewed and dated layers take priority. If a title has a named layer,
       // an inactive layer stays empty instead of inheriting broad old geometry.

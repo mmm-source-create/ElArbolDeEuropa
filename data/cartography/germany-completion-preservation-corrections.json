@@ -898,5 +898,224 @@
     "reviewedAt": "2026-11-26",
     "reason": "6.3.5: el obispado de Riga, elevado a arzobispado en 1255, es la misma entidad. Se conserva la geometría; cambia solo la identidad que la nombra.",
     "source": "https://enciklopedija.lv/skirklis/150531-Livonija"
+  },
+  {
+    "id": "saxony-637-Chemnitz-1547",
+    "locationId": "Chemnitz",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Delitzsch-1547",
+    "locationId": "Delitzsch",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Dresden-1547",
+    "locationId": "Dresden",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Freiberg-1547",
+    "locationId": "Freiberg",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Grimma-1547",
+    "locationId": "Grimma",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Leipzig-1547",
+    "locationId": "Leipzig",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Meissen-1547",
+    "locationId": "Meissen",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Pirna-1547",
+    "locationId": "Pirna",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Rochlitz-1547",
+    "locationId": "Rochlitz",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Sayda-1547",
+    "locationId": "Sayda",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Torgau-1547",
+    "locationId": "Torgau",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Wittenberg-1547",
+    "locationId": "Wittenberg",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
+  },
+  {
+    "id": "saxony-637-Zwickau-1547",
+    "locationId": "Zwickau",
+    "scope": "retained",
+    "from": 1547,
+    "through": 1800,
+    "previous": [
+      "Sajonia albertina",
+      "Sajonia electoral"
+    ],
+    "expected": [
+      "Sajonia"
+    ],
+    "reviewedAt": "2026-11-27",
+    "reason": "Desde 1547 los dominios albertinos y electorales se reúnen en Sajonia electoral; se elimina su duplicación cartográfica. Se conserva cada identidad anterior en la referencia independiente.",
+    "source": "https://www.slub-dresden.de/besuchen/ausstellungen-corty-galerie/archiv-der-ausstellungen/ausstellungen-2017/wie-luthers-worte-fliegen-lernten-handschriften-und-flugschriften-der-reformation/lutherschaetze/eine-totenmesse-fuer-kurfuerst-moritz"
   }
 ]

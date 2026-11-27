@@ -17,7 +17,7 @@ const enumeration = values => ({type: 'string', values});
 const fields = (names, rule) => Object.fromEntries(names.map(name => [name, optional(rule)]));
 const years = object({desde: year, hasta: year});
 const mapPeriod = object({from: year, through: year});
-const source = object({title: optional(text), label: optional(text), url: text, locator: text, key: optional(text)});
+const source = object({title: optional(text), label: optional(text), url: text, locator: text, locatorEn: optional(text), key: optional(text)});
 const version = object({from: year, ids: array(text), oldIds: optional(array(text)), borderline: optional(array(text)), event: optional(text), sourceKeys: optional(array(text))});
 const documentedDate = object({
   tipo: enumeration(['aproximada', 'intervalo', 'antes', 'despues']), nota: text,
@@ -29,7 +29,7 @@ const GOVERNMENT_SCHEMA = object({
   clase: enumeration(GOVERNMENT_CLASSES), condicion: enumeration(GOVERNMENT_CONDITIONS),
   nota: optional(prose), ambito: optional(text), soberano: optional(text),
   controlDisputado: optional(array(years)),
-  desdeFecha: optional(text), hastaFecha: optional(text),
+  desdeFecha: optional(text), hastaFecha: optional(text), ejercicioHasta: optional(year),
   calendarioFechas: optional(enumeration(['juliano', 'gregoriano'])),
 });
 const PERSON_SCHEMA = object({
@@ -173,6 +173,7 @@ export function validateContracts({people, territories, mapData, locationIds, le
       if (governmentIds.has(key)) add('DUPLICATE_GOVERNMENT', key, 'Dos mandatos comparten la misma identidad de evidencia');
       governmentIds.add(key);
       interval(government, 'desde', 'hasta', key);
+      if (government.ejercicioHasta != null && (government.ejercicioHasta < government.desde || government.ejercicioHasta > government.hasta)) add('GOVERNMENT_EXERCISE', key, 'El ejercicio efectivo debe terminar dentro del reinado formal');
       for (const [field, annual] of [['desdeFecha', 'desde'], ['hastaFecha', 'hasta']]) {
         if (!own(government, field)) continue;
         if (!validGovernmentDate(government[field], government.calendarioFechas)) {
