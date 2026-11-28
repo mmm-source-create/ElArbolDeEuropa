@@ -16,7 +16,7 @@ test('637.01: Cambrai follows the Spanish crown from 1595; the joint archducal i
  assert.notDeepEqual(colors(1594,'Cambrai'),colors(1594,'Madrid'));
  for(const y of [1595,1596,1600,1622])assert.deepEqual(colors(y,'Cambrai'),colors(y,'Madrid'),String(y));
  for(const y of [1599,1600,1610,1620])assert.deepEqual(colors(y,'Brussels'),colors(y,'Dole'),String(y));
- assert.notDeepEqual(colors(1600,'Brussels'),colors(1600,'Madrid'));
+ assert.deepEqual(colors(1600,'Brussels'),colors(1600,'Madrid'));
  assert.deepEqual([...new Set(rows(1600,'Cambrai').flatMap(r=>r.candidates.map(c=>c.personId)))],['FEL3ESP']);
 });
 test('637.02: Cuijk follows the dated changes of control, including 1602 rather than waiting until 1648',()=>{
@@ -99,7 +99,7 @@ test('637.12: Mongol dependencies retain dated interruptions and the local polit
 test('637.13: Charolais stays Habsburg until the Condé award, with the documented wartime confiscation',()=>{
  assert.deepEqual(colors(1600,'Charolles'),colors(1600,'Brussels'));
  assert.equal(rows(1632,'Charolles')[0].politicalGroup,'charolais-archducal');
- assert.deepEqual(colors(1632,'Charolles'),['#8E295C']);
+ assert.deepEqual(colors(1632,'Charolles'),[REINO_COLOR.España]);
  for(const y of [1673,1679,1683])assert.deepEqual(colors(y,'Charolles'),colors(y,'Madrid'),String(y));
  for(const y of [1674,1678])assert.deepEqual(colors(y,'Charolles'),colors(y,'Paris'),String(y));
  assert.notDeepEqual(colors(1684,'Charolles'),colors(1684,'Madrid'));
@@ -113,9 +113,9 @@ test('637.14: French suzerainty is a pattern, not a French foreign-policy colour
 test('637.15: the associated duchies keep distinct feudal overlords and a dated common colour',()=>{
  for(const y of [1460,1500,1600,1638])assert.deepEqual(colors(y,'Slesvig'),colors(y,'Kiel'),String(y));
  assert.equal(rows(1638,'Slesvig')[0].tributaryRelation?.overlord,'Dinamarca');
- assert.equal(rows(1638,'Kiel')[0].tributaryRelation?.overlord,'Sacro Imperio');
+ assert.equal(rows(1638,'Kiel')[0].tributaryRelation,null);
  assert.equal(rows(1658,'Slesvig')[0].tributaryRelation,null);
- assert.equal(rows(1773,'Kiel')[0].tributaryRelation?.overlord,'Sacro Imperio');
+ assert.equal(rows(1773,'Kiel')[0].tributaryRelation,null);
  assert.deepEqual(colors(1773,'Kiel'),[REINO_COLOR.Dinamarca]);
 });
 test('637.16: Danish suzerainty over Rügen survives its inheritance, without spreading across Wolgast',()=>{

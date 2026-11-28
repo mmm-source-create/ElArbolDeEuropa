@@ -27,27 +27,6 @@ export const DANISH_DEPENDENCIES_637 = Object.freeze([
     "note": "El duque de Schleswig tiene el territorio en feudo de la Corona danesa. Desde 1460 está ligado a Holstein; las particiones mantienen un gobierno común. Gottorp se alía con Suecia en 1657 y obtiene soberanía sobre su parte en 1658."
   },
   {
-    "id": "holstein-empire",
-    "subject": "Holstein",
-    "overlord": "Sacro Imperio",
-    "type": "feudo",
-    "periods": [
-      [
-        1474,
-        1800
-      ]
-    ],
-    "sources": [
-      {
-        "title": "Aarhus Universitet · De danske konger som hertuger af Slesvig og Holsten",
-        "url": "https://lex.dk/De_danske_konger_som_hertuger_af_Slesvig_og_Holsten_1460-1864",
-        "locator": "Kongens rolle: Schleswig es feudo danés y Holstein imperial. Fællesregeringen: decisiones comunes de guerra y paz; fin del gobierno compartido en 1721 y 1773.",
-        "locatorEn": "Kongens rolle: Schleswig is a Danish fief and Holstein an imperial one. Fællesregeringen: common decisions on war and peace; joint government ends in 1721 and 1773."
-      }
-    ],
-    "note": "Holstein es ducado imperial desde 1474. El rey de Dinamarca lo gobierna como duque, junto a otras ramas de la casa hasta 1773, y debe el vínculo feudal al emperador."
-  },
-  {
     "id": "rugen-denmark",
     "subject": "Principado de Rügen",
     "overlord": "Dinamarca",

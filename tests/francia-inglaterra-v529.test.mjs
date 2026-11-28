@@ -75,7 +75,7 @@ test('Ricardo Corazón de León y los dominios angevinos', () => {
   assert.deepEqual(governmentSummary(richard,1190).sort(),['Anjou','Aquitania','Inglaterra','Maine','Normandía']);
   for (const id of ['Rouen', 'Angers', 'Le_Mans', 'Bordeaux', 'Tours'])
     assert.ok(colors(1190, id).has(ENGLISH_CROWN_COLOR) && fief(1190, id), `${id} 1190`);
-  assert.ok(fief(1190, 'Rennes') && !colors(1190, 'Rennes').has(ENGLISH_CROWN_COLOR));
+  assert.ok(fief(1190, 'Rennes') && colors(1190, 'Rennes').has(ENGLISH_CROWN_COLOR), 'el vínculo feudal de Bretaña conserva el marrón angevino');
   assert.ok(!colors(1150, 'Rouen').has(ENGLISH_CROWN_COLOR), 'antes de la coronación de 1154');
 });
 

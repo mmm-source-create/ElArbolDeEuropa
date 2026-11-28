@@ -76,7 +76,7 @@ export function politicalColorGroup(name, year) {
   if (year >= 1569 && year <= 1794 && ['Polonia', 'Lituania', 'Prusia Real', 'Livonia del Commonwealth', 'Livonia polaca', 'Principado episcopal de Warmia'].includes(territorialIdentity(name)))
     return {id:'polonia-lituania', color:POLAND_LITHUANIA_COLOR};
   const keys = franceLowCountriesPoliticalKeys(name, year);
-  if(territorialIdentity(name)==='Charolais'&&year>=1598&&year<=1633)return {id:'charolais-archducal',color:BURGUNDIAN_COLOR};
+  if(territorialIdentity(name)==='Charolais'&&year>=1598&&year<=1633)return {id:'charolais-archducal',color:'#C5A62B'};
   if(keys.includes('Principado de Lieja'))return {id:'principado-lieja',color:territorialColor('Principado de Lieja')};
   if (keys.includes('Provincias Unidas')) return {id:'republica-neerlandesa', color:ORANGE_NASSAU};
   if (keys.includes('República Bátava')) return {id:'republica-batava', color:ORANGE_NASSAU};

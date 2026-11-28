@@ -1,0 +1,2681 @@
+{
+  "method": "Catalogue names and reviewed map identities; whole names and an explicit Spanish adjective dictionary. Candidates for review, not inferred ownership.",
+  "count": 197,
+  "rows": [
+    {
+      "name": "Administración danesa de Bremen-Verden",
+      "mentions": [
+        {
+          "territory": "Dinamarca",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Administración de ocupación austro-rusa de Lombardía",
+      "mentions": [
+        {
+          "territory": "Austria",
+          "match": "adjective"
+        },
+        {
+          "territory": "Rusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Alta Lusacia",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Alta Lusacia bajo Brandeburgo",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Alta Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Brandeburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Alta Lusacia bajo Sajonia",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Alta Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Anhalt-Dessau",
+      "mentions": [
+        {
+          "territory": "Anhalt",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Anhalt-Zerbst",
+      "mentions": [
+        {
+          "territory": "Anhalt",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Armenia cilicia",
+      "mentions": [
+        {
+          "territory": "Armenia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "early-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Armenia de Cilicia",
+      "mentions": [
+        {
+          "territory": "Armenia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json"
+      ]
+    },
+    {
+      "name": "Austria Anterior",
+      "mentions": [
+        {
+          "territory": "Austria",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Austria Interior",
+      "mentions": [
+        {
+          "territory": "Austria",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Baden · administración imperial",
+      "mentions": [
+        {
+          "territory": "Baden",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Baja Lusacia",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Baja Lusacia · sucesión disputada",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Baja Lusacia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Baja Lusacia bajo Brandeburgo",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Baja Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Brandeburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Baja Lusacia bajo Sajonia",
+      "mentions": [
+        {
+          "territory": "Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Baja Lusacia",
+          "match": "name"
+        },
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Banato de Srebrenik",
+      "mentions": [
+        {
+          "territory": "Srebrenik",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json"
+      ]
+    },
+    {
+      "name": "Banato de Usora y Soli",
+      "mentions": [
+        {
+          "territory": "Usora y Soli",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json"
+      ]
+    },
+    {
+      "name": "Banato húngaro de Jajce",
+      "mentions": [
+        {
+          "territory": "Hungría",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json",
+        "posavina-ragusa-review.json"
+      ]
+    },
+    {
+      "name": "Baviera y señoríos del Alto Palatinado",
+      "mentions": [
+        {
+          "territory": "Baviera",
+          "match": "name"
+        },
+        {
+          "territory": "Palatinado",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Bayreuth-Kulmbach",
+      "mentions": [
+        {
+          "territory": "Kulmbach",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "german-swiss-expansion-review.json",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Bizancio y Oriente latino",
+      "mentions": [
+        {
+          "territory": "Bizancio",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Bosnia y Herzegovina otomanas",
+      "mentions": [
+        {
+          "territory": "Herzegovina",
+          "match": "name"
+        },
+        {
+          "territory": "Bosnia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json",
+        "posavina-ragusa-review.json"
+      ]
+    },
+    {
+      "name": "Brabante de los Estados",
+      "mentions": [
+        {
+          "territory": "Brabante",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Brunswick-Dannenberg",
+      "mentions": [
+        {
+          "territory": "Brunswick",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Brunswick-Luneburgo",
+      "mentions": [
+        {
+          "territory": "Brunswick",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Bulgaria del Volga",
+      "mentions": [
+        {
+          "territory": "Bulgaria",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Burgraviato de Meißen · Plauen",
+      "mentions": [
+        {
+          "territory": "Meißen",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Burgraviato de Núremberg",
+      "mentions": [
+        {
+          "territory": "Núremberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Calw · Württemberg y herederos",
+      "mentions": [
+        {
+          "territory": "Württemberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Ciudad de Brunswick",
+      "mentions": [
+        {
+          "territory": "Brunswick",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Ciudad imperial de Núremberg",
+      "mentions": [
+        {
+          "territory": "Núremberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "german-swiss-expansion-review.json"
+      ]
+    },
+    {
+      "name": "Ciudad imperial de Schaffhausen",
+      "mentions": [
+        {
+          "territory": "Schaffhausen",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Ciudad y jurisdicción de Groninga",
+      "mentions": [
+        {
+          "territory": "Groninga",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Ciudad y temporal de Basilea",
+      "mentions": [
+        {
+          "territory": "Basilea",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Ciudades imperiales de Suabia",
+      "mentions": [
+        {
+          "territory": "Suabia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Clermont-en-Beauvaisis",
+      "mentions": [
+        {
+          "territory": "Clermont",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Comuna de Brescia",
+      "mentions": [
+        {
+          "territory": "Brescia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Comuna de Como",
+      "mentions": [
+        {
+          "territory": "Como",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Comuna de Módena",
+      "mentions": [
+        {
+          "territory": "Módena",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Comuna de Parma",
+      "mentions": [
+        {
+          "territory": "Parma",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Comuna y República de Florencia",
+      "mentions": [
+        {
+          "territory": "Florencia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Comunidad de Schwyz · derechos imperiales y habsbúrgicos",
+      "mentions": [
+        {
+          "territory": "Comunidad de Schwyz",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Comunidades de Frisia occidental",
+      "mentions": [
+        {
+          "territory": "Frisia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Comunidades y jefaturas de Frisia oriental",
+      "mentions": [
+        {
+          "territory": "Frisia Oriental",
+          "match": "name"
+        },
+        {
+          "territory": "Frisia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Baden suizo",
+      "mentions": [
+        {
+          "territory": "Baden",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "german-swiss-expansion-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Borgoña",
+      "mentions": [
+        {
+          "territory": "Borgoña",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Desmond",
+      "mentions": [
+        {
+          "territory": "Desmond",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "north-atlantic-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Lingen · dominio disputado",
+      "mentions": [
+        {
+          "territory": "Condado de Lingen",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Montfort-Rothenfels",
+      "mentions": [
+        {
+          "territory": "Montfort",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Condado de Thomond",
+      "mentions": [
+        {
+          "territory": "Thomond",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Corona de Aragón",
+      "mentions": [
+        {
+          "territory": "Aragón",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Corona de Castilla",
+      "mentions": [
+        {
+          "territory": "Castilla",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Dalmacia austríaca",
+      "mentions": [
+        {
+          "territory": "Austria",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json",
+        "catalogue",
+        "iberia-italy-full-review.json",
+        "posavina-ragusa-review.json"
+      ]
+    },
+    {
+      "name": "Dalmacia veneciana",
+      "mentions": [
+        {
+          "territory": "Venecia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json",
+        "catalogue",
+        "iberia-italy-full-review.json",
+        "posavina-ragusa-review.json"
+      ]
+    },
+    {
+      "name": "Delfinado de Auvernia",
+      "mentions": [
+        {
+          "territory": "Delfinado",
+          "match": "name"
+        },
+        {
+          "territory": "Auvernia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Despotado de Serbia",
+      "mentions": [
+        {
+          "territory": "Serbia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json"
+      ]
+    },
+    {
+      "name": "Deux-Ponts-Bitche",
+      "mentions": [
+        {
+          "territory": "Deux-Ponts",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Dominios ascanios de Anhalt",
+      "mentions": [
+        {
+          "territory": "Anhalt",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Dominios de los Welf en Sajonia",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Aquitania",
+      "mentions": [
+        {
+          "territory": "Aquitania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "france-low-countries-full-review.json",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Auvernia",
+      "mentions": [
+        {
+          "territory": "Auvernia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Gran Polonia",
+      "mentions": [
+        {
+          "territory": "Polonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Mazovia",
+      "mentions": [
+        {
+          "territory": "Mazovia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Pomerania",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-frontier-review.json"
+      ]
+    },
+    {
+      "name": "Ducado de Pomerelia",
+      "mentions": [
+        {
+          "territory": "Pomerelia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Emirato de Mallorca",
+      "mentions": [
+        {
+          "territory": "Mallorca",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Emirato de Menorca",
+      "mentions": [
+        {
+          "territory": "Menorca",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Emirato de Valencia",
+      "mentions": [
+        {
+          "territory": "Valencia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Epiro de los Tocco",
+      "mentions": [
+        {
+          "territory": "Epiro",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Estados de Holanda",
+      "mentions": [
+        {
+          "territory": "Holanda",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Estonia danesa",
+      "mentions": [
+        {
+          "territory": "Dinamarca",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Flandes de los Estados",
+      "mentions": [
+        {
+          "territory": "Flandes",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Friburgo de Brisgovia",
+      "mentions": [
+        {
+          "territory": "Friburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Friburgo suizo",
+      "mentions": [
+        {
+          "territory": "Friburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Frisia Oriental",
+      "mentions": [
+        {
+          "territory": "Frisia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "german-swiss-expansion-review.json"
+      ]
+    },
+    {
+      "name": "Galindios y sudovios",
+      "mentions": [
+        {
+          "territory": "Galindios",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Georgia y Cáucaso",
+      "mentions": [
+        {
+          "territory": "Georgia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Gran Bretaña",
+      "mentions": [
+        {
+          "territory": "Bretaña",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "north-atlantic-review.json"
+      ]
+    },
+    {
+      "name": "Güeldres de los Estados",
+      "mentions": [
+        {
+          "territory": "Güeldres",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Güeldres prusiano",
+      "mentions": [
+        {
+          "territory": "Güeldres",
+          "match": "name"
+        },
+        {
+          "territory": "Prusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Hanau-Lichtenberg",
+      "mentions": [
+        {
+          "territory": "Lichtenberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Hesse · herencia de Marburgo disputada",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse · sucesión disputada",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse-Darmstadt",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse-Kassel",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse-Marburgo",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse-Rheinfels",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hesse-Rotenburg",
+      "mentions": [
+        {
+          "territory": "Hesse",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Hohenberg y Zollern en Balingen",
+      "mentions": [
+        {
+          "territory": "Hohenberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Imperio ruso",
+      "mentions": [
+        {
+          "territory": "Rusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Kartli-Kajetia",
+      "mentions": [
+        {
+          "territory": "Kartli",
+          "match": "name"
+        },
+        {
+          "territory": "Kajetia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Liga de Suabia · Heidenheim",
+      "mentions": [
+        {
+          "territory": "Suabia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Livonia polaca",
+      "mentions": [
+        {
+          "territory": "Polonia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json",
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo · primera partición",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo · sucesión de Güstrow",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo-Güstrow",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo-Schwerin",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo-Stargard",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Mecklemburgo-Strelitz",
+      "mentions": [
+        {
+          "territory": "Mecklemburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Monarquía de los Habsburgo",
+      "mentions": [
+        {
+          "territory": "Habsburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json"
+      ]
+    },
+    {
+      "name": "Moravia y ducados de Opava",
+      "mentions": [
+        {
+          "territory": "Moravia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Morea veneciana · núcleos",
+      "mentions": [
+        {
+          "territory": "Morea",
+          "match": "name"
+        },
+        {
+          "territory": "Venecia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Nassau · administración conjunta",
+      "mentions": [
+        {
+          "territory": "Nassau",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Nassau-Dillenburg",
+      "mentions": [
+        {
+          "territory": "Nassau",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Norte de Serbia habsbúrgico",
+      "mentions": [
+        {
+          "territory": "Serbia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Núremberg · ciudad y burgraves",
+      "mentions": [
+        {
+          "territory": "Núremberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Obispado de Basilea",
+      "mentions": [
+        {
+          "territory": "Basilea",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Obispado de Clermont",
+      "mentions": [
+        {
+          "territory": "Clermont",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Obispado de Curlandia",
+      "mentions": [
+        {
+          "territory": "Curlandia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Obispado de Urgell",
+      "mentions": [
+        {
+          "territory": "Urgell",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Ocupación francesa de Egipto",
+      "mentions": [
+        {
+          "territory": "Egipto",
+          "match": "name"
+        },
+        {
+          "territory": "Francia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "middle-east-review.json",
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Orden de los Hermanos de la Espada",
+      "mentions": [
+        {
+          "territory": "Hermanos de la Espada",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Países Bajos y Flandes",
+      "mentions": [
+        {
+          "territory": "Flandes",
+          "match": "name"
+        },
+        {
+          "territory": "Países Bajos",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Palatinado-Neoburgo",
+      "mentions": [
+        {
+          "territory": "Palatinado",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Palatinado-Simmern",
+      "mentions": [
+        {
+          "territory": "Palatinado",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Palatinado-Sulzbach",
+      "mentions": [
+        {
+          "territory": "Palatinado",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Palatinado-Zweibrücken",
+      "mentions": [
+        {
+          "territory": "Palatinado",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Plazas portuguesas del Magreb",
+      "mentions": [
+        {
+          "territory": "Portugal",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Polonia-Lituania",
+      "mentions": [
+        {
+          "territory": "Polonia",
+          "match": "name"
+        },
+        {
+          "territory": "Lituania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Pomerania bajo ocupación sueca",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        },
+        {
+          "territory": "Suecia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Pomerania de Brandeburgo",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        },
+        {
+          "territory": "Brandeburgo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Pomerania sueca",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        },
+        {
+          "territory": "Suecia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Pomerania-Stettin",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Pomerania-Wolgast",
+      "mentions": [
+        {
+          "territory": "Pomerania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Presidios españoles del Magreb",
+      "mentions": [
+        {
+          "territory": "España",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Antioquía",
+      "mentions": [
+        {
+          "territory": "Antioquía",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Beloózero",
+      "mentions": [
+        {
+          "territory": "Beloózero",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Brunswick",
+      "mentions": [
+        {
+          "territory": "Brunswick",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Brunswick-Wolfenbüttel",
+      "mentions": [
+        {
+          "territory": "Principado de Brunswick",
+          "match": "name"
+        },
+        {
+          "territory": "Brunswick",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Chernigov",
+      "mentions": [
+        {
+          "territory": "Principado de Chernígov",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-frontier-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Chernígov",
+      "mentions": [
+        {
+          "territory": "Principado de Chernigov",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Galicia-Volinia",
+      "mentions": [
+        {
+          "territory": "Galicia-Volinia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Pereyáslavl-Zalesski",
+      "mentions": [
+        {
+          "territory": "Principado de Pereyáslavl",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Polotsk",
+      "mentions": [
+        {
+          "territory": "Pólotsk",
+          "match": "name"
+        },
+        {
+          "territory": "Principado de Pólotsk",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Pólotsk",
+      "mentions": [
+        {
+          "territory": "Pólotsk",
+          "match": "name"
+        },
+        {
+          "territory": "Principado de Polotsk",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado de Vladímir-Súzdal",
+      "mentions": [
+        {
+          "territory": "Vladímir",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado episcopal de Ginebra",
+      "mentions": [
+        {
+          "territory": "Ginebra",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Principado episcopal de Utrecht",
+      "mentions": [
+        {
+          "territory": "Utrecht",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Principados de la Rus Negra",
+      "mentions": [
+        {
+          "territory": "Rusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Protectorado ruso-otomano de las Islas Jónicas",
+      "mentions": [
+        {
+          "territory": "Rusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Prusia · guerra de los Trece Años",
+      "mentions": [
+        {
+          "territory": "Prusia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Prusia de la Orden",
+      "mentions": [
+        {
+          "territory": "Prusia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "eastern-europe-full-review.json",
+        "germany-completion-review.json",
+        "north-atlantic-review.json",
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Prusia Real",
+      "mentions": [
+        {
+          "territory": "Prusia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json",
+        "poland-lithuania-full-review.json",
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Regencia de Trípoli",
+      "mentions": [
+        {
+          "territory": "Trípoli",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Bosnia",
+      "mentions": [
+        {
+          "territory": "Bosnia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json",
+        "posavina-ragusa-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Córcega",
+      "mentions": [
+        {
+          "territory": "Córcega",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Imericia",
+      "mentions": [
+        {
+          "territory": "Imericia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "middle-east-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Kajetia",
+      "mentions": [
+        {
+          "territory": "Kajetia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "middle-east-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Kartli",
+      "mentions": [
+        {
+          "territory": "Kartli",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "middle-east-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Kartli-Kajetia",
+      "mentions": [
+        {
+          "territory": "Kartli",
+          "match": "name"
+        },
+        {
+          "territory": "Kajetia",
+          "match": "name"
+        },
+        {
+          "territory": "Kartli-Kajetia",
+          "match": "name"
+        },
+        {
+          "territory": "Reino de Kartli",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "middle-east-review.json"
+      ]
+    },
+    {
+      "name": "Reino de Sicilia",
+      "mentions": [
+        {
+          "territory": "Sicilia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json"
+      ]
+    },
+    {
+      "name": "República francesa",
+      "mentions": [
+        {
+          "territory": "Francia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "República napolitana",
+      "mentions": [
+        {
+          "territory": "Nápoles",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json"
+      ]
+    },
+    {
+      "name": "República Romana",
+      "mentions": [
+        {
+          "territory": "Romaña",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Rus de Kiev",
+      "mentions": [
+        {
+          "territory": "Rusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Sajonia ernestina",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Altenburgo",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Coburgo",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Coburgo-Eisenach",
+      "mentions": [
+        {
+          "territory": "Sajonia-Coburgo",
+          "match": "name"
+        },
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Eisenach",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Gotha",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Hildburghausen",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Lauenburgo",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Meiningen",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Merseburgo",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Weimar",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Weissenfels",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Wittenberg",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sajonia-Zeitz",
+      "mentions": [
+        {
+          "territory": "Sajonia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Schaffhausen · ciudad y abadía",
+      "mentions": [
+        {
+          "territory": "Schaffhausen",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Schaumburg · sucesión disputada",
+      "mentions": [
+        {
+          "territory": "Schaumburg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Schaumburg-Lippe",
+      "mentions": [
+        {
+          "territory": "Lippe",
+          "match": "name"
+        },
+        {
+          "territory": "Schaumburg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Schwarzburg y Käfernburg",
+      "mentions": [
+        {
+          "territory": "Schwarzburg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Schwarzburg-Sondershausen",
+      "mentions": [
+        {
+          "territory": "Schwarzburg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Sedán y Bouillon",
+      "mentions": [
+        {
+          "territory": "Bouillon",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Señorío de Jever bajo Rusia",
+      "mentions": [
+        {
+          "territory": "Señorío de Jever",
+          "match": "name"
+        },
+        {
+          "territory": "Rusia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Señorío de Rostock bajo Dinamarca",
+      "mentions": [
+        {
+          "territory": "Señorío de Rostock",
+          "match": "name"
+        },
+        {
+          "territory": "Dinamarca",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Señorío de Säckingen en Glaris",
+      "mentions": [
+        {
+          "territory": "Glaris",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Señorío de Travunia",
+      "mentions": [
+        {
+          "territory": "Travunia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "bosnia-hum-review.json"
+      ]
+    },
+    {
+      "name": "Señorío genovés de Lesbos",
+      "mentions": [
+        {
+          "territory": "Génova",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Señorío sueco de Wismar",
+      "mentions": [
+        {
+          "territory": "Suecia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Señoríos de Bardi y Compiano",
+      "mentions": [
+        {
+          "territory": "Bardi y Compiano",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "iberia-italy-full-review.json"
+      ]
+    },
+    {
+      "name": "Silesia · guerra austro-prusiana",
+      "mentions": [
+        {
+          "territory": "Silesia",
+          "match": "name"
+        },
+        {
+          "territory": "Austria",
+          "match": "adjective"
+        },
+        {
+          "territory": "Prusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Tabarca hispano-genovesa",
+      "mentions": [
+        {
+          "territory": "Génova",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Tánger inglés",
+      "mentions": [
+        {
+          "territory": "Inglaterra",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Tierras prusianas bálticas",
+      "mentions": [
+        {
+          "territory": "Prusia",
+          "match": "adjective"
+        }
+      ],
+      "origins": [
+        "poland-lithuania-medieval-review.json"
+      ]
+    },
+    {
+      "name": "Transilvania habsbúrgica",
+      "mentions": [
+        {
+          "territory": "Transilvania",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Trípoli de los caballeros de Malta",
+      "mentions": [
+        {
+          "territory": "Malta",
+          "match": "name"
+        },
+        {
+          "territory": "Trípoli",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "north-africa-levant-review.json"
+      ]
+    },
+    {
+      "name": "Turingia · sucesión disputada",
+      "mentions": [
+        {
+          "territory": "Turingia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Vizcondado de Turena",
+      "mentions": [
+        {
+          "territory": "Turena",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "early-medieval-review.json",
+        "france-low-countries-full-review.json"
+      ]
+    },
+    {
+      "name": "Vogtland y Egerland",
+      "mentions": [
+        {
+          "territory": "Vogtland",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Voivodatos de Valaquia",
+      "mentions": [
+        {
+          "territory": "Valaquia",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Welzheim · reincorporación a Württemberg",
+      "mentions": [
+        {
+          "territory": "Württemberg",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Zarato de Tarnovo",
+      "mentions": [
+        {
+          "territory": "Tarnovo",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "balkans-full-review.json",
+        "catalogue"
+      ]
+    },
+    {
+      "name": "Zúrich · ciudad imperial y Fraumünster",
+      "mentions": [
+        {
+          "territory": "Zúrich",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    },
+    {
+      "name": "Zúrich bajo los Zähringer",
+      "mentions": [
+        {
+          "territory": "Zúrich",
+          "match": "name"
+        }
+      ],
+      "origins": [
+        "catalogue",
+        "germany-completion-review.json"
+      ]
+    }
+  ]
+}

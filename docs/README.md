@@ -34,6 +34,7 @@ compilar, empieza por el [README del proyecto](../README.md).
 
 ## Resultados de revisión
 
+- [6.3.8: columna papal, dependencias y nombres territoriales](reviews/6.3.8-review.md).
 - [6.3.7: revisión del mapa caso por caso, español e inglés](reviews/6.3.7-map-review.md).
 
 - [6.3.6: inventario de familias y fechas](audits/6.3.6-family-gaps.es.md) · [English](audits/6.3.6-family-gaps.en.md).

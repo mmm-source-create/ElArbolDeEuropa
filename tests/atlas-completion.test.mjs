@@ -65,8 +65,9 @@ test('Tyrol follows the predominant lifetime colour while dated Austrian transfe
  assert.equal(life.find(e=>e.territory==='Tirol').color,life.find(e=>e.territory==='Austria').color);
  const color=(t,y)=>{const e=entries('CARLOS5',y).find(e=>e.territory===t);return e&&authorityColor(e,colorTerritorioEnMapa(p,t,y));};
  assert.equal(color('Tirol',1521),color('Austria',1521));
- assert.notEqual(colorTerritorioEnMapa(p,'Tirol',1522),colorTerritorioEnMapa(p,'Austria',1522));
- assert(!entries('CARLOS5',1523).some(e=>e.territory==='Tirol'));
+ assert.equal(colorTerritorioEnMapa(p,'Tirol',1522),colorTerritorioEnMapa(p,'Austria',1522));
+ assert(entries('CARLOS5',1522).some(e=>e.territory==='Austria Anterior'));
+ for(const territory of ['Tirol','Austria Anterior'])assert(!entries('CARLOS5',1523).some(e=>e.territory===territory),`${territory} transferred by 1523`);
 });
 test('Castiglione has documented family claims without fabricated territorial rule',()=>{
  const p=people.get('BALDASSARECASTIGLIONE');

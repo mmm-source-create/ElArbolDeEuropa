@@ -1,8 +1,9 @@
+import {papalSuccessionPaths, PAPAL_RANK} from '../../domain/genealogy/papalSuccession.js';
 import {useEuropeYearUrl} from './useEuropeYearUrl.js';
 import {atlasFilterOptions,personMatchesTerritory} from '../../domain/filters/atlasFilters.js';
 import {buildTimelineRows} from './timelineLayout.js';
 import {translatedEquivalent} from '../english/routes.js';
-import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds, isolatedPopes, groupIsolatedPopes } from './progressiveAtlas.js';
+import { familyIndex, familyIds, atlasIdsFromLocation, writeAtlasIds } from './progressiveAtlas.js';
 import { safeStoryReturn, storyPeopleIds, saveStoryProgress } from '../stories/storyModel.js';
 import {resolveStoryNavigation, writeStoryNavigation} from './storyNavigation.js';
 import "../../styles/app.css";
@@ -47,7 +48,6 @@ const SEARCH_TEXT_BY_ID = Object.fromEntries(PERSONAS.map(persona => [persona.id
 
 export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loading = false, loadError = false, onRetry, ready = true }) {
   const familyData = useMemo(() => familyIndex(PERSONAS), []);
-  const isolatedPopeIds = useMemo(() => isolatedPopes(familyData), [familyData]);
   const [savedSession] = useState(() => {
     try { return shouldResumeAtlas(window.location.href) ? readAtlasSession(window.sessionStorage) : null; }
     catch { return null; }
@@ -556,7 +556,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     if (connectionSet) return selectionLayout(connectionResult.ids, gen, BY_ID, connectionResult.edges);
     const layout = selectionTree ? selectionTree.layout
       : visiblePeople.length === PERSONAS.length ? TREE_BASE.layout : computeTreeLayout(visibleRows, BY_ID, HIJOS_POR_ID, {columnOf: baseColumns});
-    return groupIsolatedPopes(layout, [...isolatedPopeIds], BY_ID);
+    return layout;
   }, [visibleRows, selectionTree, visiblePeople.length, connectionSet, connectionResult, gen, TREE_BASE.layout, baseColumns]);
   const positions = treeLayout.positions;
   const treeViewport = useTreeViewport(scrollRef, zoom, mostrarArbol);
@@ -762,6 +762,13 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
       d={`M ${a.x + a.w / 2} ${a.y + a.h} L ${b.x + b.w / 2} ${b.y}`} fill="none" strokeDasharray="6 5"
       stroke={focus ? "#7A2E2E" : "#B9AF98"} strokeWidth={focus ? 2.05 : 1.25}/>;
   });
+
+  const papalCount = Object.keys(positions).filter(id => PAPAL_RANK.has(id)).length;
+  const papalLines = connectionSet ? [] : papalSuccessionPaths(positions).map(({from, to, d}) =>
+    <path key={`papal-${from}-${to}`} className="papal-succession-connector" d={d}
+      fill="none" stroke="#9B8246" strokeWidth={2} strokeDasharray="7 5">
+      <title>{locale === 'en' ? 'Papal succession' : 'Sucesión pontificia'}</title>
+    </path>);
 
   const scrollBy = (dx, dy) => scrollRef.current?.scrollBy({ left: dx, top: dy, behavior: "smooth" });
   const { onPointerDown, onPointerMove, endDrag } = useDragScroll(scrollRef);
@@ -1426,7 +1433,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     else if (mode === 'compare') { ids = comparePath || []; title = locale==='en'?'Kinship comparison':'Comparación de parentesco'; }
     else { ids = atlasIds ?? visibleIds; title = seleccion ? `${locale==='en'?'Selection for':'Selección de'} ${seleccion.nombre}` : (locale==='en'?'Atlas selection':'Selección del Atlas'); }
 
-    return {people:ids.map(id=>BY_ID[id] ? {...BY_ID[id],slug:slugPersonaPorLocale(BY_ID[id], locale)} : null).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion,locale), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
+    return {papalColumn:mode!=='conexion'&&mode!=='compare',people:ids.map(id=>BY_ID[id] ? {...BY_ID[id],slug:slugPersonaPorLocale(BY_ID[id], locale)} : null).filter(Boolean),edges:edges || selectionEdges(graph,ids),gen,terminals:mode==='conexion'?connectionIds:[seleccion?.id].filter(Boolean),title,url:mode==='conexion'?new URL(connectionUrl(connectionIds,connectionCriterion,locale), window.location.origin).href:(construirEnlaceCompartido() || window.location.href)};
   };
 
   const changeAtlasScope = (next, { remember = true, center = null } = {}) => {
@@ -1464,7 +1471,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     onUndo: () => { setMode('view');setFocoId(null);const previous = atlasUndo.at(-1); setAtlasUndo(atlasUndo.slice(0, -1)); changeAtlasScope(previous, { remember: false, center: previous?.[0] }); },
     canUndo: atlasUndo.length > 0, onFull: () => { limpiar(); setMode('view'); setFocoId(null); setCollapsedIds([]); changeAtlasScope(null); },
     onNew: () => { limpiar(); setMode('view'); setSeleccion(null); changeAtlasScope([]); },
-    onFilters: () => {if (!historiaActiva) alternarPanelAuxiliar('filtros');}, filtersOpen: mostrarFiltros && !historiaActiva, popeCount: treeLayout.isolatedPopeCount,
+    onFilters: () => {if (!historiaActiva) alternarPanelAuxiliar('filtros');}, filtersOpen: mostrarFiltros && !historiaActiva,
   };
 
   const viewModel = {
@@ -1493,7 +1500,7 @@ export default function Explorer({ initialPanel = null, treeBase: TREE_BASE, loa
     alternarPanelAuxiliar, personasVivasEnAnio, gobernantesActivosEnAnio, visiblePeople,
     renderedTreeUnits, positions, canvasSize, queryTrim, searchMatchIds,
     irACoincidencia, limpiarSoloFiltros, comparePaths, comparePath,
-    connectorLayerKey, connectors: [...crossPartnerLines, ...connectors], scrollBy, onPointerDown,
+    papalCount, connectorLayerKey, connectors: [...papalLines, ...crossPartnerLines, ...connectors], scrollBy, onPointerDown,
     onPointerMove, endDrag, cambiarZoomArbol, seleccionarPersonaPorId, navegarHistorialPersona, centrarSeleccion, cerrarSeleccion,
     centerTimelineOnYear, alternarFavorito, seleccionarEvento, aplicarPasoHistoria, iniciarHistoria, cambiarPasoHistoria, salirHistoria,
     compartirPersona, renderPersonBox, miniScaleX, miniScaleY,

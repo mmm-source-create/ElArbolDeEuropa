@@ -8,7 +8,7 @@ import TreeAccessibleList from '../TreeAccessibleList.jsx';
 
 // Lienzo del árbol con minimapa, zoom y lista accesible.
 export default function AtlasTreeStage({vm, setGuideOpen, setTreeListOpen, treeListOpen}) {
-  const {anioGlobal, cambiarZoomArbol, canvasSize, collapsedIds, connectorLayerKey, connectors, endDrag, getExportSelection, hiddenByCollapse, historiaActiva, locale, miniScaleX, miniScaleY, mode, modoTrabajo, mostrarMapa, onMinimapClick, onPointerDown, onPointerMove, positions, renderPersonBox, renderedTreeUnits, scrollBy, scrollRef, seleccion, seleccionarPersonaPorId, setCollapsedIds, visiblePeople, zoom} = vm;
+  const {papalCount, anioGlobal, cambiarZoomArbol, canvasSize, collapsedIds, connectorLayerKey, connectors, endDrag, getExportSelection, hiddenByCollapse, historiaActiva, locale, miniScaleX, miniScaleY, mode, modoTrabajo, mostrarMapa, onMinimapClick, onPointerDown, onPointerMove, positions, renderPersonBox, renderedTreeUnits, scrollBy, scrollRef, seleccion, seleccionarPersonaPorId, setCollapsedIds, visiblePeople, zoom} = vm;
   const en=locale==='en',tr=(es,english)=>en?english:es;
   return (
     <section className={`workspace-stage sk dim workspace-tree-stage${mostrarMapa ? " tree-with-map" : ""}${historiaActiva ? " story-tree-stage" : ""}${treeListOpen ? " showing-list" : ""}`} aria-label={tr('Árbol genealógico','Family tree')}>
@@ -20,6 +20,8 @@ export default function AtlasTreeStage({vm, setGuideOpen, setTreeListOpen, treeL
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(0.8)} title={tr('Restablecer árbol','Reset tree')} aria-label={tr('Restablecer árbol','Reset tree')}><RotateCcw size={12} /></button>
                 <button type="button" className="nav-btn" onClick={() => cambiarZoomArbol(zoom + 0.1)} title={tr('Acercar árbol','Zoom tree in')} aria-label={tr('Acercar árbol','Zoom tree in')}><ZoomIn size={13} /></button>
               </div>
+
+              {mode !== "conexion" && papalCount > 0 && <p className="papal-succession-legend"><span aria-hidden="true">┆</span> {tr('Columna papal · la línea discontinua indica sucesión pontificia.','Papal column · the dashed line indicates papal succession.')}</p>}
 
               {mode !== "conexion" && collapsedIds.length > 0 && (
                 <div className="branch-collapse-bar branch-collapse-bar-floating">

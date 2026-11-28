@@ -27,7 +27,10 @@ test('Iberian union and effective Spanish Netherlands join externally, leaving P
  assert.deepEqual(colors(1585,'Lisbon'),colors(1585,'Madrid'));
  for(const y of [1579,1641])assert.notDeepEqual(colors(y,'Lisbon'),colors(y,'Madrid'));
  assert.notDeepEqual(colors(1585,'Amsterdam'),colors(1585,'Brussels'));
- assert.notDeepEqual(colors(1610,'Brussels'),colors(1610,'Madrid'),'archducal government is not inherited by Philip III');
+ assert.deepEqual(colors(1610,'Brussels'),colors(1610,'Madrid'),'archducal dependency uses the Spanish colour');
+ const archducal=(mosaic(1610).byLocation.get('Brussels')||[]).flatMap(layer=>layer.candidates).filter(candidate=>candidate.ids.has('Brussels'));
+ assert(archducal.some(candidate=>candidate.personId==='ALB7AUST'),'Albert retains his own government');
+ assert(!archducal.some(candidate=>candidate.personId==='FEL3ESP'),'Philip III does not inherit the archducal sovereign title');
  const p=by.get('FEL2ESP');assert.notEqual(colorTerritorioEnMapa(p,'Portugal',1585),colorTerritorioEnMapa(p,'Castilla',1585));
  assert.equal(colorTerritorioEnMapa(p,'Aragón',1585),colorTerritorioEnMapa(p,'Valencia',1585));
  assert.equal(colorTerritorioEnMapa(p,'Nápoles',1585),colorTerritorioEnMapa(p,'Castilla',1585));

@@ -3,6 +3,7 @@
 // de modo que en el minimapa se ve qué casa ocupa cada zona. Un matrimonio va a
 // la columna del marido: su descendencia continúa su casa. Las casas con más
 // vínculos entre sí quedan contiguas.
+import {PAPAL_RANK, PAPAL_COLUMN} from './papalSuccession.js';
 import {listaParejas} from './relations.js';
 import {isNamedDynasty} from '../../data/dynastyNames.js';
 import {getCategoriaDinastía} from './dynasties.js';
@@ -57,6 +58,7 @@ export function dynastyColumns(people, gen) {
   const named = id => isNamedDynasty(byId.get(id)?.dinastia) ? byId.get(id).dinastia : null;
   const visibleChildren = id => children.get(id).length;
   const anchorDynasty = members => {
+    if (members.some(id => PAPAL_RANK.has(id))) return PAPAL_COLUMN;
     const men = members.filter(id => sex.get(id) === 'm' && named(id));
     const pool = men.length ? men : members.filter(named);
     if (!pool.length) return null;
@@ -68,8 +70,8 @@ export function dynastyColumns(people, gen) {
   const parentUnits = u => [...new Set(units[u].flatMap(id => [byId.get(id).padre, byId.get(id).madre]).filter(id => known.has(id)).map(id => unitOf.get(id)))];
   const childUnits = u => [...new Set(units[u].flatMap(id => children.get(id)).map(id => unitOf.get(id)))];
   const byGen = units.map((members, u) => u).sort((a, b) => gen[units[a][0]] - gen[units[b][0]]);
-  byGen.forEach(u => { if (!unitDynasty[u]) unitDynasty[u] = parentUnits(u).map(p => unitDynasty[p]).find(Boolean) || null; });
-  byGen.slice().reverse().forEach(u => { if (!unitDynasty[u]) unitDynasty[u] = childUnits(u).map(c => unitDynasty[c]).find(Boolean) || null; });
+  byGen.forEach(u => { if (!unitDynasty[u]) unitDynasty[u] = parentUnits(u).map(p => unitDynasty[p]).find(d => d && d !== PAPAL_COLUMN) || null; });
+  byGen.slice().reverse().forEach(u => { if (!unitDynasty[u]) unitDynasty[u] = childUnits(u).map(c => unitDynasty[c]).find(d => d && d !== PAPAL_COLUMN) || null; });
 
   // Orden de las columnas: cadena voraz por vínculos padre–hijo, primero entre
   // casas principales (las ramas comparten color en el minimapa) y después
@@ -89,7 +91,8 @@ export function dynastyColumns(people, gen) {
     const members = [...size.keys()].filter(d => category(d) === c);
     return chainOrder(members, size, pairs.filter(([a, b]) => category(a) === c && category(b) === c));
   });
-  const column = new Map(chain.map((dynasty, index) => [dynasty, index]));
+  const ordered = [...chain.filter(d => d !== PAPAL_COLUMN), ...(chain.includes(PAPAL_COLUMN) ? [PAPAL_COLUMN] : [])];
+  const column = new Map(ordered.map((dynasty, index) => [dynasty, index]));
   return new Map(people.map(person => {
     const dynasty = unitDynasty[unitOf.get(person.id)];
     return [person.id, dynasty ? column.get(dynasty) : null];

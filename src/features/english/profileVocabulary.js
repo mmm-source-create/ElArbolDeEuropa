@@ -1,3 +1,5 @@
+import {NOTES_ARCHDUCAL_638} from './vocabularyArchducal638.js';
+import {LABELS_638,NOTES_638} from './vocabulary638.js';
 import {NOTES_637} from './notes637.js';
 import {LABELS_636,NOTES_636} from './vocabulary636.js';
 import {LABELS_622,NOTES_622} from './vocabulary622.js';
@@ -29,7 +31,7 @@ export const PROFILE_LABELS = {
  'Tirol y Austria Anterior':'Tyrol and the Austrian Forelands',
  'Horda de Oro':'Golden Horde','Condado de Charolais':'County of Charolais',
  ...LABELS_622,
- ...LABELS_636,
+ ...LABELS_636,...LABELS_638,
  ...LABELS_630,
  ...LABELS_634,
   // 6.1.3: titles of the new people of culture, science, Salamanca, revolutions and exploration.
@@ -98,7 +100,7 @@ export const ENGLISH_NAMES = {
 export const PROFILE_NOTES = {
  ...NOTES_622,
  ...NOTES_636,
- ...NOTES_637,
+ ...NOTES_637,...NOTES_638,...NOTES_ARCHDUCAL_638,
  ...NOTES_630,
  ...NOTES_634,
   ...runtime.notes,

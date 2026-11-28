@@ -24,7 +24,8 @@ export const FRANCE_LOW_COUNTRIES_TERRITORIES = Object.freeze({
     "componentes": [],
     "nota": "Jurisdicción territorial de identidad estable; la sucesión de titulares, una ocupación o la integración dinástica no crea otra entidad. Las superficies completas y sus fechas se documentan en la revisión de Francia y Países Bajos.",
     "titulosDeGobierno": [
-      "Archiduque"
+      "Archiduque",
+      "Archiduquesa"
     ]
   },
   "Bailías de Jersey y Guernsey": {

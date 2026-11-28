@@ -1,5 +1,14 @@
 # Próximas actualizaciones / Upcoming updates
 
+## Investigación tras 6.3.8 / Research after 6.3.8
+
+- Austria Anterior: gobernantes medievales que aún carecen de ficha y reparto territorial de 1623–1629. Los intervalos añadidos por vinculación con Tirol están señalados como inferidos.
+- Italia: fases anteriores de los feudos pontificios y conflictos de investidura de Ferrara entre 1510 y 1530; administración de Urbino en 1624–1631, distinta de la devolución jurídica.
+- Sicilia: control local durante la conquista española y la reconquista aliada de 1718–1720.
+- Revisar los [197 nombres territoriales candidatos](reviews/6.3.8-territory-names.md), por grupos y según sus fases; el inventario no presupone errores.
+
+Further research: missing medieval Forelands rulers and the 1623–1629 partition; earlier papal-fief phases and Ferrara’s 1510–1530 investiture conflicts; Urbino’s 1624–1631 administration before legal reversion; local Sicilian control in 1718–1720. Review the [197 territory-name candidates](reviews/6.3.8-territory-names-en.md) by dated phase, without treating every match as an error.
+
 ## Familias y fechas · continuación de 6.3.6 / Family and date research
 
 El [inventario completo](audits/6.3.6-family-gaps.es.md) ([English](audits/6.3.6-family-gaps.en.md)) enumera todos los candidatos originales, con instantáneas JSON anterior y posterior. La 6.3.6 revisa ocho unidades familiares y completa el segundo progenitor de nueve personas existentes. Quedan 309 progenitores sin cónyuge registrado, 431 personas con un solo progenitor y 345 personas sin padres registrados a las que falta alguna fecha vital. Las listas se solapan; no son 1.085 familias distintas. El último grupo crece al incorporar personas cuya cronología sigue sin conocerse.

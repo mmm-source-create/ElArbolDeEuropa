@@ -1,3 +1,4 @@
+import {archducalLingenJurisdictions} from '../archducalLingen638.js';
 import review from '../../../data/cartography/germany-completion-review.json' with {type:'json'};
 import {PERSONAS} from '../../data/personas.js';
 import {gobiernosDe} from '../../domain/genealogy/personAccessors.js';
@@ -83,5 +84,5 @@ export function germanyCompletionJurisdictions(names, territory, year, personId)
   const linked = (phasesByTerritory.get(territory) || []).filter(link => link.from <= year && year <= link.through);
   if (linked.length && personId != null && linkedHolders(territory, year).has(personId))
     routed.push(...linked.map(link => link.phase.name));
-  return [...new Set(routed)];
+  return archducalLingenJurisdictions([...new Set(routed)], territory, year, personId);
 }

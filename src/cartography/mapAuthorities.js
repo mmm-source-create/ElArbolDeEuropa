@@ -1,6 +1,6 @@
 import {frenchCrownEntries} from './frenchCrownRelations.js';
 import {aragonCrownEntries} from './aragonCrownRelations.js';
-import {tributaryEntriesFor} from './tributaryRelations.js';
+import {dependencyLayersAt,tributaryEntriesFor} from './tributaryRelations.js';
 import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 import {authorityKind} from '../domain/government/authorityKind.js';
 import {idsDeGobiernoEnAño, colorTerritorioEnMapa} from './kingdomMaps.js';
@@ -19,7 +19,7 @@ export const AUTHORITY_LABELS = Object.freeze({
   sovereign: 'Autoridad territorial', delegated: 'Gobierno delegado',
   titular: 'Título o pretensión sin control acreditado', disputed: 'Control disputado u ocupación',
   apanage:'Apanage de la Corona francesa',feudal:'Feudo de la Corona francesa',vassal:'Dependencia de la Corona de Aragón',
-  collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio', fief: 'Feudo vasallo · gobierno propio',
+  dependency:'Dependencia dinástica y militar · gobierno propio', collective: 'Autoridad colectiva', tributary: 'Estado tributario · gobierno propio', fief: 'Feudo vasallo · gobierno propio',
   mixed: 'Celda con varias jurisdicciones',
   regional: 'Jurisdicción territorial documentada', physical: 'Sin autoridad política documentada',
 });
@@ -130,6 +130,17 @@ export function mapAuthoritiesForPerson(person, year, mapData = null, {includeCl
         hasta: 1647, titulo: 'Ocupación militar', condicion: 'ocupación'};
       entries.push({person, government, territory: government.territorio, kind: 'disputed', paint: true,
         ids: occupation, claim: null});
+    }
+  }
+  if(year>=1598&&year<=1621&&['ALB7AUST','ISABCLARAEUG'].includes(person.id)) {
+    const layers=dependencyLayersAt(mapData,year).filter(d=>d.relations.some(r=>r.id==='archducal-spanish-dependency'));
+    const ids=new Set(layers.flatMap(d=>reviewedLayerLocations(mapData,d.layer,year)));
+    const relationship=layers[0]?.relations.find(r=>r.id==='archducal-spanish-dependency');
+    for(let i=entries.length-1;i>=0;i--){const entry=entries[i];if(!entry.paint||entry.kind!=='sovereign')continue;
+      const dependent=entry.ids.filter(id=>ids.has(id)),other=entry.ids.filter(id=>!ids.has(id));
+      if(!dependent.length)continue;
+      const marked={...entry,ids:dependent,dependencyPattern:true,color:'#C5A62B',mapSources:[...(entry.mapSources||[]),...(relationship?.sources||[])],mapNote:relationship?.note};
+      if(other.length){entries[i]={...entry,ids:other};entries.push(marked);}else entries[i]=marked;
     }
   }
   return [...entries,...frenchCrownEntries(person,year,mapData,entries),...aragonCrownEntries(person,year,mapData,entries), ...(includeDependencies ? tributaryEntriesFor(person, year, mapData, entries) : [])].filter(entry => entry.ids.length);

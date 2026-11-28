@@ -1,3 +1,4 @@
+import {stackPapalBlueprints, PAPAL_RANK} from './papalSuccession.js';
 import {countFamilyCrossings} from './crossingCount.js';
 import { mergeIntervals, assignIntervalLanes, roundedPath } from "./treeGeometry.js";
 import { BY_ID, clavePareja, listaParejas, mediana } from "./relations.js";
@@ -806,7 +807,7 @@ export function createFanBlueprint(ids) {
 
 function groupFans(row, byId, childrenById, visible) {
   const leafKey = (unit) => {
-    if (unit.length !== 1) return null;
+    if (unit.length !== 1 || PAPAL_RANK.has(unit[0])) return null;
     const persona = byId[unit[0]];
     if (!persona || (childrenById[unit[0]] || []).some((id) => visible.has(id))) return null;
     const parents = [persona.padre, persona.madre].filter((id) => visible.has(id));
@@ -841,8 +842,8 @@ export function computeTreeLayout(rows, byId, childrenById, options = {}) {
     return Number.isFinite(value) ? value : null;
   };
   const rowUnits = rows.map((row, rowIndex) => {
-    const blueprints = groupFans(row, byId, childrenById, visible)
-      .map(({ids, fan}) => fan ? createFanBlueprint(ids) : createPartnerUnitBlueprint(ids, byId));
+    const blueprints = stackPapalBlueprints(groupFans(row, byId, childrenById, visible)
+      .map(({ids, fan}) => fan ? createFanBlueprint(ids) : createPartnerUnitBlueprint(ids, byId)), TREE_ROW_GAP / 2);
     const gaps = blueprints.map((unit, index) => !index ? 0
       : columnOf && columnOfUnit(blueprints[index - 1]) !== columnOfUnit(unit) ? TREE_COLUMN_GAP
       : unitGap(blueprints[index - 1], unit, byId));
@@ -939,6 +940,13 @@ export function computeTreeLayout(rows, byId, childrenById, options = {}) {
   for (let rowIndex = 1; rowIndex < rowUnits.length; rowIndex += 1) repositionRow(rowIndex, "down", 0);
 
   const allUnits = rowUnits.flat();
+  const papalUnits = allUnits.filter(u => Number.isFinite(u.papalAnchor));
+  if (papalUnits.length) {
+    const others = allUnits.filter(u => !Number.isFinite(u.papalAnchor));
+    const laneLeft = Math.max(0, ...others.map(u => u.x + u.width)) + TREE_COLUMN_GAP;
+    const anchor = laneLeft + Math.max(...papalUnits.map(u => u.papalAnchor));
+    papalUnits.forEach(u => { u.x = anchor - u.papalAnchor; });
+  }
   const minX = allUnits.length ? Math.min(...allUnits.map((unit) => unit.x)) : 0;
   const shiftX = TREE_PAD_X - minX;
   allUnits.forEach((unit) => { unit.x += shiftX; });
@@ -1119,6 +1127,18 @@ export function routeFamilyConnectors({ groupsByRow, positions, pairContacts, ge
     };
   }).filter(Boolean);
 
+  // Several pontiffs can occupy one logical generation. Its shared upper
+  // bus must not descend through the preceding pontiffs in the papal stack.
+  const papalPositions = Object.entries(positions).filter(([id]) => PAPAL_RANK.has(id));
+  const papalUnitKeys = new Set(papalPositions.map(([, pos]) => pos.unitKey).filter(Boolean));
+  const inPapalUnit = (id, pos) => PAPAL_RANK.has(id) || pos.unitKey && papalUnitKeys.has(pos.unitKey);
+  const papalSurface = Object.entries(positions).filter(([id, pos]) => inPapalUnit(id, pos));
+  const papalLeft = papalSurface.length ? Math.min(...papalSurface.map(([, pos]) => pos.x)) : 0;
+  const otherRight = Math.max(0, ...Object.entries(positions).filter(([id, pos]) => !inPapalUnit(id, pos)).map(([, pos]) => pos.x + pos.w));
+  const papalFamilies = [...new Set(visibleGroups.filter(group => [...group.parentIds, ...group.childIds].some(id => PAPAL_RANK.has(id))).map(group => group.familyBaseKey))].sort();
+  const papalLaneStep = Math.min(14, Math.max(2, (papalLeft - otherRight - 44) / Math.max(1, papalFamilies.length - 1)));
+  const papalLaneX = new Map(papalFamilies.map((key, index) => [key, papalLeft - 22 - index * papalLaneStep]));
+
   const groupsByFamily = {};
   visibleGroups.forEach((group) => {
     (groupsByFamily[group.familyBaseKey] ||= []).push(group);
@@ -1134,9 +1154,18 @@ export function routeFamilyConnectors({ groupsByRow, positions, pairContacts, ge
       x: parentCenters.reduce((sum, value) => sum + value, 0) / parentCenters.length,
       y: Math.max(...first.parentIds.map((id) => positions[id].y + positions[id].h)),
     };
-    const anchorPoints = contact?.points?.length
+    let anchorPoints = contact?.points?.length
       ? contact.points.map(([x, y]) => [x, y])
       : [[fallbackAnchor.x, fallbackAnchor.y]];
+    if (first.parentIds.length === 1 && PAPAL_RANK.has(first.parentIds[0])) {
+      const pope = positions[first.parentIds[0]], x = pope.x + pope.w / 2;
+      const laneX = papalLaneX.get(first.familyBaseKey);
+      // Leave the complete partner component before travelling vertically.
+      const nearbyBottoms = papalSurface.map(([, pos]) => pos).filter(pos => pos.x < x && pos.x + pos.w > laneX
+        && pos.y < pope.y + pope.h && pos.y + pos.h > pope.y).map(pos => pos.y + pos.h);
+      const exitY = Math.max(pope.y + pope.h, ...nearbyBottoms) + 18;
+      anchorPoints = [[x, pope.y + pope.h], [x, exitY], [laneX, exitY]];
+    }
     const [anchorX, anchorY] = anchorPoints[anchorPoints.length - 1];
 
     familyGroups.forEach((group) => {
@@ -1254,7 +1283,9 @@ export function routeFamilyConnectors({ groupsByRow, positions, pairContacts, ge
       if ((isOnlyChild || isLeftEnd || isRightEnd) && Math.abs(busOriginX - childX) > 1) {
         startX = childX + Math.sign(busOriginX - childX) * Math.min(20, Math.abs(busOriginX - childX));
       }
-      return { childId, childPos, childX, startX };
+      const papalEntryX = PAPAL_RANK.has(childId) ? papalLaneX.get(group.familyBaseKey) : null;
+      if (Number.isFinite(papalEntryX)) startX = papalEntryX;
+      return { childId, childPos, childX, startX, papalEntryX };
     });
 
     const branchStartMin = Math.min(...branchSpecs.map((branch) => branch.startX));
@@ -1297,8 +1328,10 @@ export function routeFamilyConnectors({ groupsByRow, positions, pairContacts, ge
       allChildIds: allChildrenByFamily[group.familyBaseKey] || group.childIds,
       trunkD: direct || group.sharedTrunkOwner ? roundedPath(trunkPoints, 11) : "",
       busDs,
-      branches: branchSpecs.map(({ childId, childPos, childX, startX }) => {
-        const points = Math.abs(startX - childX) > 0.5
+      branches: branchSpecs.map(({ childId, childPos, childX, startX, papalEntryX }) => {
+        const points = Number.isFinite(papalEntryX)
+          ? [[papalEntryX, busY], [papalEntryX, childPos.y - 18], [childX, childPos.y - 18], [childX, childPos.y]]
+          : Math.abs(startX - childX) > 0.5
           ? [[startX, busY], [childX, busY], [childX, childPos.y]]
           : [[childX, busY], [childX, childPos.y]];
         return {

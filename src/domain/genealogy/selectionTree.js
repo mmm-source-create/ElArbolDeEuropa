@@ -13,6 +13,7 @@
 // antepasada de sí misma) se une entre filas con una línea discontinua.
 import {listaParejas, mediana} from './relations.js';
 import {buildRows, computeTreeLayout} from './treeLayout.js';
+import {alignPapalGenerations} from './papalSuccession.js';
 import {dynastyColumns} from './dynastyColumns.js';
 
 const SIBLING_SPLIT = 8;
@@ -295,6 +296,7 @@ const SELECTION_SWAP_LIMIT = 250;
 
 export function layoutSelection(people, byId, childrenById, {swapLimit = SELECTION_SWAP_LIMIT} = {}) {
   const gen = selectionGenerations(people, byId);
+  alignPapalGenerations(people, gen, listaParejas);
   const columnOf = dynastyColumns(people, gen);
   const rows = buildRows(people, gen, {crossPartners: true, isolatedLast: true, swapLimit, columnOf});
   const layout = computeTreeLayout(rows, byId, childrenById, {columnOf});
