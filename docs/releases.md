@@ -2,6 +2,9 @@
 
 ## Serie 6
 
+- [6.3.8: sucesión papal y vínculos del atlas](releases/6.3.8.md).
+- [6.3.7: autoridades y colores del atlas](releases/6.3.7.md).
+
 - [6.3.6: familias, biografías y documentación](releases/6.3.6.md).
 - [6.3.5: una ficha por entidad](releases/6.3.5.md).
 - [6.3.4: coherencia de territorios y coronas](releases/6.3.4.md).

@@ -1,3 +1,4 @@
+import {institutionalPolityAt} from './institutionalPolities638.js';
 import {swissConfederationAt,SWISS_COLLECTIVE,SWISS_CONFEDERATION_COLOR} from './swissConfederation622.js';
 import {COLOR_612} from './paletteReview612.js';
 import * as MAP_COLORS from './mapColors.js';
@@ -74,7 +75,7 @@ export function europeMosaicAt(data,year,people) {
  for(const person of people) for(const group of governmentGroupsAt(person,year,{view:'panorama'})) {
   if(group.kind!=='sovereign'&&group.kind!=='disputed')continue;
   for(const mandate of group.mandates) {
-   const candidate={...group,personId:person.id,collegial:mandate.condicion==='corregente',territory:mandate.territorio,from:mandate.desde,through:mandate.hasta,ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
+   const candidate={...group,personId:person.id,collegial:mandate.condicion==='corregente',territory:mandate.territorio==='Sicilia'&&year>=1282?'Trinacria':mandate.territorio,from:mandate.desde,through:mandate.hasta,ids:new Set(mapLocationsForGovernment(data,mandate,year,person.id,idsDeGobiernoEnAño(mandate,year,person.id)))};
    const names=pilotJurisdictionsFor(mandate.territorio,year,person.id);
    if(mandate.territorio==='Austria'&&mandate.ambito?.includes('Austria Interior'))
     names.push(...pilotJurisdictionsFor('Austria Interior',year,person.id));
@@ -147,24 +148,27 @@ export function europeMosaicAt(data,year,people) {
   // kingdom too; the fief pattern still marks the French suzerainty.
   const polity=unanimous&&POLITY_GROUPS.has(applicable[0].id)&&applicable.every(g=>g.id===applicable[0].id)?applicable[0]
    :!applicable.length&&layer.politicalColorGroup==='paises-bajos-habsburgicos'?netherlandsPolity:null;
+  const institution=institutionalPolityAt(layer.entityId,year,id);
   const confederation=swissConfederationAt(layer.entityId,year);
-  const color=confederation?confederation.color:layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
+  const color=institution?institution.color:confederation?confederation.color:layer.republic?ORANGE_NASSAU:englishCrown?ENGLISH_CROWN_COLOR:aragonRelation?aragonVassalColor(aragonRelation):tributaryRelation?tributaryColor(tributaryRelation,year)
    :['charolais-archducal','schleswig-holstein'].includes(layer.politicalColorGroup)?layer.baseColor:polity&&['herencia-borgonona','paises-bajos','monarquia-hispanica-exterior'].includes(polity.id)?polity.color:frenchRelation?frenchFiefColor(layer.entityId||layer.name):polity?polity.color:unanimous?applicable[0].color:layer.baseColor;
-  const politicalGroup=confederation?confederation.id:layer.republic?'republica-neerlandesa':layer.politicalColorGroup==='charolais-archducal'?'charolais-archducal':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
-  const politicalLabel=confederation?confederation.label:tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:polity?.label||layer.displayName||layer.name);
+  const politicalGroup=institution?institution.id:confederation?confederation.id:layer.republic?'republica-neerlandesa':layer.politicalColorGroup==='charolais-archducal'?'charolais-archducal':polity?.id || (unanimous?applicable[0].id:layer.politicalColorGroup || null);
+  const politicalLabel=institution?institution.label:confederation?confederation.label:tributaryRelation?.subjectLabel|| (englishCrown&&!applicable.length?'Inglaterra':applicable.length===1?applicable[0].label:polity?.label||layer.displayName||layer.name);
   // 6.0.12: reviewed colours for territories that clashed with a neighbour;
   // relation tints keep their own families.
   // Curated colours (kingdom table, map constants, political groups) are kept;
   // only colours from the regional tables and the automatic series are muted.
-  const curated=CURATED_COLORS.has(String(color).toLowerCase())||Boolean(confederation)||Boolean(polity)||(unanimous&&color===applicable[0].color);
+  const curated=CURATED_COLORS.has(String(color).toLowerCase())||Boolean(institution)||Boolean(confederation)||Boolean(polity)||(unanimous&&color===applicable[0].color);
   const harmonized=curated?color:harmonizeMapColor(color);
-  const reviewed=tributaryRelation||crownRelation||englishCrown||layer.republic||confederation?color:COLOR_612[String(harmonized).toLowerCase()]||harmonized;
-  byLocation.get(id).push({...layer,confederation,crownRelation,tributaryRelation,englishCrown,mosaicColor:reviewed,politicalLabel,politicalGroup});
+  const reviewed=tributaryRelation||crownRelation||englishCrown||layer.republic||confederation||institution?color:COLOR_612[String(harmonized).toLowerCase()]||harmonized;
+  byLocation.get(id).push({...layer,displayName:institution?.label||layer.displayName,institution,confederation,crownRelation,tributaryRelation,englishCrown,mosaicColor:reviewed,politicalLabel,politicalGroup});
  }
  // 6.0.14: Poland and Lithuania share the union colour in a year when either
  // takes it (Jadwiga's and Vytautas's reigns left one side out). Years with
  // separate monarchs and no union colour (1492–1500) keep their own colours.
  const unionEntries=[...byLocation.values()].flat().filter(entry=>UNION_ENTITIES.has(entry.entityId)&&String(entry.politicalGroup||'').startsWith('union-mismo-soberano'));
+ const jogailaUnion=year>=1392&&year<=1434?[...routes.values()].flat().find(g=>g.personId==='LADI2'&&g.unionParts?.includes('Polonia')&&g.unionParts.includes('Lituania')):null;
+ if(jogailaUnion)unionEntries.unshift({mosaicColor:jogailaUnion.color,politicalGroup:jogailaUnion.id,politicalLabel:jogailaUnion.label});
  if(unionEntries.length){
   const {mosaicColor,politicalGroup,politicalLabel}=unionEntries[0];
   for(const [id,entries] of byLocation)byLocation.set(id,entries.map(entry=>UNION_ENTITIES.has(entry.entityId)&&!entry.tributaryRelation&&entry.politicalGroup!==politicalGroup

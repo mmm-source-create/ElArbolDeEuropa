@@ -1,3 +1,4 @@
+import {FORELANDS_TYROL_COLOR} from './institutionalPolities638.js';
 import {SEPARATE_EXTERIOR_POLICIES} from './foreignPolicyExceptions.js';
 import {EASTERN_EUROPE_COLORS} from './easternEuropeColors.js';
 import {ORANGE_NASSAU, POLAND_LITHUANIA_COLOR, BURGUNDIAN_COLOR, ENGLISH_CROWN_COLOR, GREAT_BRITAIN_COLOR, SAVOY_COLOR} from './mapColors.js';
@@ -268,6 +269,7 @@ export const REINO_COLOR = {
   Polonia: '#da63cc',
   Prusia: '#303C59',
   Austria: '#8E293C',
+  'Austria Anterior': FORELANDS_TYROL_COLOR,
   Prilep: '#82639B',
   Kosovo: '#A77748',
   'Despotado de Serres': '#967256',
@@ -561,7 +563,7 @@ const AGRUPACIONES_POLITICAS = [
   },
   {
     id:'tirol-austria-anterior',nombre:'Tirol y Austria Anterior',desde:1564,hasta:1665,
-    territorios:new Set(['Tirol','Austria Anterior']),color:REINO_COLOR.Tirol,
+    territorios:new Set(['Tirol','Austria Anterior']),color:FORELANDS_TYROL_COLOR,
     aplica:active=>active.has('Tirol')&&active.has('Austria Anterior')&&!active.has('Austria'),
     nota:'Tirol y las tierras anteriores austríacas bajo la rama tirolesa de los Habsburgo.',
     fuente:'https://www.habsburger.net/de/personen/habsburger/ferdinand-karl',
@@ -748,8 +750,9 @@ const EXTERIOR_UNIONS = [
     id:'monarquia-hispanica-exterior',nombre:'Monarquía Hispánica',desde:1516,
     territoriosPorFecha: year => new Set([...MONARQUIA_HISPANICA, 'Sicilia', ...FEUDOS_HERENCIA_BORGONONA,
       ...(year >= 1580 && year <= 1640 ? ['Portugal'] : [])]),
-    color:REINO_COLOR.España, aplica:active=>active.has('Castilla') && active.has('Aragón'),
-    nota:'Dirección monárquica común con reinos e instituciones propios. Portugal solo durante 1580–1640; cada provincia neerlandesa requiere gobierno efectivo y geometría fechada. No incluye Inglaterra ni el título imperial.',
+    color:REINO_COLOR.España, aplica:(active,person,year)=>(active.has('Castilla') && active.has('Aragón'))
+      || (year>=1598&&year<=1621&&['ALB7AUST','ISABCLARAEUG'].includes(person?.id)&&active.has('Países Bajos')),
+    nota:'Dirección exterior común con reinos e instituciones propios. Los archiduques conservan su soberanía en 1598–1621 dentro del sistema estratégico y militar hispánico. Portugal se incorpora en 1580–1640; cada provincia requiere gobierno efectivo y geometría fechada.',
     fuente:'https://ensina.rtp.pt/artigo/a-uniao-iberica-apos-a-crise-dinastica-de-1580/',
   },
   {

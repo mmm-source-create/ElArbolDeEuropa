@@ -1,3 +1,4 @@
+import {HORDE_TRIBUTARY_COLORS} from '../../cartography/mapColors.js';
 // One pattern per combination of colours and authority kind. 6.2.4: a cell with
 // several attributions keeps its dispute, fief or tributary sign on top of the
 // colour bands (the bands alone used to replace it), and a tributary keeps its
@@ -13,7 +14,7 @@ export function authorityFill(svg, colorOrColors, kind) {
   }
   return `url(#${id})`;
 }
-const AUTHORITY_MARK_KINDS = new Set(['delegated', 'disputed', 'mixed', 'tributary', 'apanage', 'feudal', 'vassal', 'fief']);
+const AUTHORITY_MARK_KINDS = new Set(['dependency', 'delegated', 'disputed', 'mixed', 'tributary', 'apanage', 'feudal', 'vassal', 'fief']);
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const CELL = 0.9;
 function svgElement(name, attributes) {
@@ -36,8 +37,8 @@ export function authorityPatternSpec(colors, kind) {
       }
     });
   } else shapes.push({name: 'rect', width: tile, height: tile, fill: colors[0]});
-  if (kind === 'tributary') shapes.push({name: 'rect', width: tile, height: tile, fill: '#fff', 'fill-opacity': '.26'});
-  const line = kind === 'mixed' ? 'M0 .45 L.9 .45' : ['apanage', 'feudal', 'vassal', 'fief'].includes(kind) ? 'M.45 0 L.45 .9'
+  if (kind === 'tributary') shapes.push({name: 'rect', width: tile, height: tile, fill: '#fff', 'fill-opacity': colors.some(color => HORDE_TRIBUTARY_COLORS.has(color)) ? '.12' : '.26'});
+  const line = kind === 'mixed' ? 'M0 .45 L.9 .45' : ['dependency', 'apanage', 'feudal', 'vassal', 'fief'].includes(kind) ? 'M.45 0 L.45 .9'
     : kind === 'delegated' ? 'M0 0 L.9 .9' : kind === 'disputed' ? 'M0 0 L.9 .9 M0 .9 L.9 0' : null;
   // 6.0.14: dark marks read on light and dark themes alike.
   for (let x = 0; x < tile - 1e-9; x += CELL) for (let y = 0; y < tile - 1e-9; y += CELL) {

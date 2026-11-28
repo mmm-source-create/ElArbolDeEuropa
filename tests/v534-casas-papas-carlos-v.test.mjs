@@ -70,8 +70,12 @@ test('Carlos V, Felipe II y sus antepasados quedan contrastados con fuentes', ()
   const ids = ['CARLOS5', 'FEL2ESP', 'FEL1CAST', 'JUANA1CAST', 'ISABPORTEMP', 'MAXIM1', 'MARIABORG', 'FERN2ARAG', 'ISAB1CAST', 'MAN1PORT', 'MARIAARAGINF',
     'FED3HAB', 'LEONORPOR', 'CAR1BORG', 'ISABBORB', 'JUAN2ARAG', 'JUANAENR', 'JUAN2CAST', 'ISABPORT3', 'FERNPORTVISEU', 'BEATPORTVISEU'];
   const open = ids.flatMap(id => personClaims(person(id)).filter(c => c.certainty !== 'documented').map(c => c.id));
-  // Seven claims keep a stated doubt (dates of transfer, two births, Tournai and Navarre).
-  assert.equal(open.length, 7, open.join('\n'));
+  // Nine claims retain their stated uncertainty; two Forelands intervals combine the Tyrolean succession with its documented territorial scope.
+  assert.equal(open.length, 9, open.join('\n'));
+  for(const id of ['person:CARLOS5:government:Austria Anterior:1519:1522:Archiduque','person:MAXIM1:government:Austria Anterior:1490:1519:Archiduque']){
+    const claim=personClaims(person(id.split(':')[1])).find(c=>c.id===id);
+    assert.equal(claim?.certainty,'inferred',id);assert(claim.note&&claim.sources.some(source=>source.locator),id);
+  }
   assert.ok(personClaims(person('CARLOS5')).every(c => c.certainty === 'documented' || c.note));
 });
 

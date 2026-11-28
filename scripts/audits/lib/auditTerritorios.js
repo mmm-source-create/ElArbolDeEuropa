@@ -36,8 +36,9 @@ export function auditarTerritorios(personas, catalogo=TERRITORIOS) {
    // A delegated administrator's office does not turn a county into a new
    // "government" territory. Validate the office and sovereign separately.
    const delegatedOffice=g.condicion==='gobierno delegado'&&g.soberano&&g.soberano!==p.id
-     && (g.clase==='gobierno'&&['Gobernador','Gobernadora','Vicario general','Procurador'].includes(g.titulo)
+     && (g.clase==='gobierno'&&['Gobernador','Gobernadora','Vicario general','Procurador','Virrey'].includes(g.titulo)
        || g.clase==='ducado'&&['Duque','Duquesa'].includes(g.titulo));
+   if(g.titulo==='Virrey'&&!delegatedOffice)add('ERROR','DELEGATED_SOVEREIGN_MISSING',key,'El virrey requiere un gobierno delegado en nombre de otro soberano');
    // A sourced nominal office is not effective sovereignty or a change of territorial rank.
    const nominalOffice=g.clase==='gobierno'&&g.condicion==='titular'&&t?.titulosTitulares?.includes(g.titulo);
    const provincialBan=g.territorio==='Eslavonia'&&g.clase==='banato'&&g.titulo==='Ban';

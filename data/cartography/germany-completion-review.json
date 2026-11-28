@@ -1717,9 +1717,58 @@
       "note": "Dominio de los Habsburgo, disputado por los Orange y la Monarquía Hispánica."
     },
     {
-      "name": "Condado de Lingen · dominio disputado · 1597–1647 · cobertura alemana 19",
+      "name": "Condado de Lingen · dominio disputado · 1597–1604 · cobertura alemana 19",
       "identity": "Condado de Lingen · dominio disputado",
       "from": 1597,
+      "through": 1604,
+      "ids": [
+        "Lingen"
+      ],
+      "governmentTerritories": [],
+      "sourceKeys": [
+        "lwlTerritories",
+        "ieg1500",
+        "ieg1648",
+        "ieg1792",
+        "lingenCharter638",
+        "lingenSpanish638"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "note": "Alternancia de ocupaciones hispánicas y de Orange; no una continuidad neerlandesa uniforme.",
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Condado de Lingen · dominio disputado · 1605–1621 · cobertura alemana 19",
+      "identity": "Condado de Lingen · dominio disputado",
+      "from": 1605,
+      "through": 1621,
+      "ids": [
+        "Lingen"
+      ],
+      "governmentTerritories": [
+        "Países Bajos"
+      ],
+      "sourceKeys": [
+        "lwlTerritories",
+        "ieg1500",
+        "ieg1648",
+        "ieg1792",
+        "lingenCharter638",
+        "lingenSpanish638"
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "note": "Lingen, reconquistada por Spinola en 1605, queda bajo la soberanía conjunta de Alberto e Isabel. La carta sellada de 1609 confirma los privilegios de la ciudad y del territorio y ordena recibir el juramento de sus estamentos en nombre de ambos.",
+      "authorityPeople": [
+        "ALB7AUST",
+        "ISABCLARAEUG"
+      ]
+    },
+    {
+      "name": "Condado de Lingen · dominio disputado · 1622–1647 · cobertura alemana 19",
+      "identity": "Condado de Lingen · dominio disputado",
+      "from": 1622,
       "through": 1647,
       "ids": [
         "Lingen"
@@ -1729,7 +1778,9 @@
         "lwlTerritories",
         "ieg1500",
         "ieg1648",
-        "ieg1792"
+        "ieg1792",
+        "lingenCharter638",
+        "lingenSpanish638"
       ],
       "precision": "regional_approximation",
       "limitedCore": true,
@@ -20829,6 +20880,18 @@
       "url": "https://rheinische-geschichte.lvr.de/Orte-und-Raeume/kurfuerstentum-koeln-/DE-2086/lido/57d118e0651e25.73195779",
       "locator": "Worringen, 1288: pérdida del gobierno urbano del arzobispo; reconocimiento formal de la ciudad imperial en 1475.",
       "locatorEn": "Worringen, 1288: the archbishop lost control of the city; formal recognition as an imperial city followed in 1475."
+    },
+    "lingenCharter638": {
+      "title": "Stadtarchiv Lingen · Urk. 17 (1609), Archivalie Oktober 2015",
+      "url": "https://www.lingen.de/tourismus-freizeit-kultur/stadtarchiv/archivalie-des-monats/2015/archivalie-oktober-2015.html",
+      "locator": "Párrafos sobre la carta sellada de 1609 (Stadtarchiv Lingen, Urk. 17): juramento de los estamentos en nombre de Alberto e Isabel y confirmación de privilegios; conquista de Spinola y retirada de Orange en agosto de 1605.",
+      "locatorEn": "Paragraphs on the sealed 1609 charter (Stadtarchiv Lingen, Urk. 17): the estates’ oath in Albert and Isabella’s names and confirmation of privileges; Spinola’s conquest and Orange’s withdrawal in August 1605."
+    },
+    "lingenSpanish638": {
+      "title": "Niedersächsisches Landesarchiv, Osnabrück · Rep 130, Grafschaft Lingen",
+      "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails?fondsId=3042",
+      "locator": "Historia del fondo Rep 130: cambios de ocupación durante la guerra de los Ochenta Años y dominio español de 1605 a 1630.",
+      "locatorEn": "History of fonds Rep 130: changes of occupation during the Eighty Years’ War and Spanish possession from 1605 to 1630."
     }
   },
   "allowedMixedCells": [],

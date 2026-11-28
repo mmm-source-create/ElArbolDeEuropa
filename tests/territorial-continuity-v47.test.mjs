@@ -1,3 +1,4 @@
+import {FORELANDS_TYROL_COLOR} from '../src/cartography/institutionalPolities638.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {PERSONAS} from '../src/data/personas.js';
@@ -51,7 +52,8 @@ test('los cinco cortes mantienen separados los territorios austríacos, Bohemia 
   assert.ok(inspect('Oberinntal',1648).imperialLegalFrame);
   // Personal maps join the reunited Austrian monarchy; the panorama and titles keep each land.
   for(const realm of ['Tirol','Bohemia','Hungría'])assert.equal(colorTerritorioEnMapa(people.LEOP1HRE,realm,1666),REINO_COLOR.Austria,realm);
-  assert.equal(colorTerritorioEnMapa(people.FERN2TIROL,'Tirol',1580),REINO_COLOR.Tirol);
+  assert.equal(colorTerritorioEnMapa(people.FERN2TIROL,'Tirol',1580),FORELANDS_TYROL_COLOR);
+  assert.equal(colorTerritorioEnMapa(people.FERN2TIROL,'Austria Anterior',1580),FORELANDS_TYROL_COLOR);
 });
 
 test('el auditor señala una región coloreada cuyo gobierno carece de fuente específica',()=>{

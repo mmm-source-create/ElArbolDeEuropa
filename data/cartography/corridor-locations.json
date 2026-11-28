@@ -327449,12 +327449,12 @@
       "limitedCore": true
     },
     {
-      "name": "Condado de Lingen · dominio disputado · 1597–1647 · cobertura alemana 19",
+      "name": "Condado de Lingen · dominio disputado · 1597–1604 · cobertura alemana 19",
       "corridor": "Alemania · cobertura de intervalos vacíos 1200–1800",
       "color": "#86715d",
       "coverage": {
         "from": 1597,
-        "through": 1647
+        "through": 1604
       },
       "versions": [
         {
@@ -327488,6 +327488,133 @@
           "title": "IEG-MAPS · Alemania en 1792",
           "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm",
           "locator": "Mapa de los estados territoriales al 1 de enero de 1792; consolidación de Hannover, expansión prusiana, obispados y ciudades imperiales. No se anticipan las secularizaciones de 1802/1803."
+        },
+        {
+          "title": "Stadtarchiv Lingen · Urk. 17 (1609), Archivalie Oktober 2015",
+          "url": "https://www.lingen.de/tourismus-freizeit-kultur/stadtarchiv/archivalie-des-monats/2015/archivalie-oktober-2015.html",
+          "locator": "Párrafos sobre la carta sellada de 1609 (Stadtarchiv Lingen, Urk. 17): juramento de los estamentos en nombre de Alberto e Isabel y confirmación de privilegios; conquista de Spinola y retirada de Orange en agosto de 1605.",
+          "locatorEn": "Paragraphs on the sealed 1609 charter (Stadtarchiv Lingen, Urk. 17): the estates’ oath in Albert and Isabella’s names and confirmation of privileges; Spinola’s conquest and Orange’s withdrawal in August 1605."
+        },
+        {
+          "title": "Niedersächsisches Landesarchiv, Osnabrück · Rep 130, Grafschaft Lingen",
+          "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails?fondsId=3042",
+          "locator": "Historia del fondo Rep 130: cambios de ocupación durante la guerra de los Ochenta Años y dominio español de 1605 a 1630.",
+          "locatorEn": "History of fonds Rep 130: changes of occupation during the Eighty Years’ War and Spanish possession from 1605 to 1630."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true,
+      "authorityCondition": "control disputado"
+    },
+    {
+      "name": "Condado de Lingen · dominio disputado · 1605–1621 · cobertura alemana 19",
+      "corridor": "Alemania · cobertura de intervalos vacíos 1200–1800",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1605,
+        "through": 1621
+      },
+      "versions": [
+        {
+          "from": 1605,
+          "ids": [
+            "Lingen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Lingen, reconquistada por Spinola en 1605, queda bajo la soberanía conjunta de Alberto e Isabel. La carta sellada de 1609 confirma los privilegios de la ciudad y del territorio y ordena recibir el juramento de sus estamentos en nombre de ambos."
+        }
+      ],
+      "note": "Lingen, reconquistada por Spinola en 1605, queda bajo la soberanía conjunta de Alberto e Isabel. La carta sellada de 1609 confirma los privilegios de la ciudad y del territorio y ordena recibir el juramento de sus estamentos en nombre de ambos.",
+      "sources": [
+        {
+          "title": "LWL · Territorien Westfalens",
+          "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/dokumentation/orte_territorien/territorien/haupt.php",
+          "locator": "Catálogo territorial: Münster, Paderborn, Osnabrück, Corvey, Mark, Ravensberg, Lippe, Tecklenburg, Rietberg, Westfalia electoral y ciudades. Jurisdicción secular, distinta de diócesis espiritual."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1500",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp500d.htm",
+          "locator": "Estados territoriales hacia 1500; contraste de los núcleos, los enclaves eclesiásticos y las ciudades imperiales."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1648",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp648d.htm",
+          "locator": "Estados territoriales tras la paz de Westfalia; no equivale a la frontera de cada ocupación durante la guerra."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1792",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm",
+          "locator": "Mapa de los estados territoriales al 1 de enero de 1792; consolidación de Hannover, expansión prusiana, obispados y ciudades imperiales. No se anticipan las secularizaciones de 1802/1803."
+        },
+        {
+          "title": "Stadtarchiv Lingen · Urk. 17 (1609), Archivalie Oktober 2015",
+          "url": "https://www.lingen.de/tourismus-freizeit-kultur/stadtarchiv/archivalie-des-monats/2015/archivalie-oktober-2015.html",
+          "locator": "Párrafos sobre la carta sellada de 1609 (Stadtarchiv Lingen, Urk. 17): juramento de los estamentos en nombre de Alberto e Isabel y confirmación de privilegios; conquista de Spinola y retirada de Orange en agosto de 1605.",
+          "locatorEn": "Paragraphs on the sealed 1609 charter (Stadtarchiv Lingen, Urk. 17): the estates’ oath in Albert and Isabella’s names and confirmation of privileges; Spinola’s conquest and Orange’s withdrawal in August 1605."
+        },
+        {
+          "title": "Niedersächsisches Landesarchiv, Osnabrück · Rep 130, Grafschaft Lingen",
+          "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails?fondsId=3042",
+          "locator": "Historia del fondo Rep 130: cambios de ocupación durante la guerra de los Ochenta Años y dominio español de 1605 a 1630.",
+          "locatorEn": "History of fonds Rep 130: changes of occupation during the Eighty Years’ War and Spanish possession from 1605 to 1630."
+        }
+      ],
+      "precision": "regional_approximation",
+      "limitedCore": true
+    },
+    {
+      "name": "Condado de Lingen · dominio disputado · 1622–1647 · cobertura alemana 19",
+      "corridor": "Alemania · cobertura de intervalos vacíos 1200–1800",
+      "color": "#86715d",
+      "coverage": {
+        "from": 1622,
+        "through": 1647
+      },
+      "versions": [
+        {
+          "from": 1622,
+          "ids": [
+            "Lingen"
+          ],
+          "oldIds": [],
+          "borderline": [],
+          "event": "Alternancia de ocupaciones hispánicas y de Orange; no una continuidad neerlandesa uniforme."
+        }
+      ],
+      "note": "Alternancia de ocupaciones hispánicas y de Orange; no una continuidad neerlandesa uniforme.",
+      "sources": [
+        {
+          "title": "LWL · Territorien Westfalens",
+          "url": "https://www.lwl.org/westfaelische-geschichte/portal/Internet/dokumentation/orte_territorien/territorien/haupt.php",
+          "locator": "Catálogo territorial: Münster, Paderborn, Osnabrück, Corvey, Mark, Ravensberg, Lippe, Tecklenburg, Rietberg, Westfalia electoral y ciudades. Jurisdicción secular, distinta de diócesis espiritual."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1500",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp500d.htm",
+          "locator": "Estados territoriales hacia 1500; contraste de los núcleos, los enclaves eclesiásticos y las ciudades imperiales."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1648",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp648d.htm",
+          "locator": "Estados territoriales tras la paz de Westfalia; no equivale a la frontera de cada ocupación durante la guerra."
+        },
+        {
+          "title": "IEG-MAPS · Alemania en 1792",
+          "url": "https://www.ieg-maps.uni-mainz.de/mapsp/mapp792d.htm",
+          "locator": "Mapa de los estados territoriales al 1 de enero de 1792; consolidación de Hannover, expansión prusiana, obispados y ciudades imperiales. No se anticipan las secularizaciones de 1802/1803."
+        },
+        {
+          "title": "Stadtarchiv Lingen · Urk. 17 (1609), Archivalie Oktober 2015",
+          "url": "https://www.lingen.de/tourismus-freizeit-kultur/stadtarchiv/archivalie-des-monats/2015/archivalie-oktober-2015.html",
+          "locator": "Párrafos sobre la carta sellada de 1609 (Stadtarchiv Lingen, Urk. 17): juramento de los estamentos en nombre de Alberto e Isabel y confirmación de privilegios; conquista de Spinola y retirada de Orange en agosto de 1605.",
+          "locatorEn": "Paragraphs on the sealed 1609 charter (Stadtarchiv Lingen, Urk. 17): the estates’ oath in Albert and Isabella’s names and confirmation of privileges; Spinola’s conquest and Orange’s withdrawal in August 1605."
+        },
+        {
+          "title": "Niedersächsisches Landesarchiv, Osnabrück · Rep 130, Grafschaft Lingen",
+          "url": "https://www.arcinsys.niedersachsen.de/arcinsys/showFondsDetails?fondsId=3042",
+          "locator": "Historia del fondo Rep 130: cambios de ocupación durante la guerra de los Ochenta Años y dominio español de 1605 a 1630.",
+          "locatorEn": "History of fonds Rep 130: changes of occupation during the Eighty Years’ War and Spanish possession from 1605 to 1630."
         }
       ],
       "precision": "regional_approximation",
@@ -385649,6 +385776,20 @@
       },
       {
         "from": 1597,
+        "through": 1604,
+        "ids": [
+          "Lingen"
+        ]
+      },
+      {
+        "from": 1605,
+        "through": 1621,
+        "ids": [
+          "Lingen"
+        ]
+      },
+      {
+        "from": 1622,
         "through": 1647,
         "ids": [
           "Lingen"
@@ -391256,7 +391397,9 @@
       "Condado de Tecklenburg · 1200–1492 · cobertura alemana 19",
       "Condado de Lingen · 1493–1547 · cobertura alemana 19",
       "Países Bajos · 1548–1596 · cobertura alemana 19",
-      "Condado de Lingen · dominio disputado · 1597–1647 · cobertura alemana 19",
+      "Condado de Lingen · dominio disputado · 1597–1604 · cobertura alemana 19",
+      "Condado de Lingen · dominio disputado · 1605–1621 · cobertura alemana 19",
+      "Condado de Lingen · dominio disputado · 1622–1647 · cobertura alemana 19",
       "Condado de Lingen · 1648–1701 · cobertura alemana 19",
       "Prusia · 1702–1800 · cobertura alemana 19",
       "Lippe · 1200–1800 · cobertura alemana 20",

@@ -1,3 +1,5 @@
+import {ARCHDUCAL_DEPENDENCY_638,archducalPhaseMatches} from './archducalDependency638.js';
+import {ITALIAN_DEPENDENCIES_638} from './italianDependencies638.js';
 import {DANISH_DEPENDENCIES_637} from './danishDependencies637.js';
 import {MONGOL_DEPENDENCIES_637} from './mongolDependencies637.js';
 import {LOUIS_HUNGARY_DEPENDENCIES} from './louisHungaryDependencies.js';
@@ -53,6 +55,8 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
   ...LOUIS_HUNGARY_DEPENDENCIES,
   ...EASTERN_EUROPE_DEPENDENCIES,
   ...MONGOL_DEPENDENCIES_637,
+  ARCHDUCAL_DEPENDENCY_638,
+  ...ITALIAN_DEPENDENCIES_638,
   ...DANISH_DEPENDENCIES_637,
   ...ANGEVIN_DEPENDENCIES,
   {id: 'ragusa-ottoman', subject: 'República de Ragusa', overlord: 'Imperio otomano',
@@ -124,10 +128,12 @@ export const TRIBUTARY_RELATIONS = Object.freeze([
 // overlord with the dependency pattern.
 // A relation may name the subject's other regional identities as aliases.
 const coversSubject = (relation, identity) => relation.subject === identity || Boolean(relation.aliases?.includes(identity));
+const coversLayer=(r,name,year=null)=>r.scope==='archducal-1598'?archducalPhaseMatches(name,year):coversSubject(r,territorialIdentity(name));
+export const dependencyKind=r=>r.type==='dependencia'?'dependency':r.type==='feudo'?'fief':'tributary';
 export const relationCoversLocation=(relation,id)=>!relation.ids||relation.ids.includes(id);
 export function tributaryLayerRelations(name,year,relations=TRIBUTARY_RELATIONS){
  const subject=territorialIdentity(name);
- return relations.flatMap(relation=>{if(!coversSubject(relation,subject))return [];const period=relation.periods.find(([from,through])=>from<=year&&year<=through);return period?[{...relation,from:period[0],through:period[1]}]:[];});
+ return relations.flatMap(relation=>{if(!coversLayer(relation,name,year))return [];const period=relation.periods.find(([from,through])=>from<=year&&year<=through);return period?[{...relation,from:period[0],through:period[1]}]:[];});
 }
 export function tributaryLayerRelation(name,year,relations=TRIBUTARY_RELATIONS,locationId){
  return tributaryLayerRelations(name,year,relations).find(r=>!locationId||relationCoversLocation(r,locationId))||null;
@@ -139,7 +145,7 @@ export function tributaryLayerRelation(name,year,relations=TRIBUTARY_RELATIONS,l
 export function subjectRulers(relation, year, people) {
   if (!relation || !Number.isInteger(year) || !people) return [];
   const subject = territorialIdentity(relation.subject);
-  return people.filter(person => gobiernosDe(person).some(g => territorialIdentity(g.territorio) === subject && g.desde <= year && year <= g.hasta
+  return people.filter(person => (!relation.subjectPeople||relation.subjectPeople.includes(person.id)) && gobiernosDe(person).some(g => (relation.subjectPeople?g.territorio==='Países Bajos':territorialIdentity(g.territorio) === subject) && g.desde <= year && year <= g.hasta
     && gobiernoEfectivo(g,year) && !['regencia', 'gobierno delegado', 'titular', 'pretensión'].includes(g.condicion) && !g.ambito));
 }
 
@@ -155,13 +161,13 @@ export function tributaryEntriesFor(person, year, data, ownEntries = [], relatio
       && !['regencia', 'gobierno delegado', 'rival', 'disputado', 'ocupación'].includes(g.condicion)
       && !g.ambito && (relation.overlord !== 'Imperio otomano' || g.titulo === 'Sultán'));
     if (!office) return [];
-    const layers = reviewedMapLayers(data).filter(layer => coversSubject(relation, territorialIdentity(layer.name)));
+    const layers = reviewedMapLayers(data).filter(layer => coversLayer(relation,layer.name,year));
     const ids = [...new Set(layers.flatMap(layer => reviewedLayerLocations(data, layer, year)))].filter(id => !ownIds.has(id)&&relationCoversLocation(relation,id));
     if (!ids.length) return [];
     return [{person, government: null, claim: null, territory: relation.subject,
-      colorTerritory: relation.overlord, kind: relation.type === 'feudo' ? 'fief' : 'tributary', paint: true, ids,
+      colorTerritory: relation.overlord, kind: dependencyKind(relation), paint: true, ids,
       // A fief takes the same tint of its overlord as in the panorama.
-      ...(relation.type === 'feudo' ? {color: tributaryColor({...relation}, year)} : {}),
+      ...(['feudo','dependencia'].includes(relation.type) ? {color: tributaryColor({...relation}, year)} : {}),
       relationship: {...relation, from: period[0], through: period[1],
         subjectLabel: relation.subjectLabel||territorialLabel(relation.subject, year), overlordOffice: office},
       mapSources: relation.sources, mapNote: relation.note,
@@ -174,11 +180,11 @@ const dependencyLayers=new WeakMap();
 export function dependencyLayersAt(data,year){
  if(!data)return [];
  if(!dependencyLayers.has(data))dependencyLayers.set(data,reviewedMapLayers(data).flatMap(layer=>{
-  const identity=territorialIdentity(layer.name),relations=TRIBUTARY_RELATIONS.filter(r=>coversSubject(r,identity));
+  const identity=territorialIdentity(layer.name),relations=TRIBUTARY_RELATIONS.filter(r=>coversLayer(r,layer.name));
   return relations.length?[{layer,relations}]:[];
  }));
  return dependencyLayers.get(data).flatMap(({layer,relations})=>{
-  const active=relations.flatMap(r=>{const period=r.periods.find(([a,b])=>a<=year&&year<=b);return period?[{...r,from:period[0],through:period[1]}]:[];});
+  const active=relations.flatMap(r=>{if(!coversLayer(r,layer.name,year))return [];const period=r.periods.find(([a,b])=>a<=year&&year<=b);return period?[{...r,from:period[0],through:period[1]}]:[];});
   return active.length&&reviewedLayerActive(data,layer,year)?[{layer,relations:active}]:[];
  });
 }

@@ -21,9 +21,9 @@ test('147 previously pending claims are individually sourced, tied to their valu
   seen.add(p.id);
  }
  assert.equal(seen.size,97);assert.equal(SOURCES_620.length,31);
- // Later releases document more pending claims; the other categories keep the 6.0.20 counts.
+ // Later releases document more pending claims; 6.3.8 adds eleven explicitly inferred Forelands intervals.
  const totals=coverageReport(PERSONAS).totals;assert(totals.documented>=6994,String(totals.documented));// 6.1.3: the new people add approximate and disputed dates; 6.2.2 adds three approximate and two disputed claims.
- assert.deepEqual([totals.approximate,totals.inferred],[475,175]);assert(totals.disputed<=71);
+ assert.deepEqual([totals.approximate,totals.inferred],[475,186]);assert(totals.disputed<=71);
 });
 
 test('documentation remains confined to the named crowns and leaves unresolved dates pending',()=>{

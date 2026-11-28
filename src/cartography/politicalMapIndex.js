@@ -1,4 +1,5 @@
-import {dependencyLayersAt,relationCoversLocation} from './tributaryRelations.js';
+import {institutionalPolityAt} from './institutionalPolities638.js';
+import {dependencyLayersAt,relationCoversLocation,dependencyKind} from './tributaryRelations.js';
 import {gobiernosDe} from '../domain/genealogy/personAccessors.js';
 import {idsDeReinoEnAño} from './kingdomMaps.js';
 import {imperialFrameIds} from './imperialFrame.js';
@@ -170,9 +171,20 @@ export function buildPoliticalMapIndex(personas, year, mapData = null, options =
         push(id,{person:null,government:null,claim:null,territory:territorialIdentity(layer.name),
           collective:{nombre:relation.overlordLabel||relation.overlord},
           relationship:{...relation,subjectLabel:relation.subjectLabel||relation.subject},
-          kind:relation.type==='feudo'?'fief':'tributary',paint:true,ids:[id],
+          kind:dependencyKind(relation),paint:true,ids:[id],
           mapSources:relation.sources,mapNote:relation.note});
       }
+    }
+  }
+  for(const layer of reviewedMapLayers(mapData)) {
+    const identity=territorialIdentity(layer.name);
+    if(!['Condado de Lingen · dominio disputado','Austria Anterior','Malta','Trípoli de los caballeros de Malta','Orden de Livonia','Prusia de la Orden'].includes(identity)||!reviewedLayerActive(mapData,layer,year))continue;
+    for(const id of reviewedLayerLocations(mapData,layer,year)) {
+      const institution=institutionalPolityAt(identity,year,id);
+      if(!institution||(regions.get(id)||[]).some(e=>e.institution?.id===institution.id))continue;
+      push(id,{person:null,government:null,claim:null,territory:institution.label,
+        collective:{nombre:institution.label},institution,kind:institution.id.startsWith('ocupacion-')?'disputed':'regional',paint:true,ids:[id],
+        regionalEvidence:true,mapSources:[institution.source],mapNote:institution.note||''});
     }
   }
   for(const [id,entries] of regions)regions.set(id,mergeMapAuthorityEntries(entries));
@@ -186,7 +198,7 @@ export function inspectMapRegion(regionId, year, index, mapData = null) {
     if (!local.length) return entry;
     const sources = [...(entry.relationship?.sources || []),...(entry.crownRelation?entry.mapSources||[]:[]), ...local.flatMap(scope => scope.sources || [])];
     return {...entry, mapSources: [...new Map(sources.map(source => [source.url, source])).values()],
-      mapNote: [...new Set([entry.relationship?.note,entry.crownRelation?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
+      mapNote: [...new Set([entry.institution?.note,entry.relationship?.note,entry.crownRelation?.note, ...local.map(scope => scope.note)].filter(Boolean))].join(' ')};
   }).sort((a,b) =>
     Number(Boolean(mapAuthoritySources(b).length)) - Number(Boolean(mapAuthoritySources(a).length)) ||
     a.territory.localeCompare(b.territory, 'es'));

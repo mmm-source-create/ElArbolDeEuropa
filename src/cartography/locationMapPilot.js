@@ -1,3 +1,4 @@
+import {archducalLingenIncludes} from './archducalLingen638.js';
 import {germanyCompletionJurisdictions, isCompletionSupplement} from './regions/germanyCompletionRoutes.js';
 import {germanSwissJurisdictions} from './regions/germanSwissRoutes.js';
 import {easternEuropeJurisdictions} from './regions/easternEuropeRoutes.js';
@@ -75,6 +76,7 @@ export function pilotJurisdictionsFor(territory,year,personId=null){
 }
 function resolveJurisdictions(territory, year, personId = null) {
   if(year<1200)return earlyMedievalJurisdictions(territory,year,personId);
+  if(territory==='Sicilia'&&year>=1282)return pilotJurisdictionsFor('Trinacria',year,personId);
   if(territory==='Principado de Trakai')return pilotJurisdictionsFor('Lituania',year,personId);
   const scope = authorityMapScope(personId, territory, year);
   if (scope?.jurisdictions) return scope.jurisdictions;
@@ -200,7 +202,7 @@ export function pilotLocationsFor(data, territory, year, personId = null) {
   const ids = [...new Set(pilotJurisdictionsFor(territory, year, personId).flatMap(name =>
     reviewedLayerLocations(data, byName.get(name), year, personId)))];
   const scope = authorityMapScope(personId, territory, year);
-  return ids.filter(id => (!scope?.ids || scope.ids.includes(id)) && !scope?.excludedIds?.includes(id));
+  return ids.filter(id => (!scope?.ids || scope.ids.includes(id) || archducalLingenIncludes(id, territory, year, personId)) && !scope?.excludedIds?.includes(id));
 }
 
 function layerActiveInYear(entry, year, from = 1400, through = 1650) {
@@ -326,7 +328,7 @@ export function mapLocationsForGovernment(data, government, year, personId = nul
   const layers = (withinDatedLayerRange ? pilotJurisdictionsFor(government.territorio, year, personId) : [])
     .map(name => byName.get(name)).filter(Boolean);
   const scope = authorityMapScope(personId, government.territorio, year);
-  const inScope = ids => ids.filter(id => (!scope?.ids || scope.ids.includes(id)) && !scope?.excludedIds?.includes(id));
+  const inScope = ids => ids.filter(id => (!scope?.ids || scope.ids.includes(id) || archducalLingenIncludes(id, government.territorio, year, personId)) && !scope?.excludedIds?.includes(id));
   if (layers.some(entry => !isCompletionSupplement(entry.name) && reviewedLayerCovered(data, entry, year))) {
     const ids = [...new Set(layers.flatMap(entry => reviewedLayerLocations(data, entry, year, personId)))];
     return applyMapBorderCorrections(inScope(ids), government.territorio, year);

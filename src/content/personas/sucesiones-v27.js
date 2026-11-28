@@ -273,7 +273,7 @@ export const SUCESIONES_V27 = {
     "resumen": "La enfermedad de Carlos VI lo convirtió en uno de los grandes competidores por el control de la monarquía francesa. Su asesinato por orden de Juan sin Miedo agravó la guerra entre armagnacs y borgoñones."
   },
   "ALB7AUST": {
-    "resumen": "Gobernó los Países Bajos junto a Isabel Clara Eugenia. Su régimen buscó estabilizar los territorios católicos y coincidió con la Tregua de los Doce Años."
+    "resumen": "Virrey de Portugal entre 1583 y 1593, después gobernó los Países Bajos para Felipe II. Desde 1598 compartió su soberanía con Isabel Clara Eugenia; su reinado coincidió con la Tregua de los Doce Años."
   },
   "ISABCLARAEUG": {
     "resumen": "Ejerció la soberanía de los Países Bajos junto a Alberto y continuó después como gobernadora. Su papel político fue mucho más amplio que el de una consorte dinástica."

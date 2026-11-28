@@ -1,3 +1,4 @@
+import {RELEASE_638_REVIEWS} from './release638Reviews.js';
 import {RELEASE_637_REVIEWS} from './release637Reviews.js';
 import {RELEASE_622_REVIEWS} from './release622Reviews.js';
 import {RELEASE_636_REVIEWS} from './release636Reviews.js';
@@ -450,5 +451,6 @@ export const CLAIM_REVIEWS = Object.freeze(currentPersonReviews636(withSuccessio
   ...RELEASE_622_REVIEWS,
   ...RELEASE_636_REVIEWS,
   ...RELEASE_637_REVIEWS,
+  ...RELEASE_638_REVIEWS,
 })));
 
